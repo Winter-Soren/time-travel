@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Imaginary response and throat connection | [imaginary_weyl_leads.py](imaginary_weyl_leads.py), [imaginary_exterior.py](imaginary_exterior.py), [connected results](imaginary_exterior_results.json); [exterior_loop_closure.py](exterior_loop_closure.py), [closure results](exterior_loop_closure_results.json), [curved-mode derivation](CURVED_THROAT_MATCHING.md) |
 | Magnetic exterior continuation | [magnetic_tail_map.py](magnetic_tail_map.py), [tail checks](magnetic_tail_map_results.json); [exterior_tail_transport.py](exterior_tail_transport.py), [connected results](exterior_tail_transport_results.json), [figure](magnetic_tail_progress.png) |
 | Connected two-mouth exterior | [exterior_boundary_map.py](exterior_boundary_map.py), [saved results](exterior_boundary_map_results.json); [lead modes](spherical_weyl_leads.py), [mesh](two_mouth_mesh.py) |
 | Incoming spinor modes | [INCOMING_MODES.md](INCOMING_MODES.md), [incoming_modes.py](incoming_modes.py), [saved results](incoming_modes_results.json) |

@@ -1,5 +1,110 @@
 # Reproduction and coupled-model iterations
 
+## Imaginary exterior response and a declared throat connection — increment92
+
+The connected q=1 calculation now supplies T(i kappa), with kappa>0,
+and a directly checked finite boundary determinant for a specified
+zero-mode throat connection. This advances the scattering input needed
+for a vacuum calculation. It does not supply a renormalized stress tensor,
+a self-consistent geometry, or a physical chronology-changing medium.
+
+### Decaying maps and the necessary norm term
+
+[imaginary_weyl_leads.py](imaginary_weyl_leads.py) keeps the frozen
+characteristic bases. With x=kappa R, its free spherical map is
+gamma_n=(K_(n-1/2)(x)-K_(n+1/2)(x))/(K_(n-1/2)(x)+K_(n+1/2)(x)),
+evaluated by a stable ratio recurrence. In particular gamma_1=-1/(1+2x).
+The product-mouth map is beta_n=-i m_n/(kappa+sqrt(kappa^2+m_n^2)).
+The actual magnetic tail satisfies
+\[
+ Z'=C^\dagger+2\kappa Z-ZCZ,\qquad
+ \frac{d}{dr}(a^\dagger a-b^\dagger b)
+       =-2\kappa(a^\dagger a+b^\dagger b).
+\]
+Free decay at the finite endpoint L still approximates the field beyond L.
+These are upper-half-plane resolvent conditions, not a particle's physical
+imaginary energy or a transmission probability.
+
+[imaginary_exterior.py](imaginary_exterior.py) reuses the frozen DG assembly
+at zero energy and adds kappa times its weighted mass matrix. The exact
+discrete identity becomes
+\[
+ \|g\|^2=\|u_+\|^2+\text{DG jump/mismatch}
+          +2\kappa\int\rho |u|^2\,d\rho dz.
+\]
+Omitting the last term would falsely report loss of current conservation.
+The term represents the imaginary-frequency norm identity, not physical
+absorption. A modified-Helmholtz Green spinor with its source inside the
+upper excision supplies an independent free control. Its relative L2 error
+decreases .05455 -> .02954 -> .01308 for h=.12,.08,.05.
+
+At R=2,h=.05,nmax=12,L=40 the responses at kappa=.1,.4,1 are
+.7792950347, .4305086420, .1793359004, real in the fixed endpoint phases.
+At kappa=.4, R=2 to 4 changes T by 2.94e-5; h=.05 to .035 changes it by
+7.48e-4. L=20 to 40 changes it by 2.90e-11 and L=40 to 80 has no observed
+double-precision change. Neither observation certifies an exact infinity
+limit. The finer R=4,h=.035 response is .4312649669.
+
+### Directly connecting the computed zero-mode ports
+
+For a *declared* optical length l and endpoint phase theta, use
+z=exp(i theta-kappa l) and feed the lower-mouth amplitude back into the
+upper input. Write the unsewn response as T=c A_open^(-1)g. The finite
+rank-one determinant and driven field then obey
+\[
+ \frac{\det A_{\rm sewn}}{\det A_{\rm open}}=D=1-zT,
+ \qquad u_{\rm sewn}=\frac{u_{\rm open}}{1-zT}.
+\]
+[exterior_loop_closure.py](exterior_loop_closure.py) checks these identities
+against direct sewn DG solves and determinants of the finite boundary
+matrices. It retains the full complex T, never replacing it with |T| or
+|T|^2. This determinant identity is our finite-model derivation.
+
+At h=.08,R=2,nmax=8,L=40, optical length l=1:
+
+| kappa | T(i kappa) | log abs(D), theta=0 | log abs(D), theta=pi |
+| --- | --- | --- | --- |
+| .1 | .7752106426 | -1.2087830092 | .5314747141 |
+| .4 | .4278701864 | -.3380073626 | .2521662589 |
+| 1 | .1779391450 | -.0677010133 | .0634067746 |
+
+The two phases are explicit alternatives, not a derived physical spin
+structure. Their log determinants differ in sign; this alone establishes
+no vacuum-energy or stress sign. The sampled loop factors lie below one,
+which is not a global spectral or dynamical stability proof.
+
+The distinction matters: physical Dirac spectral determinants require
+specified self-adjoint matching and a regulator; relative scattering
+determinants require a justified reference and spectral relation. See
+[Harrison, Weyand and Kirsten](https://arxiv.org/pdf/1606.07834) and
+[Wirzba](https://arxiv.org/pdf/0711.2395). These papers provide the
+framework, not an identification of this finite DG determinant with the
+renormalized four-dimensional functional. Other chiral/angular sectors,
+the complete frequency dependence and local subtraction terms are absent.
+
+Verification: 15 imaginary-lead checks, 13 connected-response checks and
+6 direct-sewing checks pass under warnings-as-errors. Independent modified
+Bessel ratios agree to 1.11e-16; linear radial propagation agrees with the
+Riccati map to 1.99e-14. The integrated radial current identity has relative
+error 6.06e-14. Direct boundary determinant and sewn-response identities
+agree to 1.33e-15, and the full sewn equation has relative residual at most
+2.32e-14. These checks verify the stated finite model, not a stress tensor.
+
+[CURVED_THROAT_MATCHING.md](CURVED_THROAT_MATCHING.md) derives the next
+physical matching requirement: after canonical normalization, the radial
+angular potential is V_n(x)=N(x)lambda_n/r(x). The zero mode propagates
+freely in optical distance; its endpoint map additionally needs the
+oriented spin frames, gauge identification and common lapse. A pure-AdS
+benchmark must not be mistaken for a controlled exterior junction.
+
+![Imaginary response and explicitly assumed throat closure](imaginary_response_progress.png)
+
+**Next:** replace the nonzero product-lead completion with curved radial
+mode matching and determine the physical endpoint map before assigning a
+quantum source. The geometry, its preparation and stability remain open.
+13 September 2027 -> 12 September 2027 remains unproved; no new physical
+law or time-travel material has been established.
+
 ## Magnetic exterior continuation — increment91
 
 **Result:** the magnetic tail with corrected boundary coordinates reduces

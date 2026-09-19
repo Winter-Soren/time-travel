@@ -58,6 +58,76 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Imaginary response and conditional loop connection — increment92, PROGRESS
+- Previous91 was PROGRESS, committed/pushed/private/clean at
+  eb255747d8538cd43d1aafb268459a9fef1bfb84; root verified HEAD before92.
+  Goal remains ACTIVE. No physical medium, new law, quantum supporting
+  stress or 13Sep2027->12Sep2027 passage is proved. No reimport/cleanup.
+- mass_audit owns frozen NEW imaginary_weyl_leads.py/results. APIs:
+  outer_decaying_ratios(kappa,R,mu=.5,nmax=12),
+  mouth_decaying_ratios(kappa,b,nmax=12),
+  tail_map(kappa,R,L,q=1,d=1,mu=.5,nmax=12,angular_order=64,
+           rtol=1e-10,atol=1e-12)->(Z,diagnostics).
+  Positivekappa only; stable modified-Bessel recurrence, beta=-im/(k+hypot(k,m)),
+  Z'=C†+2kZ-ZCZ. Existing _AngularCoupling reused; no frozen source edits.
+  15checksPASS(-W error,1.92s): Bessel1.11e-16, linear/Riccati1.99e-14,
+  integrated j'=-2k(|a|²+|b|²) error6.06e-14. No clipping/probability claim.
+  Source5d738dc2a7708730f85616f4af7bd4176f5c99e5f658456e59b229de039eb9d5;
+  JSONb8c2ceb4f4c7b19ba27f6a7565bbc2768a47a513b9bebbf8dc176ed7a8ea5333.
+- coupled_misner produced frozen NEW imaginary_exterior.py/results.
+  shifted_model uses frozen ExteriorDG atE0, adds kappa*weighted mass and
+  refactors LU. build_problem(kappa=.4,h=.08,R=2,nmax=8,L=40)->dict with
+  model,ports,feedback=(G,ratios,C),source,receiver,mass,diag/boundary maps.
+  u=model.solve(source,feedback); T=receiver@u. Exactledger must include
+  2*kappa*bulk weighted norm; old undampedidentity intentionallyfails.
+  13checksPASS25.09s. Independent free modified-Helmholtz L2errors
+  .05455/.02954/.01308 and complextraceerrors .01578/.007025/.002261 refine.
+  Random-field attenuationidentity3.52e-16; source includes correct mass term.
+  E=i*.4,R4,h.035,N12,L40 T=.431264966949, bulkterm.795255216903.
+  R2->4 Tdifference2.94e-5; L20->40 2.90e-11; L40->80 noobservedchange;
+  N8->12 1.65e-7; h.05->.035 7.48e-4. No continuum/infinity error bound.
+  Sourceb727d5f297ab1bc7fcd253c5d39884415f08c6aebc0aea2b1555e4d9116b50cf;
+  JSON4e426b40fb9f291cd9df0c13dd7226efb0690e894b5aecdab9a999407471321d.
+- Root produced frozen NEW exterior_loop_closure.py/results. Declared
+  zero-mode optical length1/4 and endpointphase0/pi give z=exp(i phase-kL).
+  Full sewn DG and finite boundary determinant directlycheck
+  D=1-zT and u_sewn=u_open/D. 6checksPASS1.314s; determinant/responseerror
+  1.33e-15, fullfielderr6.50e-16, equationresidual2.31e-14.
+  h.08,R2,N8,L40 kappa.1/.4/1 responses .77521064/.42787019/.17793915;
+  Lth1 phase0/pi logabsD=(-1.20878,.53147),(-.33801,.25217),(-.06770,.06341).
+  NO physicalphase, renormalizeddeterminant, energysign or stabilityinference.
+  Samplesbelowunitloopfactor do not prove globalspectralstability.
+  Sourceecfbd7d9bf8e933dc0513b94d7ed5557fb8e46682909f286d7ec64d5326df802;
+  JSON905c70a15c9064dfd5b9ff7d9001f016f968dab682e10a478bd1beda1932546c.
+- formation_updates produced CURVED_THROAT_MATCHING.md (77lines), source
+  4e4dbf8b4811a3b45bdfa1025b4b163459a3d9a4334c6e361a8ec482aeda19dc.
+  OpenedprimaryMMPAppendixC, Freivogel2606.12528v2AppendixC, BKWspectrum.
+  ds²=N²(-dt²+dx²)+r²dOmega²; Psi=chi/(r sqrtN), canonical H=-iσ3∂x+
+  (N lambda/r)σ1. Currentchi†σ3chi percommonclock; physicalcutamplitude
+  requires sqrtN conversion. f'=(iEσ3+Vσ2)f; H²=-∂²+V²+V'σ2.
+  Zerochannel exponent is e^(iE Lopt) timesphysicalendpointspin/gaugeU.
+  GlobalAdSbenchmark r=re,N=re/(ell cos(x/ell)), V=lambda/ell sec(x/ell).
+  rho_c10 finitecuts possiblebenchmark. Ncut1 calibration reachesoutside
+  controlled MMPpure-throat overlap: do NOT claimthismatchesflatmouth.
+- medium_picture appended imaginary_response_progress() atplotterline6777.
+  Root/producer inspectedPNG; producerverifiedexactplottedvaluesafterrootfinalrun.
+  Plottercb7063d0e6488671d397ce1663ec43d8c792ca7cbbe9d7dac872ad8ede80755a;
+  PNG80dd1afd00c343aed363e517e39ab78b8e92ec1d848237b55985b19d40adae21;
+  PDF54ecc1967dda9f5224b8d661275781e6bbaa882c186945a5f013bd2def3194d4.
+  All164olderfigures preserved. No scientific jobs remain.
+- Root verification:34saved controls pass with source/input hashes matching;
+  4Python sources parse. Independently recomputed representative attenuation
+  ledger .9999999999999996. All392oldertrackedfiles including164figures match
+  91HEAD byte-for-byte;92current local links exist; git diff check passes.
+- NEXT93 criticalpath: implement curved nonzero radial mode scattering for
+  the explicit finite optical profile, alongside exact zero/current controls,
+  then determine a physically consistent endpoint/collar map (common lapse,
+  sphere, flux bundle, oriented spin frame). Keep conditional benchmark and
+  actualjunction separate. Do not merely integrate logD and callitvacuumstress:
+  fullstate/chiral/angular/frequencycontent andUVsubtraction remainmissing.
+  Largeqcandidate, selfconsistentEinstein/Maxwell/quantumsource, formation,
+  stability and materialtraversal remainopen; MMPbranch itselfiscausal.
+
 ### Magnetic exterior continuation — increment91, PROGRESS
 - User asks whether the direction is proper despite uncertain success.
   Answer: a defensible feasibility test, not a demonstrated path to a time

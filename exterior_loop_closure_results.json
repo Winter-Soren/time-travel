@@ -1,0 +1,435 @@
+{
+  "passed": true,
+  "tests": {
+    "direct_boundary_determinant": true,
+    "direct_sewn_response": true,
+    "full_field_schur_complement": true,
+    "sewn_equation": true,
+    "sampled_round_trip_below_one": true,
+    "endpoint_phase_changes_determinant": true
+  },
+  "cases": [
+    {
+      "kappa": 0.1,
+      "h": 0.08,
+      "R": 2.0,
+      "nmax": 8,
+      "L": 40.0,
+      "open_response": {
+        "real": 0.7752106426340111,
+        "imag": 0.0
+      },
+      "closures": [
+        {
+          "optical_throat_length": 1.0,
+          "endpoint_phase": 0.0,
+          "throat_factor": {
+            "real": 0.9048374180359595,
+            "imag": 0.0
+          },
+          "determinant": {
+            "real": 0.29856040368504455,
+            "imag": 0.0
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 0.2985604036850442,
+            "imag": 0.0
+          },
+          "determinant_identity_error": 3.3306690738754696e-16,
+          "closed_response": {
+            "real": 2.5964951583190907,
+            "imag": 0.0
+          },
+          "scalar_response": {
+            "real": 2.5964951583190894,
+            "imag": 0.0
+          },
+          "response_identity_error": 1.3322676295501878e-15,
+          "full_field_identity_relative_error": 6.499795686838044e-16,
+          "sewn_equation_relative_residual": 2.310742122109334e-14,
+          "absolute_round_trip_factor": 0.7014395963149554,
+          "log_absolute_determinant": -1.2087830092171437
+        },
+        {
+          "optical_throat_length": 1.0,
+          "endpoint_phase": 3.141592653589793,
+          "throat_factor": {
+            "real": -0.9048374180359595,
+            "imag": 1.1081062477464934e-16
+          },
+          "determinant": {
+            "real": 1.7014395963149553,
+            "imag": -8.590157564223219e-17
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 1.7014395963149567,
+            "imag": -8.590157564223224e-17
+          },
+          "determinant_identity_error": 1.3322676295501878e-15,
+          "closed_response": {
+            "real": 0.4556204312589131,
+            "imag": 2.300317509049496e-17
+          },
+          "scalar_response": {
+            "real": 0.4556204312589132,
+            "imag": 2.300317509049496e-17
+          },
+          "response_identity_error": 1.1102230246251565e-16,
+          "full_field_identity_relative_error": 5.268658547628532e-16,
+          "sewn_equation_relative_residual": 7.011942037630787e-15,
+          "absolute_round_trip_factor": 0.7014395963149554,
+          "log_absolute_determinant": 0.5314747140729914
+        },
+        {
+          "optical_throat_length": 4.0,
+          "endpoint_phase": 0.0,
+          "throat_factor": {
+            "real": 0.6703200460356393,
+            "imag": 0.0
+          },
+          "determinant": {
+            "real": 0.4803607663422521,
+            "imag": 0.0
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 0.48036076634225167,
+            "imag": 0.0
+          },
+          "determinant_identity_error": 4.440892098500626e-16,
+          "closed_response": {
+            "real": 1.613809238703899,
+            "imag": 0.0
+          },
+          "scalar_response": {
+            "real": 1.6138092387038983,
+            "imag": 0.0
+          },
+          "response_identity_error": 6.661338147750939e-16,
+          "full_field_identity_relative_error": 4.285648811635328e-16,
+          "sewn_equation_relative_residual": 1.3951845898794992e-14,
+          "absolute_round_trip_factor": 0.5196392336577479,
+          "log_absolute_determinant": -0.7332178608410809
+        },
+        {
+          "optical_throat_length": 4.0,
+          "endpoint_phase": 3.141592653589793,
+          "throat_factor": {
+            "real": -0.6703200460356393,
+            "imag": 8.209052987818522e-17
+          },
+          "determinant": {
+            "real": 1.519639233657748,
+            "imag": -6.363745242103444e-17
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 1.5196392336577473,
+            "imag": -6.363745242103444e-17
+          },
+          "determinant_identity_error": 6.661338147750939e-16,
+          "closed_response": {
+            "real": 0.5101280787335893,
+            "imag": 2.1362472500070935e-17
+          },
+          "scalar_response": {
+            "real": 0.5101280787335893,
+            "imag": 2.1362472500070935e-17
+          },
+          "response_identity_error": 0.0,
+          "full_field_identity_relative_error": 3.45369669377808e-16,
+          "sewn_equation_relative_residual": 7.122511581875335e-15,
+          "absolute_round_trip_factor": 0.5196392336577479,
+          "log_absolute_determinant": 0.41847296040930226
+        }
+      ]
+    },
+    {
+      "kappa": 0.4,
+      "h": 0.08,
+      "R": 2.0,
+      "nmax": 8,
+      "L": 40.0,
+      "open_response": {
+        "real": 0.42787018643498975,
+        "imag": 0.0
+      },
+      "closures": [
+        {
+          "optical_throat_length": 1.0,
+          "endpoint_phase": 0.0,
+          "throat_factor": {
+            "real": 0.6703200460356393,
+            "imag": 0.0
+          },
+          "determinant": {
+            "real": 0.7131900369316201,
+            "imag": 0.0
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 0.7131900369316202,
+            "imag": 0.0
+          },
+          "determinant_identity_error": 1.1102230246251565e-16,
+          "closed_response": {
+            "real": 0.5999385357033715,
+            "imag": 0.0
+          },
+          "scalar_response": {
+            "real": 0.5999385357033717,
+            "imag": 0.0
+          },
+          "response_identity_error": 2.220446049250313e-16,
+          "full_field_identity_relative_error": 3.468610057768568e-16,
+          "sewn_equation_relative_residual": 6.941140011367639e-15,
+          "absolute_round_trip_factor": 0.2868099630683799,
+          "log_absolute_determinant": -0.3380073626201431
+        },
+        {
+          "optical_throat_length": 1.0,
+          "endpoint_phase": 3.141592653589793,
+          "throat_factor": {
+            "real": -0.6703200460356393,
+            "imag": 8.209052987818522e-17
+          },
+          "determinant": {
+            "real": 1.28680996306838,
+            "imag": -3.5124090323526206e-17
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 1.2868099630683805,
+            "imag": -3.512409032352623e-17
+          },
+          "determinant_identity_error": 4.440892098500626e-16,
+          "closed_response": {
+            "real": 0.3325045645549242,
+            "imag": 9.075870325532517e-18
+          },
+          "scalar_response": {
+            "real": 0.33250456455492416,
+            "imag": 9.075870325532519e-18
+          },
+          "response_identity_error": 5.551115123125783e-17,
+          "full_field_identity_relative_error": 2.4338361878036904e-16,
+          "sewn_equation_relative_residual": 5.3554846700440144e-15,
+          "absolute_round_trip_factor": 0.2868099630683799,
+          "log_absolute_determinant": 0.25216625886782174
+        },
+        {
+          "optical_throat_length": 4.0,
+          "endpoint_phase": 0.0,
+          "throat_factor": {
+            "real": 0.20189651799465538,
+            "imag": 0.0
+          },
+          "determinant": {
+            "real": 0.9136144992050516,
+            "imag": 0.0
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 0.9136144992050511,
+            "imag": 0.0
+          },
+          "determinant_identity_error": 4.440892098500626e-16,
+          "closed_response": {
+            "real": 0.468326834575508,
+            "imag": 0.0
+          },
+          "scalar_response": {
+            "real": 0.46832683457550794,
+            "imag": 0.0
+          },
+          "response_identity_error": 5.551115123125783e-17,
+          "full_field_identity_relative_error": 1.1107515261312818e-16,
+          "sewn_equation_relative_residual": 5.8848505880293955e-15,
+          "absolute_round_trip_factor": 0.08638550079494846,
+          "log_absolute_determinant": -0.09034656979799349
+        },
+        {
+          "optical_throat_length": 4.0,
+          "endpoint_phase": 3.141592653589793,
+          "throat_factor": {
+            "real": -0.20189651799465538,
+            "imag": 2.472519245211507e-17
+          },
+          "determinant": {
+            "real": 1.0863855007949486,
+            "imag": -1.0579172704127477e-17
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 1.0863855007949481,
+            "imag": -1.0579172704127471e-17
+          },
+          "determinant_identity_error": 4.440892098500626e-16,
+          "closed_response": {
+            "real": 0.3938474750646997,
+            "imag": 3.835268838497158e-18
+          },
+          "scalar_response": {
+            "real": 0.39384747506469964,
+            "imag": 3.835268838497159e-18
+          },
+          "response_identity_error": 5.551115123125783e-17,
+          "full_field_identity_relative_error": 1.7100570653289408e-16,
+          "sewn_equation_relative_residual": 5.6037671201027236e-15,
+          "absolute_round_trip_factor": 0.08638550079494846,
+          "log_absolute_determinant": 0.08285613163138314
+        }
+      ]
+    },
+    {
+      "kappa": 1.0,
+      "h": 0.08,
+      "R": 2.0,
+      "nmax": 8,
+      "L": 40.0,
+      "open_response": {
+        "real": 0.17793914502616368,
+        "imag": 0.0
+      },
+      "closures": [
+        {
+          "optical_throat_length": 1.0,
+          "endpoint_phase": 0.0,
+          "throat_factor": {
+            "real": 0.36787944117144233,
+            "imag": 0.0
+          },
+          "determinant": {
+            "real": 0.9345398467652507,
+            "imag": 0.0
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 0.9345398467652505,
+            "imag": 0.0
+          },
+          "determinant_identity_error": 2.220446049250313e-16,
+          "closed_response": {
+            "real": 0.19040295140123717,
+            "imag": 0.0
+          },
+          "scalar_response": {
+            "real": 0.1904029514012372,
+            "imag": 0.0
+          },
+          "response_identity_error": 2.7755575615628914e-17,
+          "full_field_identity_relative_error": 1.0401122055604272e-16,
+          "sewn_equation_relative_residual": 3.592492286891802e-15,
+          "absolute_round_trip_factor": 0.06546015323474932,
+          "log_absolute_determinant": -0.06770101333237451
+        },
+        {
+          "optical_throat_length": 1.0,
+          "endpoint_phase": 3.141592653589793,
+          "throat_factor": {
+            "real": -0.36787944117144233,
+            "imag": 4.505223801027239e-17
+          },
+          "determinant": {
+            "real": 1.0654601532347494,
+            "imag": -8.016556713063103e-18
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 1.0654601532347496,
+            "imag": -8.016556713063101e-18
+          },
+          "determinant_identity_error": 2.220446049250313e-16,
+          "closed_response": {
+            "real": 0.16700685097038903,
+            "imag": 1.2565649576002712e-18
+          },
+          "scalar_response": {
+            "real": 0.16700685097038906,
+            "imag": 1.2565649576002714e-18
+          },
+          "response_identity_error": 2.7755575615628914e-17,
+          "full_field_identity_relative_error": 1.1884034181776887e-16,
+          "sewn_equation_relative_residual": 3.4729964157538174e-15,
+          "absolute_round_trip_factor": 0.06546015323474932,
+          "log_absolute_determinant": 0.06340677461158048
+        },
+        {
+          "optical_throat_length": 4.0,
+          "endpoint_phase": 0.0,
+          "throat_factor": {
+            "real": 0.01831563888873418,
+            "imag": 0.0
+          },
+          "determinant": {
+            "real": 0.9967409308755307,
+            "imag": 0.0
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 0.9967409308755308,
+            "imag": 0.0
+          },
+          "determinant_identity_error": 1.1102230246251565e-16,
+          "closed_response": {
+            "real": 0.1785209571657332,
+            "imag": 0.0
+          },
+          "scalar_response": {
+            "real": 0.1785209571657332,
+            "imag": 0.0
+          },
+          "response_identity_error": 0.0,
+          "full_field_identity_relative_error": 8.048902715684825e-17,
+          "sewn_equation_relative_residual": 3.5179975220261206e-15,
+          "absolute_round_trip_factor": 0.0032590691244693145,
+          "log_absolute_determinant": -0.0032643914572947938
+        },
+        {
+          "optical_throat_length": 4.0,
+          "endpoint_phase": 3.141592653589793,
+          "throat_factor": {
+            "real": -0.01831563888873418,
+            "imag": 2.24301885394271e-18
+          },
+          "determinant": {
+            "real": 1.0032590691244694,
+            "imag": -3.991208571481313e-19
+          },
+          "direct_boundary_determinant_ratio": {
+            "real": 1.0032590691244696,
+            "imag": -3.9912085714813147e-19
+          },
+          "determinant_identity_error": 2.220446049250313e-16,
+          "closed_response": {
+            "real": 0.17736111289923223,
+            "imag": 7.055856416714407e-20
+          },
+          "scalar_response": {
+            "real": 0.17736111289923226,
+            "imag": 7.055856416714403e-20
+          },
+          "response_identity_error": 2.7755575615628914e-17,
+          "full_field_identity_relative_error": 1.0545057147621936e-16,
+          "sewn_equation_relative_residual": 3.5521914219804156e-15,
+          "absolute_round_trip_factor": 0.0032590691244693145,
+          "log_absolute_determinant": 0.0032537698693279695
+        }
+      ]
+    }
+  ],
+  "seconds": 1.3144496000022627,
+  "source_sha256": "ecfbd7d9bf8e933dc0513b94d7ed5557fb8e46682909f286d7ec64d5326df802",
+  "input_sha256": {
+    "imaginary_exterior.py": "b727d5f297ab1bc7fcd253c5d39884415f08c6aebc0aea2b1555e4d9116b50cf",
+    "imaginary_weyl_leads.py": "5d738dc2a7708730f85616f4af7bd4176f5c99e5f658456e59b229de039eb9d5",
+    "exterior_tail_transport.py": "607b54125ea7fb716f36c5ab8edf19419101ca3f0e72fa589e1139192097bd37",
+    "exterior_boundary_map.py": "849935bf7247ece2d66295c15f6baeaee7a3d7bff03b3c080c7c3318f499b0ee",
+    "magnetic_tail_map.py": "44e69dbdb687f53ab5c13a5b00f08039b913db3fe95248e3984daeb4df1bfc9e",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "two_mouth_mesh.py": "94e9e2efe207cb254e89cf366607fa315909c93afea64edd779fa064c9ace258"
+  },
+  "equations": {
+    "response": "T=c (A-G diag(beta) C)^(-1) g",
+    "throat": "z=exp(i*phase-kappa*optical_length); upper_input=source+z*lower_output",
+    "determinant": "det(M_sewn)/det(M_open)=1-z*T",
+    "driven_solution": "u_sewn=u_open/(1-z*T)"
+  },
+  "scope": "Finite discretized boundary determinant ratio for one chosen zero-mode throat connection. Endpoint phases 0 and pi are explicit alternatives, not a derived physical spin/Wilson holonomy. The sampled round-trip check is not a global spectral stability proof. No four-dimensional determinant renormalization, second chirality, full curved throat, stress tensor, supporting material, or backward-time passage is established.",
+  "sources": [
+    "https://arxiv.org/pdf/1606.07834",
+    "https://arxiv.org/pdf/0711.2395",
+    "https://arxiv.org/html/1807.04726v3"
+  ]
+}

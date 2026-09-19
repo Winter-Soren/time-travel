@@ -6774,6 +6774,85 @@ def magnetic_tail_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def imaginary_response_progress():
+    """Plot same-resolution imaginary response and a declared loop determinant."""
+    from matplotlib.patches import FancyBboxPatch
+    root = Path(__file__).resolve().parent
+    record = json.loads((root/'exterior_loop_closure_results.json').read_text(encoding='utf-8'))
+    assert record['passed'] and all(record['tests'].values())
+    cases = sorted(record['cases'], key=lambda row: row['kappa'])
+    kappa = np.array([row['kappa'] for row in cases]); assert np.array_equal(kappa, [.1, .4, 1.])
+    to_complex = lambda value: complex(value['real'], value['imag'])
+    response = np.array([to_complex(row['open_response']) for row in cases])
+    assert np.all(np.isfinite(response)) and np.max(abs(response.imag)) < 1e-11
+    logs = {0.: [], np.pi: []}
+    for case, transmission in zip(cases, response):
+        assert (case['h'], case['R'], case['nmax'], case['L']) == (.08, 2., 8, 40.)
+        for row in case['closures']:
+            phase, length = row['endpoint_phase'], row['optical_throat_length']
+            factor = np.exp(1j*phase-case['kappa']*length)
+            determinant = to_complex(row['determinant'])
+            assert np.isclose(factor, to_complex(row['throat_factor']), rtol=1e-13, atol=0)
+            assert np.isclose(determinant, 1-factor*transmission, rtol=1e-13, atol=0)
+            assert np.isclose(np.log(abs(determinant)), row['log_absolute_determinant'], rtol=1e-12, atol=0)
+            assert abs(to_complex(row['direct_boundary_determinant_ratio'])-determinant) < 1e-11
+            assert row['full_field_identity_relative_error'] < 1e-11 and row['sewn_equation_relative_residual'] < 1e-11
+            if length == 1.:
+                assert phase in logs
+                logs[phase].append(row['log_absolute_determinant'])
+    assert all(len(values) == len(kappa) for values in logs.values())
+    assert np.all(np.array(logs[0.]) < 0) and np.all(np.array(logs[np.pi]) > 0)
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13.5, 8.0))
+    fig.suptitle('From an exterior field response to a conditional loop determinant',
+                 fontsize=17, fontweight='bold', y=.96)
+    fig.text(.5, .905, 'Imaginary energy is a calculation variable — these values are not probabilities or particle trajectories',
+             ha='center', fontsize=10.5, color='#475569')
+    diagram = fig.add_axes([.06, .69, .90, .16]); diagram.set_axis_off()
+    boxes = [(0., .26, '#e6f4f3', '#007e87', 'Computed exterior', r'$T(i\kappa)$', 'Same numerical resolution below'),
+             (.37, .27, '#fff5df', '#a77612', 'Assumed throat connection', r'$z=e^{i\theta-\kappa\ell}$', 'Length ℓ and phase θ are inputs'),
+             (.75, .25, '#f0eaf8', '#7951b0', 'Conditional determinant', r'$D=1-zT$', 'Finite boundary-matrix ratio')]
+    for x, width, fill, color, title, formula, detail in boxes:
+        diagram.add_patch(FancyBboxPatch((x+.008, .09), width-.016, .82,
+                          boxstyle='round,pad=.008,rounding_size=.025',
+                          facecolor=fill, edgecolor=color, lw=1.1))
+        diagram.text(x+width/2, .76, title, ha='center', va='center', fontsize=10.5, color=color, fontweight='bold')
+        diagram.text(x+width/2, .48, formula, ha='center', va='center', fontsize=16, color=color)
+        diagram.text(x+width/2, .22, detail, ha='center', va='center', fontsize=9.4, color='#475569')
+    for start, finish in ((.275, .355), (.655, .735)):
+        diagram.annotate('', xy=(finish, .50), xytext=(start, .50),
+                         arrowprops={'arrowstyle': '->', 'color': '#64748b', 'lw': 1.6})
+    left = fig.add_axes([.085, .32, .345, .28])
+    left.set_title('A. Sampled exterior response', fontsize=11.5, pad=13)
+    left.plot(kappa, response.real, 'o--', color='#007e87', lw=1.5, ms=6)
+    for x, value in zip(kappa, response.real):
+        left.annotate(f'{value:.3f}', xy=(x, value), xytext=(0, 10), textcoords='offset points',
+                      ha='center', color='#007e87', fontsize=9.7)
+    left.set(xlabel=r'Imaginary-energy parameter $\kappa d$', ylabel=r'Real response $T(i\kappa)$',
+             xlim=(.02, 1.08), ylim=(0, 1), xticks=kappa)
+    left.spines[['top', 'right']].set_visible(False); left.grid(alpha=.15); left.set_axisbelow(True)
+    right = fig.add_axes([.615, .32, .345, .28])
+    right.set_title('B. Same response, two assumed phases', fontsize=11.5, pad=13)
+    right.axhline(0, color='#94a3b8', lw=1)
+    for phase, color, marker, label in ((0., '#7951b0', 'o', r'$\theta=0$'), (np.pi, '#b38516', 'D', r'$\theta=\pi$')):
+        right.plot(kappa, logs[phase], marker+'--', color=color, lw=1.5, ms=6, label=label)
+    right.set(xlabel=r'Imaginary-energy parameter $\kappa d$', ylabel=r'$\log |D|$',
+              xlim=(.02, 1.08), ylim=(-1.40, .73), xticks=kappa)
+    right.spines[['top', 'right']].set_visible(False); right.grid(alpha=.15); right.set_axisbelow(True)
+    right.legend(loc='lower right', frameon=False, fontsize=10)
+    fig.text(.2575, .237, 'Three computed samples; dashed segments guide the eye.', ha='center', fontsize=9.7, color='#475569')
+    fig.text(.7875, .237, 'Chosen optical throat length: ℓ / d = 1.', ha='center', fontsize=10, color='#475569')
+    fig.text(.05, .17, 'Both panels: q = 1, h/d = 0.08, R/d = 2, L/d = 40, mode cutoff 8; fixed product mouth leads.',
+             fontsize=10, color='#475569')
+    fig.text(.05, .113, 'The endpoint phase is not physically derived. A full vacuum stress tensor and a stable medium remain unproved.',
+             fontsize=10, color='#475569')
+    fig.text(.05, .05, 'No physical time-travel route or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',
+             fontsize=10.5, fontweight='bold', color='#007e87')
+    outputs = tuple(root/f'imaginary_response_progress.{suffix}' for suffix in ('png', 'pdf'))
+    for path in outputs: fig.savefig(path, dpi=180, facecolor='white')
+    plt.close(fig); print(outputs[0]); return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()
