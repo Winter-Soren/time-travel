@@ -8,10 +8,11 @@ A computational research workbench for testing proposed chronology-changing geom
 
 The present direction tests whether charged fermions actually return through the magnetic exterior used in an idealized traversable-wormhole construction. A field-line picture alone cannot determine the spinor's return amplitude, phase, or quantum stress.
 
-A connected **q=1** model supplies a relative spectral determinant for two loop phases on the same prescribed throat and exterior. Compact metric variations probe energy density outside the throat, and energy plus radial pressure and energy flow inside it. Combining the latter gives separate contrasts for the two radial null directions. These are finite angular-sector source diagnostics; absolute stress, the remaining physical field content and a self-consistent supporting geometry remain missing. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
+A connected **q=1** model supplies a relative spectral determinant for two loop phases on the same prescribed throat and exterior. Compact metric variations probe energy density outside the throat, and energy plus radial pressure and energy flow inside it. The latest calculation independently assembles the opposite Weyl component, checks the matching at both mouths and the outer cut, and evaluates the two-component sum. These are finite angular-sector source diagnostics; absolute stress, the remaining angular content and a self-consistent supporting geometry remain missing. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Opposite-chirality matching](dirac_sewing_audit.py) · [results](dirac_sewing_audit_results.json) | Independently reversed bulk transport, swapped physical boundary bases, actual left response versus a separate adjoint control, and mesh/frequency refinements | A computed two-chirality phase contrast in the retained angular sector; no complete Dirac stress, absolute supporting source or stability proof |
 | [Throat stress responses](throat_null_response.py) · [results](throat_null_response_results.json) | Compact clock/radial and stationary-shift variations, scattering derivatives against finite perturbations, exact chiral controls and separate numerical refinements | Smeared phase contrasts in energy plus radial pressure, energy flow and both radial null contractions; no absolute NEC or supporting source |
 | [Compact local source response](local_lapse_response.py) · [results](local_lapse_response_results.json) | Direct lapse perturbations versus the analytic Green-function derivative, weighted-mass normalization and separate numerical refinements | A smeared phase difference in the energy-density diagnostic; no absolute negative energy, radial pressure, stability or material recipe |
 | [Phase-dependent determinant](phase_vacuum_contrast.py) · [results](phase_vacuum_contrast_results.json) | Full mouth response, independent determinant elimination, fermion normalization and frequency/mesh sensitivity | A retained-sector phase-contrast functional; no absolute vacuum energy, local supporting stress, or physical phase preparation |
@@ -32,9 +33,9 @@ A connected **q=1** model supplies a relative spectral determinant for two loop 
 
 These components do not yet form a complete physical solution. The next source calculation must vary the field's effective action on a consistently matched geometry, include the missing angular/field content, and test its stress against the Einstein equations. The synthetic throat's junction and bulk stress mismatches cannot be fixed by tuning a phase. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
 
-![Compact throat probes and the two radial null-stress phase contrasts](throat_null_progress.png)
+![Opposite-chirality matching and the retained-sector combined stress diagnostic](dirac_sewing_progress.png)
 
-*The colored profiles are mathematical test weights. The geometry is prescribed, and a phase contrast does not establish absolute supporting stress. The [exterior energy-density probe](local_lapse_progress.png), [global phase contrast](phase_vacuum_progress.png), and [junction-support requirement](curved_junction_progress.png) remain available.*
+*The geometry is prescribed. Pairing consistency and a phase contrast do not establish absolute supporting stress. The preceding [throat probes](throat_null_progress.png), [exterior energy-density probe](local_lapse_progress.png), [global phase contrast](phase_vacuum_progress.png), and [junction-support requirement](curved_junction_progress.png) remain available.*
 
 ## Quickstart
 
@@ -59,7 +60,15 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The current throat source diagnostic can be reproduced with:
+The current opposite-chirality calculation can be reproduced with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 dirac_sewing_audit.py
+```
+
+It writes its own results JSON. Both physical boundary maps are reconstructed after swapping the spherical characteristic bases. A deliberately adjoint-paired finite prescription is recorded separately as an algebraic control; it is not substituted for the physical projected maps. The computed sum retains one azimuthal sector and an explicit frequency window. It does not establish the full stress tensor or a material preparation procedure.
+
+The preceding one-chirality throat source diagnostic can be reproduced with:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 throat_null_response.py

@@ -7198,6 +7198,92 @@ def throat_null_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def dirac_sewing_progress():
+    """Compare physical and adjoint-paired maps without assuming Weyl doubling."""
+    from matplotlib.patches import FancyBboxPatch
+    root = Path(__file__).resolve().parent
+    record = json.loads((root/'dirac_sewing_audit_results.json').read_text(encoding='utf-8'))
+    assert record['passed'] and all(record['tests'].values())
+    cases = record['mesh_refinement']; h = np.array([r['config']['h'] for r in cases])
+    assert len(cases) >= 3 and np.all(np.diff(h) < 0)
+    kappa = .4; selected = [next(r for r in c['samples'] if r['kappa'] == kappa) for c in cases]
+    for case in cases:
+        assert case['assembly']['axis_domain_equal']
+        for key in ('R', 'nmax', 'L', 'rho_c'):
+            assert case['config'][key] == cases[0]['config'][key]
+    mouth = np.array([r['discrepancies']['mouth_physical_map_adjoint_defect'] for r in selected])
+    outer = np.array([r['discrepancies']['outer_physical_map_adjoint_defect'] for r in selected])
+    assert np.all(mouth > 0) and np.all(outer > 0)
+    rep = record['representative']; matrix = rep['matrices']
+    decode = lambda key: np.asarray(matrix[key]['real'])+1j*np.asarray(matrix[key]['imag'])
+    br, bl = decode('B_right'), decode('B_left_physical')
+    measured_mouth = max(np.linalg.norm(a-b.conj().T) for a,b in zip(bl,br))
+    measured_outer = np.linalg.norm(decode('Z_facet_left_physical')-decode('Z_facet_right').conj().T)
+    assert np.isclose(measured_mouth, rep['discrepancies']['mouth_physical_map_adjoint_defect'], rtol=1e-12, atol=0)
+    assert np.isclose(measured_outer, rep['discrepancies']['outer_physical_map_adjoint_defect'], rtol=1e-12, atol=0)
+    paired_control = max(r['discrepancies']['exterior_adjoint_prescription_error'] for c in cases for r in c['samples'])
+    assembly_error = max(c['assembly']['opposite_adjoint_relative_error'] for c in cases)
+    fine = record['primary_quadrature']
+    assert record['quadrature_resolution']['final_gate_passed']
+    for row in [fine, *record['quadrature_refinement'], *record['integrated_mesh_refinement']]:
+        totals = row['totals']; right, left, pair = (totals[k] for k in ('right', 'left_physical', 'paired'))
+        for key in ('energy', 'rho_plus_pr', 'shift', 'null_plus', 'null_minus'):
+            a, b, actual = np.asarray(right[key]), np.asarray(left[key]), np.asarray(pair[key])
+            scale = max(float(np.max(abs(a))), float(np.max(abs(b))))
+            assert np.max(abs(actual-(a+b))) <= 128*np.finfo(float).eps*scale
+    pair = fine['totals']['paired']; pressure = np.array(pair['rho_plus_pr']); flux = -np.array(pair['shift'])
+    assert pressure.shape == flux.shape == (2,) and np.all(np.isfinite(np.r_[pressure,flux]))
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13.5, 8.0))
+    fig.suptitle('The two Weyl components need consistent boundary maps', fontsize=18, fontweight='bold', y=.965)
+    fig.text(.5, .905, 'Independent opposite transport · Actual two-component integrals · One retained azimuthal sector',
+             ha='center', fontsize=10.8, color='#475569')
+    diagram = fig.add_axes([.045, .53, .44, .285]); diagram.set_axis_off()
+    diagram.set_title('A. Two components share one domain', fontsize=12, pad=13)
+    boxes = [(.02,.68,.43,.27,'#e6f4f3','#007e87','Right Weyl component\n'+r'$A_R$'),
+             (.55,.68,.43,.27,'#f0eaf8','#7951b0','Opposite Weyl component\n'+r'$A_L$'),
+             (.19,.38,.62,.15,'#edf1f5','#64748b','Same mesh and regular-axis domain'),
+             (.02,.035,.43,.18,'#fff5df','#b38516','Both mouth cuts: B'),
+             (.55,.035,.43,.18,'#edf1f5','#64748b','Outer cut: Z')]
+    for x,y,w,height,fill,color,label in boxes:
+        diagram.add_patch(FancyBboxPatch((x,y),w,height,boxstyle='round,pad=.008,rounding_size=.025',
+                                        facecolor=fill,edgecolor=color,lw=1.2))
+        diagram.text(x+w/2,y+height/2,label,ha='center',va='center',fontsize=10.1,color=color)
+    for start,finish in [((.235,.68),(.37,.545)),((.765,.68),(.63,.545)),((.40,.37),(.235,.225)),((.60,.37),(.765,.225))]:
+        diagram.annotate('',xy=finish,xytext=start,arrowprops={'arrowstyle':'->','color':'#64748b','lw':1.3})
+    fig.text(.265,.480,'Computed paired PHASE contrasts',ha='center',fontsize=11.5,fontweight='bold',color='#475569')
+    table_ax=fig.add_axes([.055,.300,.42,.14]);table_ax.set_axis_off()
+    table=table_ax.table(cellText=[[name,f'{pval:.5g}',f'{jval:.3g}'] for name,pval,jval in
+                        zip(('Central probe','Upper-side probe'),pressure,flux)],
+                        colLabels=['Probe','Energy +\nradial pressure','Radial flow\n(numerical residual)'],cellLoc='center',
+                        colWidths=[.36,.34,.30],bbox=[0,0,1,1])
+    table.auto_set_font_size(False);table.set_fontsize(10)
+    for (row,col),cell in table.get_celld().items():
+        cell.set_edgecolor('white');cell.set_facecolor('#edf1f5' if row==0 else '#f8fafc')
+        if row==0:cell.set_text_props(fontweight='bold',color='#475569',fontsize=9.6)
+    fig.text(.265,.257,f"h/d = {fine['config']['h']:g}; raw weighted responses. Residual flow is mesh-sensitive.",
+             ha='center',fontsize=9.1,color='#475569')
+    ax=fig.add_axes([.595,.35,.36,.45]);ax.set_title('B. Boundary-prescription differences',fontsize=11.8,pad=14)
+    ax.semilogy(h,mouth,'o-',color='#b38516',lw=1.7,ms=6,label='Both mouth maps B')
+    ax.semilogy(h,outer,'s-',color='#64748b',lw=1.7,ms=6,label='Outer map Z')
+    ax.set(xlabel='Exterior mesh h / d (finer →)',ylabel='Physical-map minus adjoint-map norm',xticks=h,
+           xlim=(h[0]+.005,h[-1]-.004))
+    ax.spines[['top','right']].set_visible(False);ax.grid(alpha=.15);ax.set_axisbelow(True)
+    ax.legend(frameon=False,fontsize=10,loc='best')
+    fig.text(.775,.278,'κd = 0.4; Frobenius norms in normalized facet bases.',ha='center',fontsize=9.6,color='#475569')
+    fig.text(.05,.196,f'Independent transport adjoint residual: {assembly_error:.2g} relative. '
+             f'Deliberately adjoint-paired exterior control: {paired_control:.2g} in norm.',fontsize=9.9,color='#475569')
+    fig.text(.05,.144,f"Normalized units ℏ = c = d = 1; integral window {fine['edges'][0]:g} ≤ κd ≤ {fine['edges'][-1]:g}. Boundary maps: three imaginary energies.",
+             fontsize=10,color='#475569')
+    fig.text(.05,.093,'These finite prescriptions remain distinct. Continuum bounds, the full Dirac source and physical throat support remain unresolved.',
+             fontsize=9.9,color='#475569')
+    fig.text(.05,.040,'No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',
+             fontsize=10.5,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'dirac_sewing_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

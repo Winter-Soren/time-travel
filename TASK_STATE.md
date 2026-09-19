@@ -58,6 +58,78 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Opposite-chirality physical sewing — increment97, PROGRESS
+- Previous96 was committed/pushed/private/clean at
+  1b4d772d9142030048299343019cb7f8c66f5848; root revalidated clean HEAD.
+  Goal remains ACTIVE. Latest user asks whether the direction is proper:
+  it is a defensible candidate test, not evidence of an attainable time
+  machine. Source support and chronology change remain separate gates.
+- coupled_misner owns dirac_sewing_audit.py/results only. It independently
+  rebuilds opposite Weyl volume and every upwind face on the same mesh,
+  keeps the regular axis and positive kappa mass, recomputes swapped ports
+  and Gram factors, and solves the actual physical left outer response.
+  A_L=A_R-dagger is tested after assembly, never used to define it.
+- Both mouth and outer raw physical maps are adjointed before facet
+  conversion. The alternative adjoint-paired facet prescription is a
+  separate control. Pressure derivatives use raw +adjoint, shift -adjoint.
+  Same charge, connection, spin structure, endpoint/state domain required;
+  continuum zero-shift cancellation also assumes differentiable energy.
+- Nine-case pilot: h=.08/.05/.035, kappa=.01/.4/2, all8controls PASS
+  in14.67s. At kappa=.4 mouth/outer map Frobenius defects shrink
+  .0404228/9.8457e-5 -> .00130861/1.4070e-5 -> .000297961/3.52845e-6.
+  At kappa=.01 |left-right energy integrand| shrinks
+  1.22046e-6 -> 2.50246e-8 -> 7.45952e-10. Signs can alternate; no
+  convergence-order claim. Swapped-port identities and assembly pass.
+- Root reconstructed all9 saved physical R/L observable rows to2.78e-17;
+  exact mouth/outer Gram-defect identity residual3.40e-16. With
+  E=M_adj^-1(M_physical-M_adj), ||E||2<=.0254577 in all18 sampled sewings;
+  |logabsdet change|<=-17log(1-||E||2). This bounds a finite prescription
+  difference only, never its distance to the continuum. formation checked
+  raw tail Riccati, assembly/domain algebra and all9 saved matrices.
+- Actual R+physical L integrated at h=.05 orders8/16 and h=.035 order8.
+  First run96608 honestly failed only the 2e-7 coarse energy gate:
+  change2.12064628e-7. Its dominant kappa[.02,.2] panel was then refined
+  to24 in a fresh final run87387, with no source edit while either ran.
+  Final all10controls PASS,239.665s,257 frequency/geometry evaluations.
+  Primary mixed orders[16,16,24,16,16,16,16], edges[1e-6,.002,.02,.2,1,4,8,12].
+  Initial failure retained; final observed panel-change sum energy1.71544e-8,
+  rho+p atmost1.73409e-9. No broad angular/radius/tail rerun or tail bound.
+- Primary paired energy-.5197202925911074; rho+p[-.1554077489618622,
+  -.05965826073180557]; netshift[-2.7142711093e-10,-1.0439504289e-10].
+  Finerh.035 rho+p[-.15598163512645352,-.059878486185408517], netshift
+  [5.5217429469e-12,2.1237470353e-12]. Flow residual changes sign and is
+  mesh-sensitive, not evidence of physical net flow. Matched-order8 mesh
+  energychange-.00201591029, rho+p[-.0005738781223,-.0002202222579].
+  Minimum sewing singular.00123099264; sparse residualmax4.58e-15.
+- Frozen source703aeec50885f95a3320355b3457f3e04cf619d0fb34423971d2fd1baaaf4360;
+  JSON0a442a99d2cc9f72c119795050b36735bf8bc58bd8a90769dcbaacbaf669f92a.
+  Root verified10savedchecks,12dependencyhashes,all9matrixresponses and
+  all421oldtracked files outside5 intentionaldocs/plotter, including174figures.
+  formation independently reconstructed final mixed nodes/panels/totals
+  exactly; component sums4.44e-16 and null identities4.16e-17. No solver running.
+- medium_picture owns only appended dirac_sewing_progress() and its
+  PNG/PDF, preserving174 older figures and old plotting code. Root owns
+  README,DIRECTORY_GUIDE,RESEARCH,TASK; derivation and results recorded.
+  Root verified the pre97 RESEARCH history remains byte-identical.
+  Figure inspected by agent and root; helper at plotter line7201.
+  Plotter8567475ed5febd34afabb8cae85c030b80d1734cb0f6e1a0a5fe127188f5256f;
+  PNGb2a7fe05a2802e7e9a58dfacf4deb8aeffd26917fdceb487e24693d89dc7895e;
+  PDFfa8cbba8eb775b07eb53ccaa3111ab9a8e3bc1d0cc49bc76926bbf6bdf4a2dd6.
+  Root verified2ASTs,271local file/directory links,andgitdiffcheck.
+  Origin remains Winter-Soren/time-travel; gh verified isPrivate=true.
+- Publication remaining: commit/push/verify remote HEAD and clean tree.
+  Source/data/figure audits done; all agents finished, no solver running.
+- NEXT98: compute actual missing mu=-.5,+1.5 sectors with correct regular
+  axes and lead bases, retaining the exterior's coupled n channels.
+  With existingmu=.5 these cover all n=1 throat harmonics but higher
+  multiplets remain incomplete. No factor3 correction or additive n=1
+  determinant: exterior mixes n. Test the actual three-sector contrast
+  before absolute-reference matching/backreaction. Root verified BKW
+  section4.1 monopole spectrum; presentpatch m=mu-q/2. No98code/run yet.
+  Do not mistake a negative phase contrast for absolute negative stress.
+  Full angular source, physical junction, stability and
+  13Sep2027->12Sep2027 remain unproved. No new physics discovery.
+
 ### Throat pressure and energy-flow contrasts — increment96, PROGRESS
 - Previous95 was PROGRESS: completed/pushed/private/clean at
   35c93b0567bcdfbb8c7fd831e247459610c862fe; root revalidated clean HEAD.

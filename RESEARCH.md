@@ -1,5 +1,192 @@
 # Reproduction and coupled-model iterations
 
+## Opposite chirality and physical boundary consistency — increment97
+
+The supporting-field candidate needs specified physical field content.
+[MMP section 2.1](https://arxiv.org/html/1807.04726v3) uses an anomaly-free
+theory and, for most of its calculation, one charged massless Dirac field.
+The preceding numerical diagnostics retained one Weyl component in a
+fixed azimuthal sector. Adding its opposite chirality requires a matching
+domain, not an assumed factor of two. Even the resulting two-component
+sector is not the complete four-dimensional source.
+
+### What opposite chirality would imply on a consistent domain
+
+For the static magnetic, massless problem, with the same vector charge,
+connection, spin structure, endpoint spin/gauge identification and state,
+the Hamiltonians satisfy
+\[
+ H_L(v)=-H_R(-v),\qquad
+ \mathcal E_L(v)=\mathcal E_R(-v),\quad
+ \mathcal E=-\tfrac12\operatorname{Tr}|H|.
+\]
+Here v is the compact radial shift of increment96. At v=0, pressure
+responses agree and shift responses have opposite signs. A
+chirality-dependent chemical potential or boundary condition would
+invalidate this inference. Reversing propagation inverts the same
+holonomy; it does not introduce an independently adjustable phase.
+The derivative statement also assumes differentiability at v=0. The
+nonsingular finite frequency window used here has a well-defined
+derivative; uncomputed zero-mode crossings or an infrared limit need
+their own analysis before extending that statement to the full field.
+
+At positive imaginary frequency, a consistently paired domain gives
+\[
+ S_L=S_R^\dagger,\qquad B_L(v)=B_R(-v)^\dagger.
+\]
+The determinant identity det(I-AB)=det(I-BA) then gives
+\[
+ \det(I-S_LB_L)=\overline{\det(I-S_RB_R)}\quad(v=0).
+\]
+Thus equal determinant moduli and opposite shift derivatives are
+conditional predictions to test. They do not establish an absolute
+vacuum stress, self-consistent geometry or stability.
+
+### Rebuild the transport and distinguish two finite boundary prescriptions
+
+[The audit](dirac_sewing_audit.py) independently reverses every spatial
+Weyl term and each upwind projector on the existing mesh. It retains the
+regular-axis subspace and positive kappa times the weighted mass matrix.
+Conjugate transpose is used only afterwards to test the weak matrices:
+\[
+ A_L(\kappa)=A_R(\kappa)^\dagger,\qquad
+ G_L=C_R^\dagger,\qquad C_L=G_R^\dagger.
+\]
+This is an adjoint relation for the dissipative finite approximation,
+not proof of a self-adjoint continuum operator. Incoming/outgoing
+spherical bases are swapped and projected afresh at both mouths and
+the outer sphere. The left raw outer map follows independently from
+the radial Riccati equation: its generator swaps C and C-dagger and
+has the same real free-decaying terminal data, giving Z_L=Z_R-dagger.
+
+Let F_in and F_out convert right spherical mouth coefficients into
+orthonormal facet coefficients. The right and physically swapped left
+maps are
+\[
+ B_R^f=F_{\rm in}B_R^sF_{\rm out}^{-1},\qquad
+ B_L^f=F_{\rm out}(B_R^s)^\dagger F_{\rm in}^{-1}.
+\]
+They generally are not adjoints on a finite polygon. With
+W_in=F_in-dagger F_in and W_out=F_out-dagger F_out, the exact difference is
+\[
+ B_L^f-(B_R^f)^\dagger
+ =F_{\rm out}^{-\dagger}
+   [(W_{\rm out}-I)(B_R^s)^\dagger
+    -(B_R^s)^\dagger(W_{\rm in}-I)]F_{\rm in}^{-1}.
+\]
+The outer cut has the analogous expression with F_plus and F_minus.
+These defects concern the spherical-to-polygon projection and its
+induced norms. They cannot be removed by relabeling an adjoint as the
+original physical map. The deliberately adjoint-paired facet prescription
+is retained separately as an algebraic control.
+
+Throat derivatives are transformed after taking their raw adjoints:
+pressure uses +(dB_R)-dagger, while shift uses -(dB_R)-dagger. The actual
+physical left exterior response is solved with the swapped outer map;
+it is not obtained by transposing a saved right response.
+
+The finite prescription difference also admits an elementary determinant
+bound. Let M_0=I-S_R-dagger B_R-dagger, M_1=I-S_L-physical B_L-physical
+and epsilon=norm[M_0^(-1)(M_1-M_0)]_2. If epsilon<1 for m channels,
+\[
+ \left|\log\left|{\det M_1\over\det M_0}\right|\right|
+ \leq -m\log(1-\epsilon).
+\]
+This follows by bounding every singular value of I+M_0^(-1)(M_1-M_0)
+between 1-epsilon and 1+epsilon. It compares two finite prescriptions;
+it is not a continuum or omitted-mode error bound. Near a singular
+sewing, even small map errors can be amplified, which is why the
+response and determinant themselves must be checked.
+
+### Computed paired contrast and numerical resolution
+
+The [saved result](dirac_sewing_audit_results.json) passes all ten final
+controls in 239.67 seconds, with 257 frequency/geometry evaluations.
+The two components are separately assembled and solved at every
+integration frequency. The primary q=1, mu=0.5 sector uses b=0.2, d=1,
+rho_c=2, R=2, eight angular pairs, L=40 and h=0.05. Its frequency panels
+have edges [1e-6,0.002,0.02,0.2,1,4,8,12] and respective Gauss orders
+[16,16,24,16,16,16,16].
+
+| Compact throat probe | Paired Q_rho+p | Paired Q_shift residual |
+| --- | ---: | ---: |
+| Central | -0.155407748962 | -2.71427e-10 |
+| Upper side | -0.059658260732 | -1.04395e-10 |
+
+The total retained-sector phase-energy contrast is -0.519720292591.
+These are phase-pi minus phase-zero quantities in units hbar=c=d=1;
+the displayed integrated quantities restore units hbar*c/d. Neither
+probe result is divided by a volume. Q_shift is minus the weighted
+lower-index energy-flow contrast, not an absolute current. Both radial
+null contrasts consequently approach the corresponding Q_rho+p as
+the finite flow residual decreases.
+
+At h=0.035 with order8 panels, Q_rho+p is -0.155981635126 and
+-0.059878486185; Q_shift is +5.52174e-12 and +2.12375e-12.
+Matched order8 mesh changes in Q_rho+p are -5.73878e-4 and
+-2.20222e-4, while energy changes by -0.00201591. The flow residual
+changes sign, and its mesh sensitivity exceeds its primary magnitude.
+It is not evidence of a physical nonzero net flow. Nor do these finite
+comparisons certify the continuum pressure sign or convergence order.
+
+The first order8-to16 energy comparison changed by 2.12065e-7 and
+failed the declared 2e-7 numerical target. That failure is retained in
+the record. Refining only the dominant [0.02,0.2] panel to order24
+reduces the sum of observed panel changes to 1.71544e-8 for energy and
+at most 1.73409e-9 for Q_rho+p. These are convergence diagnostics,
+not rigorous remainder estimates. Omitted infrared/ultraviolet bounds
+and the combined continuum bound remain explicitly absent.
+
+At kappa=0.4, physical mouth/outer map Frobenius defects against the
+adjoint prescription decrease as follows:
+
+| Mesh h | Mouth defect | Outer defect |
+| --- | ---: | ---: |
+| 0.08 | 0.0404228 | 9.84570e-5 |
+| 0.05 | 0.00130861 | 1.40702e-5 |
+| 0.035 | 0.000297961 | 3.52845e-6 |
+
+The largest sampled left/right phase-energy mismatch likewise shrinks
+from 1.22046e-6 to 2.50246e-8 to 7.45952e-10 across these meshes.
+The right response reproduces increment96. Sparse equation residuals
+are at most 4.58e-15. Independent reconstruction of every saved
+physical response trace agrees within 2.78e-17; the exact Gram-defect
+identity agrees within 3.40e-16. All eighteen audited finite sewings
+have epsilon<=0.0254577 in the determinant bound above. A separate
+audit reconstructed the mixed-order nodes, panels and totals exactly,
+with component-sum residuals at most 4.44e-16.
+
+This supports combining the two chiralities in this prescribed,
+retained-sector model. It leaves absolute stress, the remaining
+angular modes, physical junctions, backreaction and stability open.
+The motivating published wormhole is causal; 13 September 2027 to
+12 September 2027 remains unproved. No new physical law or obtainable
+supporting material has been established.
+
+### Next feasibility calculation: missing azimuthal sectors
+
+The next substantive extension is to calculate the missing mu=-0.5 and
+mu=1.5 sectors with their actual axis conditions and lead bases. For
+integer flux q=1, the first nonzero spherical spinor level has j=1 and
+three harmonics; see the angular spectrum in
+[Borokhov, Kapustin and Wu, section 4 and Appendix](https://arxiv.org/pdf/hep-th/0206054).
+In the present gauge patch, m=mu-q/2, so the current mu=0.5 sector
+contains only its m=0 harmonic. This patch conversion is our convention,
+not an additional claim about that paper's notation.
+
+Adding the other two sectors covers that first multiplet but still
+leaves higher multiplets incomplete. The two-centre exterior couples
+the allowed n channels inside each mu sector, so an isolated n=1
+determinant is not an additive source contribution. The useful next
+quantity is the change in the actual three-sector contrast. Multiplying
+the present value by three would assume a symmetry the exterior lacks.
+
+An absolute reference stress and the remaining angular sum are still
+required before backreaction. A negative phase difference alone cannot
+tell whether either state's total null stress is negative. The purpose
+of the next calculation is to test that missing-source sensitivity, not
+to accumulate another set of pairing benchmarks.
+
 ## Throat stress contrasts from compact metric variations — increment96
 
 This increment moves the metric probe into the prescribed throat. It
