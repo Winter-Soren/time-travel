@@ -8,10 +8,11 @@ A computational research workbench for testing proposed chronology-changing geom
 
 The present direction tests whether charged fermions actually return through the magnetic exterior used in an idealized traversable-wormhole construction. A field-line picture alone cannot determine the spinor's return amplitude, phase, or quantum stress.
 
-A connected **q=1** model supplies a relative spectral determinant for two loop phases on the same prescribed throat and exterior. Compact metric variations probe energy density outside the throat, and energy plus radial pressure and energy flow inside it. The latest calculation independently assembles the opposite Weyl component, checks the matching at both mouths and the outer cut, and evaluates the two-component sum. These are finite angular-sector source diagnostics; absolute stress, the remaining angular content and a self-consistent supporting geometry remain missing. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
+A connected **q=1** model supplies a relative spectral determinant for two loop phases on the same prescribed throat and exterior. Compact metric variations probe energy density outside the throat, and energy plus radial pressure and energy flow inside it. The latest calculation adds two missing azimuthal sectors and makes the isolated-end angular/spin connection explicit. It separates the effect of that connection from the additional field modes, calculating both Weyl components for each sector. These remain partial source diagnostics; absolute stress, the remaining angular content, physical junctions and a self-consistent supporting geometry are missing. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Angular-sector extension](azimuthal_source.py) · [local modes](azimuthal_modes.py) · [results](azimuthal_source_results.json) | Angular eigenmodes and pole conditions, a specified reflected spin/gauge connection, actual sector and chirality sums, separate mesh/frequency controls | The change caused by a geometric endpoint choice and two added sectors; higher angular multiplets, absolute stress and physical throat support remain open |
 | [Opposite-chirality matching](dirac_sewing_audit.py) · [results](dirac_sewing_audit_results.json) | Independently reversed bulk transport, swapped physical boundary bases, actual left response versus a separate adjoint control, and mesh/frequency refinements | A computed two-chirality phase contrast in the retained angular sector; no complete Dirac stress, absolute supporting source or stability proof |
 | [Throat stress responses](throat_null_response.py) · [results](throat_null_response_results.json) | Compact clock/radial and stationary-shift variations, scattering derivatives against finite perturbations, exact chiral controls and separate numerical refinements | Smeared phase contrasts in energy plus radial pressure, energy flow and both radial null contractions; no absolute NEC or supporting source |
 | [Compact local source response](local_lapse_response.py) · [results](local_lapse_response_results.json) | Direct lapse perturbations versus the analytic Green-function derivative, weighted-mass normalization and separate numerical refinements | A smeared phase difference in the energy-density diagnostic; no absolute negative energy, radial pressure, stability or material recipe |
@@ -31,11 +32,11 @@ A connected **q=1** model supplies a relative spectral determinant for two loop 
 | [Open-boundary spinor calibration](open_boundary_spinor.py) · [report](OPEN_BOUNDARY_SCATTERING.md) | Frozen planar outgoing modes, complex reflection phases, evanescent behavior, and an independently checked absorber loss budget | A boundary-calibration contract; absorber loss is not a physical escape probability |
 | [Scattering-to-vacuum bridge](scattering_vacuum.py) · [results](scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
-These components do not yet form a complete physical solution. The next source calculation must vary the field's effective action on a consistently matched geometry, include the missing angular/field content, and test its stress against the Einstein equations. The synthetic throat's junction and bulk stress mismatches cannot be fixed by tuning a phase. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+These components do not yet form a complete physical solution. The next decision gate is an absolute radial-null source budget across a specified smooth collar, including the reference stress omitted by phase subtraction. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. Further angular-sector expansion alone cannot supply the missing physical junction or absolute source. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
 
-![Opposite-chirality matching and the retained-sector combined stress diagnostic](dirac_sewing_progress.png)
+![Geometric endpoint connection and additional angular field sectors](azimuthal_source_progress.png)
 
-*The geometry is prescribed. Pairing consistency and a phase contrast do not establish absolute supporting stress. The preceding [throat probes](throat_null_progress.png), [exterior energy-density probe](local_lapse_progress.png), [global phase contrast](phase_vacuum_progress.png), and [junction-support requirement](curved_junction_progress.png) remain available.*
+*The reflected connection specifies isolated spherical ends; the finite physical junction remains unsolved. A partial field sum or phase contrast does not establish absolute supporting stress. Earlier [chirality pairing](dirac_sewing_progress.png), [throat probes](throat_null_progress.png), [exterior energy-density probe](local_lapse_progress.png), [global phase contrast](phase_vacuum_progress.png), and [junction-support requirement](curved_junction_progress.png) remain available.*
 
 ## Quickstart
 
@@ -60,7 +61,15 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The current opposite-chirality calculation can be reproduced with:
+The current angular-sector calculation can be reproduced with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 azimuthal_source.py
+```
+
+It writes its own results JSON. The angular basis has separate checks in `azimuthal_modes.py`. The explicitly reflected endpoint connection changes existing paired modes as well as the added sectors, so both it and the inherited modal connection are evaluated separately. The exterior mixes angular levels within each azimuthal sector; the result is a partial coupled field sum, not an isolated lowest-multiplet determinant or a degeneracy multiplier.
+
+The preceding opposite-chirality calculation can be reproduced with:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 dirac_sewing_audit.py

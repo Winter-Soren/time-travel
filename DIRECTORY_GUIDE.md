@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Geometric angular connection and missing sectors | [azimuthal_modes.py](azimuthal_modes.py), [connected source calculation](azimuthal_source.py), [saved results](azimuthal_source_results.json), [figure](azimuthal_source_progress.png) |
 | Opposite-chirality boundary matching and combined response | [dirac_sewing_audit.py](dirac_sewing_audit.py), [saved physical and adjoint controls](dirac_sewing_audit_results.json), [figure](dirac_sewing_progress.png) |
 | Throat pressure and energy-flow diagnostics | [throat_null_response.py](throat_null_response.py), [saved metric derivatives and checks](throat_null_response_results.json), [figure](throat_null_progress.png) |
 | Compact local source diagnostic | [local_lapse_response.py](local_lapse_response.py), [saved responses and direct perturbation checks](local_lapse_response_results.json), [figure](local_lapse_progress.png) |

@@ -58,6 +58,83 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Missing angular sectors and geometric endpoint identification — increment98, PROGRESS
+- Previous97 classified PROGRESS: committed/pushed/private/clean verified
+  at635a42258ce7abacdc86eb40cbeb185b09f7e5fb. Root revalidated clean HEAD
+  before98. Goal ACTIVE; imported ChatGPT/Downloads work remains complete.
+- formation_updates owns NEW azimuthal_modes.py only, exposing local
+  q1 mouth bases/checks for global mu=-.5,+.5,+1.5. coupled_misner owns
+  NEW azimuthal_source.py/results; reuse97 actual opposite assembly,
+  port factors, Green response, observables, integration wherever suitable.
+  mass_audit read-only angular/gauge/domain audit. medium_picture owns only
+  appended azimuthal_source_progress() plusPNG/PDF, preserving176oldfigures.
+  Root owns4docs and publication. Frozen97/older artifacts stay unchanged.
+- Local derivation: m=mu-.5,lambda=sqrt(n(n+1)), f normalized associated
+  Legendre. Upperg=-(f'-m*cscθ*f)/lambda; lowerg=-(f'+m*cscθ*f)/lambda.
+  Uppercharacteristics(i er-minus*g,er-plus*f),lower(er-minus*f,i er-plus*g).
+  Both paired transverse matrices+lambda*sigma_x; zero onlymu=.5.
+  Existingouterbasis/tail alreadyacceptmu; mu1.5outer startsn2, while
+  itsmouthsn1..N. Axisdomainmustuseactualmu in frozenExteriorDG.
+- NEW substantive endpoint gate: isolatedsphereA_upper=(1-cosθ)/2 and
+  A_lower=(1+cosθ)/2 match underθU=pi-θL,phiunchanged. Witht=θU,
+  S=exp(i*t*sigma_y) atphi0 maps er+U→-er-L and er-U→er+L.
+  GlobalS=cosθ I+i sinθ sigma_phi is smooth. f reflectionparity
+  p=(-1)^(n+|m|),g_upper(reflected)=-p*g_lower. Spinlift-S fixeszero
+  sign and yields p on BOTH cross-transmissions, reflectionsunchanged.
+  In radialframesR_L†S R_U=i sigma_y constant, explicitlyaccounting
+  forframeconnection; rootSymPy andmassaudit independentlypassedexact
+  frame/gauge/operator checks andn1angular equations/norms.
+- This is an explicit declared isolatedsphere/productframe identification,
+  not a solved finite mouth junction or uniquephysicalwormhole. The old93
+  modal connection was conditional; do not silently replace frozenresults.
+  Producer nowcompares inheritedmodal branch with reflectionbranch.
+  Reflectionalsochangesmu=.5pairedmodes, so cannot addfrozen97mu=.5 to
+  newreflectedsectors. Recomputechangedbranchandusefrozen97 asreference.
+- Production98 session89570 exited0: all18 finalcontrols pass in594.43s,
+  773frequency/geometry evaluations. No solver remains running. All3mu
+  and bothconnections share actual R/L Green solves. Frequencyorders
+  [16,16,24,16,16,16,16], edges[1e-6,.002,.02,.2,1,4,8,12],h=.05.
+  Reflected3sector E=-.5240014964516222;rho+p=
+  [-.16240380013479588,-.06277552049940568]. Shiftresidual=
+  [-2.5700464983912787e-10,-9.884794197963558e-11], notresolvedflow.
+- Centralconnection-only change atmu=.5=-.004237541584568 (+2.7267%
+  magnitude); addedsectors=-.002758509588366 (+1.7279%relative to
+  reflectedmu=.5). Highermultiplets remainincomplete. Matchedorder8
+  h=.05→.035 partialsumchanges E=-.00204321446847, rho+p=
+  [-.000619605150295,-.000240368148332], about.38%.
+- Predeclared observedquadrature target2e-7: oldmu=.5coarsegatefails
+  andisretained. Dominantpanel24 bringscombinedenergychange1.716e-8,
+  reflectedrho+p max1.728e-9. Selectednew-sectorN8→12 atκ=.4 changes
+  max1.317e-9 vsdeclared2e-6. These are notcontinuum/tailbounds.
+- Formation independentlyreconstructed allnodes/panels/chiralities,
+  partialsumsandenvelopes: max1.11e-16. Root separatelyrebuilt29saved
+  matrixcases: rawparity/observablesexact, facetmaperror1.74e-18.
+  Coordinateinvarianceconfirmed. Freshmetricderivativeerror2.89e-11;
+  frozen97inheritance5.51e-14. Sparsesolverresidual4.57e-15;
+  sampledminimumsingularvalue.00122994553. All12inputhashesverified.
+- Figurehelperappended, onlynewPNG/PDF rendered andvisuallyinspected.
+  Sourcepriorbytesand176oldfigures preserved;425oldtrackedfilesoutside
+  the5alloweddoc/plotterchanges verifiedunchanged. No dependenciesadded.
+- FrozenSHA256: modes d774a67c9eb8754d6ee6641240ab83269a62495e4314251fa4dad9836040027d;
+  source 773fa65564713df69fb8bac2a4886c1170bd0b308d2b05ddd6ce021078039682;
+  results cbbd7cf3d9cfb131a3a292358916e4088410fc861ff239b823609ba2d5861cdc;
+  plotter c4815718c730c1e21c977d47b85b6c10f2b55aaff62279d8e1a2c907a391a633;
+  PNG f3299e6afdf7e89e5e8c5a6ca85893c41ac3069f419d7af6a17e01127e95a48d;
+  PDF 7919d81fa7f04870d2ff617bf92540522767dc8a4969e0874bb4a9d293b01cdf.
+- NEXT: absolute radial-null source budget acrossspecifiedsmoothcollar,
+  includingreference stress,state,couplings,renormalization. Firstdecide
+  whetherq1physicalcollar/reference canbe suppliedincontrolledapproximation.
+  Wrongabsolute sign/magnituderejectsstate/collarcandidate. Ifuncontrolled,
+  reuse83/84largefluxsource/sphericalsolutionandtargetitsnonradial
+  exterior/statematching; donotrepeatalreadyprovedsphericalopening.
+  Do notdefaulttomoremu orreinterpretphasecontrast asabsolutesource.
+- No fullangularsum,absolutestress, stablemedium,newphysicallaw or
+  13Sep2027->12Sep2027 passage established. Goal ACTIVE. Currentagents
+  completedboundedwork. PrivateGitHub reconfirmed; syntax3files,
+  localfilelinks283 andgitdiffchecks pass. Publicationpending
+  inthischeckpoint; verifyfinalHEAD/remotebefore
+  startingnextincrement. NoPRrequested.
+
 ### Opposite-chirality physical sewing — increment97, PROGRESS
 - Previous96 was committed/pushed/private/clean at
   1b4d772d9142030048299343019cb7f8c66f5848; root revalidated clean HEAD.

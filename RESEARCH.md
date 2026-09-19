@@ -1,5 +1,223 @@
 # Reproduction and coupled-model iterations
 
+## Geometric endpoint connection and missing angular sectors — increment98
+
+This increment tests two distinct changes: a specified geometric
+identification of the two isolated spherical ends, and additional
+azimuthal field sectors. They must be measured separately. The earlier
+mode-by-mode connection was a declared spectral model, with its physical
+spin/gauge identification unresolved. It is retained as a reference,
+not silently reinterpreted as the geometric connection derived below.
+
+### Local angular modes and their measure
+
+The monopole spinor spectrum has angular eigenvalue
+lambda_n=sqrt[n(n+q)] and j=n+(q-1)/2 for positive integer flux q;
+see [Borokhov, Kapustin and Wu, section 4.1 and Appendix](https://arxiv.org/pdf/hep-th/0206054).
+Here q=1 and the existing global gauge patch labels m=mu-1/2.
+The missing mu=-1/2,+3/2 sectors therefore supply m=-1,+1, beside
+the existing m=0. They start at n=1 and have no zero mode. The sole
+n=0 mode occurs at mu=1/2. Completing these three azimuthal sectors
+covers the n=1 harmonics, while higher multiplets remain incomplete.
+
+The local monopole gauges, using theta from global +z at both ends, are
+A_U=(1-cos theta)/2 and A_L=(1+cos theta)/2. In the radial spin frame,
+the angular operator acting on the sin(theta)-weighted spinor is
+\[
+ K=-i\sigma_x(\partial_\theta+\tfrac12\cot\theta)+\sigma_y V,
+ \quad V_U={m+\frac12\cos\theta\over\sin\theta},\quad
+ V_L={m-\frac12\cos\theta\over\sin\theta}.
+\]
+Only after multiplying the spinor by sqrt(sin theta) and using flat
+dtheta measure may the cotangent term be omitted. Mixing the two
+conventions would change the operator and its normalization.
+
+Let c_n=sqrt[(2n+1)/2]. A convenient common real phase convention is
+\[
+ f_{n0}=c_nP_n(\cos\theta),\qquad
+ f_{n,\pm1}={c_n\sin\theta\over\lambda_n}P_n'(\cos\theta),
+\]
+\[
+ g_U=-{(\partial_\theta-m\csc\theta)f\over\lambda_n},\qquad
+ g_L=-{(\partial_\theta+m\csc\theta)f\over\lambda_n}.
+\]
+Both f and g have unit norm in sin(theta)dtheta. With
+e_plus=(cos(theta/2),sin(theta/2)) and
+e_minus=(-sin(theta/2),cos(theta/2)), the exterior inner-normal
+characteristic pairs are
+\[
+ (\Phi_+,\Phi_-)_U=(i e_-g_U,e_+f)/b,\qquad
+ (\Phi_+,\Phi_-)_L=(e_-f,i e_+g_L)/b.
+\]
+These phases give the same +lambda_n sigma_x transverse coupling as
+the frozen radial throat equation. The mu=1/2 implementation delegates
+to the existing basis, preserving its exact convention. The common
+mode sign chosen for |m|=1 is applied at both ends.
+
+### A geometric spin/gauge identification fixes relative mode signs
+
+Choose theta_L=pi-theta_U with phi unchanged. Pulling back A_L dphi
+gives A_U dphi exactly. Writing t=theta_U, the spin rotation
+\[
+ S(t)=e^{it\sigma_y}\quad(\phi=0),\qquad
+ S(\theta,\phi)=\cos\theta I+i\sin\theta\sigma_\phi
+\]
+maps e_plus,U to -e_minus,L and e_minus,U to e_plus,L.
+Here sigma_phi=-sin(phi)sigma_x+cos(phi)sigma_y. The global expression
+is smooth even at the poles: sin(theta)sigma_phi is a linear expression
+in the sphere's Cartesian x,y coordinates. With R_U,R_L formed from
+the two radial spin vectors, R_L-dagger S R_U=i sigma_y is constant.
+This also checks the angular-operator intertwining, including the
+apparent derivative of the Cartesian spin rotation.
+
+Associated-Legendre reflection gives
+\[
+ f(\pi-\theta)=p_{nm}f(\theta),\qquad
+ g_U(\pi-\theta)=-p_{nm}g_L(\theta),\qquad
+ p_{nm}=(-1)^{n+|m|}.
+\]
+Choose the global spin lift -S so that the existing zero-channel sign
+is unchanged. The induced coefficient map then contributes p_nm to
+both cross-transmissions through the throat; same-end reflections are
+unchanged. The same factors apply to the metric derivatives. This
+relative mode parity follows from the specified geometric connection;
+it is not an independently tuned phase for each mode.
+
+This identification is a consistent declared product-frame connection
+for the isolated spherical ends. A physical throat must extend that
+frame and magnetic connection and satisfy the finite-mouth geometric
+and matter matching conditions. Those junction requirements are still
+unsolved. The global loop spin/Wilson phase also remains a stated input.
+
+The reflected connection changes the already retained mu=1/2 paired
+modes. Therefore its three-sector result cannot be constructed by
+adding new sectors to the old increment97 total. Both connections are
+evaluated using the same exterior Green response, with their resulting
+determinants and stress contrasts reported separately. The exterior
+mixes n within each mu sector, so no separate n=1 determinant or
+degeneracy multiplier is substituted for the coupled calculation.
+
+This distinction is coordinate-invariant. In raw coefficient coordinates,
+write B_ref=D_in B_old D_out for the diagonal parity matrices. If one
+also changes coordinates in the exterior, S'=D_out S D_in, the full
+determinant and both metric derivatives are unchanged. Independent
+evaluation of all nine pilot rows, for both chiralities, reproduces the
+inherited observables within 2.66e-15 after this simultaneous basis
+change. The geometric candidate instead keeps the physical exterior
+response fixed and changes its connection through the throat. Its
+different result is therefore not a basis-rephasing correction.
+
+### Three-sector result and independent controls
+
+The [saved calculation](azimuthal_source_results.json) passes all 18 final
+controls in 594.43 seconds, using 773 frequency/geometry evaluations.
+Both Weyl components are solved independently for every retained sector.
+Each exterior solve is reused for both declared endpoint connections.
+Parameters remain q=1, b=0.2, d=1, rho_c=2, R=2, L=40, nmax=8 and
+h=0.05, with frequency edges [1e-6,0.002,0.02,0.2,1,4,8,12] and
+Gauss orders [16,16,24,16,16,16,16].
+
+| Connection and sector | Central Q_rho+p | Upper-side Q_rho+p |
+| --- | ---: | ---: |
+| Inherited, mu=+0.5 | -0.155407748962 | -0.059658260732 |
+| Reflected, mu=-0.5 | -0.000580983223 | -0.000261801795 |
+| Reflected, mu=+0.5 | -0.159645290546 | -0.061543798267 |
+| Reflected, mu=+1.5 | -0.002177526365 | -0.000969920437 |
+| Reflected, three-sector partial sum | -0.162403800135 | -0.062775520499 |
+
+The connection alone increases the magnitude of the retained mu=0.5
+central contrast by 2.7267%; the two new sectors then add 1.7279%
+relative to that reflected sector. The corresponding upper-probe changes
+are 3.1606% and 2.0014%. They are distinct effects, not estimates of the
+uncomputed angular remainder. The inherited three-sector sum is
+[-0.158087366367,-0.060854214369]. Its energy contrast is
+-0.521389260527; the reflected energy contrast is -0.524001496452.
+All are phase-pi minus phase-zero responses in hbar=c=d=1 units;
+integrated physical units restore hbar*c/d. No volume division or
+angular degeneracy multiplier has been applied.
+
+At equal order8 quadrature, refining h=0.05 to h=0.035 changes the
+reflected partial-sum energy by -0.002043214468 and the two stress
+probes by [-0.000619605150,-0.000240368148], about 0.38% of their
+coarser values. This mesh sensitivity remains material. The primary
+shift residual is [-2.57005e-10,-9.88479e-11]; it is not evidence of
+a resolved physical flow. No continuum error bound is claimed.
+
+The old mu=0.5 coarse frequency check still fails the declared 2e-7
+target, and that failed check is retained. The specified order24
+refinement of [0.02,0.2] brings the combined observed panel-change sum
+to 1.716e-8 for energy and at most 1.728e-9 for the reflected stress
+probes. The added sectors' changes are below 4e-14. These are observed
+refinements, not certified tail bounds. The new sectors' selected
+kappa=0.4, nmax=8 to12 changes are at most 1.318e-9; this single-frequency
+check does not bound the full angular or frequency remainder.
+
+Independent audits reconstructed every quadrature panel and total from
+saved nodes, weights and separate chirality data: errors are at most
+1.11e-16, with exact sector sums and recorded refinement envelopes.
+Root separately rebuilt 29 saved matrix cases, covering all meshes and
+the two nmax=12 samples. Reflected parity maps and observable traces
+reproduce exactly; physical raw-to-facet maps agree within 1.74e-18.
+Simultaneous exterior/throat coordinate rephasing leaves the determinant
+unchanged. Fresh finite-metric throat solves give a Richardson derivative
+error below 2.89e-11. Inherited mu=0.5 nodes reproduce increment97 within
+5.51e-14. The maximum sparse-equation residual is 4.57e-15 and the
+smallest sampled sewing singular value is 0.00122995.
+
+The [angular basis](azimuthal_modes.py) has separate weighted-norm,
+operator, pole, zero-mode and spin-lift checks; the existing mu=0.5
+basis is bitwise unchanged. The outer angular operator was independently
+projected for all three sectors, agreeing with its tail generator within
+4.38e-11. All frozen inputs and 176 previous figures are preserved.
+
+![Connection and sector contributions](azimuthal_source_progress.png)
+
+This resolves a missing angular/connection sensitivity in the conditional
+model. It does not establish an absolute negative source, a consistent
+physical junction, stable passage, a new physical law, or travel from
+13 September 2027 to 12 September 2027.
+
+### Decision gate: an absolute source across a physical collar
+
+Further angular-sector expansion alone cannot answer whether this model
+can support a passage. The next physical gate is an absolute radial-null
+source budget across a specified smooth finite collar. In proper radial
+distance s, write ds4^2=-N(s)^2 dt^2+ds^2+r(s)^2 dOmega^2. Fix the
+endpoint geometry, field state, couplings and common renormalization
+prescription before calculating the source. The independently verified
+[collar identity](throat_junction_audit.py) requires
+\[
+ I_{\rm req}=-{E\over4\pi G}
+ \left[\left.{r'\over Nr}\right|_{\rm in}^{\rm out}
+       +\int_{\rm in}^{\rm out}{r'^2\over Nr^2}\,ds\right],
+ \qquad I_Q=\int T^Q_{ab}k^ak^b\,d\lambda.
+\]
+Here E>0 fixes the affine null normalization, primes denote d/ds,
+and k^t=E/N^2, k^s=E/N. For N,r>0, inner r'=0 and outer r'=N=1,
+the required integral is strictly negative. The purely radial spherical
+Maxwell field contributes zero to this contraction; this statement does
+not replace the stress of a general two-centre magnetic exterior.
+
+The phase-independent reference stress is essential to I_Q and has
+not been computed by the current phase-contrast method. Neither
+dividing a contrast by a volume nor matching its sign supplies I_Q.
+A wrong sign or insufficient absolute magnitude, beyond the stated
+uncertainties, rejects the specified state/collar candidate. Agreement
+would pass only this necessary integrated condition; all remaining
+Einstein equations, junction data and dynamical stability still matter.
+
+The present q=1 geometry has no specified physical collar or absolute
+reference source, and lies outside the large-flux control used in
+[MMP](https://arxiv.org/html/1807.04726v3). Its current role is a
+transport/source-contrast benchmark. The next calculation must first
+establish that those missing inputs can be supplied in a controlled
+approximation. If they cannot, pivot the support calculation to the
+existing large-flux effective-action collar of increments83/84 rather
+than extending this benchmark indefinitely. Reuse its verified spherical
+solution; do not repeat its opening calculation. The unresolved extension
+is its physical nonradial exterior and state matching. This is a decision
+rule, not a claim that the complete large-flux construction is solved.
+
 ## Opposite chirality and physical boundary consistency — increment97
 
 The supporting-field candidate needs specified physical field content.

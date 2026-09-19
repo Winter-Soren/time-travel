@@ -7284,6 +7284,95 @@ def dirac_sewing_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def azimuthal_source_progress():
+    """Separate an explicit endpoint connection from added angular sectors."""
+    from matplotlib.patches import Circle
+    root = Path(__file__).resolve().parent
+    d = json.loads((root/'azimuthal_source_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values()) and d['basis_checks']['passed']
+    sectors = d['sector_integrations']; mus = [r['mu'] for r in sectors]
+    assert mus == [-.5, .5, 1.5]
+    by_mu = {r['mu']: r for r in sectors}; fields = ('energy','rho_plus_pr','shift','null_plus','null_minus')
+    for row in sectors:
+        signs = np.array(d['basis_checks']['reflection_parities'][str(row['mu'])])
+        assert np.array_equal(signs, (-1.)**(np.arange(1,len(signs)+1)+abs(row['mu']-.5)))
+        for branch in ('inherited','reflection'):
+            current = row['primary'][branch]
+            assert current['panel_orders'] == d['partial_sums']['primary'][branch]['panel_orders']
+            assert current['edges'] == d['partial_sums']['primary'][branch]['edges']
+            for key in ('h','R','nmax','L','rho_c'):
+                assert current['config'][key] == d['partial_sums']['primary'][branch]['config'][key]
+            totals = current['totals']
+            for key in fields:
+                right,left,pair = (np.asarray(totals[c][key]) for c in ('right','left_physical','paired'))
+                scale = max(float(np.max(abs(right))),float(np.max(abs(left))))
+                assert np.max(abs(pair-right-left)) <= 128*np.finfo(float).eps*scale
+            for panel,order in zip(current['panels'],current['panel_orders']):
+                nodes,weights = np.polynomial.legendre.leggauss(order); width = panel['upper']-panel['lower']
+                assert np.allclose(panel['kappa'],panel['lower']+(nodes+1)*width/2,rtol=1e-13,atol=0)
+                values = np.array(panel['integrands']['paired']['rho_plus_pr'])
+                assert np.allclose(width/2*(weights@values),panel['responses']['paired']['rho_plus_pr'],rtol=1e-12,atol=0)
+    for branch in ('inherited','reflection'):
+        for key in fields:
+            expected = np.sum([r['primary'][branch]['totals']['paired'][key] for r in sectors],axis=0)
+            assert np.array_equal(expected,d['partial_sums']['primary'][branch]['totals']['paired'][key])
+    old = np.array(by_mu[.5]['primary']['inherited']['totals']['paired']['rho_plus_pr'])
+    reflected = np.array(by_mu[.5]['primary']['reflection']['totals']['paired']['rho_plus_pr'])
+    partial = np.array(d['partial_sums']['primary']['reflection']['totals']['paired']['rho_plus_pr'])
+    per_sector = np.array([r['primary']['reflection']['totals']['paired']['rho_plus_pr'] for r in sectors])
+    values = np.array([old,reflected,partial]); assert values.shape == (3,2) and np.all(np.isfinite(values))
+    coarse = d['partial_sums']['coarse']['reflection']; fine_mesh = d['partial_sums']['finer_mesh']['reflection']
+    mesh_change = np.max(abs(np.array(fine_mesh['totals']['paired']['rho_plus_pr'])-coarse['totals']['paired']['rho_plus_pr']))
+    frequency_change = np.max(d['diagnostics']['combined_observed_panel_change_sum']['reflection']['rho_plus_pr'])
+    primary = d['partial_sums']['primary']['reflection']
+    colors = ['#007e87','#7951b0']
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig = plt.figure(figsize=(13.5,8.0))
+    fig.suptitle('Separate the end connection from the added angular sectors',fontsize=17.7,fontweight='bold',y=.965)
+    fig.text(.5,.907,'Specified sphere / product-frame geometry · Both Weyl components solved · Phase π minus phase 0',
+             ha='center',fontsize=10.7,color='#475569')
+    ax = fig.add_axes([.045,.545,.425,.27]); ax.set_aspect('equal'); ax.set_axis_off()
+    ax.set(xlim=(0,2.6),ylim=(0,1.02)); ax.set_title('A. Declared angular identification — schematic',fontsize=11.7,pad=13)
+    radius=.29; centers=[(.52,.47),(1.95,.47)]; angles=[np.pi/3,2*np.pi/3]; points=[]
+    for center,angle,label,color in zip(centers,angles,['Lower end','Upper end'],colors):
+        x,y=center; ax.add_patch(Circle(center,radius,facecolor='#f6f8fb',edgecolor=color,lw=1.7))
+        ax.annotate('',xy=(x,.88),xytext=(x,.10),arrowprops={'arrowstyle':'->','color':'#94a3b8','lw':1})
+        ax.text(x-.055,.885,'+z',ha='right',fontsize=9,color='#64748b')
+        point=np.array(center)+radius*np.array([np.sin(angle),np.cos(angle)]); points.append(point)
+        ax.plot([x,point[0]],[y,point[1]],color=color,lw=1.8); ax.plot(*point,'o',color=color,ms=6)
+        ax.text(x,.015,label,ha='center',fontsize=10.5,color=color)
+    ax.annotate('',xy=points[1],xytext=points[0],arrowprops={'arrowstyle':'->','linestyle':'--','color':'#b38516','lw':1.5,'connectionstyle':'arc3,rad=-.20'})
+    ax.text(1.25,.80,'same azimuth φ',ha='center',fontsize=10,color='#b38516')
+    fig.text(.257,.505,r'$\theta_U=\pi-\theta_L$  ·  Spin frame transformed too',ha='center',fontsize=11,color='#475569')
+    fig.text(.257,.455,'Reflected connection: separate sector contributions',ha='center',fontsize=10.6,fontweight='bold',color='#475569')
+    table_ax=fig.add_axes([.060,.277,.395,.145]); table_ax.set_axis_off()
+    table=table_ax.table(cellText=[[f'{mu:+g}',f'{v[0]:.6g}',f'{v[1]:.6g}'] for mu,v in zip(mus,per_sector)],
+                        colLabels=['Sector μ','Central probe','Upper-side probe'],cellLoc='center',bbox=[0,0,1,1])
+    table.auto_set_font_size(False);table.set_fontsize(9.9)
+    for (row,col),cell in table.get_celld().items():
+        cell.set_edgecolor('white');cell.set_facecolor('#edf1f5' if row==0 else '#f8fafc')
+        if row==0:cell.set_text_props(fontweight='bold',color='#475569')
+    bx=fig.add_axes([.590,.347,.365,.438]);bx.set_title('B. Connection change, then added sectors',fontsize=11.6,pad=14)
+    x=np.arange(3);width=.32
+    for j,(color,label) in enumerate(zip(colors,['Central probe','Upper-side probe'])):
+        bars=bx.bar(x+(j-.5)*width,values[:,j],width,color=color,label=label)
+        for bar,value in zip(bars,values[:,j]):
+            bx.annotate(f'{value:.5f}',(bar.get_x()+bar.get_width()/2,value),xytext=(0,-5 if value<0 else 4),
+                        textcoords='offset points',ha='center',va='top' if value<0 else 'bottom',fontsize=9)
+    bx.axhline(0,color='#64748b',lw=1);bx.set_xticks(x,['μ = +½\ninherited','μ = +½\nreflected','Three sectors\nreflected'])
+    bx.set_ylabel('Weighted energy + radial-pressure PHASE contrast',fontsize=9.8)
+    bx.margins(y=.25);bx.spines[['top','right']].set_visible(False);bx.grid(axis='y',alpha=.15);bx.set_axisbelow(True)
+    bx.legend(loc='best',frameon=True,facecolor='white',edgecolor='none',framealpha=1,fontsize=9.4)
+    fig.text(.77,.262,'Same mesh and quadrature in all three comparisons.',ha='center',fontsize=9.6,color='#475569')
+    fig.text(.05,.206,f"Raw weighted responses; ℏ = c = d = 1. Window {primary['edges'][0]:g} ≤ κd ≤ {primary['edges'][-1]:g}, h/d = {primary['config']['h']:g}.",fontsize=10,color='#475569')
+    fig.text(.05,.157,f'Partial-sum sensitivity: latest matched mesh change {mesh_change:.3g}; observed frequency-panel change {frequency_change:.3g}. Neither is a certified bound.',fontsize=9.6,color='#475569')
+    fig.text(.05,.108,'Only three azimuthal sectors: higher angular content, the physical junction and the absolute supporting source remain unresolved.',fontsize=9.9,color='#475569')
+    fig.text(.05,.047,'No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',fontsize=10.5,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'azimuthal_source_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()
