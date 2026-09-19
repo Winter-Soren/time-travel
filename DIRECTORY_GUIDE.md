@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Throat pressure and energy-flow diagnostics | [throat_null_response.py](throat_null_response.py), [saved metric derivatives and checks](throat_null_response_results.json), [figure](throat_null_progress.png) |
 | Compact local source diagnostic | [local_lapse_response.py](local_lapse_response.py), [saved responses and direct perturbation checks](local_lapse_response_results.json), [figure](local_lapse_progress.png) |
 | Computed phase-dependent spectral diagnostic | [phase_vacuum_contrast.py](phase_vacuum_contrast.py), [saved determinants and integrals](phase_vacuum_contrast_results.json), [figure](phase_vacuum_progress.png) |
 | Curved modes and junction support | [curved_throat_modes.py](curved_throat_modes.py), [curved_exterior_closure.py](curved_exterior_closure.py), [closure results](curved_exterior_closure_results.json); [throat_junction_audit.py](throat_junction_audit.py), [required-stress results](throat_junction_audit_results.json) |

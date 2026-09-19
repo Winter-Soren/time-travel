@@ -58,6 +58,81 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Throat pressure and energy-flow contrasts — increment96, PROGRESS
+- Previous95 was PROGRESS: completed/pushed/private/clean at
+  35c93b0567bcdfbb8c7fd831e247459610c862fe; root revalidated clean HEAD.
+  Goal remains ACTIVE; import/reproduction and cleanup remain complete.
+- coupled_misner owns ONLY throat_null_response.py/results. Frozen95/93
+  helpers reused; compact N_eta=N exp(eta f),A_eta=A exp(-eta f),r=b fixed.
+  Two bumps: centers0/.60 timescut and widths.65/.25 timescut, cut=atan(2).
+  Shared Riccati baseline/tangents vary BOTH Eell(-2f) and lambda secσ(-f).
+  formation independently checked actualproducer vs full2x2 transfer tangent:
+  Serror5.95e-15,dSerror1.44e-14,unitarity derivative2.36e-15. No endpoint
+  derivative or f' term is missing after chi=r sqrtN Psi rescaling.
+- Added a cheap, independently derived flux probe BEFORE production:
+  ds²=-N²dt²+A²(dy-vdt)²+r²dOmega², v=eta(N/A)f. Exact diagonalization
+  T=t+F, F_y=(A/N)eta f/(1-eta²f²), Ntilde=N sqrt(1-eta²f²),
+  Atilde=A/sqrt(1-eta²f²). Keep originalendpointclocks, includingDeltaF.
+  Atfirstorder, forwardt'=-iE I_f*t and reverse t'=+iE I_f*t,reflection'=0;
+  I_f=int(A/N)fdy. At iκ, forwardfactor+κI_f,reverse-κI_f. Allpairedmodes.
+  Finite transfer det is NOT1 afterendpointscalar; do notforce reciprocity.
+  Qshift=-intNAr²f DeltaT_lower_hat0hatr; Qplus=Qρ+p-2Qshift,
+  Qminus=Qρ+p+2Qshift. formation exactsymbolic shift auditpassed.
+- Chiralcirclecontrol: Deltaρ=Deltap=-pi/(4L²), |DeltaT0r|=|Deltaρ|.
+  Qρ+p=2Qshift; opposite-nullcontrasts0 and4Deltaρ. Phase0/pi and
+  stationarity alone DO NOT imply zeroenergyflow. Noextra physicalchirality.
+- Production session52819 completed: all15controls PASS, -B -W error,
+  210.53s,340 frequency/config evaluations. Primary h.05,order16,[1e-6,12]:
+  Qρ+p[-.07770387476135,-.02982913055087],shift[-.03922773033228,-.01508758858934],
+  Qplus[.00075158590321,.00034604662780],Qminus[-.15615933542592,-.06000430772955].
+  max8/16 change8.06e-9 acrossobservables; Qplus atmost4.64e-11.
+  h.035 Qplus[.00075599090077,.00034799090958],latestchanges4.405e-6/1.944e-6;
+  Qminus[-.15673762601511,-.06022647713499],changes5.783e-4/2.222e-4.
+  Signs persist across3meshes; combinedcontinuumboundstillabsent.
+  Finite shift/combinedmetric Richardsonerrors2.21e-10/6.47e-10;
+  determinantderivative relativeerror2.83e-9; ODErefinementmax2.515e-11.
+  S_ext exactlymatches95 atκ.01/.4/2. SampledN/R/L sensitivitiesonly;
+  largestIR[1e-8,1e-6] contribution6e-10, UV[12,16]4.45e-10. Uncomputed
+  tailsunbounded; finite-meshIRplateauisnotprovedphysicalgap.
+  Source90967d206c36c678358919bb7df2375d5a5f921c68b5f56e91fa93f2c9800fd0;
+  JSONe6db1314e1205b35bed3bf1f6704e991a8e4536f7ed74dbd766e378b50326766.
+- Root reconstructedall7integrationrecords for4observables andsavedcomplex
+  responsetraces(error1.39e-17), verified15savedchecks/13dependencyhashes.
+  Zeromapcontribution toQplus cancelsexactlyanalytically. Storedκ.4central
+  totalintegrand3.994409e-4, numericalzeroresidue-1.471e-11; maskingthezero
+  entryisolatespairedmoderesponse. Checkedκ.01/.4/2 bothprobes. Thisshows
+  pairedorigininthemodel, notabsolutestress; useabsolutechangesnearcancellation.
+- medium_picture addedonly throat_null_progress() line7107 andnewPNG/PDF,
+  separateQ±scales,actualsavedprofiles. RootinspectedclearPNG.
+  Plotter1860e5e326f9c814088f17d8335c7fd7416878290a2951fe91ed5e7533d47b28;
+  PNG6ed03413fb3341b6b8acb0a12c3012f17045c46e98dcc75f95345964829f56a7;
+  PDFa2de3c1be84b6f98d99e81c7c5f6827143440f93e2deb5d8332226850fde4ef9.
+  RootupdatedREADME,DIRECTORY_GUIDE,RESEARCH,TASK. Rootverified417oldtracked
+  filesoutside5 intentionaldocs/plotter, including172figures,unchangedfrom95.
+  Current123locallinks,twoASTs,andgitdiffcheckPASS. Allagentsfinished;
+  nosimulationrunning. Commit/pushverificationremainspublicationstep.
+- Geometrygate independentlyverified: fixedr=b has rho+pr=0 foranyN,A.
+  In fact radialEinsteinblock Gab=-gab/b² forany2Dmetric atfixedb, so
+  radialfluxrequiredalsozero. Radiusperturb r=b+εu gives
+  δ(rho+pr)=-N/(4piG b A)∂y[u_y/(AN)]. Aphasecontrastdoesnotclose this
+  Einstein/source system; absolutestress,fullsectors andjunctionrequired.
+- NEXT97: checkoppositechirality/domainmapping at BOTH mouths ANDoutercut,
+  withmeshdependence beforeanyphysicalDiracsum. ContinuumH_L(v)=-H_R(-v)
+  requiressamevectorcharge,magneticconnection,spinstructure,endpointdomain,
+  symmetricsea andnochiralityspecificchemicalpotential. Upwindfiniteweak
+  A_Lκ=A_Rκ†,G_L=C_R†,C_L=G_R† mustbecheckedbyreversingactualassembly;
+  it isadjoint-pairing,notcontinuumselfadjointness. Incoming/outgoing swap.
+  Withcorrectsamephysicaldomains S_L=S_R†,B_L(v)=B_R(-v)† wouldgiveequal
+  modulus/pressureandoppositeflux. DO NOTsilentlydoublecurrentresults.
+  Read-onlyfrozen94actual17channelmouthcounterexample atκ.4:
+  physicalleft=Fout*Braw†*Fin^-1 differsfromBfacet† bymaxentry3.697207775e-4,
+  relativeFrobenius3.308772707e-4 (bothphases). Gramnormdeviation.00916700745.
+  Weightedrawleft Wo^-1*Braw†*Wi reproducesfacetadjointto4.44e-16 butchanges
+  finiteboundaryprescription; cannotreplacephysicalmapwithoutcheckinglimit.
+  Frozen94lacksouterraw/factors; needactualouterassemblyfornextcomparison.
+  No97implementationyet; fullsource/absoluteNEC/geometry/stability and
+  13Sep2027->12Sep2027 passage remainunproved. GoalACTIVE.
+
 ### Compact local source diagnostic — increment95, PROGRESS
 - Previous94 committed/pushed/private/clean at
   f81280aaf1a4dc53f8045ac98bb5a4fde3210b3a; root verified before95.

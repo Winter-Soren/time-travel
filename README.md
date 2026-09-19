@@ -8,10 +8,11 @@ A computational research workbench for testing proposed chronology-changing geom
 
 The present direction tests whether charged fermions actually return through the magnetic exterior used in an idealized traversable-wormhole construction. A field-line picture alone cannot determine the spinor's return amplitude, phase, or quantum stress.
 
-A connected **q=1** model now supplies a relative spectral determinant for two loop phases on the same prescribed throat and exterior. Compact changes of the clock rate probe its energy-density contrast in three small exterior regions. This is a finite angular-sector source diagnostic; absolute energy density, radial pressure and a self-consistent supporting geometry remain missing. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
+A connected **q=1** model supplies a relative spectral determinant for two loop phases on the same prescribed throat and exterior. Compact metric variations probe energy density outside the throat, and energy plus radial pressure and energy flow inside it. Combining the latter gives separate contrasts for the two radial null directions. These are finite angular-sector source diagnostics; absolute stress, the remaining physical field content and a self-consistent supporting geometry remain missing. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Throat stress responses](throat_null_response.py) · [results](throat_null_response_results.json) | Compact clock/radial and stationary-shift variations, scattering derivatives against finite perturbations, exact chiral controls and separate numerical refinements | Smeared phase contrasts in energy plus radial pressure, energy flow and both radial null contractions; no absolute NEC or supporting source |
 | [Compact local source response](local_lapse_response.py) · [results](local_lapse_response_results.json) | Direct lapse perturbations versus the analytic Green-function derivative, weighted-mass normalization and separate numerical refinements | A smeared phase difference in the energy-density diagnostic; no absolute negative energy, radial pressure, stability or material recipe |
 | [Phase-dependent determinant](phase_vacuum_contrast.py) · [results](phase_vacuum_contrast_results.json) | Full mouth response, independent determinant elimination, fermion normalization and frequency/mesh sensitivity | A retained-sector phase-contrast functional; no absolute vacuum energy, local supporting stress, or physical phase preparation |
 | [Matched spherical source](dirac_matched_source.py) · [smooth collar and return closure](dirac_return_closure.py) · [saved result](dirac_return_closure_results.json) | Derived source terms, Einstein constraints and a modeled complete-loop state at large flux | An opening branch in a truncated spherical/composite model; the nonradial exterior and its quantum source remain unresolved |
@@ -31,9 +32,9 @@ A connected **q=1** model now supplies a relative spectral determinant for two l
 
 These components do not yet form a complete physical solution. The next source calculation must vary the field's effective action on a consistently matched geometry, include the missing angular/field content, and test its stress against the Einstein equations. The synthetic throat's junction and bulk stress mismatches cannot be fixed by tuning a phase. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
 
-![Compact clock-rate probes and the computed local phase contrast](local_lapse_progress.png)
+![Compact throat probes and the two radial null-stress phase contrasts](throat_null_progress.png)
 
-*The colored regions are mathematical test weights, not a manufactured medium. A lower phase-dependent energy is not proof of negative supporting stress. The [global phase contrast](phase_vacuum_progress.png), [junction-support requirement](curved_junction_progress.png), and [computed field](exterior_boundary_progress.png) remain available.*
+*The colored profiles are mathematical test weights. The geometry is prescribed, and a phase contrast does not establish absolute supporting stress. The [exterior energy-density probe](local_lapse_progress.png), [global phase contrast](phase_vacuum_progress.png), and [junction-support requirement](curved_junction_progress.png) remain available.*
 
 ## Quickstart
 
@@ -58,7 +59,15 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The current compact local-source calculation can be reproduced with:
+The current throat source diagnostic can be reproduced with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 throat_null_response.py
+```
+
+It writes its own results JSON. The lapse, radial metric and stationary shift vary only inside the throat, with the computed exterior and original endpoint clocks held fixed. The shift calculation retains the relative endpoint time factor after diagonalizing the interior metric. These derivatives measure weighted differences between phases; their numerical checks do not establish absolute NEC violation, a supported geometry or stability.
+
+The preceding compact exterior-source calculation can be reproduced with:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 local_lapse_response.py

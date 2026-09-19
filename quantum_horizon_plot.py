@@ -7104,6 +7104,100 @@ def local_lapse_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def throat_null_progress():
+    """Show compact metric probes and both opposite-null PHASE contrasts."""
+    root = Path(__file__).resolve().parent
+    record = json.loads((root/'throat_null_response_results.json').read_text(encoding='utf-8'))
+    assert record['passed'] and all(record['tests'].values())
+    probes = record['probes']; names = [p['name'] for p in probes]
+    assert names == ['central', 'upper_side']
+    sigma = np.array(probes[0]['sigma']); cut = sigma[-1]
+    assert cut > 0 and np.isclose(sigma[0], -cut, rtol=1e-14, atol=0)
+    for probe in probes:
+        assert np.array_equal(probe['sigma'], sigma) and probe['endpoint_clearance'] > 0
+        u = ((sigma-probe['center'])/probe['width'])**2; expected = np.zeros_like(u)
+        inside = u < 1; expected[inside] = np.exp(1-1/(1-u[inside]))
+        assert np.allclose(probe['profile'], expected, rtol=1e-12, atol=0)
+        assert probe['profile'][0] == 0 and probe['profile'][-1] == 0
+    fine = record['quadrature_refinement'][-1]; coarse = record['quadrature_refinement'][0]
+    mesh = record['mesh_refinement']
+    fields = [('response_integrands', 'responses', 'total_responses'),
+              ('shift_response_integrands', 'shift_responses', 'total_shift_responses'),
+              ('null_plus_integrands', 'null_plus_responses', 'total_null_plus_responses'),
+              ('null_minus_integrands', 'null_minus_responses', 'total_null_minus_responses')]
+    for row in [fine, coarse, *mesh]:
+        assert row['edges'] == fine['edges'] and row['probe_order'] == names
+        nodes, weights = np.polynomial.legendre.leggauss(row['order'])
+        for panel in row['panels']:
+            width = panel['upper']-panel['lower']
+            assert np.allclose(panel['kappa'], panel['lower']+(nodes+1)*width/2, rtol=1e-13, atol=0)
+            for integrand_key, integral_key, _ in fields:
+                values = np.array(panel[integrand_key]); assert values.shape == (row['order'], 2)
+                assert np.allclose(width/2*(weights@values), panel[integral_key], rtol=1e-12, atol=0)
+        for _, integral_key, total_key in fields:
+            assert np.array_equal(np.sum([p[integral_key] for p in row['panels']], axis=0), row[total_key])
+        q, shift = np.array(row['total_responses']), np.array(row['total_shift_responses'])
+        # Absolute floating-point allowance is required when the null combination nearly cancels.
+        roundoff = 128*np.finfo(float).eps*max(np.max(abs(q)), np.max(abs(2*shift)))
+        assert np.max(abs(np.array(row['total_null_plus_responses'])-(q-2*shift))) <= roundoff
+        assert np.max(abs(np.array(row['total_null_minus_responses'])-(q+2*shift))) <= roundoff
+        for key in ('R', 'nmax', 'L', 'rho_c'):
+            assert row['config'][key] == fine['config'][key]
+    assert np.isclose(cut, np.arctan(fine['config']['rho_c']), rtol=1e-14, atol=0)
+    h = np.array([r['config']['h'] for r in mesh]); assert len(h) >= 3 and np.all(np.diff(h) < 0)
+    nulls = [np.array([r[key] for r in mesh]) for key in ('total_null_plus_responses', 'total_null_minus_responses')]
+    assert all(np.all(np.isfinite(values)) for values in nulls)
+    changes = [np.max(np.abs(np.diff(values, axis=0)[-1])) for values in nulls]
+    colors = ['#007e87', '#7951b0']; labels = ['Central probe', 'Toward the upper end']
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13.5, 8.0))
+    fig.suptitle('Two null-direction phase contrasts inside a prescribed throat',
+                 fontsize=17.5, fontweight='bold', y=.965)
+    fig.text(.5, .905, 'Compact clock, radial-length and shift probes · Phase π minus phase 0 · One retained sector',
+             ha='center', fontsize=10.7, color='#475569')
+    left = fig.add_axes([.075, .38, .365, .42])
+    left.set_title('A. Actual compact probe profiles', fontsize=12, pad=14)
+    left.fill_between([-1, 1], 1.18, 1.32, color='#e6f4f3')
+    left.text(0, 1.25, 'Prescribed throat — schematic', ha='center', va='center', fontsize=9.6, color='#007e87')
+    for endpoint in (-1, 1): left.plot([endpoint, endpoint], [1.16, 1.34], color='#b38516', lw=2.5)
+    for index, (probe, color) in enumerate(zip(probes, colors)):
+        profile = np.array(probe['profile']); x = sigma/cut
+        left.fill_between(x, 0, profile, color=color, alpha=.10); left.plot(x, profile, color=color, lw=1.9)
+        peak = int(np.argmax(profile))
+        left.text(x[peak], profile[peak]+.045, str(index+1), ha='center', fontweight='bold', fontsize=11, color=color)
+    left.set(xlim=(-1.08, 1.08), ylim=(0, 1.40), xlabel=r'Throat coordinate $\sigma/\sigma_{\rm cut}$',
+             ylabel='Prescribed weight f', yticks=[0, .25, .5, .75, 1.])
+    left.spines[['top', 'right']].set_visible(False); left.grid(alpha=.13); left.set_axisbelow(True)
+    axes = [fig.add_axes([.585, .61, .37, .19]), fig.add_axes([.585, .375, .37, .18])]
+    axes[0].set_title('B. Opposite null directions — separate vertical scales', fontsize=11.1, pad=16)
+    for index, (ax, values, sign) in enumerate(zip(axes, nulls, ['+', '-'])):
+        ax.axhline(0, color='#94a3b8', lw=1)
+        for j, (color, marker, label) in enumerate(zip(colors, ['o', 's'], labels)):
+            ax.plot(h, values[:, j], marker+'-', color=color, lw=1.6, ms=5, label=f'{j+1}  {label}')
+        ax.set(ylabel=rf'$Q_{{{sign}}}$ phase contrast', xticks=h, xlim=(h[0]+.005, h[-1]-.004))
+        ax.margins(y=.20); ax.ticklabel_format(axis='y', style='sci', scilimits=(0, 0), useMathText=True)
+        ax.spines[['top', 'right']].set_visible(False); ax.grid(alpha=.15); ax.set_axisbelow(True)
+        if index == 0: ax.tick_params(labelbottom=False)
+    axes[0].legend(loc='best', frameon=True, facecolor='white', edgecolor='none', framealpha=1, fontsize=8.8)
+    axes[1].set_xlabel('Exterior mesh h / d (finer →)')
+    fig.text(.255, .299, r'$N_\eta=N e^{\eta f}$      $A_\eta=A e^{-\eta f}$',
+             ha='center', fontsize=14, color='#7951b0')
+    fig.text(.255, .250, 'A compact shift separately probes radial energy flow.', ha='center', fontsize=9.9, color='#475569')
+    fig.text(.77, .289, r'$Q_\pm=Q_{\rho+p}\mp2D_{\rm shift}$', ha='center', fontsize=13.4, color='#475569')
+    fig.text(.77, .245, 'Raw weighted phase differences; no volume normalization.', ha='center', fontsize=9.6, color='#475569')
+    fig.text(.05, .182, f"Window {fine['edges'][0]:g} ≤ κd ≤ {fine['edges'][-1]:g}. Largest latest mesh changes: "
+             f"Q+ {changes[0]:.3g}, Q− {changes[1]:.3g}. Normalized units: ℏ = c = d = 1.", fontsize=9.8, color='#475569')
+    fig.text(.05, .130, 'Near cancellation needs absolute sensitivity checks. Mesh changes are diagnostics, not certified continuum or frequency-tail bounds.',
+             fontsize=9.8, color='#475569')
+    fig.text(.05, .081, 'These contrasts do not establish absolute NEC violation or supply the required supporting source; the geometry remains prescribed.',
+             fontsize=9.8, color='#475569')
+    fig.text(.05, .033, 'No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',
+             fontsize=10.5, fontweight='bold', color='#007e87')
+    outputs = tuple(root/f'throat_null_progress.{suffix}' for suffix in ('png', 'pdf'))
+    for path in outputs: fig.savefig(path, dpi=180, facecolor='white')
+    plt.close(fig); print(outputs[0]); return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

@@ -1,5 +1,268 @@
 # Reproduction and coupled-model iterations
 
+## Throat stress contrasts from compact metric variations — increment96
+
+This increment moves the metric probe into the prescribed throat. It
+targets an angularly integrated combination of energy density and radial
+pressure, which is more directly relevant to the geometry than the
+exterior energy-density probe of increment95. It still compares two
+declared loop phases on the same geometry; it supplies neither an absolute
+source nor a material preparation procedure.
+
+### Compact metric variation with unchanged mouth data
+
+Use a fixed throat coordinate y and a purely magnetic connection:
+\[
+ ds^2=-N(y)^2dt^2+A(y)^2dy^2+r(y)^2d\Omega^2,
+ \qquad \chi=r\sqrt N\,\Psi.
+\]
+With time convention exp(-iEt), each nonzero angular pair obeys
+\[
+ \partial_y\chi=
+ \left[iE{A\over N}\sigma_3+{\lambda A\over r}\sigma_2\right]\chi,
+ \qquad \lambda=\sqrt{n(n+q)}.
+\]
+The radial norm is integral (A/N) chi-dagger chi dy, and the current per
+common coordinate time is chi-dagger sigma_3 chi. A flat-dy canonical
+spinor would instead be sqrt(A/N) chi. The spherical spinor rescaling
+and chiral zero-mode starting point follow [MMP, Appendix C](https://arxiv.org/pdf/1807.04726);
+the nonzero-pair convention is derived in [the existing matching note](CURVED_THROAT_MATCHING.md).
+No second physical zero-mode chirality is added to the retained Weyl field.
+
+For a smooth nonnegative f with compact support away from both cuts,
+choose the finite path
+\[
+ N_\eta=N e^{\eta f},\qquad A_\eta=A e^{-\eta f},\qquad r_\eta=r.
+\]
+The clock and endpoint bases are unchanged near the cuts. Both metric
+coefficients remain positive, while the frequency coefficient A/N gains
+exp(-2 eta f) and the angular coefficient A/r gains exp(-eta f). In the
+existing angle coordinate sigma, their undeformed values are ell and
+lambda sec(sigma), respectively. Differentiating only one of these
+coefficients would represent a different stress probe.
+
+The static metric variation gives
+\[
+ {d\Delta\mathcal E\over d\eta}\bigg|_0
+ =\int dy\,d\Omega\,NAr^2 f\,
+       \Delta(T_{\hat0\hat0}+T_{\hat r\hat r}).
+\]
+This interpretation is conditional on the same continuum, state and
+subtraction hypotheses as increment95. It is a smeared phase contrast,
+not a pointwise stress value. It is also the half-sum of the two opposite
+radial null contractions: an individual contraction includes the
+additional plus or minus 2T_hat0hatr. Stationarity does not eliminate
+that energy-flow term.
+
+The one-chiral-channel circle provides a concrete counterexample to
+assuming that flow vanishes at phases zero and pi. Its symmetric-sea
+contrast has Delta E=-pi/(4L) and Delta p=Delta rho=-pi/(4L^2), with
+|Delta T_hat0hatr|=|Delta rho|. The two null contrasts are therefore zero
+and 4 Delta rho, rather than two copies of 2 Delta rho. This is an exact
+control for the isolated chiral channel, not a computed flux value for
+the actual exterior/throat system. Opposite chiralities can cancel flux
+under additional matching assumptions, but that cancellation has not
+been computed here.
+
+### Differentiate the throat map, retaining the computed exterior
+
+Let S_ext be the outer-matched exterior response, held fixed during this
+compact throat variation. The curved radial scattering gives B_phi(eta)
+in the unchanged endpoint coordinates. For M_phi=I-S_ext B_phi,
+\[
+ {d\Delta\mathcal E\over d\eta}\bigg|_0
+ ={1\over\pi}\int_0^\infty\Re\operatorname{Tr}\left[
+ M_\pi^{-1}S_{\rm ext}B_\pi'
+ -M_0^{-1}S_{\rm ext}B_0'\right]d\kappa.
+\]
+The sign follows by differentiating the existing -1/pi integral of
+log|D_pi/D_0|. Tangent Riccati equations can calculate B' without
+forming an exponentially growing transfer matrix. Directly perturbed
+finite-eta scattering maps and determinants provide separate checks.
+
+The physical zero channel supplies an exact control. With
+I_f=integral (A/N)f dy, its optical length derivative is -2I_f and
+\[
+ \partial_\eta\log t_0=-2iE I_f
+                        =2\kappa I_f\quad(E=i\kappa).
+\]
+For an ideal single closed chiral channel of total optical length L,
+Delta E=-pi/(4L) consequently gives derivative -pi I_f/(2L^2).
+This circle is a normalization control; it does not replace the computed
+exterior or include its escape and higher-mode response.
+
+### A compact stationary shift probes energy flow
+
+The missing component can be obtained without another exterior solve.
+At fixed N,A,r, consider
+\[
+ ds^2=-N^2dt^2+A^2(dy-vdt)^2+r^2d\Omega^2,
+ \qquad v=\eta(N/A)f.
+\]
+For |eta f|<1, the exact coordinate change T=t+F(y),
+F_y=(A/N) eta f/(1-eta^2 f^2), diagonalizes the radial metric, with
+N_tilde=N sqrt(1-eta^2 f^2) and A_tilde=A/sqrt(1-eta^2 f^2).
+Thus the diagonalized scattering operator changes only at second order.
+The endpoint time difference remains at first order: d Delta F/deta=I_f.
+It must be retained when sewing to the unchanged exterior clock.
+
+The original transfer matrix is exp(-iE Delta F) times the diagonalized
+one. Its determinant is not one for a finite shift. Applying the general
+transfer-to-scattering quotients gives
+\[
+ \partial_\eta S_{\rm throat}=
+ \begin{pmatrix}
+ 0&iE I_f S_{12}\\-iE I_f S_{21}&0
+ \end{pmatrix}.
+\]
+Reflections therefore have zero first derivative, while the two
+transmissions have opposite derivatives, including for nonzero angular
+pairs. At E=i kappa the physical forward zero channel gains +kappa I_f.
+The metric diagonalization, the transfer quotients and the stress sign
+were checked independently with exact symbolic algebra.
+
+With lower orthonormal indices, the corresponding energy derivative is
+\[
+ Q_{\rm shift}=-\int NAr^2 f\,\Delta T_{\hat0\hat r}\,dy\,d\Omega,
+ \qquad Q_\pm=Q_{\rho+p_r}\mp2Q_{\rm shift}.
+\]
+Here Q_plus and Q_minus smear the contractions with k_hat=(1,+1) and
+(1,-1). The isolated forward chiral circle has Q_rho+p=2 Q_shift,
+so its plus contraction vanishes, while the minus contraction is twice
+Q_rho+p. This also checks the off-diagonal metric sign. This virtual shift
+does not construct moving mouths or a chronology-changing identification.
+
+### Geometry compatibility remains a separate requirement
+
+In a static spherical geometry, the radial Einstein equation is
+\[
+ \rho+p_r=-{1\over4\pi G rA^2}
+ \left[r_{yy}-\left({A_y\over A}+{N_y\over N}\right)r_y\right].
+\]
+This is the proper-distance identity already checked from full curvature
+in [the junction audit](throat_junction_audit.py), written in fixed y.
+The published stress/geometry relation and radial null integral are given
+in [Visser, Kar and Dadhich, equations 3 and 6–7](https://arxiv.org/pdf/gr-qc/0301003).
+
+For the present product r=b, the geometric combination is exactly zero
+for every N and A, including the probe path. Therefore a nonzero quantum
+phase contrast cannot be advertised as support of that unchanged product.
+More generally, for any two-dimensional radial-time metric at fixed sphere
+radius b, its Einstein block is G_ab=-g_ab/b^2: the two-dimensional Ricci
+contribution cancels and the sphere contributes curvature 2/b^2. In an
+orthonormal radial frame this requires both rho+p_r=0 and T_hat0hatr=0.
+Purely magnetic local L(F^2) terms at fixed r and fixed connection also
+have zero variation on this path: N_eta A_eta=NA and F^2 is unchanged.
+That fact does not remove the fermionic state contribution, trace terms
+or the missing junction source.
+
+A separate symbolic calculation verifies the first radius response.
+Writing r=b+epsilon u at fixed N,A gives
+\[
+ \delta(\rho+p_r)=-{N\over4\pi G bA}
+             \partial_y\left({u_y\over AN}\right).
+\]
+This identifies the curvature response that a complete source would have
+to generate. Applying it requires the complete angular and field content,
+absolute reference stress and the other Einstein equations. The one-sector
+phase contrast does not close that system or establish stability.
+
+### Computed contrasts and numerical scope
+
+[throat_null_response.py](throat_null_response.py) and its
+[saved record](throat_null_response_results.json) use two peak-one smooth
+weights exp[1-1/(1-u)] inside u<1, zero elsewhere. For cut=atan(2), their
+(center,width) are (0,0.65 cut) and (0.60 cut,0.25 cut), with
+u=((sigma-center)/width)^2. Both vanish strictly before the mouth cuts.
+The two pressure-sensitive tangents share each radial mode solve, and
+the shift kernels reuse its transmission coefficients.
+
+At q=1, mu=0.5, b=0.2, d=1, rho_c=2, R=2, eight angular pairs, L=40,
+h=0.05 and sixteen-point quadrature on each frequency panel, the window
+[1e-6,12] gives:
+
+| Probe | Q_rho+p | Q_shift | Q_plus | Q_minus |
+| --- | ---: | ---: | ---: | ---: |
+| Central | -0.07770387476 | -0.03922773033 | +0.00075158590 | -0.15615933543 |
+| Upper side | -0.02982913055 | -0.01508758859 | +0.00034604663 | -0.06000430773 |
+
+These are weighted phase contrasts in units hbar=c=d=1, restoring units
+hbar*c/d. In particular, Q_shift is minus the weighted contrast in the
+lower-index energy-flow component. None is divided by a volume.
+
+The signs persist for h=0.08, 0.05 and 0.035. At h=0.035, Q_plus is
+0.00075599090 and 0.00034799091; its latest matched-order mesh changes
+are 4.405e-6 and 1.944e-6. Q_minus is -0.15673762602 and -0.06022647713,
+with latest changes 5.783e-4 and 2.222e-4 in magnitude. Eight-to-sixteen
+frequency quadrature changes any reported observable by at most 8.06e-9;
+for Q_plus the largest change is 4.64e-11. Mesh sensitivity dominates.
+These observations do not certify the continuum signs.
+
+All fifteen controls pass with warnings treated as errors in 210.53
+seconds, with 340 frequency/configuration evaluations. Independent full
+transfer tangents agree within 1.44e-14. Finite stationary-shift and
+combined-metric Richardson checks agree within 2.21e-10 and 6.47e-10,
+respectively. The direct metric determinant derivative agrees to
+2.83e-9 relative error. The exterior response is exactly unchanged from
+increment95 at the three shared representative frequencies. Root's
+independent reconstruction of the stored response traces agrees within
+1.39e-17 and reproduces all seven integration records for all four
+observables.
+
+The zero channel cancels exactly from Q_plus at the analytic level:
+its pressure-sensitive derivative is twice its shift derivative. At
+kappa=0.4 the stored central-probe Q_plus integrand is 3.994409e-4,
+while its numerical zero-channel residue is -1.471e-11. Directly masking
+the zero entry of the stored raw derivative matrix leaves the paired-mode
+contribution. This identifies the origin of the small positive value in
+the retained model at the representative frequencies; it is not evidence
+of an absolute positive or negative physical source.
+
+The separate infrared interval [1e-8,1e-6] contributes at most 6.00e-10
+in magnitude among these observables, and [12,16] at most 4.45e-10.
+The omitted tails remain unbounded. Angular-cutoff, matching-radius,
+far-tail and tighter ODE checks are sampled sensitivities, not combined
+continuum or integrated error bounds. The near-zero finite-mesh
+determinant plateau remains a numerical feature rather than a proved gap.
+
+![Compact throat profiles and both null-stress contrasts](throat_null_progress.png)
+
+### The next field-completion gate is a domain check
+
+For a static massless Dirac field with the same vector charge, magnetic
+connection and physical domain in both chiral blocks, the continuum
+relation H_L(v)=-H_R(-v) implies E_L(v)=E_R(-v) for the symmetric sea.
+Energy and pressure contributions would then add and the energy flows
+would cancel. This requires the same spin structure, spin/gauge endpoint
+identification and state prescription. Reversing a path reverses its
+holonomy; it does not permit assigning an unrelated boundary phase.
+
+This relation cannot simply be imposed on the present finite-grid data.
+With upwind dissipation, the adjoint-paired discretization instead has
+\[
+ A_L(\kappa)=A_R(\kappa)^\dagger,\qquad
+ G_L=C_R^\dagger,\qquad C_L=G_R^\dagger.
+\]
+Independently reversing the transport, characteristic
+projectors and boundary maps is the necessary check before interpreting
+this algebra as the opposite physical chirality.
+
+A read-only audit of the actual frozen94 representative mouth matrices
+at kappa=0.4 already finds a finite-grid mismatch. The physically swapped
+spherical map becomes F_out B_raw^dagger F_in^{-1}, whereas the adjoint
+of the existing facet map is F_out^{-dagger} B_raw^dagger F_in^dagger.
+Their maximum entry difference is 3.6972e-4, with relative Frobenius
+difference 3.3088e-4, for either phase. A weighted raw adjoint reproduces
+the facet adjoint to 4.45e-16, but changes the boundary prescription at
+finite mesh spacing. It cannot be substituted without documenting and
+checking that change.
+
+The corresponding outer-boundary comparison and mesh dependence have
+not yet been evaluated. The next bounded calculation must check both
+boundaries before doubling existing results or claiming a completed
+Dirac stress tensor. Absolute reference stress, other angular sectors
+and a consistent geometry would still remain afterward.
+
 ## Compact local source diagnostic — increment95
 
 The next question is whether the computed return field can supply a local
