@@ -58,6 +58,71 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Magnetic exterior continuation — increment91, PROGRESS
+- User asks whether the direction is proper despite uncertain success.
+  Answer: a defensible feasibility test, not a demonstrated path to a time
+  machine. The motivating published MMP wormhole is causal. No stable medium,
+  new law, obtainable matter, or 13Sep2027->12Sep2027 passage is proved.
+  Goal remains ACTIVE. Previous90 HEAD50c008c5de21a3244f47a009bf356288286da3c8
+  was clean and synchronized to the private origin before91.
+- mass_audit produced magnetic_tail_map.py/results; root integrated new
+  exterior_tail_transport.py/results; coupled_misner audited coordinates
+  and integration; medium_picture produced one schematic/data figure.
+  All90 scientific inputs remain frozen. No import/cleanup/history reruns.
+- Actual point-pair field continued R->L in free spherical characteristic
+  basis: C=(diag(n)+iJ)/r; a'=iEa+Cb, b'=C†a-iEb;
+  Z'=C†-2iEZ-ZCZ initialized with free outgoing map at L. C is not symmetric.
+  GL angular integrals, DOP853, no eigenvalue/singular-value clipping.
+- 15 isolated controls PASS (-W error,3.33s). Independent linear radial map
+  agrees2.49e-14; conserved flux3.23e-14; direct angular differentiation
+  1.69e-11; exact C11error3.33e-16; q0freeerror6.32e-12.
+  L256->512 maxentrychange5.93e-6 is sensitivity, NOT infinity error bound.
+  N12->16->20 lowest4blockchanges1.68e-13/1.75e-13, but full commonblocks
+  4.71e-5/2.75e-5; no uniform whole-operator convergence claim.
+  Tail source44e69dbdb687f53ab5c13a5b00f08039b913db3fe95248e3984daeb4df1bfc9e;
+  JSONf1b0f67fab565af3f6dae0063c357ee99be4390ad1efd78673173c0cbe8c6cb4.
+- Important coordinate correction: modal_port uses separate Gram Cholesky
+  factors M_s=L_s L_s†, so Zfacet=Lminus† Z (Lplus†)^-1 BEFORE SVD.
+  Frozen DG feedback takes G U, singularvalues, V† Cprojection. Physical
+  spherical current and signed Gram-geometry difference are saved separately;
+  they sum to facetcurrent. Cross-sign facet terms and chord displacement
+  remain a documented mesh approximation; never call this exact polygon DtN.
+- Final connected run9controls PASS,27.4356s. Same meshes as90 atR2/4/8,
+  h.05,N12,E.4,q1,d1,b.2,mu.5,L160 nowgive lowerflux
+  .5932535412/.5935444054/.5935071651. ComplexT changes
+  .000191574349/.0000387598821 vs90 .0376810618/.0128339797:
+  196.6916x/331.1150x reduction for COMPLETE tail+coordinate treatment.
+  This is not an isolated tail-only comparison. Frozenfree control reproduced.
+  h.05->.035 changes .001155228(R2)/.001057382(R4), now larger than radius
+  sensitivity. L40->80->160 Tchanges .0000856579/.0000248774;
+  N8->12 Tchange2.53e-7. Infinity convergence remains explicitly FALSE.
+- Representative R4,h.035 amplitude .4607562385+.6187295928i;
+  lowerflux .5951226204; sphericaltail .4032040727; signedpolygoncorrection
+  -.0000716444; omittednorm .0005859611; DGloss .0011589902; sum1.
+  These are supporting-field channels, not material trajectories or escape
+  probabilities. Product mouth leads and flat q1 geometry remain assumptions.
+  Wrapper source607b54125ea7fb716f36c5ab8edf19419101ca3f0e72fa589e1139192097bd37;
+  JSON87658e8b58ee2376ce2cb94427d435e8c8ddc67619f47998f1999545649e8fe5.
+- magnetic_tail_progress() appended at quantum_horizon_plot.py:6694.
+  Root and producer visually inspected PNG. Old162artifacts unchanged.
+  Plotter61c1db9a3978bb2eb690adb227548c640f22023a87c11fc7d79205fde52aa554;
+  PNG52afe1fa924bd8f58369203387ba083f2f739d2d09f65aade5c8368dcc348c0c;
+  PDF8d7b45e0e2244df8edbc7445301fd3c7efb3496c07419d459dd5ac1b530fcc12.
+- Root verification:24saved controls pass, new source/input hashes match,
+  representative ledger independently sums1.0000000000000009;3sources parse;
+  386older tracked files including162figures match90HEAD byte-for-byte.
+  78current local document links exist; git diff whitespace check passes.
+  Producer confirmed exact plotted-input equality after final data refresh.
+  No scientific jobs remain; no historical scientific suites rerun.
+- NEXT92: advance toward curved-mouth matching and the complex-frequency
+  response required for a renormalized quantum source. First establish the
+  appropriate evanescent/imaginary-energy lead convention and its independent
+  free control; do not equate positive-energy transmission with vacuum stress.
+  Keep finiteL, angular truncation, mesh and mouth-model errors distinct.
+  The large-q physical candidate, actual throat, quantum state, formation,
+  backreaction and stability remain open. No useful chronology claim follows
+  automatically even if a causal wormhole calculation succeeds.
+
 ### Connected exterior calculation — increment90, PROGRESS
 - Previous89 was PROGRESS and pushed as5d2cb9f94af3b65f28b59804d9a31b47100a79f9;
   GitHub remote SHA matched, private=true, working tree clean before90.

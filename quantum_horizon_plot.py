@@ -6691,6 +6691,89 @@ def exterior_boundary_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def magnetic_tail_progress():
+    """Plot saved finite magnetic-tail sensitivity with explicit boundary scope."""
+    import hashlib
+    from matplotlib.patches import Circle
+    root = Path(__file__).resolve().parent
+    record = json.loads((root/'exterior_tail_transport_results.json').read_text(encoding='utf-8'))
+    free_path = root/'exterior_boundary_map_results.json'
+    free = json.loads(free_path.read_text(encoding='utf-8'))
+    assert record['passed'] and all(record['tests'].values()) and free['passed']
+    assert record['input_source_sha256'][free_path.name] == hashlib.sha256(free_path.read_bytes()).hexdigest()
+    assert record['parameters'] == dict(q=1, mu=.5, b=.2, d=1., energy=.4)
+    assert not record['convergence']['infinity_convergence_certified']
+    tail_cases = sorted(record['radius_refinement'], key=lambda row: row['R'])
+    free_cases = sorted(free['radius_refinement'], key=lambda row: row['R'])
+    radii = np.array([row['R'] for row in tail_cases])
+    assert np.array_equal(radii, [2., 4., 8.]) and [r['R'] for r in free_cases] == list(radii)
+    for row in tail_cases+free_cases:
+        assert row['h'] == .05 and row['nmax'] == 12 and row['energy'] == .4
+        amplitude = complex(row['lower_zero_amplitude']['real'], row['lower_zero_amplitude']['imag'])
+        assert np.isclose(abs(amplitude)**2, row['lower_zero_flux'], rtol=1e-13, atol=0)
+    for row in tail_cases:
+        assert row['L'] == 160 and abs(row['reduced_balance_residual']) < 1e-8
+        ledger = row['lower_zero_flux']+row['retained_tail_net_flux']+row['mouth_nonzero_net_flux']
+        ledger += sum(row['omitted_outgoing_norm'].values())+row['ledger']['numerical_loss']
+        assert abs(ledger-1) < 1e-8
+        assert np.isclose(row['retained_tail_net_flux'], row['spherical_tail_net_flux']+
+                          row['signed_tail_geometry_flux_difference'], rtol=1e-12, atol=0)
+    old_flux = np.array([row['lower_zero_flux'] for row in free_cases])
+    tail_flux = np.array([row['lower_zero_flux'] for row in tail_cases])
+    old_changes, tail_changes = [], []
+    for cases, changes, key in ((free_cases, old_changes, 'previous_free_matching_radius_changes'),
+                                (tail_cases, tail_changes, 'complex_matching_radius_changes')):
+        amplitudes = np.array([complex(r['lower_zero_amplitude']['real'], r['lower_zero_amplitude']['imag']) for r in cases])
+        changes.extend(abs(np.diff(amplitudes)))
+        assert np.allclose(changes, record['convergence'][key], rtol=1e-10, atol=0)
+    assert np.all(np.array(tail_changes) < np.array(old_changes))
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13.5, 7.4))
+    fig.suptitle('Improved exterior treatment reduces matching-radius sensitivity',
+                 fontsize=17, fontweight='bold', y=.955)
+    fig.text(.5, .885, 'Conditional q = 1 wave model  |  Prescribed product mouth leads remain unchanged',
+             ha='center', fontsize=11, color='#475569')
+    left = fig.add_axes([.045, .365, .43, .425]); left.set_axis_off()
+    left.set_title('A. Where each exterior approximation is used', fontsize=11.5, pad=16)
+    left.set(xlim=(-.84, 1.70), ylim=(-.83, .83)); left.set_aspect('equal', adjustable='box')
+    left.add_patch(Circle((0, 0), .73, facecolor='#fff5df', edgecolor='none'))
+    left.add_patch(Circle((0, 0), .58, facecolor='#e6f4f3', edgecolor='#007e87', lw=1.5))
+    left.add_patch(Circle((0, 0), .31, facecolor='#e8eef8', edgecolor='#326bb3', lw=1.5))
+    for z in (.115, -.115):
+        left.add_patch(Circle((-.085, z), .055, facecolor='white', edgecolor='#475569', lw=1.1))
+    left.text(.10, .225, 'R', fontsize=11, color='#326bb3')
+    left.text(-.43, .38, 'L', fontsize=11, color='#007e87')
+    labels = [((.66, .29), (1.0, .54), 'Free approximation\nbeyond L', '#8a650f'),
+              ((.46, .07), (1.0, .05), 'Magnetic continuation\nfrom R to L', '#007e87'),
+              ((.24, -.16), (1.0, -.45), 'Numerical domain\ninside R', '#326bb3')]
+    for point, label_point, words, color in labels:
+        left.annotate(words, xy=point, xytext=label_point, fontsize=10, color=color, va='center',
+                      arrowprops={'arrowstyle': '-', 'color': color, 'lw': 1.1})
+    left.annotate('Two mouth cuts', xy=(-.085, -.115), xytext=(-.66, -.64), fontsize=9.5,
+                  color='#475569', arrowprops={'arrowstyle': '-', 'color': '#64748b', 'lw': 1})
+    fig.text(.26, .31, 'Schematic, not to scale. The continuation ends at L = 160 d.',
+             ha='center', fontsize=9.8, color='#475569')
+    right = fig.add_axes([.61, .385, .35, .405])
+    right.set_title('B. Conditional flux vs matching radius', fontsize=11.5, pad=16)
+    right.plot(radii, 100*old_flux, 'o-', color='#64748b', lw=1.8, ms=6, label='Previous free-map treatment')
+    right.plot(radii, 100*tail_flux, 'D-', color='#007e87', lw=2, ms=6, label='Tail + coordinate matching')
+    right.set(xlabel='Matching radius R / d', ylabel='Other-mouth mode flux / unit input (%)',
+              xticks=radii, xlim=(1.6, 8.4), ylim=(58.4, 65.8))
+    right.spines[['top', 'right']].set_visible(False); right.grid(alpha=.15); right.set_axisbelow(True)
+    right.legend(loc='upper right', frameon=False, fontsize=9.5)
+    fig.text(.785, .31, 'Fixed mesh h = 0.05 d; angular mode cutoff = 12.', ha='center', fontsize=9.8, color='#475569')
+    fig.text(.05, .24, 'Complex-amplitude change when R is enlarged (previous treatment → tail + coordinate matching):', fontsize=10, color='#475569')
+    fig.text(.05, .187, f'R/d: 2 → 4     {old_changes[0]:.3g} → {tail_changes[0]:.3g}       |       '
+             f'4 → 8     {old_changes[1]:.3g} → {tail_changes[1]:.3g}', fontsize=10.7, color='#007e87', fontweight='bold')
+    fig.text(.05, .124, 'Finite differences measure sensitivity, not error bounds. Infinity convergence and physical mouth matching remain unresolved.',
+             fontsize=9.7, color='#475569')
+    fig.text(.05, .06, 'This conditional field calculation establishes no physical medium or 13 Sep 2027 → 12 Sep 2027 passage.',
+             fontsize=10.2, fontweight='bold', color='#007e87')
+    outputs = tuple(root/f'magnetic_tail_progress.{suffix}' for suffix in ('png', 'pdf'))
+    for path in outputs: fig.savefig(path, dpi=180, facecolor='white')
+    plt.close(fig); print(outputs[0]); return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

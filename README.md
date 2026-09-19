@@ -8,10 +8,11 @@ A computational research workbench for testing proposed chronology-changing geom
 
 The present direction tests whether charged fermions actually return through the magnetic exterior used in an idealized traversable-wormhole construction. A field-line picture alone cannot determine the spinor's return amplitude, phase, or quantum stress.
 
-A connected **q=1** model now calculates complex transmission between two finite mouths with explicitly chosen cylindrical leads. Its flux budget separates outgoing channels from numerical loss. Changing the radius where the magnetic exterior is cut off still changes the answer materially; the complete exterior return map remains unresolved.
+A connected **q=1** model now calculates complex transmission between two finite mouths with explicitly chosen cylindrical leads. Magnetic continuation outside the two-dimensional mesh, with the corrected boundary coordinates, reduces the tested matching-radius sensitivity by about **197 and 331 times**. This removes a major numerical approximation; finite-distance truncation, mesh error, the physical throat, and its quantum source remain unresolved.
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Magnetic tail](magnetic_tail_map.py) · [connected transport](exterior_tail_transport.py) · [results](exterior_tail_transport_results.json) | Coupled radial angular modes retain the actual pair field to a distant radius; full-matrix matching, coordinate conversion, flux accounting and independent refinements | Much smaller dependence on the artificial matching sphere in the conditional q=1 model; no certified infinity limit or physical throat |
 | [Connected exterior solve](exterior_boundary_map.py) · [results](exterior_boundary_map_results.json) | Full two-dimensional point-pair field between finite mouths; regular-axis conditions, modal lead matching, independent free controls and mesh/channel/radius comparisons | A conditional complex transmission amplitude with a closed flux ledger; the outer magnetic tail and actual curved throat are unresolved |
 | [Spherical lead maps](spherical_weyl_leads.py) · [two-mouth mesh](two_mouth_mesh.py) | Exact free outgoing partial waves, explicit q=1 product-lead modes, and a conforming polygonal mesh with geometry refinement | Boundary data and geometry for the connected test; finite facets introduce an additional controlled-by-refinement approximation |
 | [Spinful return benchmark](spinful_return.py) · [results](spinful_return_results.json) | Exact reduced Weyl-operator identities, transverse zero modes and their normalization, plus short unitary two-dimensional evolution with refinement controls | A baseline for testing the magnetic guiding approximation; the propagation box is periodic |
@@ -21,11 +22,11 @@ A connected **q=1** model now calculates complex transmission between two finite
 | [Open-boundary spinor calibration](open_boundary_spinor.py) · [report](OPEN_BOUNDARY_SCATTERING.md) | Frozen planar outgoing modes, complex reflection phases, evanescent behavior, and an independently checked absorber loss budget | A boundary-calibration contract; absorber loss is not a physical escape probability |
 | [Scattering-to-vacuum bridge](scattering_vacuum.py) · [results](scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
-These components do not yet form a complete physical two-mouth scattering solution. The next calculation continues the coupled angular waves through the magnetic tail outside the finite mesh, followed by matching the actual curved throat and computing quantum state/stress. A one-particle probability alone does not determine the vacuum source supporting a throat.
+These components do not yet form a complete physical two-mouth scattering solution. The next substantive gate is matching the curved throat and obtaining the complex-frequency response needed for quantum state/stress, with the remaining numerical errors tracked. A one-particle probability alone does not determine the vacuum source supporting a throat. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
 
-![Computed connected field, conditional flux budget and unresolved outer-radius dependence](exterior_boundary_progress.png)
+![Magnetic continuation and reduced matching-radius sensitivity](magnetic_tail_progress.png)
 
-*The field is computed for the declared q=1 model. The radius comparison exposes a remaining exterior approximation; these numbers are not a certified return probability for the physical candidate. See [the phase-sensitive stress benchmark](scattering_vacuum_progress.png) for the later connection to the quantum source.*
+*The schematic labels assumed geometry, not an apparatus. The curves are computed supporting-field fluxes in the declared q=1 model, not a material crossing or a certified return probability for the physical candidate. The earlier [computed field](exterior_boundary_progress.png) and [phase-sensitive stress benchmark](scattering_vacuum_progress.png) remain available.*
 
 ## Quickstart
 
@@ -50,7 +51,16 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The connected model and its small geometry/lead controls can be reproduced with:
+The latest tail and connected calculation can be reproduced with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 magnetic_tail_map.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 exterior_tail_transport.py
+```
+
+The second run takes about 30 seconds in the recorded environment and rewrites its own results JSON. It reads the frozen previous results for a regression comparison. Finite-difference sensitivity checks do not certify an infinite-domain error bound.
+
+The preceding connected model and its small geometry/lead controls can be reproduced with:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 two_mouth_mesh.py

@@ -1,5 +1,122 @@
 # Reproduction and coupled-model iterations
 
+## Magnetic exterior continuation — increment91
+
+**Result:** the magnetic tail with corrected boundary coordinates reduces
+the two measured complex transmission sensitivities to the matching radius
+by factors 196.69 and 331.12. These compare the complete treatment with
+increment90, not an isolated tail-only change. This is a numerical improvement in the prescribed q=1 supporting-field
+problem. It is not a new physical law, a supporting material, or backward
+passage. The destination remains uncertain: even the motivating
+[Maldacena–Milekhin–Popov construction](https://arxiv.org/html/1807.04726v3)
+is explicitly causal. Its possible formation is a separate open question.
+
+### Actual pair field beyond the mesh
+
+[magnetic_tail_map.py](magnetic_tail_map.py) continues the same magnetic
+potential used inside the mesh from matching sphere R to a far endpoint L.
+For the radius-one characteristic functions Phi from the frozen
+[spherical lead helper](spherical_weyl_leads.py), expand
+u=(Phi_plus a+Phi_minus b)/r. With c=cos(theta), define
+\[
+ J(r)=\int_{-1}^{1}\Phi_+^\dagger\sigma_y\Phi_-\,
+       \frac{A_\phi(r,c)}{\sqrt{1-c^2}}\,dc,
+ \qquad C(r)=\frac{\operatorname{diag}(n)+iJ(r)}r.
+\]
+There is no extra azimuthal factor: Phi already includes sqrt(2 pi).
+The projected radial equations are
+\[
+ a'=iEa+Cb,\qquad b'=C^\dagger a-iEb,\qquad
+ Z'=C^\dagger-2iEZ-ZCZ,\quad b=Za.
+\]
+C is generally nonsymmetric, so its adjoint cannot be replaced by C.
+The boundary value Z(L) is the diagonal free outgoing map. The full pair
+field is therefore retained only on [R,L]; its remainder beyond L is still
+an approximation. L, angular cutoff, quadrature and ODE tolerance have
+separate checks in [the saved tail results](magnetic_tail_map_results.json).
+The free outgoing phase convention follows the independently checked
+radial equations in [Holder et al., Appendix A](https://arxiv.org/pdf/1704.05481).
+The coupled magnetic continuation and numerical comparisons here are our
+calculations, not a published time-machine result.
+
+### Coordinate conversion and current
+
+[exterior_tail_transport.py](exterior_tail_transport.py) reuses the frozen
+DG solver through its finite-rank feedback API. Its incoming and outgoing
+facet bases were separately orthonormalized. If their raw projected Grams
+are M_s=L_s L_s^dagger, the required matrix is
+\[
+ Z_{\rm facet}=L_-^\dagger Z(L_+^\dagger)^{-1}.
+\]
+SVD of this full matrix supplies the existing feedback triple. Applying
+Z directly would silently identify different coordinates. No singular
+values are clipped. For the spherical coefficient a, separately record
+\[
+ J_{\rm sphere}=a^\dagger(I-Z^\dagger Z)a,\qquad
+ \Delta J_{\rm geometry}=a^\dagger[(M_+-I)-Z^\dagger(M_--I)Z]a.
+\]
+Their sum equals the facet current used by the discrete ledger. Small
+negative eigenvalues of the polygon flux matrix are reported as geometry
+defects, not physical gain. This same-sign projection still neglects cross
+characteristic projections and the radial displacement of chord quadrature
+points. Mesh refinement remains necessary; this is not an exact polygon
+transparent boundary.
+
+### Matched comparisons
+
+At E=.4, d=1, b=.2, q=1, mu=.5, h=.05 and nmax=12:
+
+| Matching R | Previous free exterior: lower-mode flux | Magnetic tail to L=160 |
+| --- | --- | --- |
+| 2 | .6486841827 | .5932535412 |
+| 4 | .5898777422 | .5935444054 |
+| 8 | .5948085958 | .5935071651 |
+
+The successive complex-amplitude differences fall from .0376811 and
+.0128340 to .000191574 and .0000387599. These are matched-resolution
+comparisons, not total error estimates. The residual matching-radius
+dependence is now smaller than the measured h=.05 to .035 changes:
+.00115523 at R=2 and .00105738 at R=4. At R=2, L=40 to 80 to 160 changes
+the amplitude by .0000856579 then .0000248774; nmax=8 to 12 changes it by
+2.53e-7. No rigorous infinite-domain convergence bound is claimed.
+
+At R=4,h=.035,nmax=12,L=160 the representative amplitude is
+.4607562385+.6187295928i. Its input-current ledger is:
+
+| Contribution | Fraction of unit input |
+| --- | --- |
+| Lower-mouth zero mode | .5951226204 |
+| Retained spherical tail current | .4032040727 |
+| Signed tail polygon correction | -.0000716444 |
+| Omitted outgoing mode norm, all cuts | .0005859611 |
+| Numerical DG loss | .0011589902 |
+
+Nonzero mouth lead modes are evanescent here and carry zero net current
+to roundoff. Numerical loss and omitted mode norm are not physical escape.
+The saved full modal coefficients and current ledger permit independent
+recalculation; the frozen free-map case is also reproduced by the new SVD
+integration path.
+
+Validation: 15 isolated tail controls and 9 connected controls pass under
+warnings-as-errors. Independent linear radial propagation agrees with the
+Riccati map to 2.49e-14, and its conserved flux matrix to 3.23e-14. Direct
+angular differentiation agrees to 1.69e-11; the exact lowest entry
+C11=1/r-qd/(3r^2) agrees to 3.33e-16. The observed L=256 to 512 map change
+is 5.93e-6. Low-channel blocks converge much faster than the highest retained
+channels, so whole-operator convergence is not asserted. The final connected
+run took 27.44 seconds. A focused independent integration review found no
+coordinate, SVD or ledger defect.
+
+![Magnetic continuation and matching-radius comparison](magnetic_tail_progress.png)
+
+**Direction:** this removes a concrete exterior truncation problem, so the
+supporting-field calculation merits continuation. The next substantive
+gate is the actual curved-throat matching and the complex-frequency
+response needed for quantum stress, rather than more polishing of a
+real-energy probability. The large-q candidate, self-consistent geometry,
+preparation, stability, and material transport remain unproved. Traveling
+from 13 September 2027 to 12 September 2027 remains unproved.
+
 ## Connected two-mouth Weyl calculation — increment90
 
 This increment connects two finite mouth cuts through a two-dimensional
