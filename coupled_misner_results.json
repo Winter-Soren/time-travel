@@ -1,0 +1,428 @@
+{
+  "model": "Compact, locally rotationally symmetric Bianchi I with canonical massless scalar",
+  "software_versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "units": "8*pi*G=c=1; initial longitudinal contraction rate magnitude=1",
+  "metric": "ds^2=-d(tau)^2+A(tau)^2*d(theta)^2+B(tau)^2*(dx^2+dy^2); theta periodic",
+  "constraint": "2*H_A*H_B+H_B^2-Pi^2/2=0",
+  "scope": "Fully coupled homogeneous sector. Not a stability analysis of the curved Ori core.",
+  "time_coordinate": "lambda=-log(q), q=1+Theta_0*tau; analytic q sets lapse only",
+  "error_normalization": "Relative to each exact component; phi denominator is floored at (epsilon/abs(Theta_0))*1e-6. Exactly zero reference components use absolute error.",
+  "conclusion": "Finite-endpoint numerics reproduce exact solutions. For every nonzero tested epsilon, the exact solution has R=-epsilon^2/q^2 and a curvature singularity as q approaches zero. This asymptotic statement is analytic, not a numerical evolution through q=0.",
+  "vacuum_limit": "epsilon=0 is flat compact Milne with a possible Misner extension; vanishing Ricci alone would not establish flatness for arbitrary metrics",
+  "runs": [
+    {
+      "epsilon": 0,
+      "method": "DOP853",
+      "rtol": 1e-12,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 1577,
+      "solver_success": true,
+      "tau_end": 0.999999,
+      "q_zero_tau_exact": 1.0,
+      "endpoint": {
+        "A": 1.0000002823450758e-06,
+        "B": 1.0,
+        "H_A": -999999.7176529717,
+        "H_B": 0.0,
+        "Pi": 0.0,
+        "phi": 0.0
+      },
+      "exact_endpoint": {
+        "A": 1.0000000000000004e-06,
+        "B": 1.0,
+        "H_A": -999999.9999999997,
+        "H_B": -0.0,
+        "Pi": 0.0,
+        "phi": 0.0
+      },
+      "max_component_scaled_error": {
+        "A": 2.8234507546940095e-07,
+        "B": 0.0,
+        "H_A": 2.823470279108734e-07,
+        "H_B": 0.0,
+        "Pi": 0.0,
+        "phi": 0.0
+      },
+      "max_normalized_constraint_residual": 0.0,
+      "max_absolute_constraint_residual": 0.0,
+      "ricci_scalar_endpoint": -0.0,
+      "ricci_tensor_squared_endpoint": 0.0,
+      "exact_ricci_scalar_endpoint": -0.0
+    },
+    {
+      "epsilon": 1e-06,
+      "method": "DOP853",
+      "rtol": 1e-12,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 1724,
+      "solver_success": true,
+      "tau_end": 0.9999989999994999,
+      "q_zero_tau_exact": 0.9999999999995,
+      "endpoint": {
+        "A": 1.0000001086420113e-06,
+        "B": 0.9999999999965477,
+        "H_A": -999999.8913638035,
+        "H_B": -2.499999728409196e-07,
+        "Pi": 0.9999998913638026,
+        "phi": 1.3815510449321692e-05
+      },
+      "exact_endpoint": {
+        "A": 1.0000000000069088e-06,
+        "B": 0.9999999999965461,
+        "H_A": -999999.9999999997,
+        "H_B": -2.4999999999996865e-07,
+        "Pi": 0.9999999999999996,
+        "phi": 1.3815510557957366e-05
+      },
+      "max_component_scaled_error": {
+        "A": 1.0863510251849651e-07,
+        "B": 1.5543122344805876e-15,
+        "H_A": 1.0863619612064217e-07,
+        "H_B": 1.086361962505538e-07,
+        "Pi": 1.086361969271366e-07,
+        "phi": 7.863312265983575e-09
+      },
+      "max_normalized_constraint_residual": 8.326674493845076e-16,
+      "max_absolute_constraint_residual": 8.326672684688674e-16,
+      "ricci_scalar_endpoint": -0.999999782727617,
+      "ricci_tensor_squared_endpoint": 0.9999995654552813,
+      "exact_ricci_scalar_endpoint": -1.0
+    },
+    {
+      "epsilon": 0.0001,
+      "method": "DOP853",
+      "rtol": 1e-12,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 1724,
+      "solver_success": true,
+      "tau_end": 0.999998995000005,
+      "q_zero_tau_exact": 0.999999995,
+      "endpoint": {
+        "A": 1.0000001781671045e-06,
+        "B": 0.9999999654612248,
+        "H_A": -999999.8909093625,
+        "H_B": -0.0024999997241484115,
+        "Pi": 99.99998909093645,
+        "phi": 0.0013815510379796628
+      },
+      "exact_endpoint": {
+        "A": 1.000000069077555e-06,
+        "B": 0.9999999654612244,
+        "H_A": -999999.9999999997,
+        "H_B": -0.002499999996874999,
+        "Pi": 99.99999999999997,
+        "phi": 0.0013815510488886722
+      },
+      "max_component_scaled_error": {
+        "A": 1.0908954192409552e-07,
+        "B": 4.440892251883607e-16,
+        "H_A": 1.090906371828169e-07,
+        "H_B": 1.090906350993128e-07,
+        "Pi": 1.0909063519193299e-07,
+        "phi": 7.896204328966177e-09
+      },
+      "max_normalized_constraint_residual": 1.5552545367805878e-15,
+      "max_absolute_constraint_residual": 1.0913936421275139e-11,
+      "ricci_scalar_endpoint": -9999.99781818741,
+      "ricci_tensor_squared_endpoint": 99999956.36375295,
+      "exact_ricci_scalar_endpoint": -10000.000000000004
+    },
+    {
+      "epsilon": 0.01,
+      "method": "DOP853",
+      "rtol": 1e-12,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 1724,
+      "solver_success": true,
+      "tau_end": 0.9999490031747937,
+      "q_zero_tau_exact": 0.9999500031247969,
+      "endpoint": {
+        "A": 1.000691080460402e-06,
+        "B": 0.9996546934561514,
+        "H_A": -999999.8905763985,
+        "H_B": -24.999684772256398,
+        "Pi": 9999.998905763998,
+        "phi": 0.13814819716189455
+      },
+      "exact_endpoint": {
+        "A": 1.0006909709677647e-06,
+        "B": 0.9996546934534166,
+        "H_A": -999999.9999999997,
+        "H_B": -24.99968750781225,
+        "Pi": 9999.999999999996,
+        "phi": 0.13814819825607041
+      },
+      "max_component_scaled_error": {
+        "A": 1.0941703341103192e-07,
+        "B": 2.7357570513788507e-12,
+        "H_A": 1.0942360118497166e-07,
+        "H_B": 1.0942360187885813e-07,
+        "Pi": 1.0942359986074738e-07,
+        "phi": 7.920304968430126e-09
+      },
+      "max_normalized_constraint_residual": 2.5049208803439875e-15,
+      "max_absolute_constraint_residual": 1.564621925354004e-07,
+      "ricci_scalar_endpoint": -99999978.11528115,
+      "ricci_tensor_squared_endpoint": 9999995623056710.0,
+      "exact_ricci_scalar_endpoint": -100000000.0
+    },
+    {
+      "epsilon": 0.1,
+      "method": "DOP853",
+      "rtol": 1e-12,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 1724,
+      "solver_success": true,
+      "tau_end": 0.9950300531730386,
+      "q_zero_tau_exact": 0.9950310482040868,
+      "endpoint": {
+        "A": 1.0710598947065879e-06,
+        "B": 0.9662580936829944,
+        "H_A": -999999.891460334,
+        "H_B": -2496.8825171602434,
+        "Pi": 99999.9891460336,
+        "phi": 1.374686184396603
+      },
+      "exact_endpoint": {
+        "A": 1.0710597790329283e-06,
+        "B": 0.9662580934224305,
+        "H_A": -999999.9999999997,
+        "H_B": -2496.8827881710667,
+        "Pi": 99999.99999999997,
+        "phi": 1.3746861951965819
+      },
+      "max_component_scaled_error": {
+        "A": 1.0799925630175438e-07,
+        "B": 2.696628422162046e-10,
+        "H_A": 1.0853966569993648e-07,
+        "H_B": 1.085396657824035e-07,
+        "Pi": 1.0853966377908367e-07,
+        "phi": 7.856323100440904e-09
+      },
+      "max_normalized_constraint_residual": 2.3960617918905945e-15,
+      "max_absolute_constraint_residual": 2.002716064453125e-05,
+      "ricci_scalar_endpoint": -9999997829.206837,
+      "ricci_tensor_squared_endpoint": 9.999995658414144e+19,
+      "exact_ricci_scalar_endpoint": -10000000000.000004
+    },
+    {
+      "epsilon": 0.5,
+      "method": "DOP853",
+      "rtol": 1e-12,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 1739,
+      "solver_success": true,
+      "tau_end": 0.8918049206397997,
+      "q_zero_tau_exact": 0.8918058124456122,
+      "endpoint": {
+        "A": 4.458257671338297e-06,
+        "B": 0.47360626614582824,
+        "H_A": -999999.8961791797,
+        "H_B": -60660.16548203262,
+        "Pi": 499999.94808959024,
+        "phi": 6.160376262454351
+      },
+      "exact_endpoint": {
+        "A": 4.458257258560871e-06,
+        "B": 0.47360626348587725,
+        "H_A": -999999.9999999997,
+        "H_B": -60660.17177982127,
+        "Pi": 499999.9999999998,
+        "phi": 6.160376308748131
+      },
+      "max_component_scaled_error": {
+        "A": 9.258717067191805e-08,
+        "B": 5.616376274503311e-09,
+        "H_A": 1.0382081998977813e-07,
+        "H_B": 1.0382081790148846e-07,
+        "Pi": 1.0382081917487088e-07,
+        "phi": 7.514765015077437e-09
+      },
+      "max_normalized_constraint_residual": 2.4554445199563783e-15,
+      "max_absolute_constraint_residual": 7.62939453125e-05,
+      "ricci_scalar_endpoint": -249999948089.59293,
+      "ricci_tensor_squared_endpoint": 6.249997404479916e+22,
+      "exact_ricci_scalar_endpoint": -250000000000.0
+    }
+  ],
+  "refinement": [
+    {
+      "epsilon": 0.1,
+      "method": "DOP853",
+      "rtol": 1e-08,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 539,
+      "solver_success": true,
+      "tau_end": 0.9950300531730386,
+      "q_zero_tau_exact": 0.9950310482040868,
+      "endpoint": {
+        "A": 1.0721123372868283e-06,
+        "B": 0.9662604632378454,
+        "H_A": -999013.3240481564,
+        "H_B": -2494.4191739694083,
+        "Pi": 99901.33240481582,
+        "phi": 1.3745879700496166
+      },
+      "exact_endpoint": {
+        "A": 1.0710597790329283e-06,
+        "B": 0.9662580934224305,
+        "H_A": -999999.9999999997,
+        "H_B": -2496.8827881710667,
+        "Pi": 99999.99999999997,
+        "phi": 1.3746861951965819
+      },
+      "max_component_scaled_error": {
+        "A": 0.0009827259640450068,
+        "B": 2.452569795830202e-06,
+        "H_A": 0.0009866759518432668,
+        "H_B": 0.000986675951842724,
+        "Pi": 0.0009866759518414622,
+        "phi": 7.145277759276457e-05
+      },
+      "max_normalized_constraint_residual": 4.734952028040374e-15,
+      "max_absolute_constraint_residual": 1.52587890625e-05,
+      "ricci_scalar_endpoint": -9980276216.257504,
+      "ricci_tensor_squared_endpoint": 9.960591335279521e+19,
+      "exact_ricci_scalar_endpoint": -10000000000.000004
+    },
+    {
+      "epsilon": 0.1,
+      "method": "DOP853",
+      "rtol": 1e-10,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 974,
+      "solver_success": true,
+      "tau_end": 0.9950300531730386,
+      "q_zero_tau_exact": 0.9950310482040868,
+      "endpoint": {
+        "A": 1.0710709864791026e-06,
+        "B": 0.9662581186679691,
+        "H_A": -999989.4838502691,
+        "H_B": -2496.8565305778075,
+        "Pi": 99998.9483850268,
+        "phi": 1.374685148807181
+      },
+      "exact_endpoint": {
+        "A": 1.0710597790329283e-06,
+        "B": 0.9662580934224305,
+        "H_A": -999999.9999999997,
+        "H_B": -2496.8827881710667,
+        "Pi": 99999.99999999997,
+        "phi": 1.3746861951965819
+      },
+      "max_component_scaled_error": {
+        "A": 1.046388483040825e-05,
+        "B": 2.6127117299610834e-08,
+        "H_A": 1.0516149730538022e-05,
+        "H_B": 1.0516149730248832e-05,
+        "Pi": 1.0516149731702174e-05,
+        "phi": 7.611841921168939e-07
+      },
+      "max_normalized_constraint_residual": 1.3351721245610521e-15,
+      "max_absolute_constraint_residual": 1.33514404296875e-05,
+      "ricci_scalar_endpoint": -9999789678.111254,
+      "ricci_tensor_squared_endpoint": 9.999579360646038e+19,
+      "exact_ricci_scalar_endpoint": -10000000000.000004
+    },
+    {
+      "epsilon": 0.1,
+      "method": "DOP853",
+      "rtol": 1e-12,
+      "q_end": 1e-06,
+      "sample_count": 301,
+      "nfev": 1724,
+      "solver_success": true,
+      "tau_end": 0.9950300531730386,
+      "q_zero_tau_exact": 0.9950310482040868,
+      "endpoint": {
+        "A": 1.0710598947065879e-06,
+        "B": 0.9662580936829944,
+        "H_A": -999999.891460334,
+        "H_B": -2496.8825171602434,
+        "Pi": 99999.9891460336,
+        "phi": 1.374686184396603
+      },
+      "exact_endpoint": {
+        "A": 1.0710597790329283e-06,
+        "B": 0.9662580934224305,
+        "H_A": -999999.9999999997,
+        "H_B": -2496.8827881710667,
+        "Pi": 99999.99999999997,
+        "phi": 1.3746861951965819
+      },
+      "max_component_scaled_error": {
+        "A": 1.0799925630175438e-07,
+        "B": 2.696628422162046e-10,
+        "H_A": 1.0853966569993648e-07,
+        "H_B": 1.085396657824035e-07,
+        "Pi": 1.0853966377908367e-07,
+        "phi": 7.856323100440904e-09
+      },
+      "max_normalized_constraint_residual": 2.3960617918905945e-15,
+      "max_absolute_constraint_residual": 2.002716064453125e-05,
+      "ricci_scalar_endpoint": -9999997829.206837,
+      "ricci_tensor_squared_endpoint": 9.999995658414144e+19,
+      "exact_ricci_scalar_endpoint": -10000000000.000004
+    }
+  ],
+  "independent_solver": {
+    "epsilon": 0.1,
+    "method": "Radau",
+    "rtol": 1e-11,
+    "q_end": 1e-06,
+    "sample_count": 301,
+    "nfev": 19272,
+    "solver_success": true,
+    "tau_end": 0.9950300531730386,
+    "q_zero_tau_exact": 0.9950310482040868,
+    "endpoint": {
+      "A": 1.0710597737434426e-06,
+      "B": 0.9662580934105153,
+      "H_A": -1000000.0049632451,
+      "H_B": -2496.8828005637197,
+      "Pi": 100000.0004963244,
+      "phi": 1.3746861956904377
+    },
+    "exact_endpoint": {
+      "A": 1.0710597790329283e-06,
+      "B": 0.9662580934224305,
+      "H_A": -999999.9999999997,
+      "H_B": -2496.8827881710667,
+      "Pi": 99999.99999999997,
+      "phi": 1.3746861951965819
+    },
+    "max_component_scaled_error": {
+      "A": 4.938553204505707e-09,
+      "B": 1.2331329122410194e-11,
+      "H_A": 4.963245475664737e-09,
+      "H_B": 4.963249773989325e-09,
+      "Pi": 4.963244282407688e-09,
+      "phi": 3.592498759592788e-10
+    },
+    "max_normalized_constraint_residual": 4.8269081311996505e-15,
+    "max_absolute_constraint_residual": 3.4332275390625e-05,
+    "ricci_scalar_endpoint": -10000000099.26488,
+    "ricci_tensor_squared_endpoint": 1.0000000198529761e+20,
+    "exact_ricci_scalar_endpoint": -10000000000.000004
+  },
+  "self_checks": {
+    "all_finite": true,
+    "reference_accuracy": true,
+    "constraint_accuracy": true,
+    "vacuum_zero_ricci": true,
+    "refinement_improves": true,
+    "independent_solver_accuracy": true
+  }
+}

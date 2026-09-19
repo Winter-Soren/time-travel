@@ -1,0 +1,438 @@
+{
+  "model": "Reflection-even center condition and full-flux source-affine RN overlap",
+  "parameters": {
+    "alpha": 1e-09,
+    "omega_squared": 1.6194849990455538,
+    "separation_over_re": 4188251800.784477,
+    "clock_scale": 6165958137.367585,
+    "delta_w_positive_mouth": -1.4152934634704095,
+    "source_amplitude": 1.2408637643235383e-29
+  },
+  "source_projection": [
+    {
+      "order": 64,
+      "delta_w_positive_mouth": -1.4152934634703864,
+      "full_flux_moment": -0.01654059729664211,
+      "source_amplitude": 1.2408637643235356e-29,
+      "independent_amplitude_relative_difference": 2.220446049250313e-16
+    },
+    {
+      "order": 128,
+      "delta_w_positive_mouth": -1.4152934634704095,
+      "full_flux_moment": -0.016540597296642146,
+      "source_amplitude": 1.2408637643235383e-29,
+      "independent_amplitude_relative_difference": 2.220446049250313e-16
+    }
+  ],
+  "refinement": [
+    {
+      "refinement": 1,
+      "center_to_inner": [
+        [
+          1.8953392305013035,
+          0.018994534163903863
+        ],
+        [
+          3.7350502153530756,
+          0.018737054357613254
+        ]
+      ],
+      "inner_slope": 1.97064997929958,
+      "inner_source_scaled": -0.01869452399928906,
+      "inner_from_outer": 5.052547690923926e-24,
+      "inner_from_source_scaled": -0.011493889589706275,
+      "outer_slope": 0.02000000000002039,
+      "outer_source_scaled": -6.022146547362937e-12,
+      "center_from_outer": 2.6657748700677525e-24,
+      "center_from_source_scaled": -0.01608599836006464,
+      "parity_maximum_residual": 0.0,
+      "composition_residuals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "convention": "Xinner=kt*Pinner+alpha\u00b2*delta_w*jt; Pinner=t*Pouter+alpha\u00b2*delta_w*s; Xouter=ke*Pouter+alpha\u00b2*delta_w*je. P even, X odd under proper-distance reflection with fixed internal flux labels."
+    },
+    {
+      "refinement": 2,
+      "center_to_inner": [
+        [
+          1.8953392305013044,
+          0.01899453416390385
+        ],
+        [
+          3.7350502153530747,
+          0.01873705435761322
+        ]
+      ],
+      "inner_slope": 1.9706499792995786,
+      "inner_source_scaled": -0.018694523999289038,
+      "inner_from_outer": 5.052547690894626e-24,
+      "inner_from_source_scaled": -0.011493889590071986,
+      "outer_slope": 0.020000000000020456,
+      "outer_source_scaled": -6.0221465472952646e-12,
+      "center_from_outer": 2.665774870052292e-24,
+      "center_from_source_scaled": -0.016085998360257574,
+      "parity_maximum_residual": 0.0,
+      "composition_residuals": [
+        -2.938735877055719e-39,
+        1.3877787807814457e-17,
+        0.0,
+        0.0
+      ],
+      "convention": "Xinner=kt*Pinner+alpha\u00b2*delta_w*jt; Pinner=t*Pouter+alpha\u00b2*delta_w*s; Xouter=ke*Pouter+alpha\u00b2*delta_w*je. P even, X odd under proper-distance reflection with fixed internal flux labels."
+    }
+  ],
+  "rn_algebra": {
+    "residuals": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "growing": "3*r*(r - 1)**2/(3*r - 2)",
+    "decaying": "r*(30*r**2 - 45*r + 17)/(10*(r - 1)**3*(3*r - 2))",
+    "particular_per_amplitude": "-4*r/(9*r - 6)",
+    "particular_X_per_amplitude": "2*r**2/((r - 1)*(3*r - 2))",
+    "momentum": "Pi=sqrt(F)*X-2F*P/[r(3r-2)]-2r*A_dip/(3r-2)",
+    "outer_relation": "Pi+kappa*P=3*c_g/d_mode+A_dip*(Pi_p+kappa*h_p)+Xi_ext; kappa=-F*d_mode_prime/d_mode. Xi_ext is not selected by this RN calculation."
+  },
+  "conditional_outer_map": {
+    "radius": 100.0,
+    "incident_growing_amplitude": -1.1401563959755335e-19,
+    "kappa": 0.01001566093296214,
+    "denominator": 0.02974988240949246,
+    "P_outer_per_cg": 9866.778523483215,
+    "P_outer_per_delta_w": 3.9228353093630966e-30,
+    "P_outer_per_Xi": 33.61357823992355,
+    "conditional_classical_P_outer": -1.124967064122342e-15,
+    "conditional_state_P_outer": -5.551963171612513e-30,
+    "conditional_classical_P_center": -2.998908929173845e-39,
+    "direct_center_state_P": 2.2766408332668272e-20,
+    "relation": "Pouter=c_class*c_g+c_source*delta_w+Xi_ext/den. The quantum source coefficient is conditional on an RN approximation; unknown Xi_ext can contribute at that same order. No physical exterior or moving interface is selected."
+  },
+  "rn_omission_diagnostic": {
+    "parameters": {
+      "alpha": 1e-09,
+      "omega_squared": 1.6194849990455538,
+      "clock_scale": 6165958137.367585,
+      "delta_w_positive_mouth": -1.4152934634704095,
+      "growing_coefficient": -1.1401563959755335e-19,
+      "source_amplitude": 1.2408637643235381e-29
+    },
+    "refinement": [
+      {
+        "background_refinement": 2,
+        "rows": [
+          {
+            "radius": 9.999999999999998,
+            "proper_distance": 33.910443038504106,
+            "classical_invariants": [
+              -9.894928722216233e-18,
+              -1.978985744443247e-18
+            ],
+            "matrix_difference": [
+              [
+                -9.447278923178195e-14,
+                7.65306122490748e-14
+              ],
+              [
+                -2.8231292489316846e-14,
+                9.7865646279779e-13
+              ]
+            ],
+            "omitted_rhs": [
+              7.833485249830069e-31,
+              -1.657400561666251e-30
+            ],
+            "retained_state_rhs": [
+              -9.848125113678874e-30,
+              0.0
+            ],
+            "signed_ratios_Pprime_and_R_Xprime": [
+              -0.07954290953259209,
+              1.682960505207382
+            ],
+            "weighted_infinity_ratio": 1.682960505207382,
+            "radial_correction": [
+              1.2414470760713495e-29,
+              1.328485800961961e-30
+            ],
+            "pulled_classical_operator_mismatch": [
+              1.3197819285696502e-29,
+              -3.2891476070428973e-31
+            ],
+            "pulled_signed_ratios_Pprime_and_R_Xprime": [
+              -1.3401352169424574,
+              0.33398718731490606
+            ],
+            "pulled_direct_equality_relative_error": 3.0793055443954956e-62,
+            "collar_eta_over_RN_eta_minus_one": -1.3345962934613901e-11
+          },
+          {
+            "radius": 30.00000000000025,
+            "proper_distance": 55.08051429108252,
+            "classical_invariants": [
+              -9.80664063765791e-17,
+              -6.537760425105218e-18
+            ],
+            "matrix_difference": [
+              [
+                -2.8007098210066945e-14,
+                2.773951637742875e-15
+              ],
+              [
+                1.3952657900190347e-15,
+                1.0475925786585706e-13
+              ]
+            ],
+            "omitted_rhs": [
+              2.728420043258795e-30,
+              -8.217196322061382e-31
+            ],
+            "retained_state_rhs": [
+              -8.752173886294544e-30,
+              0.0
+            ],
+            "signed_ratios_Pprime_and_R_Xprime": [
+              -0.3117419830439339,
+              2.816624679359659
+            ],
+            "weighted_infinity_ratio": 2.816624679359659,
+            "radial_correction": [
+              1.2730945742558468e-29,
+              4.339541061232072e-31
+            ],
+            "pulled_classical_operator_mismatch": [
+              1.5459365785817264e-29,
+              -3.87765526082931e-31
+            ],
+            "pulled_signed_ratios_Pprime_and_R_Xprime": [
+              -1.7663458229532938,
+              1.3291515837801915
+            ],
+            "pulled_direct_equality_relative_error": 6.013283978967949e-62,
+            "collar_eta_over_RN_eta_minus_one": -3.8754377825346834e-12
+          },
+          {
+            "radius": 99.99999999999997,
+            "proper_distance": 126.30833831115952,
+            "classical_invariants": [
+              -1.1249670641231071e-15,
+              -2.2499341282462147e-17
+            ],
+            "matrix_difference": [
+              [
+                -3.320724367764787e-15,
+                7.432097653672609e-17
+              ],
+              [
+                6.293169979353836e-17,
+                9.30906520940948e-15
+              ]
+            ],
+            "omitted_rhs": [
+              3.7340333697508675e-30,
+              -2.8024392472421246e-31
+            ],
+            "retained_state_rhs": [
+              -8.412065380811729e-30,
+              0.0
+            ],
+            "signed_ratios_Pprime_and_R_Xprime": [
+              -0.44389019827025517,
+              3.3314520517572346
+            ],
+            "weighted_infinity_ratio": 3.3314520517572346,
+            "radial_correction": [
+              1.2703495402531488e-29,
+              1.278861023318042e-31
+            ],
+            "pulled_classical_operator_mismatch": [
+              1.6437528772282357e-29,
+              -1.5235782239240827e-31
+            ],
+            "pulled_signed_ratios_Pprime_and_R_Xprime": [
+              -1.9540419656957309,
+              1.8111820997010168
+            ],
+            "pulled_direct_equality_relative_error": 3.0511886714713227e-62,
+            "collar_eta_over_RN_eta_minus_one": -1.1322044629596876e-12
+          }
+        ]
+      },
+      {
+        "background_refinement": 4,
+        "rows": [
+          {
+            "radius": 10.000000000000002,
+            "proper_distance": 33.91044303850411,
+            "classical_invariants": [
+              -9.894928722216241e-18,
+              -1.978985744443248e-18
+            ],
+            "matrix_difference": [
+              [
+                -9.4472789231782e-14,
+                7.65306122490747e-14
+              ],
+              [
+                -2.8231292489316764e-14,
+                9.786564627977894e-13
+              ]
+            ],
+            "omitted_rhs": [
+              7.833485249830083e-31,
+              -1.657400561666251e-30
+            ],
+            "retained_state_rhs": [
+              -9.848125113678874e-30,
+              0.0
+            ],
+            "signed_ratios_Pprime_and_R_Xprime": [
+              -0.07954290953259224,
+              1.682960505207383
+            ],
+            "weighted_infinity_ratio": 1.682960505207383,
+            "radial_correction": [
+              1.2414470760713498e-29,
+              1.3284858009619607e-30
+            ],
+            "pulled_classical_operator_mismatch": [
+              1.3197819285696505e-29,
+              -3.2891476070429026e-31
+            ],
+            "pulled_signed_ratios_Pprime_and_R_Xprime": [
+              -1.3401352169424579,
+              0.33398718731490673
+            ],
+            "pulled_direct_equality_relative_error": 8.383250484498929e-62,
+            "collar_eta_over_RN_eta_minus_one": -1.3259874045726158e-11
+          },
+          {
+            "radius": 29.999999999999744,
+            "proper_distance": 55.080514291082,
+            "classical_invariants": [
+              -9.80664063765757e-17,
+              -6.537760425105103e-18
+            ],
+            "matrix_difference": [
+              [
+                -2.800709821006766e-14,
+                2.7739516377430162e-15
+              ],
+              [
+                1.3952657900190808e-15,
+                1.0475925786586055e-13
+              ]
+            ],
+            "omitted_rhs": [
+              2.7284200432587695e-30,
+              -8.217196322061487e-31
+            ],
+            "retained_state_rhs": [
+              -8.752173886294552e-30,
+              0.0
+            ],
+            "signed_ratios_Pprime_and_R_Xprime": [
+              -0.31174198304393075,
+              2.816624679359645
+            ],
+            "weighted_infinity_ratio": 2.816624679359645,
+            "radial_correction": [
+              1.273094574255846e-29,
+              4.339541061232143e-31
+            ],
+            "pulled_classical_operator_mismatch": [
+              1.5459365785817227e-29,
+              -3.8776552608293435e-31
+            ],
+            "pulled_signed_ratios_Pprime_and_R_Xprime": [
+              -1.766345822953288,
+              1.3291515837801793
+            ],
+            "pulled_direct_equality_relative_error": 2.6628657020215465e-62,
+            "collar_eta_over_RN_eta_minus_one": -3.7406010009260014e-12
+          },
+          {
+            "radius": 99.99999999999999,
+            "proper_distance": 126.30833831115928,
+            "classical_invariants": [
+              -1.1249670641231073e-15,
+              -2.249934128246215e-17
+            ],
+            "matrix_difference": [
+              [
+                -3.3207243677647654e-15,
+                7.432097653672607e-17
+              ],
+              [
+                6.293169979353793e-17,
+                9.309065209409425e-15
+              ]
+            ],
+            "omitted_rhs": [
+              3.7340333697508444e-30,
+              -2.802439247242108e-31
+            ],
+            "retained_state_rhs": [
+              -8.412065380811729e-30,
+              0.0
+            ],
+            "signed_ratios_Pprime_and_R_Xprime": [
+              -0.44389019827025233,
+              3.331452051757215
+            ],
+            "weighted_infinity_ratio": 3.331452051757215,
+            "radial_correction": [
+              1.2703495402531418e-29,
+              1.2788610233180347e-31
+            ],
+            "pulled_classical_operator_mismatch": [
+              1.6437528772282262e-29,
+              -1.523578223924073e-31
+            ],
+            "pulled_signed_ratios_Pprime_and_R_Xprime": [
+              -1.9540419656957195,
+              1.8111820997010057
+            ],
+            "pulled_direct_equality_relative_error": 5.986139091366985e-62,
+            "collar_eta_over_RN_eta_minus_one": -9.482024427578588e-13
+          }
+        ]
+      }
+    ],
+    "maximum_omitted_rhs_relative_refinement": 9.373079133146671e-15,
+    "maximum_pulled_operator_relative_refinement": 5.796996427757875e-15,
+    "all_declared_checks_pass": true,
+    "equations": "O=(M_collar-M_RN)Y_class is matrix-only. Pullback correction=(1-B/sqrt(F))*M_RN*Y_class; their sum=(M_collar-(B/sqrt(F))*M_RN)Y_class. Y_class=c_g*(g,sqrt(F)*(g_prime+2g/[r(3r-2)])); g=3r(r-1)^2/(3r-2). S=b_RN*eta_RN, b_RN=(2r*sqrt(F)/(3r-2),0), eta_RN=k*delta_w/(clock\u00b2*F).",
+    "normalization": "M=Q=re=1. Ratios are O_P/S_P and R*O_X/S_P; the factor R gives equal dimensions. S_X=0, so no componentwise division by it is attempted. delta_w uses the supplied positive-mouth Y=1-nu orientation.",
+    "precision": "70-digit point algebra on two double-precision adaptive background histories; this is not a 70-digit background solution. Both matrix-only and pulled classical operator mismatches are refined, supporting three significant digits; the direct pullback identity is also checked.",
+    "scope": "Growing-only classical test input, not a selected matched solution; the decaying amplitude remains free. Matrix-only differences omit the radial derivative pullback. The pulled mismatch includes that correction because d/dl=B*d/dr on the actual collar, but neither quantity is the full forced residual. Includes local mean-background and quantum-response differences relative to extremal RN; no global error, stability or failure theorem."
+  },
+  "verification": {
+    "all_declared_checks_pass": true,
+    "coefficient_relative_refinement": {
+      "inner_slope": 6.661338147750939e-16,
+      "inner_source_scaled": 1.1102230246251565e-15,
+      "inner_from_outer": 5.799138946827043e-12,
+      "inner_from_source_scaled": 3.181788166273236e-11,
+      "outer_slope": 3.3306690738754696e-15,
+      "outer_source_scaled": 1.1237233366045984e-11,
+      "center_from_outer": 5.799583036036893e-12,
+      "center_from_source_scaled": 1.1994072401932954e-11
+    },
+    "amplitude_relative_refinement": 2.1094237467877974e-15
+  },
+  "scope": "Smooth reflection-even static sector only, fixed internal flux labels. The source orientation is Y=1-nu, opposite the saved mu=nu-1 convention. RN outer map is conditional and retains Xi_ext. Quantum polarization, complete-loop feedback, moving-cut matching, formation, transport and dynamical stability remain unsolved. No calendar-time travel or physical new discovery is established.",
+  "sources": [
+    "https://arxiv.org/html/1807.04726v3: assumed magnetic/Casimir channel framework; published solution itself does not violate ambient causality",
+    "https://arxiv.org/abs/gr-qc/9507012: RN polar dipole framework",
+    "Our reflection-sector composition, full reference-state projection and source-affine map, checked against existing component-verified equations"
+  ]
+}

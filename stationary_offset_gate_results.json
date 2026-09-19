@@ -1,0 +1,133 @@
+{
+  "model": "Stationary balanced mean-source offset branch; fixed weak exterior paths",
+  "input_sha256": "ff0d53845c03f8b19c0bc69e8e77be23e045149e7046920e13018d5eb7a571d0",
+  "parameters": {
+    "alpha": 1e-09,
+    "separation_over_re": 4188251800.784477,
+    "cutoff": 100.0
+  },
+  "cases": [
+    {
+      "order": 64,
+      "offset_over_d": 0.0,
+      "omega_squared": 1.6194849990455695,
+      "clock_over_d": 1.4722033035865942,
+      "throat_time_over_d": 4.625063157976494,
+      "earlier_direction_exit_delay_over_d": 4.625063157976494,
+      "fastest_complete_return_over_d": 5.62506312747253,
+      "minimum_short_period": 3.821124861280747,
+      "maximum_pair_probability": 0.0,
+      "finite_collar_timing_gate": 0.6194850514553998,
+      "root_residual": 1.1879386363489175e-13,
+      "balance_error": 3.469446951953614e-18
+    },
+    {
+      "order": 64,
+      "offset_over_d": 1.0,
+      "omega_squared": 1.4775589505148319,
+      "clock_over_d": 1.9097283397884253,
+      "throat_time_over_d": 5.999588598176438,
+      "earlier_direction_exit_delay_over_d": 4.999588598176438,
+      "fastest_complete_return_over_d": 5.9995885676724745,
+      "minimum_short_period": 3.1418071143349384,
+      "maximum_pair_probability": 0.01822917040808474,
+      "finite_collar_timing_gate": 0.47755898772472616,
+      "root_residual": 1.7674750552032492e-13,
+      "balance_error": 3.469446951953614e-18
+    },
+    {
+      "order": 64,
+      "offset_over_d": 3.0,
+      "omega_squared": 1.337462062363074,
+      "clock_over_d": 2.7025493018137645,
+      "throat_time_over_d": 8.490309109249107,
+      "earlier_direction_exit_delay_over_d": 5.490309109249107,
+      "fastest_complete_return_over_d": 6.490309078745144,
+      "minimum_short_period": 2.401702196926018,
+      "maximum_pair_probability": 0.03041545043263109,
+      "finite_collar_timing_gate": 0.3374620865300111,
+      "root_residual": -6.8833827526759706e-15,
+      "balance_error": 8.673617379884035e-18
+    },
+    {
+      "order": 64,
+      "offset_over_d": 10.0,
+      "omega_squared": 1.1748976678040224,
+      "clock_over_d": 5.214522700403409,
+      "throat_time_over_d": 16.38190628752957,
+      "earlier_direction_exit_delay_over_d": 6.381906287529571,
+      "fastest_complete_return_over_d": 7.381906257025607,
+      "minimum_short_period": 1.4157222430302863,
+      "maximum_pair_probability": 0.038638124357265935,
+      "finite_collar_timing_gate": 0.17489767927408062,
+      "root_residual": -1.425526363618701e-13,
+      "balance_error": 2.0816681711721685e-17
+    },
+    {
+      "order": 128,
+      "offset_over_d": 0.0,
+      "omega_squared": 1.6194849990455635,
+      "clock_over_d": 1.4722033035865996,
+      "throat_time_over_d": 4.625063157976513,
+      "earlier_direction_exit_delay_over_d": 4.625063157976513,
+      "fastest_complete_return_over_d": 5.625063127472549,
+      "minimum_short_period": 3.8209167667011594,
+      "maximum_pair_probability": 0.0,
+      "finite_collar_timing_gate": 0.6194850514553947,
+      "root_residual": 1.1235457009206584e-13,
+      "balance_error": 3.469446951953614e-18
+    },
+    {
+      "order": 128,
+      "offset_over_d": 1.0,
+      "omega_squared": 1.477558950514722,
+      "clock_over_d": 1.90972833978888,
+      "throat_time_over_d": 5.999588598177864,
+      "earlier_direction_exit_delay_over_d": 4.999588598177864,
+      "fastest_complete_return_over_d": 5.9995885676739,
+      "minimum_short_period": 3.141646694907136,
+      "maximum_pair_probability": 0.018229768781962127,
+      "finite_collar_timing_gate": 0.4775589877246149,
+      "root_residual": -1.7053025658242404e-13,
+      "balance_error": 6.938893903907228e-18
+    },
+    {
+      "order": 128,
+      "offset_over_d": 3.0,
+      "omega_squared": 1.3374620623630726,
+      "clock_over_d": 2.7025493018137645,
+      "throat_time_over_d": 8.490309109249106,
+      "earlier_direction_exit_delay_over_d": 5.490309109249106,
+      "fastest_complete_return_over_d": 6.490309078745142,
+      "minimum_short_period": 2.401588838206782,
+      "maximum_pair_probability": 0.030415960625984954,
+      "finite_collar_timing_gate": 0.3374620865300093,
+      "root_residual": -4.884981308350689e-15,
+      "balance_error": 1.0408340855860843e-17
+    },
+    {
+      "order": 128,
+      "offset_over_d": 10.0,
+      "omega_squared": 1.1748976678040222,
+      "clock_over_d": 5.214522700403482,
+      "throat_time_over_d": 16.381906287529794,
+      "earlier_direction_exit_delay_over_d": 6.381906287529793,
+      "fastest_complete_return_over_d": 7.381906257025829,
+      "minimum_short_period": 1.415663492202069,
+      "maximum_pair_probability": 0.03863830795092466,
+      "finite_collar_timing_gate": 0.17489767927407862,
+      "root_residual": -1.525446435834965e-13,
+      "balance_error": 2.0816681711721685e-17
+    }
+  ],
+  "verification": {
+    "all_declared_checks_pass": true,
+    "maximum_64_128_difference": 1.425526363618701e-12
+  },
+  "equations": {
+    "periods": "P_plus/minus=Tth+(E_nu+/-S)/A; require P_minus>0",
+    "closure": "w=<[2pi/P_plus]^2>; p_nu=[1-(P_minus/P_plus)^2]/24",
+    "timing": "Positive NS excitation energies and total flux balance imply w<=[2pi/(Tth+(Emin+S)/A)]^2. If sqrt(w)*Tth>=pi, A*Tth>=S+Emin."
+  },
+  "scope": "Calibration of the existing stationary bound, not a new no-go theorem. The four offsets are separate assumed states, not a preparation trajectory. No driven 4D matching, full angular response, finite-q control, material production or past travel is established. Times use d/c; no physical d or calendar conversion is selected."
+}

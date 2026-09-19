@@ -1,0 +1,216 @@
+{
+  "passed": true,
+  "tests": {
+    "full_variable_W_operator_square": true,
+    "boundary_characteristic_identity": true,
+    "spinor_eigenvectors_and_unit_flux": true,
+    "local_boundary_reflection_formula": true,
+    "exact_outgoing_map": true,
+    "exact_evanescent_branch": true,
+    "nonpropagating_unit_flux_rejected": true,
+    "normal_incidence_complex_CAP_solution": true,
+    "constant_CAP_independent_matrix_exponential": true,
+    "independently_integrated_loss_balance": true,
+    "complex_amplitude_refinement": true,
+    "free_transmission_complex_phase": true,
+    "smooth_CAP_calibration": true
+  },
+  "errors": {
+    "projector": 2.6645352591003757e-15,
+    "flux_modes": 8.881784197001252e-16,
+    "normal_complex_amplitude": 1.6266462920492807e-12,
+    "constant_complex_amplitude": 3.9842907142550167e-13,
+    "refinement_complex_amplitude": 1.586134836514048e-15,
+    "free_transmission_phase": 4.847302891456678e-16
+  },
+  "characteristic_boundary": [
+    {
+      "normal_group_velocity": 1.0,
+      "local_characteristic_reflection": 0.0,
+      "analytic_reflection": 0.0,
+      "exact_outgoing_reflection": 0.0
+    },
+    {
+      "normal_group_velocity": 0.8,
+      "local_characteristic_reflection": 0.11111111111111106,
+      "analytic_reflection": 0.11111111111111108,
+      "exact_outgoing_reflection": 6.933347799794048e-33
+    },
+    {
+      "normal_group_velocity": 0.2,
+      "local_characteristic_reflection": 0.6666666666666671,
+      "analytic_reflection": 0.6666666666666667,
+      "exact_outgoing_reflection": 0.0
+    },
+    {
+      "normal_group_velocity": 0.05,
+      "local_characteristic_reflection": 0.9047619047619059,
+      "analytic_reflection": 0.9047619047619047,
+      "exact_outgoing_reflection": 5.176899690512956e-31
+    }
+  ],
+  "normal": {
+    "energy": 2.0,
+    "tangent": 0.0,
+    "W": 0.0,
+    "width": 4.0,
+    "strength": 1.0,
+    "power": 3,
+    "wall_phase": 0.37,
+    "r": [
+      -0.10674460019133182,
+      -0.08319392537152517
+    ],
+    "reflection_probability": 0.01831563888873017,
+    "reflection_phase": -2.4795559215507774,
+    "numerically_absorbed_flux": 0.981684361109544,
+    "wall_flux": -6.938893903907228e-18,
+    "flux_balance_error": 1.7257376083712472e-12,
+    "loss_quadrature_error_estimate": 1.3600294500072103e-14,
+    "ode_evaluations": 527
+  },
+  "constant": {
+    "energy": 2.0,
+    "tangent": 0.6,
+    "W": 0.8,
+    "width": 2.0,
+    "strength": 0.7,
+    "power": 0,
+    "wall_phase": 0.31,
+    "r": [
+      0.07592922588792973,
+      -0.06608683690152978
+    ],
+    "reflection_probability": 0.010132717355589656,
+    "reflection_phase": -0.7162040462261242,
+    "numerically_absorbed_flux": 0.9898672826300012,
+    "wall_flux": -8.673617379884035e-18,
+    "flux_balance_error": 1.4409149221017437e-11,
+    "loss_quadrature_error_estimate": 1.0989734484989646e-14,
+    "ode_evaluations": 242
+  },
+  "evanescent": {
+    "energy": 2,
+    "tangent": 1,
+    "W": 2,
+    "p": "I",
+    "beta": "4/5 + 3*I/5",
+    "operator_residual": [
+      "0",
+      "0"
+    ],
+    "normal_current": "0",
+    "spatial_factor": "exp(-x)",
+    "decay_identity_residual": "0",
+    "ratio_error": 1.1102230246251565e-16
+  },
+  "unit_flux_rejected": {
+    "threshold": true,
+    "evanescent": true
+  },
+  "smooth": [
+    {
+      "energy": 2.0,
+      "tangent": 0.6,
+      "W": 0.8,
+      "width": 4.0,
+      "strength": 1.0,
+      "power": 3,
+      "wall_phase": 0.0,
+      "r": [
+        0.03776698662655932,
+        0.07225323336708175
+      ],
+      "reflection_probability": 0.0066468750108486865,
+      "reflection_phase": 1.0891516610978869,
+      "numerically_absorbed_flux": 0.9933531249907259,
+      "wall_flux": 0.0,
+      "flux_balance_error": 1.5746293158258595e-12,
+      "loss_quadrature_error_estimate": 1.4676499276982846e-14,
+      "ode_evaluations": 482
+    },
+    {
+      "energy": 2.0,
+      "tangent": 0.6,
+      "W": 0.8,
+      "width": 8.0,
+      "strength": 1.0,
+      "power": 3,
+      "wall_phase": 0.0,
+      "r": [
+        -0.00638911831511942,
+        0.0055952586303647635
+      ],
+      "reflection_probability": 7.212775198526577e-05,
+      "reflection_phase": 2.4223390724689047,
+      "numerically_absorbed_flux": 0.9999278722511782,
+      "wall_flux": 0.0,
+      "flux_balance_error": 3.163469486366921e-12,
+      "loss_quadrature_error_estimate": 1.3319182042004218e-10,
+      "ode_evaluations": 902
+    },
+    {
+      "energy": 2.0,
+      "tangent": 0.6,
+      "W": 0.8,
+      "width": 16.0,
+      "strength": 1.0,
+      "power": 3,
+      "wall_phase": 0.0,
+      "r": [
+        3.685492560239721e-05,
+        -8.61905541513135e-05
+      ],
+      "reflection_probability": 8.787097166068738e-09,
+      "reflection_phase": -1.166727042555339,
+      "numerically_absorbed_flux": 0.999999991218292,
+      "wall_flux": 0.0,
+      "flux_balance_error": 5.389133583832972e-12,
+      "loss_quadrature_error_estimate": 1.0000003005125417e-12,
+      "ode_evaluations": 1727
+    }
+  ],
+  "refined": {
+    "energy": 2.0,
+    "tangent": 0.6,
+    "W": 0.8,
+    "width": 16.0,
+    "strength": 1.0,
+    "power": 3,
+    "wall_phase": 0.0,
+    "r": [
+      3.685492560202148e-05,
+      -8.619055414977251e-05
+    ],
+    "reflection_probability": 8.787097165775405e-09,
+    "reflection_phase": -1.1667270425525613,
+    "numerically_absorbed_flux": 0.9999999912140456,
+    "wall_flux": 0.0,
+    "flux_balance_error": 1.1427525592466736e-12,
+    "loss_quadrature_error_estimate": 1.0160942071429768e-12,
+    "ode_evaluations": 2297
+  },
+  "grazing": {
+    "energy": 2.0,
+    "tangent": 1.1757550765359255,
+    "W": 1.567673435381234,
+    "width": 16.0,
+    "strength": 1.0,
+    "power": 3,
+    "wall_phase": 0.0,
+    "r": [
+      -0.13288613444879144,
+      0.0816903809241747
+    ],
+    "reflection_probability": 0.024332043064279038,
+    "reflection_phase": 2.5904055851604735,
+    "numerically_absorbed_flux": 0.9756679569307473,
+    "wall_flux": 0.0,
+    "flux_balance_error": 4.973688128018239e-12,
+    "loss_quadrature_error_estimate": 4.433960929537198e-13,
+    "ode_evaluations": 902
+  },
+  "scope": "Positive-energy, frozen planar spinor boundary calibration only. No physical return matrix, infinity flux, finite-mouth matching, vacuum state or escape probability is computed.",
+  "phase_convention": "Modes from flux_modes at CAP entrance x=0; wall b=exp(i*wall_phase)*a. Complex r stored as [real,imag].",
+  "source_sha256": "0440ce452be4cf87427ad7692a70c6b037fe9f3c25cce41d236173ef1957ebee"
+}

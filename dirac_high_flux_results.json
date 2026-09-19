@@ -1,0 +1,409 @@
+{
+  "passed": true,
+  "tests": {
+    "flux_counterterm_cancellation": true,
+    "independent_angular_sums": true,
+    "saved_low_flux_crosscheck": true,
+    "direct_variation_vs_ibp": true,
+    "normalized_refinement": true,
+    "linear_coefficient_resolved": true,
+    "uv_truncation_resolves_linear_term": true,
+    "high_flux_asymptotic_agreement": true
+  },
+  "configurations": {
+    "main": {
+      "lower": 0.02,
+      "upper": 40.0,
+      "order": 12,
+      "width": 0.75,
+      "heat_order": 80
+    },
+    "fine": {
+      "lower": 0.01,
+      "upper": 48.0,
+      "order": 16,
+      "width": 0.5,
+      "heat_order": 128
+    }
+  },
+  "contrast": "3 W(3q) - 8 W(2q) + 5 W(q), same homogeneous minimal Dirac vacuum",
+  "observable": "Fixed-volume shape derivative, a=exp(eta), r=exp(-eta), at eta=0; units hbar*c/L^4.",
+  "asymptotic": {
+    "quadratic_coefficient": -0.03158612760311054,
+    "linear_hyperbolic": -0.008443431970194815,
+    "linear_spherical": -0.009255221127717903,
+    "linear_total": -0.017698653097912718
+  },
+  "cases": [
+    {
+      "q": 1,
+      "main": {
+        "q": 1,
+        "response_over_q2": -0.05012451147158929,
+        "response": -0.05012451147158929,
+        "direct_over_q2": -0.050124511472815284,
+        "direct_vs_ibp_over_q2": 1.2259915305179447e-12,
+        "uv_core_ir_over_q2": [
+          [
+            -3.423452504197766e-06,
+            -1.7048310616634386e-06
+          ],
+          [
+            -0.04777071387189244,
+            -0.04542205834369033
+          ],
+          [
+            -0.00235037414841865,
+            -0.0047007482968373
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 2.995566604488515e-19,
+        "curvature_coefficient": -0.018538383868478753,
+        "missing_after_minimal_repair_over_q": -0.010094951898283938,
+        "remainder_after_two_term_expansion": -0.0008397307705660349
+      },
+      "fine": {
+        "q": 1,
+        "response_over_q2": -0.050124511471117496,
+        "response": -0.050124511471117496,
+        "direct_over_q2": -0.050124511471155306,
+        "direct_vs_ibp_over_q2": 3.781003288239049e-14,
+        "uv_core_ir_over_q2": [
+          [
+            -8.500879060889138e-07,
+            -4.241858100332735e-07
+          ],
+          [
+            -0.04799161834562083,
+            -0.045860001210050697
+          ],
+          [
+            -0.0021320430376283836,
+            -0.004264086075256767
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 9.115533480257558e-23,
+        "curvature_coefficient": -0.018538383868006957,
+        "missing_after_minimal_repair_over_q": -0.010094951897812142,
+        "remainder_after_two_term_expansion": -0.0008397307700942387
+      },
+      "normalized_refinement_change": 4.717962132083642e-13,
+      "linear_coefficient_refinement_change": 4.717962132083642e-13
+    },
+    {
+      "q": 100,
+      "main": {
+        "q": 100,
+        "response_over_q2": -0.03176311626755176,
+        "response": -317.6311626755176,
+        "direct_over_q2": -0.03176311626759116,
+        "direct_vs_ibp_over_q2": 3.939903958638524e-14,
+        "uv_core_ir_over_q2": [
+          [
+            -3.3774934591695704e-06,
+            -1.6887346596713808e-06
+          ],
+          [
+            -0.031085811224048545,
+            -0.030413572432725203
+          ],
+          [
+            -0.0006739275500834421,
+            -0.0013478551001668841
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 2.920344634658331e-20,
+        "curvature_coefficient": -0.017698866444122024,
+        "missing_after_minimal_repair_over_q": -0.00925543447392721,
+        "remainder_after_two_term_expansion": -2.1334620930795953e-05
+      },
+      "fine": {
+        "q": 100,
+        "response_over_q2": -0.03176311626753507,
+        "response": -317.6311626753507,
+        "direct_over_q2": -0.031763116267536695,
+        "direct_vs_ibp_over_q2": 1.6237011735142914e-15,
+        "uv_core_ir_over_q2": [
+          [
+            -8.443793865556823e-07,
+            -4.22184666816495e-07
+          ],
+          [
+            -0.031194167219712153,
+            -0.030626484745992284
+          ],
+          [
+            -0.0005681046684379847,
+            -0.0011362093368759694
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 8.258352160691687e-24,
+        "curvature_coefficient": -0.01769886644245322,
+        "missing_after_minimal_repair_over_q": -0.009255434472258406,
+        "remainder_after_two_term_expansion": -2.1334454050397564e-05
+      },
+      "normalized_refinement_change": 1.6688039838896884e-14,
+      "linear_coefficient_refinement_change": 1.6688039838896884e-12
+    },
+    {
+      "q": 1000,
+      "main": {
+        "q": 1000,
+        "response_over_q2": -0.03160382625836675,
+        "response": -31603.826258366753,
+        "direct_over_q2": -0.031603826258349406,
+        "direct_vs_ibp_over_q2": 1.734723475976807e-14,
+        "uv_core_ir_over_q2": [
+          [
+            -3.3770808864035364e-06,
+            -1.6885898978480866e-06
+          ],
+          [
+            -0.03096298679196149,
+            -0.03032721289746588
+          ],
+          [
+            -0.0006374623855015112,
+            -0.0012749247710030225
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 2.71358237010974e-20,
+        "curvature_coefficient": -0.01769865525621389,
+        "missing_after_minimal_repair_over_q": -0.009255223286019076,
+        "remainder_after_two_term_expansion": -2.158301173145385e-06
+      },
+      "fine": {
+        "q": 1000,
+        "response_over_q2": -0.03160382625837205,
+        "response": -31603.82625837205,
+        "direct_over_q2": -0.031603826258371874,
+        "direct_vs_ibp_over_q2": 1.734723475976807e-16,
+        "uv_core_ir_over_q2": [
+          [
+            -8.443278179241331e-07,
+            -4.2216657266828367e-07
+          ],
+          [
+            -0.03107106575288517,
+            -0.030539571736461827
+          ],
+          [
+            -0.0005319161776687773,
+            -0.0010638323553375545
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 7.595839671052721e-24,
+        "curvature_coefficient": -0.017698655261508267,
+        "missing_after_minimal_repair_over_q": -0.009255223291313452,
+        "remainder_after_two_term_expansion": -2.163595549194066e-06
+      },
+      "normalized_refinement_change": 5.294376048681215e-15,
+      "linear_coefficient_refinement_change": 5.294376048681215e-12
+    },
+    {
+      "q": 10000,
+      "main": {
+        "q": 10000,
+        "response_over_q2": -0.03158789746841486,
+        "response": -3158789.746841486,
+        "direct_over_q2": -0.03158789746839185,
+        "direct_vs_ibp_over_q2": 2.300937218535637e-14,
+        "uv_core_ir_over_q2": [
+          [
+            -3.377039634307235e-06,
+            -1.6885754232205283e-06
+          ],
+          [
+            -0.030950841028102458,
+            -0.03031885009168147
+          ],
+          [
+            -0.000633679400655084,
+            -0.001267358801310168
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 2.6926329971793027e-20,
+        "curvature_coefficient": -0.017698653043199397,
+        "missing_after_minimal_repair_over_q": -0.009255221073004583,
+        "remainder_after_two_term_expansion": 5.471332031032716e-07
+      },
+      "fine": {
+        "q": 10000,
+        "response_over_q2": -0.03158789746842237,
+        "response": -3158789.7468422367,
+        "direct_over_q2": -0.03158789746842201,
+        "direct_vs_ibp_over_q2": 3.5388358909926865e-16,
+        "uv_core_ir_over_q2": [
+          [
+            -8.443226613847435e-07,
+            -4.221647633506359e-07
+          ],
+          [
+            -0.03105891667843611,
+            -0.030531202369009972
+          ],
+          [
+            -0.0005281364673245215,
+            -0.001056272934649043
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 7.52831660241393e-24,
+        "curvature_coefficient": -0.01769865311827823,
+        "missing_after_minimal_repair_over_q": -0.009255221148083415,
+        "remainder_after_two_term_expansion": -2.036551172994905e-07
+      },
+      "normalized_refinement_change": 7.507883204027621e-15,
+      "linear_coefficient_refinement_change": 7.507883204027621e-11
+    },
+    {
+      "q": 100000,
+      "main": {
+        "q": 100000,
+        "response_over_q2": -0.03158630458963364,
+        "response": -315863045.89633644,
+        "direct_over_q2": -0.03158630458961008,
+        "direct_vs_ibp_over_q2": 2.3564483697668948e-14,
+        "uv_core_ir_over_q2": [
+          [
+            -3.3770355091494073e-06,
+            -1.6885739757733203e-06
+          ],
+          [
+            -0.03094962794086499,
+            -0.030318016789185998
+          ],
+          [
+            -0.0006332996132359365,
+            -0.001266599226471873
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 2.690534916387543e-20,
+        "curvature_coefficient": -0.017698652310382812,
+        "missing_after_minimal_repair_over_q": -0.009255220340187997,
+        "remainder_after_two_term_expansion": 7.875299070901563e-05
+      },
+      "fine": {
+        "q": 100000,
+        "response_over_q2": -0.031586304589641366,
+        "response": -315863045.8964137,
+        "direct_over_q2": -0.031586304589641005,
+        "direct_vs_ibp_over_q2": 3.608224830031759e-16,
+        "uv_core_ir_over_q2": [
+          [
+            -8.443221457340422e-07,
+            -4.2216458241984285e-07
+          ],
+          [
+            -0.03105770355422444,
+            -0.030530368998517278
+          ],
+          [
+            -0.0005277567132708348,
+            -0.0010555134265416695
+          ]
+        ],
+        "excited_tail_error_bound_over_q2": 7.521549549772434e-24,
+        "curvature_coefficient": -0.017698653082681703,
+        "missing_after_minimal_repair_over_q": -0.009255221112486889,
+        "remainder_after_two_term_expansion": 1.5231015585281807e-06
+      },
+      "normalized_refinement_change": 7.722988915048745e-15,
+      "linear_coefficient_refinement_change": 7.722988915048745e-10
+    }
+  ],
+  "angular_controls": [
+    {
+      "q": 1,
+      "y": 0.03,
+      "value": [
+        -9.194184844392197e-06,
+        -0.0009259347937942116
+      ],
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 100,
+      "y": 0.03,
+      "value": [
+        -8.999228480305084e-06,
+        -0.0008998071323971681
+      ],
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 100000,
+      "y": 0.03,
+      "value": [
+        -8.99730256517444e-06,
+        -0.000899550405712094
+      ],
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 100000,
+      "y": 0.2,
+      "value": [
+        -0.0026314845775875706,
+        -0.039124090347585794
+      ],
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 100000,
+      "y": 1.0,
+      "value": [
+        -0.24567627322451788,
+        -0.5993674709562173
+      ],
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "uv_truncation_bounds": [
+    {
+      "q": 100000,
+      "cutoff": 0.01,
+      "ibp_normalized_truncation_bound": 1.2392369421618342e-16,
+      "linear_coefficient_truncation_bound": 1.2392369421618342e-11,
+      "scope": "UV truncation only; 85-digit non-interval evaluation of an analytic bound."
+    },
+    {
+      "q": 100000,
+      "cutoff": 0.02,
+      "ibp_normalized_truncation_bound": 7.906329161355251e-15,
+      "linear_coefficient_truncation_bound": 7.906329161355252e-10,
+      "scope": "UV truncation only; 85-digit non-interval evaluation of an analytic bound."
+    }
+  ],
+  "low_flux_control": {
+    "from_increment81": -0.050124511471102196,
+    "absolute_error": 1.530026105811544e-14
+  },
+  "scope": [
+    "Counterterms independent of flux or proportional to q^2 cancel; all three fluxes are high at q=100000.",
+    "Exact angular spectrum retained; UV series and quadrature have observed convergence, not a certified total error bound.",
+    "Analytic excited-mode IR tail bound is separate from unbounded quadrature/UV truncation errors.",
+    "This homogeneous product vacuum has zero radial null stress; not a returning-loop state or varying-throat source.",
+    "A matching coefficient is not a new physical law or a construction recipe."
+  ],
+  "sources": [
+    "https://arxiv.org/pdf/2603.15730",
+    "https://arxiv.org/pdf/0906.2430"
+  ],
+  "source_sha256": "95e309c996e14acc0453b1f79aa3285d98f4c2c9a51014bc710cd4618db952d7",
+  "reused_source_sha256": "1c0bd730c3e4add3e2e4a17bf0f3d5e5a57389316c55238846a01efde7cbd650"
+}

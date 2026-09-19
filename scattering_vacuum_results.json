@@ -1,0 +1,156 @@
+{
+  "checks": {
+    "energy_integrals": 6,
+    "invalid_inputs_rejected": 16,
+    "max_absolute_errors": {
+      "delay_density_relation": 2.220446049250313e-16,
+      "imaginary_integral_vs_dilogarithm": 0.0,
+      "local_mode_density": 2.220446049250313e-16,
+      "lower_half_plane_pole_residual": 3.5131807486137264e-61,
+      "relative_determinant": 2.482534153247273e-16,
+      "reservoir_unitarity": 2.220446049250313e-16,
+      "spectral_phase_derivative": 3.9116723170445977e-16,
+      "vertex_unitarity": 3.3306690738754696e-16,
+      "winding_series": 2.2318164295467266e-16,
+      "zeta_normalization": 7.778769097326427e-62
+    },
+    "quadrature_decimal_precision": 60,
+    "real_energy_test_points": 20,
+    "rounding_scope": "high-precision and floating-point checks; not interval-certified bounds"
+  },
+  "conditional_bounds": {
+    "arithmetic_tolerance": 1e-50,
+    "chiral_stress_lower_bound": "Tuu >= -pi/(12L^2)",
+    "dirac_energy_lower_bound": "E >= -pi/(6L)",
+    "hypotheses": [
+      "same filled negative-energy occupation and relative subtraction as this model",
+      "scalar return R(i*kappa) is analytic as required for the contour and has modulus at most one",
+      "local Tuu=-one_half*dE/dL is applicable, with the external return map fixed under the length variation"
+    ],
+    "minimum_energy_above_bound": -7.778769097326427e-62,
+    "minimum_stress_above_bound": -3.8893845486632136e-62,
+    "physical_status": "real-energy unitarity alone has not established the required imaginary-axis contractivity of the actual exterior return operator",
+    "proof": "For x=exp(-kappa L), |1+z|<=1+x and Re[z/(1+z)]<=x/(1+x) whenever |z|<=x<1; integrate these inequalities.",
+    "q_channel_conditional_generalization": "A q-by-q contraction obeys |det(I+xR)|<=(1+x)^q, so the same Dirac normalization gives E>=-q*pi/(6L).",
+    "toy_parameters_checked": 18
+  },
+  "equations": {
+    "determinant": "D(E)=1+R exp(i beta+i E(L+tau))",
+    "dirac_energy": "2 Re Li2(-R exp(i beta))/(pi(L+tau))",
+    "future_interface": "D=det[I-P_throat(E) R_exterior(E)] after a physical unitary completion, state choice and reference subtraction",
+    "local_chiral_stress": "Tuu=Tvv=Re Li2(-R exp(i beta))/(pi(L+tau)^2)",
+    "relative_density": "Delta rho=-(1/pi) Im d_E log D",
+    "return_amplitude": "r(E)=R exp(i beta+i E tau)"
+  },
+  "examples": [
+    {
+      "causal_vertex_delay": 0.0,
+      "complex_chiral_interaction_energy": 0.0,
+      "dirac_interaction_energy": 0.0,
+      "name": "zero_return",
+      "phase_radians": 0.0,
+      "physical_loop_Tuu_equals_Tvv": 0.0,
+      "physical_loop_interaction_energy": 0.0,
+      "physical_loop_length": 1.0,
+      "return_modulus": 0.0,
+      "return_probability": 0.0,
+      "round_trip_length": 1.0
+    },
+    {
+      "causal_vertex_delay": 0.0,
+      "complex_chiral_interaction_energy": -0.14273467516906058,
+      "dirac_interaction_energy": -0.28546935033812115,
+      "name": "partial_NS",
+      "phase_radians": 0.0,
+      "physical_loop_Tuu_equals_Tvv": -0.14273467516906058,
+      "physical_loop_interaction_energy": -0.28546935033812115,
+      "physical_loop_length": 1.0,
+      "return_modulus": 0.5,
+      "return_probability": 0.25,
+      "round_trip_length": 1.0
+    },
+    {
+      "causal_vertex_delay": 0.0,
+      "complex_chiral_interaction_energy": 0.06493235157066216,
+      "dirac_interaction_energy": 0.1298647031413243,
+      "name": "same_probability_positive_phase",
+      "phase_radians": 2.0943951023931953,
+      "physical_loop_Tuu_equals_Tvv": 0.06493235157066216,
+      "physical_loop_interaction_energy": 0.1298647031413243,
+      "physical_loop_length": 1.0,
+      "return_modulus": 0.5,
+      "return_probability": 0.25,
+      "round_trip_length": 1.0
+    },
+    {
+      "causal_vertex_delay": 0.0,
+      "complex_chiral_interaction_energy": 0.06493235157066216,
+      "dirac_interaction_energy": 0.1298647031413243,
+      "name": "same_probability_negative_phase",
+      "phase_radians": -2.0943951023931953,
+      "physical_loop_Tuu_equals_Tvv": 0.06493235157066216,
+      "physical_loop_interaction_energy": 0.1298647031413243,
+      "physical_loop_length": 1.0,
+      "return_modulus": 0.5,
+      "return_probability": 0.25,
+      "round_trip_length": 1.0
+    },
+    {
+      "causal_vertex_delay": 0.8,
+      "complex_chiral_interaction_energy": -0.07929704176058922,
+      "dirac_interaction_energy": -0.15859408352117843,
+      "name": "same_probability_causal_delay",
+      "phase_radians": 0.0,
+      "physical_loop_Tuu_equals_Tvv": -0.044053912089216225,
+      "physical_loop_interaction_energy": -0.08810782417843245,
+      "physical_loop_length": 1.0,
+      "return_modulus": 0.5,
+      "return_probability": 0.25,
+      "round_trip_length": 1.8
+    },
+    {
+      "causal_vertex_delay": 0.0,
+      "complex_chiral_interaction_energy": -0.26179938779914946,
+      "dirac_interaction_energy": -0.5235987755982989,
+      "name": "closed_NS",
+      "phase_radians": 0.0,
+      "physical_loop_Tuu_equals_Tvv": -0.26179938779914946,
+      "physical_loop_interaction_energy": -0.5235987755982989,
+      "physical_loop_length": 1.0,
+      "return_modulus": 1.0,
+      "return_probability": 1.0,
+      "round_trip_length": 1.0
+    }
+  ],
+  "runtime_seconds": 0.6174275000230409,
+  "schema_version": 1,
+  "scope": {
+    "closed_limit": "isolated loop levels retained through D or the R->1- limit; reservoir scattering alone omits them",
+    "dirac_counting": "two independent complex chiral copies with conjugate phases; no additional spin factor",
+    "limitations": [
+      "no actual exterior scattering amplitude or returning state has been computed here",
+      "no inference of a complex amplitude or its continuation from return probabilities",
+      "not the complete curved-space determinant, local anomaly, or semiclassical Einstein source",
+      "phase-dependent occupied ground state is specified; arbitrary fixed charge sectors are not constructed",
+      "no claim of physical preparation, stability, traversal, or chronology change"
+    ],
+    "local_stress": "uniform physical-loop stress only in this specified toy; exterior delay carries part of global energy",
+    "model": "specified unitary loop plus reservoir with constant vertex mixing and causal delay",
+    "occupation": "zero-temperature incoming reservoir sea: every E<0 level occupied, chemical potential zero",
+    "reference": "same one-pass delay with return modulus zero; local and vertex reference terms subtracted"
+  },
+  "source_file": "scattering_vacuum.py",
+  "source_sha256": "d205171240468a162806c63b5ebe4e448aa47da43cd65ecdfab2adb50dddd783",
+  "sources": [
+    {
+      "context": "Dirac graph unitary transition and secular determinant, Eqs18-21",
+      "url": "https://arxiv.org/pdf/1606.07834"
+    },
+    {
+      "context": "reference-relative scattering spectral density, Eqs8-13; fermionic factor checked independently here",
+      "url": "https://arxiv.org/pdf/0711.2395"
+    }
+  ],
+  "status": "passed",
+  "units": "hbar=c=1; E and all optical delays use the same time coordinate"
+}

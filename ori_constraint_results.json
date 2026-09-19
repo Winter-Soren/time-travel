@@ -1,0 +1,563 @@
+{
+  "scope": "Finite-disk nonlinear curved Ori initial constraints; NO TIME EVOLUTION",
+  "convention": "8*pi*G=c=1; Kij=-1/2 Lie_n gamma; Pi=n(phi); complex scalar denotes two real fields",
+  "method": "Origin-regular Cartesian disk-polynomial Galerkin, independently differentiated physical ADM residual",
+  "boundary": "psi=1 and W=0 on radius1; neither exterior matching nor a vacuum collar is established",
+  "source": "Choquet-Bruhat, Isenberg, Pollack (2007), arXiv:gr-qc/0610045 equations4-13",
+  "refinement": [
+    {
+      "degree": 6,
+      "epsilon": 0.03,
+      "quadrature_padding": 2,
+      "quadrature_points": 147,
+      "unknowns": 112,
+      "projected_residual": 1.4455972497610242e-16,
+      "residual_evaluations": 42,
+      "elapsed_seconds": 0.2133954999735579,
+      "independent_points": 3944,
+      "physical_constraints": {
+        "max_H": 0.0024973366587863755,
+        "max_M": 0.00023618544150194362,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 7.05468055159919e-05,
+        "max_W": 6.769091120865799e-05,
+        "max_energy": 0.0019262796908930762
+      },
+      "uncorrected": {
+        "max_H": 0.0038536810158365377,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019268405079182966
+      }
+    },
+    {
+      "degree": 10,
+      "epsilon": 0.03,
+      "quadrature_padding": 2,
+      "quadrature_points": 261,
+      "unknowns": 264,
+      "projected_residual": 1.2899819448782403e-16,
+      "residual_evaluations": 42,
+      "elapsed_seconds": 0.2871466000797227,
+      "independent_points": 3944,
+      "physical_constraints": {
+        "max_H": 0.0005175308745185014,
+        "max_M": 0.00012572985496895703,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 6.919185492937352e-05,
+        "max_W": 6.85083905262592e-05,
+        "max_energy": 0.001926275423406763
+      },
+      "uncorrected": {
+        "max_H": 0.0038536810158365377,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019268405079182966
+      }
+    },
+    {
+      "degree": 14,
+      "epsilon": 0.03,
+      "quadrature_padding": 2,
+      "quadrature_points": 407,
+      "unknowns": 480,
+      "projected_residual": 1.275135947901998e-16,
+      "residual_evaluations": 42,
+      "elapsed_seconds": 0.4214798999018967,
+      "independent_points": 3944,
+      "physical_constraints": {
+        "max_H": 1.284766026232731e-06,
+        "max_M": 5.948516779965391e-06,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 6.913498130645124e-05,
+        "max_W": 6.853633561757512e-05,
+        "max_energy": 0.001926275271794481
+      },
+      "uncorrected": {
+        "max_H": 0.0038536810158365377,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019268405079182966
+      }
+    },
+    {
+      "degree": 18,
+      "epsilon": 0.03,
+      "quadrature_padding": 2,
+      "quadrature_points": 585,
+      "unknowns": 760,
+      "projected_residual": 1.1815376513212855e-16,
+      "residual_evaluations": 42,
+      "elapsed_seconds": 0.6143573999870569,
+      "independent_points": 3944,
+      "physical_constraints": {
+        "max_H": 3.8288083814563834e-10,
+        "max_M": 4.191058988641912e-10,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 6.913502472616351e-05,
+        "max_W": 6.853649448514894e-05,
+        "max_energy": 0.001926275271728389
+      },
+      "uncorrected": {
+        "max_H": 0.0038536810158365377,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019268405079182966
+      }
+    },
+    {
+      "degree": 22,
+      "epsilon": 0.03,
+      "quadrature_padding": 2,
+      "quadrature_points": 795,
+      "unknowns": 1104,
+      "projected_residual": 1.4257871160193775e-16,
+      "residual_evaluations": 42,
+      "elapsed_seconds": 1.1115861000726,
+      "independent_points": 3944,
+      "physical_constraints": {
+        "max_H": 4.347933124648762e-11,
+        "max_M": 1.6539530443487586e-13,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 6.913502471306288e-05,
+        "max_W": 6.853649452719446e-05,
+        "max_energy": 0.0019262752717284074
+      },
+      "uncorrected": {
+        "max_H": 0.0038536810158365377,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019268405079182966
+      }
+    }
+  ],
+  "constraint_errors": [
+    0.0024973366587863755,
+    0.0005175308745185014,
+    5.948516779965391e-06,
+    4.191058988641912e-10,
+    4.347933124648762e-11
+  ],
+  "checks": {
+    "refinement": true,
+    "accuracy": true,
+    "positive_metric": true,
+    "physical_reconstruction_identity": true,
+    "quadrature_insensitive": true,
+    "finite_amplitudes": true,
+    "vacuum_recovery": true,
+    "small_amplitude_quadratic_response": true,
+    "strong_quadrature_insensitive": true
+  },
+  "quadrature_refinement": [
+    {
+      "degree": 22,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "quadrature_points": 1159,
+      "unknowns": 1104,
+      "projected_residual": 1.43577097477053e-16,
+      "residual_evaluations": 42,
+      "elapsed_seconds": 1.3222353999735788,
+      "independent_points": 3944,
+      "physical_constraints": {
+        "max_H": 4.34816072036881e-11,
+        "max_M": 1.6540318201264596e-13,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 6.913502471306288e-05,
+        "max_W": 6.853649452719446e-05,
+        "max_energy": 0.0019262752717284074
+      },
+      "uncorrected": {
+        "max_H": 0.0038536810158365377,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019268405079182966
+      },
+      "max_coefficient_change_from_padding2": 5.285485590866834e-19
+    },
+    {
+      "degree": 22,
+      "epsilon": 0.03,
+      "quadrature_padding": 10,
+      "quadrature_points": 1587,
+      "unknowns": 1104,
+      "projected_residual": 3.552738317736467e-16,
+      "residual_evaluations": 42,
+      "elapsed_seconds": 1.8022343999473378,
+      "independent_points": 3944,
+      "physical_constraints": {
+        "max_H": 4.348077453641963e-11,
+        "max_M": 1.6540796195326033e-13,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 6.913502471284083e-05,
+        "max_W": 6.853649452719445e-05,
+        "max_energy": 0.0019262752717284074
+      },
+      "uncorrected": {
+        "max_H": 0.0038536810158365377,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019268405079182966
+      },
+      "max_coefficient_change_from_padding2": 3.256333462424432e-17
+    }
+  ],
+  "amplitudes": [
+    {
+      "epsilon": 0.0,
+      "passed": true,
+      "attempts": [
+        {
+          "degree": 22,
+          "epsilon": 0.0,
+          "quadrature_padding": 6,
+          "quadrature_points": 1159,
+          "unknowns": 1104,
+          "projected_residual": 3.876002741511598e-18,
+          "residual_evaluations": 2,
+          "elapsed_seconds": 0.8957229000516236,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 3.885780586188048e-16,
+            "max_M": 1.3773218444781477e-16,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 0.0
+          },
+          "uncorrected": {
+            "max_H": 3.885780586188048e-16,
+            "max_M": 1.3773218444781477e-16,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 0.003,
+      "passed": true,
+      "attempts": [
+        {
+          "degree": 22,
+          "epsilon": 0.003,
+          "quadrature_padding": 6,
+          "quadrature_points": 1159,
+          "unknowns": 1104,
+          "projected_residual": 2.4527649802487382e-18,
+          "residual_evaluations": 44,
+          "elapsed_seconds": 1.7450680000474676,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 5.10702591327572e-15,
+            "max_M": 2.627529204628685e-15,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 6.913525063545478e-07,
+            "max_W": 6.853649452683966e-07,
+            "max_energy": 1.9268348544068386e-05
+          },
+          "uncorrected": {
+            "max_H": 3.853681015831042e-05,
+            "max_M": 8.999999999998364e-06,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 1.9268405079182965e-05
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 0.01,
+      "passed": true,
+      "attempts": [
+        {
+          "degree": 22,
+          "epsilon": 0.01,
+          "quadrature_padding": 6,
+          "quadrature_points": 1159,
+          "unknowns": 1104,
+          "projected_residual": 3.61777046285593e-18,
+          "residual_evaluations": 43,
+          "elapsed_seconds": 2.162313900073059,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 5.329625629713064e-13,
+            "max_M": 2.7063447906877534e-14,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 7.68169194276247e-06,
+            "max_W": 7.6151660585417655e-06,
+            "max_energy": 0.00021408641026990187
+          },
+          "uncorrected": {
+            "max_H": 0.00042818677953734374,
+            "max_M": 9.999999999999827e-05,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 0.00021409338976869963
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "passed": true,
+      "attempts": [
+        {
+          "degree": 22,
+          "epsilon": 0.1,
+          "quadrature_padding": 6,
+          "quadrature_points": 1159,
+          "unknowns": 1104,
+          "projected_residual": 2.3130732878368015e-13,
+          "residual_evaluations": 23,
+          "elapsed_seconds": 1.1467333999462426,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 5.458238083733136e-09,
+            "max_M": 1.898728505479178e-11,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0007681423313152802,
+            "max_W": 0.0007615166058980403,
+            "max_energy": 0.021339701306968228
+          },
+          "uncorrected": {
+            "max_H": 0.04281867795373987,
+            "max_M": 0.01,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 0.021409338976869963
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 0.3,
+      "passed": true,
+      "attempts": [
+        {
+          "degree": 22,
+          "epsilon": 0.3,
+          "quadrature_padding": 6,
+          "quadrature_points": 1159,
+          "unknowns": 1104,
+          "projected_residual": 3.2961921299156976e-17,
+          "residual_evaluations": 51,
+          "elapsed_seconds": 2.6672676000744104,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 4.985542665369991e-07,
+            "max_M": 1.784153266794628e-09,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.006912044485953617,
+            "max_W": 0.006853649456316811,
+            "max_energy": 0.1871440510709649
+          },
+          "uncorrected": {
+            "max_H": 0.38536810158365903,
+            "max_M": 0.09,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 0.19268405079182954
+          }
+        },
+        {
+          "degree": 26,
+          "epsilon": 0.3,
+          "quadrature_padding": 6,
+          "quadrature_points": 1449,
+          "unknowns": 1512,
+          "projected_residual": 1.418641822417174e-17,
+          "residual_evaluations": 51,
+          "elapsed_seconds": 3.598662600037642,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 1.1518311304747897e-08,
+            "max_M": 9.489385573651052e-11,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.006912044479501445,
+            "max_W": 0.006853649456317794,
+            "max_energy": 0.18714405107130264
+          },
+          "uncorrected": {
+            "max_H": 0.38536810158365903,
+            "max_M": 0.09,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 0.19268405079182954
+          }
+        }
+      ]
+    },
+    {
+      "epsilon": 1.0,
+      "passed": true,
+      "attempts": [
+        {
+          "degree": 22,
+          "epsilon": 1.0,
+          "quadrature_padding": 6,
+          "quadrature_points": 1159,
+          "unknowns": 1104,
+          "projected_residual": 3.4805836115503976e-17,
+          "residual_evaluations": 60,
+          "elapsed_seconds": 1.862920599989593,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 0.00010218306490245022,
+            "max_M": 3.9359074405148427e-07,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.07746953412267454,
+            "max_W": 0.07615166109979804,
+            "max_energy": 1.6021687058950738
+          },
+          "uncorrected": {
+            "max_H": 4.281867795373992,
+            "max_M": 1.0,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 2.140933897686996
+          }
+        },
+        {
+          "degree": 26,
+          "epsilon": 1.0,
+          "quadrature_padding": 6,
+          "quadrature_points": 1449,
+          "unknowns": 1512,
+          "projected_residual": 2.9469416438020234e-17,
+          "residual_evaluations": 60,
+          "elapsed_seconds": 2.8594898999435827,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 4.656616983678141e-07,
+            "max_M": 2.7148716349861535e-08,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.07746953232094,
+            "max_W": 0.07615166109968993,
+            "max_energy": 1.6021687034288772
+          },
+          "uncorrected": {
+            "max_H": 4.281867795373992,
+            "max_M": 1.0,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 2.140933897686996
+          }
+        },
+        {
+          "degree": 30,
+          "epsilon": 1.0,
+          "quadrature_padding": 6,
+          "quadrature_points": 1771,
+          "unknowns": 1984,
+          "projected_residual": 3.1318624054430777e-17,
+          "residual_evaluations": 60,
+          "elapsed_seconds": 4.060028800042346,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 1.6507839550872205e-07,
+            "max_M": 5.697466219091582e-10,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0774695323225465,
+            "max_W": 0.07615166109967897,
+            "max_energy": 1.6021687034276693
+          },
+          "uncorrected": {
+            "max_H": 4.281867795373992,
+            "max_M": 1.0,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 2.140933897686996
+          }
+        },
+        {
+          "degree": 34,
+          "epsilon": 1.0,
+          "quadrature_padding": 6,
+          "quadrature_points": 2125,
+          "unknowns": 2520,
+          "projected_residual": 2.06278081258004e-17,
+          "residual_evaluations": 60,
+          "elapsed_seconds": 5.975370000000112,
+          "independent_points": 3944,
+          "physical_constraints": {
+            "max_H": 1.7751326186754568e-08,
+            "max_M": 1.7605347336242067e-10,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.07746953232352505,
+            "max_W": 0.07615166109967882,
+            "max_energy": 1.6021687034253378
+          },
+          "uncorrected": {
+            "max_H": 4.281867795373992,
+            "max_M": 1.0,
+            "min_psi": 1.0,
+            "max_psi_minus_one": 0.0,
+            "max_W": 0.0,
+            "max_energy": 2.140933897686996
+          }
+        }
+      ]
+    }
+  ],
+  "strong_quadrature_check": {
+    "degree": 34,
+    "epsilon": 1.0,
+    "quadrature_padding": 10,
+    "quadrature_points": 2697,
+    "unknowns": 2520,
+    "projected_residual": 2.2508586622818526e-17,
+    "residual_evaluations": 60,
+    "elapsed_seconds": 6.989828199963085,
+    "independent_points": 3944,
+    "physical_constraints": {
+      "max_H": 1.7751336012228336e-08,
+      "max_M": 1.7605303861428488e-10,
+      "min_psi": 1.0,
+      "max_psi_minus_one": 0.07746953232352505,
+      "max_W": 0.07615166109967882,
+      "max_energy": 1.6021687034253378
+    },
+    "uncorrected": {
+      "max_H": 4.281867795373992,
+      "max_M": 1.0,
+      "min_psi": 1.0,
+      "max_psi_minus_one": 0.0,
+      "max_W": 0.0,
+      "max_energy": 2.140933897686996
+    },
+    "max_coefficient_change_from_padding6": 4.805219172136865e-18
+  },
+  "validation": "Common 3944-point cloud, including origin, shrinking rings and circular boundary; sampled maxima, not certified continuum sup bounds",
+  "previous_attempts": "Square collocation failed independent corner checks; parity-only disk collocation failed origin checks; both superseded, not counted as verified data",
+  "remaining": [
+    "Well-posed curved-core evolution with justified boundary data",
+    "Exterior completion and physical preparation",
+    "Generic stability, quantum effects and human traversal"
+  ]
+}

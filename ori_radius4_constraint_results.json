@@ -1,0 +1,270 @@
+{
+  "scope": "One distinct radius4 weak smooth initial-data family. This changes the constraint boundary completion; it is not an extension or splice of radius3 evolution histories.",
+  "radius": 4.0,
+  "source_radius": 1.0,
+  "epsilon": 0.03,
+  "a": 0.02,
+  "e": 0.0625,
+  "initial_t": -1.0,
+  "wave_number": 1,
+  "taper_kind": "smooth",
+  "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; s=r^2/source_radius^2",
+  "source_cutoff_regularity": "C-infinity",
+  "boundary_condition": "log(psi)=0 and all three W components=0 on r=4; no exterior matching",
+  "targets": {
+    "sampled_absolute_ADM": 1e-07,
+    "expanded_projected_residual": 2e-12
+  },
+  "refinement": [
+    {
+      "degree": 320,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 4.0,
+      "source_radius": 1.0,
+      "max_angular": 12,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 15300,
+      "unknowns": 15764,
+      "projected_residual": 8.89188255786234e-16,
+      "residual_evaluations": 47,
+      "elapsed_seconds": 130.61725229991134,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 8.279698252011691e-08,
+        "max_M": 6.404235105532281e-09,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00013608042455959257,
+        "max_W": 0.00010790713271876768,
+        "max_energy": 0.0022590323726360143,
+        "max_H_location": [
+          -0.041313360620793264,
+          3.9997866450892374
+        ],
+        "max_M_location": [
+          -0.041313360620793264,
+          3.9997866450892374
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0009000000000000083,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      },
+      "accuracy_target_passed": true,
+      "accepted": false,
+      "rejection_reason": "Expanded degree360/cap16 projected residual3.924672175889098e-11 exceeds2e-12."
+    },
+    {
+      "degree": 400,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 4.0,
+      "source_radius": 1.0,
+      "max_angular": 12,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 18900,
+      "unknowns": 19764,
+      "projected_residual": 9.07483337366705e-18,
+      "residual_evaluations": 26,
+      "elapsed_seconds": 218.38101300003473,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 4.029148070738842e-09,
+        "max_M": 1.0264514554153105e-09,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0001360804245362779,
+        "max_W": 0.0001079071327190487,
+        "max_energy": 0.002259032372636025,
+        "max_H_location": [
+          -0.041313360620793264,
+          3.9997866450892374
+        ],
+        "max_M_location": [
+          -0.041313360620793264,
+          3.9997866450892374
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0009000000000000083,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      },
+      "accuracy_target_passed": true,
+      "accepted": true
+    }
+  ],
+  "projection_checks": [
+    {
+      "max_projected_residual": 1.912811280144403e-12,
+      "quadrature_points": 24380,
+      "quadrature_padding": 8,
+      "max_angular": 16,
+      "degree": 440,
+      "fixed_coefficient_degree": 400,
+      "fixed_coefficient_max_angular": 12
+    },
+    {
+      "max_projected_residual": 1.017107090055151e-17,
+      "quadrature_points": 26596,
+      "quadrature_padding": 16,
+      "max_angular": 12,
+      "degree": 400,
+      "fixed_coefficient_degree": 400,
+      "fixed_coefficient_max_angular": 12
+    }
+  ],
+  "failures": [
+    {
+      "stage": "acceptance",
+      "candidate_degree": 320,
+      "candidate_max_angular": 12,
+      "test_degree": 360,
+      "test_max_angular": 16,
+      "max_projected_residual": 3.924672175889098e-11,
+      "target": 2e-12
+    }
+  ],
+  "accepted": true,
+  "active_run": {
+    "degree": 400,
+    "max_angular": 12,
+    "status": "complete_all_acceptance_checks_passed",
+    "started_utc": "2026-09-14T18:02:06.063064+00:00",
+    "projected_residual": 9.07483337366705e-18,
+    "completed_utc": "2026-09-14T18:29:05.517270+00:00"
+  },
+  "frozen_sha256": {
+    "disk_basis.py": "ba81c08f033843b0d5550382908a6767f306232d76f3288904d1a761c752816f",
+    "ori_disk_constraints.py": "295c8f79d2f47e9e684a8cd526013aa89354e2d04aa2bd75706ebfdb1c0b5b53",
+    "ori_large_constraint_coefficients.npz": "9b7dc88d95e0ecb3a6371cfc74b5dacf28b7a6743045277e6a3f5243971ff253",
+    "ori_large_constraint_results.json": "d67be8eeb4b72f36da02c60ef57b4ec49f3eb9e18b499e9adcb27f3b12025b13",
+    "ori_smooth_constraint_coefficients.npz": "4aedd5b31fa743f1490ece2daaf116e0f69b58b63934a4663760e8a6da73e23f",
+    "ori_smooth_constraint_results.json": "c568de741aaadff848a916ee7e5df8f57957fbd13750d8572b9c95cd78ea5bff",
+    "ori_smooth_weak_coefficients.npz": "5f274dfc0a2d4447ebf51f38ac41d01bb1bae47017d7755fc58b60cd42e7d83b"
+  },
+  "limitations": "Validated finite-domain initial constraints only. No matched exterior, continuum existence proof, evolution stability result, or demonstrated horizon extension is supplied by this calculation.",
+  "checks": {
+    "radius4_area_and_second_moment": true,
+    "sampled_ADM_target": true,
+    "expanded_radial_angular_target": true,
+    "increased_quadrature_target": true,
+    "positive_sampled_psi": true,
+    "frozen_files_unchanged": true,
+    "rejected320_preserved": true
+  },
+  "active_validation": {
+    "status": "complete",
+    "fixed_coefficient_degree": 400,
+    "fixed_coefficient_max_angular": 12
+  },
+  "validation_history": [
+    {
+      "candidate_degree": 320,
+      "candidate_max_angular": 12,
+      "projection_checks": [
+        {
+          "max_projected_residual": 3.924672175889098e-11,
+          "quadrature_points": 20140,
+          "quadrature_padding": 8,
+          "max_angular": 16,
+          "degree": 360,
+          "fixed_coefficient_degree": 320,
+          "fixed_coefficient_max_angular": 12
+        },
+        {
+          "max_projected_residual": 8.882625326232768e-16,
+          "quadrature_points": 21716,
+          "quadrature_padding": 16,
+          "max_angular": 12,
+          "degree": 320,
+          "fixed_coefficient_degree": 320,
+          "fixed_coefficient_max_angular": 12
+        }
+      ],
+      "fresh_validation": {
+        "points": 19823,
+        "max_H": 8.279780977504814e-08,
+        "max_M": 6.404492942537356e-09,
+        "square_half_width": 2.8,
+        "square_max_H": 1.156269888429734e-09,
+        "square_max_M": 1.7087683535366316e-10,
+        "min_psi": 1.0,
+        "random_seed": 720484,
+        "max_H_location": [
+          -7.347880794884119e-16,
+          -4.0
+        ],
+        "max_M_location": [
+          2.4492935982947064e-16,
+          4.0
+        ]
+      },
+      "accepted": false,
+      "reason": "Expanded degree360/cap16 projected residual exceeds unchanged2e-12 target; original-basis quadrature and sampled ADM checks passed."
+    }
+  ],
+  "fresh_validation": {
+    "points": 19823,
+    "max_H": 4.029190203702626e-09,
+    "max_M": 1.0264904345763363e-09,
+    "square_half_width": 2.8,
+    "square_max_H": 1.9607579362229677e-10,
+    "square_max_M": 7.410730266756388e-12,
+    "min_psi": 1.0,
+    "random_seed": 720484,
+    "max_H_location": [
+      -7.347880794884119e-16,
+      -4.0
+    ],
+    "max_M_location": [
+      -7.347880794884119e-16,
+      -4.0
+    ]
+  },
+  "weak_accepted": true,
+  "accepted_case": {
+    "degree": 400,
+    "max_angular": 12,
+    "epsilon": 0.03,
+    "radius": 4.0,
+    "source_radius": 1.0,
+    "quadrature_padding": 8,
+    "taper_kind": "smooth",
+    "a": 0.02,
+    "e": 0.0625,
+    "initial_t": -1.0,
+    "wave_number": 1,
+    "kappa": 1.0,
+    "z_period": 6.283185307179586
+  },
+  "expanded_test_margin": {
+    "target": 2e-12,
+    "measured": 1.912811280144403e-12,
+    "absolute_margin": 8.718871985559679e-14,
+    "fractional_margin": 0.04359435992779839,
+    "note": "Passes the fixed target with a narrow margin; this is recorded without changing the criterion."
+  },
+  "validation_meaning": "Direct physical ADM tensors are independently reconstructed at the sample points. Reported maxima are sampled maxima, not certified continuous supremum bounds. Expanded test-space and quadrature checks use fixed saved coefficients and are not new nonlinear solves.",
+  "domain_meaning": "The boundary at r=4 defines a distinct completion of the constraints. Scalar field and normal momentum vanish for r>=1, leaving a corrected vacuum-constraint annulus1<r<4. This family requires independent evolution; radius3 time histories must not be spliced onto it.",
+  "timing_scope": "elapsed_seconds in refinement rows excludes seed/basis assembly and includes nonlinear solution, checkpointing and built-in physical validation.",
+  "source_sha256": {
+    "disk_basis.py": "ba81c08f033843b0d5550382908a6767f306232d76f3288904d1a761c752816f",
+    "ori_disk_constraints.py": "295c8f79d2f47e9e684a8cd526013aa89354e2d04aa2bd75706ebfdb1c0b5b53"
+  },
+  "coefficients_file_sha256": "029531840edee1e79f5760f843c9b71ab04c9039cece9a6f311e816e0e1cb394",
+  "reproduction": {
+    "environment": ".\\.venv\\Scripts\\python.exe -B from the time-travel workspace",
+    "construction_python": "from ori_disk_constraints import solve_case\ncoefficients=None\nfor degree in (320,400):\n    result,coefficients=solve_case(degree,.03,padding=8,radius=4.,source_radius=1.,initial_coefficients=coefficients,max_angular=12,taper_kind='smooth')\n    print(result)\n",
+    "saved_case_validation_python": "import numpy as np\nfrom disk_basis import _modes\nfrom ori_disk_constraints import validate_solution, projected_constraint_check\nwith np.load('ori_radius4_constraint_coefficients.npz') as f:\n    c=f['coefficients']; d=int(f['degree']); m=int(f['max_angular'])\nprint(validate_solution(d,.03,c,radius=4.,source_radius=1.,max_angular=m,taper_kind='smooth')[0])\nold=dict(zip(_modes(d,m),c.reshape(-1,4)))\nfor test_degree,angular,padding in [(440,16,8),(400,12,16)]:\n    expanded=np.array([old.get(mode,np.zeros(4)) for mode in _modes(test_degree,angular)]).ravel()\n    print(projected_constraint_check(test_degree,.03,expanded,padding=padding,radius=4.,source_radius=1.,max_angular=angular,taper_kind='smooth',batch_size=512))\n",
+    "fresh_cloud_python": "import json\nimport numpy as np\nfrom ori_disk_constraints import seed_data, scaled_basis, residual\nwith np.load('ori_radius4_constraint_coefficients.npz') as f:\n    degree=int(f['degree']); cap=int(f['max_angular']); coeff=f['coefficients'].copy()\nassert degree==400 and cap==12\ntheta=np.r_[np.arange(4)*np.pi/2,(np.arange(41)+.2718)*2*np.pi/41]\nradii=np.unique(np.r_[np.linspace(0,4,301),4-10.**np.linspace(-8,-2,13),np.linspace(3.96,4,61),1-10.**np.linspace(-8,-1,15),1+10.**np.linspace(-8,-1,15)])\nx=(radii[:,None]*np.cos(theta)).ravel(); y=(radii[:,None]*np.sin(theta)).ravel()\nrng=np.random.default_rng(720484); rr=4*np.sqrt(rng.random(1733)); aa=rng.uniform(0,2*np.pi,1733)\nx=np.r_[x,rr*np.cos(aa)]; y=np.r_[y,rr*np.sin(aa)]\nfresh={'points':len(x),'max_H':0.,'max_M':0.,'square_half_width':2.8,'square_max_H':0.,'square_max_M':0.,'min_psi':float('inf'),'random_seed':720484}\nfor start in range(0,len(x),512):\n    xx=x[start:start+512]; yy=y[start:start+512]\n    data=seed_data(xx,yy,.03,source_radius=1.,taper_kind='smooth')\n    mats=scaled_basis(degree,xx,yy,4.,max_angular=cap,compact=True)\n    actual,H,M=residual(data,mats,coeff,physical=True,pointwise=True)\n    for key,samples in [('max_H',abs(H)),('max_M',M)]:\n        if actual[key]>fresh[key]:\n            k=int(np.argmax(samples)); fresh[key]=actual[key]; fresh[key+'_location']=[float(xx[k]),float(yy[k])]\n    fresh['min_psi']=min(fresh['min_psi'],actual['min_psi'])\n    mask=(abs(xx)<=2.8)&(abs(yy)<=2.8)\n    if mask.any():\n        fresh['square_max_H']=max(fresh['square_max_H'],float(np.max(abs(H[mask]))))\n        fresh['square_max_M']=max(fresh['square_max_M'],float(np.max(M[mask])))\nassert fresh['points']==19823 and max(fresh['max_H'],fresh['max_M'])<1e-7\nprint(json.dumps(fresh))\n"
+  }
+}

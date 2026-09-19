@@ -1,0 +1,305 @@
+{
+  "passed": true,
+  "tests": {
+    "monopole_stationary_dirac_equation": true,
+    "implemented_mode_matches_independent_formula": true,
+    "gauge_covariance": true,
+    "unit_radial_probability_flux": true,
+    "positive_spectrum_norm_and_moments": true,
+    "pulse_time_integrated_flux": true,
+    "direct_fourier_transform": true,
+    "partner_defect_asymptotic": true
+  },
+  "max_dirac_relative_residual": 3.3808294027117896e-41,
+  "max_implementation_relative_error": 3.8315330356400786e-11,
+  "max_gauge_error": 1.1270818710872544e-42,
+  "flux_checks": [
+    {
+      "q": 1,
+      "k": 0,
+      "charge": -1,
+      "radial_flux": -1.0
+    },
+    {
+      "q": 1,
+      "k": 0,
+      "charge": 1,
+      "radial_flux": 1.0
+    },
+    {
+      "q": 7,
+      "k": 0,
+      "charge": -1,
+      "radial_flux": -1.0000000000000002
+    },
+    {
+      "q": 7,
+      "k": 0,
+      "charge": 1,
+      "radial_flux": 1.0000000000000002
+    },
+    {
+      "q": 7,
+      "k": 3,
+      "charge": -1,
+      "radial_flux": -0.9999999999999996
+    },
+    {
+      "q": 7,
+      "k": 3,
+      "charge": 1,
+      "radial_flux": 0.9999999999999996
+    },
+    {
+      "q": 7,
+      "k": 6,
+      "charge": -1,
+      "radial_flux": -1.0000000000000002
+    },
+    {
+      "q": 7,
+      "k": 6,
+      "charge": 1,
+      "radial_flux": 1.0000000000000002
+    },
+    {
+      "q": 100000,
+      "k": 0,
+      "charge": -1,
+      "radial_flux": -0.9999999999223562
+    },
+    {
+      "q": 100000,
+      "k": 0,
+      "charge": 1,
+      "radial_flux": 0.9999999999223562
+    },
+    {
+      "q": 100000,
+      "k": 16,
+      "charge": -1,
+      "radial_flux": -1.0000000000601317
+    },
+    {
+      "q": 100000,
+      "k": 16,
+      "charge": 1,
+      "radial_flux": 1.0000000000601317
+    },
+    {
+      "q": 100000,
+      "k": 99999,
+      "charge": -1,
+      "radial_flux": -0.9999999999234983
+    },
+    {
+      "q": 100000,
+      "k": 99999,
+      "charge": 1,
+      "radial_flux": 0.9999999999234983
+    }
+  ],
+  "pulse": {
+    "width": 0.7,
+    "spectral_norm": 1.0,
+    "mean_energy": 2.1428571428571437,
+    "second_energy_moment": 6.122448979591838,
+    "integrated_flux": 0.9999999999999989,
+    "max_fourier_error": 1.7034223658903967e-13
+  },
+  "frozen_guide_gaussian_negative_energy_weights": [
+    {
+      "sigma": 0.12,
+      "carrier_energy": 0.0,
+      "weight": 0.5
+    },
+    {
+      "sigma": 0.12,
+      "carrier_energy": 5.0,
+      "weight": 0.11506967022170828
+    },
+    {
+      "sigma": 0.12,
+      "carrier_energy": 15.0,
+      "weight": 0.00015910859015753364
+    }
+  ],
+  "partner_field_defects": [
+    {
+      "q": 31,
+      "k": 4,
+      "radius_over_d": 0.02,
+      "rms_operator_defect": 0.10801156504672495,
+      "leading_small_radius": 0.11084002599980011,
+      "defect_over_local_gap": 0.00038187855045555537
+    },
+    {
+      "q": 31,
+      "k": 4,
+      "radius_over_d": 0.01,
+      "rms_operator_defect": 0.054707871208667797,
+      "leading_small_radius": 0.055420012999900056,
+      "defect_over_local_gap": 9.67107667898232e-05
+    },
+    {
+      "q": 31,
+      "k": 4,
+      "radius_over_d": 0.005,
+      "rms_operator_defect": 0.027531339740519984,
+      "leading_small_radius": 0.027710006499950028,
+      "defect_over_local_gap": 2.4334496282090453e-05
+    }
+  ],
+  "scope": "Exact monopole reference modes and positive-energy pulse; no full dipole scattering solution.",
+  "source_sha256": "0e0266ba4e25fac86b96c1a94edc14d68347ec048194f6f12ed3e4972ed1d455",
+  "saved_collar": {
+    "passed": true,
+    "tests": {
+      "normalized_tilted_beta_quadrature": true,
+      "independent_beta_moment_correction": true,
+      "exact_channel_and_uniform_bounds": true,
+      "saved_energy_rms_matches_state": true,
+      "tetrad_gap_ratio_is_consistent": true,
+      "all_reported_scales_are_finite": true
+    },
+    "input_sha256": "6baf84864641725f0e2378a368e99eeef5beb0dd08b053a84ea21b674d2fce03",
+    "units": "re=1, hbar=c=1; energies in inverse re, time at exterior infinity unless explicitly local",
+    "saved_record": {
+      "order": 128,
+      "refinement": 2,
+      "cutoff": 100.0
+    },
+    "parameters": {
+      "q": 100000,
+      "isotropic_b": 98.99996752543319,
+      "areal_R": 100.0,
+      "separation_d": 4188251800.784477,
+      "b_over_d": 2.3637539535442946e-08,
+      "common_clock": 6165936382.795819,
+      "lapse_at_infinity_normalization": 0.9899996821709947,
+      "central_optical_x": 1.5708225328305907
+    },
+    "flat_angular_gap": 3.1942368776078194,
+    "conditional_tetrad_local_gap": 3.162293471517152,
+    "conditional_tetrad_infinity_gap": 3.1306695317333917,
+    "conditional_tetrad_infinity_factor": 0.9800993638511766,
+    "uniform_flat_operator_bound": 1.4109431438961075e-13,
+    "uniform_conditional_tetrad_infinity_bound": 1.382864477762754e-13,
+    "energy_scales": {
+      "minimum_sampled": 4.757400615445382e-14,
+      "maximum_sampled": 1.3334509095484067e-10,
+      "weighted_rms": 1.0319386260789103e-10
+    },
+    "channels": [
+      {
+        "k": 0,
+        "flat_rms_defect": 8.92345327202352e-16,
+        "leading_beta_moment": 8.923453693863611e-16,
+        "relative_correction_to_leading": -4.7273186448419264e-08,
+        "analytic_lower_bound": 8.923453272006648e-16,
+        "analytic_upper_bound": 8.923454115720604e-16,
+        "flat_defect_over_flat_gap": 2.793610372035508e-16,
+        "conditional_tetrad_local_defect": 8.83421584145049e-16,
+        "conditional_tetrad_infinity_defect": 8.745870875265952e-16,
+        "flat_defect_over_energy": {
+          "minimum_sampled": 0.018756993562939868,
+          "maximum_sampled": 6.6919998390083835e-06,
+          "weighted_rms": 8.647271307141828e-06
+        },
+        "conditional_tetrad_defect_over_energy": {
+          "minimum_sampled": 0.01838371745879798,
+          "maximum_sampled": 6.558824785104292e-06,
+          "weighted_rms": 8.475185107178237e-06
+        },
+        "quadrature_tilted_beta_norm": 0.9999999999999998,
+        "quadrature_norm_error_estimate": 1.1207030768035575e-14,
+        "squared_correction": -9.454637066208439e-08,
+        "beta_moment_squared_correction": -9.454637066208415e-08,
+        "squared_correction_difference": 2.3822801641527197e-22,
+        "squared_correction_quadrature_error_estimate": 1.0595838098480926e-21
+      },
+      {
+        "k": 16,
+        "flat_rms_defect": 3.678939688139726e-15,
+        "leading_beta_moment": 3.6789398619992826e-15,
+        "relative_correction_to_leading": -4.725805887828441e-08,
+        "analytic_lower_bound": 3.678939688077116e-15,
+        "analytic_upper_bound": 3.678940035921461e-15,
+        "flat_defect_over_flat_gap": 1.1517429135984753e-15,
+        "conditional_tetrad_local_defect": 3.642149096538602e-15,
+        "conditional_tetrad_infinity_defect": 3.605726447992591e-15,
+        "flat_defect_over_energy": {
+          "minimum_sampled": 0.07733087846744872,
+          "maximum_sampled": 2.758961474918979e-05,
+          "weighted_rms": 3.565076057011946e-05
+        },
+        "conditional_tetrad_defect_over_energy": {
+          "minimum_sampled": 0.07579194479199915,
+          "maximum_sampled": 2.704056386457995e-05,
+          "weighted_rms": 3.494128775558469e-05
+        },
+        "quadrature_tilted_beta_norm": 1.0000000000000007,
+        "quadrature_norm_error_estimate": 1.4098350041335444e-14,
+        "squared_correction": -9.45161155232447e-08,
+        "beta_moment_squared_correction": -9.451611552324436e-08,
+        "squared_correction_difference": 3.3087224502121107e-22,
+        "squared_correction_quadrature_error_estimate": 1.3324884945525697e-21
+      },
+      {
+        "k": 50000,
+        "flat_rms_defect": 1.4109360225318502e-13,
+        "leading_beta_moment": 1.4109360225311838e-13,
+        "relative_correction_to_leading": 4.723175907808461e-13,
+        "analytic_lower_bound": 1.4109359558290742e-13,
+        "analytic_upper_bound": 1.410936089233298e-13,
+        "flat_defect_over_flat_gap": 4.4171302148026904e-14,
+        "conditional_tetrad_local_defect": 1.3968262041111704e-13,
+        "conditional_tetrad_infinity_defect": 1.3828574981181758e-13,
+        "flat_defect_over_energy": {
+          "minimum_sampled": 2.965770883265756,
+          "maximum_sampled": 0.0010581087105858925,
+          "weighted_rms": 0.001367267380903289
+        },
+        "conditional_tetrad_defect_over_energy": {
+          "minimum_sampled": 2.9067501560171096,
+          "maximum_sampled": 0.001037051674130622,
+          "weighted_rms": 0.001340057890237778
+        },
+        "quadrature_tilted_beta_norm": 1.0000000000000047,
+        "quadrature_norm_error_estimate": 2.5224264775822907e-13,
+        "squared_correction": 9.446351815619153e-13,
+        "beta_moment_squared_correction": 9.446351815606658e-13,
+        "squared_correction_difference": 1.2494546996742144e-24,
+        "squared_correction_quadrature_error_estimate": 1.3506013212960801e-22
+      },
+      {
+        "k": 99999,
+        "flat_rms_defect": 8.923454115703732e-16,
+        "leading_beta_moment": 8.923453693863611e-16,
+        "relative_correction_to_leading": 4.7273189800483716e-08,
+        "analytic_lower_bound": 8.923453272006648e-16,
+        "analytic_upper_bound": 8.923454115720604e-16,
+        "flat_defect_over_flat_gap": 2.7936106361612584e-16,
+        "conditional_tetrad_local_defect": 8.834216676693626e-16,
+        "conditional_tetrad_infinity_defect": 8.745871702156392e-16,
+        "flat_defect_over_energy": {
+          "minimum_sampled": 0.018756995336345728,
+          "maximum_sampled": 6.69200047171275e-06,
+          "weighted_rms": 8.647272124710034e-06
+        },
+        "conditional_tetrad_defect_over_energy": {
+          "minimum_sampled": 0.018383719196911934,
+          "maximum_sampled": 6.55882540521744e-06,
+          "weighted_rms": 8.475185908476318e-06
+        },
+        "quadrature_tilted_beta_norm": 1.0,
+        "quadrature_norm_error_estimate": 1.1207030773282485e-14,
+        "squared_correction": 9.454638183572192e-08,
+        "beta_moment_squared_correction": 9.454638183572165e-08,
+        "squared_correction_difference": 2.6469779601696886e-22,
+        "squared_correction_quadrature_error_estimate": 1.0595839355477184e-21
+      }
+    ],
+    "scope": "Only the flat point-pair magnetic residual; optional spherical tetrad conversion is conditional. Sampled loop energies do not bound the continuum or assign energy to a sphere channel."
+  }
+}

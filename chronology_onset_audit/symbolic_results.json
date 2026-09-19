@@ -1,0 +1,22 @@
+{
+  "metric_determinant": "-1",
+  "all_16_Ricci_components_zero": true,
+  "chronology_time_gradient_norm": "a**2*x**2 + a**2*y**2 - 4*a*e*x**2 + 4*a*e*y**2 + 4*e**2*x**2 + 4*e**2*y**2 - e*x**2 - e*y**2 + t",
+  "massless_wave_equation_all_terms_zero": true,
+  "quadratic_coordinate_conditions": [
+    "-a/2 + 4*b**2 - b",
+    "a/2 + 4*d**2 - d"
+  ],
+  "b_small_root": "1/8 - sqrt(8*a + 1)/8",
+  "d_small_root": "1/8 - sqrt(1 - 8*a)/8",
+  "amplitude_exponent_s": "sqrt(1 - 8*a)/4 + sqrt(8*a + 1)/4 - 1/2",
+  "mode": "phi = epsilon * exp(i k z) * (-S)^(s+2 i k); S=T+b*x^2+d*y^2 < 0",
+  "kappa": "2*b + 2*d + 1",
+  "observer_squared_norm": -1,
+  "observer_acceleration_squared": "(T**2 + 6*T + 9)/(4*(T**3 + 6*T**2 + 12*T + 8))",
+  "observer_acceleration_squared_limit_at_T0": "9/32",
+  "energy_over_epsilon_squared_minusT_to_2s": "k**2*(T + 2)/T**2 + s**2*(T**2 + 2*T + 2)/(2*T**2*(T + 2))",
+  "energy_asymptotic_coefficient": "2*k**2 + s**2/2",
+  "energy_power": "rho ~ epsilon^2 * (2*k^2+s^2/2) * (-T)^(2*s-2)",
+  "scope": "Exact background and exact test-field checks, not nonlinear Einstein-scalar evolution."
+}

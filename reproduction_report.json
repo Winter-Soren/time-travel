@@ -1,0 +1,500 @@
+{
+  "status": "reproduced_all_five_original_checks_pass",
+  "source_archive": {
+    "path": "C:\\Users\\Soham Bhoir\\Downloads\\chronology_onset_audit.zip",
+    "size_bytes": 302662,
+    "sha256": "484b2f890211765abcbcd14bf30f3b793cdb8795ef73e610c3692b7454ae8a27",
+    "member_count": 15
+  },
+  "manifest_verification": {
+    "all_14_listed_files_match_archive_and_extraction": true,
+    "files": {
+      "symbolic_results.json": {
+        "expected": "a60dbbf43d3ece9ceb9a0e5b88d2b1bb9b7fb98666714730b6bdf46a24c0c436",
+        "archive": "a60dbbf43d3ece9ceb9a0e5b88d2b1bb9b7fb98666714730b6bdf46a24c0c436",
+        "extracted_before_run": "a60dbbf43d3ece9ceb9a0e5b88d2b1bb9b7fb98666714730b6bdf46a24c0c436",
+        "matches": true
+      },
+      "mode_cases.json": {
+        "expected": "47978c5b138302721ee62194bf89354c3221d6bd6ef2323824db5baea201cdcc",
+        "archive": "47978c5b138302721ee62194bf89354c3221d6bd6ef2323824db5baea201cdcc",
+        "extracted_before_run": "47978c5b138302721ee62194bf89354c3221d6bd6ef2323824db5baea201cdcc",
+        "matches": true
+      },
+      "verify_outputs.py": {
+        "expected": "88a9f0961d200b08e50b3927272d710711c8860e07b519d6d3975d6bacd7b0a4",
+        "archive": "88a9f0961d200b08e50b3927272d710711c8860e07b519d6d3975d6bacd7b0a4",
+        "extracted_before_run": "88a9f0961d200b08e50b3927272d710711c8860e07b519d6d3975d6bacd7b0a4",
+        "matches": true
+      },
+      "verify_geometry.py": {
+        "expected": "024a27a8313fdd952e47d85055d040d2eca3a410d3cb4c490f8ea8b014248f4d",
+        "archive": "024a27a8313fdd952e47d85055d040d2eca3a410d3cb4c490f8ea8b014248f4d",
+        "extracted_before_run": "024a27a8313fdd952e47d85055d040d2eca3a410d3cb4c490f8ea8b014248f4d",
+        "matches": true
+      },
+      "sample_trajectories.json": {
+        "expected": "bad975cfc2599983875ab7de1c42e47e22b9913c4d097e525b8afa6e28c7d257",
+        "archive": "bad975cfc2599983875ab7de1c42e47e22b9913c4d097e525b8afa6e28c7d257",
+        "extracted_before_run": "bad975cfc2599983875ab7de1c42e47e22b9913c4d097e525b8afa6e28c7d257",
+        "matches": true
+      },
+      "kinetic_repair_cases.json": {
+        "expected": "d759614957763c6b42141631f9c7134546650fb3845e0e87f1cd503f2d551484",
+        "archive": "d759614957763c6b42141631f9c7134546650fb3845e0e87f1cd503f2d551484",
+        "extracted_before_run": "d759614957763c6b42141631f9c7134546650fb3845e0e87f1cd503f2d551484",
+        "matches": true
+      },
+      "initial_energy_results.json": {
+        "expected": "cfba2ce97943f41910b988e281e4e651bcb359b9b59d3e0378af4dc4b802214f",
+        "archive": "cfba2ce97943f41910b988e281e4e651bcb359b9b59d3e0378af4dc4b802214f",
+        "extracted_before_run": "cfba2ce97943f41910b988e281e4e651bcb359b9b59d3e0378af4dc4b802214f",
+        "matches": true
+      },
+      "numerical_results.json": {
+        "expected": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+        "archive": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+        "extracted_before_run": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+        "matches": true
+      },
+      "test_kinetic_repair.py": {
+        "expected": "8e6991f2a11ed1bb69de348ffbde6c0db430741fa220095958d4cc4b6cb14697",
+        "archive": "8e6991f2a11ed1bb69de348ffbde6c0db430741fa220095958d4cc4b6cb14697",
+        "extracted_before_run": "8e6991f2a11ed1bb69de348ffbde6c0db430741fa220095958d4cc4b6cb14697",
+        "matches": true
+      },
+      "research_note.md": {
+        "expected": "a3a1bca8db407e62b007ce7814537c1b16189d89f3fa1f4d8ff413c27078c230",
+        "archive": "a3a1bca8db407e62b007ce7814537c1b16189d89f3fa1f4d8ff413c27078c230",
+        "extracted_before_run": "a3a1bca8db407e62b007ce7814537c1b16189d89f3fa1f4d8ff413c27078c230",
+        "matches": true
+      },
+      "check_initial_energy.py": {
+        "expected": "49bc79aaba3f1ed99dcd7cffe0508c843b12082bb3ac2054259077b18fddd197",
+        "archive": "49bc79aaba3f1ed99dcd7cffe0508c843b12082bb3ac2054259077b18fddd197",
+        "extracted_before_run": "49bc79aaba3f1ed99dcd7cffe0508c843b12082bb3ac2054259077b18fddd197",
+        "matches": true
+      },
+      "run_log.txt": {
+        "expected": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+        "archive": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+        "extracted_before_run": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+        "matches": true
+      },
+      "run_modes.py": {
+        "expected": "6ced7a5244060c77d1a7862f2163978b7f5007bce817c77c4eee2319f3a845cc",
+        "archive": "6ced7a5244060c77d1a7862f2163978b7f5007bce817c77c4eee2319f3a845cc",
+        "extracted_before_run": "6ced7a5244060c77d1a7862f2163978b7f5007bce817c77c4eee2319f3a845cc",
+        "matches": true
+      },
+      "kinetic_repair_results.json": {
+        "expected": "882b314c6d16914a9b37365eeff9e42ae9e7a7ea09854978641bea0df0fefd7c",
+        "archive": "882b314c6d16914a9b37365eeff9e42ae9e7a7ea09854978641bea0df0fefd7c",
+        "extracted_before_run": "882b314c6d16914a9b37365eeff9e42ae9e7a7ea09854978641bea0df0fefd7c",
+        "matches": true
+      }
+    }
+  },
+  "source_review": {
+    "scripts_reviewed": [
+      "verify_geometry.py",
+      "check_initial_energy.py",
+      "run_modes.py",
+      "test_kinetic_repair.py",
+      "verify_outputs.py"
+    ],
+    "safety": "Only local calculations, console output, and JSON writes inside chronology_onset_audit; no network, credentials, process launch, or deletion in original scripts.",
+    "source_changes": []
+  },
+  "original_outputs": {
+    "symbolic_results.json": {
+      "metric_determinant": "-1",
+      "all_16_Ricci_components_zero": true,
+      "chronology_time_gradient_norm": "a**2*x**2 + a**2*y**2 - 4*a*e*x**2 + 4*a*e*y**2 + 4*e**2*x**2 + 4*e**2*y**2 - e*x**2 - e*y**2 + t",
+      "massless_wave_equation_all_terms_zero": true,
+      "quadratic_coordinate_conditions": [
+        "-a/2 + 4*b**2 - b",
+        "a/2 + 4*d**2 - d"
+      ],
+      "b_small_root": "1/8 - sqrt(8*a + 1)/8",
+      "d_small_root": "1/8 - sqrt(1 - 8*a)/8",
+      "amplitude_exponent_s": "sqrt(1 - 8*a)/4 + sqrt(8*a + 1)/4 - 1/2",
+      "mode": "phi = epsilon * exp(i k z) * (-S)^(s+2 i k); S=T+b*x^2+d*y^2 < 0",
+      "kappa": "2*b + 2*d + 1",
+      "observer_squared_norm": -1,
+      "observer_acceleration_squared": "(T**2 + 6*T + 9)/(4*(T**3 + 6*T**2 + 12*T + 8))",
+      "observer_acceleration_squared_limit_at_T0": "9/32",
+      "energy_over_epsilon_squared_minusT_to_2s": "k**2*(T + 2)/T**2 + s**2*(T**2 + 2*T + 2)/(2*T**2*(T + 2))",
+      "energy_asymptotic_coefficient": "2*k**2 + s**2/2",
+      "energy_power": "rho ~ epsilon^2 * (2*k^2+s^2/2) * (-T)^(2*s-2)",
+      "scope": "Exact background and exact test-field checks, not nonlinear Einstein-scalar evolution."
+    },
+    "initial_energy_results.json": {
+      "initial_slice": "t=-1, x^2+y^2<=1, 0<=z<2*pi",
+      "a": 0.02,
+      "k": 1,
+      "field_amplitude": 1,
+      "energy_in_dimensionless_model_units": 19.50949564166929,
+      "quadrature_refinement_difference": 0.0,
+      "arbitrary_smallness": "Multiplying the two scalar components by epsilon multiplies this energy by epsilon^2.",
+      "scope": "Compact core only; no matching to a complete external universe or gravitational constraint solve."
+    },
+    "numerical_results.json": {
+      "scope": "Exact-mode test-field evolution on a fixed curved vacuum core; not full numerical relativity.",
+      "count": 144,
+      "nonzero_curvature_cases": 128,
+      "massless_cases": 36,
+      "massive_cases": 108,
+      "interval": {
+        "initial_S": -1.0,
+        "final_S": -1e-12,
+        "log_time_end": 27.63102111592855
+      },
+      "tolerances": {
+        "rtol": 5e-11,
+        "atol": 5e-13
+      },
+      "min_amplification": 1.188927852521549e+23,
+      "max_amplification": 5.023576634974762e+26,
+      "max_independent_exact_error": 1.4233197330529587e-09,
+      "max_asymptotic_slope_error": 1.4979217866084582e-10,
+      "min_singular_branch_coefficient": 0.995758334160012,
+      "independent_solver_relative_error": 3.698697731445032e-11,
+      "regular_branch_control": {
+        "bounded": true,
+        "initial_energy": 1.0,
+        "final_energy": 0.50000000000025
+      },
+      "selected_case": {
+        "a": 0.02,
+        "k": 1,
+        "mass": 0.0,
+        "exponent": -0.0016129748954828438,
+        "success": true,
+        "nfev": 2882,
+        "energy_amplification": 2.1864578556658256e+24,
+        "final_log_energy_slope": 2.003225949805063,
+        "expected_asymptotic_slope": 2.0032259497909655,
+        "exact_relative_error": 1.194886801132712e-10,
+        "singular_branch_coefficient": 1.0,
+        "massless_analytic_error": 9.340410474309314e-11
+      },
+      "amplitude_scaling": [
+        {
+          "initial_amplitude": 1.0,
+          "final_energy_relative_to_unit_initial_energy": 2.1864578556658256e+24
+        },
+        {
+          "initial_amplitude": 0.0001,
+          "final_energy_relative_to_unit_initial_energy": 2.1864578556658256e+16
+        },
+        {
+          "initial_amplitude": 1e-08,
+          "final_energy_relative_to_unit_initial_energy": 218645785.5665826
+        },
+        {
+          "initial_amplitude": 1e-12,
+          "final_energy_relative_to_unit_initial_energy": 2.1864578556658256
+        }
+      ],
+      "elapsed_seconds": 12.615867179000134,
+      "versions": {
+        "python": "3.13.5",
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mpmath": "1.3.0"
+      },
+      "interpretation": "Instability witness for this background/mode family. Final coupled geometry and all alternative media remain undetermined."
+    },
+    "kinetic_repair_results.json": {
+      "candidate": "Prescribed positive scalar kinetic coupling Z(S)=(-S)^(-q)",
+      "field_equation": "S*u_pp + (kappa-q-2*i*k)*u_p + i*q*k*u/S = 0",
+      "indicial_polynomial": "I*k*q + lam**2 - lam*(2*I*k + q + s)",
+      "root_sum": "lambda_1+lambda_2 = s+q+2*i*k",
+      "sum_of_leading_energy_exponents": "2*s - 4",
+      "analytic_result": "For s<=0 and nonzero k, at least one nonconstant mode has divergent measured energy for every real q. q=0 has a regular constant branch but also the divergent original branch.",
+      "algebraic_grid_cases": 2916,
+      "grid_cases_with_divergent_branch": 2916,
+      "time_domain_simulations": 0,
+      "scope": "Fixed-background diagnostic; Z dynamics and its own gravitational contribution have not been solved."
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "python_executable": "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\.venv\\Scripts\\python.exe",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "executed_checks": [
+    {
+      "script": "verify_geometry.py",
+      "exit_code": 0,
+      "elapsed_seconds": 3.5813223000150174,
+      "stderr": "",
+      "stdout_summary": "JSON results captured in reproduced_outputs or in the per-case output files."
+    },
+    {
+      "script": "check_initial_energy.py",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6181007000850514,
+      "stderr": "",
+      "stdout_summary": "JSON results captured in reproduced_outputs or in the per-case output files."
+    },
+    {
+      "script": "run_modes.py",
+      "exit_code": 0,
+      "elapsed_seconds": 40.846163999987766,
+      "stderr": "",
+      "stdout_summary": "JSON results captured in reproduced_outputs or in the per-case output files."
+    },
+    {
+      "script": "test_kinetic_repair.py",
+      "exit_code": 0,
+      "elapsed_seconds": 1.0933686000062153,
+      "stderr": "",
+      "stdout_summary": "JSON results captured in reproduced_outputs or in the per-case output files."
+    },
+    {
+      "script": "verify_outputs.py",
+      "exit_code": 0,
+      "elapsed_seconds": 0.28616369992960244,
+      "stderr": "",
+      "stdout_summary": "REPORT CHECKS PASS. The tested candidate FAILS the bounded-response diagnostic.\nNo stable time-travel medium or nonlinear outcome has been established."
+    }
+  ],
+  "reproduced_outputs": {
+    "symbolic_results.json": {
+      "metric_determinant": "-1",
+      "all_16_Ricci_components_zero": true,
+      "chronology_time_gradient_norm": "a**2*x**2 + a**2*y**2 - 4*a*e*x**2 + 4*a*e*y**2 + 4*e**2*x**2 + 4*e**2*y**2 - e*x**2 - e*y**2 + t",
+      "massless_wave_equation_all_terms_zero": true,
+      "quadratic_coordinate_conditions": [
+        "-a/2 + 4*b**2 - b",
+        "a/2 + 4*d**2 - d"
+      ],
+      "b_small_root": "1/8 - sqrt(8*a + 1)/8",
+      "d_small_root": "1/8 - sqrt(1 - 8*a)/8",
+      "amplitude_exponent_s": "sqrt(1 - 8*a)/4 + sqrt(8*a + 1)/4 - 1/2",
+      "mode": "phi = epsilon * exp(i k z) * (-S)^(s+2 i k); S=T+b*x^2+d*y^2 < 0",
+      "kappa": "2*b + 2*d + 1",
+      "observer_squared_norm": -1,
+      "observer_acceleration_squared": "(T**2 + 6*T + 9)/(4*(T**3 + 6*T**2 + 12*T + 8))",
+      "observer_acceleration_squared_limit_at_T0": "9/32",
+      "energy_over_epsilon_squared_minusT_to_2s": "k**2*(T + 2)/T**2 + s**2*(T**2 + 2*T + 2)/(2*T**2*(T + 2))",
+      "energy_asymptotic_coefficient": "2*k**2 + s**2/2",
+      "energy_power": "rho ~ epsilon^2 * (2*k^2+s^2/2) * (-T)^(2*s-2)",
+      "scope": "Exact background and exact test-field checks, not nonlinear Einstein-scalar evolution."
+    },
+    "initial_energy_results.json": {
+      "initial_slice": "t=-1, x^2+y^2<=1, 0<=z<2*pi",
+      "a": 0.02,
+      "k": 1,
+      "field_amplitude": 1,
+      "energy_in_dimensionless_model_units": 19.50949564166929,
+      "quadrature_refinement_difference": 0.0,
+      "arbitrary_smallness": "Multiplying the two scalar components by epsilon multiplies this energy by epsilon^2.",
+      "scope": "Compact core only; no matching to a complete external universe or gravitational constraint solve."
+    },
+    "numerical_results.json": {
+      "scope": "Exact-mode test-field evolution on a fixed curved vacuum core; not full numerical relativity.",
+      "count": 144,
+      "nonzero_curvature_cases": 128,
+      "massless_cases": 36,
+      "massive_cases": 108,
+      "interval": {
+        "initial_S": -1.0,
+        "final_S": -1e-12,
+        "log_time_end": 27.63102111592855
+      },
+      "tolerances": {
+        "rtol": 5e-11,
+        "atol": 5e-13
+      },
+      "min_amplification": 1.1889278525215564e+23,
+      "max_amplification": 5.023576634974762e+26,
+      "max_independent_exact_error": 1.4233022432315687e-09,
+      "max_asymptotic_slope_error": 1.4979129048242612e-10,
+      "min_singular_branch_coefficient": 0.995758334160012,
+      "independent_solver_relative_error": 3.5954034158820485e-11,
+      "regular_branch_control": {
+        "bounded": true,
+        "initial_energy": 1.0,
+        "final_energy": 0.50000000000025
+      },
+      "selected_case": {
+        "a": 0.02,
+        "k": 1,
+        "mass": 0.0,
+        "exponent": -0.0016129748954828438,
+        "success": true,
+        "nfev": 2882,
+        "energy_amplification": 2.1864578556658256e+24,
+        "final_log_energy_slope": 2.0032259498050644,
+        "expected_asymptotic_slope": 2.0032259497909655,
+        "exact_relative_error": 1.194886801132712e-10,
+        "singular_branch_coefficient": 1.0,
+        "massless_analytic_error": 9.340410474309314e-11
+      },
+      "amplitude_scaling": [
+        {
+          "initial_amplitude": 1.0,
+          "final_energy_relative_to_unit_initial_energy": 2.1864578556658256e+24
+        },
+        {
+          "initial_amplitude": 0.0001,
+          "final_energy_relative_to_unit_initial_energy": 2.1864578556658256e+16
+        },
+        {
+          "initial_amplitude": 1e-08,
+          "final_energy_relative_to_unit_initial_energy": 218645785.5665826
+        },
+        {
+          "initial_amplitude": 1e-12,
+          "final_energy_relative_to_unit_initial_energy": 2.1864578556658256
+        }
+      ],
+      "elapsed_seconds": 37.97444340004586,
+      "versions": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mpmath": "1.3.0"
+      },
+      "interpretation": "Instability witness for this background/mode family. Final coupled geometry and all alternative media remain undetermined."
+    },
+    "kinetic_repair_results.json": {
+      "candidate": "Prescribed positive scalar kinetic coupling Z(S)=(-S)^(-q)",
+      "field_equation": "S*u_pp + (kappa-q-2*i*k)*u_p + i*q*k*u/S = 0",
+      "indicial_polynomial": "I*k*q + lam**2 - lam*(2*I*k + q + s)",
+      "root_sum": "lambda_1+lambda_2 = s+q+2*i*k",
+      "sum_of_leading_energy_exponents": "2*s - 4",
+      "analytic_result": "For s<=0 and nonzero k, at least one nonconstant mode has divergent measured energy for every real q. q=0 has a regular constant branch but also the divergent original branch.",
+      "algebraic_grid_cases": 2916,
+      "grid_cases_with_divergent_branch": 2916,
+      "time_domain_simulations": 0,
+      "scope": "Fixed-background diagnostic; Z dynamics and its own gravitational contribution have not been solved."
+    }
+  },
+  "output_comparison": {
+    "excluded_runtime_metadata": [
+      "numerical_results.json:elapsed_seconds",
+      "numerical_results.json:versions.python"
+    ],
+    "python_version_difference": {
+      "original": "3.13.5",
+      "reproduced": "3.12.14"
+    },
+    "files": {
+      "symbolic_results.json": {
+        "original_sha256": "a60dbbf43d3ece9ceb9a0e5b88d2b1bb9b7fb98666714730b6bdf46a24c0c436",
+        "reproduced_sha256": "23247814b7e4b2fa8611d5e84a28375e265c835f2aa9d5a6ebc317b610cf9ffd",
+        "bytes_identical": false,
+        "numeric_differences_count": 0,
+        "largest_scaled_difference": null,
+        "nonnumeric_or_structure_differences": [],
+        "lf_normalized_bytes_identical": true
+      },
+      "initial_energy_results.json": {
+        "original_sha256": "cfba2ce97943f41910b988e281e4e651bcb359b9b59d3e0378af4dc4b802214f",
+        "reproduced_sha256": "76c0ad980620ebf1269d6e7f4eb47becf5b7a37fb6f00ac3d2cd96978d744755",
+        "bytes_identical": false,
+        "numeric_differences_count": 0,
+        "largest_scaled_difference": null,
+        "nonnumeric_or_structure_differences": [],
+        "lf_normalized_bytes_identical": true
+      },
+      "numerical_results.json": {
+        "original_sha256": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+        "reproduced_sha256": "a4079b1429fcaa2e1403dc8421dc6c4f137a151a61ca6b79f8edac4da454f1c6",
+        "bytes_identical": false,
+        "numeric_differences_count": 5,
+        "largest_scaled_difference": {
+          "path": "independent_solver_relative_error",
+          "original": 3.698697731445032e-11,
+          "reproduced": 3.5954034158820485e-11,
+          "absolute_difference": 1.0329431556298329e-12,
+          "scaled_difference": 1.0329431555916273e-12
+        },
+        "nonnumeric_or_structure_differences": [],
+        "lf_normalized_bytes_identical": false
+      },
+      "mode_cases.json": {
+        "original_sha256": "47978c5b138302721ee62194bf89354c3221d6bd6ef2323824db5baea201cdcc",
+        "reproduced_sha256": "5dca17648a6fdf387d755f2378b7cd928ec9a414154e5170c595ed026f389da4",
+        "bytes_identical": false,
+        "numeric_differences_count": 263,
+        "largest_scaled_difference": {
+          "path": "[26].energy_amplification",
+          "original": 1.9402626772725228e+24,
+          "reproduced": 1.9402626772725821e+24,
+          "absolute_difference": 59324235776.0,
+          "scaled_difference": 3.057536305310567e-14
+        },
+        "nonnumeric_or_structure_differences": [],
+        "lf_normalized_bytes_identical": false
+      },
+      "sample_trajectories.json": {
+        "original_sha256": "bad975cfc2599983875ab7de1c42e47e22b9913c4d097e525b8afa6e28c7d257",
+        "reproduced_sha256": "effb2c1ea099354dfc33310ac8b45301ac8ee7ea3a6451e82074c062a9cd11b7",
+        "bytes_identical": false,
+        "numeric_differences_count": 3546,
+        "largest_scaled_difference": {
+          "path": "a0.12_k8_m10.0.u_real[596]",
+          "original": 0.5376273841089753,
+          "reproduced": 0.5376273841093172,
+          "absolute_difference": 3.419486915845482e-13,
+          "scaled_difference": 2.2238722795810812e-13
+        },
+        "nonnumeric_or_structure_differences": [],
+        "lf_normalized_bytes_identical": false
+      },
+      "kinetic_repair_results.json": {
+        "original_sha256": "882b314c6d16914a9b37365eeff9e42ae9e7a7ea09854978641bea0df0fefd7c",
+        "reproduced_sha256": "a37c41d8d86d9d6f3db23de3389658a4a4c33c9bc2dab66b932f642812b7866f",
+        "bytes_identical": false,
+        "numeric_differences_count": 0,
+        "largest_scaled_difference": null,
+        "nonnumeric_or_structure_differences": [],
+        "lf_normalized_bytes_identical": true
+      },
+      "kinetic_repair_cases.json": {
+        "original_sha256": "d759614957763c6b42141631f9c7134546650fb3845e0e87f1cd503f2d551484",
+        "reproduced_sha256": "29b7eb595d89efd230d63bb49151a82f15ec5075a974e9dbdcc438c26abbb6f7",
+        "bytes_identical": false,
+        "numeric_differences_count": 40,
+        "largest_scaled_difference": {
+          "path": "[2182].leading_energy_exponents[0]",
+          "original": 14.061356739649476,
+          "reproduced": 14.061356739649533,
+          "absolute_difference": 5.684341886080802e-14,
+          "scaled_difference": 3.774123396942441e-15
+        },
+        "nonnumeric_or_structure_differences": [],
+        "lf_normalized_bytes_identical": false
+      }
+    },
+    "all_scientific_numeric_scaled_differences_below_1e_minus_7": true,
+    "formatting_note": "Windows generated CRLF line endings; normalized symbolic, initial-energy, and kinetic-summary contents match the archive exactly. Other changes are floating-point rounding and recorded runtime/Python-version differences."
+  },
+  "manifest_after_rerun": "sha256_manifest.json remains the original archive manifest. Generated outputs may have different bytes after reproduction; output_comparison records both hashes. Original Python sources, research_note.md, and run_log.txt are unchanged.",
+  "critical_review": {
+    "mathematics": [
+      "Exact invariant coordinate S=T+b*x^2+d*y^2, rather than an axis-only phi(T) ansatz: its norm and wave-operator identities are checked in the full four-dimensional vacuum metric.",
+      "The observer is unit timelike with finite acceleration; the divergent energy is a scalar observer measurement, not a divergent coordinate component alone.",
+      "The finite initial-energy integral includes the induced volume factor and the canonical stress projected on the initial-slice unit normal.",
+      "Massive exact 0F1 basis agrees with the numerical ODE solutions; the mass term decays in logarithmic time so the singular branch remains.",
+      "For the prescribed positive kinetic coupling, the sum of the two energy exponents is 2*s-4<0. The nonzero-root qualification and the q=0 regular branch are handled."
+    ],
+    "material_limitations": [
+      "144 exact-sector test-field ODE runs on a fixed background, not a coupled Einstein-scalar spacetime evolution or evidence of a stable final geometry.",
+      "2916 coupling cases are algebraic root evaluations, not time-domain simulations.",
+      "The initial energy and small-amplitude argument concern a compact core. No full exterior matching or nonlinear gravitational constraint solve is provided.",
+      "Coordinates, times, masses, amplitudes, and energies are dimensionless model quantities. Energy amplification ratios are not apparatus energy predictions; sufficiently large stress invalidates the fixed-background approximation.",
+      "The runs use selected initial data with a singular branch. A bounded regular-branch control also exists; this is an instability witness, not a claim that every disturbance must diverge.",
+      "The prescribed coupling Z has no supplied dynamics/source. Its failure excludes this repair class, not every healthy matter theory. Novelty is not established."
+    ],
+    "source_bug_requiring_edits": null
+  }
+}

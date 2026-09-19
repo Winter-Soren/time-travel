@@ -1,0 +1,352 @@
+{
+  "model": "Local one-loop magnetic log action; separate classical-RN four-dimensional trace audit",
+  "implementation_sha256": "5c6986e2ce09b544d44e96576f6da03b6da53dc32cb12f973dae0441a84b7a87",
+  "input_sha256": "3866462ead97b41d48b43f00f70f09f5cc273d9df6b9b4bb94daf5a08a23756d",
+  "parameters": {
+    "magnetic_charge_q": 100000,
+    "gauge_coupling_at_Xstar": 0.06283185307179587,
+    "epsilon": 1.6666666666666667e-05,
+    "k": 0.0010554289962743518,
+    "finite_collar_radius_interval": [
+      1.0,
+      100.0
+    ],
+    "re_over_sqrtG": 2820947.9177387813,
+    "subtraction": "Xstar=q^2/(2re^4), tied to the stated magnetic reference scale; g is the renormalized coupling at that reference."
+  },
+  "equations": {
+    "conventions": "Signature -+++; X=F_ab F^ab=q^2/(2r^4); re^2=pi G q^2/g^2; one massless unit-charge Dirac species.",
+    "local_action": "L=-X/(4g^2)+X*log(X/Xstar)/(96pi^2); stress=-4L_X F_ac F_b^c+g_ab L.",
+    "stresses": "rho=-L; pr=L; pperp=L-2X L_X; rho+pr=0; trace=4(L-X L_X)=-X/(24pi^2).",
+    "mass": "R=r/re; mu=Gm/re; mu prime=(1/2+2epsilon log R)/R^2; mu(1)=1/2.",
+    "metric": "f=1-2(1+2epsilon)/R+[1+4epsilon(log R+1)]/R^2; f(1)=f_prime(1)=0, f_second(1)=2(1-2epsilon).",
+    "stable_metric": "u=R-1; f=u^2/(1+u)^2*[1+4epsilon*(log1p(u)-u)/u^2], with a local series for the ratio.",
+    "product": "On the branch connected to classical RN, RS=re and LA^2/RS^2=1/(1-2epsilon). This is a product solution of the stated local action.",
+    "near_horizon_clock": "f approximately (r-RS)^2/LA^2; tau=t/ell and rho_th=ell*(r-RS)/LA^2. The ideal global product lapse is N=LA/(ell*cos chi), so its full null optical crossing remains pi*ell. This is a local calibration statement, not a recomputed matched collar.",
+    "flare_out": "For ds^2=-N(l)^2dt^2+dl^2+R(l)^2dOmega^2, (R_prime/N)_prime=-4piG*R*(rho+pr)/N. A regular N>0 center with R_prime=0 and this sector alone forces constant R, not strict opening."
+  },
+  "product_solution": {
+    "sphere_radius_over_re": 1.0,
+    "ads_radius_squared_over_sphere_squared": 1.0000333344444814,
+    "ads_radius_over_re": 1.000016667083345,
+    "horizon_second_derivative": 1.9999333333333333,
+    "formal_extrapolated_mass_coefficient": 1.0000333333333333,
+    "formal_extrapolated_mass_shift": 3.3333333333333335e-05,
+    "finite_collar_R100_mass_correction": 3.14649432713373e-05,
+    "maximum_loop_density_fraction_on_collar": 0.0003070113457325395
+  },
+  "finite_collar_table": [
+    {
+      "radius_over_re": 1.0,
+      "metric_f": 0.0,
+      "rn_metric": 0.0,
+      "geometric_mass_over_re": 0.5,
+      "mass_correction_over_rn": 0.0,
+      "rho_times_8piG_re2": 1.0,
+      "pr_times_8piG_re2": -1.0,
+      "pperp_times_8piG_re2": 0.9999666666666667,
+      "radial_nec_times_8piG_re2": 0.0,
+      "trace_times_8piG_re2": -6.666666666666667e-05,
+      "mass_quadrature_absolute_error": 0.0,
+      "metric_vs_mass_quadrature_absolute_error": 0.0
+    },
+    {
+      "radius_over_re": 1.000001,
+      "metric_f": 9.99964666594028e-13,
+      "rn_metric": 9.999979998807103e-13,
+      "geometric_mass_over_re": 0.5000004999995,
+      "mass_correction_over_rn": 1.6666638886182786e-17,
+      "rho_times_8piG_re2": 0.9999960000766667,
+      "pr_times_8piG_re2": -0.9999960000766667,
+      "pperp_times_8piG_re2": 0.9999626668766664,
+      "radial_nec_times_8piG_re2": 0.0,
+      "trace_times_8piG_re2": -6.666640000066668e-05,
+      "mass_quadrature_absolute_error": 0.0,
+      "metric_vs_mass_quadrature_absolute_error": 6.101378006361932e-29
+    },
+    {
+      "radius_over_re": 1.01,
+      "metric_f": 9.802635890946447e-05,
+      "rn_metric": 9.802960494069226e-05,
+      "geometric_mass_over_re": 0.5049504966887507,
+      "mass_correction_over_rn": 1.639245770030272e-09,
+      "rho_times_8piG_re2": 0.9609809819543076,
+      "pr_times_8piG_re2": -0.9609809819543076,
+      "pperp_times_8piG_re2": 0.9609489492761581,
+      "radial_nec_times_8piG_re2": 0.0,
+      "trace_times_8piG_re2": -6.406535629885442e-05,
+      "mass_quadrature_absolute_error": 9.055679078826712e-72,
+      "metric_vs_mass_quadrature_absolute_error": 6.91378502816479e-21
+    },
+    {
+      "radius_over_re": 1.1,
+      "metric_f": 0.008264204417620085,
+      "rn_metric": 0.00826446280991736,
+      "geometric_mass_over_re": 0.545454687570309,
+      "mass_correction_over_rn": 1.4211576350530752e-07,
+      "rho_times_8piG_re2": 0.6830177952407532,
+      "pr_times_8piG_re2": -0.6830177952407532,
+      "pperp_times_8piG_re2": 0.6829950281255743,
+      "radial_nec_times_8piG_re2": 0.0,
+      "trace_times_8piG_re2": -4.553423035767137e-05,
+      "mass_quadrature_absolute_error": 0.0,
+      "metric_vs_mass_quadrature_absolute_error": 1.3048131321693978e-18
+    },
+    {
+      "radius_over_re": 1.5,
+      "metric_f": 0.11110831007727728,
+      "rn_metric": 0.11111111111111113,
+      "geometric_mass_over_re": 0.6666687674420421,
+      "mass_correction_over_rn": 2.100775375374125e-06,
+      "rho_times_8piG_re2": 0.19753620365574465,
+      "pr_times_8piG_re2": -0.19753620365574465,
+      "pperp_times_8piG_re2": 0.1975296192936047,
+      "radial_nec_times_8piG_re2": 0.0,
+      "trace_times_8piG_re2": -1.3168724279835392e-05,
+      "mass_quadrature_absolute_error": 0.0,
+      "metric_vs_mass_quadrature_absolute_error": 4.6452061045164424e-18
+    },
+    {
+      "radius_over_re": 2.0,
+      "metric_f": 0.24999488578634266,
+      "rn_metric": 0.25,
+      "geometric_mass_over_re": 0.7500051142136573,
+      "mass_correction_over_rn": 5.114213657334245e-06,
+      "rho_times_8piG_re2": 0.06250288811325233,
+      "pr_times_8piG_re2": -0.06250288811325233,
+      "pperp_times_8piG_re2": 0.062500804779919,
+      "radial_nec_times_8piG_re2": 0.0,
+      "trace_times_8piG_re2": -4.166666666666667e-06,
+      "mass_quadrature_absolute_error": 0.0,
+      "metric_vs_mass_quadrature_absolute_error": 8.080454808361016e-18
+    },
+    {
+      "radius_over_re": 10.0,
+      "metric_f": 0.8099955350567287,
+      "rn_metric": 0.81,
+      "geometric_mass_over_re": 0.9500223247163567,
+      "mass_correction_over_rn": 2.2324716356686516e-05,
+      "rho_times_8piG_re2": 0.00010001535056728664,
+      "pr_times_8piG_re2": -0.00010001535056728664,
+      "pperp_times_8piG_re2": 0.0001000120172339533,
+      "radial_nec_times_8piG_re2": 0.0,
+      "trace_times_8piG_re2": -6.666666666666667e-09,
+      "mass_quadrature_absolute_error": 0.0,
+      "metric_vs_mass_quadrature_absolute_error": 5.886016943252164e-17
+    },
+    {
+      "radius_over_re": 100.0,
+      "metric_f": 0.9800993707011345,
+      "rn_metric": 0.9801,
+      "geometric_mass_over_re": 0.9950314649432713,
+      "mass_correction_over_rn": 3.14649432713373e-05,
+      "rho_times_8piG_re2": 1.0003070113457326e-08,
+      "pr_times_8piG_re2": -1.0003070113457326e-08,
+      "pperp_times_8piG_re2": 1.0002736780123994e-08,
+      "radial_nec_times_8piG_re2": 0.0,
+      "trace_times_8piG_re2": -6.666666666666667e-13,
+      "mass_quadrature_absolute_error": 0.0,
+      "metric_vs_mass_quadrature_absolute_error": 6.417761147889602e-17
+    }
+  ],
+  "near_horizon_checks": [
+    {
+      "horizon_offset": 1e-24,
+      "safe_metric": 9.999666666666665e-49,
+      "high_precision_metric": 9.999666666666665e-49,
+      "safe_relative_error": 5.1163822738275644e-17,
+      "naive_expanded_metric": 0.0,
+      "radius_addition_rounds_to_horizon": true
+    },
+    {
+      "horizon_offset": 1e-18,
+      "safe_metric": 9.999666666666668e-37,
+      "high_precision_metric": 9.999666666666668e-37,
+      "safe_relative_error": 4.759025273018531e-17,
+      "naive_expanded_metric": 0.0,
+      "radius_addition_rounds_to_horizon": true
+    },
+    {
+      "horizon_offset": 1e-15,
+      "safe_metric": 9.999666666666644e-31,
+      "high_precision_metric": 9.999666666666648e-31,
+      "safe_relative_error": 3.852470811020031e-16,
+      "naive_expanded_metric": 0.0,
+      "radius_addition_rounds_to_horizon": false
+    },
+    {
+      "horizon_offset": 1e-12,
+      "safe_metric": 9.999666666646667e-25,
+      "high_precision_metric": 9.999666666646667e-25,
+      "safe_relative_error": 2.6466073315231126e-17,
+      "naive_expanded_metric": -2.220446049250313e-16,
+      "radius_addition_rounds_to_horizon": false
+    },
+    {
+      "horizon_offset": 1e-09,
+      "safe_metric": 9.999666646667553e-19,
+      "high_precision_metric": 9.999666646667557e-19,
+      "safe_relative_error": 3.7563527762182753e-16,
+      "naive_expanded_metric": 0.0,
+      "radius_addition_rounds_to_horizon": false
+    },
+    {
+      "horizon_offset": 1e-06,
+      "safe_metric": 9.999646667585556e-13,
+      "high_precision_metric": 9.999646667585554e-13,
+      "safe_relative_error": 2.883266694259448e-16,
+      "naive_expanded_metric": 9.99866855977416e-13,
+      "radius_addition_rounds_to_horizon": false
+    },
+    {
+      "horizon_offset": 0.001,
+      "safe_metric": 9.97969751399685e-07,
+      "high_precision_metric": 9.979697513996849e-07,
+      "safe_relative_error": 2.5853660016552247e-16,
+      "naive_expanded_metric": 9.979697513928798e-07,
+      "radius_addition_rounds_to_horizon": false
+    },
+    {
+      "horizon_offset": 0.01,
+      "safe_metric": 9.802635890946431e-05,
+      "high_precision_metric": 9.802635890946431e-05,
+      "safe_relative_error": 1.2028560455495663e-17,
+      "naive_expanded_metric": 9.802635890931999e-05,
+      "radius_addition_rounds_to_horizon": false
+    },
+    {
+      "horizon_offset": 0.1,
+      "safe_metric": 0.008264204417620073,
+      "high_precision_metric": 0.008264204417620075,
+      "safe_relative_error": 1.13301958735554e-16,
+      "naive_expanded_metric": 0.008264204417620213,
+      "radius_addition_rounds_to_horizon": false
+    }
+  ],
+  "classical_rn_trace_audit": {
+    "background": "CLASSICAL extremal RN f=(1-1/R)^2; traces in re^-4 units. This is not the backreacted log-action metric.",
+    "invariants": {
+      "Ricci_scalar": "0",
+      "Ricci_squared": "4/R**8",
+      "Kretschmann": "8*(6*R**2 - 12*R + 7)/R**8",
+      "Weyl_squared": "48*(R**2 - 2*R + 1)/R**8",
+      "Euler_density": "8*(6*R**2 - 12*R + 5)/R**8"
+    },
+    "equations": {
+      "gravity": "(C^2/20-11E4/360)/(16pi^2)=(42R^2-84R+53)/(720pi^2 R^8); box R4=0.",
+      "gauge": "-q^2/(48pi^2 R^4)",
+      "lll": "q(4R-6)/(96pi^2 R^6)",
+      "remainder": "Full required trace minus [local gauge-log trace+LLL trace] = gravitational trace-LLL trace.",
+      "horizon_remainder": "q/(48pi^2)+11/(720pi^2)"
+    },
+    "table": [
+      {
+        "radius_over_re": 1.0,
+        "gauge_trace_times_re4": -21108579.925487034,
+        "gravitational_trace_times_re4": 0.0015479625278690492,
+        "lowest_landau_trace_times_re4": -211.08579925487035,
+        "full_required_trace_times_re4": -21108579.92393907,
+        "local_log_plus_lll_trace_times_re4": -21108791.011286292,
+        "required_additional_trace_times_re4": 211.08734721739822
+      },
+      {
+        "radius_over_re": 1.5,
+        "gauge_trace_times_re4": -4169596.0346641056,
+        "gravitational_trace_times_re4": 0.00011805276015839115,
+        "lowest_landau_trace_times_re4": 0.0,
+        "full_required_trace_times_re4": -4169596.034546053,
+        "local_log_plus_lll_trace_times_re4": -4169596.0346641056,
+        "required_additional_trace_times_re4": 0.00011805276015839115
+      },
+      {
+        "radius_over_re": 2.0,
+        "gauge_trace_times_re4": -1319286.2453429396,
+        "gravitational_trace_times_re4": 2.9134237917989918e-05,
+        "lowest_landau_trace_times_re4": 3.2982156133573493,
+        "full_required_trace_times_re4": -1319286.2453138055,
+        "local_log_plus_lll_trace_times_re4": -1319282.9471273264,
+        "required_additional_trace_times_re4": -3.2981864791194315
+      },
+      {
+        "radius_over_re": 10.0,
+        "gauge_trace_times_re4": -2110.8579925487034,
+        "gravitational_trace_times_re4": 4.80290555237915e-09,
+        "lowest_landau_trace_times_re4": 0.003588458587332796,
+        "full_required_trace_times_re4": -2110.8579925439008,
+        "local_log_plus_lll_trace_times_re4": -2110.854404090116,
+        "required_additional_trace_times_re4": -0.0035884537844272438
+      },
+      {
+        "radius_over_re": 100.0,
+        "gauge_trace_times_re4": -0.21108579925487037,
+        "gravitational_trace_times_re4": 5.7929401680443434e-15,
+        "lowest_landau_trace_times_re4": 4.158390245320946e-08,
+        "full_required_trace_times_re4": -0.21108579925486456,
+        "local_log_plus_lll_trace_times_re4": -0.2110857576709679,
+        "required_additional_trace_times_re4": -4.158389666026929e-08
+      }
+    ],
+    "scope": "The nonzero remainder is a necessary TRACE constraint only. It does not supply a conserved source tensor, quantum state or nonlocal determinant. The local log action and existing LLL contribution cannot simply be added and called the complete four-dimensional source; renormalization and double counting remain unresolved."
+  },
+  "verification": {
+    "all_declared_checks_pass": true,
+    "symbolic_residuals": {
+      "magnetic_radial_nec": "0",
+      "gauge_trace": "0",
+      "density_normalization": "0",
+      "radial_stress_conservation": "0",
+      "mass_equation": "0",
+      "einstein_tt": "0",
+      "einstein_rr": "0",
+      "einstein_angular": "0",
+      "horizon_value": "0",
+      "horizon_first_derivative": "0",
+      "horizon_second_derivative": "0",
+      "product_sphere_equation": "0",
+      "product_ads_equation": "0",
+      "weak_coupling_metric": "0",
+      "linear_mass_correction": "0",
+      "proper_distance_flare_out": "0",
+      "classical_rn_ricci_scalar": "0",
+      "classical_rn_ricci_squared": "0",
+      "classical_rn_weyl_squared": "0",
+      "classical_rn_euler": "0",
+      "gravity_trace_polynomial": "0",
+      "gravity_trace_second_primary": "0",
+      "required_trace_horizon": "0"
+    },
+    "quadrature_precision_digits": 70,
+    "maximum_mass_quadrature_error": 9.055679078826712e-72,
+    "maximum_metric_vs_quadrature_error": 6.417761147889602e-17,
+    "maximum_near_horizon_relative_error": 3.852470811020031e-16,
+    "weak_coupling_metric_error": 0.0,
+    "thresholds": {
+      "mass_quadrature_absolute": 1e-60,
+      "metric_quadrature_absolute": 5e-14,
+      "near_horizon_relative": 5e-13
+    }
+  },
+  "scope": "Conditional local leading-log benchmark, in a specified finite-subtraction convention. The radial NEC vanishes, so this magnetic sector alone cannot open a regular static throat; this does not rule out combinations with a nonlocal Casimir source. The finite collar is R=1..100. The algebraic mass coefficient at infinity is a formal extrapolation of this local action, not a matched physical ADM mass or verified asymptotic quantum state. Higher derivative, nonlocal, gravitational-anomaly and state-dependent terms are not solved by this action. No loop term should be counted again in a separately renormalized source. No stability, source completion, preparation, material or human passage is established.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1808.03489",
+      "equation": "4.20 and Appendix A",
+      "supports": "Mostly-plus Dirac gauge trace -F^2/(24pi^2), fixing the local log coefficient within the ansatz."
+    },
+    {
+      "url": "https://arxiv.org/pdf/0707.3751",
+      "equation": "2.1-2.3",
+      "supports": "Four-dimensional curvature anomaly coefficients and the distinction between the trace and the full state-dependent stress tensor."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1911.02271",
+      "equation": "35",
+      "supports": "Independent Dirac gravitational trace written with Riemann/Ricci invariants."
+    },
+    {
+      "url": "https://arxiv.org/html/1807.04726v3",
+      "equation": "2.1-2.3",
+      "supports": "Magnetic charge and gauge coupling normalization; this code derives the stated local-action solution, not a new MMP solution."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "symbolic_results.json": "a60dbbf43d3ece9ceb9a0e5b88d2b1bb9b7fb98666714730b6bdf46a24c0c436",
+  "mode_cases.json": "47978c5b138302721ee62194bf89354c3221d6bd6ef2323824db5baea201cdcc",
+  "verify_outputs.py": "88a9f0961d200b08e50b3927272d710711c8860e07b519d6d3975d6bacd7b0a4",
+  "verify_geometry.py": "024a27a8313fdd952e47d85055d040d2eca3a410d3cb4c490f8ea8b014248f4d",
+  "sample_trajectories.json": "bad975cfc2599983875ab7de1c42e47e22b9913c4d097e525b8afa6e28c7d257",
+  "kinetic_repair_cases.json": "d759614957763c6b42141631f9c7134546650fb3845e0e87f1cd503f2d551484",
+  "initial_energy_results.json": "cfba2ce97943f41910b988e281e4e651bcb359b9b59d3e0378af4dc4b802214f",
+  "numerical_results.json": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+  "test_kinetic_repair.py": "8e6991f2a11ed1bb69de348ffbde6c0db430741fa220095958d4cc4b6cb14697",
+  "research_note.md": "a3a1bca8db407e62b007ce7814537c1b16189d89f3fa1f4d8ff413c27078c230",
+  "check_initial_energy.py": "49bc79aaba3f1ed99dcd7cffe0508c843b12082bb3ac2054259077b18fddd197",
+  "run_log.txt": "5ccbbfd79a08c54c6933f848d4844ba8c5f7384b3f018e7d3a843898cfe04b3c",
+  "run_modes.py": "6ced7a5244060c77d1a7862f2163978b7f5007bce817c77c4eee2319f3a845cc",
+  "kinetic_repair_results.json": "882b314c6d16914a9b37365eeff9e42ae9e7a7ea09854978641bea0df0fefd7c"
+}

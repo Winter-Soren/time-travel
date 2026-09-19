@@ -1,0 +1,2157 @@
+{
+  "model": "Full quantum-collar transport in an affine RN basis across the outer overlap",
+  "parameters": {
+    "alpha": 1e-09,
+    "omega_squared": 1.6194849990455538,
+    "separation_over_re": 4188251800.784477,
+    "clock_scale": 6165958137.367585,
+    "delta_w_positive_mouth": -1.4152934634704095,
+    "source_amplitude": 1.2408637643235383e-29
+  },
+  "incident_growing_amplitude": -1.1401563959755335e-19,
+  "refinement": [
+    {
+      "refinement": 1,
+      "radius_interval": [
+        10.0,
+        100.0
+      ],
+      "proper_interval": [
+        33.910443038504106,
+        126.30833831115952
+      ],
+      "transfer_correction": [
+        [
+          -1.9239883035390543e-12,
+          -2.2718527995462834e-15
+        ],
+        [
+          -6.525122323745314e-07,
+          9.491219861274792e-12
+        ]
+      ],
+      "affine_correction_per_A": [
+        -2.5681219682751143e-13,
+        -1.3690147250696945e-07
+      ],
+      "first_order_transfer_correction": [
+        [
+          -1.923988303548898e-12,
+          -2.271852799544086e-15
+        ],
+        [
+          -6.525122323753872e-07,
+          9.491219859755334e-12
+        ]
+      ],
+      "first_order_affine_correction_per_A": [
+        -2.5681219683048583e-13,
+        -1.3690147250699722e-07
+      ],
+      "growing_shift_from_incident": 2.193647570062169e-31,
+      "growing_shift_from_source": -3.186689492795833e-42,
+      "source_order_incident_growing_shift": 0.01767839172302726,
+      "growing_shift_per_unknown_decaying_input": -2.2718527995462834e-15,
+      "composition_relative_error": 2.291164943319755e-13,
+      "affine_composition_relative_error": 4.466364733718039e-14,
+      "determinant_relative_error": 0.0,
+      "basis_inverse_maximum_error": 5.02549128356928e-66,
+      "beyond_first_order_transfer_relative_size": 1.311578345386231e-12,
+      "beyond_first_order_affine_relative_size": 2.0282322968269364e-13,
+      "solver_evaluations": 1441,
+      "coefficient_sample_count": 513,
+      "reconstructed_clock_log_maximum_difference": 6.131719903762426e-14,
+      "background_clock_offset_estimate": -3.9608513629114756e-16,
+      "affine_clock_offset_response_per_A": [
+        0.02577762200583583,
+        2213.326941633426
+      ],
+      "clock_composition_relative_error": 5.896665659710333e-14,
+      "plot": [
+        {
+          "radius": 9.999999999999998,
+          "proper_distance": 33.910443038504106,
+          "growing_shift_from_incident": -0.0,
+          "growing_shift_from_incident_over_A": -0.0,
+          "growing_shift_from_source": 0.0,
+          "RN_particular_growing_projection_per_A": 0.028048860147625587
+        },
+        {
+          "radius": 10.695540953631435,
+          "proper_distance": 34.68042549910957,
+          "growing_shift_from_incident": 2.8009925256996475e-32,
+          "growing_shift_from_incident_over_A": 0.002257292545911855,
+          "growing_shift_from_source": 5.790535523500961e-43,
+          "RN_particular_growing_projection_per_A": 0.025803357845076726
+        },
+        {
+          "radius": 11.395788706484979,
+          "proper_distance": 35.45040795971503,
+          "growing_shift_from_incident": 5.117411491836584e-32,
+          "growing_shift_from_incident_over_A": 0.004124071988375259,
+          "growing_shift_from_source": 9.58043219192212e-43,
+          "RN_particular_growing_projection_per_A": 0.023876758696954273
+        },
+        {
+          "radius": 12.100208103005041,
+          "proper_distance": 36.22039042032049,
+          "growing_shift_from_incident": 7.052512915136289e-32,
+          "growing_shift_from_incident_over_A": 0.005683551343753674,
+          "growing_shift_from_source": 1.1962694045216848e-42,
+          "RN_particular_growing_projection_per_A": 0.022207237385105598
+        },
+        {
+          "radius": 12.808347705727591,
+          "proper_distance": 36.99037288092595,
+          "growing_shift_from_incident": 8.683935877501209e-32,
+          "growing_shift_from_incident_over_A": 0.006998299190592684,
+          "growing_shift_from_source": 1.3344176490938803e-42,
+          "RN_particular_growing_projection_per_A": 0.020747717784247915
+        },
+        {
+          "radius": 13.519823603953013,
+          "proper_distance": 37.760355341531415,
+          "growing_shift_from_incident": 1.0070848778646843e-31,
+          "growing_shift_from_incident_over_A": 0.0081159987648902,
+          "growing_shift_from_source": 1.4008755143886247e-42,
+          "RN_particular_growing_projection_per_A": 0.019461776131258053
+        },
+        {
+          "radius": 14.234306877132907,
+          "proper_distance": 38.53033780213688,
+          "growing_shift_from_incident": 1.125890563851528e-31,
+          "growing_shift_from_incident_over_A": 0.00907344219585066,
+          "growing_shift_from_source": 1.4157405837284605e-42,
+          "RN_particular_growing_projection_per_A": 0.018320824777497188
+        },
+        {
+          "radius": 14.951513784224078,
+          "proper_distance": 39.30032026274234,
+          "growing_shift_from_incident": 1.2283737558006776e-31,
+          "growing_shift_from_incident_over_A": 0.009899344240020824,
+          "growing_shift_from_source": 1.3934217451276052e-42,
+          "RN_particular_growing_projection_per_A": 0.017302136281058672
+        },
+        {
+          "radius": 15.671198009485343,
+          "proper_distance": 40.0703027233478,
+          "growing_shift_from_incident": 1.3173448804834417e-31,
+          "growing_shift_from_incident_over_A": 0.010616353852524634,
+          "growing_shift_from_source": 1.3443622612775518e-42,
+          "RN_particular_growing_projection_per_A": 0.01638743135149408
+        },
+        {
+          "radius": 16.393144476385615,
+          "proper_distance": 40.84028518395326,
+          "growing_shift_from_incident": 1.395042477943688e-31,
+          "growing_shift_from_incident_over_A": 0.011242511209151158,
+          "growing_shift_from_source": 1.2762013622377585e-42,
+          "RN_particular_growing_projection_per_A": 0.01556185280882569
+        },
+        {
+          "radius": 17.117164369426458,
+          "proper_distance": 41.610267644558725,
+          "growing_shift_from_incident": 1.4632657795051237e-31,
+          "growing_shift_from_incident_over_A": 0.011792316139579019,
+          "growing_shift_from_source": 1.19457005177067e-42,
+          "RN_particular_growing_projection_per_A": 0.014813208670803414
+        },
+        {
+          "radius": 17.843091095335865,
+          "proper_distance": 42.38025010516419,
+          "growing_shift_from_incident": 1.5234731507208217e-31,
+          "growing_shift_from_incident_over_A": 0.012277521469501118,
+          "growing_shift_from_source": 1.1036448307305385e-42,
+          "RN_particular_growing_projection_per_A": 0.014131406018446459
+        },
+        {
+          "radius": 18.570776981375,
+          "proper_distance": 43.15023256576964,
+          "growing_shift_from_incident": 1.5768559764610105e-31,
+          "growing_shift_from_incident_over_A": 0.012707728453337822,
+          "growing_shift_from_source": 1.0065380681284748e-42,
+          "RN_particular_growing_projection_per_A": 0.013508022169671279
+        },
+        {
+          "radius": 19.300090556949403,
+          "proper_distance": 43.920215026375104,
+          "growing_shift_from_incident": 1.6243946689239116e-31,
+          "growing_shift_from_incident_over_A": 0.01309083813733135,
+          "growing_shift_from_source": 9.055764702068728e-43,
+          "RN_particular_growing_projection_per_A": 0.012935976064687705
+        },
+        {
+          "radius": 20.03091430048818,
+          "proper_distance": 44.690197486980566,
+          "growing_shift_from_incident": 1.6669015273163181e-31,
+          "growing_shift_from_incident_over_A": 0.013433396761529546,
+          "growing_shift_from_source": 8.025019441302592e-43,
+          "RN_particular_growing_projection_per_A": 0.012409273734234895
+        },
+        {
+          "radius": 20.763142760224106,
+          "proper_distance": 45.46017994758603,
+          "growing_shift_from_incident": 1.7050538953999564e-31,
+          "growing_shift_from_incident_over_A": 0.01374086297321667,
+          "growing_shift_from_source": 6.986182163563008e-43,
+          "RN_particular_growing_projection_per_A": 0.01192280918792097
+        },
+        {
+          "radius": 21.496680977571508,
+          "proper_distance": 46.23016240819149,
+          "growing_shift_from_incident": 1.7394199710490033e-31,
+          "growing_shift_from_incident_over_A": 0.01401781582361908,
+          "growing_shift_from_source": 5.948985842106429e-43,
+          "RN_particular_growing_projection_per_A": 0.011472207219397254
+        },
+        {
+          "radius": 22.231443157027293,
+          "proper_distance": 47.00014486879695,
+          "growing_shift_from_incident": 1.7704790626232002e-31,
+          "growing_shift_from_incident_over_A": 0.014268118012039652,
+          "growing_shift_from_source": 4.920658067371657e-43,
+          "RN_particular_growing_projection_per_A": 0.011053698240386376
+        },
+        {
+          "radius": 22.967351538173666,
+          "proper_distance": 47.77012732940241,
+          "growing_shift_from_incident": 1.7986376579909011e-31,
+          "growing_shift_from_incident_over_A": 0.01449504538454659,
+          "growing_shift_from_source": 3.906519896375773e-43,
+          "RN_particular_growing_projection_per_A": 0.010664017821760295
+        },
+        {
+          "radius": 23.704335434348803,
+          "proper_distance": 48.540109790007875,
+          "growing_shift_from_incident": 1.8242421933965046e-31,
+          "growing_shift_from_incident_over_A": 0.014701389837030154,
+          "growing_shift_from_source": 2.9104353027827365e-43,
+          "RN_particular_growing_projection_per_A": 0.010300325463399861
+        },
+        {
+          "radius": 24.44233040953591,
+          "proper_distance": 49.31009225061334,
+          "growing_shift_from_incident": 1.8475893214911403e-31,
+          "growing_shift_from_incident_over_A": 0.01488954206426006,
+          "growing_shift_from_source": 1.93515255411373e-43,
+          "RN_particular_growing_projection_per_A": 0.0099601384539088
+        },
+        {
+          "radius": 25.181277570486497,
+          "proper_distance": 50.0800747112188,
+          "growing_shift_from_incident": 1.8689341966190824e-31,
+          "growing_shift_from_incident_over_A": 0.015061558330200247,
+          "growing_shift_from_source": 9.825641406715135e-44,
+          "RN_particular_growing_projection_per_A": 0.009641277664569394
+        },
+        {
+          "radius": 25.92112295539979,
+          "proper_distance": 50.85005717182426,
+          "growing_shift_from_incident": 1.8884971976579831e-31,
+          "growing_shift_from_incident_over_A": 0.015219214646722356,
+          "growing_shift_from_source": 5.3905646846431985e-45,
+          "RN_particular_growing_projection_per_A": 0.00934182285099889
+        },
+        {
+          "radius": 26.661817003894242,
+          "proper_distance": 51.62003963242972,
+          "growing_shift_from_incident": 1.9064694317455371e-31,
+          "growing_shift_from_incident_over_A": 0.015364051127601879,
+          "growing_shift_from_source": -8.500908928077208e-44,
+          "RN_particular_growing_projection_per_A": 0.009060075581554814
+        },
+        {
+          "radius": 27.403314095731087,
+          "proper_distance": 52.390022093035185,
+          "growing_shift_from_incident": 1.923017246731816e-31,
+          "growing_shift_from_incident_over_A": 0.015497408353931234,
+          "growing_shift_from_source": -1.7290787719760425e-43,
+          "RN_particular_growing_projection_per_A": 0.008794528323390198
+        },
+        {
+          "radius": 28.145572147935216,
+          "proper_distance": 53.16000455364065,
+          "growing_shift_from_incident": 1.9382859591110363e-31,
+          "growing_shift_from_incident_over_A": 0.015620457417158123,
+          "growing_shift_from_source": -2.5830049115509857e-43,
+          "RN_particular_growing_projection_per_A": 0.00854383853052051
+        },
+        {
+          "radius": 28.88855226172211,
+          "proper_distance": 53.92998701424611,
+          "growing_shift_from_incident": 1.9524029469093452e-31,
+          "growing_shift_from_incident_over_A": 0.01573422484436642,
+          "growing_shift_from_source": -3.4120385851490195e-43,
+          "RN_particular_growing_projection_per_A": 0.008306806818694777
+        },
+        {
+          "radius": 29.63221841206985,
+          "proper_distance": 54.69996947485157,
+          "growing_shift_from_incident": 1.9654802271528943e-31,
+          "growing_shift_from_incident_over_A": 0.015839613369839866,
+          "growing_shift_from_source": -4.216515915300465e-43,
+          "RN_particular_growing_projection_per_A": 0.008082358497635314
+        },
+        {
+          "radius": 30.376537173941163,
+          "proper_distance": 55.46995193545703,
+          "growing_shift_from_incident": 1.977616613406348e-31,
+          "growing_shift_from_incident_over_A": 0.015937419322454415,
+          "growing_shift_from_source": -4.996896578420132e-43,
+          "RN_particular_growing_projection_per_A": 0.007869527875749436
+        },
+        {
+          "radius": 31.121477480115633,
+          "proper_distance": 56.239934396062495,
+          "growing_shift_from_incident": 1.9888995296141674e-31,
+          "growing_shift_from_incident_over_A": 0.016028347243248125,
+          "growing_shift_from_source": -5.753730003435603e-43,
+          "RN_particular_growing_projection_per_A": 0.007667444865617265
+        },
+        {
+          "radius": 31.867010406378093,
+          "proper_distance": 57.00991685666796,
+          "growing_shift_from_incident": 1.999406542016335e-31,
+          "growing_shift_from_incident_over_A": 0.016113022230980524,
+          "growing_shift_from_source": -6.487628965873255e-43,
+          "RN_particular_growing_projection_per_A": 0.007475323507772923
+        },
+        {
+          "radius": 32.61310898045889,
+          "proper_distance": 57.77989931727342,
+          "growing_shift_from_incident": 2.0092066553854647e-31,
+          "growing_shift_from_incident_over_A": 0.016192000388381003,
+          "growing_shift_from_source": -7.199249018258282e-43,
+          "RN_particular_growing_projection_per_A": 0.007292452101024295
+        },
+        {
+          "radius": 33.35974801166107,
+          "proper_distance": 58.54988177787888,
+          "growing_shift_from_incident": 2.018361417533845e-31,
+          "growing_shift_from_incident_over_A": 0.0162657777232633,
+          "growing_shift_from_source": -7.88927244060174e-43,
+          "RN_particular_growing_projection_per_A": 0.007118184683947681
+        },
+        {
+          "radius": 34.106903938558574,
+          "proper_distance": 59.31986423848434,
+          "growing_shift_from_incident": 2.0269258604430965e-31,
+          "growing_shift_from_incident_over_A": 0.01633479773299757,
+          "growing_shift_from_source": -8.558395804131442e-43,
+          "RN_particular_growing_projection_per_A": 0.006951933657397381
+        },
+        {
+          "radius": 34.85455469252596,
+          "proper_distance": 60.089846699089804,
+          "growing_shift_from_incident": 2.0349493064718816e-31,
+          "growing_shift_from_incident_over_A": 0.016399457901659673,
+          "growing_shift_from_source": -9.207320356554834e-43,
+          "RN_particular_growing_projection_per_A": 0.006793163374292891
+        },
+        {
+          "radius": 35.60267957517562,
+          "proper_distance": 60.859829159695266,
+          "growing_shift_from_incident": 2.042476062088114e-31,
+          "growing_shift_from_incident_over_A": 0.01646011529075134,
+          "growing_shift_from_source": -9.83674462925469e-43,
+          "RN_particular_growing_projection_per_A": 0.006641384552438521
+        },
+        {
+          "radius": 36.35125914804459,
+          "proper_distance": 61.62981162030073,
+          "growing_shift_from_incident": 2.0495460140781486e-31,
+          "growing_shift_from_incident_over_A": 0.016517091343991874,
+          "growing_shift_from_source": -1.0447358830512529e-42,
+          "RN_particular_growing_projection_per_A": 0.006496149390123083
+        },
+        {
+          "radius": 37.10027513309804,
+          "proper_distance": 62.39979408090619,
+          "growing_shift_from_incident": 2.056195146157536e-31,
+          "growing_shift_from_incident_over_A": 0.016570676050633802,
+          "growing_shift_from_source": -1.1039840620675235e-42,
+          "RN_particular_growing_projection_per_A": 0.0063570472838541635
+        },
+        {
+          "radius": 37.849710322807674,
+          "proper_distance": 63.16977654151165,
+          "growing_shift_from_incident": 2.062455986395701e-31,
+          "growing_shift_from_incident_over_A": 0.016621131551214703,
+          "growing_shift_from_source": -1.1614851997496413e-42,
+          "RN_particular_growing_projection_per_A": 0.006223701063673531
+        },
+        {
+          "radius": 38.59954849872547,
+          "proper_distance": 63.939759002117114,
+          "growing_shift_from_incident": 2.0683579959597338e-31,
+          "growing_shift_from_incident_over_A": 0.016668695270405508,
+          "growing_shift_from_source": -1.2173037055648906e-42,
+          "RN_particular_growing_projection_per_A": 0.006095763674762077
+        },
+        {
+          "radius": 39.34977435761225,
+          "proper_distance": 64.70974146272258,
+          "growing_shift_from_incident": 2.0739279083863357e-31,
+          "growing_shift_from_incident_over_A": 0.016713582651169973,
+          "growing_shift_from_source": -1.2715020432236453e-42,
+          "RN_particular_growing_projection_per_A": 0.005972915245015542
+        },
+        {
+          "radius": 40.100373444298995,
+          "proper_distance": 65.47972392332804,
+          "growing_shift_from_incident": 2.079190025665873e-31,
+          "growing_shift_from_incident_over_A": 0.016755989540877207,
+          "growing_shift_from_source": -1.3241406297248868e-42,
+          "RN_particular_growing_projection_per_A": 0.005854860487385957
+        },
+        {
+          "radius": 40.851332090561236,
+          "proper_distance": 66.2497063839335,
+          "growing_shift_from_incident": 2.0841664778275616e-31,
+          "growing_shift_from_incident_over_A": 0.016796094283273336,
+          "growing_shift_from_source": -1.3752777768236322e-42,
+          "RN_particular_growing_projection_per_A": 0.005741326393380748
+        },
+        {
+          "radius": 41.6026373593745,
+          "proper_distance": 67.01968884453896,
+          "growing_shift_from_incident": 2.08887745079441e-31,
+          "growing_shift_from_incident_over_A": 0.016834059554742254,
+          "growing_shift_from_source": -1.4249696657611188e-42,
+          "RN_particular_growing_projection_per_A": 0.005632060180466809
+        },
+        {
+          "radius": 42.35427699399474,
+          "proper_distance": 67.78967130514442,
+          "growing_shift_from_incident": 2.0933413870220104e-31,
+          "growing_shift_from_incident_over_A": 0.016870033981234062,
+          "growing_shift_from_source": -1.4732703477712452e-42,
+          "RN_particular_growing_projection_per_A": 0.0055268274614613195
+        },
+        {
+          "radius": 43.106239371373114,
+          "proper_distance": 68.55965376574989,
+          "growing_shift_from_incident": 2.0975751623182095e-31,
+          "growing_shift_from_incident_over_A": 0.016904153563237545,
+          "growing_shift_from_source": -1.520231764387701e-42,
+          "RN_particular_growing_projection_per_A": 0.005425410608483414
+        },
+        {
+          "radius": 43.8585134594719,
+          "proper_distance": 69.32963622635535,
+          "growing_shift_from_incident": 2.101594242303018e-31,
+          "growing_shift_from_incident_over_A": 0.016936542936675326,
+          "growing_shift_from_source": -1.5659037828290163e-42,
+          "RN_particular_growing_projection_per_A": 0.005327607287835723
+        },
+        {
+          "radius": 44.61108877809736,
+          "proper_distance": 70.09961868696081,
+          "growing_shift_from_incident": 2.105412820992843e-31,
+          "growing_shift_from_incident_over_A": 0.016967316489740654,
+          "growing_shift_from_source": -1.6103342426665753e-42,
+          "RN_particular_growing_projection_per_A": 0.005233229145400527
+        },
+        {
+          "radius": 45.363955362909046,
+          "proper_distance": 70.86960114756627,
+          "growing_shift_from_incident": 2.109043943627657e-31,
+          "growing_shift_from_incident_over_A": 0.016996579352749577,
+          "growing_shift_from_source": -1.6535690106478952e-42,
+          "RN_particular_growing_projection_per_A": 0.005142100624867891
+        },
+        {
+          "radius": 46.11710373230244,
+          "proper_distance": 71.63958360817173,
+          "growing_shift_from_incident": 2.112499616184864e-31,
+          "growing_shift_from_incident_over_A": 0.01702442828070253,
+          "growing_shift_from_source": -1.695652041466982e-42,
+          "RN_particular_growing_projection_per_A": 0.005054057903442145
+        },
+        {
+          "radius": 46.87052485689524,
+          "proper_distance": 72.4095660687772,
+          "growing_shift_from_incident": 2.115790902737679e-31,
+          "growing_shift_from_incident_over_A": 0.017050952437885965,
+          "growing_shift_from_source": -1.736625442339924e-42,
+          "RN_particular_growing_projection_per_A": 0.0049689479316631655
+        },
+        {
+          "radius": 47.624210131376145,
+          "proper_distance": 73.17954852938266,
+          "growing_shift_from_incident": 2.1189280124407743e-31,
+          "growing_shift_from_incident_over_A": 0.017076234098881243,
+          "growing_shift_from_source": -1.7765295400164083e-42,
+          "RN_particular_growing_projection_per_A": 0.004886627565684253
+        },
+        {
+          "radius": 48.378151348501135,
+          "proper_distance": 73.94953098998812,
+          "growing_shift_from_incident": 2.121920377365622e-31,
+          "growing_shift_from_incident_over_A": 0.017100349275832028,
+          "growing_shift_from_source": -1.815402949044373e-42,
+          "RN_particular_growing_projection_per_A": 0.004806962781813077
+        },
+        {
+          "radius": 49.13234067504407,
+          "proper_distance": 74.71951345059358,
+          "growing_shift_from_incident": 2.1247767220981376e-31,
+          "growing_shift_from_incident_over_A": 0.01712336827932491,
+          "growing_shift_from_source": -1.8532826401963704e-42,
+          "RN_particular_growing_projection_per_A": 0.0047298279643836795
+        },
+        {
+          "radius": 49.88677062952871,
+          "proper_distance": 75.48949591119904,
+          "growing_shift_from_incident": 2.1275051263106753e-31,
+          "growing_shift_from_incident_over_A": 0.017145356222651027,
+          "growing_shift_from_source": -1.8902040085663462e-42,
+          "RN_particular_growing_projection_per_A": 0.004655105259116292
+        },
+        {
+          "radius": 50.64143406158676,
+          "proper_distance": 76.2594783718045,
+          "growing_shift_from_incident": 2.1301130809286325e-31,
+          "growing_shift_from_incident_over_A": 0.01716637347444723,
+          "growing_shift_from_source": -1.9262009405973643e-42,
+          "RN_particular_growing_projection_per_A": 0.0045826839850637725
+        },
+        {
+          "radius": 51.39632413280188,
+          "proper_distance": 77.02946083240997,
+          "growing_shift_from_incident": 2.132607538687659e-31,
+          "growing_shift_from_incident_over_A": 0.01718647606613171,
+          "growing_shift_from_source": -1.961305879682368e-42,
+          "RN_particular_growing_projection_per_A": 0.004512460099060438
+        },
+        {
+          "radius": 52.151434298913756,
+          "proper_distance": 77.79944329301543,
+          "growing_shift_from_incident": 2.1349949597391816e-31,
+          "growing_shift_from_incident_over_A": 0.017205716059434474,
+          "growing_shift_from_source": -1.9955498900667942e-42,
+          "RN_particular_growing_projection_per_A": 0.0044443357072989275
+        },
+        {
+          "radius": 52.90675829326808,
+          "proper_distance": 78.56942575362089,
+          "growing_shift_from_incident": 2.1372813528030937e-31,
+          "growing_shift_from_incident_over_A": 0.01722414187804284,
+          "growing_shift_from_source": -2.0289627187684692e-42,
+          "RN_particular_growing_projection_per_A": 0.004378218619279052
+        },
+        {
+          "radius": 53.662290111409845,
+          "proper_distance": 79.33940821422635,
+          "growing_shift_from_incident": 2.1394723123816034e-31,
+          "growing_shift_from_incident_over_A": 0.017241798607504227,
+          "growing_shift_from_source": -2.0615728553930843e-42,
+          "RN_particular_growing_projection_per_A": 0.0043140219399120565
+        },
+        {
+          "radius": 54.41802399672664,
+          "proper_distance": 80.10939067483181,
+          "growing_shift_from_incident": 2.141573052443924e-31,
+          "growing_shift_from_incident_over_A": 0.017258728266687767,
+          "growing_shift_from_source": -2.093407589725241e-42,
+          "RN_particular_growing_projection_per_A": 0.004251663696035549
+        },
+        {
+          "radius": 55.17395442705757,
+          "proper_distance": 80.87937313543728,
+          "growing_shift_from_incident": 2.143588436990828e-31,
+          "growing_shift_from_incident_over_A": 0.017274970054101096,
+          "growing_shift_from_source": -2.1244930671006694e-42,
+          "RN_particular_growing_projection_per_A": 0.004191066494007651
+        },
+        {
+          "radius": 55.930076102191066,
+          "proper_distance": 81.64935559604274,
+          "growing_shift_from_incident": 2.1455230077639687e-31,
+          "growing_shift_from_incident_over_A": 0.017290560571197024,
+          "growing_shift_from_source": -2.154854341421298e-42,
+          "RN_particular_growing_projection_per_A": 0.004132157205411722
+        },
+        {
+          "radius": 56.68638393218206,
+          "proper_distance": 82.4193380566482,
+          "growing_shift_from_incident": 2.1473810094679055e-31,
+          "growing_shift_from_incident_over_A": 0.01730553402563543,
+          "growing_shift_from_source": -2.1845154259597333e-42,
+          "RN_particular_growing_projection_per_A": 0.00407486667822204
+        },
+        {
+          "radius": 57.44287302642492,
+          "proper_distance": 83.18932051725366,
+          "growing_shift_from_incident": 2.1491664127123285e-31,
+          "growing_shift_from_incident_over_A": 0.017319922416172376,
+          "growing_shift_from_source": -2.213499341886453e-42,
+          "RN_particular_growing_projection_per_A": 0.004019129471061863
+        },
+        {
+          "radius": 58.199538683424706,
+          "proper_distance": 83.95930297785912,
+          "growing_shift_from_incident": 2.1508829349032588e-31,
+          "growing_shift_from_incident_over_A": 0.017333755701020255,
+          "growing_shift_from_source": -2.2418281645561776e-42,
+          "RN_particular_growing_projection_per_A": 0.003964883608433285
+        },
+        {
+          "radius": 58.95637638121372,
+          "proper_distance": 84.72928543846459,
+          "growing_shift_from_incident": 2.1525340593426966e-31,
+          "growing_shift_from_incident_over_A": 0.017347061951770014,
+          "growing_shift_from_source": -2.269523067735387e-42,
+          "RN_particular_growing_projection_per_A": 0.003912070355017559
+        },
+        {
+          "radius": 59.71338176836547,
+          "proper_distance": 85.49926789907005,
+          "growing_shift_from_incident": 2.1541230526307684e-31,
+          "growing_shift_from_incident_over_A": 0.017359867493633333,
+          "growing_shift_from_source": -2.296604365640228e-42,
+          "RN_particular_growing_projection_per_A": 0.0038606340073385893
+        },
+        {
+          "radius": 60.47055065556191,
+          "proper_distance": 86.26925035967551,
+          "growing_shift_from_incident": 2.155652980603112e-31,
+          "growing_shift_from_incident_over_A": 0.017372197033880463,
+          "growing_shift_from_source": -2.3230915530169955e-42,
+          "RN_particular_growing_projection_per_A": 0.003810521701254505
+        },
+        {
+          "radius": 61.2278790076738,
+          "proper_distance": 87.03923282028097,
+          "growing_shift_from_incident": 2.1571267229254535e-31,
+          "growing_shift_from_incident_over_A": 0.01738407377945652,
+          "growing_shift_from_source": -2.349003343294955e-42,
+          "RN_particular_growing_projection_per_A": 0.003761683233895013
+        },
+        {
+          "radius": 61.98536293631722,
+          "proper_distance": 87.80921528088643,
+          "growing_shift_from_incident": 2.158546986447175e-31,
+          "growing_shift_from_incident_over_A": 0.017395519544596543,
+          "growing_shift_from_source": -2.3743577048180446e-42,
+          "RN_particular_growing_projection_per_A": 0.0037140708987983004
+        },
+        {
+          "radius": 62.74299869285235,
+          "proper_distance": 88.5791977414919,
+          "growing_shift_from_incident": 2.159916317474797e-31,
+          "growing_shift_from_incident_over_A": 0.017406554849736335,
+          "growing_shift_from_source": -2.399171895353629e-42,
+          "RN_particular_growing_projection_per_A": 0.003667639333122349
+        },
+        {
+          "radius": 63.50078266179352,
+          "proper_distance": 89.34918020209736,
+          "growing_shift_from_incident": 2.16123711302906e-31,
+          "growing_shift_from_incident_over_A": 0.01741719901223215,
+          "growing_shift_from_source": -2.423462494853786e-42,
+          "RN_particular_growing_projection_per_A": 0.003622345375913636
+        },
+        {
+          "radius": 64.25871135460194,
+          "proper_distance": 90.11916266270282,
+          "growing_shift_from_incident": 2.1625116311995933e-31,
+          "growing_shift_from_incident_over_A": 0.017427470229807982,
+          "growing_shift_from_source": -2.4472454366055043e-42,
+          "RN_particular_growing_projection_per_A": 0.003578147936512727
+        },
+        {
+          "radius": 65.01678140383477,
+          "proper_distance": 90.88914512330828,
+          "growing_shift_from_incident": 2.163742000671328e-31,
+          "growing_shift_from_incident_over_A": 0.017437385657327987,
+          "growing_shift_from_source": -2.470536036822256e-42,
+          "RN_particular_growing_projection_per_A": 0.003535007872262678
+        },
+        {
+          "radius": 65.7749895576264,
+          "proper_distance": 91.65912758391374,
+          "growing_shift_from_incident": 2.1649302295012245e-31,
+          "growing_shift_from_incident_over_A": 0.017446961477527265,
+          "growing_shift_from_source": -2.4933490227647846e-42,
+          "RN_particular_growing_projection_per_A": 0.003492887874763521
+        },
+        {
+          "radius": 66.53333267447951,
+          "proper_distance": 92.4291100445192,
+          "growing_shift_from_incident": 2.166078213206419e-31,
+          "growing_shift_from_incident_over_A": 0.017456212966193475,
+          "growing_shift_from_source": -2.5156985594438226e-42,
+          "RN_particular_growing_projection_per_A": 0.003451752363985536
+        },
+        {
+          "radius": 67.29180771834554,
+          "proper_distance": 93.19909250512467,
+          "growing_shift_from_incident": 2.167187742229775e-31,
+          "growing_shift_from_incident_over_A": 0.017465154552330938,
+          "growing_shift_from_source": -2.53759827499346e-42,
+          "RN_particular_growing_projection_per_A": 0.003411567389616344
+        },
+        {
+          "radius": 68.05041175397527,
+          "proper_distance": 93.96907496573013,
+          "growing_shift_from_incident": 2.168260508839462e-31,
+          "growing_shift_from_incident_over_A": 0.01747379987376372,
+          "growing_shift_from_source": -2.559061284791048e-42,
+          "RN_particular_growing_projection_per_A": 0.0033723005390729212
+        },
+        {
+          "radius": 68.80914194252205,
+          "proper_distance": 94.73905742633559,
+          "growing_shift_from_incident": 2.1692981134957114e-31,
+          "growing_shift_from_incident_over_A": 0.017482161828444663,
+          "growing_shift_from_source": -2.5801002143314905e-42,
+          "RN_particular_growing_projection_per_A": 0.0033339208516601207
+        },
+        {
+          "radius": 69.56799553738169,
+          "proper_distance": 95.50903988694105,
+          "growing_shift_from_incident": 2.170302070754886e-31,
+          "growing_shift_from_incident_over_A": 0.017490252622035705,
+          "growing_shift_from_source": -2.6007272210090638e-42,
+          "RN_particular_growing_projection_per_A": 0.0032963987384027464
+        },
+        {
+          "radius": 70.32696988025337,
+          "proper_distance": 96.2790223475465,
+          "growing_shift_from_incident": 2.171273814729118e-31,
+          "growing_shift_from_incident_over_A": 0.017498083811906588,
+          "growing_shift_from_source": -2.620954014787866e-42,
+          "RN_particular_growing_projection_per_A": 0.003259705907119359
+        },
+        {
+          "radius": 71.08606239740834,
+          "proper_distance": 97.04900480815196,
+          "growing_shift_from_incident": 2.1722147041442556e-31,
+          "growing_shift_from_incident_over_A": 0.017505666347896354,
+          "growing_shift_from_source": -2.6407918778384067e-42,
+          "RN_particular_growing_projection_per_A": 0.0032238152923430123
+        },
+        {
+          "radius": 71.84527059615262,
+          "proper_distance": 97.81898726875743,
+          "growing_shift_from_incident": 2.1731260270396396e-31,
+          "growing_shift_from_incident_over_A": 0.01751301061018836,
+          "growing_shift_from_source": -2.660251683235055e-42,
+          "RN_particular_growing_projection_per_A": 0.003188700989727757
+        },
+        {
+          "radius": 72.60459206147267,
+          "proper_distance": 98.5889697293629,
+          "growing_shift_from_incident": 2.1740090051207725e-31,
+          "growing_shift_from_incident_over_A": 0.01752012644438805,
+          "growing_shift_from_source": -2.6793439126916797e-42,
+          "RN_particular_growing_projection_per_A": 0.0031543381946100534
+        },
+        {
+          "radius": 73.364024452852,
+          "proper_distance": 99.35895218996836,
+          "growing_shift_from_incident": 2.1748647978098772e-31,
+          "growing_shift_from_incident_over_A": 0.017527023194165988,
+          "growing_shift_from_source": -2.6980786734536118e-42,
+          "RN_particular_growing_projection_per_A": 0.0031207031444218693
+        },
+        {
+          "radius": 74.12356550124895,
+          "proper_distance": 100.12893465057383,
+          "growing_shift_from_incident": 2.1756945060091566e-31,
+          "growing_shift_from_incident_over_A": 0.017533709731585603,
+          "growing_shift_from_source": -2.7164657143524112e-42,
+          "RN_particular_growing_projection_per_A": 0.003087773064677151
+        },
+        {
+          "radius": 74.88321300622569,
+          "proper_distance": 100.89891711117929,
+          "growing_shift_from_incident": 2.1764991756001213e-31,
+          "growing_shift_from_incident_over_A": 0.017540194485303938,
+          "growing_shift_from_source": -2.7345144410690607e-42,
+          "RN_particular_growing_projection_per_A": 0.0030555261182761287
+        },
+        {
+          "radius": 75.64296483321942,
+          "proper_distance": 101.66889957178475,
+          "growing_shift_from_incident": 2.1772798007049214e-31,
+          "growing_shift_from_incident_over_A": 0.017546485466854406,
+          "growing_shift_from_source": -2.752233930669923e-42,
+          "RN_particular_growing_projection_per_A": 0.0030239413578925173
+        },
+        {
+          "radius": 76.40281891094791,
+          "proper_distance": 102.43888203239021,
+          "growing_shift_from_incident": 2.1780373267225827e-31,
+          "growing_shift_from_incident_over_A": 0.0175525902951155,
+          "growing_shift_from_source": -2.769632945429354e-42,
+          "RN_particular_growing_projection_per_A": 0.0029929986812274765
+        },
+        {
+          "radius": 77.16277322894057,
+          "proper_distance": 103.20886449299567,
+          "growing_shift_from_incident": 2.178772653160681e-31,
+          "growing_shift_from_incident_over_A": 0.01755851621913101,
+          "growing_shift_from_source": -2.7867199459903568e-42,
+          "RN_particular_growing_projection_per_A": 0.0029626787889313402
+        },
+        {
+          "radius": 77.92282583518917,
+          "proper_distance": 103.97884695360113,
+          "growing_shift_from_incident": 2.1794866362764097e-31,
+          "growing_shift_from_incident_over_A": 0.017564270139394114,
+          "growing_shift_from_source": -2.803503103890391e-42,
+          "RN_particular_growing_projection_per_A": 0.0029329631450096664
+        },
+        {
+          "radius": 78.68297483391001,
+          "proper_distance": 104.7488294142066,
+          "growing_shift_from_incident": 2.1801800915441866e-31,
+          "growing_shift_from_incident_over_A": 0.017569858627733564,
+          "growing_shift_from_source": -2.8199903134988275e-42,
+          "RN_particular_growing_projection_per_A": 0.0029038339395444997
+        },
+        {
+          "radius": 79.4432183834123,
+          "proper_distance": 105.51881187481206,
+          "growing_shift_from_incident": 2.180853795958474e-31,
+          "growing_shift_from_incident_over_A": 0.01757528794587192,
+          "growing_shift_from_source": -2.836189203375712e-42,
+          "RN_particular_growing_projection_per_A": 0.002875274053574666
+        },
+        {
+          "radius": 80.20355469406594,
+          "proper_distance": 106.28879433541752,
+          "growing_shift_from_incident": 2.181508490187932e-31,
+          "growing_shift_from_incident_over_A": 0.01758056406278565,
+          "growing_shift_from_source": -2.8521071471010525e-42,
+          "RN_particular_growing_projection_per_A": 0.0028472670259908936
+        },
+        {
+          "radius": 80.9639820263641,
+          "proper_distance": 107.05877679602298,
+          "growing_shift_from_incident": 2.1821448805912976e-31,
+          "growing_shift_from_incident_over_A": 0.01758569267095089,
+          "growing_shift_from_source": -2.8677512735997767e-42,
+          "RN_particular_growing_projection_per_A": 0.002819797022312378
+        },
+        {
+          "radius": 81.7244986890744,
+          "proper_distance": 107.82875925662842,
+          "growing_shift_from_incident": 2.182763641101213e-31,
+          "growing_shift_from_incident_over_A": 0.017590679201525038,
+          "growing_shift_from_source": -2.8831284769684794e-42,
+          "RN_particular_growing_projection_per_A": 0.002792848805221459
+        },
+        {
+          "radius": 82.48510303747457,
+          "proper_distance": 108.59874171723388,
+          "growing_shift_from_incident": 2.1833654149926056e-31,
+          "growing_shift_from_incident_over_A": 0.01759552883859797,
+          "growing_shift_from_source": -2.89824542586664e-42,
+          "RN_particular_growing_projection_per_A": 0.00276640770674216
+        },
+        {
+          "radius": 83.24579347166791,
+          "proper_distance": 109.36872417783934,
+          "growing_shift_from_incident": 2.1839508165365903e-31,
+          "growing_shift_from_incident_over_A": 0.017600246532520673,
+          "growing_shift_from_source": -2.9131085724561667e-42,
+          "RN_particular_growing_projection_per_A": 0.0027404596019567533
+        },
+        {
+          "radius": 84.00656843497379,
+          "proper_distance": 110.1387066384448,
+          "growing_shift_from_incident": 2.1845204325522597e-31,
+          "growing_shift_from_incident_over_A": 0.017604837012410942,
+          "growing_shift_from_source": -2.927724160934937e-42,
+          "RN_particular_growing_projection_per_A": 0.002714990884162257
+        },
+        {
+          "radius": 84.7674264123898,
+          "proper_distance": 110.90868909905026,
+          "growing_shift_from_incident": 2.1850748238643783e-31,
+          "growing_shift_from_incident_over_A": 0.017609304797900842,
+          "growing_shift_from_source": -2.9420982356900684e-42,
+          "RN_particular_growing_projection_per_A": 0.0026899884413757727
+        },
+        {
+          "radius": 85.5283659291216,
+          "proper_distance": 111.67867155965573,
+          "growing_shift_from_incident": 2.185614526668734e-31,
+          "growing_shift_from_incident_over_A": 0.017613654210139905,
+          "growing_shift_from_source": -2.956236649063388e-42,
+          "RN_particular_growing_projection_per_A": 0.002665439634104153
+        },
+        {
+          "radius": 86.28938554917673,
+          "proper_distance": 112.44865402026119,
+          "growing_shift_from_incident": 2.186140053817095e-31,
+          "growing_shift_from_incident_over_A": 0.01761788938215049,
+          "growing_shift_from_source": -2.970145068779957e-42,
+          "RN_particular_growing_projection_per_A": 0.002641332274299451
+        },
+        {
+          "radius": 87.05048387401922,
+          "proper_distance": 113.21863648086665,
+          "growing_shift_from_incident": 2.1866518960236832e-31,
+          "growing_shift_from_incident_over_A": 0.017622014268550625,
+          "growing_shift_from_source": -2.983828985036334e-42,
+          "RN_particular_growing_projection_per_A": 0.0026176546054271217
+        },
+        {
+          "radius": 87.81165954128197,
+          "proper_distance": 113.98861894147211,
+          "growing_shift_from_incident": 2.187150522999767e-31,
+          "growing_shift_from_incident_over_A": 0.017626032654697598,
+          "growing_shift_from_source": -2.997293717272864e-42,
+          "RN_particular_growing_projection_per_A": 0.0025943952835790467
+        },
+        {
+          "radius": 88.57291122353368,
+          "proper_distance": 114.75860140207757,
+          "growing_shift_from_incident": 2.187636384521266e-31,
+          "growing_shift_from_incident_over_A": 0.017629948165291655,
+          "growing_shift_from_source": -3.010544420646101e-42,
+          "RN_particular_growing_projection_per_A": 0.0025715433595681343
+        },
+        {
+          "radius": 89.33423762709803,
+          "proper_distance": 115.52858386268304,
+          "growing_shift_from_incident": 2.188109911433606e-31,
+          "growing_shift_from_incident_over_A": 0.017633764272474043,
+          "growing_shift_from_source": -3.023586092214916e-42,
+          "RN_particular_growing_projection_per_A": 0.002549088261945574
+        },
+        {
+          "radius": 90.09563749092202,
+          "proper_distance": 116.2985663232885,
+          "growing_shift_from_incident": 2.1885715165981e-31,
+          "growing_shift_from_incident_over_A": 0.0176374843034538,
+          "growing_shift_from_source": -3.036423576855159e-42,
+          "RN_particular_growing_projection_per_A": 0.0025270197808858513
+        },
+        {
+          "radius": 90.85710958549123,
+          "proper_distance": 117.06854878389396,
+          "growing_shift_from_incident": 2.189021595783335e-31,
+          "growing_shift_from_incident_over_A": 0.017641111447691347,
+          "growing_shift_from_source": -3.049061572913862e-42,
+          "RN_particular_growing_projection_per_A": 0.0025053280528883047
+        },
+        {
+          "radius": 91.61865271178982,
+          "proper_distance": 117.83853124449942,
+          "growing_shift_from_incident": 2.1894605285064537e-31,
+          "growing_shift_from_incident_over_A": 0.017644648763678314,
+          "growing_shift_from_source": -3.0615046376242514e-42,
+          "RN_particular_growing_projection_per_A": 0.0024840035462474178
+        },
+        {
+          "radius": 92.3802657003028,
+          "proper_distance": 118.60851370510488,
+          "growing_shift_from_incident": 2.189888678825192e-31,
+          "growing_shift_from_incident_over_A": 0.017648099185320464,
+          "growing_shift_from_source": -3.0737571922777366e-42,
+          "RN_particular_growing_projection_per_A": 0.002463037047247245
+        },
+        {
+          "radius": 93.14194741005876,
+          "proper_distance": 119.37849616571035,
+          "growing_shift_from_incident": 2.190306396086576e-31,
+          "growing_shift_from_incident_over_A": 0.017651465527971397,
+          "growing_shift_from_source": -3.085823527182555e-42,
+          "RN_particular_growing_projection_per_A": 0.0024424196470382614
+        },
+        {
+          "radius": 93.90369672771118,
+          "proper_distance": 120.1484786263158,
+          "growing_shift_from_incident": 2.1907140156333776e-31,
+          "growing_shift_from_incident_over_A": 0.01765475049412579,
+          "growing_shift_from_source": -3.0977078064086626e-42,
+          "RN_particular_growing_projection_per_A": 0.0024221427291576574
+        },
+        {
+          "radius": 94.66551256665592,
+          "proper_distance": 120.91846108692127,
+          "growing_shift_from_incident": 2.1911118594705204e-31,
+          "growing_shift_from_incident_over_A": 0.017657956678789905,
+          "growing_shift_from_source": -3.109414072325661e-42,
+          "RN_particular_growing_projection_per_A": 0.002402197957656646
+        },
+        {
+          "radius": 95.427393866184,
+          "proper_distance": 121.68844354752673,
+          "growing_shift_from_incident": 2.1915002368963246e-31,
+          "growing_shift_from_incident_over_A": 0.01766108657456872,
+          "growing_shift_from_source": -3.1209462499598844e-42,
+          "RN_particular_growing_projection_per_A": 0.0023825772658006344
+        },
+        {
+          "radius": 96.18933959066747,
+          "proper_distance": 122.4584260081322,
+          "growing_shift_from_incident": 2.191879445097934e-31,
+          "growing_shift_from_incident_over_A": 0.017664142576464432,
+          "growing_shift_from_source": -3.132308151159842e-42,
+          "RN_particular_growing_projection_per_A": 0.00236327284531034
+        },
+        {
+          "radius": 96.95134872877682,
+          "proper_distance": 123.22840846873765,
+          "growing_shift_from_incident": 2.1922497697151134e-31,
+          "growing_shift_from_incident_over_A": 0.017667126986420034,
+          "growing_shift_from_source": -3.143503478592672e-42,
+          "RN_particular_growing_projection_per_A": 0.0023442771361139067
+        },
+        {
+          "radius": 97.71342029272876,
+          "proper_distance": 123.99839092934312,
+          "growing_shift_from_incident": 2.1926114853737634e-31,
+          "growing_shift_from_incident_over_A": 0.017670042017618865,
+          "growing_shift_from_source": -3.154535829575532e-42,
+          "RN_particular_growing_projection_per_A": 0.002325582816581977
+        },
+        {
+          "radius": 98.47555331756277,
+          "proper_distance": 124.76837338994858,
+          "growing_shift_from_incident": 2.1929648561904456e-31,
+          "growing_shift_from_incident_over_A": 0.017672889798550518,
+          "growing_shift_from_source": -3.165408699745645e-42,
+          "RN_particular_growing_projection_per_A": 0.0023071827942194065
+        },
+        {
+          "radius": 99.2377468604453,
+          "proper_distance": 125.53835585055404,
+          "growing_shift_from_incident": 2.1933101362507522e-31,
+          "growing_shift_from_incident_over_A": 0.017675672376865997,
+          "growing_shift_from_source": -3.176125486584445e-42,
+          "RN_particular_growing_projection_per_A": 0.0022890701967889305
+        },
+        {
+          "radius": 99.99999999999997,
+          "proper_distance": 126.30833831115952,
+          "growing_shift_from_incident": 2.193647570062169e-31,
+          "growing_shift_from_incident_over_A": 0.01767839172302726,
+          "growing_shift_from_source": -3.186689492795833e-42,
+          "RN_particular_growing_projection_per_A": 0.0022712383638436254
+        }
+      ],
+      "convention": "Y=Phi_RN*c+A_dip*y_particular. c100=(I+D)c10+A_dip*[a+(1-exp(-2epsilon))*a_clock], epsilon=log[N100/(clock*Bfull100)]. The zero-offset column follows the existing clock calibration; epsilon is retained explicitly, not silently selected from rounded logs. D and a are integrated after division byalpha. Growing/source columns are diagnostics, not selected physical inner data."
+    },
+    {
+      "refinement": 2,
+      "radius_interval": [
+        10.0,
+        100.0
+      ],
+      "proper_interval": [
+        33.91044303850411,
+        126.30833831115928
+      ],
+      "transfer_correction": [
+        [
+          -1.9239882734752153e-12,
+          -2.271851906773862e-15
+        ],
+        [
+          -6.525122323744226e-07,
+          9.491219790991227e-12
+        ]
+      ],
+      "affine_correction_per_A": [
+        -2.568122288492055e-13,
+        -1.3690147250647118e-07
+      ],
+      "first_order_transfer_correction": [
+        [
+          -1.9239882734850575e-12,
+          -2.2718519067716673e-15
+        ],
+        [
+          -6.525122323752785e-07,
+          9.491219789471764e-12
+        ]
+      ],
+      "first_order_affine_correction_per_A": [
+        -2.568122288521799e-13,
+        -1.3690147250649898e-07
+      ],
+      "growing_shift_from_incident": 2.1936475357846907e-31,
+      "growing_shift_from_source": -3.186689890141431e-42,
+      "source_order_incident_growing_shift": 0.01767839144678841,
+      "growing_shift_per_unknown_decaying_input": -2.271851906773862e-15,
+      "composition_relative_error": 7.13960747210241e-15,
+      "affine_composition_relative_error": 1.1600947360348818e-15,
+      "determinant_relative_error": 2.1349778059167247e-16,
+      "basis_inverse_maximum_error": 7.534730713698658e-66,
+      "beyond_first_order_transfer_relative_size": 1.3117406091926338e-12,
+      "beyond_first_order_affine_relative_size": 2.0301657880610432e-13,
+      "solver_evaluations": 2629,
+      "coefficient_sample_count": 1025,
+      "reconstructed_clock_log_maximum_difference": 1.4360170928139633e-13,
+      "background_clock_offset_estimate": -9.239709523729803e-14,
+      "affine_clock_offset_response_per_A": [
+        0.025777621804016222,
+        2213.326941633334
+      ],
+      "clock_composition_relative_error": 1.23275240272695e-15,
+      "plot": [
+        {
+          "radius": 10.000000000000002,
+          "proper_distance": 33.91044303850411,
+          "growing_shift_from_incident": -0.0,
+          "growing_shift_from_incident_over_A": -0.0,
+          "growing_shift_from_source": 0.0,
+          "RN_particular_growing_projection_per_A": 0.028048860147625573
+        },
+        {
+          "radius": 10.695540953631435,
+          "proper_distance": 34.680425499109575,
+          "growing_shift_from_incident": 2.800992371070364e-32,
+          "growing_shift_from_incident_over_A": 0.002257292421297624,
+          "growing_shift_from_source": 5.790533851953074e-43,
+          "RN_particular_growing_projection_per_A": 0.025803357845076726
+        },
+        {
+          "radius": 11.395788706484971,
+          "proper_distance": 35.45040795971503,
+          "growing_shift_from_incident": 5.117411149341532e-32,
+          "growing_shift_from_incident_over_A": 0.00412407171236184,
+          "growing_shift_from_source": 9.580428553198274e-43,
+          "RN_particular_growing_projection_per_A": 0.023876758696954294
+        },
+        {
+          "radius": 12.100208103005038,
+          "proper_distance": 36.22039042032049,
+          "growing_shift_from_incident": 7.052512322156361e-32,
+          "growing_shift_from_incident_over_A": 0.005683550865876936,
+          "growing_shift_from_source": 1.1962688231117901e-42,
+          "RN_particular_growing_projection_per_A": 0.022207237385105605
+        },
+        {
+          "radius": 12.808347705727593,
+          "proper_distance": 36.99037288092595,
+          "growing_shift_from_incident": 8.683935368450553e-32,
+          "growing_shift_from_incident_over_A": 0.006998298780353727,
+          "growing_shift_from_source": 1.3344171385245728e-42,
+          "RN_particular_growing_projection_per_A": 0.020747717784247912
+        },
+        {
+          "radius": 13.519823603953006,
+          "proper_distance": 37.76035534153141,
+          "growing_shift_from_incident": 1.0070848450706192e-31,
+          "growing_shift_from_incident_over_A": 0.008115998500606032,
+          "growing_shift_from_source": 1.4008751403209923e-42,
+          "RN_particular_growing_projection_per_A": 0.019461776131258067
+        },
+        {
+          "radius": 14.234306877132909,
+          "proper_distance": 38.53033780213687,
+          "growing_shift_from_incident": 1.125890530011209e-31,
+          "growing_shift_from_incident_over_A": 0.00907344192313483,
+          "growing_shift_from_source": 1.4157402007489934e-42,
+          "RN_particular_growing_projection_per_A": 0.018320824777497184
+        },
+        {
+          "radius": 14.951513784224078,
+          "proper_distance": 39.30032026274233,
+          "growing_shift_from_incident": 1.228373717480322e-31,
+          "growing_shift_from_incident_over_A": 0.009899343931200818,
+          "growing_shift_from_source": 1.3934213340284339e-42,
+          "RN_particular_growing_projection_per_A": 0.017302136281058672
+        },
+        {
+          "radius": 15.671198009485341,
+          "proper_distance": 40.070302723347794,
+          "growing_shift_from_incident": 1.3173448437991078e-31,
+          "growing_shift_from_incident_over_A": 0.010616353556889167,
+          "growing_shift_from_source": 1.3443618604205043e-42,
+          "RN_particular_growing_projection_per_A": 0.016387431351494085
+        },
+        {
+          "radius": 16.393144476385604,
+          "proper_distance": 40.84028518395325,
+          "growing_shift_from_incident": 1.3950424382609433e-31,
+          "growing_shift_from_incident_over_A": 0.01124251088935179,
+          "growing_shift_from_source": 1.2762009448613491e-42,
+          "RN_particular_growing_projection_per_A": 0.015561852808825702
+        },
+        {
+          "radius": 17.117164369426455,
+          "proper_distance": 41.61026764455871,
+          "growing_shift_from_incident": 1.463265735731839e-31,
+          "growing_shift_from_incident_over_A": 0.011792315786814389,
+          "growing_shift_from_source": 1.1945696118552616e-42,
+          "RN_particular_growing_projection_per_A": 0.014813208670803418
+        },
+        {
+          "radius": 17.843091095335858,
+          "proper_distance": 42.380250105164166,
+          "growing_shift_from_incident": 1.5234731089382645e-31,
+          "growing_shift_from_incident_over_A": 0.012277521132779566,
+          "growing_shift_from_source": 1.1036444016727626e-42,
+          "RN_particular_growing_projection_per_A": 0.014131406018446466
+        },
+        {
+          "radius": 18.570776981375005,
+          "proper_distance": 43.15023256576963,
+          "growing_shift_from_incident": 1.576855939347015e-31,
+          "growing_shift_from_incident_over_A": 0.012707728154239754,
+          "growing_shift_from_source": 1.006537661161197e-42,
+          "RN_particular_growing_projection_per_A": 0.013508022169671273
+        },
+        {
+          "radius": 19.300090556949407,
+          "proper_distance": 43.92021502637509,
+          "growing_shift_from_incident": 1.624394630159262e-31,
+          "growing_shift_from_incident_over_A": 0.013090837824930823,
+          "growing_shift_from_source": 9.055760554920258e-43,
+          "RN_particular_growing_projection_per_A": 0.012935976064687701
+        },
+        {
+          "radius": 20.030914300488174,
+          "proper_distance": 44.69019748698055,
+          "growing_shift_from_incident": 1.666901489578439e-31,
+          "growing_shift_from_incident_over_A": 0.01343339645740366,
+          "growing_shift_from_source": 8.025015336527918e-43,
+          "RN_particular_growing_projection_per_A": 0.0124092737342349
+        },
+        {
+          "radius": 20.763142760224095,
+          "proper_distance": 45.460179947586006,
+          "growing_shift_from_incident": 1.7050538604991518e-31,
+          "growing_shift_from_incident_over_A": 0.013740862691954491,
+          "growing_shift_from_source": 6.986178175463488e-43,
+          "RN_particular_growing_projection_per_A": 0.011922809187920977
+        },
+        {
+          "radius": 21.496680977571494,
+          "proper_distance": 46.23016240819147,
+          "growing_shift_from_incident": 1.7394199348013111e-31,
+          "growing_shift_from_incident_over_A": 0.014017815531502466,
+          "growing_shift_from_source": 5.948981798786643e-43,
+          "RN_particular_growing_projection_per_A": 0.011472207219397262
+        },
+        {
+          "radius": 22.231443157027268,
+          "proper_distance": 47.00014486879693,
+          "growing_shift_from_incident": 1.7704790279242945e-31,
+          "growing_shift_from_incident_over_A": 0.014268117732404556,
+          "growing_shift_from_source": 4.920654079260117e-43,
+          "RN_particular_growing_projection_per_A": 0.01105369824038639
+        },
+        {
+          "radius": 22.96735153817364,
+          "proper_distance": 47.770127329402385,
+          "growing_shift_from_incident": 1.7986376231127212e-31,
+          "growing_shift_from_incident_over_A": 0.01449504510346674,
+          "growing_shift_from_source": 3.906515901856836e-43,
+          "RN_particular_growing_projection_per_A": 0.010664017821760307
+        },
+        {
+          "radius": 23.70433543434879,
+          "proper_distance": 48.54010979000785,
+          "growing_shift_from_incident": 1.824242158619686e-31,
+          "growing_shift_from_incident_over_A": 0.014701389556767166,
+          "growing_shift_from_source": 2.910431311395153e-43,
+          "RN_particular_growing_projection_per_A": 0.010300325463399866
+        },
+        {
+          "radius": 24.44233040953589,
+          "proper_distance": 49.31009225061331,
+          "growing_shift_from_incident": 1.8475892876243649e-31,
+          "growing_shift_from_incident_over_A": 0.014889541791331019,
+          "growing_shift_from_source": 1.9351485908247846e-43,
+          "RN_particular_growing_projection_per_A": 0.00996013845390881
+        },
+        {
+          "radius": 25.181277570486476,
+          "proper_distance": 50.08007471121877,
+          "growing_shift_from_incident": 1.8689341623771702e-31,
+          "growing_shift_from_incident_over_A": 0.015061558054248017,
+          "growing_shift_from_source": 9.82560165776366e-44,
+          "RN_particular_growing_projection_per_A": 0.009641277664569405
+        },
+        {
+          "radius": 25.921122955399763,
+          "proper_distance": 50.850057171824226,
+          "growing_shift_from_incident": 1.8884971635747335e-31,
+          "growing_shift_from_incident_over_A": 0.015219214372048772,
+          "growing_shift_from_source": 5.3901676195183416e-45,
+          "RN_particular_growing_projection_per_A": 0.009341822850998901
+        },
+        {
+          "radius": 26.661817003894203,
+          "proper_distance": 51.62003963242969,
+          "growing_shift_from_incident": 1.9064693977538832e-31,
+          "growing_shift_from_incident_over_A": 0.015364050853666458,
+          "growing_shift_from_source": -8.500948610304389e-44,
+          "RN_particular_growing_projection_per_A": 0.009060075581554828
+        },
+        {
+          "radius": 27.403314095731048,
+          "proper_distance": 52.39002209303514,
+          "growing_shift_from_incident": 1.9230172127018936e-31,
+          "growing_shift_from_incident_over_A": 0.01549740807968741,
+          "growing_shift_from_source": -1.7290827412198624e-43,
+          "RN_particular_growing_projection_per_A": 0.008794528323390212
+        },
+        {
+          "radius": 28.145572147935184,
+          "proper_distance": 53.160004553640604,
+          "growing_shift_from_incident": 1.938285925058423e-31,
+          "growing_shift_from_incident_over_A": 0.015620457142731435,
+          "growing_shift_from_source": -2.583008881210379e-43,
+          "RN_particular_growing_projection_per_A": 0.00854383853052052
+        },
+        {
+          "radius": 28.88855226172208,
+          "proper_distance": 53.929987014246066,
+          "growing_shift_from_incident": 1.952402912869864e-31,
+          "growing_shift_from_incident_over_A": 0.01573422457004556,
+          "growing_shift_from_source": -3.4120425545414792e-43,
+          "RN_particular_growing_projection_per_A": 0.008306806818694785
+        },
+        {
+          "radius": 29.632218412069808,
+          "proper_distance": 54.69996947485153,
+          "growing_shift_from_incident": 1.9654801930769845e-31,
+          "growing_shift_from_incident_over_A": 0.015839613095225434,
+          "growing_shift_from_source": -4.216519885348253e-43,
+          "RN_particular_growing_projection_per_A": 0.008082358497635327
+        },
+        {
+          "radius": 30.376537173941117,
+          "proper_distance": 55.46995193545698,
+          "growing_shift_from_incident": 1.9776165792351997e-31,
+          "growing_shift_from_incident_over_A": 0.015937419047072465,
+          "growing_shift_from_source": -4.9969005501914746e-43,
+          "RN_particular_growing_projection_per_A": 0.007869527875749448
+        },
+        {
+          "radius": 31.121477480115594,
+          "proper_distance": 56.239934396062445,
+          "growing_shift_from_incident": 1.9888994954960877e-31,
+          "growing_shift_from_incident_over_A": 0.016028346968293847,
+          "growing_shift_from_source": -5.7537339742480965e-43,
+          "RN_particular_growing_projection_per_A": 0.007667444865617276
+        },
+        {
+          "radius": 31.867010406378043,
+          "proper_distance": 57.0099168566679,
+          "growing_shift_from_incident": 1.9994065077816657e-31,
+          "growing_shift_from_incident_over_A": 0.016113021955086664,
+          "growing_shift_from_source": -6.487632938411291e-43,
+          "RN_particular_growing_projection_per_A": 0.0074753235077729355
+        },
+        {
+          "radius": 32.61310898045885,
+          "proper_distance": 57.77989931727336,
+          "growing_shift_from_incident": 2.0092066211749255e-31,
+          "growing_shift_from_incident_over_A": 0.01619200011268161,
+          "growing_shift_from_source": -7.199252990439661e-43,
+          "RN_particular_growing_projection_per_A": 0.007292452101024305
+        },
+        {
+          "radius": 33.359748011661026,
+          "proper_distance": 58.549881777878824,
+          "growing_shift_from_incident": 2.01836138331482e-31,
+          "growing_shift_from_incident_over_A": 0.016265777447495515,
+          "growing_shift_from_source": -7.889276412878164e-43,
+          "RN_particular_growing_projection_per_A": 0.007118184683947691
+        },
+        {
+          "radius": 34.10690393855852,
+          "proper_distance": 59.319864238484286,
+          "growing_shift_from_incident": 2.0269258261106737e-31,
+          "growing_shift_from_incident_over_A": 0.016334797456315924,
+          "growing_shift_from_source": -8.558399777713194e-43,
+          "RN_particular_growing_projection_per_A": 0.006951933657397393
+        },
+        {
+          "radius": 34.854554692525895,
+          "proper_distance": 60.08984669908975,
+          "growing_shift_from_incident": 2.034949272197409e-31,
+          "growing_shift_from_incident_over_A": 0.016399457625445042,
+          "growing_shift_from_source": -9.207324329477299e-43,
+          "RN_particular_growing_projection_per_A": 0.006793163374292904
+        },
+        {
+          "radius": 35.602679575175564,
+          "proper_distance": 60.8598291596952,
+          "growing_shift_from_incident": 2.0424760277820032e-31,
+          "growing_shift_from_incident_over_A": 0.01646011501428174,
+          "growing_shift_from_source": -9.83674860244415e-43,
+          "RN_particular_growing_projection_per_A": 0.006641384552438533
+        },
+        {
+          "radius": 36.35125914804452,
+          "proper_distance": 61.629811620300664,
+          "growing_shift_from_incident": 2.0495459797551377e-31,
+          "growing_shift_from_incident_over_A": 0.016517091067386077,
+          "growing_shift_from_source": -1.0447362803844841e-42,
+          "RN_particular_growing_projection_per_A": 0.006496149390123096
+        },
+        {
+          "radius": 37.10027513309796,
+          "proper_distance": 62.39979408090612,
+          "growing_shift_from_incident": 2.0561951118466873e-31,
+          "growing_shift_from_incident_over_A": 0.016570675774126017,
+          "growing_shift_from_source": -1.1039844593910537e-42,
+          "RN_particular_growing_projection_per_A": 0.006357047283854177
+        },
+        {
+          "radius": 37.849710322807574,
+          "proper_distance": 63.16977654151158,
+          "growing_shift_from_incident": 2.0624559520615344e-31,
+          "growing_shift_from_incident_over_A": 0.016621131274519006,
+          "growing_shift_from_source": -1.1614855970860643e-42,
+          "RN_particular_growing_projection_per_A": 0.006223701063673548
+        },
+        {
+          "radius": 38.599548498725376,
+          "proper_distance": 63.93975900211704,
+          "growing_shift_from_incident": 2.0683579616375615e-31,
+          "growing_shift_from_incident_over_A": 0.01666869499380647,
+          "growing_shift_from_source": -1.2173041028951265e-42,
+          "RN_particular_growing_projection_per_A": 0.006095763674762092
+        },
+        {
+          "radius": 39.34977435761217,
+          "proper_distance": 64.7097414627225,
+          "growing_shift_from_incident": 2.073927874066476e-31,
+          "growing_shift_from_incident_over_A": 0.016713582374589572,
+          "growing_shift_from_source": -1.2715024405536009e-42,
+          "RN_particular_growing_projection_per_A": 0.005972915245015554
+        },
+        {
+          "radius": 40.10037344429892,
+          "proper_distance": 65.47972392332795,
+          "growing_shift_from_incident": 2.079189991348767e-31,
+          "growing_shift_from_incident_over_A": 0.016755989264319,
+          "growing_shift_from_source": -1.3241410270547084e-42,
+          "RN_particular_growing_projection_per_A": 0.005854860487385968
+        },
+        {
+          "radius": 40.851332090561165,
+          "proper_distance": 66.24970638393341,
+          "growing_shift_from_incident": 2.0841664435103376e-31,
+          "growing_shift_from_incident_over_A": 0.01679609400671418,
+          "growing_shift_from_source": -1.3752781741533691e-42,
+          "RN_particular_growing_projection_per_A": 0.005741326393380758
+        },
+        {
+          "radius": 41.60263735937445,
+          "proper_distance": 67.01968884453888,
+          "growing_shift_from_incident": 2.088877416491207e-31,
+          "growing_shift_from_incident_over_A": 0.01683405927829609,
+          "growing_shift_from_source": -1.4249700630923243e-42,
+          "RN_particular_growing_projection_per_A": 0.005632060180466816
+        },
+        {
+          "radius": 42.35427699399469,
+          "proper_distance": 67.78967130514434,
+          "growing_shift_from_incident": 2.093341352716022e-31,
+          "growing_shift_from_incident_over_A": 0.01687003370476545,
+          "growing_shift_from_source": -1.4732707451020496e-42,
+          "RN_particular_growing_projection_per_A": 0.005526827461461326
+        },
+        {
+          "radius": 43.106239371373064,
+          "proper_distance": 68.5596537657498,
+          "growing_shift_from_incident": 2.0975751280152853e-31,
+          "growing_shift_from_incident_over_A": 0.01690415328679363,
+          "growing_shift_from_source": -1.5202321617195627e-42,
+          "RN_particular_growing_projection_per_A": 0.00542541060848342
+        },
+        {
+          "radius": 43.85851345947186,
+          "proper_distance": 69.32963622635526,
+          "growing_shift_from_incident": 2.1015942080190618e-31,
+          "growing_shift_from_incident_over_A": 0.01693654266038427,
+          "growing_shift_from_source": -1.565904180168062e-42,
+          "RN_particular_growing_projection_per_A": 0.005327607287835728
+        },
+        {
+          "radius": 44.61108877809735,
+          "proper_distance": 70.09961868696072,
+          "growing_shift_from_incident": 2.105412786700372e-31,
+          "growing_shift_from_incident_over_A": 0.016967316213380976,
+          "growing_shift_from_source": -1.61033464000238e-42,
+          "RN_particular_growing_projection_per_A": 0.005233229145400528
+        },
+        {
+          "radius": 45.36395536290903,
+          "proper_distance": 70.86960114756619,
+          "growing_shift_from_incident": 2.109043909343206e-31,
+          "growing_shift_from_incident_over_A": 0.01699657907645453,
+          "growing_shift_from_source": -1.6535694079888967e-42,
+          "RN_particular_growing_projection_per_A": 0.005142100624867894
+        },
+        {
+          "radius": 46.117103732302404,
+          "proper_distance": 71.63958360817165,
+          "growing_shift_from_incident": 2.11249958190424e-31,
+          "growing_shift_from_incident_over_A": 0.017024428004438322,
+          "growing_shift_from_source": -1.695652438810503e-42,
+          "RN_particular_growing_projection_per_A": 0.005054057903442149
+        },
+        {
+          "radius": 46.87052485689521,
+          "proper_distance": 72.4095660687771,
+          "growing_shift_from_incident": 2.1157908684556155e-31,
+          "growing_shift_from_incident_over_A": 0.01705095216161016,
+          "growing_shift_from_source": -1.736625839682577e-42,
+          "RN_particular_growing_projection_per_A": 0.004968947931663169
+        },
+        {
+          "radius": 47.624210131376095,
+          "proper_distance": 73.17954852938256,
+          "growing_shift_from_incident": 2.1189279781676654e-31,
+          "growing_shift_from_incident_over_A": 0.017076233822677603,
+          "growing_shift_from_source": -1.776529937367286e-42,
+          "RN_particular_growing_projection_per_A": 0.004886627565684258
+        },
+        {
+          "radius": 48.37815134850108,
+          "proper_distance": 73.94953098998802,
+          "growing_shift_from_incident": 2.121920343089674e-31,
+          "growing_shift_from_incident_over_A": 0.017100348999605507,
+          "growing_shift_from_source": -1.815403346392689e-42,
+          "RN_particular_growing_projection_per_A": 0.004806962781813082
+        },
+        {
+          "radius": 49.132340675044,
+          "proper_distance": 74.71951345059347,
+          "growing_shift_from_incident": 2.124776687823388e-31,
+          "growing_shift_from_incident_over_A": 0.017123368003108045,
+          "growing_shift_from_source": -1.85328303754609e-42,
+          "RN_particular_growing_projection_per_A": 0.004729827964383687
+        },
+        {
+          "radius": 49.88677062952866,
+          "proper_distance": 75.48949591119893,
+          "growing_shift_from_incident": 2.127505092038594e-31,
+          "growing_shift_from_incident_over_A": 0.01714535594645567,
+          "growing_shift_from_source": -1.8902044059192146e-42,
+          "RN_particular_growing_projection_per_A": 0.0046551052591162975
+        },
+        {
+          "radius": 50.6414340615867,
+          "proper_distance": 76.25947837180439,
+          "growing_shift_from_incident": 2.130113046655411e-31,
+          "growing_shift_from_incident_over_A": 0.01716637319824268,
+          "growing_shift_from_source": -1.926201337948906e-42,
+          "RN_particular_growing_projection_per_A": 0.0045826839850637785
+        },
+        {
+          "radius": 51.39632413280184,
+          "proper_distance": 77.02946083240985,
+          "growing_shift_from_incident": 2.132607504414403e-31,
+          "growing_shift_from_incident_over_A": 0.017186475789926884,
+          "growing_shift_from_source": -1.9613062770337735e-42,
+          "RN_particular_growing_projection_per_A": 0.0045124600990604415
+        },
+        {
+          "radius": 52.15143429891371,
+          "proper_distance": 77.79944329301532,
+          "growing_shift_from_incident": 2.1349949254660477e-31,
+          "growing_shift_from_incident_over_A": 0.01720571578323063,
+          "growing_shift_from_source": -1.995550287418398e-42,
+          "RN_particular_growing_projection_per_A": 0.004444335707298932
+        },
+        {
+          "radius": 52.90675829326804,
+          "proper_distance": 78.56942575362078,
+          "growing_shift_from_incident": 2.137281318529717e-31,
+          "growing_shift_from_incident_over_A": 0.01722414160183704,
+          "growing_shift_from_source": -2.0289631161196318e-42,
+          "RN_particular_growing_projection_per_A": 0.004378218619279056
+        },
+        {
+          "radius": 53.66229011140982,
+          "proper_distance": 79.33940821422624,
+          "growing_shift_from_incident": 2.1394722781060326e-31,
+          "growing_shift_from_incident_over_A": 0.017241798331280745,
+          "growing_shift_from_source": -2.061573252740375e-42,
+          "RN_particular_growing_projection_per_A": 0.004314021939912058
+        },
+        {
+          "radius": 54.41802399672664,
+          "proper_distance": 80.1093906748317,
+          "growing_shift_from_incident": 2.1415730181694435e-31,
+          "growing_shift_from_incident_over_A": 0.017258727990473073,
+          "growing_shift_from_source": -2.0934079870744592e-42,
+          "RN_particular_growing_projection_per_A": 0.004251663696035549
+        },
+        {
+          "radius": 55.17395442705758,
+          "proper_distance": 80.87937313543716,
+          "growing_shift_from_incident": 2.1435884027145554e-31,
+          "growing_shift_from_incident_over_A": 0.017274969777871955,
+          "growing_shift_from_source": -2.1244934644462845e-42,
+          "RN_particular_growing_projection_per_A": 0.00419106649400765
+        },
+        {
+          "radius": 55.930076102191094,
+          "proper_distance": 81.64935559604262,
+          "growing_shift_from_incident": 2.1455229734871893e-31,
+          "growing_shift_from_incident_over_A": 0.017290560294963803,
+          "growing_shift_from_source": -2.1548547387658966e-42,
+          "RN_particular_growing_projection_per_A": 0.00413215720541172
+        },
+        {
+          "radius": 56.68638393218209,
+          "proper_distance": 82.41933805664807,
+          "growing_shift_from_incident": 2.147380975191473e-31,
+          "growing_shift_from_incident_over_A": 0.017305533749405005,
+          "growing_shift_from_source": -2.1845158233050202e-42,
+          "RN_particular_growing_projection_per_A": 0.0040748666782220375
+        },
+        {
+          "radius": 57.44287302642494,
+          "proper_distance": 83.18932051725353,
+          "growing_shift_from_incident": 2.1491663784329357e-31,
+          "growing_shift_from_incident_over_A": 0.017319922139918092,
+          "growing_shift_from_source": -2.2134997392250426e-42,
+          "RN_particular_growing_projection_per_A": 0.004019129471061861
+        },
+        {
+          "radius": 58.19953868342474,
+          "proper_distance": 83.959302977859,
+          "growing_shift_from_incident": 2.150882900625154e-31,
+          "growing_shift_from_incident_over_A": 0.017333755424776356,
+          "growing_shift_from_source": -2.2418285618976956e-42,
+          "RN_particular_growing_projection_per_A": 0.003964883608433283
+        },
+        {
+          "radius": 58.95637638121376,
+          "proper_distance": 84.72928543846444,
+          "growing_shift_from_incident": 2.1525340250640408e-31,
+          "growing_shift_from_incident_over_A": 0.017347061675521674,
+          "growing_shift_from_source": -2.2695234650755217e-42,
+          "RN_particular_growing_projection_per_A": 0.003912070355017556
+        },
+        {
+          "radius": 59.71338176836549,
+          "proper_distance": 85.4992678990699,
+          "growing_shift_from_incident": 2.1541230183506897e-31,
+          "growing_shift_from_incident_over_A": 0.017359867217373523,
+          "growing_shift_from_source": -2.2966047629767863e-42,
+          "RN_particular_growing_projection_per_A": 0.003860634007338588
+        },
+        {
+          "radius": 60.47055065556193,
+          "proper_distance": 86.26925035967537,
+          "growing_shift_from_incident": 2.155652946323901e-31,
+          "growing_shift_from_incident_over_A": 0.017372196757627648,
+          "growing_shift_from_source": -2.3230919503557546e-42,
+          "RN_particular_growing_projection_per_A": 0.0038105217012545036
+        },
+        {
+          "radius": 61.22787900767381,
+          "proper_distance": 87.03923282028083,
+          "growing_shift_from_incident": 2.1571266886455084e-31,
+          "growing_shift_from_incident_over_A": 0.017384073503197785,
+          "growing_shift_from_source": -2.349003740631695e-42,
+          "RN_particular_growing_projection_per_A": 0.0037616832338950128
+        },
+        {
+          "radius": 61.98536293631725,
+          "proper_distance": 87.80921528088629,
+          "growing_shift_from_incident": 2.158546952167496e-31,
+          "growing_shift_from_incident_over_A": 0.017395519268339956,
+          "growing_shift_from_source": -2.3743581021555273e-42,
+          "RN_particular_growing_projection_per_A": 0.0037140708987982987
+        },
+        {
+          "radius": 62.742998692852375,
+          "proper_distance": 88.57919774149175,
+          "growing_shift_from_incident": 2.1599162831951786e-31,
+          "growing_shift_from_incident_over_A": 0.017406554573480233,
+          "growing_shift_from_source": -2.3991722926912992e-42,
+          "RN_particular_growing_projection_per_A": 0.0036676393331223477
+        },
+        {
+          "radius": 63.50078266179354,
+          "proper_distance": 89.34918020209722,
+          "growing_shift_from_incident": 2.161237078749505e-31,
+          "growing_shift_from_incident_over_A": 0.017417198735976563,
+          "growing_shift_from_source": -2.423462892191668e-42,
+          "RN_particular_growing_projection_per_A": 0.0036223453759136348
+        },
+        {
+          "radius": 64.25871135460196,
+          "proper_distance": 90.11916266270268,
+          "growing_shift_from_incident": 2.162511596920066e-31,
+          "growing_shift_from_incident_over_A": 0.017427469953552616,
+          "growing_shift_from_source": -2.4472458339434658e-42,
+          "RN_particular_growing_projection_per_A": 0.003578147936512726
+        },
+        {
+          "radius": 65.01678140383476,
+          "proper_distance": 90.88914512330814,
+          "growing_shift_from_incident": 2.163741966392214e-31,
+          "growing_shift_from_incident_over_A": 0.017437385381075948,
+          "growing_shift_from_source": -2.4705364341615822e-42,
+          "RN_particular_growing_projection_per_A": 0.003535007872262679
+        },
+        {
+          "radius": 65.7749895576264,
+          "proper_distance": 91.6591275839136,
+          "growing_shift_from_incident": 2.164930195222239e-31,
+          "growing_shift_from_incident_over_A": 0.017446961201276267,
+          "growing_shift_from_source": -2.4933494201045365e-42,
+          "RN_particular_growing_projection_per_A": 0.003492887874763521
+        },
+        {
+          "radius": 66.53333267447948,
+          "proper_distance": 92.42911004451905,
+          "growing_shift_from_incident": 2.166078178927436e-31,
+          "growing_shift_from_incident_over_A": 0.017456212689942494,
+          "growing_shift_from_source": -2.515698956783592e-42,
+          "RN_particular_growing_projection_per_A": 0.0034517523639855377
+        },
+        {
+          "radius": 67.29180771834555,
+          "proper_distance": 93.19909250512451,
+          "growing_shift_from_incident": 2.1671877079517305e-31,
+          "growing_shift_from_incident_over_A": 0.017465154276087524,
+          "growing_shift_from_source": -2.537598672336561e-42,
+          "RN_particular_growing_projection_per_A": 0.0034115673896163434
+        },
+        {
+          "radius": 68.05041175397525,
+          "proper_distance": 93.96907496572997,
+          "growing_shift_from_incident": 2.1682604745610565e-31,
+          "growing_shift_from_incident_over_A": 0.017473799597517395,
+          "growing_shift_from_source": -2.5590616821328667e-42,
+          "RN_particular_growing_projection_per_A": 0.0033723005390729225
+        },
+        {
+          "radius": 68.80914194252202,
+          "proper_distance": 94.73905742633542,
+          "growing_shift_from_incident": 2.1692980792175837e-31,
+          "growing_shift_from_incident_over_A": 0.017482161552200576,
+          "growing_shift_from_source": -2.580100611674363e-42,
+          "RN_particular_growing_projection_per_A": 0.0033339208516601224
+        },
+        {
+          "radius": 69.56799553738168,
+          "proper_distance": 95.50903988694088,
+          "growing_shift_from_incident": 2.1703020364773036e-31,
+          "growing_shift_from_incident_over_A": 0.01749025234579601,
+          "growing_shift_from_source": -2.600727618354002e-42,
+          "RN_particular_growing_projection_per_A": 0.003296398738402747
+        },
+        {
+          "radius": 70.32696988025339,
+          "proper_distance": 96.27902234754634,
+          "growing_shift_from_incident": 2.171273780451281e-31,
+          "growing_shift_from_incident_over_A": 0.017498083535664847,
+          "growing_shift_from_source": -2.620954412131841e-42,
+          "RN_particular_growing_projection_per_A": 0.0032597059071193583
+        },
+        {
+          "radius": 71.08606239740836,
+          "proper_distance": 97.0490048081518,
+          "growing_shift_from_incident": 2.172214669866899e-31,
+          "growing_shift_from_incident_over_A": 0.01750566607165848,
+          "growing_shift_from_source": -2.640792275184317e-42,
+          "RN_particular_growing_projection_per_A": 0.0032238152923430114
+        },
+        {
+          "radius": 71.84527059615264,
+          "proper_distance": 97.81898726875727,
+          "growing_shift_from_incident": 2.173125992762204e-31,
+          "growing_shift_from_incident_over_A": 0.017513010333949853,
+          "growing_shift_from_source": -2.6602520805806522e-42,
+          "RN_particular_growing_projection_per_A": 0.003188700989727756
+        },
+        {
+          "radius": 72.60459206147267,
+          "proper_distance": 98.58896972936273,
+          "growing_shift_from_incident": 2.1740089708433765e-31,
+          "growing_shift_from_incident_over_A": 0.017520126168149863,
+          "growing_shift_from_source": -2.6793443100374436e-42,
+          "RN_particular_growing_projection_per_A": 0.0031543381946100534
+        },
+        {
+          "radius": 73.36402445285198,
+          "proper_distance": 99.35895218996819,
+          "growing_shift_from_incident": 2.174864763532746e-31,
+          "growing_shift_from_incident_over_A": 0.017527022917929933,
+          "growing_shift_from_source": -2.6980790708005067e-42,
+          "RN_particular_growing_projection_per_A": 0.00312070314442187
+        },
+        {
+          "radius": 74.12356550124893,
+          "proper_distance": 100.12893465057365,
+          "growing_shift_from_incident": 2.175694471731919e-31,
+          "growing_shift_from_incident_over_A": 0.01753370945534869,
+          "growing_shift_from_source": -2.716466111698853e-42,
+          "RN_particular_growing_projection_per_A": 0.003087773064677152
+        },
+        {
+          "radius": 74.88321300622569,
+          "proper_distance": 100.8989171111791,
+          "growing_shift_from_incident": 2.1764991413229e-31,
+          "growing_shift_from_incident_over_A": 0.017540194209067158,
+          "growing_shift_from_source": -2.7345148384155714e-42,
+          "RN_particular_growing_projection_per_A": 0.0030555261182761287
+        },
+        {
+          "radius": 75.64296483321942,
+          "proper_distance": 101.66889957178456,
+          "growing_shift_from_incident": 2.177279766427712e-31,
+          "growing_shift_from_incident_over_A": 0.01754648519061772,
+          "growing_shift_from_source": -2.7522343280164855e-42,
+          "RN_particular_growing_projection_per_A": 0.0030239413578925173
+        },
+        {
+          "radius": 76.40281891094789,
+          "proper_distance": 102.43888203239003,
+          "growing_shift_from_incident": 2.178037292445369e-31,
+          "growing_shift_from_incident_over_A": 0.01755259001887878,
+          "growing_shift_from_source": -2.7696333427758972e-42,
+          "RN_particular_growing_projection_per_A": 0.0029929986812274774
+        },
+        {
+          "radius": 77.16277322894052,
+          "proper_distance": 103.20886449299549,
+          "growing_shift_from_incident": 2.1787726188833037e-31,
+          "growing_shift_from_incident_over_A": 0.017558515942892972,
+          "growing_shift_from_source": -2.7867203433361143e-42,
+          "RN_particular_growing_projection_per_A": 0.0029626787889313424
+        },
+        {
+          "radius": 77.92282583518912,
+          "proper_distance": 103.97884695360095,
+          "growing_shift_from_incident": 2.1794866019990987e-31,
+          "growing_shift_from_incident_over_A": 0.01756426986315661,
+          "growing_shift_from_source": -2.8035035012364663e-42,
+          "RN_particular_growing_projection_per_A": 0.0029329631450096686
+        },
+        {
+          "radius": 78.68297483390998,
+          "proper_distance": 104.74882941420641,
+          "growing_shift_from_incident": 2.18018005726679e-31,
+          "growing_shift_from_incident_over_A": 0.017569858351495368,
+          "growing_shift_from_source": -2.8199907108444725e-42,
+          "RN_particular_growing_projection_per_A": 0.002903833939544501
+        },
+        {
+          "radius": 79.44321838341222,
+          "proper_distance": 105.51881187481186,
+          "growing_shift_from_incident": 2.18085376168093e-31,
+          "growing_shift_from_incident_over_A": 0.01757528766963254,
+          "growing_shift_from_source": -2.8361896007206125e-42,
+          "RN_particular_growing_projection_per_A": 0.002875274053574669
+        },
+        {
+          "radius": 80.20355469406586,
+          "proper_distance": 106.28879433541732,
+          "growing_shift_from_incident": 2.1815084559104743e-31,
+          "growing_shift_from_incident_over_A": 0.017580563786546963,
+          "growing_shift_from_source": -2.8521075444463904e-42,
+          "RN_particular_growing_projection_per_A": 0.002847267025990896
+        },
+        {
+          "radius": 80.96398202636401,
+          "proper_distance": 107.05877679602278,
+          "growing_shift_from_incident": 2.182144846313613e-31,
+          "growing_shift_from_incident_over_A": 0.017585692394710372,
+          "growing_shift_from_source": -2.8677516709439153e-42,
+          "RN_particular_growing_projection_per_A": 0.002819797022312381
+        },
+        {
+          "radius": 81.72449868907428,
+          "proper_distance": 107.82875925662825,
+          "growing_shift_from_incident": 2.182763606823597e-31,
+          "growing_shift_from_incident_over_A": 0.017590678925285073,
+          "growing_shift_from_source": -2.883128874312983e-42,
+          "RN_particular_growing_projection_per_A": 0.0027928488052214634
+        },
+        {
+          "radius": 82.4851030374745,
+          "proper_distance": 108.59874171723371,
+          "growing_shift_from_incident": 2.183365380714966e-31,
+          "growing_shift_from_incident_over_A": 0.01759552856235782,
+          "growing_shift_from_source": -2.898245823211014e-42,
+          "RN_particular_growing_projection_per_A": 0.002766407706742162
+        },
+        {
+          "radius": 83.24579347166784,
+          "proper_distance": 109.36872417783917,
+          "growing_shift_from_incident": 2.1839507822587533e-31,
+          "growing_shift_from_incident_over_A": 0.01760024625627893,
+          "growing_shift_from_source": -2.9131089697994523e-42,
+          "RN_particular_growing_projection_per_A": 0.002740459601956756
+        },
+        {
+          "radius": 84.00656843497369,
+          "proper_distance": 110.13870663844463,
+          "growing_shift_from_incident": 2.1845203982745335e-31,
+          "growing_shift_from_incident_over_A": 0.017604836736170092,
+          "growing_shift_from_source": -2.927724558278833e-42,
+          "RN_particular_growing_projection_per_A": 0.0027149908841622604
+        },
+        {
+          "radius": 84.76742641238971,
+          "proper_distance": 110.90868909905008,
+          "growing_shift_from_incident": 2.185074789586596e-31,
+          "growing_shift_from_incident_over_A": 0.01760930452165954,
+          "growing_shift_from_source": -2.942098633033644e-42,
+          "RN_particular_growing_projection_per_A": 0.0026899884413757757
+        },
+        {
+          "radius": 85.52836592912149,
+          "proper_distance": 111.67867155965554,
+          "growing_shift_from_incident": 2.1856144923909435e-31,
+          "growing_shift_from_incident_over_A": 0.017613653933898535,
+          "growing_shift_from_source": -2.956237046406915e-42,
+          "RN_particular_growing_projection_per_A": 0.0026654396341041567
+        },
+        {
+          "radius": 86.28938554917667,
+          "proper_distance": 112.448654020261,
+          "growing_shift_from_incident": 2.18614001953932e-31,
+          "growing_shift_from_incident_over_A": 0.01761788910590924,
+          "growing_shift_from_source": -2.9701454661235746e-42,
+          "RN_particular_growing_projection_per_A": 0.0026413322742994527
+        },
+        {
+          "radius": 87.05048387401916,
+          "proper_distance": 113.21863648086646,
+          "growing_shift_from_incident": 2.186651861745906e-31,
+          "growing_shift_from_incident_over_A": 0.017622013992309362,
+          "growing_shift_from_source": -2.983829382379942e-42,
+          "RN_particular_growing_projection_per_A": 0.0026176546054271234
+        },
+        {
+          "radius": 87.81165954128191,
+          "proper_distance": 113.98861894147193,
+          "growing_shift_from_incident": 2.187150488721997e-31,
+          "growing_shift_from_incident_over_A": 0.01762603237845639,
+          "growing_shift_from_source": -2.997294114616516e-42,
+          "RN_particular_growing_projection_per_A": 0.002594395283579049
+        },
+        {
+          "radius": 88.57291122353367,
+          "proper_distance": 114.75860140207739,
+          "growing_shift_from_incident": 2.187636350243525e-31,
+          "growing_shift_from_incident_over_A": 0.017629947889050684,
+          "growing_shift_from_source": -3.010544817989933e-42,
+          "RN_particular_growing_projection_per_A": 0.0025715433595681347
+        },
+        {
+          "radius": 89.33423762709799,
+          "proper_distance": 115.52858386268284,
+          "growing_shift_from_incident": 2.188109877155909e-31,
+          "growing_shift_from_incident_over_A": 0.017633763996233426,
+          "growing_shift_from_source": -3.023586489559029e-42,
+          "RN_particular_growing_projection_per_A": 0.0025490882619455747
+        },
+        {
+          "radius": 90.09563749092197,
+          "proper_distance": 116.2985663232883,
+          "growing_shift_from_incident": 2.188571482320386e-31,
+          "growing_shift_from_incident_over_A": 0.017637484027213043,
+          "growing_shift_from_source": -3.0364239741991566e-42,
+          "RN_particular_growing_projection_per_A": 0.002527019780885853
+        },
+        {
+          "radius": 90.85710958549123,
+          "proper_distance": 117.06854878389376,
+          "growing_shift_from_incident": 2.1890215615057178e-31,
+          "growing_shift_from_incident_over_A": 0.017641111171451375,
+          "growing_shift_from_source": -3.049061970258488e-42,
+          "RN_particular_growing_projection_per_A": 0.0025053280528883047
+        },
+        {
+          "radius": 91.6186527117898,
+          "proper_distance": 117.83853124449922,
+          "growing_shift_from_incident": 2.1894604942288102e-31,
+          "growing_shift_from_incident_over_A": 0.017644648487438127,
+          "growing_shift_from_source": -3.0615050349687115e-42,
+          "RN_particular_growing_projection_per_A": 0.002484003546247418
+        },
+        {
+          "radius": 92.3802657003028,
+          "proper_distance": 118.60851370510468,
+          "growing_shift_from_incident": 2.1898886445475687e-31,
+          "growing_shift_from_incident_over_A": 0.017648098909080444,
+          "growing_shift_from_source": -3.0737575896223325e-42,
+          "RN_particular_growing_projection_per_A": 0.002463037047247245
+        },
+        {
+          "radius": 93.14194741005876,
+          "proper_distance": 119.37849616571015,
+          "growing_shift_from_incident": 2.190306361809052e-31,
+          "growing_shift_from_incident_over_A": 0.01765146525173218,
+          "growing_shift_from_source": -3.085823924527819e-42,
+          "RN_particular_growing_projection_per_A": 0.0024424196470382614
+        },
+        {
+          "radius": 93.90369672771118,
+          "proper_distance": 120.1484786263156,
+          "growing_shift_from_incident": 2.190713981355808e-31,
+          "growing_shift_from_incident_over_A": 0.017654750217886202,
+          "growing_shift_from_source": -3.097708203753622e-42,
+          "RN_particular_growing_projection_per_A": 0.0024221427291576574
+        },
+        {
+          "radius": 94.66551256665589,
+          "proper_distance": 120.91846108692106,
+          "growing_shift_from_incident": 2.191111825193001e-31,
+          "growing_shift_from_incident_over_A": 0.017657956402550717,
+          "growing_shift_from_source": -3.1094144696709704e-42,
+          "RN_particular_growing_projection_per_A": 0.0024021979576566463
+        },
+        {
+          "radius": 95.42739386618399,
+          "proper_distance": 121.68844354752652,
+          "growing_shift_from_incident": 2.1915002026188147e-31,
+          "growing_shift_from_incident_over_A": 0.01766108629832961,
+          "growing_shift_from_source": -3.120946647305259e-42,
+          "RN_particular_growing_projection_per_A": 0.002382577265800635
+        },
+        {
+          "radius": 96.18933959066747,
+          "proper_distance": 122.45842600813198,
+          "growing_shift_from_incident": 2.191879410820422e-31,
+          "growing_shift_from_incident_over_A": 0.01766414230022531,
+          "growing_shift_from_source": -3.1323085485052035e-42,
+          "RN_particular_growing_projection_per_A": 0.00236327284531034
+        },
+        {
+          "radius": 96.95134872877682,
+          "proper_distance": 123.22840846873744,
+          "growing_shift_from_incident": 2.192249735437645e-31,
+          "growing_shift_from_incident_over_A": 0.017667126710181263,
+          "growing_shift_from_source": -3.143503875938348e-42,
+          "RN_particular_growing_projection_per_A": 0.0023442771361139067
+        },
+        {
+          "radius": 97.71342029272874,
+          "proper_distance": 123.9983909293429,
+          "growing_shift_from_incident": 2.1926114510962815e-31,
+          "growing_shift_from_incident_over_A": 0.017670041741379983,
+          "growing_shift_from_source": -3.154536226921105e-42,
+          "RN_particular_growing_projection_per_A": 0.0023255828165819775
+        },
+        {
+          "radius": 98.47555331756277,
+          "proper_distance": 124.76837338994837,
+          "growing_shift_from_incident": 2.1929648219129664e-31,
+          "growing_shift_from_incident_over_A": 0.01767288952231166,
+          "growing_shift_from_source": -3.165409097091239e-42,
+          "RN_particular_growing_projection_per_A": 0.0023071827942194065
+        },
+        {
+          "radius": 99.23774686044531,
+          "proper_distance": 125.53835585055381,
+          "growing_shift_from_incident": 2.193310101973278e-31,
+          "growing_shift_from_incident_over_A": 0.017675672100627173,
+          "growing_shift_from_source": -3.176125883930074e-42,
+          "RN_particular_growing_projection_per_A": 0.00228907019678893
+        },
+        {
+          "radius": 99.99999999999999,
+          "proper_distance": 126.30833831115928,
+          "growing_shift_from_incident": 2.1936475357846907e-31,
+          "growing_shift_from_incident_over_A": 0.01767839144678841,
+          "growing_shift_from_source": -3.186689890141431e-42,
+          "RN_particular_growing_projection_per_A": 0.002271238363843625
+        }
+      ],
+      "convention": "Y=Phi_RN*c+A_dip*y_particular. c100=(I+D)c10+A_dip*[a+(1-exp(-2epsilon))*a_clock], epsilon=log[N100/(clock*Bfull100)]. The zero-offset column follows the existing clock calibration; epsilon is retained explicitly, not silently selected from rounded logs. D and a are integrated after division byalpha. Growing/source columns are diagnostics, not selected physical inner data."
+    }
+  ],
+  "asymptotic_checks": {
+    "background": {
+      "mu": "-1/6 + r**(-2) - 5/(6*r**3)",
+      "mass": "1+k*mu+O(k\u00b2)",
+      "B_first_order": "k*(1/6 - 1/r**2 + 5/(6*r**3))/(r - 1) + (r - 1)/r",
+      "A_first_order": "k*((-1/6 + r**(-2) - 5/(6*r**3))/(r - 1)**2 - 1/(2*r**4*(r - 1))) + r**(-2)",
+      "k": "alpha/3"
+    },
+    "background_equation_residuals": [
+      "0",
+      "0",
+      "0"
+    ],
+    "inverse_residual": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "growing_projection_residual": "0",
+    "pulled_proper_mismatch_per_k_cg": [
+      "-(r - 1)*(12*r**5 - 45*r**4 + 115*r**3 - 194*r**2 + 145*r - 36)/(r**3*(3*r - 2)**3)",
+      "2*(r - 1)*(6*r**5 - 66*r**4 + 182*r**3 - 170*r**2 + 55*r - 4)/(r**4*(3*r - 2)**3)"
+    ],
+    "radial_growing_projection_per_k_cg": "(-465*r**5 + 1722*r**4 - 2066*r**3 + 944*r**2 - 100*r - 20)/(15*r**3*(r - 1)**2*(3*r - 2)**3)",
+    "radial_decaying_projection_per_k_cg": "-2*(r - 1)**4*(6*r**3 - 27*r**2 + 50*r - 20)/(r**3*(3*r - 2)**3)",
+    "large_radius": {
+      "proper_components_scaled_1_and_r": [
+        "-4/9",
+        "4/9"
+      ],
+      "growing_adjoint_terms_times_r_squared": [
+        "-4/27",
+        "4/27"
+      ],
+      "leading_cancellation": "0",
+      "growing_projection_times_r_cubed": "-31/27",
+      "decaying_projection_divided_by_r": "-4/9"
+    },
+    "comparison_points": [
+      {
+        "radius": 10,
+        "growing_projection_per_k_cg": -0.0011717529604434367
+      },
+      {
+        "radius": 30,
+        "growing_projection_per_k_cg": -4.290851983702245e-05
+      },
+      {
+        "radius": 100,
+        "growing_projection_per_k_cg": -1.151472761654364e-06
+      }
+    ],
+    "all_declared_checks_pass": true,
+    "convention": "Growing-only classical test input; projection coefficients are derivatives with respect to r, divided by k*c_g. The proper mismatch includes the B/sqrt(F) radial pullback. This checks the homogeneous operator correction, not the full forced transport.",
+    "scope": "First order in k at fixed r>1, with d=w/N\u00b2=O(alpha\u00b2) omitted at this order and mean mass calibrated to the throat. The displayed large-r limits describe these expansion coefficients only; the approximation is neither near-throat nor infinity uniform. Running decaying-basis coefficients may grow while their physical profile correction remains subleading. No exterior matching or stability claim."
+  },
+  "equations": {
+    "basis": "Y=(P,X)=Phi_RN*c+A_dip*yp; Phi columns are (g,Xg),(d,Xd).",
+    "flow": "dc/dl=E*c+A_dip*z; Q=Mfull-(Bfull/B_RN)*M_RN; E=Phi_inverse*Q*Phi.",
+    "source": "z=Phi_inverse*(Q*yp-bfull*clock\u00b2/N\u00b2+(Bfull/B_RN)*bRN/F). Includes source-affine momentum and radial pullback.",
+    "clock": "delta0_l=A-Bfull/[r(r-1)], delta0_100=log(Bfull100/B_RN100); actual delta=delta0+epsilon, epsilon=log[N100/(clock*Bfull100)]. Integrate delta0/alpha. Source correction is z0+(1-exp(-2epsilon))*Phi_inverse*bfull*exp(-2delta0)/F.",
+    "inverse": "det(Phi)=-3/B_RN; growing adjoint row=B_RN/3*(-Xd,d).",
+    "boundary": "c_g100=(1+Dgg)*c_g10+Dgd*c_d10+A_dip*[a_g+(1-exp(-2epsilon))*a_clock,g]. Outer c_g/c_d, clock offset and nonradial return state are not selected."
+  },
+  "verification": {
+    "all_declared_checks_pass": true,
+    "relative_refinement": {
+      "transfer_correction": 3.9297122266311254e-07,
+      "affine_correction_per_A": 1.2468913256692277e-07,
+      "affine_clock_offset_response_per_A": 7.829256232415464e-09
+    },
+    "independent_first_order_growing_transfer": -1.9239882704865653e-12,
+    "full_growing_transfer_relative_difference_from_first_order": 1.55336188356614e-09
+  },
+  "scope": "R10 toR100 only, inside the existing spherical mean-background collar and linear dipole model. This transports all retained local quantum terms, not the nonspherical far exterior or its complete state. RN functions are a coordinate basis on (P,X), not a physical electrovac junction. No global matching, dynamical stability, manufacture or13Sep2027->12Sep2027 passage is established.",
+  "sources": [
+    "https://arxiv.org/html/1807.04726v3: assumed magnetic-channel framework",
+    "https://arxiv.org/abs/gr-qc/9507012: RN polar dipole framework",
+    "Our affine variation-of-constants calculation, reusing the previously component-checked collar equations"
+  ]
+}

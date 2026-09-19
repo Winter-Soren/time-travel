@@ -1,0 +1,2876 @@
+{
+  "model": "Single electromagnetic vacuum in a flat static cube with six perfectly conducting faces, zero temperature; local center only",
+  "normalization": "rho_center=q*hbar*c/L^4; L is the cube side; imaginary time regulator tau is measured in L/c",
+  "subtraction": "Point-split local field-strength correlations minus the Minkowski bulk singularity 3/(pi^2*tau^4); no global-energy/V substitution or subtraction of finite edge images",
+  "q": -0.269624593197241,
+  "q_decimal": "-0.269624593197241041112639822594480404",
+  "pressure_coefficient": -0.08987486439908034,
+  "image_kernel": "For m in Z^3 except zero, s_i=(-1)^m_i, S=product(s_i), r=|m|: f=(1+S)/(2*pi^2)*[-sum(s_i)/r^4+2*sum(s_i*m_i^2)/r^6]",
+  "image_basis": "A0 Dirichlet on every face; Ai Neumann on its normal faces and Dirichlet on the others. Covariant image propagator D00=-S*G, Dii=S*s_i*G, G=[4*pi^2*(r^2-(dt-i0)^2)]^-1; differentiate to E and B correlations",
+  "resummation": "q=-Z3(2)/(16*pi^2)-(3*pi/8)*sum_{p,q odd}[coth(pi*r/2)*csch(pi*r/2)^2/r], r=sqrt(p^2+q^2); both contributions strictly negative",
+  "zeta_definition": "Z3(s)=sum_{n!=0}|n|^(-2*s)",
+  "ewald_identity": "Z3(s)=pi^s/Gamma(s)*[1/(s-3/2)-1/s+sum_{n!=0}(K^-s*Gamma(s,K)+K^(s-3/2)*Gamma(3/2-s,K))], K=pi*|n|^2",
+  "bounds": {
+    "ewald": "theta^3-theta_N^3<=8*exp[-pi*(N+1)^2*t] for t>=1; integrate the positive theta-split kernel",
+    "edge": "For odd-grid cutoff M, omitted |q_edge|<=15*pi*exp[-pi*(M+1)]/(1-exp[-pi])",
+    "regulator_series": "With u=tau^2/4<1, translation=-sum_k (-1)^k*(k+1)*(2*k+1)*u^k*Z3(k+2)/(16*pi^2); polynomial-geometric tail uses Z3(k+2)<=13*pi^2/3",
+    "modes": "For cutoff N, omitted positive mode energy<=14*pi*sqrt(3)*sum_{m=N+1}^infinity m^3*exp[-pi*tau*m]",
+    "final_analytic_truncation": 1.3603539235145733e-23,
+    "rounding": "Analytic tail bounds exclude arithmetic rounding. Ewald special functions use60 decimal digits, other image arithmetic50, mode sums float64; no interval certification"
+  },
+  "refinement": [
+    {
+      "ewald_cutoff": 2,
+      "odd_cutoff": 5,
+      "q": "-0.269624591785321272446805252517507627",
+      "analytic_truncation_bound": 3.207511223043692e-07
+    },
+    {
+      "ewald_cutoff": 3,
+      "odd_cutoff": 9,
+      "q": "-0.269624593197237104273954154621450187",
+      "analytic_truncation_bound": 1.1185689102330466e-12
+    },
+    {
+      "ewald_cutoff": 4,
+      "odd_cutoff": 13,
+      "q": "-0.269624593197241041100871446722008279",
+      "analytic_truncation_bound": 3.9008327389840234e-18
+    },
+    {
+      "ewald_cutoff": 5,
+      "odd_cutoff": 17,
+      "q": "-0.269624593197241041112639822594480404",
+      "analytic_truncation_bound": 1.3603539235145733e-23
+    }
+  ],
+  "exact_checks": {
+    "parallel_plates": "rho=-pi^2*hbar*c/(720*L^4): exact rational coefficient checked",
+    "right_angle_wedge": "rho=-hbar*c/(16*pi^2*r^4): exact match to published wedge formula at angle pi/2",
+    "single_reflection": "E^2+B^2 cancels identically because 1+S=0",
+    "center_tensor": "Static vacuum reflections kill flux and off-diagonal stress; cubic symmetry and zero bulk Maxwell trace give p_i=rho/3",
+    "rational_image_partial_sum_isotropic": true,
+    "rational_trace_zero": true,
+    "isotropy_scope": "Finite symmetric image sums are exactly isotropic; absolute convergence preserves the identities in their limit"
+  },
+  "coherent_center": {
+    "convention": "Contravariant orthonormal stress, signature -+++; hbar=c=cube side=1; center at x=y=z=1/2, reference time t0",
+    "six_modes": [
+      {
+        "family": "electric",
+        "indices": [
+          0,
+          1,
+          1
+        ],
+        "vector_amplitudes": [
+          "2",
+          "0",
+          "0"
+        ],
+        "omega": "sqrt(2)*pi",
+        "center_f": [
+          "2",
+          "0",
+          "0"
+        ],
+        "center_curl": [
+          "0",
+          "0",
+          "0"
+        ],
+        "divergence_helmholtz_norm_and_all_six_faces_exact": true
+      },
+      {
+        "family": "electric",
+        "indices": [
+          1,
+          0,
+          1
+        ],
+        "vector_amplitudes": [
+          "0",
+          "2",
+          "0"
+        ],
+        "omega": "sqrt(2)*pi",
+        "center_f": [
+          "0",
+          "2",
+          "0"
+        ],
+        "center_curl": [
+          "0",
+          "0",
+          "0"
+        ],
+        "divergence_helmholtz_norm_and_all_six_faces_exact": true
+      },
+      {
+        "family": "electric",
+        "indices": [
+          1,
+          1,
+          0
+        ],
+        "vector_amplitudes": [
+          "0",
+          "0",
+          "2"
+        ],
+        "omega": "sqrt(2)*pi",
+        "center_f": [
+          "0",
+          "0",
+          "2"
+        ],
+        "center_curl": [
+          "0",
+          "0",
+          "0"
+        ],
+        "divergence_helmholtz_norm_and_all_six_faces_exact": true
+      },
+      {
+        "family": "magnetic",
+        "indices": [
+          1,
+          2,
+          2
+        ],
+        "vector_amplitudes": [
+          "0",
+          "-2",
+          "2"
+        ],
+        "omega": "3*pi",
+        "center_f": [
+          "0",
+          "0",
+          "0"
+        ],
+        "center_curl": [
+          "8*pi",
+          "0",
+          "0"
+        ],
+        "divergence_helmholtz_norm_and_all_six_faces_exact": true
+      },
+      {
+        "family": "magnetic",
+        "indices": [
+          2,
+          1,
+          2
+        ],
+        "vector_amplitudes": [
+          "2",
+          "0",
+          "-2"
+        ],
+        "omega": "3*pi",
+        "center_f": [
+          "0",
+          "0",
+          "0"
+        ],
+        "center_curl": [
+          "0",
+          "8*pi",
+          "0"
+        ],
+        "divergence_helmholtz_norm_and_all_six_faces_exact": true
+      },
+      {
+        "family": "magnetic",
+        "indices": [
+          2,
+          2,
+          1
+        ],
+        "vector_amplitudes": [
+          "-2",
+          "2",
+          "0"
+        ],
+        "omega": "3*pi",
+        "center_f": [
+          "0",
+          "0",
+          "0"
+        ],
+        "center_curl": [
+          "0",
+          "0",
+          "8*pi"
+        ],
+        "divergence_helmholtz_norm_and_all_six_faces_exact": true
+      }
+    ],
+    "mode_definition": "f_i=a_i*cos(pi*n_i*x_i)*product_{j!=i}sin(pi*n_j*x_j); A_field=sum Q_lambda*f_lambda, E=-sum P_lambda*f_lambda, B=sum Q_lambda*curl(f_lambda)",
+    "exact_checks": "Six divergence, vector Helmholtz, unit spatial norm, tangential f and normal curl on all six faces, center values, four null tensors and mixture equality passed",
+    "classical_initial_data": "For any prescribed center E,B: electric-mode P_i=-E_i/2, Q_i=0; magnetic-mode Q_i=B_i/(8*pi), P_i=0. Finite smooth modes solve source-free Maxwell equations and the conducting boundary conditions",
+    "quantum_state": "Use alpha_lambda=(sqrt(omega_lambda)*Q_lambda+i*P_lambda/sqrt(omega_lambda))/sqrt(2) to displace the same cavity vacuum. D^dagger*F*D=F+F_classical gives <T>_alpha,ren=<T>_vac,ren+T[F_classical]; the finite displacement leaves the ultraviolet singularity unchanged",
+    "mixed_state": "density=(1/4)*sum_j |alpha_j><alpha_j|. Choose E_j=sqrt(3*A)*ey for the first two directions, sqrt(3*A)*ex for the other two; B_j=n_j cross E_j. Linearity of a probabilistic mixture removes inter-state interference; this is not a coherent superposition of the four states",
+    "directions": [
+      [
+        "2*sqrt(2)/3",
+        "0",
+        "-1/3"
+      ],
+      [
+        "-2*sqrt(2)/3",
+        "0",
+        "-1/3"
+      ],
+      [
+        "0",
+        "2*sqrt(2)/3",
+        "-1/3"
+      ],
+      [
+        "0",
+        "-2*sqrt(2)/3",
+        "-1/3"
+      ]
+    ],
+    "component_excitation_energy_over_A": [
+      "75/128",
+      "75/128",
+      "75/128",
+      "75/128"
+    ],
+    "radiation_tensor_over_A": [
+      [
+        "3",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "4/3",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "4/3",
+        "0"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "1/3"
+      ]
+    ],
+    "total_tensor_over_A": [
+      [
+        "-1",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "-1"
+      ]
+    ],
+    "match": "At A=-rho_vac/4=-q/4>0, vacuum=diag(-4*A,-4*A/3,-4*A/3,-4*A/3); mixture gives exactly -A*ell^a*ell^b for ell=(1,0,0,1), at one event",
+    "witness_evolution": {
+      "time": "Real evolution time tau=c*(t-t0)/L, distinct from the imaginary-time regulator",
+      "fields": "E_center=E0*cos(pi*sqrt(2)*tau); B_center=B0*cos(3*pi*tau)",
+      "flux_ratio": "T0z(tau)/T0z(0)=cos(pi*sqrt(2)*tau)*cos(3*pi*tau)",
+      "total_rho_over_A": "-4+(3/2)*(cos(pi*sqrt(2)*tau)^2+cos(3*pi*tau)^2)",
+      "samples": [
+        {
+          "tau": 0.0,
+          "flux_ratio": 1.0,
+          "total_rho_over_A": -1.0
+        },
+        {
+          "tau": 0.05,
+          "flux_ratio": 0.8691120792966558,
+          "total_rho_over_A": -1.3819734635496714
+        },
+        {
+          "tau": 0.1,
+          "flux_ratio": 0.5307211769169884,
+          "total_rho_over_A": -2.2588746341986536
+        },
+        {
+          "tau": 0.2,
+          "flux_ratio": -0.19484061722251542,
+          "total_rho_over_A": -3.260434302911565
+        }
+      ],
+      "no_exact_nonzero_recurrence": "rho/A=-1 requires both cosines squared=1, hence sqrt(2)*tau and 3*tau integers. Irrational sqrt(2)/3 permits only tau=0. This applies to this six-mode witness and this fixed target amplitude, not every cavity state or an approximate tolerance"
+    },
+    "stationary_center_audit": {
+      "parity": [
+        {
+          "bits": [
+            0,
+            0,
+            0
+          ],
+          "squared_frequency_over_pi2_mod4": 0,
+          "possible_electric_axes": [],
+          "possible_magnetic_axes": []
+        },
+        {
+          "bits": [
+            0,
+            0,
+            1
+          ],
+          "squared_frequency_over_pi2_mod4": 1,
+          "possible_electric_axes": [],
+          "possible_magnetic_axes": [
+            2
+          ]
+        },
+        {
+          "bits": [
+            0,
+            1,
+            0
+          ],
+          "squared_frequency_over_pi2_mod4": 1,
+          "possible_electric_axes": [],
+          "possible_magnetic_axes": [
+            1
+          ]
+        },
+        {
+          "bits": [
+            0,
+            1,
+            1
+          ],
+          "squared_frequency_over_pi2_mod4": 2,
+          "possible_electric_axes": [
+            0
+          ],
+          "possible_magnetic_axes": []
+        },
+        {
+          "bits": [
+            1,
+            0,
+            0
+          ],
+          "squared_frequency_over_pi2_mod4": 1,
+          "possible_electric_axes": [],
+          "possible_magnetic_axes": [
+            0
+          ]
+        },
+        {
+          "bits": [
+            1,
+            0,
+            1
+          ],
+          "squared_frequency_over_pi2_mod4": 2,
+          "possible_electric_axes": [
+            1
+          ],
+          "possible_magnetic_axes": []
+        },
+        {
+          "bits": [
+            1,
+            1,
+            0
+          ],
+          "squared_frequency_over_pi2_mod4": 2,
+          "possible_electric_axes": [
+            2
+          ],
+          "possible_magnetic_axes": []
+        },
+        {
+          "bits": [
+            1,
+            1,
+            1
+          ],
+          "squared_frequency_over_pi2_mod4": 3,
+          "possible_electric_axes": [],
+          "possible_magnetic_axes": []
+        }
+      ],
+      "identity": "n_i=2*k_i+b_i implies |n|^2=sum(b_i)+4*sum(k_i*(k_i+b_i)); all eight bit patterns checked exactly",
+      "disjoint_spectra": "Nonzero center E requires two odd indices, so |n|^2=2 mod4; nonzero center B requires one odd index, so |n|^2=1 mod4. Their frequencies cannot coincide",
+      "argument": "For a stationary density operator commuting with the free cavity Hamiltonian, expectation(a_lambda^dagger*a_mu)=0 unless omega_lambda=omega_mu, while expectation(a_lambda*a_mu)=0 because every physical frequency is positive. The aa^dagger commutator term is diagonal in the mode and no mode contributes both center E and B. Thus every symmetrized center E-B correlation is zero, including temporal point splitting; its Minkowski subtraction is also zero, so all T0i(center)=0",
+      "conclusion": "No stationary state with defined renormalized stress in this free empty lossless closed ideal cube can supply the target nonzero center flux, even if the state breaks spatial symmetry. The nonstationary one-event mixed coherent state is allowed",
+      "scope": "External drives, ports, changed shape, realistic walls or curved geometry change the hypotheses. This supplies no universal finite-duration or beat-time bound: higher-frequency gaps can approach zero"
+    },
+    "sources": [
+      "https://doi.org/10.1103/PhysRev.131.2766 (Glauber: coherent radiation states and factorization; specific cavity construction and parity audit derived here)",
+      "https://arxiv.org/pdf/0804.3916 (Lim-Teo: free physical conducting-cavity modes)"
+    ],
+    "scope": "Same electromagnetic field and boundary-compatible quantum state at one event; no independent-field additivity assumption. Null-ray tensors describe only that event, not global plane beams. No persistent finite region, stress-fluctuation control, wall/material validation, self-consistent gravity, stability or traversal has been established"
+  },
+  "rectangular_resonance": {
+    "convention": "Contravariant orthonormal added EM stress, signature -+++; hbar=c=1; physical side lengths (1,1,sqrt(10)/4)",
+    "general_resonance": "For nE=(2,1,3), nB=(2,3,2), omegaE^2-omegaB^2=pi^2*(5/Lz^2-8/Ly^2); Lz^2=5*Ly^2/8 removes the difference for any Lx>0",
+    "lengths_exact": [
+      "1",
+      "1",
+      "sqrt(10)/4"
+    ],
+    "volume_exact": "sqrt(10)/4",
+    "modes": [
+      {
+        "indices": [
+          2,
+          1,
+          3
+        ],
+        "polarization": [
+          "sqrt(5)/5",
+          "-2*sqrt(5)/5",
+          "0"
+        ],
+        "omega_squared": "97*pi**2/5",
+        "center_f": [
+          "4*10**(1/4)/5",
+          "0",
+          "0"
+        ],
+        "center_curl": [
+          "0",
+          "0",
+          "0"
+        ],
+        "transverse_unit_norm_helmholtz_and_six_PEC_faces_exact": true
+      },
+      {
+        "indices": [
+          2,
+          3,
+          2
+        ],
+        "polarization": [
+          "-2*sqrt(26)/13",
+          "0",
+          "sqrt(65)/13"
+        ],
+        "omega_squared": "97*pi**2/5",
+        "center_f": [
+          "0",
+          "0",
+          "0"
+        ],
+        "center_curl": [
+          "0",
+          "8*10**(1/4)*sqrt(13)*pi/5",
+          "0"
+        ],
+        "transverse_unit_norm_helmholtz_and_six_PEC_faces_exact": true
+      }
+    ],
+    "mode_definition": "u_i=N*alpha_i*cos(k_i*x_i)*product_{j!=i}sin(k_j*x_j), N=sqrt(8/V), k_i=pi*n_i/L_i",
+    "two_modes_orthonormal_exact": true,
+    "center_amplitudes": "uE(center)=(N/sqrt(5),0,0), curl(uE)=0; uB(center)=0, curl(uB)=(0,N*K,0); K=pi*sqrt(52/5)",
+    "classical_solution": "A_field=qE*uE+qB*uB; qE=-E0*sqrt(5)*sin(omega*t+theta)/(omega*N), qB=B0*cos(omega*t+theta)/(N*K), omega=pi*sqrt(97/5)",
+    "center_fields": "E=(E0*cos(omega*t+theta),0,0); B=(0,B0*cos(omega*t+theta),0)",
+    "stationary_quantum_state": "Displace the SAME rectangular-cavity vacuum with these two finite mode coordinates and momenta, alpha_j=(sqrt(omega)*q_j+i*p_j/sqrt(omega))/sqrt(2). Uniformly mix theta over0..2*pi. Equal frequencies make free evolution a common theta shift, leaving this density operator invariant; no external drive is introduced. Normal coherence between the degenerate modes survives phase averaging",
+    "renormalization": "For each coherent component the renormalized stress is rectangular-vacuum stress plus its classical stress. The finite displacement leaves the ultraviolet singularity unchanged; averaging the density operator averages the classical tensor",
+    "phase_averaged_added_tensor": [
+      [
+        "B0**2/4 + E0**2/4",
+        "0",
+        "0",
+        "B0*E0/2"
+      ],
+      [
+        "0",
+        "B0**2/4 - E0**2/4",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-B0**2/4 + E0**2/4",
+        "0"
+      ],
+      [
+        "B0*E0/2",
+        "0",
+        "0",
+        "B0**2/4 + E0**2/4"
+      ]
+    ],
+    "positive_null_case": "E0=B0 gives added tensor=(E0^2/2)*ell_plus*ell_plus, ell_plus=(1,0,0,1). B0=-E0 reverses flux while preserving positive energy; both identities checked exactly",
+    "excitation_energy_exact": "sqrt(10)*(97*B0**2 + 260*E0**2)/3328",
+    "excitation_energy_formula": "V*(5*E0^2+(97/52)*B0^2)/16, finite for finite E0,B0; mean added photon number=excitation_energy/omega",
+    "wall_flux": "Normal E cross B is identically zero on all six PEC faces, checked for the full two-mode solution. Nonzero center flux does not imply net transport through the closed walls",
+    "exact_checks": "Unit polarizations, transversality, both vector Helmholtz equations, unit norms and mutual orthogonality, six-face PEC conditions, center fields, all16 averaged tensor components, zero trace, both null directions, conserved finite excitation and zero wall-normal flux",
+    "sources": [
+      "https://arxiv.org/pdf/0804.3916 (Lim-Teo: physical common cavity modes; this resonance is our derivation)",
+      "https://doi.org/10.1103/PhysRev.131.2766 (Glauber: coherent radiation states; this common-phase mixture is our construction)"
+    ],
+    "conditional_compensation": {
+      "assumptions": "Conditional vacuum tensor diag(-D,p,p,-D-2p), D>0, p<0, D+p>0; no numerical rectangular vacuum value is asserted or borrowed from the cube",
+      "target": "-A*ell_plus^a*ell_plus^b, ell_plus=(1,0,0,1), 0<A<=(D+p)/2",
+      "added_weights": "w_minus=(D+p)/2, w_plus=(D+p)/2-A; both nonnegative on the stated interval. For each resonant family set E0=sqrt(2*w), B0=+/-sqrt(2*w) for the corresponding flux direction",
+      "extra_mode": {
+        "indices": [
+          1,
+          1,
+          0
+        ],
+        "definition": "fz=(0,0,2*sin(pi*x)*sin(pi*y)/sqrt(V)), omega_z=pi*sqrt(2)",
+        "coordinate": "qz=-sqrt(V)*sqrt(-4*p)*sin(omega_z*t+theta_z)/(2*omega_z), pz=dqz/dt",
+        "center_fields": "Ez=sqrt(-4*p)*cos(omega_z*t+theta_z), B=0",
+        "mean_Ez_squared": "-2*p",
+        "phase_averaged_tensor": [
+          [
+            "-p",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-p",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-p",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "p"
+          ]
+        ],
+        "excitation_energy": "-sqrt(10)*p/8",
+        "exact_checks": "Unit norm, orthogonality to both resonant modes, divergence, Helmholtz, all six PEC faces, center fields, phase-averaged stress and conserved finite excitation"
+      },
+      "added_tensor": [
+        [
+          "-A + D",
+          "0",
+          "0",
+          "-A"
+        ],
+        [
+          "0",
+          "-p",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-p",
+          "0"
+        ],
+        [
+          "-A",
+          "0",
+          "0",
+          "-A + D + 2*p"
+        ]
+      ],
+      "total_tensor": [
+        [
+          "-A",
+          "0",
+          "0",
+          "-A"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-A",
+          "0",
+          "0",
+          "-A"
+        ]
+      ],
+      "full_target_identity_exact": true,
+      "state": "Integrate |alpha_minus(theta_minus)+alpha_plus(theta_plus)+alpha_z(theta_z)><same| against the product of three uniform phase measures. All amplitudes belong to the SAME cavity mode space; the +/- families share the two resonant modes. This is a mixture of coherent states of summed amplitudes, explicitly not a Hilbert-space tensor product for those families",
+      "stationarity": "Each coherent family evolves by its phase shift; the joint uniform measure is invariant under free evolution. Zero first phase moments remove cross terms. The full center stress EXPECTATION is stationary at all times; individual coherent realizations need not have a stationary tensor. No drive or independent electromagnetic field is introduced",
+      "finite_excitation": "Each ray family has mean energy357*V*w/416 and the extra mode has energy -V*p/2. Their sum is finite and positive under the stated assumptions; all three physical mode frequencies are finite and positive",
+      "total_mean_excitation_energy": "sqrt(10)*(-357*A + 357*D + 149*p)/1664",
+      "necessity": {
+        "class_of_states": "Arbitrary positive mixtures of coherent displacements of this fixed vacuum, with finite classical second moments",
+        "required_moments": "Cx=Cy=D-A+p, Cz=-2p, where Ci=<Ei^2+Bi^2>_classical>=0",
+        "inequality": "Let X=(Ex,Bx), Y=(By,-Ey). Cauchy-Schwarz in the classical ensemble gives A^2=<X dot Y>^2<=Cx*Cy=(D-A+p)^2. Since Cx>=0, 2*A<=D+p",
+        "factorization": "(D-A+p)^2-A^2=(D+p)*(D+p-2*A), checked exactly; the construction attains A=(D+p)/2",
+        "exclusions": "Not a bound for arbitrary squeezed or other nonclassical states: their vacuum-subtracted additions need not be positive classical second moments"
+      },
+      "previous_bound": "D/4 was the null-beam-only compensation bound for the isotropic cube vacuum. The extra positive-energy electric mode supplies longitudinal Maxwell tension, so that bound does not restrict this broader coherent-mixture class. Formal isotropic input p=-D/3 gives D/3 here, but the actual cube retains its separate stationary parity obstruction",
+      "scope": "Conditional stationary full tensor at the center only. Neither its vacuum hypotheses nor a finite-region stress match, wall/material realization, self-consistent gravitational source, fluctuations, stability or traversal are established by this check"
+    },
+    "scope": "Stationary positive added center radiation and a conditional full center-tensor construction in a flat ideal rectangle. Vacuum parameters D,p remain conditional and are not replaced by the cube tensor. No finite-region source, material validation, self-consistent gravitational solution, stability or traversal is established"
+  },
+  "rectangle_vacuum": {
+    "model": "Zero-temperature vacuum of one free EM field in a flat static conducting rectangle; local center only",
+    "normalization": "Lx=Ly=L, Lz=sqrt(5/8)*L; reported stress coefficients multiply hbar*c/L^4. tau is imaginary-time separation in units L/c",
+    "rho_coefficient": -0.3773056471909427,
+    "rho_decimal": "-0.377305647190942698778945120451",
+    "D_coefficient": 0.3773056471909427,
+    "D_decimal": "0.377305647190942698778945120451",
+    "transverse_pressure_coefficient": -0.0012844707395398853,
+    "transverse_pressure_decimal": "-0.00128447073953988532893674834941",
+    "axial_pressure_coefficient": -0.3747367057118629,
+    "axial_pressure_decimal": "-0.374736705711862928121071623753",
+    "sign_checks": {
+      "negative_rho": true,
+      "negative_transverse_pressure": true,
+      "negative_axial_pressure": true,
+      "D_plus_p_positive": true
+    },
+    "trace_residual": -5.739718509874451e-42,
+    "conditional_compensation_numeric_link": {
+      "A_max_coefficient": 0.1880105882257014,
+      "A_max_decimal": "0.188010588225701406725004186051",
+      "relation": "Amax=(D+p)/2 for the separately checked rectangular_resonance.conditional_compensation coherent-mixture theorem; coefficient multiplies hbar*c/L^4 and applies at the center only"
+    },
+    "unit_cube_limit_checks": [
+      {
+        "tau": 0.0,
+        "rho": "-0.269624593197241041112639859081",
+        "pressure": "-0.0898748643990803470375466196936",
+        "existing_cube_image_rho": "-0.269624593197241041112639822594",
+        "disagreement": 3.648622174114331e-26,
+        "existing_cube_analytic_tail": 1.3603539235145733e-23,
+        "isotropy_residual": 0.0,
+        "quadrature_error_estimates": [
+          "2.3832251e-42",
+          "2.3832251e-42"
+        ]
+      },
+      {
+        "tau": 0.15,
+        "rho": "-0.262717581054026006164127337314",
+        "pressure": "-0.0875725270180086687213757791047",
+        "existing_cube_image_rho": "-0.262717581054026006164127300896",
+        "disagreement": 3.641786246748227e-26,
+        "existing_cube_analytic_tail": 1.3603539235145733e-23,
+        "isotropy_residual": 0.0,
+        "quadrature_error_estimates": [
+          "2.1344997e-42",
+          "2.1344997e-42"
+        ]
+      }
+    ],
+    "image_kernel": "d_i=m_i*Li, s_i=(-1)^m_i, S=product(s_i), U=sum(d_i^2)+tau^2: C_i=sum_{m!=0}(1+S)*s_i/pi^2*(-1/U^2+2*(d_i^2+tau^2)/U^3); rho=sum(C_i)/2, p_i=rho-C_i",
+    "theta_definition": "theta_b(v)=sum_n(-1)^(b*n)*exp(-pi*v*n^2); Theta_b(u)=product_j theta_bj(u*Lj^2); M_i,b=sum_m m_i^2*(-1)^(b dot m)*exp(-pi*u*sum_j Lj^2*m_j^2)",
+    "theta_integral": "S_i=Theta_ei+Theta_(1-ei)-2, Q_i=M_i,ei+M_i,(1-ei). C_i(tau)=integral_0^infinity exp(-pi*u*tau^2)*[u*(pi*u*tau^2-1)*S_i+pi*u^2*Li^2*Q_i] du. The -2 removes only the zero Minkowski image",
+    "modular_identity": "For v<1, theta_b(v)=v^(-1/2)*sum_n exp[-pi*(n+b/2)^2/v]; its n^2 moment is S0/(2*pi*v^(3/2))-S2/v^(5/2). Direct signed Gaussian sums are used for v>=1",
+    "physical_mode_weights": "R^2=sum_i(n_i/Li)^2, omega=pi*sqrt(R^2), V=product(Li), n_i>=0 with at most one zero. For mixed parity j is the unique odd or unique even index; W_rho=2*omega/V*(1-(n_j/Lj)^2/R^2)*2^(-zero_count). Only C_j=2*W_rho is nonzero. Multiply by exp(-tau*omega); other parities vanish",
+    "mode_subtraction": "Subtract 3/(pi^2*tau^4) from rho and 2/(pi^2*tau^4) from each C_i; compute each pressure as rho-C_i",
+    "finite_tau_checks": [
+      {
+        "tau": 0.4,
+        "cutoff": 48,
+        "rho": -0.304594692156952,
+        "pressures": [
+          -0.016273863534348898,
+          -0.016273863534348898,
+          -0.2720469650882542
+        ],
+        "raw_rho": 11.568981515929504,
+        "minkowski_rho": 11.873576208086458,
+        "analytic_mode_tail_bound": 3.724458073651711e-20,
+        "image_rho": -0.30459469215694973,
+        "image_pressures": [
+          -0.016273863534348308,
+          -0.016273863534348308,
+          -0.2720469650882531
+        ],
+        "maximum_stress_disagreement": 2.275957200481571e-15,
+        "floating_acceptance": 1e-11,
+        "quadrature_error_estimates": [
+          "1.01e-42",
+          "1.000001e-44"
+        ]
+      },
+      {
+        "tau": 0.15,
+        "cutoff": 128,
+        "rho": -0.3657534902473003,
+        "pressures": [
+          -0.004093610801589875,
+          -0.004093610801589875,
+          -0.35756626864412056
+        ],
+        "raw_rho": 600.0560755013839,
+        "minkowski_rho": 600.4218289916313,
+        "analytic_mode_tail_bound": 2.8782794303581813e-18,
+        "image_rho": -0.36575349024737847,
+        "image_pressures": [
+          -0.004093610801620309,
+          -0.004093610801620309,
+          -0.3575662686441379
+        ],
+        "maximum_stress_disagreement": 7.815970093361102e-14,
+        "floating_acceptance": 1e-11,
+        "quadrature_error_estimates": [
+          "2.0100001e-42",
+          "3.2000001e-42"
+        ]
+      },
+      {
+        "tau": 0.08,
+        "cutoff": 239,
+        "rho": -0.37397004401373124,
+        "pressures": [
+          -0.0021119941975484835,
+          -0.0021119941975484835,
+          -0.3697460556186343
+        ],
+        "raw_rho": 7420.611160010022,
+        "minkowski_rho": 7420.985130054036,
+        "analytic_mode_tail_bound": 5.046273769744011e-17,
+        "image_rho": -0.3739700440136858,
+        "image_pressures": [
+          -0.002111994197642003,
+          -0.002111994197642003,
+          -0.36974605561840174
+        ],
+        "maximum_stress_disagreement": 2.3253621250773904e-13,
+        "floating_acceptance": 2.6363971077472674e-11,
+        "quadrature_error_estimates": [
+          "2.0100001e-42",
+          "1.1100001e-42"
+        ]
+      }
+    ],
+    "maximum_mode_image_disagreement": 2.3253621250773904e-13,
+    "precision": {
+      "decimal_working_digits": 40,
+      "reported_digits": 30,
+      "theta_cutoff": 8,
+      "zero_tau_quadrature_error_estimates": [
+        "2.010001e-42",
+        "1.101001e-42"
+      ],
+      "mode_tail": "Max-index shell m has <=7*m^2 modes and W_rho<=2*pi*sqrt(3)*m/(V*Lmin). Each mode has only C_j=2*W_rho, so every pressure is +/-W_rho; the positive density tail also bounds each absolute pressure tail. This fixed aspect has Lmax=1",
+      "scope": "Quadrature estimates and refinement evidence are not interval certification. Mode sums are float64; analytic mode tails exclude arithmetic rounding. The direct/modular theta split avoids the algebraic edge tail"
+    },
+    "separate_edge_sign_audit": {
+      "recomputed_in_default_checker": false,
+      "odd_cutoff": 2501,
+      "reported_partial_transverse_pressure": -0.001280973317475672,
+      "complete_hyperbolic_bilinear_tail_bound": 0.0006765597874650181,
+      "reported_partial_plus_tail": -0.000604413530010654,
+      "derivation": "For an odd pair, |C_i term|<=F(x)/(pi*h*a^3), F=coth(x)+x*csch(x)^2+x^2*coth(x)*csch(x)^2. F decreases for x>=1 and F(10)<1.001; omitted x>3108. Odd max-norm shells have 4*k points, giving sum_tail r^-3<=2/(M+1). Sum all three pair bounds; omitted rho is negative, so p_tail<=|C_i tail|",
+      "scope": "Partial pressure is from the separately reported M2501 audit; its large finite sum is not rerun here. This analytic tail upper bound does not certify arithmetic rounding"
+    },
+    "sources": [
+      "https://arxiv.org/pdf/0804.3916 (Lim-Teo: physical EM conducting-cavity mode framework)",
+      "https://arxiv.org/pdf/hep-th/0202089 (Nesterenko et al.: local wedge/plate stress framework)"
+    ],
+    "scope": "Our derived ideal-rectangle center stress and independent numerical verification. No originality claim, realistic-conductor result, spatially extended source, self-consistent curved geometry or traversal conclusion"
+  },
+  "temporal_density_noise": {
+    "model": "Final threshold state of the ideal rectangle, A=(D+p)/2; one common phase for Ex/By and an independent Ez phase",
+    "observable": "rho_f = integral dt f_sigma(t)*T00(t,center), f_sigma=exp(-t^2/(2*sigma^2))/(sqrt(2*pi)*sigma); sigma in L/c, rho in hbar*c/L^4, variance in (hbar*c/L^4)^2",
+    "renormalization": "Subtract the same cavity-vacuum c-number mean; this does not change variance. No replacement by photon-number variance or normal-ordering away of vacuum noise",
+    "mode_convention": "F=(Ex,Ey,Ez,Bx,By,Bz). Each physical center mode has one nonzero channel; W_cc(dt)=sum_omega w_c(omega)*exp(-i*omega*dt), all off-diagonal vacuum correlations vanish",
+    "spectrum": "lambda=5*nx^2+5*ny^2+8*nz^2, omega=pi*sqrt(lambda/5); w=4*omega/V*(1-kj^2/k^2)*2^(-zero_count). Unique even parity gives an E channel; unique odd gives a B channel. Polarizations are summed by the transverse projector",
+    "vacuum_formula": "Var0=1/2*sum_c,omega,nu w_c(omega)*w_c(nu)*exp[-sigma^2*(omega+nu)^2]. Ordered pairs include equal modes. Wick contraction is W_ab^2, not absolute(W_ab)^2",
+    "general_mode_formula": "1/2*sum_mn absolute(v_m^T*v_n)^2*absolute(f_tilde(omega_m+omega_n))^2; ordinary transpose inside the modulus, not a dagger. v=(i*sqrt(omega/2)*u,curl(u)/sqrt(2*omega))",
+    "displaced_linear_formula": "A/2*sum(w_Ex+w_By)*(exp[-sigma^2*(omega-Omega)^2]+exp[-sigma^2*(omega+Omega)^2]) - p*sum w_Ez*(exp[-sigma^2*(omega-Omega_z)^2]+exp[-sigma^2*(omega+Omega_z)^2])",
+    "phase_formula": "A^2/2*exp(-4*sigma^2*Omega^2)+p^2/2*exp(-4*sigma^2*Omega_z^2); law of total variance, with independent uniform phases",
+    "total_variance": "vacuum + displaced_linear + classical_phase; all contributions nonnegative",
+    "shell_weights": {
+      "lambda_97_Ex": 55.57631036984714,
+      "lambda_97_By": 37.5320537562604,
+      "lambda_10_Ez": 11.239703569665162,
+      "exact": "w_Ex(97)=308*Omega/(97V), w_By(97)=208*Omega/(97V), w_Ez(10)=2*Omega_z/V, independently enumerated; unused degenerate polarizations remain in the vacuum noise"
+    },
+    "gaussian_long_time_limit": {
+      "variance": 8.767116224397473,
+      "relative_standard_deviation": 15.7487494507011,
+      "formula": "A/2*(w_Ex(Omega)+w_By(Omega))-p*w_Ez(Omega_z)",
+      "reason": "The resonant difference-frequency terms remain1 for every sigma; all other terms are nonnegative. This is both a Gaussian-width-independent lower bound and the sigma->infinity limit"
+    },
+    "general_normalized_sampling_bound": {
+      "variance_lower_bound": 8.767116224397473,
+      "relative_standard_deviation_lower_bound": 15.7487494507011,
+      "assumptions": "Any real normalized temporal sampling g with integral(g)=1 and a well-defined finite second moment, for this exact stationary state and center. Normalization alone does not ensure finite variance",
+      "argument": "Replace each Gaussian kernel by absolute(g_tilde(frequency))^2. Independent phases eliminate cross terms. All coefficients are nonnegative; the resonant difference-frequency terms contain absolute(g_tilde(0))^2=1 and supply the stated bound, including signed, asymmetric or time-shifted samplings",
+      "scope": "This state and center-density observable only; not every quantum source or a gravitational stability theorem"
+    },
+    "samples": [
+      {
+        "sigma": 0.25,
+        "cutoff": 18,
+        "spectral_bins": 1156,
+        "vacuum_variance": 0.7359863322327846,
+        "displaced_linear_variance": 67.14169877790499,
+        "classical_phase_variance": 5.932818606745522e-09,
+        "total_variance": 67.8776851160706,
+        "mean_density": -0.18801058822570138,
+        "relative_standard_deviation": 43.82089094930878,
+        "analytic_omitted_mode_bound": "9.81914280282e-46"
+      },
+      {
+        "sigma": 0.5,
+        "cutoff": 11,
+        "spectral_bins": 400,
+        "vacuum_variance": 1.701635187708329e-07,
+        "displaced_linear_variance": 29.314329795423443,
+        "classical_phase_variance": 2.2069321186903905e-15,
+        "total_variance": 29.314329965586964,
+        "mean_density": -0.18801058822570138,
+        "relative_standard_deviation": 28.79769169015591,
+        "analytic_omitted_mode_bound": "9.21942840341e-44"
+      },
+      {
+        "sigma": 1.0,
+        "cutoff": 8,
+        "spectral_bins": 196,
+        "vacuum_variance": 3.235652546977172e-33,
+        "displaced_linear_variance": 13.271829836958768,
+        "classical_phase_variance": 4.2257188182458105e-41,
+        "total_variance": 13.271829836958768,
+        "mean_density": -0.18801058822570138,
+        "relative_standard_deviation": 19.376846291982712,
+        "analytic_omitted_mode_bound": "2.59069933101e-53"
+      },
+      {
+        "sigma": 2.0,
+        "cutoff": 6,
+        "spectral_bins": 107,
+        "vacuum_variance": 4.349189797892273e-136,
+        "displaced_linear_variance": 9.547201909897488,
+        "classical_phase_variance": 5.679983529972167e-144,
+        "total_variance": 9.547201909897488,
+        "mean_density": -0.18801058822570138,
+        "relative_standard_deviation": 16.434471609919463,
+        "analytic_omitted_mode_bound": "3.59708284134e-42"
+      },
+      {
+        "sigma": 4.0,
+        "cutoff": 6,
+        "spectral_bins": 107,
+        "vacuum_variance": 0.0,
+        "displaced_linear_variance": 9.005386609238965,
+        "classical_phase_variance": 0.0,
+        "total_variance": 9.005386609238965,
+        "mean_density": -0.18801058822570138,
+        "relative_standard_deviation": 15.961322509734899,
+        "analytic_omitted_mode_bound": "1.06005625919e-173"
+      },
+      {
+        "sigma": 8.0,
+        "cutoff": 5,
+        "spectral_bins": 71,
+        "vacuum_variance": 0.0,
+        "displaced_linear_variance": 8.771524664825957,
+        "classical_phase_variance": 0.0,
+        "total_variance": 8.771524664825957,
+        "mean_density": -0.18801058822570138,
+        "relative_standard_deviation": 15.752708489027055,
+        "analytic_omitted_mode_bound": "8.28469448084e-97"
+      },
+      {
+        "sigma": 32.0,
+        "cutoff": 5,
+        "spectral_bins": 71,
+        "vacuum_variance": 0.0,
+        "displaced_linear_variance": 8.767116224397473,
+        "classical_phase_variance": 0.0,
+        "total_variance": 8.767116224397473,
+        "mean_density": -0.18801058822570138,
+        "relative_standard_deviation": 15.7487494507011,
+        "analytic_omitted_mode_bound": "5.15890239395e-1557"
+      }
+    ],
+    "refinement": {
+      "sigma": 0.25,
+      "second_cutoff": 20,
+      "maximum_component_disagreement": 0.0,
+      "floating_tolerance": 3.3938842558035293e-10
+    },
+    "mode_tail": {
+      "shell_bound": "K*m^3, K=28*pi*sqrt(3)/(V*min_side), omega>=pi*m",
+      "vacuum_bound": "(sum_tail w*exp(-sigma^2*omega^2))*(sum_all w*exp(-sigma^2*omega^2)); integral/maximum bounds on m^3*exp(-a*m^2)",
+      "linear_bound": "2*(A-p)*K*integral_N^infinity m^3*exp[-a*(m-sqrt(97/5))^2] dm; integrand decreasing beyond N",
+      "scope": "Bounds cover the omitted physical modes, not floating-point roundoff or uncertainty in the ideal-wall model. Finite sums use float64; positive-tail expressions use50-digit mpmath. At wide sampling widths, positive exponentially small vacuum/phase terms can underflow to numerical zero; they are not exactly zero at finite width"
+    },
+    "minkowski_benchmark": "Var_vac=1/(560*pi^4*sigma^8), the analytic free-space short-sampling limit, not an exact finite-width cavity formula",
+    "sources": [
+      "https://arxiv.org/pdf/1204.3570 (Fewster-Ford-Roman, Eq16 and Eqs37,41-42: time-averaged quadratic stress moments; our Gaussian cavity substitution)",
+      "https://arxiv.org/pdf/0804.3916 (Lim-Teo: physical conducting-cavity modes)",
+      "https://arxiv.org/pdf/gr-qc/0209075 (Anderson et al.: gravitational linear-response validity requires more than a local variance ratio)"
+    ],
+    "scope": "Actual time-smeared center-density second moment for this specified ideal quantum state. No material-wall noise, spatially extended source, detector dynamics or gravitational backreaction has been calculated; a large ratio alone is not a general semiclassical-gravity no-go theorem"
+  },
+  "spatial_source": {
+    "model": "Actual ideal-rectangle vacuum plus the fixed stationary threshold coherent-mixture state; amplitudes fixed by center D,p and not retuned at other positions",
+    "convention": "Contravariant Cartesian orthonormal tensor ordered t,x,y,z, signature -+++; Lx=Ly=L, Lz=sqrt(5/8)*L. xyz and offsets are in units L even along z; tensor coefficients multiply hbar*c/L^4",
+    "center_position_L": [
+      0.5,
+      0.5,
+      0.39528470752104744
+    ],
+    "D": 0.3773056471909427,
+    "p": -0.0012844707395398853,
+    "A": 0.18801058822570138,
+    "reference_tensor": [
+      [
+        -0.18801058822570138,
+        -0.0,
+        -0.0,
+        -0.18801058822570138
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.18801058822570138,
+        -0.0,
+        -0.0,
+        -0.18801058822570138
+      ]
+    ],
+    "diagnostic": "max_ab |T_total^{ab}(x)-T_reference^{ab}|/A, with T_reference=-A*ell^a*ell^b constant in these flat Cartesian components. This is a declared center-reference diagnostic, not the actual spatially varying curved Ori target, an invariant tensor norm, or a gravitational solution",
+    "center": {
+      "offset_L": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "vacuum_tensor": [
+        [
+          -0.3773056471909427,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0012844707395398853,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -0.0012844707395398853,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          -0.3747367057118629
+        ]
+      ],
+      "added_tensor": [
+        [
+          0.18929505896524126,
+          -3.086548979923963e-33,
+          1.3717995466328723e-33,
+          -0.18801058822570138
+        ],
+        [
+          -3.086548979923963e-33,
+          0.0012844707395398836,
+          -5.255022417019403e-33,
+          2.5589337696805514e-33
+        ],
+        [
+          1.3717995466328723e-33,
+          -5.255022417019403e-33,
+          0.0012844707395398836,
+          -1.018242962449143e-33
+        ],
+        [
+          -0.18801058822570138,
+          2.5589337696805514e-33,
+          -1.018242962449143e-33,
+          0.1867261174861615
+        ]
+      ],
+      "total_tensor": [
+        [
+          -0.1880105882257014,
+          -3.086548979923963e-33,
+          1.3717995466328723e-33,
+          -0.18801058822570138
+        ],
+        [
+          -3.086548979923963e-33,
+          -1.734723475976807e-18,
+          -5.255022417019403e-33,
+          2.5589337696805514e-33
+        ],
+        [
+          1.3717995466328723e-33,
+          -5.255022417019403e-33,
+          -1.734723475976807e-18,
+          -1.018242962449143e-33
+        ],
+        [
+          -0.18801058822570138,
+          2.5589337696805514e-33,
+          -1.018242962449143e-33,
+          -0.1880105882257014
+        ]
+      ],
+      "maximum_componentwise_error_over_A": 1.4762772606354026e-16,
+      "worst_component": [
+        0,
+        0
+      ],
+      "vacuum_quadrature_error_estimate": "1.3642314e-34"
+    },
+    "positive_axis_samples": {
+      "x": [
+        {
+          "offset_L": [
+            0.001,
+            0.0,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3773082820076763,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0012921745846942458,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.0012810411550031092,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.374735066267979
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.18929029293591035,
+              1.5835462767979108e-19,
+              1.3716235404040827e-33,
+              -0.18800316596285918
+            ],
+            [
+              1.5835462767979108e-19,
+              0.001287126973051167,
+              2.6960761311570235e-19,
+              -1.3128546055504054e-19
+            ],
+            [
+              1.3716235404040827e-33,
+              2.6960761311570235e-19,
+              0.0012871142958748027,
+              -1.0182027643572388e-33
+            ],
+            [
+              -0.18800316596285918,
+              -1.3128546055504054e-19,
+              -1.0182027643572388e-33,
+              0.18671605166698438
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.18801798907176595,
+              1.5835462767979108e-19,
+              1.3716235404040827e-33,
+              -0.18800316596285918
+            ],
+            [
+              1.5835462767979108e-19,
+              -5.047611643078844e-06,
+              2.6960761311570235e-19,
+              -1.3128546055504054e-19
+            ],
+            [
+              1.3716235404040827e-33,
+              2.6960761311570235e-19,
+              6.073140871693536e-06,
+              -1.0182027643572388e-33
+            ],
+            [
+              -0.18800316596285918,
+              -1.3128546055504054e-19,
+              -1.0182027643572388e-33,
+              -0.1880190146009946
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 4.4818620976300366e-05,
+          "worst_component": [
+            3,
+            3
+          ],
+          "vacuum_quadrature_error_estimate": "1.3706825e-34"
+        },
+        {
+          "offset_L": [
+            0.005,
+            0.0,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3773715199191614,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0014770875883262644,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.0011987257216421409,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.374695706609193
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.1891759458208434,
+              7.912731006892411e-19,
+              1.3674007804307173e-33,
+              -0.18782509025123653
+            ],
+            [
+              7.912731006892411e-19,
+              0.0013508555696068736,
+              1.3471861382537804e-18,
+              -6.560127415970633e-19
+            ],
+            [
+              1.3674007804307173e-33,
+              1.3471861382537804e-18,
+              0.0013505386652208906,
+              -1.0172383275036871e-33
+            ],
+            [
+              -0.18782509025123653,
+              -6.560127415970633e-19,
+              -1.0172383275036871e-33,
+              0.18647455158601567
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.188195574098318,
+              7.912731006892411e-19,
+              1.3674007804307173e-33,
+              -0.18782509025123653
+            ],
+            [
+              7.912731006892411e-19,
+              -0.00012623201871939083,
+              1.3471861382537804e-18,
+              -6.560127415970633e-19
+            ],
+            [
+              1.3674007804307173e-33,
+              1.3471861382537804e-18,
+              0.00015181294357874972,
+              -1.0172383275036871e-33
+            ],
+            [
+              -0.18782509025123653,
+              -6.560127415970633e-19,
+              -1.0172383275036871e-33,
+              -0.18822115502317732
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.001119973079511683,
+          "worst_component": [
+            3,
+            3
+          ],
+          "vacuum_quadrature_error_estimate": "1.5406968e-34"
+        },
+        {
+          "offset_L": [
+            0.01,
+            0.0,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3775691669592908,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0020551971017141388,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.0009414231413655079,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.3745725467162112
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.18881907600384776,
+              1.5794234079483694e-18,
+              1.3542218417448432e-33,
+              -0.18726932840360117
+            ],
+            [
+              1.5794234079483694e-18,
+              0.0015497476002465649,
+              2.6890518923773042e-18,
+              -1.309436500606768e-18
+            ],
+            [
+              1.3542218417448432e-33,
+              2.6890518923773042e-18,
+              0.0015484802954491006,
+              -1.0142283875024711e-33
+            ],
+            [
+              -0.18726932840360117,
+              -1.309436500606768e-18,
+              -1.0142283875024711e-33,
+              0.1857208481081521
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.18875009095544307,
+              1.5794234079483694e-18,
+              1.3542218417448432e-33,
+              -0.18726932840360117
+            ],
+            [
+              1.5794234079483694e-18,
+              -0.0005054495014675739,
+              2.6890518923773042e-18,
+              -1.309436500606768e-18
+            ],
+            [
+              1.3542218417448432e-33,
+              2.6890518923773042e-18,
+              0.0006070571540835927,
+              -1.0142283875024711e-33
+            ],
+            [
+              -0.18726932840360117,
+              -1.309436500606768e-18,
+              -1.0142283875024711e-33,
+              -0.18885169860805912
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.00447373943295154,
+          "worst_component": [
+            3,
+            3
+          ],
+          "vacuum_quadrature_error_estimate": "2.2859782e-34"
+        },
+        {
+          "offset_L": [
+            0.02,
+            0.0,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3783601868594098,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.004371517707465746,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              8.879829448696515e-05,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.37407746744643106
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.18739862616296665,
+              3.1339383652515846e-18,
+              1.3017659379872526e-33,
+              -0.18505723904750235
+            ],
+            [
+              3.1339383652515846e-18,
+              0.0023413871154642774,
+              5.335666633229237e-18,
+              -2.5982224053795198e-18
+            ],
+            [
+              1.3017659379872526e-33,
+              5.335666633229237e-18,
+              0.002336322897747295,
+              -1.002247974907558e-33
+            ],
+            [
+              -0.18505723904750235,
+              -2.5982224053795198e-18,
+              -1.002247974907558e-33,
+              0.18272091614975505
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.19096156069644316,
+              3.1339383652515846e-18,
+              1.3017659379872526e-33,
+              -0.18505723904750235
+            ],
+            [
+              3.1339383652515846e-18,
+              -0.0020301305920014685,
+              5.335666633229237e-18,
+              -2.5982224053795198e-18
+            ],
+            [
+              1.3017659379872526e-33,
+              5.335666633229237e-18,
+              0.0024251211922342603,
+              -1.002247974907558e-33
+            ],
+            [
+              -0.18505723904750235,
+              -2.5982224053795198e-18,
+              -1.002247974907558e-33,
+              -0.191356551296676
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.017796673594563134,
+          "worst_component": [
+            3,
+            3
+          ],
+          "vacuum_quadrature_error_estimate": "1.0602801e-33"
+        },
+        {
+          "offset_L": [
+            0.05,
+            0.0,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3839163633116312,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.020759141445385196,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.007345147551558038,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.370502369417804
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.17776631749230626,
+              7.407147808416356e-18,
+              9.460651457699467e-34,
+              -0.17005717461136208
+            ],
+            [
+              7.407147808416356e-18,
+              0.007709142880944181,
+              1.2610489006343563e-17,
+              -6.140968695866553e-18
+            ],
+            [
+              9.460651457699467e-34,
+              1.2610489006343563e-17,
+              0.007677709644589165,
+              -9.210094117365953e-34
+            ],
+            [
+              -0.17005717461136208,
+              -6.140968695866553e-18,
+              -9.210094117365953e-34,
+              0.16237946496677294
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.20615004581932495,
+              7.407147808416356e-18,
+              9.460651457699467e-34,
+              -0.17005717461136208
+            ],
+            [
+              7.407147808416356e-18,
+              -0.013049998564441015,
+              1.2610489006343563e-17,
+              -6.140968695866553e-18
+            ],
+            [
+              9.460651457699467e-34,
+              1.2610489006343563e-17,
+              0.015022857196147203,
+              -9.210094117365953e-34
+            ],
+            [
+              -0.17005717461136208,
+              -6.140968695866553e-18,
+              -9.210094117365953e-34,
+              -0.20812290445103107
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.10697438061937993,
+          "worst_component": [
+            3,
+            3
+          ],
+          "vacuum_quadrature_error_estimate": "3.4318232e-31"
+        }
+      ],
+      "y": [
+        {
+          "offset_L": [
+            0.0,
+            0.001,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3773082820076763,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0012810411550031092,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.0012921745846942458,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.374735066267979
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.1892869705345588,
+              -3.086518516605912e-33,
+              -7.038261305455858e-20,
+              -0.18800131037883486
+            ],
+            [
+              -3.086518516605912e-33,
+              0.0012782252157054197,
+              2.6960635012367095e-19,
+              2.558519376470371e-33
+            ],
+            [
+              -7.038261305455858e-20,
+              2.6960635012367095e-19,
+              0.0012930821255479064,
+              5.223339761373108e-20
+            ],
+            [
+              -0.18800131037883486,
+              2.558519376470371e-33,
+              5.223339761373108e-20,
+              0.18671566319330551
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.1880213114731175,
+              -3.086518516605912e-33,
+              -7.038261305455858e-20,
+              -0.18800131037883486
+            ],
+            [
+              -3.086518516605912e-33,
+              -2.8159392976895205e-06,
+              2.6960635012367095e-19,
+              2.558519376470371e-33
+            ],
+            [
+              -7.038261305455858e-20,
+              2.6960635012367095e-19,
+              9.075408536605468e-07,
+              5.223339761373108e-20
+            ],
+            [
+              -0.18800131037883486,
+              2.558519376470371e-33,
+              5.223339761373108e-20,
+              -0.18801940307467346
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 5.703533783550896e-05,
+          "worst_component": [
+            0,
+            0
+          ],
+          "vacuum_quadrature_error_estimate": "1.3706825e-34"
+        },
+        {
+          "offset_L": [
+            0.0,
+            0.005,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3773715199191614,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0011987257216421409,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.0014770875883262644,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.374695706609193
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.1890929959793047,
+              -3.085787216616995e-33,
+              -3.52024167653719e-19,
+              -0.1877787043132902
+            ],
+            [
+              -3.085787216616995e-33,
+              0.0011284767871636847,
+              1.3470284966968287e-18,
+              2.5485800101754172e-33
+            ],
+            [
+              -3.52024167653719e-19,
+              1.3470284966968287e-18,
+              0.001499606576373963,
+              2.601259740030871e-19
+            ],
+            [
+              -0.1877787043132902,
+              2.5485800101754172e-33,
+              2.601259740030871e-19,
+              0.18646491261576706
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.1882785239398567,
+              -3.085787216616995e-33,
+              -3.52024167653719e-19,
+              -0.1877787043132902
+            ],
+            [
+              -3.085787216616995e-33,
+              -7.024893447845617e-05,
+              1.3470284966968287e-18,
+              2.5485800101754172e-33
+            ],
+            [
+              -3.52024167653719e-19,
+              1.3470284966968287e-18,
+              2.251898804769858e-05,
+              2.601259740030871e-19
+            ],
+            [
+              -0.1877787043132902,
+              2.5485800101754172e-33,
+              2.601259740030871e-19,
+              -0.18823079399342593
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.0014251097062345547,
+          "worst_component": [
+            0,
+            0
+          ],
+          "vacuum_quadrature_error_estimate": "1.5406968e-34"
+        },
+        {
+          "offset_L": [
+            0.0,
+            0.01,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3775691669592908,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0009414231413655079,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.0020551971017141388,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.3745725467162112
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.18848865211397514,
+              -3.083499674110026e-33,
+              -7.04741775470503e-19,
+              -0.18708383042913637
+            ],
+            [
+              -3.083499674110026e-33,
+              0.0006622945579410899,
+              2.687796564389739e-18,
+              2.5175945291944765e-33
+            ],
+            [
+              -7.04741775470503e-19,
+              2.687796564389739e-18,
+              0.0021431560930705307,
+              5.137578643743101e-19
+            ],
+            [
+              -0.18708383042913637,
+              2.5175945291944765e-33,
+              5.137578643743101e-19,
+              0.18568320146296355
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.18908051484531568,
+              -3.083499674110026e-33,
+              -7.04741775470503e-19,
+              -0.18708383042913637
+            ],
+            [
+              -3.083499674110026e-33,
+              -0.00027912858342441795,
+              2.687796564389739e-18,
+              2.5175945291944765e-33
+            ],
+            [
+              -7.04741775470503e-19,
+              2.687796564389739e-18,
+              8.79589913563919e-05,
+              5.137578643743101e-19
+            ],
+            [
+              -0.18708383042913637,
+              2.5175945291944765e-33,
+              5.137578643743101e-19,
+              -0.18888934525324766
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.0056907785338657976,
+          "worst_component": [
+            0,
+            0
+          ],
+          "vacuum_quadrature_error_estimate": "2.2859782e-34"
+        },
+        {
+          "offset_L": [
+            0.0,
+            0.02,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3783601868594098,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              8.879829448696515e-05,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.004371517707465746,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.37407746744643106
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.18609882176123152,
+              -3.074315827869214e-33,
+              -1.4150023406852805e-18,
+              -0.18431597922540216
+            ],
+            [
+              -3.074315827869214e-33,
+              -0.001175570860086711,
+              5.3258089400875234e-18,
+              2.3947843189633878e-33
+            ],
+            [
+              -1.4150023406852805e-18,
+              5.3258089400875234e-18,
+              0.004689615633242938,
+              9.759331406454244e-19
+            ],
+            [
+              -0.18431597922540216,
+              2.3947843189633878e-33,
+              9.759331406454244e-19,
+              0.1825847769880753
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.1922613650981783,
+              -3.074315827869214e-33,
+              -1.4150023406852805e-18,
+              -0.18431597922540216
+            ],
+            [
+              -3.074315827869214e-33,
+              -0.0010867725655997458,
+              5.3258089400875234e-18,
+              2.3947843189633878e-33
+            ],
+            [
+              -1.4150023406852805e-18,
+              5.3258089400875234e-18,
+              0.0003180979257771926,
+              9.759331406454244e-19
+            ],
+            [
+              -0.18431597922540216,
+              2.3947843189633878e-33,
+              9.759331406454244e-19,
+              -0.19149269045835576
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.022609241918726253,
+          "worst_component": [
+            0,
+            0
+          ],
+          "vacuum_quadrature_error_estimate": "1.0602801e-33"
+        },
+        {
+          "offset_L": [
+            0.0,
+            0.05,
+            0.0
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3839163633116312,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.007345147551558038,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.020759141445385196,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.370502369417804
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.17056821219476445,
+              -3.0085511771361284e-33,
+              -3.630899738391891e-18,
+              -0.16545622803078053
+            ],
+            [
+              -3.0085511771361284e-33,
+              -0.01287286268671034,
+              1.2476128573230765e-17,
+              1.584381329695868e-33
+            ],
+            [
+              -3.630899738391891e-18,
+              1.2476128573230765e-17,
+              0.02130799256496363,
+              1.5777214356271392e-18
+            ],
+            [
+              -0.16545622803078053,
+              1.584381329695868e-33,
+              1.5777214356271392e-18,
+              0.1621330823165112
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.21334815111686675,
+              -3.0085511771361284e-33,
+              -3.630899738391891e-18,
+              -0.16545622803078053
+            ],
+            [
+              -3.0085511771361284e-33,
+              -0.005527715135152302,
+              1.2476128573230765e-17,
+              1.584381329695868e-33
+            ],
+            [
+              -3.630899738391891e-18,
+              1.2476128573230765e-17,
+              0.0005488511195784335,
+              1.5777214356271392e-18
+            ],
+            [
+              -0.16545622803078053,
+              1.584381329695868e-33,
+              1.5777214356271392e-18,
+              -0.20836928710129282
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.1347666805911396,
+          "worst_component": [
+            0,
+            0
+          ],
+          "vacuum_quadrature_error_estimate": "3.4318232e-31"
+        }
+      ],
+      "z": [
+        {
+          "offset_L": [
+            0.0,
+            0.0,
+            0.001
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3773076742069388,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0012806629355417746,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.0012806629355417746,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.3747463483358552
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.18929249413260393,
+              2.0029872163701278e-19,
+              -8.901931102347226e-20,
+              -0.18800773352049335
+            ],
+            [
+              2.0029872163701278e-19,
+              0.001294992877412221,
+              -5.254170119099203e-33,
+              -1.6606180920767662e-19
+            ],
+            [
+              -8.901931102347226e-20,
+              -5.254170119099203e-33,
+              0.0012739486016675183,
+              6.608586354959062e-20
+            ],
+            [
+              -0.18800773352049335,
+              -1.6606180920767662e-19,
+              6.608586354959062e-20,
+              0.18672355265352417
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.18801518007433485,
+              2.0029872163701278e-19,
+              -8.901931102347226e-20,
+              -0.18800773352049335
+            ],
+            [
+              2.0029872163701278e-19,
+              1.4329941870446427e-05,
+              -5.254170119099203e-33,
+              -1.6606180920767662e-19
+            ],
+            [
+              -8.901931102347226e-20,
+              -5.254170119099203e-33,
+              -6.714333874256262e-06,
+              6.608586354959062e-20
+            ],
+            [
+              -0.18800773352049335,
+              -1.6606180920767662e-19,
+              6.608586354959062e-20,
+              -0.18802279568233102
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 7.621880238597912e-05,
+          "worst_component": [
+            1,
+            1
+          ],
+          "vacuum_quadrature_error_estimate": "1.3684613e-34"
+        },
+        {
+          "offset_L": [
+            0.0,
+            0.0,
+            0.005
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3773563187781954,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.001189278058639839,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.001189278058639839,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.3749777626609157
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.1892310248825357,
+              1.0001657551668708e-18,
+              -4.442253779964352e-19,
+              -0.18793924988815075
+            ],
+            [
+              1.0001657551668708e-18,
+              0.0015470239615020809,
+              -5.233736751998272e-33,
+              -8.294701365441905e-19
+            ],
+            [
+              -4.442253779964352e-19,
+              -5.233736751998272e-33,
+              0.0010219175175776862,
+              3.3094245553690563e-19
+            ],
+            [
+              -0.18793924988815075,
+              -8.294701365441905e-19,
+              3.3094245553690563e-19,
+              0.18666208340345594
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.1881252938956597,
+              1.0001657551668708e-18,
+              -4.442253779964352e-19,
+              -0.18793924988815075
+            ],
+            [
+              1.0001657551668708e-18,
+              0.0003577459028622418,
+              -5.233736751998272e-33,
+              -8.294701365441905e-19
+            ],
+            [
+              -4.442253779964352e-19,
+              -5.233736751998272e-33,
+              -0.00016736054106215284,
+              3.3094245553690563e-19
+            ],
+            [
+              -0.18793924988815075,
+              -8.294701365441905e-19,
+              3.3094245553690563e-19,
+              -0.18831567925745976
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.0019027965724610042,
+          "worst_component": [
+            1,
+            1
+          ],
+          "vacuum_quadrature_error_estimate": "1.4761644e-34"
+        },
+        {
+          "offset_L": [
+            0.0,
+            0.0,
+            0.01
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3775082858701162,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0009037303180718247,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.0009037303180718247,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.3757008252339725
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.18904000462309142,
+              1.9920485124627902e-18,
+              -8.830166144476798e-19,
+              -0.18772560057447946
+            ],
+            [
+              1.9920485124627902e-18,
+              0.0023284446342185516,
+              -5.170151559152876e-33,
+              -1.653703643459991e-18
+            ],
+            [
+              -8.830166144476798e-19,
+              -5.170151559152876e-33,
+              0.00024049684486118772,
+              6.6507313289515505e-19
+            ],
+            [
+              -0.18772560057447946,
+              -1.653703643459991e-18,
+              6.6507313289515505e-19,
+              0.18647106314401166
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.18846828124702478,
+              1.9920485124627902e-18,
+              -8.830166144476798e-19,
+              -0.18772560057447946
+            ],
+            [
+              1.9920485124627902e-18,
+              0.001424714316146727,
+              -5.170151559152876e-33,
+              -1.653703643459991e-18
+            ],
+            [
+              -8.830166144476798e-19,
+              -5.170151559152876e-33,
+              -0.000663233473210637,
+              6.6507313289515505e-19
+            ],
+            [
+              -0.18772560057447946,
+              -1.653703643459991e-18,
+              6.6507313289515505e-19,
+              -0.18922976208996087
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.0075778408524332565,
+          "worst_component": [
+            1,
+            1
+          ],
+          "vacuum_quadrature_error_estimate": "1.8961375e-34"
+        },
+        {
+          "offset_L": [
+            0.0,
+            0.0,
+            0.02
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3781154384809917,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0002380022386081682,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0002380022386081682,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.37859144295820807
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.1882920220442392,
+              3.918318596298913e-18,
+              -1.7228835913408921e-18,
+              -0.18687646105484537
+            ],
+            [
+              3.918318596298913e-18,
+              0.0053613762330815,
+              -4.919858538314428e-33,
+              -3.265712401229293e-18
+            ],
+            [
+              -1.7228835913408921e-18,
+              -4.919858538314428e-33,
+              -0.0027924347540017602,
+              1.3550834356172634e-18
+            ],
+            [
+              -0.18687646105484537,
+              -3.265712401229293e-18,
+              1.3550834356172634e-18,
+              0.18572308056515943
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.18982341643675252,
+              3.918318596298913e-18,
+              -1.7228835913408921e-18,
+              -0.18687646105484537
+            ],
+            [
+              3.918318596298913e-18,
+              0.005599378471689668,
+              -4.919858538314428e-33,
+              -3.265712401229293e-18
+            ],
+            [
+              -1.7228835913408921e-18,
+              -4.919858538314428e-33,
+              -0.002554432515393592,
+              1.3550834356172634e-18
+            ],
+            [
+              -0.18687646105484537,
+              -3.265712401229293e-18,
+              1.3550834356172634e-18,
+              -0.19286836239304864
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.029782250694135228,
+          "worst_component": [
+            1,
+            1
+          ],
+          "vacuum_quadrature_error_estimate": "5.2317561e-34"
+        },
+        {
+          "offset_L": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "vacuum_tensor": [
+            [
+              -0.3823332469808169,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.008208526025663259,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.008208526025663259,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              -0.3987502990321434
+            ]
+          ],
+          "added_tensor": [
+            [
+              0.1837418772415204,
+              8.697805948120114e-18,
+              -3.5874883426572064e-18,
+              -0.1811694328166839
+            ],
+            [
+              8.697805948120114e-18,
+              0.02266160461574568,
+              -3.341227936362006e-33,
+              -7.456485474950829e-18
+            ],
+            [
+              -3.5874883426572064e-18,
+              -3.341227936362006e-33,
+              -0.02009266313666591,
+              3.763009594761762e-18
+            ],
+            [
+              -0.1811694328166839,
+              -7.456485474950829e-18,
+              3.763009594761762e-18,
+              0.18117293576244065
+            ]
+          ],
+          "total_tensor": [
+            [
+              -0.19859136973929647,
+              8.697805948120114e-18,
+              -3.5874883426572064e-18,
+              -0.1811694328166839
+            ],
+            [
+              8.697805948120114e-18,
+              0.030870130641408935,
+              -3.341227936362006e-33,
+              -7.456485474950829e-18
+            ],
+            [
+              -3.5874883426572064e-18,
+              -3.341227936362006e-33,
+              -0.011884137111002653,
+              3.763009594761762e-18
+            ],
+            [
+              -0.1811694328166839,
+              -7.456485474950829e-18,
+              3.763009594761762e-18,
+              -0.21757736326970273
+            ]
+          ],
+          "maximum_componentwise_error_over_A": 0.16419357512115337,
+          "worst_component": [
+            1,
+            1
+          ],
+          "vacuum_quadrature_error_estimate": "4.6545017e-32"
+        }
+      ]
+    },
+    "generic_samples": [
+      {
+        "offset_L": [
+          0.01,
+          0.01,
+          0.01
+        ],
+        "vacuum_tensor": [
+          [
+            -0.3780369540293944,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.0013306178397411643,
+            0.0005769100323936463,
+            0.0009651527613349088
+          ],
+          [
+            0.0,
+            0.0005769100323936463,
+            -0.0013306178397411643,
+            0.0009651527613349088
+          ],
+          [
+            0.0,
+            0.0009651527613349088,
+            0.0009651527613349088,
+            -0.37537571834991207
+          ]
+        ],
+        "added_tensor": [
+          [
+            0.18776098726396512,
+            -0.001018336982784636,
+            0.0004478372138869935,
+            -0.1860612572813438
+          ],
+          [
+            -0.001018336982784636,
+            0.0019762511199762356,
+            -0.0013531285410309454,
+            0.0008325632435662295
+          ],
+          [
+            0.0004478372138869935,
+            -0.0013531285410309454,
+            0.001351712795657739,
+            -0.0003342991038458399
+          ],
+          [
+            -0.1860612572813438,
+            0.0008325632435662295,
+            -0.0003342991038458399,
+            0.1844330233483312
+          ]
+        ],
+        "total_tensor": [
+          [
+            -0.1902759667654293,
+            -0.001018336982784636,
+            0.0004478372138869935,
+            -0.1860612572813438
+          ],
+          [
+            -0.001018336982784636,
+            0.0006456332802350713,
+            -0.0007762185086372991,
+            0.0017977160049011383
+          ],
+          [
+            0.0004478372138869935,
+            -0.0007762185086372991,
+            2.1094955916574776e-05,
+            0.0006308536574890688
+          ],
+          [
+            -0.1860612572813438,
+            0.0017977160049011383,
+            0.0006308536574890688,
+            -0.19094269500158087
+          ]
+        ],
+        "maximum_componentwise_error_over_A": 0.015595434297347012,
+        "worst_component": [
+          3,
+          3
+        ],
+        "vacuum_quadrature_error_estimate": "1.0025321e-31"
+      },
+      {
+        "offset_L": [
+          0.01,
+          0.015,
+          0.02
+        ],
+        "vacuum_tensor": [
+          [
+            -0.37898131422648623,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.00024645548572885685,
+            0.0008657511751067663,
+            0.0019285707925107186
+          ],
+          [
+            0.0,
+            0.0008657511751067663,
+            -0.0011481690458480568,
+            0.0028972944769693506
+          ],
+          [
+            0.0,
+            0.0019285707925107186,
+            0.0028972944769693506,
+            -0.37807960066636703
+          ]
+        ],
+        "added_tensor": [
+          [
+            0.18601938780352983,
+            -0.002000397865135555,
+            0.0013128211289056908,
+            -0.18407265600675876
+          ],
+          [
+            -0.002000397865135555,
+            0.0043013801891400305,
+            -0.0019235672693347513,
+            0.00161079914209677
+          ],
+          [
+            0.0013128211289056908,
+            -0.0019235672693347513,
+            -0.0006772224916258562,
+            -0.0010016088314736707
+          ],
+          [
+            -0.18407265600675876,
+            0.00161079914209677,
+            -0.0010016088314736707,
+            0.1823952301060157
+          ]
+        ],
+        "total_tensor": [
+          [
+            -0.1929619264229564,
+            -0.002000397865135555,
+            0.0013128211289056908,
+            -0.18407265600675876
+          ],
+          [
+            -0.002000397865135555,
+            0.004547835674868887,
+            -0.0010578160942279848,
+            0.0035393699346074883
+          ],
+          [
+            0.0013128211289056908,
+            -0.0010578160942279848,
+            -0.001825391537473913,
+            0.00189568564549568
+          ],
+          [
+            -0.18407265600675876,
+            0.0035393699346074883,
+            0.00189568564549568,
+            -0.19568437056035135
+          ]
+        ],
+        "maximum_componentwise_error_over_A": 0.04081569238769577,
+        "worst_component": [
+          3,
+          3
+        ],
+        "vacuum_quadrature_error_estimate": "1.0038651e-30"
+      }
+    ],
+    "sampled_axis_envelope": [
+      {
+        "offset_L": 0.001,
+        "worst_axis": "z",
+        "maximum_componentwise_error_over_A": 7.621880238597912e-05
+      },
+      {
+        "offset_L": 0.005,
+        "worst_axis": "z",
+        "maximum_componentwise_error_over_A": 0.0019027965724610042
+      },
+      {
+        "offset_L": 0.01,
+        "worst_axis": "z",
+        "maximum_componentwise_error_over_A": 0.0075778408524332565
+      },
+      {
+        "offset_L": 0.02,
+        "worst_axis": "z",
+        "maximum_componentwise_error_over_A": 0.029782250694135228
+      },
+      {
+        "offset_L": 0.05,
+        "worst_axis": "z",
+        "maximum_componentwise_error_over_A": 0.16419357512115337
+      }
+    ],
+    "one_percent_sample_brackets": {
+      "x": [
+        [
+          0.01,
+          0.02
+        ]
+      ],
+      "y": [
+        [
+          0.01,
+          0.02
+        ]
+      ],
+      "z": [
+        [
+          0.01,
+          0.02
+        ]
+      ],
+      "sampled_axis_envelope": [
+        [
+          0.01,
+          0.02
+        ]
+      ]
+    },
+    "bracket_scope": "Each listed adjacent sample pair brackets at least one crossing of the 1% componentwise diagnostic by continuity. No interpolated location, uniqueness, monotonicity, or three-dimensional ball is inferred from axis samples",
+    "image_geometry": "eps_i=+/-1, S=product(eps_i), d_i=(1-eps_i)*x_i-2*Li*n_i, U=sum(d_i^2)+tau^2. Exclude only the zero translation image. Single/triple reflections cancel; keep translations and the three double-reflection families",
+    "full_image_bilinear": "Cii=sum(1+S)*eps_i/pi^2*(-1/U^2+2*(d_i^2+tau^2)/U^3); Cij=sum(1+S)*(eps_i+eps_j)*d_i*d_j/(pi^2*U^3) for i!=j. rho=trace(C)/2, Tij=rho*deltaij-Cij; physical static-vacuum T0i=0",
+    "shifted_theta": "theta(v,beta)=sum_n exp[-pi*v*(n-beta)^2], v=4*Li^2*u and beta=x_i/Li for a reflected coordinate, otherwise0. Direct shifted Gaussians for v>=1; Poisson form v^(-1/2)*[1+2*sum_n>=1 exp(-pi*n^2/v)*cos(2*pi*n*beta)] for v<1. Differentiate to obtain first/second moments before the Laplace integrals",
+    "physical_modes": "No center parity reduction: vi=cos(ki*xi)*prod_{j!=i}sin(kj*xj), wi=sin(ki*xi)*prod_{j!=i}cos(kj*xj), Pij=deltaij-ki*kj/omega^2. Cij_mode=(4*omega/V)*2^(-zero_count)*Pij*(vi*vj+wi*wj)*exp(-tau*omega), for physical all-positive and one-zero modes",
+    "noncenter_finite_tau_check": {
+      "offset_L": [
+        0.01,
+        0.015,
+        0.02
+      ],
+      "tau": 0.15,
+      "cutoff": 128,
+      "image_tensor": [
+        [
+          -0.36732869133399765,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0027119380013859388,
+          0.0008137044304692885,
+          0.0017847377153340995
+        ],
+        [
+          0.0,
+          0.0008137044304692885,
+          -0.00399308459721064,
+          0.002681002939458862
+        ],
+        [
+          0.0,
+          0.0017847377153340995,
+          0.002681002939458862,
+          -0.3606236687354011
+        ]
+      ],
+      "physical_mode_tensor": [
+        [
+          -0.36732869133385293,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0027119380013687078,
+          0.0008137044304691157,
+          0.0017847377153342927
+        ],
+        [
+          0.0,
+          0.0008137044304691157,
+          -0.0039930845971412054,
+          0.0026810029394587994
+        ],
+        [
+          0.0,
+          0.0017847377153342927,
+          0.0026810029394587994,
+          -0.360623668735343
+        ]
+      ],
+      "maximum_energy_or_spatial_stress_disagreement": 1.4471757125988916e-13,
+      "floating_acceptance": 1e-11,
+      "analytic_mode_tail_bound": 2.8782794303581817e-18,
+      "image_quadrature_error_estimate": "1.0011412e-30",
+      "scope": "Imaginary-time split for checking energy and every spatial stress component; not real-time evolution. Subtract Minkowski Cii=2/(pi^2*tau^4). The positive mode-energy tail bounds every spatial stress entry; it excludes arithmetic rounding"
+    },
+    "checks": {
+      "center_match": true,
+      "symmetric_and_traceless_samples": true,
+      "image_spatial_conservation": "Exact double-reflection algebra checked; translations are constant. Each double-reflection family is symmetric, traceless and spatially conserved",
+      "axis_vacuum_symmetry": "Off-diagonal vacuum stresses vanish on a single coordinate axis by the remaining midplane reflections. The y-axis vacuum is obtained from x by exchanging x/y tensor indices; the actual classical state is evaluated separately on every axis",
+      "classical_divergence_finite_difference_step_L": 1e-05,
+      "classical_divergence_residual": [
+        2.6837256028588996e-10,
+        -5.39390615506008e-11,
+        -1.1583941306181345e-09,
+        1.736295579535252e-09
+      ],
+      "maximum_classical_divergence_residual": 1.736295579535252e-09,
+      "maximum_added_normal_wall_flux": 4.137247991753668e-17,
+      "classical_exact_framework": "The same full classical mode construction was independently checked for exact conservation, PEC conditions and phase averaging; this callable is also checked numerically here"
+    },
+    "precision": {
+      "decimal_working_digits": 28,
+      "theta_cutoff": 6,
+      "scope": "Displayed tensors are float64 after high-precision image quadrature. Quadrature estimates are not interval certification and do not include every arithmetic/truncation error",
+      "prior_read_only_audit": "The full tensor at center+(.01,.015,.02) also matched physical modes at imaginary tau=.08 within3.86e-13. At offsets(.02,0,0) and(.01,.01,.01), 32-digit/cutoff7 and44-digit/cutoff9 runs with different quadrature partitions agreed in25 displayed digits. Those refinements are not repeated by this default check"
+    },
+    "sources": [
+      "https://arxiv.org/pdf/0804.3916 (Lim-Teo: physical EM conducting-cavity mode framework)",
+      "https://doi.org/10.1103/PhysRev.131.2766 (Glauber: coherent-state expectation framework; the specific spatial construction is derived here)"
+    ],
+    "scope": "A finite set of spatial diagnostics for this fixed state and ideal flat cavity. No spatial retuning, three-dimensional error guarantee, realistic walls, self-consistent curved quantum state, stability or traversal result"
+  },
+  "mode_basis": "Lim-Teo physical transverse modes, omega=pi*|n|; two polarizations for all indices positive, one for exactly one zero, none for two zero. Center parity and polarization projector determine local weights",
+  "mode_weights": "For odd count1 or2, W=2*omega*(1-n_j^2/|n|^2)*2^(-zero_count), where j is the unique odd or unique even index; W=0 for odd count0 or3",
+  "finite_regulator_checks": [
+    {
+      "tau": 0.4,
+      "cutoff": 48,
+      "raw": 11.648283414587828,
+      "minkowski": 11.873576208086456,
+      "value": -0.22529279349862819,
+      "analytic_mode_tail_bound": 2.32778629603232e-20,
+      "image_reference": -0.225292793498629,
+      "image_analytic_truncation_bound": 3.9008327401624006e-18,
+      "absolute_disagreement": 8.049116928532385e-16,
+      "floating_acceptance": 1e-11
+    },
+    {
+      "tau": 0.25,
+      "cutoff": 77,
+      "raw": 77.56365260265872,
+      "minkowski": 77.81466903731541,
+      "value": -0.251016434656691,
+      "analytic_mode_tail_bound": 1.7036680747423465e-19,
+      "image_reference": -0.25101643465669377,
+      "image_analytic_truncation_bound": 3.9008327389840234e-18,
+      "absolute_disagreement": 2.7755575615628914e-15,
+      "floating_acceptance": 1e-11
+    },
+    {
+      "tau": 0.15,
+      "cutoff": 128,
+      "raw": 600.1591114105773,
+      "minkowski": 600.4218289916313,
+      "value": -0.2627175810539484,
+      "analytic_mode_tail_bound": 1.7989246439738634e-18,
+      "image_reference": -0.262717581054026,
+      "image_analytic_truncation_bound": 3.9008327389840234e-18,
+      "absolute_disagreement": 7.760458942129844e-14,
+      "floating_acceptance": 1e-11
+    },
+    {
+      "tau": 0.1,
+      "cutoff": 191,
+      "raw": 3039.36898436713,
+      "minkowski": 3039.635509270133,
+      "value": -0.26652490300284626,
+      "analytic_mode_tail_bound": 1.3292468934066162e-17,
+      "image_reference": -0.2665249030029007,
+      "image_analytic_truncation_bound": 3.9008327389840234e-18,
+      "absolute_disagreement": 5.445643935786393e-14,
+      "floating_acceptance": 1.0798481209017409e-11
+    },
+    {
+      "tau": 0.06,
+      "cutoff": 319,
+      "raw": 23453.709191862625,
+      "minkowski": 23453.977694985602,
+      "value": -0.2685031229775632,
+      "analytic_mode_tail_bound": 9.684603978114888e-17,
+      "image_reference": -0.2685031229757408,
+      "image_analytic_truncation_bound": 3.9008327389840234e-18,
+      "absolute_disagreement": 1.8223755837709632e-12,
+      "floating_acceptance": 8.332479042189829e-11
+    }
+  ],
+  "maximum_mode_image_disagreement": 1.8223755837709632e-12,
+  "local_compensation": {
+    "convention": "Contravariant orthonormal tensor, signature -+++; target=-A*ell^a*ell^b, ell=(1,0,0,1), A>0; D=-rho_center>0",
+    "criterion": "A<=D/4, equivalently L<=(abs(q)*hbar*c/(4*A))^(1/4)",
+    "necessity": "Residual radiation moment minor: (D-A)*(D/3-A)-A^2=D*(D-4*A)/3>=0",
+    "exact_threshold_witness": "At D=4A, four beams each of weight3A/4 with directions (+/-2sqrt(2)/3,0,-1/3) and (0,+/-2sqrt(2)/3,-1/3). Null norms and diagonal/flux moments checked with rational coefficients",
+    "below_threshold": "At fixed D, add (D/4-A)*ell^a*ell^b to the threshold witness",
+    "limitation": "A cavity-compatible mixed coherent state is supplied only at the center at one event. A persistent finite spatial region, supporting walls and their stresses, and a self-consistent gravitational solution are not supplied"
+  },
+  "formal_SI_example": {
+    "c_m_per_s": 299792458.0,
+    "h_J_s": 6.62607015e-34,
+    "G_m3_per_kg_s2": 6.6743e-11,
+    "constants": "c and h are exact SI defining values; G is the stated central value6.67430e-11, with its uncertainty not propagated",
+    "rho_at_one_micrometer_J_per_m3": -0.008524253701862312,
+    "mu": -1.0000888888888888,
+    "geometry_length_m": 1.0,
+    "central_observer": "At Ori N, g_Tz=-1 and g_zz=0; U=(partial_T+partial_z)/sqrt(2), so U^z squared=1/2",
+    "target_formula": "A=abs(mu)*c^4/(16*pi*G*ell^2)",
+    "target_A_J_per_m3": 2.4079409635339544e+42,
+    "formal_max_cube_side_m": 5.45428258841622e-18,
+    "scaling": "formal Lmax scales as sqrt(ell)",
+    "limitation": "ell is the geometry unit, not a traveler aperture. Perfect conductivity extrapolated to Lmax is not a reliable material model or fabrication recipe; no parallel-plate conductivity correction has been applied to the cube"
+  },
+  "global_energy_limit": "The ideal sharp-edge local stress has nonintegrable edge behavior. A globally regularized total energy divided by volume need not equal this interior point value",
+  "sources": [
+    "https://arxiv.org/pdf/0804.3916 (Lim-Teo, section5.C.1: common conducting-cavity physical modes)",
+    "https://arxiv.org/pdf/hep-th/0202089 (Nesterenko et al., Eqs3.38-3.41: local wedge/plate normalization and nonintegrable edge behavior)",
+    "https://www.quantumfields.com/old/physreva_cavity.pdf (Maclay, spatially averaged/global cube energy; not the local input)",
+    "https://arxiv.org/pdf/quant-ph/9907105 (Lambrecht-Reynaud: finite reflectivity; no cube correction inferred)"
+  ],
+  "scope": "Our local flat-ideal-cube derivation and numerical check; no originality claim, no realistic-conductor validation, no curved periodic Ori quantum state, and no stability or traversal conclusion"
+}

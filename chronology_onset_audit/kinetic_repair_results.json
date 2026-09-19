@@ -1,0 +1,12 @@
+{
+  "candidate": "Prescribed positive scalar kinetic coupling Z(S)=(-S)^(-q)",
+  "field_equation": "S*u_pp + (kappa-q-2*i*k)*u_p + i*q*k*u/S = 0",
+  "indicial_polynomial": "I*k*q + lam**2 - lam*(2*I*k + q + s)",
+  "root_sum": "lambda_1+lambda_2 = s+q+2*i*k",
+  "sum_of_leading_energy_exponents": "2*s - 4",
+  "analytic_result": "For s<=0 and nonzero k, at least one nonconstant mode has divergent measured energy for every real q. q=0 has a regular constant branch but also the divergent original branch.",
+  "algebraic_grid_cases": 2916,
+  "grid_cases_with_divergent_branch": 2916,
+  "time_domain_simulations": 0,
+  "scope": "Fixed-background diagnostic; Z dynamics and its own gravitational contribution have not been solved."
+}

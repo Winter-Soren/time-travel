@@ -1,0 +1,235 @@
+{
+  "working_directory": "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel",
+  "hash_definitions": {
+    "npz_file_sha256": "SHA-256 of the complete compressed NPZ archive bytes.",
+    "raw_state_C_order_sha256": "SHA-256 of state.tobytes(order=\"C\") after loading the float64 array; this is not an archive hash."
+  },
+  "results": {
+    "evolution_file_sha256": "a389f71d34d780d5693c84fd014e5bad21b4d18f926df7aa568ca0b34f5ac645",
+    "initial_data_file_sha256": "029531840edee1e79f5760f843c9b71ab04c9039cece9a6f311e816e0e1cb394",
+    "runs": {
+      "65": {
+        "npz_absolute_path": "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\ori_radius4_symmetric_weak_65.npz",
+        "npz_file_size_bytes": 690684,
+        "npz_file_sha256": "14eff54c68824b12361e0fa004082933ae8389195ac5fe3bbd582971709b6eb7",
+        "raw_state_C_order_sha256": "6c8749f29c0e1128aabec10420564641e853ac9d3adab7042d96088c23075be5",
+        "state_shape": [
+          65,
+          65,
+          36
+        ],
+        "state_dtype": "float64",
+        "checkpoint_file_sha256": "7b609276622b2a581cc39fea3e8eb37313b73df43c78b1baa9e4b89f6bbf350e",
+        "checkpoint_state_bitwise_equal": true,
+        "metric_velocity_bitwise_symmetric": true,
+        "t": -0.01,
+        "steps": 488,
+        "rejected_steps": 0
+      },
+      "129": {
+        "npz_absolute_path": "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\ori_radius4_symmetric_weak_129.npz",
+        "npz_file_size_bytes": 2855497,
+        "npz_file_sha256": "daabcb74e14c5c4337c30dd44e043aa920e65209ea63daa8cf0436e4525de6c0",
+        "raw_state_C_order_sha256": "b9d5d735dcda174d5ede90e77297a18989df67556e0aaf751cca7bf1900d8185",
+        "state_shape": [
+          129,
+          129,
+          36
+        ],
+        "state_dtype": "float64",
+        "checkpoint_file_sha256": "52aeed865d2599520671086b5ae0472713c5a1ec43a37bafc044b3cf19ebf603",
+        "checkpoint_state_bitwise_equal": true,
+        "metric_velocity_bitwise_symmetric": true,
+        "t": -0.01,
+        "steps": 975,
+        "rejected_steps": 0
+      },
+      "257": {
+        "npz_absolute_path": "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\ori_radius4_symmetric_weak_257.npz",
+        "npz_file_size_bytes": 12313548,
+        "npz_file_sha256": "1e2baa8cef47cdde5d08ba56c366bd7492f944c92ad66d57dd21439e66384ae8",
+        "raw_state_C_order_sha256": "d30a7c2668c22a251498b1b6ba0cdf1b33db5b0126696c8acc6ae2569293c44d",
+        "state_shape": [
+          257,
+          257,
+          36
+        ],
+        "state_dtype": "float64",
+        "checkpoint_file_sha256": "769152034a5d2285d23143990b1cecdf1fcabc8b8b0f6c0b46683094e67f3d2f",
+        "checkpoint_state_bitwise_equal": true,
+        "metric_velocity_bitwise_symmetric": true,
+        "t": -0.01,
+        "steps": 1944,
+        "rejected_steps": 0
+      },
+      "linear": {
+        "npz_absolute_path": "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\ori_radius4_symmetric_weak_linear_129.npz",
+        "npz_file_size_bytes": 2838241,
+        "npz_file_sha256": "c4cdb26d73466a7bf4948ac5c3f3b2ce2533d4fc4fd737e5d7d5f7487f832b95",
+        "raw_state_C_order_sha256": "ecc311c7c420eea61e5ee00160446ecc7fb5fb8b0d628ae130dae56dff1dd243",
+        "state_shape": [
+          129,
+          129,
+          36
+        ],
+        "state_dtype": "float64",
+        "checkpoint_file_sha256": "6a4b77e596680c454e09293d7329770655aed1d1249872c543a49ff20e89e23e",
+        "checkpoint_state_bitwise_equal": true,
+        "metric_velocity_bitwise_symmetric": true,
+        "t": -0.01,
+        "steps": 975,
+        "rejected_steps": 0
+      },
+      "half": {
+        "npz_absolute_path": "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\ori_radius4_symmetric_weak_half_dt_129.npz",
+        "npz_file_size_bytes": 2861507,
+        "npz_file_sha256": "f7b1d030201486b206d3a50d11b9fc0847b00830d1f30b89f453da7f43c236a3",
+        "raw_state_C_order_sha256": "80ded75e7a69ae5b1f59df1cf50734a197b19a7415f96b069fa56c0147d7fbe6",
+        "state_shape": [
+          129,
+          129,
+          36
+        ],
+        "state_dtype": "float64",
+        "checkpoint_file_sha256": "9c0242d2ffd55d136d4840b670b0aa36c055d3efed6a7f544a1401a4aff78d0e",
+        "checkpoint_state_bitwise_equal": true,
+        "metric_velocity_bitwise_symmetric": true,
+        "t": -0.01,
+        "steps": 1944,
+        "rejected_steps": 0
+      }
+    },
+    "comparison": {
+      "state_norm": "Maximum absolute packed-state component on r<=0.2; adjacent grids restricted to coarser points.",
+      "D65_129": 0.004448681443247532,
+      "D129_257": 0.00014471856980375133,
+      "D129_257_on_common65": 0.00014471856980375133,
+      "difference_ratio": 30.740225316490207,
+      "observed_order": 4.942055834470104,
+      "boundary129_difference": 5.156998912997542e-06,
+      "halfstep129_difference": 1.4472522513742092e-08,
+      "boundary_over_D129_257": 0.03563467300700109,
+      "halfstep_over_D129_257": 0.00010000459881111223
+    },
+    "observables": {
+      "max_H": {
+        "values_65_129_257": [
+          0.00012673226376451203,
+          4.988198292415515e-06,
+          2.868446293663972e-07
+        ],
+        "absolute_change_129_257": 4.7013536630491175e-06,
+        "relative_change_129_257": 16.38989606824364,
+        "boundary129_change": 1.0924509852815179e-07,
+        "halfstep129_change": 1.256585413847433e-09
+      },
+      "max_M": {
+        "values_65_129_257": [
+          0.0004983194548372605,
+          3.0354297295514322e-05,
+          1.9139573183345143e-06
+        ],
+        "absolute_change_129_257": 2.8440339977179806e-05,
+        "relative_change_129_257": 14.859443157242398,
+        "boundary129_change": 1.9552348289769602e-07,
+        "halfstep129_change": 2.597104754425419e-11
+      },
+      "max_gauge": {
+        "values_65_129_257": [
+          2.7092708209924794e-05,
+          1.4267395904936356e-06,
+          8.826427144278981e-08
+        ],
+        "absolute_change_129_257": 1.3384753190508458e-06,
+        "relative_change_129_257": 15.164406811179587,
+        "boundary129_change": 1.9440883165190213e-08,
+        "halfstep129_change": 9.198290446446708e-12
+      },
+      "max_einstein_component_residual": {
+        "values_65_129_257": [
+          0.03910418054942266,
+          0.0011949559075566385,
+          7.609058310709127e-05
+        ],
+        "absolute_change_129_257": 0.0011188653244495472,
+        "relative_change_129_257": 14.704386255981714,
+        "boundary129_change": 0.0003539901087047381,
+        "halfstep129_change": 7.2533563044707705e-09
+      },
+      "center_energy": {
+        "values_65_129_257": [
+          0.0009871090501238258,
+          0.0009890704545781862,
+          0.0009891127743910007
+        ],
+        "absolute_change_129_257": 4.231981281447965e-08,
+        "relative_change_129_257": 4.278562961694238e-05,
+        "boundary129_change": 7.005247076863341e-14,
+        "halfstep129_change": 3.825801914852933e-11
+      },
+      "center_regular_energy": {
+        "values_65_129_257": [
+          0.17068676155219248,
+          0.17149991287355398,
+          0.17150823412076377
+        ],
+        "absolute_change_129_257": 8.321247209785998e-06,
+        "relative_change_129_257": 4.851806242682654e-05,
+        "boundary129_change": 2.4975299606211365e-12,
+        "halfstep129_change": 7.4460398402642625e-09
+      },
+      "center_freefall_energy": {
+        "values_65_129_257": [
+          0.08738405731431645,
+          0.08780002070776854,
+          0.08780427139293144
+        ],
+        "absolute_change_129_257": 4.250685162895951e-06,
+        "relative_change_129_257": 4.8410915499472454e-05,
+        "boundary129_change": 1.8191850803539467e-11,
+        "halfstep129_change": 3.81253516257285e-09
+      },
+      "center_tidal_norm": {
+        "values_65_129_257": [
+          1.3928181722965742,
+          1.392909524538084,
+          1.392910203612213
+        ],
+        "absolute_change_129_257": 6.790741289286473e-07,
+        "relative_change_129_257": 4.875218281606486e-07,
+        "boundary129_change": 1.683675132646556e-08,
+        "halfstep129_change": 7.008482683090733e-11
+      },
+      "center_regular_tidal_norm": {
+        "values_65_129_257": [
+          0.13660831571006682,
+          0.12393118232683763,
+          0.12359477815303392
+        ],
+        "absolute_change_129_257": 0.000336404173803706,
+        "relative_change_129_257": 0.0027218316083481575,
+        "boundary129_change": 5.134923626165522e-06,
+        "halfstep129_change": 1.862591839096872e-08
+      },
+      "center_freefall_tidal_norm": {
+        "values_65_129_257": [
+          0.06914773581766923,
+          0.06249584216550824,
+          0.06230826263622231
+        ],
+        "absolute_change_129_257": 0.00018757952928593474,
+        "relative_change_129_257": 0.003010508098758754,
+        "boundary129_change": 3.023728798512426e-06,
+        "halfstep129_change": 9.539710472961094e-09
+      }
+    },
+    "fine_diagnostics_recomputed_exactly_equal": true,
+    "fine_diagnostic_fields_recomputed": 27,
+    "fine_global_sampled_Lorentz_signature": true,
+    "fine_global_sampled_max_inverse_gtt": -0.010180869076742809,
+    "fine_sampled_wall_travel_margin": 0.32619730953806636,
+    "limitations": "Only the completed finite negative-time patch. Moving maxima and three grids do not establish a formal fifth-order asymptotic rate, horizon crossing, or physical stability."
+  },
+  "reproduction_python": "\nfrom pathlib import Path\nimport json,hashlib\nimport numpy as np\nfrom ori_evolution import coordinate_grid,unpack,diagnostics\nroot=Path.cwd().resolve()\ncode_hash='a389f71d34d780d5693c84fd014e5bad21b4d18f926df7aa568ca0b34f5ac645'\ndata_hash='029531840edee1e79f5760f843c9b71ab04c9039cece9a6f311e816e0e1cb394'\ndef sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()\nassert sha(root/'ori_evolution.py')==code_hash\nassert sha(root/'ori_radius4_accepted_coefficients.npz')==data_hash\nwith np.load(root/'ori_radius4_accepted_coefficients.npz',allow_pickle=False) as data:\n assert bool(data['accepted']) and bool(data['weak_accepted'])\nnames={'65':'ori_radius4_symmetric_weak_65','129':'ori_radius4_symmetric_weak_129','257':'ori_radius4_symmetric_weak_257','linear':'ori_radius4_symmetric_weak_linear_129','half':'ori_radius4_symmetric_weak_half_dt_129'}\nrecords={};states={};runs={}\nfor label,stem in names.items():\n p=root/(stem+'.npz');r=json.loads((root/(stem+'.json')).read_text());n=r['n']\n assert r['evolution_sha256']==code_hash and r.get('data_sha256',r.get('initial_data_sha256'))==data_hash\n assert r['strong'] is False and r['adaptive'] is True and r['half_width']==2.8 and r['stretch']==3. and r['interior_radius']==.2\n assert r['boundary_order']==(1 if label=='linear' else 2) and r['cfl']==(.075 if label=='half' else .15)\n assert r['samples'][-1]['t']==-.01 and Path(r['initial_data_file']).name=='ori_radius4_accepted_coefficients.npz'\n with np.load(p,allow_pickle=False) as data:\n  a=data['state'];assert float(data['t'])==-.01 and a.shape==(n,n,36) and np.isfinite(a).all()\n g,v,phi,u=unpack(a)\n assert np.array_equal(g,g.swapaxes(-1,-2)) and np.array_equal(v,v.swapaxes(-1,-2))\n cp=root/(stem+'.checkpoint.npz')\n with np.load(cp,allow_pickle=False) as data:\n  meta=json.loads(str(data['metadata']))\n  assert np.array_equal(a,data['state']) and meta['t']==-.01 and meta['samples']==r['samples'] and meta['steps']==r['steps']\n  assert meta['case']['evolution_sha256']==code_hash\n records[label]=r;states[label]=a\n runs[label]={'npz_absolute_path':str(p),'npz_file_size_bytes':p.stat().st_size,'npz_file_sha256':sha(p),'raw_state_C_order_sha256':hashlib.sha256(a.tobytes(order='C')).hexdigest(),'state_shape':list(a.shape),'state_dtype':str(a.dtype),'checkpoint_file_sha256':sha(cp),'checkpoint_state_bitwise_equal':True,'metric_velocity_bitwise_symmetric':True,'t':-.01,'steps':r['steps'],'rejected_steps':r['rejected_steps']}\ngrids={n:coordinate_grid(n,2.8,3.)[0] for n in (65,129,257)}\nassert np.array_equal(grids[65],grids[129][::2]) and np.array_equal(grids[129],grids[257][::2])\nmasks={n:grids[n][:,None]**2+grids[n][None,:]**2<=.2**2 for n in grids}\ndef norm(a,b,n): return float(np.max(np.abs(a[masks[n]]-b[masks[n]])))\nd01=norm(states['65'],states['129'][::2,::2],65)\nd12=norm(states['129'],states['257'][::2,::2],129)\ncommon=norm(states['129'][::2,::2],states['257'][::4,::4],65)\nwall=norm(states['129'],states['linear'],129);time=norm(states['129'],states['half'],129)\ncomparison={'state_norm':'Maximum absolute packed-state component on r<=0.2; adjacent grids restricted to coarser points.','D65_129':d01,'D129_257':d12,'D129_257_on_common65':common,'difference_ratio':d01/d12,'observed_order':float(np.log2(d01/d12)),'boundary129_difference':wall,'halfstep129_difference':time,'boundary_over_D129_257':wall/d12,'halfstep_over_D129_257':time/d12}\nkeys=('max_H','max_M','max_gauge','max_einstein_component_residual','center_energy','center_regular_energy','center_freefall_energy','center_tidal_norm','center_regular_tidal_norm','center_freefall_tidal_norm')\nobservables={}\nfor key in keys:\n vals=[records[n]['samples'][-1][key] for n in ('65','129','257')]\n delta=abs(vals[1]-vals[2])\n observables[key]={'values_65_129_257':vals,'absolute_change_129_257':delta,'relative_change_129_257':delta/abs(vals[2]),'boundary129_change':abs(vals[1]-records['linear']['samples'][-1][key]),'halfstep129_change':abs(vals[1]-records['half']['samples'][-1][key])}\nrecomputed=diagnostics(states['257'],coordinate_grid(257,2.8,3.)[1],masks[257])\nassert all(value==records['257']['samples'][-1][key] for key,value in recomputed.items())\ng=unpack(states['257'])[0];eigenvalues=np.linalg.eigvalsh(g);inverse=np.linalg.inv(g)\nassert np.all(eigenvalues[...,0]<0) and np.all(eigenvalues[...,1:]>0) and np.all(inverse[...,0,0]<0)\nreport={'evolution_file_sha256':code_hash,'initial_data_file_sha256':data_hash,'runs':runs,'comparison':comparison,'observables':observables,'fine_diagnostics_recomputed_exactly_equal':True,'fine_diagnostic_fields_recomputed':len(recomputed),'fine_global_sampled_Lorentz_signature':True,'fine_global_sampled_max_inverse_gtt':float(inverse[...,0,0].max()),'fine_sampled_wall_travel_margin':records['257']['nearest_wall_to_core']-records['257']['sampled_cartesian_travel_envelope'],'limitations':'Only the completed finite negative-time patch. Moving maxima and three grids do not establish a formal fifth-order asymptotic rate, horizon crossing, or physical stability.'}\n",
+  "reproduction_command_from_working_directory": ".\\.venv\\Scripts\\python.exe -B -c \"import json; a=json.load(open('ori_radius4_symmetric_weak_refinement_audit.json',encoding='utf-8')); ns={}; exec(a['reproduction_python'],ns); assert ns['report']==a['results']; print('PASS: reproduced saved comparison and provenance')\""
+}

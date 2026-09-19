@@ -1,0 +1,564 @@
+{
+  "passed": true,
+  "tests": {
+    "heat_defining_integral": true,
+    "angular_direct_spectrum": true,
+    "response_refinement": true,
+    "action_refinement": true,
+    "integration_by_parts": true,
+    "finite_difference": true
+  },
+  "thresholds": {
+    "heat_relative_error": 2e-10,
+    "angular_absolute_error": 2e-11,
+    "response_refinement_absolute": 2e-09,
+    "action_refinement_absolute": 2e-09,
+    "direct_vs_ibp_absolute": 2e-09,
+    "richardson_vs_ibp_absolute": 2e-09
+  },
+  "normalization": "One minimal massless 4D Dirac field; unit reference radii; dimensionless action density per homogeneous 4-volume, with fixed a^2*r^2=1.",
+  "effective_action_convention": "Real parity-even W_E=-1/2 log det(D^dagger D)=+1/2 integral dt K(t)/t; no determinant-phase claim.",
+  "equations": {
+    "H": "H(t)=integral_0^infinity lambda*coth(pi*lambda)*exp(-t*lambda^2) dlambda",
+    "A": "A_q(t)=q+2*sum_{n>=1}(q+2n)*exp(-t*n*(n+q))",
+    "contrast": "D_q A=A_q-q^2*A_1+(q^2-1)*A_0",
+    "deformation": "a=exp(eta), r=exp(-eta); w_q=integral dt/t H(t*exp(-2eta))*D_q A(t*exp(2eta))/(8*pi^2)",
+    "response": "w'_q(0)=integral dt[-H'*D+H*D']/(4*pi^2)=-integral dt H'*D/(2*pi^2)",
+    "boundary_terms": "H*D tends to zero as t->0 and t->infinity; D begins at t^3 and tends to q-q^2.",
+    "local_comparator": "local_R=-q^2*log(q)/(24*pi^2); local_R+(q-q^2)/(24*pi^2) adds the specified minimal homogeneous trace-repair comparator."
+  },
+  "numerics": {
+    "configurations": {
+      "coarse": {
+        "uv_cutoff": 0.003,
+        "ir_start": 24.0,
+        "log_panel_width": 1.0,
+        "time_order": 8,
+        "heat_order": 48,
+        "ir_order": 24
+      },
+      "main": {
+        "uv_cutoff": 0.001,
+        "ir_start": 32.0,
+        "log_panel_width": 0.75,
+        "time_order": 12,
+        "heat_order": 80,
+        "ir_order": 36
+      },
+      "fine": {
+        "uv_cutoff": 0.0005,
+        "ir_start": 48.0,
+        "log_panel_width": 0.5,
+        "time_order": 16,
+        "heat_order": 128,
+        "ir_order": 48
+      }
+    },
+    "angular_precision_digits_below_point25": 45,
+    "angular_exponent_cutoff": 100,
+    "independent_angular_precision_digits": 55,
+    "uv_treatment": "Audited D series through t^5 and H through t^3, integrated analytically; varying cutoff controls but does not rigorously bound omitted terms.",
+    "ir_treatment": "Full spectrum retained; x=1/sqrt(t) compactifies the complete infinite tail. Constant-D analytic control is separate.",
+    "error_scope": "Observed numerical convergence and independent integral comparisons, not interval-certified total error."
+  },
+  "heat_controls": [
+    {
+      "t": 0.001,
+      "H": 500.08332500198344,
+      "H_prime": -500000.00832936715,
+      "absolute_errors": [
+        5.684341886080802e-14,
+        5.820766091346741e-11
+      ],
+      "relative_errors": [
+        1.1102230246251565e-16,
+        2.220446049250313e-16
+      ],
+      "adaptive_quadrature_error_estimates": [
+        7.525869224116812e-11,
+        1.6024949953466846e-08
+      ]
+    },
+    {
+      "t": 0.03,
+      "H": 16.74975176721578,
+      "H_prime": -555.5637716828744,
+      "absolute_errors": [
+        0.0,
+        1.1368683772161603e-13
+      ],
+      "relative_errors": [
+        0.0,
+        2.220446049250313e-16
+      ],
+      "adaptive_quadrature_error_estimates": [
+        2.504027684718406e-12,
+        5.1413900850156817e-11
+      ]
+    },
+    {
+      "t": 0.25,
+      "H": 2.081364242446144,
+      "H_prime": -8.007454625623003,
+      "absolute_errors": [
+        4.440892098500626e-16,
+        0.0
+      ],
+      "relative_errors": [
+        2.220446049250313e-16,
+        0.0
+      ],
+      "adaptive_quadrature_error_estimates": [
+        7.794137182646685e-13,
+        4.924370004784668e-13
+      ]
+    },
+    {
+      "t": 1.0,
+      "H": 0.5764969026099462,
+      "H_prime": -0.5056878974920995,
+      "absolute_errors": [
+        4.440892098500626e-16,
+        0.0
+      ],
+      "relative_errors": [
+        6.661338147750939e-16,
+        0.0
+      ],
+      "adaptive_quadrature_error_estimates": [
+        7.595902387369207e-14,
+        1.3612800754140908e-14
+      ]
+    },
+    {
+      "t": 1.000001,
+      "H": 0.5764963969225453,
+      "H_prime": -0.5056868957035533,
+      "absolute_errors": [
+        3.9968028886505635e-15,
+        6.106226635438361e-15
+      ],
+      "relative_errors": [
+        6.8833827526759706e-15,
+        1.2101430968414206e-14
+      ],
+      "adaptive_quadrature_error_estimates": [
+        7.595321879972556e-14,
+        1.3635711873912595e-14
+      ]
+    },
+    {
+      "t": 10.0,
+      "H": 0.10268932557054247,
+      "H_prime": -0.006383521017753423,
+      "absolute_errors": [
+        1.942890293094024e-16,
+        7.979727989493313e-17
+      ],
+      "relative_errors": [
+        1.887379141862766e-15,
+        1.2545520178264269e-14
+      ],
+      "adaptive_quadrature_error_estimates": [
+        7.426177866112233e-15,
+        1.5140340272098184e-16
+      ]
+    },
+    {
+      "t": 100.0,
+      "H": 0.028669030805016604,
+      "H_prime": -0.00014789691976112003,
+      "absolute_errors": [
+        6.938893903907228e-18,
+        1.870248747537495e-18
+      ],
+      "relative_errors": [
+        2.220446049250313e-16,
+        1.2656542480726785e-14
+      ],
+      "adaptive_quadrature_error_estimates": [
+        1.3820654052253865e-15,
+        1.9936114349706584e-17
+      ]
+    }
+  ],
+  "angular_controls": [
+    {
+      "q": 2,
+      "t": 0.001,
+      "D": -3.335715556263092e-11,
+      "D_prime": -1.0009530162975841e-07,
+      "absolute_errors": [
+        6.462348535570529e-27,
+        0.0
+      ]
+    },
+    {
+      "q": 2,
+      "t": 0.003,
+      "D": -9.01931662307596e-10,
+      "D_prime": -9.025765817614548e-07,
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 2,
+      "t": 0.03,
+      "D": -9.19599544407603e-07,
+      "D_prime": -9.262391243720581e-05,
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 2,
+      "t": 0.249999,
+      "D": -0.0006283146695639082,
+      "D_prime": -0.00803783136017049,
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 2,
+      "t": 0.25,
+      "D": -0.0006283227074348474,
+      "D_prime": -0.008037904276051222,
+      "absolute_errors": [
+        3.1210927939340216e-15,
+        4.175479406676175e-15
+      ]
+    },
+    {
+      "q": 2,
+      "t": 1.0,
+      "D": -0.08663733252280093,
+      "D_prime": -0.3449673427650133,
+      "absolute_errors": [
+        2.7755575615628914e-16,
+        1.27675647831893e-15
+      ]
+    },
+    {
+      "q": 3,
+      "t": 0.001,
+      "D": -2.001429095328988e-10,
+      "D_prime": -6.005716905307244e-07,
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 3,
+      "t": 0.003,
+      "D": -5.411584163766522e-09,
+      "D_prime": -5.415449798960408e-06,
+      "absolute_errors": [
+        8.271806125530277e-25,
+        0.0
+      ]
+    },
+    {
+      "q": 3,
+      "t": 0.03,
+      "D": -5.516993733217674e-06,
+      "D_prime": -0.000555642031097286,
+      "absolute_errors": [
+        0.0,
+        1.0842021724855044e-19
+      ]
+    },
+    {
+      "q": 3,
+      "t": 0.249999,
+      "D": -0.0037362444466224314,
+      "D_prime": -0.047501198585219964,
+      "absolute_errors": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "q": 3,
+      "t": 0.25,
+      "D": -0.003736291948044368,
+      "D_prime": -0.04750162308266681,
+      "absolute_errors": [
+        1.110266392712056e-14,
+        1.2607970223399434e-14
+      ]
+    },
+    {
+      "q": 3,
+      "t": 1.0,
+      "D": -0.39197047901818394,
+      "D_prime": -1.3427552592538579,
+      "absolute_errors": [
+        1.609823385706477e-15,
+        3.552713678800501e-15
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "q": 2,
+      "configurations": {
+        "coarse": {
+          "action": -0.012198702713269277,
+          "derivative_direct": -0.03242773217589681,
+          "derivative_integration_by_parts": -0.03242773217607995,
+          "contributions_uv_core_ir": [
+            [
+              -9.515617720559324e-10,
+              -7.614581679099012e-09,
+              -3.804979105773761e-09
+            ],
+            [
+              -0.009216439805806057,
+              -0.02931814470994542,
+              -0.026208568669739297
+            ],
+            [
+              -0.0029822619559014478,
+              -0.003109579851369713,
+              -0.006219159701361545
+            ]
+          ]
+        },
+        "main": {
+          "action": -0.012198702713242289,
+          "derivative_direct": -0.032427732175982084,
+          "derivative_integration_by_parts": -0.03242773217598203,
+          "contributions_uv_core_ir": [
+            [
+              -1.0560491064846076e-10,
+              -8.449164321943508e-10,
+              -4.2237271653667447e-10
+            ],
+            [
+              -0.009629845317782989,
+              -0.02977527494494871,
+              -0.027122818981375828
+            ],
+            [
+              -0.00256885728985439,
+              -0.002652456386116941,
+              -0.005304912772233486
+            ]
+          ]
+        },
+        "fine": {
+          "action": -0.01219870271324228,
+          "derivative_direct": -0.03242773217598187,
+          "derivative_integration_by_parts": -0.03242773217598176,
+          "contributions_uv_core_ir": [
+            [
+              -2.639347469012958e-11,
+              -2.1115743565063377e-10,
+              -1.0556803413500561e-10
+            ],
+            [
+              -0.010112679705920544,
+              -0.030295688927196075,
+              -0.028163645995157006
+            ],
+            [
+              -0.0020860229809282612,
+              -0.0021320430376283576,
+              -0.004264086075256715
+            ]
+          ]
+        }
+      },
+      "finite_difference": [
+        {
+          "eta_step": 0.002,
+          "action_plus": -0.012263768748581066,
+          "action_minus": -0.012134056757013272,
+          "central_derivative": -0.032427997891948564
+        },
+        {
+          "eta_step": 0.001,
+          "action_plus": -0.012231183021533552,
+          "action_minus": -0.01216632742432392,
+          "central_derivative": -0.03242779860481576
+        },
+        {
+          "eta_step": 0.0005,
+          "action_plus": -0.01221492971504284,
+          "action_minus": -0.012182501966259654,
+          "central_derivative": -0.0324277487831863
+        }
+      ],
+      "richardson_derivatives": [
+        -0.032427732175771495,
+        -0.03242773217597648
+      ],
+      "response": -0.03242773217598176,
+      "response_main_to_fine_absolute_change": 2.706168622523819e-16,
+      "action_main_to_fine_absolute_change": 8.673617379884035e-18,
+      "direct_vs_ibp_absolute_difference": 1.1102230246251565e-16,
+      "richardson_vs_ibp_absolute_difference": 5.280498260873401e-15,
+      "uv_coefficients_t3_t4_t5": [
+        -0.03333333333333333,
+        -0.023809523809523808,
+        -0.012698412698412698
+      ],
+      "ir_response_constant_D_control": -0.004264086075256767,
+      "ir_response_minus_constant_control": 5.204170427930421e-17,
+      "local_log_action": -0.00292627053219512,
+      "local_log_response": -0.01170508212878048,
+      "local_plus_minimal_trace_repair_response": -0.020148514098975293,
+      "response_minus_local": -0.02072265004720128,
+      "response_minus_local_plus_trace_repair": -0.012279218077006465,
+      "response_to_local_ratio": 2.7703976631012597
+    },
+    {
+      "q": 3,
+      "configurations": {
+        "coarse": {
+          "action": -0.038346923562022905,
+          "derivative_direct": -0.10318212295916056,
+          "derivative_integration_by_parts": -0.10318212295983573,
+          "contributions_uv_core_ir": [
+            [
+              -5.709367577909306e-09,
+              -4.5687453423919985e-08,
+              -2.2829862421820107e-08
+            ],
+            [
+              -0.02940013198494638,
+              -0.09385333771782252,
+              -0.08452462102587839
+            ],
+            [
+              -0.008946785867708947,
+              -0.009328739553884623,
+              -0.01865747910409491
+            ]
+          ]
+        },
+        "main": {
+          "action": -0.03834692356196928,
+          "derivative_direct": -0.10318212295965326,
+          "derivative_integration_by_parts": -0.10318212295965312,
+          "contributions_uv_core_ir": [
+            [
+              -6.336294261918463e-10,
+              -5.069498140789135e-09,
+              -2.534236148444474e-09
+            ],
+            [
+              -0.030640351058776685,
+              -0.09522474873180437,
+              -0.08726738210871651
+            ],
+            [
+              -0.00770657186956317,
+              -0.007957369158350757,
+              -0.015914738316700452
+            ]
+          ]
+        },
+        "fine": {
+          "action": -0.03834692356196924,
+          "derivative_direct": -0.10318212295965253,
+          "derivative_integration_by_parts": -0.1031821229596521,
+          "contributions_uv_core_ir": [
+            [
+              -1.5836084578475214e-10,
+              -1.2669445856318124e-09,
+              -6.334081953865606e-10
+            ],
+            [
+              -0.032088854460823615,
+              -0.09678599257982286,
+              -0.09038986410047375
+            ],
+            [
+              -0.00625806894278478,
+              -0.006396129112885074,
+              -0.012792258225770146
+            ]
+          ]
+        }
+      },
+      "finite_difference": [
+        {
+          "eta_step": 0.002,
+          "action_plus": -0.03855396515871556,
+          "action_minus": -0.038141233232395405,
+          "central_derivative": -0.10318298158003801
+        },
+        {
+          "eta_step": 0.001,
+          "action_plus": -0.0384502748073268,
+          "action_minus": -0.03824391013209839,
+          "central_derivative": -0.1031823376142077
+        },
+        {
+          "eta_step": 0.0005,
+          "action_plus": -0.03839855687717592,
+          "action_minus": -0.0382953747005526,
+          "central_derivative": -0.10318217662332041
+        }
+      ],
+      "richardson_derivatives": [
+        -0.10318212295893092,
+        -0.10318212295969131
+      ],
+      "response": -0.1031821229596521,
+      "response_main_to_fine_absolute_change": 1.0269562977782698e-15,
+      "action_main_to_fine_absolute_change": 4.163336342344337e-17,
+      "direct_vs_ibp_absolute_difference": 4.3021142204224816e-16,
+      "richardson_vs_ibp_absolute_difference": 3.9218628344883655e-14,
+      "uv_coefficients_t3_t4_t5": [
+        -0.2,
+        -0.14285714285714285,
+        -0.05238095238095238
+      ],
+      "ir_response_constant_D_control": -0.012792258225770303,
+      "ir_response_minus_constant_control": 1.5612511283791264e-16,
+      "local_log_action": -0.010435565386112863,
+      "local_log_response": -0.04174226154445145,
+      "local_plus_minimal_trace_repair_response": -0.0670725574550359,
+      "response_minus_local": -0.06143986141520064,
+      "response_minus_local_plus_trace_repair": -0.03610956550461619,
+      "response_to_local_ratio": 2.4718862644701978
+    }
+  ],
+  "external_independent_q2_response": {
+    "value": -0.03242773217598199,
+    "method": "Separate parent calculation: 35-digit direct angular sums, adaptive Gaussian H moments, log-time integration and independent tail treatment.",
+    "absolute_difference": 2.2898349882893854e-16
+  },
+  "external_independent_q3_response": {
+    "value": -0.1031821229596531,
+    "method": "Separate parent calculation: 35-digit direct angular sums, adaptive Gaussian H moments, log-time integration and independent tail treatment.",
+    "absolute_difference": 9.992007221626409e-16
+  },
+  "scope": [
+    "Homogeneous Euclidean H2 x S2 minimal Dirac spectrum with no electric field and standard H2 continuum density.",
+    "Finite counterterm-canceling flux contrast at q=2,3, not the absolute determinant at a single flux.",
+    "A product-geometry anisotropic shape response, not a Lorentzian quantum state, full stress tensor, mouth matching, or loop Casimir.",
+    "Low-flux comparison does not supply a high-flux error bar or rule out other nonlocal/Wilsonian completions.",
+    "A difference from the specified local plus minimal trace-repair approximation rejects that approximation as an exact product contrast only."
+  ],
+  "source": {
+    "url": "https://arxiv.org/html/2603.15730v1",
+    "title": "Exact Path Integral Methods in Supersymmetric AdS2 x S2 Backgrounds",
+    "equations": [
+      "3.48",
+      "3.49",
+      "3.58",
+      "3.59"
+    ],
+    "mapping": "Use minimally coupled spin-1/2 spectrum in Sec.3.2.1, paper monopole g=q/2 and electric e=0; do not use later nonminimal supersymmetric operator."
+  },
+  "source_sha256": "1c0bd730c3e4add3e2e4a17bf0f3d5e5a57389316c55238846a01efde7cbd650"
+}

@@ -1,0 +1,20 @@
+# Local runtime and regenerable caches
+.venv/
+__pycache__/
+*.py[cod]
+!provenance/ori_initial_data.cpython-312.pyc
+.cache/
+.pytest_cache/
+
+# Local credentials and editor/OS state
+.env
+.env.*
+!.env.example
+.codex/
+.agents/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Research source, saved results, checkpoints and final figures are intentional.

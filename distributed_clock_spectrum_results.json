@@ -1,0 +1,320 @@
+{
+  "model": "Linear zero-offset NS-vacuum clock feedback with positive weighted, fixed channel delays; no finite-offset dynamics inferred",
+  "conventions": {
+    "delays": "D_nu>=0, L_nu=pi+D_nu, Omega_nu=2pi/L_nu; weights positive and normalized.",
+    "opening": "b0=pi*(mean(Omega_nu^2)-1)/6>0; b0 and bulk A,B use the existing source/alpha convention.",
+    "coordinates": "u=tau+chi,v=tau-chi; clocks r(s)=s+xi_R(s),l(s)=s+xi_L(s). C=A-B, S=A+B; P=d^3/dx^3+d/dx. xi_antisymmetric=(xi_R-xi_L)/2 and j_antisymmetric=(delta_J_R-delta_J_L)/2.",
+    "clock": "xi_antisymmetric_prime(s)=[C(s+pi/2)+C(s-pi/2)]/(2*b0); differentiated clock equations alone must retain the original bulk/mouth integration constraints."
+  },
+  "equations": {
+    "characteristics": "G_diff=P(lambda)+(1/(3b0))*mean[(lambda^2+Omega^2)*(1+exp(-pi*lambda))*(1+exp(-D*lambda))/(1-exp(-L*lambda))]; G_sum changes both plus signs to minus.",
+    "channel_recurrence": "(1-E_L)j_antisymmetric=(1/3)*partial*(partial^2+Omega^2)*(1+E_D)*xi_antisymmetric. b0*partial^2*(partial^2+1)*xi_antisymmetric=-(1+E_pi)*mean(j_antisymmetric).",
+    "transfer": "With incoming per-pass source i_nu, D_A*xi=F_boundary-(1+exp(-pi*lambda))*mean[i_nu/(1-exp(-L_nu*lambda))], D_A=b0*lambda*G_diff. Initial-state and one-pass sources have different numerators.",
+    "spectral": "z=lambda^2; F_A=b0*lambda*G_diff/(z+1)^2=b0+mean[sum_(n>=2)c_n/(z+n^2*Omega^2)]. c_n=8*n^2*Omega^4*(n^2-1)*cos^2(n*pi^2/L)/[3L*(n^2*Omega^2-1)^2]>=0.",
+    "symmetric": "F_S=b0*G_sum/lambda=b0*(z+1)+(8/3)*mean[L^-1*sum_(n>=1)(z+Omega^2)*sin^2(n*pi^2/L)/(z+n^2*Omega^2)]."
+  },
+  "proof": {
+    "kernel": "The periodic resolvent identity gives lambda*R_plus=4/L+(8/L)*sum_(n>=1) z*cos^2(n*pi^2/L)/(z+n^2*Omega^2). R_minus has no constant and replaces cos^2 by sin^2.",
+    "subtraction": "Multiplication by z+Omega^2 removes the n=1 vacuum pole. Dividing by (z+1)^2, subtracting the value and derivative at -1 and using b_L=pi*(Omega^2-1)/6 yields the displayed spectral identity. Its constant at positive infinity is b_L. Resonances use the continuous positive residue below, rather than substituting 0/0.",
+    "antisymmetric_sign": "Im(F_A)=-Im(z)*mean[sum c_n/abs(z+n^2*Omega^2)^2]; F_A>0 for real z>=0 since b0>0. Therefore G_diff has no zero with Re(lambda)>0.",
+    "symmetric_sign": "Im(F_S)=Im(z)*[b0+(8/3)*mean[L^-1*sum (n^2-1)*Omega^2*sin^2(n*pi^2/L)/abs(z+n^2*Omega^2)^2]]. This is strictly of the sign of Im(z), and F_S>0 for real z>=0. G_sum likewise has no right-half-plane zero.",
+    "continuum": "At any positive z0, each positive spectral sum equals its bounded closed form minus bounded b_L, uniformly for L>=pi. Tonelli therefore applies to any normalized positive delay distribution. The bounded ratio (z0+a)/(z+a), a>=0, on compact subsets off the negative real axis gives local uniform absolute convergence. Unbounded delays may produce a spectral cut; no isolated neutral-mode counting is asserted there.",
+    "truncation": "Numerics subtract cos^2/x+A*cos^2/x^2 and restore their exact Fourier sums, with A=2-Omega^2-z. B=2z-1-A(z-2), C=-z-A(1-2z), D=-Az. With x=n^2*Omega^2 and X=(N+1)^2*Omega^2, the remaining rational numerator is B*x^2+C*x+D over x^2*(x-1)^2*(x+z). Its absolute tail is at most8K/(15L*Omega^6*N^5), K=(abs(B)+abs(C)/X+abs(D)/X^2)/[(1-1/X)^2*(1-abs(z)/X)], requiring X>max(1,abs(z)). This follows from sum_(n>N)n^-6<=1/(5N^5). The sine tail is at most8*abs(z^2*(z+Omega^2))/[15L*Omega^6*(1-abs(z)/X)*N^5]. These are analytic truncation bounds, not interval bounds on floating-point arithmetic."
+  },
+  "resonance": {
+    "example_loop_period": "4pi",
+    "resolvent_derivative_at_lambda_i": "3*pi/4",
+    "spectral_weight_at_n2": "pi/32",
+    "general_weight": "At n*Omega=1: c_n=pi^2*(1-Omega^2)/(6L). n=1 contributes zero.",
+    "gauge": "For a finite nonresonant ensemble, the eliminated C characteristic contains (lambda^2+1)^2, generically giving double +/-i roots. C=exp(ix) reconstructs zero; C=x*exp(ix) reconstructs i*exp(i*tau)*(sin(chi)+chi*sec(chi)), a bounded AdS-frame perturbation. At L=2pi*n,n>=2, F_A has a positive pole at z=-1 and one factor cancels. Transport poles, accidental degeneracies and homogeneous state modes require the uneliminated equations for complete neutral-mode counting; none changes the right-half-plane exclusion."
+  },
+  "cases": [
+    {
+      "case": "D0",
+      "weights": [
+        1.0
+      ],
+      "loop_periods": [
+        3.141592653589793
+      ],
+      "mean_omega_squared": 4.0,
+      "b0": 1.5707963267948966,
+      "lambda_value": [
+        0.4,
+        0.7
+      ],
+      "antisymmetric_value": [
+        1.698873604947909,
+        -0.002219531067063243
+      ],
+      "symmetric_value": [
+        1.0524335389525807,
+        0.8796459430051421
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 1.3895710559727107e-17,
+      "antisymmetric_tail_bound": 1.3929692444399203e-17,
+      "symmetric_error": 0.0,
+      "symmetric_tail_bound": 3.695386595149237e-18
+    },
+    {
+      "case": "D0",
+      "weights": [
+        1.0
+      ],
+      "loop_periods": [
+        3.141592653589793
+      ],
+      "mean_omega_squared": 4.0,
+      "b0": 1.5707963267948966,
+      "lambda_value": [
+        0.2,
+        2.3
+      ],
+      "antisymmetric_value": [
+        1.7251947855092442,
+        -0.006904856867643296
+      ],
+      "symmetric_value": [
+        -6.675884388878311,
+        1.4451326206513049
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 3.213479025766206e-17,
+      "antisymmetric_tail_bound": 3.221340857790848e-17,
+      "symmetric_error": 0.0,
+      "symmetric_tail_bound": 1.038803616073159e-16
+    },
+    {
+      "case": "D0",
+      "weights": [
+        1.0
+      ],
+      "loop_periods": [
+        3.141592653589793
+      ],
+      "mean_omega_squared": 4.0,
+      "b0": 1.5707963267948966,
+      "lambda_value": [
+        0.6,
+        0.0
+      ],
+      "antisymmetric_value": [
+        1.6962981961753723,
+        0.0
+      ],
+      "symmetric_value": [
+        2.1362830044410592,
+        0.0
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 9.754356422329039e-18,
+      "antisymmetric_tail_bound": 9.77820873381857e-18,
+      "symmetric_error": 0.0,
+      "symmetric_tail_bound": 1.3312530815128959e-18
+    },
+    {
+      "case": "distributed_long_tail",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "loop_periods": [
+        3.241592653589793,
+        10.0,
+        40.0
+      ],
+      "mean_omega_squared": 2.7113343053483994,
+      "b0": 0.8960525469197872,
+      "lambda_value": [
+        0.4,
+        0.7
+      ],
+      "antisymmetric_value": [
+        1.092791559002845,
+        -0.03895981696223924
+      ],
+      "symmetric_value": [
+        0.7381749807957873,
+        0.5706078142311829
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 1.455404178199355e-13,
+      "antisymmetric_tail_bound": 2.925309337635953e-13,
+      "symmetric_error": 1.063588671182494e-14,
+      "symmetric_tail_bound": 2.1284690264191262e-14
+    },
+    {
+      "case": "distributed_long_tail",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "loop_periods": [
+        3.241592653589793,
+        10.0,
+        40.0
+      ],
+      "mean_omega_squared": 2.7113343053483994,
+      "b0": 0.8960525469197872,
+      "lambda_value": [
+        0.2,
+        2.3
+      ],
+      "antisymmetric_value": [
+        0.9562466489677043,
+        -0.07891936044075537
+      ],
+      "symmetric_value": [
+        -3.9353390353969733,
+        1.015318893601789
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 1.6371345406170043e-12,
+      "antisymmetric_tail_bound": 3.2906695506829393e-12,
+      "symmetric_error": 5.952474145603477e-12,
+      "symmetric_tail_bound": 1.1906897143662507e-11
+    },
+    {
+      "case": "distributed_long_tail",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "loop_periods": [
+        3.241592653589793,
+        10.0,
+        40.0
+      ],
+      "mean_omega_squared": 2.7113343053483994,
+      "b0": 0.8960525469197872,
+      "lambda_value": [
+        0.6,
+        0.0
+      ],
+      "antisymmetric_value": [
+        1.074409243497125,
+        0.0
+      ],
+      "symmetric_value": [
+        1.3991777896535653,
+        0.0
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 9.307402466647922e-14,
+      "antisymmetric_tail_bound": 1.8706903541738558e-13,
+      "symmetric_error": 1.972910120352419e-15,
+      "symmetric_tail_bound": 3.946371739719529e-15
+    },
+    {
+      "case": "exact_resonant_channel",
+      "weights": [
+        0.75,
+        0.25
+      ],
+      "loop_periods": [
+        3.141592653589793,
+        12.566370614359172
+      ],
+      "mean_omega_squared": 3.0625,
+      "b0": 1.0799224746714915,
+      "lambda_value": [
+        0.4,
+        0.7
+      ],
+      "antisymmetric_value": [
+        1.2824383325868447,
+        -0.03492684296237375
+      ],
+      "symmetric_value": [
+        0.767746252547228,
+        0.6560169893790724
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 9.426011878789638e-16,
+      "antisymmetric_tail_bound": 1.9248131938060997e-15,
+      "symmetric_error": 7.207356156320927e-17,
+      "symmetric_tail_bound": 1.4692060853865664e-16
+    },
+    {
+      "case": "exact_resonant_channel",
+      "weights": [
+        0.75,
+        0.25
+      ],
+      "loop_periods": [
+        3.141592653589793,
+        12.566370614359172
+      ],
+      "mean_omega_squared": 3.0625,
+      "b0": 1.0799224746714915,
+      "lambda_value": [
+        0.2,
+        2.3
+      ],
+      "antisymmetric_value": [
+        1.16393855644355,
+        -0.0665861445592748
+      ],
+      "symmetric_value": [
+        -4.673420129577032,
+        1.1296055456023193
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 1.203381387307214e-14,
+      "antisymmetric_tail_bound": 2.416404535649307e-14,
+      "symmetric_error": 4.355465237828072e-14,
+      "symmetric_tail_bound": 8.718877504329674e-14
+    },
+    {
+      "case": "exact_resonant_channel",
+      "weights": [
+        0.75,
+        0.25
+      ],
+      "loop_periods": [
+        3.141592653589793,
+        12.566370614359172
+      ],
+      "mean_omega_squared": 3.0625,
+      "b0": 1.0799224746714915,
+      "lambda_value": [
+        0.6,
+        0.0
+      ],
+      "antisymmetric_value": [
+        1.2653066626129297,
+        0.0
+      ],
+      "symmetric_value": [
+        1.5403394640916728,
+        0.0
+      ],
+      "series_terms": 1024,
+      "antisymmetric_error": 5.927587728936435e-16,
+      "antisymmetric_tail_bound": 1.2133597747455455e-15,
+      "symmetric_error": 2.3840112535767463e-17,
+      "symmetric_tail_bound": 4.867934539269577e-17
+    }
+  ],
+  "verification": {
+    "all_declared_checks_pass": true,
+    "precision_decimal_digits": 50,
+    "rational_tail_identity": "0",
+    "exact_resonance_derivative": "3*pi/4",
+    "exact_resonance_weight": "pi/32",
+    "minimum_sampled_positive_spectral_numerator": 8.65419381765678e-104,
+    "maximum_D0_identity_error": 5.345529420184391e-51,
+    "maximum_antisymmetric_identity_error": 1.6371345406170043e-12,
+    "maximum_symmetric_identity_error": 5.952474145603477e-12,
+    "all_identity_errors_within_analytic_truncation_bounds": true
+  },
+  "scope": "Analytic absence of exponentially growing characteristic modes in this specified linear, zero-offset, free-NS-vacuum, common-mouth, fixed-delay leading-JT closure. This is not damping, an all-time response bound, nonlinear stability, robustness to a shifted/excited state, finite-collar dynamics, a solved nonspherical4D exterior or chronology protection. Multiplying transport denominators can add or hide neutral modes; no frequency sweep substitutes for the proof.",
+  "sources": [
+    "https://arxiv.org/html/1807.04726v3: NS Casimir normalization and leading throat framework.",
+    "https://arxiv.org/pdf/math-ph/0412028: chiral stress transformation and positive-energy CFT input. The distributed-delay spectral identity and its application here are our derivation."
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "scope": "Radius-three finite-disk nonlinear curved Ori initial constraints; no exterior matching",
+  "radius": 3.0,
+  "source_radius": 1.0,
+  "scalar_taper": "max(1-r^2,0)^4; C3 cutoff",
+  "checks": {
+    "radius_scaling": true,
+    "area_moments": true,
+    "compact_support": true,
+    "original_radius_one_baseline": true,
+    "full_disk_accuracy": true,
+    "quadrature_insensitive": true,
+    "angular_insensitive": true,
+    "positive_metric": true,
+    "radial_refinement": true
+  },
+  "refinement": [
+    {
+      "degree": 22,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 2318,
+      "unknowns": 1104,
+      "projected_residual": 6.795381111653932e-16,
+      "residual_evaluations": 45,
+      "elapsed_seconds": 5.009405700024217,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 0.0025624551199904255,
+        "max_M": 0.00029083493565192536,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012341354191325316,
+        "max_W": 0.00010767014078063969,
+        "max_energy": 0.0019335205588158892
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 30,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 3542,
+      "unknowns": 1984,
+      "projected_residual": 2.512334132269737e-17,
+      "residual_evaluations": 46,
+      "elapsed_seconds": 10.615850700065494,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 0.00205525463740161,
+        "max_M": 0.00021367296209860213,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012134577344791175,
+        "max_W": 0.0001088771532735199,
+        "max_energy": 0.001933515041748637
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 38,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 5022,
+      "unknowns": 3120,
+      "projected_residual": 1.9747229203533767e-17,
+      "residual_evaluations": 46,
+      "elapsed_seconds": 17.991031800047494,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 6.797942855579948e-05,
+        "max_M": 8.30351753585476e-05,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012097225555196545,
+        "max_W": 0.00010899046982705813,
+        "max_energy": 0.0019335136945703893
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 46,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 6758,
+      "unknowns": 4512,
+      "projected_residual": 5.723801555370276e-14,
+      "residual_evaluations": 15,
+      "elapsed_seconds": 17.39718209998682,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 0.00014311313767914613,
+        "max_M": 2.404094001792543e-05,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101316949397756,
+        "max_W": 0.00010898490358599028,
+        "max_energy": 0.0019335137620104083
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 54,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 8750,
+      "unknowns": 6160,
+      "projected_residual": 5.0343643946161206e-15,
+      "residual_evaluations": 16,
+      "elapsed_seconds": 31.578288899967447,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 7.816056682824479e-05,
+        "max_M": 1.2274342670495751e-06,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101301188516267,
+        "max_W": 0.00010898470923746403,
+        "max_energy": 0.0019335137676696466
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 62,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 10998,
+      "unknowns": 8064,
+      "projected_residual": 6.758194433673491e-16,
+      "residual_evaluations": 16,
+      "elapsed_seconds": 38.417150900000706,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 2.792985477961807e-05,
+        "max_M": 3.4631302594435057e-06,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.000121010924420073,
+        "max_W": 0.00010898491345470619,
+        "max_energy": 0.0019335137725454811
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    }
+  ],
+  "failures": [],
+  "radial_refinement": [
+    {
+      "degree": 80,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 3168,
+      "unknowns": 2628,
+      "projected_residual": 1.6225264778409538e-16,
+      "residual_evaluations": 17,
+      "elapsed_seconds": 10.38821350003127,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 3.017544431604957e-06,
+        "max_M": 1.315429853809506e-06,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101158600774653,
+        "max_W": 0.00010898486235370763,
+        "max_energy": 0.001933513770110894,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 100,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 3828,
+      "unknowns": 3308,
+      "projected_residual": 3.8061246993189846e-17,
+      "residual_evaluations": 18,
+      "elapsed_seconds": 12.817348000011407,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 1.5606100721987648e-06,
+        "max_M": 3.5490275849043825e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101167360478726,
+        "max_W": 0.00010898485831258108,
+        "max_energy": 0.001933513770267368,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 120,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 4488,
+      "unknowns": 3988,
+      "projected_residual": 1.524597547991254e-17,
+      "residual_evaluations": 19,
+      "elapsed_seconds": 19.61658290005289,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 8.377691676497712e-07,
+        "max_M": 1.0287290855882272e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101168616385216,
+        "max_W": 0.00010898485787088906,
+        "max_energy": 0.0019335137702861302,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 160,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 5808,
+      "unknowns": 5348,
+      "projected_residual": 1.149606287544608e-17,
+      "residual_evaluations": 20,
+      "elapsed_seconds": 32.07153750001453,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 2.1206841205323457e-07,
+        "max_M": 7.314431507412884e-10,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0001210116887944146,
+        "max_W": 0.00010898485779147713,
+        "max_energy": 0.0019335137702799167,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 200,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 7128,
+      "unknowns": 6708,
+      "projected_residual": 1.0498654918592038e-17,
+      "residual_evaluations": 20,
+      "elapsed_seconds": 48.91619580006227,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 2.89122115415541e-08,
+        "max_M": 7.081220549813135e-09,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101168882194813,
+        "max_W": 0.000108984857789296,
+        "max_energy": 0.001933513770280175,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "accuracy_target_passed": true
+    }
+  ],
+  "angular_refinement": [
+    {
+      "degree": 120,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 4488,
+      "unknowns": 3988,
+      "projected_residual": 4.68697200306196e-17,
+      "residual_evaluations": 18,
+      "elapsed_seconds": 14.724276599939913,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 8.377691719241298e-07,
+        "max_M": 1.0287290790149672e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101168616385216,
+        "max_W": 0.00010898485787088907,
+        "max_energy": 0.0019335137702861302,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "max_coefficient_change_from_embedded_previous": 1.0988707545226403e-12,
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 120,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 12,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 5576,
+      "unknowns": 5764,
+      "projected_residual": 1.4050663362533198e-17,
+      "residual_evaluations": 34,
+      "elapsed_seconds": 29.784680300042965,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 8.377707078344176e-07,
+        "max_M": 1.0287363997510809e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101168616385216,
+        "max_W": 0.00010898485787088906,
+        "max_energy": 0.0019335137702861302,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "max_coefficient_change_from_embedded_previous": 1.4323892641635445e-12,
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 120,
+      "epsilon": 0.03,
+      "quadrature_padding": 6,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 16,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 6664,
+      "unknowns": 7476,
+      "projected_residual": 5.351079275521489e-16,
+      "residual_evaluations": 2,
+      "elapsed_seconds": 23.079638800001703,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 8.377707078344176e-07,
+        "max_M": 1.0287363997510809e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101168616385216,
+        "max_W": 0.00010898485787088902,
+        "max_energy": 0.0019335137702861302,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "max_coefficient_change_from_embedded_previous": 0.0,
+      "accuracy_target_passed": false
+    }
+  ],
+  "quadrature_refinement": [
+    {
+      "degree": 200,
+      "epsilon": 0.03,
+      "quadrature_padding": 14,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "scalar_taper": "max(1-r^2/source_radius^2,0)^4; C3 across support boundary",
+      "quadrature_points": 11368,
+      "unknowns": 6708,
+      "projected_residual": 7.569723114217843e-18,
+      "residual_evaluations": 2,
+      "elapsed_seconds": 32.94719360000454,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 2.89122115415541e-08,
+        "max_M": 7.081220549813135e-09,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00012101168882194813,
+        "max_W": 0.000108984857789296,
+        "max_energy": 0.001933513770280175,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.0038690928868880515,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0019345464434439702
+      },
+      "max_coefficient_change_from_padding6": 0.0,
+      "accuracy_target_passed": true
+    }
+  ],
+  "fresh_validation": {
+    "points": 19508,
+    "max_H": 2.8912442939788008e-08,
+    "max_M": 7.0814822496049416e-09,
+    "square_half_width": 2.1,
+    "square_max_H": 1.5255029477048015e-09,
+    "square_max_M": 1.5481616417984276e-10,
+    "min_psi": 1.0,
+    "max_H_location": [
+      -5.51091059616309e-16,
+      -3.0
+    ],
+    "max_M_location": [
+      1.8369701987210297e-16,
+      3.0
+    ]
+  },
+  "accepted": true,
+  "accepted_case": {
+    "degree": 200,
+    "max_angular": 8,
+    "epsilon": 0.03,
+    "radius": 3.0,
+    "source_radius": 1.0,
+    "taper_kind": "polynomial"
+  },
+  "validation_limit": "Independent sampled maxima, not a certified continuum sup bound; no exterior matching or evolution proved by this solve.",
+  "warnings": [
+    "SciPy emitted a relative-step RuntimeWarning in the cap12 refinement; returned coefficients were finite and projected plus physical constraints passed."
+  ]
+}

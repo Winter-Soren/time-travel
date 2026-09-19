@@ -1,0 +1,3614 @@
+{
+  "symbolic": {
+    "all_16_Einstein_scalar_residuals_zero": true,
+    "both_support_wave_equations_zero": true,
+    "determinant": -1,
+    "Ricci_nonzero": {
+      "zz": "mu"
+    },
+    "Kretschmann": "0",
+    "nonzero_tidal_components": {
+      "xzxz": "-a/2 + mu/2",
+      "yzyz": "a/2 + mu/2"
+    },
+    "time_function_gradient_squared": "a**2*x**2 + a**2*y**2 - 4*a*e*x**2 + 4*a*e*y**2 - 2*a*mu*x**2 + 2*a*mu*y**2 + 4*e**2*x**2 + 4*e**2*y**2 + 4*e*mu*x**2 + 4*e*mu*y**2 - e*x**2 - e*y**2 + mu**2*x**2 + mu**2*y**2 + t",
+    "spectator_full_4D_wave_residual_zero": true,
+    "support_intensity": "mu = kappa * epsilon^2 * k^2, k integer for period 2*pi",
+    "regular_initial_region": "e=1/16; a>=0, mu>=0, a+mu<1/8; t<0",
+    "central_loop_squared_norm": "-t; smooth null crossing in this exact solution",
+    "support_observer_energy": "epsilon^2*k^2/(2+T), x=y=0, -1<=T<0"
+  },
+  "numerical": {
+    "count": 48,
+    "nonzero_support_cases": 36,
+    "method": "classical RK4; three step refinements; independent exact-mode reference",
+    "steps": [
+      8192,
+      16384,
+      32768
+    ],
+    "max_exact_errors": [
+      9.734620917926482e-07,
+      6.085282627285175e-08,
+      3.803660291624307e-09
+    ],
+    "refinement_ratios": [
+      15.99699063159107,
+      15.998491349727049
+    ],
+    "end_S": -1e-12,
+    "minimum_a_plus_mu_margin": 0.004999999999999994,
+    "analytic_obstruction": "s<=0 and ds/dmu<0: added positive null support does not remove this spectator instability",
+    "cases": [
+      {
+        "a": 0,
+        "mu": 0,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "energy_amplification": 1.9999999999989872e+24,
+        "scaled_exact_state_error": 2.4863714464021154e-12
+      },
+      {
+        "a": 0,
+        "mu": 0,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "energy_amplification": 1.9999999999976995e+24,
+        "scaled_exact_state_error": 9.53678981856097e-11
+      },
+      {
+        "a": 0,
+        "mu": 0,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "energy_amplification": 1.9999999999132014e+24,
+        "scaled_exact_state_error": 3.39079951049942e-09
+      },
+      {
+        "a": 0,
+        "mu": 0.001,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.002004016080450705,
+        "energy_power": -2.0040080321609013,
+        "energy_amplification": 2.2342200535037306e+24,
+        "scaled_exact_state_error": 2.5303464058941845e-12
+      },
+      {
+        "a": 0,
+        "mu": 0.001,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.002004016080450705,
+        "energy_power": -2.0040080321609013,
+        "energy_amplification": 2.2342217358998667e+24,
+        "scaled_exact_state_error": 9.640522326319351e-11
+      },
+      {
+        "a": 0,
+        "mu": 0.001,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.002004016080450705,
+        "energy_power": -2.0040080321609013,
+        "energy_amplification": 2.2342221563860362e+24,
+        "scaled_exact_state_error": 3.411201559799004e-09
+      },
+      {
+        "a": 0,
+        "mu": 0.01,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "energy_amplification": 6.180008723511789e+24,
+        "scaled_exact_state_error": 2.8977446014636593e-12
+      },
+      {
+        "a": 0,
+        "mu": 0.01,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "energy_amplification": 6.180491670894351e+24,
+        "scaled_exact_state_error": 1.0437097872801695e-10
+      },
+      {
+        "a": 0,
+        "mu": 0.01,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "energy_amplification": 6.180612430516251e+24,
+        "scaled_exact_state_error": 3.5614087433673507e-09
+      },
+      {
+        "a": 0,
+        "mu": 0.02,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "energy_amplification": 2.007517174102279e+25,
+        "scaled_exact_state_error": 3.2240339302449937e-12
+      },
+      {
+        "a": 0,
+        "mu": 0.02,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "energy_amplification": 2.008172613086963e+25,
+        "scaled_exact_state_error": 1.1052709830684833e-10
+      },
+      {
+        "a": 0,
+        "mu": 0.02,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "energy_amplification": 2.0083366062072486e+25,
+        "scaled_exact_state_error": 3.67002654134894e-09
+      },
+      {
+        "a": 0.02,
+        "mu": 0,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.0016129748954827982,
+        "energy_power": -2.0032259497909655,
+        "energy_amplification": 2.1864578557504754e+24,
+        "scaled_exact_state_error": 2.5239663148695074e-12
+      },
+      {
+        "a": 0.02,
+        "mu": 0,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.0016129748954827982,
+        "energy_power": -2.0032259497909655,
+        "energy_amplification": 2.1864589223373042e+24,
+        "scaled_exact_state_error": 9.620176193095218e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.0016129748954827982,
+        "energy_power": -2.0032259497909655,
+        "energy_amplification": 2.1864591888768009e+24,
+        "scaled_exact_state_error": 3.407289353846706e-09
+      },
+      {
+        "a": 0.02,
+        "mu": 0.001,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.003636757680197641,
+        "energy_power": -2.0072735153603953,
+        "energy_amplification": 2.4451794883103285e+24,
+        "scaled_exact_state_error": 2.5646092461604997e-12
+      },
+      {
+        "a": 0.02,
+        "mu": 0.001,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.003636757680197641,
+        "energy_power": -2.0072735153603953,
+        "energy_amplification": 2.445185552018573e+24,
+        "scaled_exact_state_error": 9.722784743995282e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.001,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.003636757680197641,
+        "energy_power": -2.0072735153603953,
+        "energy_amplification": 2.445187067813023e+24,
+        "scaled_exact_state_error": 3.427191709570471e-09
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.02224743168763473,
+        "energy_power": -2.0444948633752693,
+        "energy_amplification": 6.837772193923884e+24,
+        "scaled_exact_state_error": 2.9349082813549926e-12
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.02224743168763473,
+        "energy_power": -2.0444948633752693,
+        "energy_amplification": 6.838406640456742e+24,
+        "scaled_exact_state_error": 1.0501858853789634e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.02224743168763473,
+        "energy_power": -2.0444948633752693,
+        "energy_amplification": 6.838565287931258e+24,
+        "scaled_exact_state_error": 3.5731258929693403e-09
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.04384471871911697,
+        "energy_power": -2.0876894374382338,
+        "energy_amplification": 2.254730697961119e+25,
+        "scaled_exact_state_error": 3.2471700082249e-12
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.04384471871911697,
+        "energy_power": -2.0876894374382338,
+        "energy_amplification": 2.2555428128958183e+25,
+        "scaled_exact_state_error": 1.1098177954176078e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.04384471871911697,
+        "energy_power": -2.0876894374382338,
+        "energy_amplification": 2.2557460240389066e+25,
+        "scaled_exact_state_error": 3.677919062200312e-09
+      },
+      {
+        "a": 0.06,
+        "mu": 0,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.015584309711889552,
+        "energy_power": -2.031168619423779,
+        "energy_amplification": 4.731807429253548e+24,
+        "scaled_exact_state_error": 2.809118283241813e-12
+      },
+      {
+        "a": 0.06,
+        "mu": 0,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.015584309711889552,
+        "energy_power": -2.031168619423779,
+        "energy_amplification": 4.7320228878738615e+24,
+        "scaled_exact_state_error": 1.025484755990452e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.015584309711889552,
+        "energy_power": -2.031168619423779,
+        "energy_amplification": 4.73207675813735e+24,
+        "scaled_exact_state_error": 3.527947131847533e-09
+      },
+      {
+        "a": 0.06,
+        "mu": 0.001,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.0177995440379548,
+        "energy_power": -2.0355990880759096,
+        "energy_amplification": 5.347916994977384e+24,
+        "scaled_exact_state_error": 2.8560235965734187e-12
+      },
+      {
+        "a": 0.06,
+        "mu": 0.001,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.0177995440379548,
+        "energy_power": -2.0355990880759096,
+        "energy_amplification": 5.348234647308747e+24,
+        "scaled_exact_state_error": 1.0340745578081442e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.001,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.0177995440379548,
+        "energy_power": -2.0355990880759096,
+        "energy_amplification": 5.348314071541406e+24,
+        "scaled_exact_state_error": 3.5437707829444853e-09
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.03836477132724921,
+        "energy_power": -2.0767295426544985,
+        "energy_amplification": 1.6658074151716363e+25,
+        "scaled_exact_state_error": 3.168668482831747e-12
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.03836477132724921,
+        "energy_power": -2.0767295426544985,
+        "energy_amplification": 1.666266879291716e+25,
+        "scaled_exact_state_error": 1.0973291841131085e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.03836477132724921,
+        "energy_power": -2.0767295426544985,
+        "energy_amplification": 1.666381824216554e+25,
+        "scaled_exact_state_error": 3.6564174548428613e-09
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.06277186767309857,
+        "energy_power": -2.1255437353461972,
+        "energy_amplification": 6.413980534254641e+25,
+        "scaled_exact_state_error": 3.430994042417142e-12
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.06277186767309857,
+        "energy_power": -2.1255437353461972,
+        "energy_amplification": 6.418712237974973e+25,
+        "scaled_exact_state_error": 1.1424619661198163e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.06277186767309857,
+        "energy_power": -2.1255437353461972,
+        "energy_amplification": 6.419897346479948e+25,
+        "scaled_exact_state_error": 3.732711135352843e-09
+      },
+      {
+        "a": 0.1,
+        "mu": 0,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.05278640450004207,
+        "energy_power": -2.1055728090000843,
+        "energy_amplification": 3.6948897941312544e+25,
+        "scaled_exact_state_error": 3.3413797975114977e-12
+      },
+      {
+        "a": 0.1,
+        "mu": 0,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.05278640450004207,
+        "energy_power": -2.1055728090000843,
+        "energy_amplification": 3.6968181769263463e+25,
+        "scaled_exact_state_error": 1.12708339875959e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.05278640450004207,
+        "energy_power": -2.1055728090000843,
+        "energy_amplification": 3.6973009012345485e+25,
+        "scaled_exact_state_error": 3.7071376624510954e-09
+      },
+      {
+        "a": 0.1,
+        "mu": 0.001,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.055791477885336574,
+        "energy_power": -2.111582955770673,
+        "energy_amplification": 4.362022516007981e+25,
+        "scaled_exact_state_error": 3.3787285693545045e-12
+      },
+      {
+        "a": 0.1,
+        "mu": 0.001,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.055791477885336574,
+        "energy_power": -2.111582955770673,
+        "energy_amplification": 4.3645653506827376e+25,
+        "scaled_exact_state_error": 1.1321228823336699e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.001,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.055791477885336574,
+        "energy_power": -2.111582955770673,
+        "energy_amplification": 4.365201985551612e+25,
+        "scaled_exact_state_error": 3.715547477728765e-09
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.08552553340645612,
+        "energy_power": -2.1710510668129124,
+        "energy_amplification": 2.2534648861299378e+26,
+        "scaled_exact_state_error": 3.57450660872702e-12
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.08552553340645612,
+        "energy_power": -2.1710510668129124,
+        "energy_amplification": 2.256547032699248e+26,
+        "scaled_exact_state_error": 1.1659915349583952e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.08552553340645612,
+        "energy_power": -2.1710510668129124,
+        "energy_amplification": 2.2573202097531906e+26,
+        "scaled_exact_state_error": 3.771142241124568e-09
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "spectator_wave_number": 1,
+        "exponent_s": -0.12984378812835762,
+        "energy_power": -2.2596875762567152,
+        "energy_amplification": 2.602926597112459e+27,
+        "scaled_exact_state_error": 3.715020928733528e-12
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "spectator_wave_number": 2,
+        "exponent_s": -0.12984378812835762,
+        "energy_power": -2.2596875762567152,
+        "energy_amplification": 2.611103044036127e+27,
+        "scaled_exact_state_error": 1.1869218528915662e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "spectator_wave_number": 4,
+        "exponent_s": -0.12984378812835762,
+        "energy_power": -2.2596875762567152,
+        "energy_amplification": 2.613163299963279e+27,
+        "scaled_exact_state_error": 3.803660291624307e-09
+      }
+    ]
+  },
+  "twist": {
+    "all_16_Einstein_scalar_residuals_zero": true,
+    "support_and_periodicity": "Same two periodic positive-kinetic scalars; Rzz=mu",
+    "exact_closure_verified": true,
+    "real_branch_domain": "a>=0, mu>=0, a+mu<1/8, finite real twist",
+    "analytic_trace_identity": "tr(B) = 4*tr(B^2) + mu >= 0; s=-2*tr(B)<=0",
+    "initial_time_function": "(grad S)^2=S; S<0 admits no closed causal curves",
+    "conclusion": "Spatial twist cannot remove this spectator instability in the real quadratic sector",
+    "geometry_cases": 72,
+    "mode_evolutions": 216,
+    "nonzero_twist_modes": 180,
+    "max_closure_residual": 6.16911036144252e-17,
+    "max_exact_mode_error": 1.4092437558121736e-10,
+    "end_S": -1e-12,
+    "cases": [
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 2.3642325119185866e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 5.6547865080663335e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 1.2565106024260532e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 2.3642325119185866e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 5.6547865080663335e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 1.2565106024260532e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 2.3642325119185866e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 5.6547865080663335e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 1.2565106024260532e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 2.3642325119185866e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 5.6547865080663335e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 1.2565106024260532e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 2.3642325119185866e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 5.6547865080663335e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 1.2565106024260532e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 2.3642325119185866e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 5.6547865080663335e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.0,
+        "energy_power": -2.0,
+        "scaled_exact_state_error": 1.2565106024260532e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 2.7739024196486804e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 6.187519774715028e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 1.3187579394542973e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 2.7739024196486804e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 6.187519774715028e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 1.3187579394542973e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 2.7739024196486804e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 6.187519774715028e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 1.3187579394542973e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 2.7739024196486804e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 6.187519774715028e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 1.3187579394542973e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 2.7739024196486804e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 6.187519774715028e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 1.3187579394542973e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 2.7739024196486804e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 6.187519774715028e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.020416847668728047,
+        "energy_power": -2.040833695337456,
+        "scaled_exact_state_error": 1.3187579394542973e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 3.085768493526455e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 6.551098055209675e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 1.3586854466244998e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 3.085768493526455e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 6.551098055209675e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 1.3586854466244998e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 3.085768493526455e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 6.551098055209675e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 1.3586854466244998e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 3.085768493526455e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 6.551098055209675e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 1.3586854466244998e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 3.085768493526455e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 6.551098055209675e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 1.3586854466244998e-10
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 3.085768493526455e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 6.551098055209675e-11
+      },
+      {
+        "a": 0.0,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.041742430504416006,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 1.3586854466244998e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.001612974895482798,
+        "energy_power": -2.0032259497909655,
+        "scaled_exact_state_error": 2.4006067490555738e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.001612974895482798,
+        "energy_power": -2.0032259497909655,
+        "scaled_exact_state_error": 5.704548195514306e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.001612974895482798,
+        "energy_power": -2.0032259497909655,
+        "scaled_exact_state_error": 1.262609235754599e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.0013878599919064179,
+        "energy_power": -2.0027757199838128,
+        "scaled_exact_state_error": 2.3957032598282515e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.0013878599919064179,
+        "energy_power": -2.0027757199838128,
+        "scaled_exact_state_error": 5.697064377796848e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.0013878599919064179,
+        "energy_power": -2.0027757199838128,
+        "scaled_exact_state_error": 1.261711418454426e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.00032018448007118126,
+        "energy_power": -2.000640368960142,
+        "scaled_exact_state_error": 2.3716391159452176e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.00032018448007118126,
+        "energy_power": -2.000640368960142,
+        "scaled_exact_state_error": 5.66514025347213e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.00032018448007118126,
+        "energy_power": -2.000640368960142,
+        "scaled_exact_state_error": 1.2576800593564568e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -9.412859160913293e-05,
+        "energy_power": -2.0001882571832184,
+        "scaled_exact_state_error": 2.3666208784533467e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -9.412859160913293e-05,
+        "energy_power": -2.0001882571832184,
+        "scaled_exact_state_error": 5.6573766244118765e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -9.412859160913293e-05,
+        "energy_power": -2.0001882571832184,
+        "scaled_exact_state_error": 1.2568768030239264e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -1.1034607880085108e-05,
+        "energy_power": -2.00002206921576,
+        "scaled_exact_state_error": 2.364814570845473e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -1.1034607880085108e-05,
+        "energy_power": -2.00002206921576,
+        "scaled_exact_state_error": 5.6555073539660137e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -1.1034607880085108e-05,
+        "energy_power": -2.00002206921576,
+        "scaled_exact_state_error": 1.256647787789768e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -9.993763916295025e-07,
+        "energy_power": -2.0000019987527833,
+        "scaled_exact_state_error": 2.364458048768878e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -9.993763916295025e-07,
+        "energy_power": -2.0000019987527833,
+        "scaled_exact_state_error": 5.6549630560744064e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -9.993763916295025e-07,
+        "energy_power": -2.0000019987527833,
+        "scaled_exact_state_error": 1.2565583099116777e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.02224743168763473,
+        "energy_power": -2.0444948633752693,
+        "scaled_exact_state_error": 2.8049051112988943e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.02224743168763473,
+        "energy_power": -2.0444948633752693,
+        "scaled_exact_state_error": 6.225569318176899e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.02224743168763473,
+        "energy_power": -2.0444948633752693,
+        "scaled_exact_state_error": 1.323091430920897e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.02197249113865122,
+        "energy_power": -2.0439449822773024,
+        "scaled_exact_state_error": 2.800340307155187e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.02197249113865122,
+        "energy_power": -2.0439449822773024,
+        "scaled_exact_state_error": 6.219506688272094e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.02197249113865122,
+        "energy_power": -2.0439449822773024,
+        "scaled_exact_state_error": 1.3224249776322734e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.020756105181250418,
+        "energy_power": -2.0415122103625007,
+        "scaled_exact_state_error": 2.7796468750781362e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.020756105181250418,
+        "energy_power": -2.0415122103625007,
+        "scaled_exact_state_error": 6.194507261080557e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.020756105181250418,
+        "energy_power": -2.0415122103625007,
+        "scaled_exact_state_error": 1.319683435771878e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.02051544838422474,
+        "energy_power": -2.0410308967684494,
+        "scaled_exact_state_error": 2.77573921530597e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.02051544838422474,
+        "energy_power": -2.0410308967684494,
+        "scaled_exact_state_error": 6.188929117630975e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.02051544838422474,
+        "energy_power": -2.0410308967684494,
+        "scaled_exact_state_error": 1.3190770081140271e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.0204283584045803,
+        "energy_power": -2.0408567168091607,
+        "scaled_exact_state_error": 2.7741956886814697e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.0204283584045803,
+        "energy_power": -2.0408567168091607,
+        "scaled_exact_state_error": 6.187140628705666e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.0204283584045803,
+        "energy_power": -2.0408567168091607,
+        "scaled_exact_state_error": 1.3189004527342746e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.020417889642798427,
+        "energy_power": -2.040835779285597,
+        "scaled_exact_state_error": 2.7740530394268286e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.020417889642798427,
+        "energy_power": -2.040835779285597,
+        "scaled_exact_state_error": 6.187014175059969e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.020417889642798427,
+        "energy_power": -2.040835779285597,
+        "scaled_exact_state_error": 1.3188877683061684e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.04384471871911697,
+        "energy_power": -2.0876894374382338,
+        "scaled_exact_state_error": 3.113740738540147e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.04384471871911697,
+        "energy_power": -2.0876894374382338,
+        "scaled_exact_state_error": 6.578888765231489e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.04384471871911697,
+        "energy_power": -2.0876894374382338,
+        "scaled_exact_state_error": 1.3616045186747602e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.043502873182611736,
+        "energy_power": -2.0870057463652234,
+        "scaled_exact_state_error": 3.109241001031616e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.043502873182611736,
+        "energy_power": -2.0870057463652234,
+        "scaled_exact_state_error": 6.574063647706939e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.043502873182611736,
+        "energy_power": -2.0870057463652234,
+        "scaled_exact_state_error": 1.361157109804054e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.04210336196649006,
+        "energy_power": -2.0842067239329802,
+        "scaled_exact_state_error": 3.0907009867378817e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.04210336196649006,
+        "energy_power": -2.0842067239329802,
+        "scaled_exact_state_error": 6.556052946815635e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.04210336196649006,
+        "energy_power": -2.0842067239329802,
+        "scaled_exact_state_error": 1.3591408800150062e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.041846111029081014,
+        "energy_power": -2.083692222058162,
+        "scaled_exact_state_error": 3.086918816756422e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.041846111029081014,
+        "energy_power": -2.083692222058162,
+        "scaled_exact_state_error": 6.552590727366723e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.041846111029081014,
+        "energy_power": -2.083692222058162,
+        "scaled_exact_state_error": 1.3588428797798045e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.04175448357409981,
+        "energy_power": -2.0835089671481994,
+        "scaled_exact_state_error": 3.0857106839477596e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.04175448357409981,
+        "energy_power": -2.0835089671481994,
+        "scaled_exact_state_error": 6.55186149148456e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.04175448357409981,
+        "energy_power": -2.0835089671481994,
+        "scaled_exact_state_error": 1.358706448444582e-10
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.04174352102264607,
+        "energy_power": -2.083487042045292,
+        "scaled_exact_state_error": 3.085779260445606e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.04174352102264607,
+        "energy_power": -2.083487042045292,
+        "scaled_exact_state_error": 6.55121001919881e-11
+      },
+      {
+        "a": 0.02,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.04174352102264607,
+        "energy_power": -2.083487042045292,
+        "scaled_exact_state_error": 1.3586849467583408e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.015584309711889552,
+        "energy_power": -2.031168619423779,
+        "scaled_exact_state_error": 2.6870340126109745e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.015584309711889552,
+        "energy_power": -2.031168619423779,
+        "scaled_exact_state_error": 6.079526862981371e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.015584309711889552,
+        "energy_power": -2.031168619423779,
+        "scaled_exact_state_error": 1.3065555240207436e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.013169651906908273,
+        "energy_power": -2.0263393038138164,
+        "scaled_exact_state_error": 2.6411017256043785e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.013169651906908273,
+        "energy_power": -2.0263393038138164,
+        "scaled_exact_state_error": 6.021640536363917e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.013169651906908273,
+        "energy_power": -2.0263393038138164,
+        "scaled_exact_state_error": 1.2999559275775083e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.002895047574197629,
+        "energy_power": -2.005790095148395,
+        "scaled_exact_state_error": 2.428957150219237e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.002895047574197629,
+        "energy_power": -2.005790095148395,
+        "scaled_exact_state_error": 5.743110091817542e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.002895047574197629,
+        "energy_power": -2.005790095148395,
+        "scaled_exact_state_error": 1.2671857894234894e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.0008479467300814032,
+        "energy_power": -2.001695893460163,
+        "scaled_exact_state_error": 2.3836164071647526e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.0008479467300814032,
+        "energy_power": -2.001695893460163,
+        "scaled_exact_state_error": 5.681300686046484e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.0008479467300814032,
+        "energy_power": -2.001695893460163,
+        "scaled_exact_state_error": 1.2597156307338272e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -9.932048145730945e-05,
+        "energy_power": -2.0001986409629144,
+        "scaled_exact_state_error": 2.3666005225970138e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -9.932048145730945e-05,
+        "energy_power": -2.0001986409629144,
+        "scaled_exact_state_error": 5.6579724592229655e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -9.932048145730945e-05,
+        "energy_power": -2.0001986409629144,
+        "scaled_exact_state_error": 1.2568602875471681e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -8.994459615853683e-06,
+        "energy_power": -2.0000179889192315,
+        "scaled_exact_state_error": 2.3648322144372864e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -8.994459615853683e-06,
+        "energy_power": -2.0000179889192315,
+        "scaled_exact_state_error": 5.6554489916485514e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -8.994459615853683e-06,
+        "energy_power": -2.0000179889192315,
+        "scaled_exact_state_error": 1.2565440528865528e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.03836477132724921,
+        "energy_power": -2.0767295426544985,
+        "scaled_exact_state_error": 3.038947561773858e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.03836477132724921,
+        "energy_power": -2.0767295426544985,
+        "scaled_exact_state_error": 6.504357061524013e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.03836477132724921,
+        "energy_power": -2.0767295426544985,
+        "scaled_exact_state_error": 1.3536765180126981e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.03531315251615068,
+        "energy_power": -2.0706263050323015,
+        "scaled_exact_state_error": 3.000479688712528e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.03531315251615068,
+        "energy_power": -2.0706263050323015,
+        "scaled_exact_state_error": 6.458567203048732e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.03531315251615068,
+        "energy_power": -2.0706263050323015,
+        "scaled_exact_state_error": 1.348753250014728e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.023485390682410505,
+        "energy_power": -2.046970781364821,
+        "scaled_exact_state_error": 2.825971667691853e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.023485390682410505,
+        "energy_power": -2.046970781364821,
+        "scaled_exact_state_error": 6.250430406880807e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.023485390682410505,
+        "energy_power": -2.046970781364821,
+        "scaled_exact_state_error": 1.3259517478445558e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.02130514430413863,
+        "energy_power": -2.042610288608277,
+        "scaled_exact_state_error": 2.7890551569379146e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.02130514430413863,
+        "energy_power": -2.042610288608277,
+        "scaled_exact_state_error": 6.205477925542295e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.02130514430413863,
+        "energy_power": -2.042610288608277,
+        "scaled_exact_state_error": 1.3209092034873182e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.02052045449207241,
+        "energy_power": -2.041040908984145,
+        "scaled_exact_state_error": 2.7756993102456622e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.02052045449207241,
+        "energy_power": -2.041040908984145,
+        "scaled_exact_state_error": 6.189354621740759e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.02052045449207241,
+        "energy_power": -2.041040908984145,
+        "scaled_exact_state_error": 1.3190565811551265e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.02042622551704943,
+        "energy_power": -2.040852451034099,
+        "scaled_exact_state_error": 2.7742279931250942e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.02042622551704943,
+        "energy_power": -2.040852451034099,
+        "scaled_exact_state_error": 6.187521245405668e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.02042622551704943,
+        "energy_power": -2.040852451034099,
+        "scaled_exact_state_error": 1.3188583246300948e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.06277186767309857,
+        "energy_power": -2.1255437353461972,
+        "scaled_exact_state_error": 3.3180716193076035e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.06277186767309857,
+        "energy_power": -2.1255437353461972,
+        "scaled_exact_state_error": 6.772524820833082e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.06277186767309857,
+        "energy_power": -2.1255437353461972,
+        "scaled_exact_state_error": 1.381873024672297e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.05879872960596935,
+        "energy_power": -2.1175974592119386,
+        "scaled_exact_state_error": 3.2819654909385244e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.05879872960596935,
+        "energy_power": -2.1175974592119386,
+        "scaled_exact_state_error": 6.739249775551657e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.05879872960596935,
+        "energy_power": -2.1175974592119386,
+        "scaled_exact_state_error": 1.378360962846885e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.045008306001308125,
+        "energy_power": -2.0900166120026165,
+        "scaled_exact_state_error": 3.129141474531643e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.045008306001308125,
+        "energy_power": -2.0900166120026165,
+        "scaled_exact_state_error": 6.592880607774592e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.045008306001308125,
+        "energy_power": -2.0900166120026165,
+        "scaled_exact_state_error": 1.3630979900496775e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.04267657029462448,
+        "energy_power": -2.085353140589249,
+        "scaled_exact_state_error": 3.0981091562132624e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.04267657029462448,
+        "energy_power": -2.085353140589249,
+        "scaled_exact_state_error": 6.563480704351023e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.04267657029462448,
+        "energy_power": -2.085353140589249,
+        "scaled_exact_state_error": 1.3599627961975933e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.04185091981177606,
+        "energy_power": -2.083701839623552,
+        "scaled_exact_state_error": 3.0867166853580183e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.04185091981177606,
+        "energy_power": -2.083701839623552,
+        "scaled_exact_state_error": 6.552582456320596e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.04185091981177606,
+        "energy_power": -2.083701839623552,
+        "scaled_exact_state_error": 1.3587578029311602e-10
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.0417522452621088,
+        "energy_power": -2.0835044905242177,
+        "scaled_exact_state_error": 3.0853251329823824e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.0417522452621088,
+        "energy_power": -2.0835044905242177,
+        "scaled_exact_state_error": 6.55145335586128e-11
+      },
+      {
+        "a": 0.06,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.0417522452621088,
+        "energy_power": -2.0835044905242177,
+        "scaled_exact_state_error": 1.3586036594122347e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.05278640450004208,
+        "energy_power": -2.1055728090000843,
+        "scaled_exact_state_error": 3.220903334705361e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.05278640450004208,
+        "energy_power": -2.1055728090000843,
+        "scaled_exact_state_error": 6.681706650281494e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.05278640450004208,
+        "energy_power": -2.1055728090000843,
+        "scaled_exact_state_error": 1.3723580738020095e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.04174243050441601,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 3.085107325095891e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.04174243050441601,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 6.551514764662767e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.04174243050441601,
+        "energy_power": -2.083484861008832,
+        "scaled_exact_state_error": 1.358646770692602e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.008117764131847005,
+        "energy_power": -2.016235528263694,
+        "scaled_exact_state_error": 2.540126383432037e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.008117764131847005,
+        "energy_power": -2.016235528263694,
+        "scaled_exact_state_error": 5.891535710100089e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.008117764131847005,
+        "energy_power": -2.016235528263694,
+        "scaled_exact_state_error": 1.284824309590352e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.002359814009423213,
+        "energy_power": -2.0047196280188464,
+        "scaled_exact_state_error": 2.4170979175082805e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.002359814009423213,
+        "energy_power": -2.0047196280188464,
+        "scaled_exact_state_error": 5.726915882901838e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.002359814009423213,
+        "energy_power": -2.0047196280188464,
+        "scaled_exact_state_error": 1.2652372827602198e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.0002759403113599674,
+        "energy_power": -2.00055188062272,
+        "scaled_exact_state_error": 2.3707902422714944e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.0002759403113599674,
+        "energy_power": -2.00055188062272,
+        "scaled_exact_state_error": 5.663792290940254e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.0002759403113599674,
+        "energy_power": -2.00055188062272,
+        "scaled_exact_state_error": 1.2575671646737902e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -2.498501056985264e-05,
+        "energy_power": -2.0000499700211396,
+        "scaled_exact_state_error": 2.364993569683092e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -2.498501056985264e-05,
+        "energy_power": -2.0000499700211396,
+        "scaled_exact_state_error": 5.655947756237355e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.0,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -2.498501056985264e-05,
+        "energy_power": -2.0000499700211396,
+        "scaled_exact_state_error": 1.2566360881729053e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.08552553340645612,
+        "energy_power": -2.1710510668129124,
+        "scaled_exact_state_error": 3.4708256926452306e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.08552553340645612,
+        "energy_power": -2.1710510668129124,
+        "scaled_exact_state_error": 6.914961035019041e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.08552553340645612,
+        "energy_power": -2.1710510668129124,
+        "scaled_exact_state_error": 1.3963221170257085e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.06908030245057808,
+        "energy_power": -2.1381606049011563,
+        "scaled_exact_state_error": 3.369616513153678e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.06908030245057808,
+        "energy_power": -2.1381606049011563,
+        "scaled_exact_state_error": 6.819976469033355e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.06908030245057808,
+        "energy_power": -2.1381606049011563,
+        "scaled_exact_state_error": 1.3866386493385018e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.02902711548946263,
+        "energy_power": -2.058054230978925,
+        "scaled_exact_state_error": 2.912499378595664e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.02902711548946263,
+        "energy_power": -2.058054230978925,
+        "scaled_exact_state_error": 6.354699060653747e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.02902711548946263,
+        "energy_power": -2.058054230978925,
+        "scaled_exact_state_error": 1.3373651878062489e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.022889309388457357,
+        "energy_power": -2.045778618776915,
+        "scaled_exact_state_error": 2.8159763029827844e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.022889309388457357,
+        "energy_power": -2.045778618776915,
+        "scaled_exact_state_error": 6.237948063604985e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.022889309388457357,
+        "energy_power": -2.045778618776915,
+        "scaled_exact_state_error": 1.3245572213434132e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.020704701103342764,
+        "energy_power": -2.0414094022066855,
+        "scaled_exact_state_error": 2.7789050710544475e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.020704701103342764,
+        "energy_power": -2.0414094022066855,
+        "scaled_exact_state_error": 6.193177127683965e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.020704701103342764,
+        "energy_power": -2.0414094022066855,
+        "scaled_exact_state_error": 1.319467085720006e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.02044289770124422,
+        "energy_power": -2.0408857954024886,
+        "scaled_exact_state_error": 2.7741217458638524e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.02044289770124422,
+        "energy_power": -2.0408857954024886,
+        "scaled_exact_state_error": 6.18794607575413e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.01,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.02044289770124422,
+        "energy_power": -2.0408857954024886,
+        "scaled_exact_state_error": 1.318848158177169e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 1,
+        "exponent_s": -0.12984378812835762,
+        "energy_power": -2.2596875762567152,
+        "scaled_exact_state_error": 3.533081032859671e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 2,
+        "exponent_s": -0.12984378812835762,
+        "energy_power": -2.2596875762567152,
+        "scaled_exact_state_error": 7.04627144669316e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.0,
+        "n": 4,
+        "exponent_s": -0.12984378812835762,
+        "energy_power": -2.2596875762567152,
+        "scaled_exact_state_error": 1.4092437558121736e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 1,
+        "exponent_s": -0.10000000000000003,
+        "energy_power": -2.2,
+        "scaled_exact_state_error": 3.520312309500623e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 2,
+        "exponent_s": -0.10000000000000003,
+        "energy_power": -2.2,
+        "scaled_exact_state_error": 6.972134513374589e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.1,
+        "n": 4,
+        "exponent_s": -0.10000000000000003,
+        "energy_power": -2.2,
+        "scaled_exact_state_error": 1.4021052438843362e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 1,
+        "exponent_s": -0.05091392218544496,
+        "energy_power": -2.1018278443708898,
+        "scaled_exact_state_error": 3.199926815516001e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 2,
+        "exponent_s": -0.05091392218544496,
+        "energy_power": -2.1018278443708898,
+        "scaled_exact_state_error": 6.660691055170559e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 0.5,
+        "n": 4,
+        "exponent_s": -0.05091392218544496,
+        "energy_power": -2.1018278443708898,
+        "scaled_exact_state_error": 1.3703448688206346e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 1,
+        "exponent_s": -0.044342934409459085,
+        "energy_power": -2.088685868818918,
+        "scaled_exact_state_error": 3.1202424000304573e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 2,
+        "exponent_s": -0.044342934409459085,
+        "energy_power": -2.088685868818918,
+        "scaled_exact_state_error": 6.584765919713359e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 1.0,
+        "n": 4,
+        "exponent_s": -0.044342934409459085,
+        "energy_power": -2.088685868818918,
+        "scaled_exact_state_error": 1.3622628187961068e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 1,
+        "exponent_s": -0.04204385462257858,
+        "energy_power": -2.084087709245157,
+        "scaled_exact_state_error": 3.0894656001237555e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 2,
+        "exponent_s": -0.04204385462257858,
+        "energy_power": -2.084087709245157,
+        "scaled_exact_state_error": 6.555131899926627e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 3.0,
+        "n": 4,
+        "exponent_s": -0.04204385462257858,
+        "energy_power": -2.084087709245157,
+        "scaled_exact_state_error": 1.3590152016713194e-10
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 1,
+        "exponent_s": -0.04176969424038206,
+        "energy_power": -2.083539388480764,
+        "scaled_exact_state_error": 3.08601395878905e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 2,
+        "exponent_s": -0.04176969424038206,
+        "energy_power": -2.083539388480764,
+        "scaled_exact_state_error": 6.55139209830696e-11
+      },
+      {
+        "a": 0.1,
+        "mu": 0.02,
+        "twist": 10.0,
+        "n": 4,
+        "exponent_s": -0.04176969424038206,
+        "energy_power": -2.083539388480764,
+        "scaled_exact_state_error": 1.3587350005720672e-10
+      }
+    ],
+    "source": "Ori 2005, footnote 2; local extension and diagnostic are not claimed original"
+  },
+  "maxwell": {
+    "all_16_Einstein_Maxwell_residuals_zero": true,
+    "all_4_Maxwell_divergences_zero": true,
+    "all_4_dF_components_zero": true,
+    "potential_periodic": true,
+    "determinant": -1,
+    "electromagnetic_invariants_zero": true,
+    "coordinates": "t,x,y,z; P=2e-a, Q=2e+a; mu=A^2",
+    "metric": "g_tz=-1, g_xx=g_yy=1, g_xz=P*x, g_yz=Q*y, g_zz=(e-mu/2)*(x^2+y^2)-t",
+    "potential": "A_x=A*sin(k*z)/k, A_y=-A*cos(k*z)/k; k positive integer, z period 2*pi",
+    "field_nonzero": {
+      "zx": "A*cos(k*z)",
+      "zy": "A*sin(k*z)"
+    },
+    "raised_field_nonzero": {
+      "tx": "-A*cos(k*z)",
+      "ty": "-A*sin(k*z)"
+    },
+    "stress_nonzero": {
+      "zz": "A^2"
+    },
+    "Ricci_nonzero": {
+      "zz": "A**2"
+    },
+    "convention": "Signature -+++; c=8*pi*G=1; T_ab=F_ac*F_b^c-g_ab*F_cd*F^cd/4; antisymmetry implied",
+    "energy": "For any unit timelike U, rho=A^2*(U^z)^2>=0; ordinary null Maxwell radiation",
+    "symmetry": "Metric and stress are z independent; the electromagnetic field itself rotates with z",
+    "slicing": "t is a time function only where D=(e-mu/2)*(x^2+y^2)-t-P^2*x^2-Q^2*y^2>0",
+    "scope": "Alternative exact source for this support geometry; neither added to the scalars nor a stability proof",
+    "limitations": [
+      "Presupposes the Ori geometry and periodic spatial identification",
+      "Uniform transverse idealization; no finite apparatus or exterior matching supplied",
+      "Does not establish attainable initial data, quantum viability or safe traversal"
+    ],
+    "precedent": "Balakin, van Holten and Kerner, CQG 17 (2000) 5009-5024, section 3.1; conventions converted locally",
+    "source": "https://doi.org/10.1088/0264-9381/17/24/306",
+    "source_preprint": "https://arxiv.org/abs/gr-qc/0009016",
+    "originality": "Local verification of a specialization of a published solution family; no novelty claim",
+    "localization": {
+      "divergence_and_curl_form_verified": true,
+      "harmonic_component_identities_verified": true,
+      "intensity_laplacian_identity_verified": true,
+      "unchanged_geometry_Einstein_residual_verified": true,
+      "ansatz": "Real F=dz wedge(Ex(x,y,z)*dx+Ey(x,y,z)*dy), no t dependence, same metric structure",
+      "Maxwell_divergence": "(d_x Ex+d_y Ey,0,0,0) in coordinate order t,x,y,z",
+      "exterior_derivative": "dF=(d_y Ex-d_x Ey)*dx wedge dy wedge dz; other independent components vanish",
+      "harmonicity": "Source-free Maxwell equations imply Delta_perp Ex=Delta_perp Ey=0 at each fixed z",
+      "compact_support": {
+        "method": "Analytic integration-by-parts deduction, not a numerical proof",
+        "assumptions": [
+          "Real C2 fields on the complete transverse R2 at each fixed z",
+          "Smooth compact transverse support with no singularities or surface sources",
+          "Source-free Maxwell equations and the stated pure aligned ansatz"
+        ],
+        "proof": "Integral |grad Ei|^2 = -Integral Ei*Delta_perp Ei = 0; each Ei is constant, and compact support forces zero",
+        "conclusion": "The only smooth compactly supported transverse field in this ansatz is Ex=Ey=0"
+      },
+      "unchanged_geometry": "Einstein equations require Ex^2+Ey^2=mu=A^2; harmonicity gives Delta_perp(intensity)=2*(|grad Ex|^2+|grad Ey|^2), so both fields must be transversely uniform",
+      "scope": "Does not exclude general finite Maxwell pulses or beams with additional field components, sources, boundaries or a broader geometry"
+    }
+  },
+  "shifted_null_orbit": {
+    "all_16_vacuum_Ricci_components_zero": true,
+    "determinant": -1,
+    "null_orbit_and_nonaffine_geodesic_verified": true,
+    "affine_isometry_verified": true,
+    "assumptions": "a != 0; real e,cx,cy; z period 2*pi; r0 > 0",
+    "metric": "g_tz=-1, g_xx=g_yy=1, g_xz=(2e-a)*x+cx, g_yz=(2e+a)*y+cy, g_zz=e*(x^2+y^2)-t",
+    "orbit": "xN=cx/a, yN=-cy/a, tN=e*(xN^2+yN^2)",
+    "geodesic_acceleration": "Gamma^mu_zz=(0,0,0,-1/2) on the null circle; z is nonaffine",
+    "patch_condition": "Circle lies in x^2+y^2 < r0^2 iff sqrt(cx^2+cy^2) < abs(a)*r0; equality is the boundary",
+    "isometry": "X=x-xN, Y=y-yN, T=t-2e*xN*x-2e*yN*y+e*(xN^2+yN^2), Z=z removes cx,cy",
+    "scope": "Exact algebra in the prescribed vacuum family. The bound retains this circle inside a fixed patch; it is not physical perturbation tolerance, generic stability, a chronology-horizon proof, or removal of all closed causal curves",
+    "provenance": "Local symbolic deduction from the Ori vacuum metric; no novelty or construction claim"
+  },
+  "null_screen_jacobi": {
+    "general_reflection_jet_transport_coefficients_zero": 8,
+    "general_null_orbit_nonaffinity": "-lt/(2*b)",
+    "exact_screen_curvature": [
+      "-a/2 + mu/2",
+      "a/2 + mu/2"
+    ],
+    "exact_kappa_orbit": "-1/2",
+    "exact_screen_trace_equals_Rzz": true,
+    "jacobi_transform_verified": true,
+    "convention": "Signature -+++; gravitational coupling 8*pi*G=1 and scalar winding number=1; kappa_orbit denotes nonaffinity, not gravitational coupling; R_izjz uses the existing code convention; xi=partial_z has period 2*pi",
+    "assumptions": [
+      "A regular C2 metric at an actual lambda=gzz=0 orbit, with nonzero xi and b=gtz",
+      "z independence and independent x and y reflection isometries throughout the orbit",
+      "Positive transverse metric; e_x=partial_x/sqrt(gxx), e_y=partial_y/sqrt(gyy) are parallel along xi",
+      "Numerical applications must check these symmetries; invariance of the axis alone is insufficient"
+    ],
+    "jacobi_equation": "J_zz-kappa_orbit*J_z+K*J=0; J=exp(kappa_orbit*z/2)*Y gives Y_zz+(K-kappa_orbit^2*I/4)*Y=0",
+    "necessary_achronality_condition": "largest_eigenvalue(K)<=kappa_orbit^2/4; exactly equivalent to absence of conjugate pairs along this constant-screen orbit, not to full achronality",
+    "weaker_trace_condition": "At the null orbit tr(K)=Rzz=gravitational_coupling*wave_number^2*|Phi_H|^2<=kappa_orbit^2/2 is necessary but not sufficient, even for absence of conjugate pairs; coupling and wave_number both equal 1 here",
+    "affine_scope": "ds/dz=C*exp(kappa_orbit*z), C>0; nonzero kappa_orbit gives finite affine length in one direction. Any finite conjugacy interval occurs before that endpoint, even after multiple windings",
+    "killing_horizon_scope": "A full null hypersurface generated by xi has zero expansion and shear; Raychaudhuri requires Rzz=0 and Phi_H=0. An isolated closed null orbit does not meet that additional hypothesis",
+    "numerical_scope": "Only the stated finite intervals are integrated. Analytic conjugacy classification follows from the constant-coefficient Jacobi solutions",
+    "example_scope": "mu=.105 and .12 are exact local geometric benchmarks, not assertions that the original compact-onset construction or the current evolved initial data reach those cases",
+    "limits": "Not applicable as a null-generator theorem at lambda>0; does not prove formation, full achronality, generic stability, curvature singularity, or impossibility of other chronology onsets",
+    "sources": [
+      "https://arxiv.org/pdf/gr-qc/0609119 (Theorem 2.30 and Lemma 2.35: conjugacy, causal deformation and screen Jacobi fields)",
+      "https://arxiv.org/pdf/gr-qc/0111067 (Eq.2.6: R_ll=0 on a non-expanding horizon)",
+      "https://arxiv.org/pdf/math/9909158 (Theorem 4.1: explicit completeness hypotheses for null splitting)"
+    ],
+    "cases": [
+      {
+        "a": 0.02,
+        "mu": 0.0,
+        "screen_eigenvalues": [
+          -0.01,
+          0.01
+        ],
+        "kappa_orbit": -0.5,
+        "eigenvalue_bound_satisfied": true,
+        "weaker_trace_bound_satisfied": true,
+        "analytic_conjugate_pairs_exist": false,
+        "analytic_first_conjugate_delta_z": null,
+        "analytic_first_conjugate_windings": null,
+        "numerical_positive_event_times": [],
+        "numerical_end_z": 40.0,
+        "scaled_exact_state_error": 1.3780579339858359e-14,
+        "first_event_absolute_error": null
+      },
+      {
+        "a": 0.02,
+        "mu": 0.04,
+        "screen_eigenvalues": [
+          0.01,
+          0.03
+        ],
+        "kappa_orbit": -0.5,
+        "eigenvalue_bound_satisfied": true,
+        "weaker_trace_bound_satisfied": true,
+        "analytic_conjugate_pairs_exist": false,
+        "analytic_first_conjugate_delta_z": null,
+        "analytic_first_conjugate_windings": null,
+        "numerical_positive_event_times": [],
+        "numerical_end_z": 40.0,
+        "scaled_exact_state_error": 8.347804676880809e-15,
+        "first_event_absolute_error": null
+      },
+      {
+        "a": 0.02,
+        "mu": 0.105,
+        "screen_eigenvalues": [
+          0.0425,
+          0.0625
+        ],
+        "kappa_orbit": -0.5,
+        "eigenvalue_bound_satisfied": true,
+        "weaker_trace_bound_satisfied": true,
+        "analytic_conjugate_pairs_exist": false,
+        "analytic_first_conjugate_delta_z": null,
+        "analytic_first_conjugate_windings": null,
+        "numerical_positive_event_times": [],
+        "numerical_end_z": 40.0,
+        "scaled_exact_state_error": 2.6816502459805557e-15,
+        "first_event_absolute_error": null
+      },
+      {
+        "a": 0.02,
+        "mu": 0.12,
+        "screen_eigenvalues": [
+          0.05,
+          0.07
+        ],
+        "kappa_orbit": -0.5,
+        "eigenvalue_bound_satisfied": false,
+        "weaker_trace_bound_satisfied": true,
+        "analytic_conjugate_pairs_exist": true,
+        "analytic_first_conjugate_delta_z": 36.27598728468434,
+        "analytic_first_conjugate_windings": 5.7735026918962555,
+        "numerical_positive_event_times": [
+          36.275987284684355
+        ],
+        "numerical_end_z": 40.0,
+        "scaled_exact_state_error": 1.772235196224108e-15,
+        "first_event_absolute_error": 1.4210854715202004e-14
+      }
+    ]
+  },
+  "twisted_null_screen_jacobi": {
+    "a": 0.02,
+    "mu": 0.12,
+    "exact_Omega": "[[0,w],[-w,0]]",
+    "exact_K": [
+      "(mu-a)/2",
+      "(mu+a)/2"
+    ],
+    "exact_kappa_orbit": "-1/2",
+    "geometric_identities_verified": true,
+    "normalized_equation_verified": true,
+    "full_equation": "j_zz+(2*Omega-kappa_orbit*I)*j_z+(K+Omega^2-kappa_orbit*Omega)*j=0",
+    "normalization": "j=exp(kappa_orbit*z/2)*Y; Y(0)=0, Y_z(0)=I; Y_zz+2*Omega*Y_z+(K+Omega^2-kappa_orbit^2*I/4)*Y=0",
+    "exact_w_point1": {
+      "frequency": "sqrt(3)/20",
+      "fundamental_matrix_equation_and_initial_conditions_verified": true,
+      "determinant": "det(Y)=(4*z^2-(sin(omega*z)/omega)^2)/3",
+      "analytic_bound": "|sin(omega*z)|<=|omega*z| gives det(Y)>=z^2; det(j)=exp(kappa_orbit*z)*det(Y)>0 for every finite z!=0"
+    },
+    "index_form": {
+      "pointwise_identity_verified": true,
+      "witness_equation": "[Omega,L]+L^2-kappa_orbit*L+K=0, L real symmetric",
+      "factorization": "For q=0 at both endpoints: integral exp(-kappa_orbit*z)*(|D_z q|^2-q^T K q) = integral exp(-kappa_orbit*z)*|D_z q-Lq|^2, D_z=partial_z+Omega",
+      "implication": "A Dirichlet Jacobi field makes the left side zero; the right side forces D_z q=Lq, whose zero initial value implies q=0. Thus no conjugate pairs occur on any finite interval"
+    },
+    "trace_obstruction": {
+      "commutator_trace_and_square_inequality_verified": true,
+      "equation": "B_z+[Omega,B]+B^2-kappa_orbit*B+K=0; theta_z=kappa_orbit*theta-tr(B^2)-mu",
+      "inequality": "theta_z<=-(theta-kappa_orbit)^2/2-(mu-kappa_orbit^2/2)",
+      "implication": "mu>kappa_orbit^2/2 forces conjugacy regardless of screen rotation; from a point, first delta_z<=pi*sqrt(2/(mu-kappa_orbit^2/2))",
+      "qualification": "Necessary trace bound only; equality and smaller mu require separate analysis. The Jacobi bundle is optically twist-free; Omega is screen-frame transport, not optical vorticity"
+    },
+    "branch_witnesses": [
+      {
+        "w": 0.1,
+        "branch_U_exact": "0",
+        "branch_domain_checked": true,
+        "symmetric_Riccati_residual_exactly_zero": true,
+        "witness_L_exact": [
+          [
+            "-1/4",
+            "1/20"
+          ],
+          [
+            "1/20",
+            "-1/4"
+          ]
+        ],
+        "witness_L_numeric": [
+          [
+            -0.25,
+            0.05
+          ],
+          [
+            0.05,
+            -0.25
+          ]
+        ],
+        "norm_S_equals_S": true,
+        "spectator_wave_residual_zero": true,
+        "spectator_exponent_s": -0.5
+      },
+      {
+        "w": 0.2,
+        "branch_U_exact": "-3/10 + sqrt(273)/50",
+        "branch_domain_checked": true,
+        "symmetric_Riccati_residual_exactly_zero": true,
+        "witness_L_exact": [
+          [
+            "-1/4 + sqrt(-3/10 + sqrt(273)/50)/(50*(sqrt(273)/50 + 17/50)) + sqrt(-3/10 + sqrt(273)/50)/4",
+            "2/(125*(sqrt(273)/50 + 17/50))"
+          ],
+          [
+            "2/(125*(sqrt(273)/50 + 17/50))",
+            "-1/4 - sqrt(-3/10 + sqrt(273)/50)/(50*(sqrt(273)/50 + 17/50)) + sqrt(-3/10 + sqrt(273)/50)/4"
+          ]
+        ],
+        "witness_L_numeric": [
+          [
+            -0.20116638048309202,
+            0.023864417907084698
+          ],
+          [
+            0.023864417907084698,
+            -0.21157791363304312
+          ]
+        ],
+        "norm_S_equals_S": true,
+        "spectator_wave_residual_zero": true,
+        "spectator_exponent_s": -0.4127442941161351
+      }
+    ],
+    "numerical_cases": [
+      {
+        "w": 0.0,
+        "numerical_end_z": 80.0,
+        "scaled_expm_state_error": 1.6795560624645564e-12,
+        "positive_determinant_events": [
+          36.27598728468434,
+          72.55197456936867
+        ],
+        "analytic_no_conjugate_pairs": false,
+        "analytic_certificate": "untwisted oscillatory mode"
+      },
+      {
+        "w": 0.1,
+        "numerical_end_z": 80.0,
+        "scaled_expm_state_error": 3.007264105612942e-13,
+        "positive_determinant_events": [],
+        "analytic_no_conjugate_pairs": true,
+        "analytic_certificate": "exact positive determinant and symmetric Riccati witness"
+      },
+      {
+        "w": 0.2,
+        "numerical_end_z": 80.0,
+        "scaled_expm_state_error": 1.3095028891957787e-12,
+        "positive_determinant_events": [],
+        "analytic_no_conjugate_pairs": true,
+        "analytic_certificate": "exact symmetric Riccati witness"
+      }
+    ],
+    "scope": "Exact central null-support family, positive gravitational coupling=1 and winding number=1. These branches were validated outside the old sufficient spectator sweep sector",
+    "limits": "No-conjugacy does not prove full achronality, chronology formation, generic or nonlinear stability. Finite event scans alone do not prove no-conjugacy. Negative spectator exponents remain; no claim about the live evolved initial data",
+    "sources": [
+      "https://arxiv.org/pdf/gr-qc/0503077 (footnote 2: the metric extension)",
+      "https://arxiv.org/pdf/gr-qc/0609119 (Theorem 2.30 and Lemma 2.35: conjugacy and screen Jacobi fields)",
+      "https://arxiv.org/pdf/math/9909158 (Eqs.2.2-2.4: matrix Riccati and Raychaudhuri equations)"
+    ]
+  },
+  "massive_spectator": {
+    "full_4D_reduction_verified": true,
+    "exact_R_scalar": 0,
+    "equation": "(Box-m^2-xi*R)chi=0; chi=exp(i*n*z)*F(S), S=T+x^T*B*x, z has period 2*pi",
+    "hypotheses": "Fixed exact null-supported Ori geometry, real symmetric B satisfying the quadratic closure, mu>=0, integer n, finite constant m>=0 and xi; S<0",
+    "reduced_equation": "S*F_SS+(1+2*tr(B)-2*i*n)*F_S-m^2*F=0",
+    "x_equation": "x=-S>0; p=-2*tr(B)+2*i*n; x*G_xx+(1-p)*G_x+m^2*G=0",
+    "log_time_equation": "tau=-log(x); u_tautau+p*u_tau+m^2*exp(-tau)*u=0",
+    "indicial_polynomial": "r*(r-p); roots 0 and p are independent of finite mass",
+    "noninteger_basis": [
+      "0F1(;1-p;-m^2*x)",
+      "x^p*0F1(;1+p;-m^2*x)"
+    ],
+    "exceptions": {
+      "repeated_root": "p=0: second solution log(x) for m=0, Y0(2*m*sqrt(x)) for m>0; logarithmic divergence remains",
+      "negative_integer": "p=-N<0: m>0 basis x^(-N/2)*{J_N,Y_N}(2*m*sqrt(x)) retains an x^(-N) singularity and logarithmic terms; m=0 basis is {1,x^(-N)}",
+      "real_sector": "tr(B)=4*tr(B^2)+mu and mu>=0 give 0<=tr(B)<=1/2, so the only negative-integer p in this real sector is -1",
+      "bounded_amplitude": "tr(B)=0 and n!=0 has bounded oscillatory amplitude but a derivative growing as 1/x"
+    },
+    "conclusion": "Finite positive mass does not remove the singular branch; xi*R is identically zero. The regular branch requires setting the independent singular coefficient to zero",
+    "scope": "Generic means nonzero singular coefficient within this separated two-solution sector only. No generic nonlinear instability theorem, matter production recipe, or human-traversal claim",
+    "support_limit": "Giving the supporting scalars mass changes their field equations and stress tensor; this calculation does not supply a new massive support solution",
+    "energy_limit": "No claim about the improved nonminimal stress-energy tensor or cancellations in its observer energy",
+    "numerical_method": "DOP853 versus independent 60-digit 0F1/Bessel references; rtol=1e-11, atol=1e-13, 61 samples",
+    "numerical_end_S": -1e-12,
+    "dimensionless_mass_values": [
+      0.0,
+      1.0,
+      10.0
+    ],
+    "cases": [
+      {
+        "geometry": "untwisted_a_0.02_mu_0.04",
+        "p_real": -0.09059365147900854,
+        "p_imag": 2.0,
+        "dimensionless_mass": 0.0,
+        "predicted_log_amplitude_slope": -0.09059365147900854,
+        "max_scaled_state_error": 3.419909575992227e-11,
+        "end_log_amplitude_slope": -0.0905936514790093,
+        "end_amplitude": 12.221480459885234,
+        "end_log_time_derivative": 24.468024133376616
+      },
+      {
+        "geometry": "untwisted_a_0.02_mu_0.04",
+        "p_real": -0.09059365147900854,
+        "p_imag": 2.0,
+        "dimensionless_mass": 1.0,
+        "predicted_log_amplitude_slope": -0.09059365147900854,
+        "max_scaled_state_error": 3.3652679161577225e-11,
+        "end_log_amplitude_slope": -0.09059365147919973,
+        "end_amplitude": 12.22148045989225,
+        "end_log_time_derivative": 24.46802413339586
+      },
+      {
+        "geometry": "untwisted_a_0.02_mu_0.04",
+        "p_real": -0.09059365147900854,
+        "p_imag": 2.0,
+        "dimensionless_mass": 10.0,
+        "predicted_log_amplitude_slope": -0.09059365147900854,
+        "max_scaled_state_error": 3.479404802527494e-11,
+        "end_log_amplitude_slope": -0.09059365149784444,
+        "end_amplitude": 12.221480459737364,
+        "end_log_time_derivative": 24.468024133596728
+      },
+      {
+        "geometry": "rotated_a_0.02_mu_0.12_w_0.1",
+        "p_real": -0.5,
+        "p_imag": 2.0,
+        "dimensionless_mass": 0.0,
+        "predicted_log_amplitude_slope": -0.5,
+        "max_scaled_state_error": 4.223613037328243e-11,
+        "end_log_amplitude_slope": -0.5000000000000002,
+        "end_amplitude": 999999.9999709758,
+        "end_log_time_derivative": 2061552.8127489963
+      },
+      {
+        "geometry": "rotated_a_0.02_mu_0.12_w_0.1",
+        "p_real": -0.5,
+        "p_imag": 2.0,
+        "dimensionless_mass": 1.0,
+        "predicted_log_amplitude_slope": -0.5,
+        "max_scaled_state_error": 3.8963971101971496e-11,
+        "end_log_amplitude_slope": -0.5000000000001176,
+        "end_amplitude": 999999.9999699511,
+        "end_log_time_derivative": 2061552.8127473674
+      },
+      {
+        "geometry": "rotated_a_0.02_mu_0.12_w_0.1",
+        "p_real": -0.5,
+        "p_imag": 2.0,
+        "dimensionless_mass": 10.0,
+        "predicted_log_amplitude_slope": -0.5,
+        "max_scaled_state_error": 2.8449210621691354e-11,
+        "end_log_amplitude_slope": -0.500000000011765,
+        "end_amplitude": 999999.999962098,
+        "end_log_time_derivative": 2061552.8127792014
+      },
+      {
+        "geometry": "flat_nonzero_winding",
+        "p_real": 0.0,
+        "p_imag": 2.0,
+        "dimensionless_mass": 0.0,
+        "predicted_log_amplitude_slope": 0.0,
+        "max_scaled_state_error": 2.3554218886143227e-11,
+        "end_log_amplitude_slope": 0.0,
+        "end_amplitude": 0.9999999999970351,
+        "end_log_time_derivative": 1.9999999999940703
+      },
+      {
+        "geometry": "flat_nonzero_winding",
+        "p_real": 0.0,
+        "p_imag": 2.0,
+        "dimensionless_mass": 1.0,
+        "predicted_log_amplitude_slope": 0.0,
+        "max_scaled_state_error": 2.3505018265742407e-11,
+        "end_log_amplitude_slope": -1.821276054864369e-13,
+        "end_amplitude": 0.9999999999974277,
+        "end_log_time_derivative": 1.9999999999952534
+      },
+      {
+        "geometry": "flat_nonzero_winding",
+        "p_real": 0.0,
+        "p_imag": 2.0,
+        "dimensionless_mass": 10.0,
+        "predicted_log_amplitude_slope": 0.0,
+        "max_scaled_state_error": 2.4856552862866753e-11,
+        "end_log_amplitude_slope": -1.9964979442940025e-11,
+        "end_amplitude": 0.9999999999820997,
+        "end_log_time_derivative": 2.0000000000041025
+      },
+      {
+        "geometry": "rotated_zero_winding",
+        "p_real": -0.5,
+        "p_imag": 0.0,
+        "dimensionless_mass": 0.0,
+        "predicted_log_amplitude_slope": -0.5,
+        "max_scaled_state_error": 2.434675345269023e-11,
+        "end_log_amplitude_slope": -0.5,
+        "end_amplitude": 999999.9999886231,
+        "end_log_time_derivative": 499999.99999431154
+      },
+      {
+        "geometry": "rotated_zero_winding",
+        "p_real": -0.5,
+        "p_imag": 0.0,
+        "dimensionless_mass": 1.0,
+        "predicted_log_amplitude_slope": -0.5,
+        "max_scaled_state_error": 2.0413039236141628e-11,
+        "end_log_amplitude_slope": -0.5000000000020003,
+        "end_amplitude": 999999.9999910707,
+        "end_log_time_derivative": 499999.9999975356
+      },
+      {
+        "geometry": "rotated_zero_winding",
+        "p_real": -0.5,
+        "p_imag": 0.0,
+        "dimensionless_mass": 10.0,
+        "predicted_log_amplitude_slope": -0.5,
+        "max_scaled_state_error": 4.8294542439247084e-11,
+        "end_log_amplitude_slope": -0.5000000002,
+        "end_amplitude": 999999.9997962498,
+        "end_log_time_derivative": 500000.0000981249
+      }
+    ],
+    "resonance_cases": [
+      {
+        "p": 0.0,
+        "dimensionless_mass": 1.0,
+        "reference": "x^(p/2)*Y_(-p)(2*sqrt(x))",
+        "max_scaled_state_error": 6.4812229402174024e-12,
+        "end_log_amplitude_slope": -0.037769214544116164,
+        "end_amplitude": 8.427760281352114,
+        "end_log_time_derivative": 0.31830988619276884
+      },
+      {
+        "p": -1.0,
+        "dimensionless_mass": 1.0,
+        "reference": "x^(p/2)*Y_(-p)(2*sqrt(x))",
+        "max_scaled_state_error": 2.5072798620846648e-11,
+        "end_log_amplitude_slope": -0.9999999999735234,
+        "end_amplitude": 318309886188.17596,
+        "end_log_time_derivative": 318309886179.74817
+      }
+    ],
+    "max_scaled_state_error": 4.8294542439247084e-11,
+    "sources": [
+      "https://arxiv.org/pdf/1401.2026 (Eq.1 and Lagrangian 113: scalar mass and curvature coupling)",
+      "https://arxiv.org/pdf/gr-qc/0503077 (geometry and stability discussion; this massive reduction is our calculation)"
+    ]
+  },
+  "negative_null_support": {
+    "a": 0.02,
+    "exact_R_scalar": 0,
+    "exact_Rzz": "mu",
+    "hypotheses": "Fixed Ori geometry, a=.02, real symmetric quadratic B, finite real w, formal mu<0; positive-kinetic massless spectator unless explicitly discussing the massive exception",
+    "spectator": "chi=exp(i*n*z)*(-S)^p, S=T+x^T*B*x<0, p=s+2*i*n, integer n, s=-2*tr(B)",
+    "bounded_kinetic_criterion": "For nonzero p and nonzero branch coefficient, regular-observer kinetic energy scales as (-S)^(2*s-2), so it is bounded iff s>=1",
+    "untwisted": {
+      "reality": "mu<=1/8-|a|; all mu<0 allowed for a=.02",
+      "favorable_exponent": "s=(sqrt(1-8*mu+8*a)+sqrt(1-8*mu-8*a)-2)/4",
+      "critical_mu_exact": "-11251/11250",
+      "critical_mu": -1.0000888888888888,
+      "all_four_branches": [
+        {
+          "signs": [
+            -1,
+            -1
+          ],
+          "b_exact": "-19/75",
+          "d_exact": "-37/150",
+          "s_exact": "1",
+          "s": 1.0,
+          "kinetic_energy_power": 0.0
+        },
+        {
+          "signs": [
+            -1,
+            1
+          ],
+          "b_exact": "-19/75",
+          "d_exact": "149/300",
+          "s_exact": "-73/150",
+          "s": -0.4866666666666667,
+          "kinetic_energy_power": -2.973333333333333
+        },
+        {
+          "signs": [
+            1,
+            -1
+          ],
+          "b_exact": "151/300",
+          "d_exact": "-37/150",
+          "s_exact": "-77/150",
+          "s": -0.5133333333333333,
+          "kinetic_energy_power": -3.026666666666667
+        },
+        {
+          "signs": [
+            1,
+            1
+          ],
+          "b_exact": "151/300",
+          "d_exact": "149/300",
+          "s_exact": "-2",
+          "s": -2.0,
+          "kinetic_energy_power": -6.0
+        }
+      ]
+    },
+    "rotating": {
+      "favorable_threshold": "mu<=-1-2*a^2/(9+16*w^2)",
+      "critical_closure_exactly_zero": true,
+      "branches": "C=1-8*mu, W=16*w^2; U=(C-W +/- sqrt((C+W)^2-64*a^2))/2; retain U>=0 and r=+/-sqrt(U), r^2+W>0; s=-(r+1)/2",
+      "selection": "For a=.02 and mu<0, the larger U is positive with positive discriminant; the favorable branch uses r=-sqrt(Uplus). The r=+sqrt(Uplus) counterpart has s_other=-1-s",
+      "threshold_certificate": "Q(9)=8*(9+W)*(mu-mu_critical). Since C>1 and a=.02, Uminus<=C-Uplus=16*a^2/(Uplus+W)<32*a^2/(C+W)<0.0128<9; thus Q(9)<=0 iff Uplus>=9 iff s>=1",
+      "trace_bound": "mu=h-4*tr(B^2)<=h-2*h^2; h=-1/2-q, q>=0 gives mu<=-1-3*q-2*q^2<=-1",
+      "rotation_limit": "For a!=0 no finite w reaches mu=-1 at s=1; the threshold approaches -1 as |w| grows"
+    },
+    "initial_slice_caveat": {
+      "slice": "At the untwisted critical parameter on the complete S_--=-1 slice, S_++=-1+(sqrt(1-8*mu+8*a)/4)*x^2+(sqrt(1-8*mu-8*a)/4)*y^2",
+      "S_plus_zero_axis_radii": [
+        1.149602497859021,
+        1.1598670095405885
+      ],
+      "implication": "The ++ mode is already singular on this complete initial slice; on a small patch its singular surface may enter through the boundary. Other formal B branches are not a proof of global instability from common smooth initial data"
+    },
+    "cutoff_causal_audit": {
+      "mu_exact": "-11251/11250",
+      "b_minus_exact": "-19/75",
+      "d_minus_exact": "-37/150",
+      "b_plus_exact": "151/300",
+      "d_plus_exact": "149/300",
+      "time_function_identities": "grad(S_minus)^2=S_minus and grad(S_plus)^2=S_plus, checked with the exact inverse metric",
+      "coordinate_change": "tau=S_minus; ds^2=(dx+2*b_minus*x*dz)^2+(dy+2*d_minus*y*dz)^2-2*dtau*dz-tau*dz^2; g^tautau=tau<0 on tau<0",
+      "initial_intersection": "S_plus on tau=-1 is -1+(227/300)*x^2+(223/300)*y^2; its zero ellipse contains singular ++ data",
+      "ray_equations": "On either axis, c=-2*beta_minus, d=2*beta_plus=c+1/2, H=c+d; r=A*exp(c*Z)+B*exp(-d*Z), T=c*d*r^2-(dr/dZ)^2, Z=z-z0",
+      "parameterization": "A<0, B>0, u=A/B in (-1,0); B^2=2/[H*(1-4*c*u)] fixes tau(0)=-1; R^2=2*(1+u)^2/[H*(1-4*c*u)]",
+      "nonaffinity": "q_second+Gamma(q_first,q_first)=-(1/2)*q_first; p_z=0. Z is unwrapped even though z is periodic",
+      "time_along_ray": "tau=-H*B^2*exp(-2*d*Z)/2+2*c*H*A*B*exp(-Z/2)<0 and increases for A<0,B>0",
+      "central_arrival": "Zf=log(-1/u)/H; Tf=tau_f=-2*H*(-u)^(2*d/H)/(1-4*c*u)<0",
+      "limit": "As u approaches 0 from below, R^2 approaches 2/H=1/(beta_plus-beta_minus) and Tf approaches 0 from below",
+      "exact_axis_checks": [
+        {
+          "axis": "x",
+          "c_exact": "38/75",
+          "d_exact": "151/150",
+          "H_exact": "227/150",
+          "null_norm_zero": true,
+          "Killing_momentum_zero": true,
+          "four_geodesic_residuals_zero": true,
+          "initial_slice_and_central_arrival_exact": true
+        },
+        {
+          "axis": "y",
+          "c_exact": "37/75",
+          "d_exact": "149/150",
+          "H_exact": "223/150",
+          "null_norm_zero": true,
+          "Killing_momentum_zero": true,
+          "four_geodesic_residuals_zero": true,
+          "initial_slice_and_central_arrival_exact": true
+        }
+      ],
+      "arrival_table": [
+        {
+          "axis": "x",
+          "initial_radius": 1.0,
+          "central_T": -0.07741499284400993,
+          "unwrapped_z_travel": 1.7547557425009301,
+          "windings": 0.2792780503379121,
+          "endpoint_error": 5.970620246053007e-17
+        },
+        {
+          "axis": "x",
+          "initial_radius": 1.1,
+          "central_T": -0.01808923040388611,
+          "unwrapped_z_travel": 2.52130662008059,
+          "windings": 0.4012784116361453,
+          "endpoint_error": 1.560936271838892e-17
+        },
+        {
+          "axis": "x",
+          "initial_radius": 1.14,
+          "central_T": -0.0020475912239022987,
+          "unwrapped_z_travel": 3.6209284773988912,
+          "windings": 0.5762886657602437,
+          "endpoint_error": 1.5886937727512133e-17
+        },
+        {
+          "axis": "y",
+          "initial_radius": 1.0,
+          "central_T": -0.0821863978880297,
+          "unwrapped_z_travel": 1.7361984303474802,
+          "windings": 0.27632456237819125,
+          "endpoint_error": 0.0
+        },
+        {
+          "axis": "y",
+          "initial_radius": 1.1,
+          "central_T": -0.022439025074689527,
+          "unwrapped_z_travel": 2.4337467302592173,
+          "windings": 0.3873428223544921,
+          "endpoint_error": 0.0
+        },
+        {
+          "axis": "y",
+          "initial_radius": 1.14,
+          "central_T": -0.005167856748425329,
+          "unwrapped_z_travel": 3.1902338583665806,
+          "windings": 0.5077414881781709,
+          "endpoint_error": 1.5959752779480097e-17
+        }
+      ],
+      "table_scope": "Explicit axis null arrivals, not a minimization over all causal paths or a numerical PDE evolution",
+      "domain_statement": "For fixed-background normally hyperbolic scalar evolution, matching both the field and its normal derivative on an initial set U guarantees equality only on their common domain of dependence",
+      "cutoff_conclusion": "A fixed smooth transverse cutoff that changes the ++ data before its compact singular ellipse has mismatching points strictly inside that ellipse. The explicit rays put the center outside the guaranteed matching domain at a negative time; later central events retain such points in their causal past. Moving the cutoff toward the ellipse delays this loss toward zero, but no single such cutoff imports the exact ++ asymptotic arbitrarily near N by finite propagation alone",
+      "assumptions": "Fixed untwisted critical negative-null-stress geometry; smooth data on tau=-1; cutoff matching the exact field and normal derivative near the central circle and regularizing the pole before the ellipse. For a z-independent cutoff, translation of z0 covers every central phase",
+      "limit_of_conclusion": "Loss of the equality guarantee does not prove the cutoff solution differs or that its growth disappears. This is no stability verdict, no nonlinear constraint solution, and no exclusion of other smooth-data instabilities",
+      "source": "https://arxiv.org/pdf/0806.1036 (Theorem 3.2.11: smooth Cauchy evolution and causal support for normally hyperbolic operators on globally hyperbolic spacetimes; the rays and cutoff application are our derivation)"
+    },
+    "regularity": {
+      "critical_nonzero_winding": "At s=1 and n!=0 the derivative is bounded but oscillates without a limit; bounded kinetic energy is not smooth crossing",
+      "repeated_massless_root": "n=0,p=0 has independent solutions 1 and log(-S); the logarithmic mode remains",
+      "massless_critical_zero_winding": "n=0,s=1,m=0 has regular solutions 1 and x",
+      "massive_critical_zero_winding": "For n=0,s=1,m>0, sqrt(x)*Y1(2*m*sqrt(x)) contains x*log(x) and a logarithmically divergent derivative; equality does not regularize generic massive zero-winding data",
+      "massive_check": {
+        "mass": 1.0,
+        "equation": "x*G_xx+G=0",
+        "samples": [
+          {
+            "x": 0.0001,
+            "field": -0.3185981279214922,
+            "derivative": -2.5639554095927353,
+            "equation_residual": 0.0
+          },
+          {
+            "x": 1e-08,
+            "field": -0.31830994432706805,
+            "derivative": -5.496017824512429,
+            "equation_residual": 0.0
+          },
+          {
+            "x": 1e-12,
+            "field": -0.31830988619253675,
+            "derivative": -8.427760281347453,
+            "equation_residual": 0.0
+          }
+        ]
+      }
+    },
+    "source": {
+      "required": "T_ab=(mu/kappa)*(dz)_a*(dz)_b, kappa>0; negative null dust with T_kk=(mu/kappa)*(k^z)^2",
+      "canonical_sources": "Positive-kinetic scalar and ordinary Maxwell null contractions are sums of nonnegative squares. Positive-distribution particle dark matter cannot supply this NEC-violating tensor",
+      "ghost_limit": "Wrong-sign supporting scalars formally provide the sign but introduce ghost degrees of freedom; quantum vacuum stability is a separate unresolved viability condition",
+      "quantum_limit": "A quantum source requires a stress tensor and state on the actual curved periodic background. Boundary-free Minkowski quantum inequalities cannot be applied for arbitrary sampling durations here",
+      "amount_limit": "Dimensionless mu is not a mass in kilograms; no fabrication recipe, attainable quantity, or physical source has been established"
+    },
+    "casimir": {
+      "convention": "Orthonormal signature -+++; standard zero-temperature ideal flat-space parallel-plate bulk contribution Ccas*diag(-1,1,1,-3), Ccas=pi^2*hbar*c/(720*plate_gap^4)>0",
+      "ranks": {
+        "negative_null": 1,
+        "ideal_Casimir": 4
+      },
+      "contracted_squares": {
+        "negative_null": "0 for null ell",
+        "ideal_Casimir": "12*Ccas^2"
+      },
+      "normalization": "ell^a=(1,nx,ny,nz), nx^2+ny^2+nz^2=1, target=-A*ell_a*ell_b, A>0",
+      "exact_sum_proof": "k_plus=(1,1,0,0), k_minus=(1,-1,0,0); Casimir contraction vanishes on each. Target contractions sum to -2*A*(1+nx^2)<0, while any NEC-respecting added stress has a nonnegative sum",
+      "conclusion": "A single ideal Casimir plate pair plus NEC-respecting added stress cannot equal this nonzero negative-null target locally, for any null-dust orientation",
+      "limit": "Assumes the supplied standard flat-space bulk tensor and common local frame, without curvature, finite-size, edge, or plate-material backreaction corrections. This is not a theorem about every actual plate pair in curved geometry; it does not exclude other negative-energy contributions, different plate configurations, or different target metrics"
+    },
+    "multi_source_casimir": {
+      "scope": "Local algebra of three equal independent ideal Casimir contributions with orthogonal normals, plus positive null-beam radiation, all in one orthonormal -+++ frame; independence and additivity are assumed",
+      "ideal_input": "Each contribution uses the zero-temperature ideal flat-space parallel-plate bulk tensor; their sum is Ccas*diag(-3,-1,-1,-1)",
+      "target": "-A*ell_a*ell_b, A>0, ell^a=(1,0,0,1); a spatial rotation gives any target direction",
+      "five_beam_example": {
+        "each_Ccas": "2*A",
+        "directions": [
+          "+x",
+          "-x",
+          "+y",
+          "-y",
+          "-z"
+        ],
+        "each_positive_weight": "A",
+        "radiation_tensor_over_A": [
+          [
+            "5",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "target_tensor_over_A": [
+          [
+            "-1",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            "-1"
+          ]
+        ],
+        "exact_equality": true
+      },
+      "four_beam_at_minimum_C": {
+        "each_Ccas": "4*A/3",
+        "each_positive_weight": "3*A/4",
+        "contravariant_null_rays": [
+          [
+            "1",
+            "2*sqrt(2)/3",
+            "0",
+            "-1/3"
+          ],
+          [
+            "1",
+            "-2*sqrt(2)/3",
+            "0",
+            "-1/3"
+          ],
+          [
+            "1",
+            "0",
+            "2*sqrt(2)/3",
+            "-1/3"
+          ],
+          [
+            "1",
+            "0",
+            "-2*sqrt(2)/3",
+            "-1/3"
+          ]
+        ],
+        "exact_equality": true,
+        "clarification": "Minimum refers to the coefficient Ccas within this ansatz, not a minimum number of beams"
+      },
+      "sharp_coefficient_bound": {
+        "criterion": "Ccas>=4*A/3, equivalently 0<A<=3*Ccas/4",
+        "necessity": "A nonnegative sum of null-beam outer products is a positive semidefinite component matrix. The required radiation has its (0,z) principal minor equal to Ccas*(3*Ccas-4*A), which must be nonnegative",
+        "sufficiency": "Use the four listed cone rays with weight 9*Ccas/16 each, plus a forward +z ray of weight 3*Ccas/4-A. All weights are nonnegative exactly in the stated range and the tensor equality is exact",
+        "limit": "Bound is only for three equal orthogonal ideal contributions and nonnegative null-beam radiation; it is not a bound for every canonical matter tensor or plate arrangement"
+      },
+      "ordinary_matter_checks": {
+        "all_nine_listed_rays_null_and_future": true,
+        "NEC": "For each positive beam, T_ab*q^a*q^b=weight*(k dot q)^2>=0; verified algebraically",
+        "DEC": "For future timelike u and future null k, k dot u<0, so -T^a_b*u^b=-weight*(k dot u)*k^a is future causal. The flux identity is exact; positive sums preserve the future causal cone"
+      },
+      "interpretation": "The one-pair exclusion does not extend to these multiple independently supplied tensors. This is an algebraic stress budget, not a realizable material or stable-medium result",
+      "physical_limitations": [
+        "No joint quantum state or boundary-value problem for actual intersecting plate pairs has been constructed; their real vacuum stress is not supplied by this algebra",
+        "Three plate pairs acting on the same electromagnetic field do not create three independent quantum fields; the matrix sum does not establish additivity of the actual joint boundary problem",
+        "No proof that the assumed independent contributions can coexist in a common curved periodic background",
+        "No finite-size, edge, curvature, plate-material stress or gravitational backreaction corrections",
+        "No regional conservation, state fluctuations, applicable quantum energy restrictions, preparation, nonlinear stability or human-traversal result"
+      ],
+      "source": "https://arxiv.org/pdf/hep-th/0702091 (Eq.1, citing Brown-Maclay: each ideal tensor input; the multiple-source decompositions and sharp restricted bound are our algebra)"
+    },
+    "numerical": {
+      "method": "DOP853 versus exact separated mode; rtol=1e-11, atol=1e-24, 61 samples, winding n=1",
+      "end_S": -1e-06,
+      "relative_error_acceptance": 1e-08,
+      "cases": [
+        {
+          "w": 0.0,
+          "mu": -0.9900888888888888,
+          "s": 0.9933179184126228,
+          "kinetic_energy_power": -0.013364163174754307,
+          "max_relative_state_error": 8.499383674640064e-10,
+          "max_scaled_state_error": 3.6008124782334645e-12,
+          "max_constant_mode_invariant_defect": 9.214892904859677e-16
+        },
+        {
+          "w": 0.0,
+          "mu": -1.0000888888888888,
+          "s": 1.0,
+          "kinetic_energy_power": 0.0,
+          "max_relative_state_error": 5.942717028972216e-10,
+          "max_scaled_state_error": 3.42401730538645e-12,
+          "max_constant_mode_invariant_defect": 6.718913446118861e-16
+        },
+        {
+          "w": 0.0,
+          "mu": -1.0100888888888888,
+          "s": 1.0066524371750873,
+          "kinetic_energy_power": 0.013304874350174689,
+          "max_relative_state_error": 1.4801746558119005e-10,
+          "max_scaled_state_error": 3.723155156403968e-12,
+          "max_constant_mode_invariant_defect": 3.510833468576701e-16
+        },
+        {
+          "w": 0.1,
+          "mu": -0.9900873362445415,
+          "s": 0.993317936983235,
+          "kinetic_energy_power": -0.013364126033529988,
+          "max_relative_state_error": 3.5199898315214683e-11,
+          "max_scaled_state_error": 3.6014670183540157e-12,
+          "max_constant_mode_invariant_defect": 3.1401849173675503e-16
+        },
+        {
+          "w": 0.1,
+          "mu": -1.0000873362445415,
+          "s": 1.0,
+          "kinetic_energy_power": 0.0,
+          "max_relative_state_error": 5.942717028972216e-10,
+          "max_scaled_state_error": 3.42401730538645e-12,
+          "max_constant_mode_invariant_defect": 6.718913446118861e-16
+        },
+        {
+          "w": 0.1,
+          "mu": -1.0100873362445415,
+          "s": 1.0066524192491433,
+          "kinetic_energy_power": 0.013304838498286564,
+          "max_relative_state_error": 7.258621223863255e-10,
+          "max_scaled_state_error": 3.7230460863848e-12,
+          "max_constant_mode_invariant_defect": 7.108895957933346e-16
+        },
+        {
+          "w": 1.0,
+          "mu": -0.990032,
+          "s": 0.9933183835138502,
+          "kinetic_energy_power": -0.013363232972299688,
+          "max_relative_state_error": 3.021979108639078e-10,
+          "max_scaled_state_error": 3.6015639450712852e-12,
+          "max_constant_mode_invariant_defect": 3.695897472951119e-16
+        },
+        {
+          "w": 1.0,
+          "mu": -1.000032,
+          "s": 1.0,
+          "kinetic_energy_power": 0.0,
+          "max_relative_state_error": 5.942717028972216e-10,
+          "max_scaled_state_error": 3.42401730538645e-12,
+          "max_constant_mode_invariant_defect": 6.718913446118861e-16
+        },
+        {
+          "w": 1.0,
+          "mu": -1.010032,
+          "s": 1.0066519850810962,
+          "kinetic_energy_power": 0.013303970162192424,
+          "max_relative_state_error": 4.0842157492370294e-10,
+          "max_scaled_state_error": 3.722142233500479e-12,
+          "max_constant_mode_invariant_defect": 4.355503409735122e-16
+        }
+      ],
+      "max_relative_state_error": 8.499383674640064e-10,
+      "deeper_precision_probe": {
+        "end_S": -1e-08,
+        "s": 1.0,
+        "n": 1,
+        "max_relative_state_error": 5.753577843774287e-08,
+        "max_scaled_state_error": 3.42401730538645e-12,
+        "max_constant_mode_invariant_defect": 6.718913446118861e-16,
+        "limitation": "Small absolute constant-mode contamination is amplified in relative error as the selected mode decays. The reported nine-case relative-accuracy validation stops at S=-1e-6; the threshold itself is exact algebra"
+      }
+    },
+    "conclusion": "Formal negative null support makes one selected massless branch satisfy a bounded-kinetic-energy criterion. It establishes neither a stable material nor global or nonlinear stability or human traversal",
+    "missing": [
+      "A physically allowed source realizing the complete stress tensor",
+      "Quantum state, fluctuations and applicable energy inequalities",
+      "Finite-region matching, preparation and common admissible initial data",
+      "Nonlinear stability and controlled human passage"
+    ],
+    "sources": [
+      "https://arxiv.org/pdf/gr-qc/0503077 (geometry; negative-support branch criterion is our calculation)",
+      "https://arxiv.org/pdf/hep-th/0702091 (Eq.1: ideal Casimir tensor and Brown-Maclay reference)",
+      "https://doi.org/10.1103/PhysRev.184.1272 (Brown-Maclay: conducting-plate vacuum stress)",
+      "https://arxiv.org/pdf/1106.1367 (Vlasov matter energy conditions)",
+      "https://arxiv.org/pdf/hep-ph/0311312 (wrong-sign kinetic ghosts and gravitational vacuum instability)",
+      "https://arxiv.org/pdf/gr-qc/9607003 (Eq.1 and applicability: quantum negative-energy restrictions)"
+    ]
+  },
+  "quantum_horizon_geometry": {
+    "model": "Complete analytic extension R_tau x R^2_transverse x S^1_z, period2*pi; a=1/50, mu=-1-2*a^2/(9+16*w^2), any finite real w",
+    "observer": {
+      "path": "T=q*lambda-lambda^2/4, x=y=0, z=-2*log(1-lambda/(4*q)); q=-p_z>0, lambda<=0, horizon atlambda0",
+      "unit_norm_and_four_geodesic_equations": true,
+      "conserved_momentum": "p_z=-q",
+      "rho_times_kappa": "4*mu/(-lambda + 4*q)**2",
+      "tidal_squared": "2*(2500*mu**2 + 1)/(625*(-lambda + 4*q)**4)",
+      "existing_observer_helper_error": 2.220446049250313e-16,
+      "scope": "Physical proper seconds=ell*lambda/c; multiply rho_times_kappa by c^4/(8*pi*G*ell^2). Multiply stored tidal_squared byell^-4, or its square root byell^-2. Both finite atlambda0 for fixedq>0, not human-safe bounds or a quantum-state result"
+    },
+    "closure": {
+      "B": [
+        [
+          "-1/4 - 3/(100*(16*w**2 + 9))",
+          "-w/(25*(16*w**2 + 9))"
+        ],
+        [
+          "-w/(25*(16*w**2 + 9))",
+          "-1/4 + 3/(100*(16*w**2 + 9))"
+        ]
+      ],
+      "pulled_back_metric": "|dr+Q*r*dz|^2-2*d_tau*dz-tau*dz^2, Q=2B-wJ",
+      "gradient_tau_squared": "tau",
+      "generator": "L=partial_z-Q*r.partial_r, norm(L)=-tau",
+      "symmetric_flow_eigenvalue_lower_bound": "m=1/2-a/sqrt(9+16*w^2)>=37/75>0",
+      "backward_bound": "|r(z)|<=exp(m*(z-z0))*|r(z0)| forz<=z0",
+      "numerical_flow_samples": [
+        {
+          "w": 0.0,
+          "past_windings": 0,
+          "transverse_position": [
+            2.0,
+            1.0
+          ],
+          "radius": 2.23606797749979,
+          "radius_bound": 2.23606797749979
+        },
+        {
+          "w": 0.0,
+          "past_windings": 1,
+          "transverse_position": [
+            0.08288233106537367,
+            0.04506250506480178
+          ],
+          "radius": 0.09434039519498257,
+          "radius_bound": 0.10076282456132535
+        },
+        {
+          "w": 0.0,
+          "past_windings": 2,
+          "transverse_position": [
+            0.0034347404014151025,
+            0.0020306293627152857
+          ],
+          "radius": 0.00399009990273861,
+          "radius_bound": 0.004540625292138456
+        },
+        {
+          "w": 0.0,
+          "past_windings": 3,
+          "transverse_position": [
+            0.00014233964553685035,
+            9.15052459420927e-05
+          ],
+          "radius": 0.00016921520240947347,
+          "radius_bound": 0.00020461195022435606
+        },
+        {
+          "w": 0.0,
+          "past_windings": 4,
+          "transverse_position": [
+            5.898720812556589e-06,
+            4.123455608721488e-06
+          ],
+          "radius": 7.197068388002504e-06,
+          "radius_bound": 9.220327043304022e-06
+        },
+        {
+          "w": 0.1,
+          "past_windings": 0,
+          "transverse_position": [
+            2.0,
+            1.0
+          ],
+          "radius": 2.23606797749979,
+          "radius_bound": 2.23606797749979
+        },
+        {
+          "w": 0.1,
+          "past_windings": 1,
+          "transverse_position": [
+            0.09184883052517817,
+            -0.014599887148611955
+          ],
+          "radius": 0.09300195897719093,
+          "radius_bound": 0.10072580658313178
+        },
+        {
+          "w": 0.1,
+          "past_windings": 2,
+          "transverse_position": [
+            0.0026937328016143126,
+            -0.0028893076880094504
+          ],
+          "radius": 0.003950227249473555,
+          "radius_bound": 0.004537289659309307
+        },
+        {
+          "w": 0.1,
+          "past_windings": 3,
+          "transverse_position": [
+            1.7015406579151767e-05,
+            -0.00017496192329046492
+          ],
+          "radius": 0.00017578736775591237,
+          "radius_bound": 0.00020438652368084189
+        },
+        {
+          "w": 0.1,
+          "past_windings": 4,
+          "transverse_position": [
+            -3.8394614608100276e-06,
+            -6.850194320987817e-06
+          ],
+          "radius": 7.852810104945821e-06,
+          "radius_bound": 9.20678515126989e-06
+        },
+        {
+          "w": 1.0,
+          "past_windings": 0,
+          "transverse_position": [
+            2.0,
+            1.0
+          ],
+          "radius": 2.23606797749979,
+          "radius_bound": 2.23606797749979
+        },
+        {
+          "w": 1.0,
+          "past_windings": 1,
+          "transverse_position": [
+            0.08642568160139162,
+            0.043218271286995
+          ],
+          "radius": 0.096629278240611,
+          "radius_bound": 0.0990885924134898
+        },
+        {
+          "w": 1.0,
+          "past_windings": 2,
+          "transverse_position": [
+            0.0037346992083742356,
+            0.0018678189493686564
+          ],
+          "radius": 0.004175730571367335,
+          "radius_bound": 0.004390988666393363
+        },
+        {
+          "w": 1.0,
+          "past_windings": 3,
+          "transverse_position": [
+            0.00016138696131375225,
+            8.072390402323849e-05
+          ],
+          "radius": 0.00018044971588461863,
+          "radius_bound": 0.0001945812428936079
+        },
+        {
+          "w": 1.0,
+          "past_windings": 4,
+          "transverse_position": [
+            6.973989000683576e-06,
+            3.4887474508287825e-06
+          ],
+          "radius": 7.79794084084509e-06,
+          "radius_bound": 8.622627604529872e-06
+        }
+      ]
+    },
+    "extended_negative_branch": {
+      "scope": "Same complete-extension proof for a=1/50, allmu<=-1, finite realw, choosing r=-sqrt(U) for the larger real root of (U-C)(U+W)+16*a^2=0, C=1-8mu,W=16w^2",
+      "closure": "h=(r+1)/4, v=a*r/(r^2+W), c=-2*a*w/(r^2+W), b=(h+v)/2,d=(h-v)/2; all three closure equations checked exactly",
+      "eigenvalues_B": "(r+1)/8 +/- a/(2*sqrt(r^2+W))",
+      "bound_argument": "C>=9,W>=0 give P(8)<0, so largerrootU>8 and r<-sqrt8",
+      "largest_eigenvalue_upper_bound": "1/8 - 99*sqrt(2)/400",
+      "largest_eigenvalue_upper_bound_decimal": -0.22501785668734103,
+      "conclusion": "B is negative definite throughout this branch. Making mu more negative or changing finite w does not remove its compact generation; this does not classify other branches or extensions"
+    },
+    "global_hypotheses": {
+      "initial_surface": "Sigma={tau=-1}, complete R^2 x S^1",
+      "time_orientation": "partial_tau is future null; for future causal curves withdz>0, d_tau/dz>=-tau/2, so they cannot reenter tau<0 fromtau>=0",
+      "negative_slab_estimate": "For future causal curves parameterized bytau<0: 0<=dz/dtau<=2/(-tau), |dr/dtau+Q*r*dz/dtau|<=1/sqrt(-tau). Gronwall and finite winding prevent escape in any closed negative-tau slab",
+      "domain": "D(Sigma)={tau<0}, D+(Sigma)={-1<=tau<0}; tau>=0 has past-inextendible constant-tau L curves avoidingSigma",
+      "horizon": "H+(Sigma)={tau=0}; L is its null generator with nonaffinity-1/2",
+      "compact_generation": "All past generators enter and remain in the same K={tau0,|r|<=R0,z modulo2*pi}, anyfixedR0>0, and approach the axis nullcircle",
+      "limits": "These are analytic global-extension arguments aided by exact identities, not a numerical theorem about finite domains, other exterior gluings, or perturbed PDE evolutions"
+    },
+    "scalar_quantum_obstruction": {
+      "input": "Free Hermitian Klein-Gordon field with a distributional two-point bisolution that is initially Hadamard onD(Sigma). R=0 also removes a finite xi*R coupling term from this equation",
+      "theorem": "Kay-Radzikowski-Wald Theorem2/2prime: subtracting a local Hadamard parametrix fails to give a locally L2 function near every horizon base-point diagonal",
+      "application": "The checked complete critical-branch geometry has a compactly generated horizon with base set the central periodic null circle. Renormalized scalar square and stress are singular or ill-defined there",
+      "limits": "Not a theorem of stress divergence along every approaching observer, not automatically a Maxwell/Dirac/interacting-field theorem, and not a prediction of nonlinear backreaction, injury, or all possible time-travel models",
+      "sources": [
+        "https://arxiv.org/pdf/gr-qc/9603012 (Theorems2 and2prime, pp28-29)",
+        "https://arxiv.org/pdf/gr-qc/9606027 (finite limiting stress need not define regular horizon stress)"
+      ]
+    },
+    "interpretation": "Finite classical observer measurements coexist with a compactly generated Cauchy horizon and the stated scalar quantum obstruction. No source, stable crossing, or calendar-date map has been constructed"
+  },
+  "provenance": "Local derivation from Ori 2005 and canonical Einstein-scalar theory; no originality claim",
+  "scope": "Exact coupled support family plus linear spectator test, NOT generic nonlinear evolution",
+  "missing": [
+    "Exterior matching and formation from accessible initial matter",
+    "Nonlinear gravity of the growing spectator",
+    "Generic perturbations, quantum effects and human traversal"
+  ]
+}

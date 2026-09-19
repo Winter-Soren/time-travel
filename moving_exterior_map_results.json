@@ -1,0 +1,62 @@
+{
+  "model": "Exact flat-exterior null transport for prescribed A stationary and B timelike; no gravitational closure",
+  "parameters": {
+    "initial_separation": 0.7,
+    "motion_duration": 4.0,
+    "normalized_vacuum_stress": -0.445847013567394
+  },
+  "equations": {
+    "proper_clock": "sigma(t)=integral_0^t sqrt(1-d_dot\u00b2)dt",
+    "maps": "E_A(t+d(t))=sigma(t); E_B(sigma(t))=t-d(t). Both E_prime=exp(-atanh(d_dot)), at different physical events.",
+    "normal_ordered_transport": "Q_received=E_prime\u00b2*Q_emitted(E)-Schwarzian(E)/3; this is not by itself covariant observer stress.",
+    "linear_source": "d=D+h: i_A(s)=[h_tripleprime+Omega\u00b2*h_prime](s-D)/3; i_B(s)=[h_tripleprime+Omega\u00b2*h_prime](s)/3.",
+    "vacuum_control": "For a passive flat null rechart, geometric 2*(sigma_second-sigma_prime\u00b2)/3 cancels -Schwarzian(E)/3."
+  },
+  "cases": [
+    {
+      "amplitude": 0.008,
+      "maximum_sampled_speed": 0.005330093480839767,
+      "maximum_map_linearization_error": 3.4144031917371365e-05,
+      "maximum_source_linearization_error": 6.26473636394123e-05,
+      "maximum_exact_transformed_source_change": 0.00580719559157284,
+      "final_proper_clock_lag": 2.2812961963527706e-05
+    },
+    {
+      "amplitude": 0.004,
+      "maximum_sampled_speed": 0.0026650467404198833,
+      "maximum_map_linearization_error": 8.533040567915151e-06,
+      "maximum_source_linearization_error": 1.5562564300812673e-05,
+      "maximum_exact_transformed_source_change": 0.002901899354423214,
+      "final_proper_clock_lag": 5.703218048086641e-06
+    },
+    {
+      "amplitude": 0.002,
+      "maximum_sampled_speed": 0.0013325233702099416,
+      "maximum_map_linearization_error": 2.132887734873634e-06,
+      "maximum_source_linearization_error": 3.878301198256026e-06,
+      "maximum_exact_transformed_source_change": 0.0014505255752141016,
+      "final_proper_clock_lag": 1.4258031093883088e-06
+    },
+    {
+      "amplitude": 0.001,
+      "maximum_sampled_speed": 0.0006662616851049708,
+      "maximum_map_linearization_error": 5.331752901405196e-07,
+      "maximum_source_linearization_error": 9.680371397819266e-07,
+      "maximum_exact_transformed_source_change": 0.0007251568256065187,
+      "final_proper_clock_lag": 3.5645068963223863e-07
+    }
+  ],
+  "verification": {
+    "all_declared_checks_pass": true,
+    "rapidity_and_parametric_jet_maximum_difference": 2.220446049250313e-16,
+    "passive_Minkowski_vacuum_covariant_stress_maximum_error": 1.734723475976807e-18,
+    "inertial_affine_map_checks_pass": true,
+    "second_order_linearization_scaling_pass": true,
+    "minimum_sampled_map_derivative": 0.9946840360547801
+  },
+  "scope": "Exact transport on an assumed flat one-dimensional exterior with specified transparent proper-clock sewing. The driven feedback uses only its first order in amplitude. Source-chart terms alone are not radiation; net production and motion cost require higher-order/global dynamics. Not a physical MMP magnetic loop or backwards-time experiment.",
+  "sources": [
+    "https://arxiv.org/pdf/math-ph/0412028: normal-ordered stress transformation, Eqs2.7-2.9",
+    "https://arxiv.org/html/1807.04726v3: geometric anomaly must be retained, AppendixF"
+  ]
+}

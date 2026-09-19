@@ -1,0 +1,775 @@
+{
+  "scope": "Separate C-infinity compact seed on radius-three Ori disk; distinct from polynomial taper",
+  "radius": 3.0,
+  "source_radius": 1.0,
+  "taper_kind": "smooth",
+  "scalar_taper": "exp(-4*s/(1-s)) for s<1, else 0",
+  "checks": {
+    "window_derivatives_vs_sympy": true,
+    "central_curvature_matches_polynomial": true,
+    "compact_support": true,
+    "weak_accuracy": true,
+    "batch_projection_identity": true,
+    "compact_basis_and_full_tensor_equivalence": true,
+    "strong_offgrid_accuracy": true,
+    "strong_expanded_angular_test": true,
+    "strong_quadrature_test": true,
+    "strong_positive_psi": true,
+    "original_radius_one_regression": true,
+    "compact_storage_identity": true,
+    "weak_snapshot_unchanged": true
+  },
+  "refinement": [
+    {
+      "degree": 40,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 2220,
+      "unknowns": 1268,
+      "projected_residual": 8.65762301555971e-16,
+      "residual_evaluations": 38,
+      "elapsed_seconds": 4.680802199989557,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 0.0013203364505344484,
+        "max_M": 0.00011512457361597875,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0001305443628614178,
+        "max_W": 0.00010255624010869458,
+        "max_energy": 0.0022590865327062797,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      }
+    },
+    {
+      "degree": 60,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 2960,
+      "unknowns": 1948,
+      "projected_residual": 1.3460279974156892e-17,
+      "residual_evaluations": 46,
+      "elapsed_seconds": 8.716678300057538,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 0.0005986240781631347,
+        "max_M": 3.2044609947464654e-05,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00013077898504376684,
+        "max_W": 0.00010252384694981118,
+        "max_energy": 0.0022590864410835334,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      }
+    },
+    {
+      "degree": 80,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 3700,
+      "unknowns": 2628,
+      "projected_residual": 6.406732672703581e-14,
+      "residual_evaluations": 15,
+      "elapsed_seconds": 9.5480724000372,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 6.299562777647982e-05,
+        "max_M": 2.0496927234928925e-05,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0001307788281494915,
+        "max_W": 0.00010252393175403445,
+        "max_energy": 0.002259086481846112,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      }
+    },
+    {
+      "degree": 100,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 4440,
+      "unknowns": 3308,
+      "projected_residual": 3.860877301274672e-15,
+      "residual_evaluations": 16,
+      "elapsed_seconds": 13.554982399917208,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 5.242437313762727e-05,
+        "max_M": 4.51795576242599e-06,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.000130776086716633,
+        "max_W": 0.00010252404965767016,
+        "max_energy": 0.0022590864733149567,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      }
+    },
+    {
+      "degree": 120,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 5180,
+      "unknowns": 3988,
+      "projected_residual": 2.1038673384241333e-16,
+      "residual_evaluations": 17,
+      "elapsed_seconds": 17.9933858999284,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 1.9200447763823014e-05,
+        "max_M": 1.2519156493154172e-06,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00013077588537591112,
+        "max_W": 0.00010252405495971305,
+        "max_energy": 0.0022590864737602285,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      }
+    },
+    {
+      "degree": 160,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 6660,
+      "unknowns": 5348,
+      "projected_residual": 3.243144302625202e-17,
+      "residual_evaluations": 18,
+      "elapsed_seconds": 33.489346500020474,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 2.0593675794378097e-06,
+        "max_M": 2.4232922354875687e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0001307759504536321,
+        "max_W": 0.0001025240533028277,
+        "max_energy": 0.0022590864737736084,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      }
+    },
+    {
+      "degree": 200,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 8140,
+      "unknowns": 6708,
+      "projected_residual": 1.2538019221601327e-17,
+      "residual_evaluations": 19,
+      "elapsed_seconds": 53.081743699964136,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 3.462416701682791e-07,
+        "max_M": 3.9805174680060096e-08,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.00013077595354227256,
+        "max_W": 0.00010252405325897096,
+        "max_energy": 0.002259086473771145,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      }
+    },
+    {
+      "degree": 240,
+      "epsilon": 0.03,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 9620,
+      "unknowns": 8068,
+      "projected_residual": 7.107002930133882e-18,
+      "residual_evaluations": 20,
+      "elapsed_seconds": 65.46320769994054,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 3.027143655187636e-08,
+        "max_M": 8.779526839139453e-09,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0001307759532427344,
+        "max_W": 0.00010252405326384946,
+        "max_energy": 0.0022590864737715094,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 0.004520587300268482,
+        "max_M": 0.0008999999999999982,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 0.0022602936501342967
+      }
+    }
+  ],
+  "failures": [],
+  "accepted": true,
+  "strong_refinement": [
+    {
+      "degree": 240,
+      "epsilon": 1.0,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 9620,
+      "unknowns": 8068,
+      "projected_residual": 2.2288953927629747e-16,
+      "residual_evaluations": 59,
+      "elapsed_seconds": 160.59026019996963,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 3.220029689848802e-05,
+        "max_M": 9.754532722263568e-06,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.15283547269417808,
+        "max_W": 0.11391581465515878,
+        "max_energy": 1.4239281862134676,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 5.022874778076213,
+        "max_M": 1.0,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 2.5114373890381065
+      }
+    },
+    {
+      "degree": 300,
+      "epsilon": 1.0,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 11840,
+      "unknowns": 10108,
+      "projected_residual": 1.6339020025580357e-16,
+      "residual_evaluations": 18,
+      "elapsed_seconds": 122.09203759999946,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 7.595660630466128e-06,
+        "max_M": 4.6399461418583413e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.1528354726487433,
+        "max_W": 0.11391581465558487,
+        "max_energy": 1.4239281862301156,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 5.022874778076213,
+        "max_M": 1.0,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 2.5114373890381065
+      }
+    },
+    {
+      "degree": 360,
+      "epsilon": 1.0,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 8,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 14060,
+      "unknowns": 12148,
+      "projected_residual": 3.291520271111234e-16,
+      "residual_evaluations": 19,
+      "elapsed_seconds": 180.7697082000086,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 1.0342677297936476e-08,
+        "max_M": 1.018585283916377e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.15283547264973163,
+        "max_W": 0.11391581465556903,
+        "max_energy": 1.4239281862306312,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 5.022874778076213,
+        "max_M": 1.0,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 2.5114373890381065
+      }
+    },
+    {
+      "degree": 360,
+      "epsilon": 1.0,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 12,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 17100,
+      "unknowns": 17764,
+      "projected_residual": 1.1124753979640647e-16,
+      "residual_evaluations": 21,
+      "elapsed_seconds": 136.71484249993227,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 8.289980923947837e-09,
+        "max_M": 1.0210696426298176e-07,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.15283547264973163,
+        "max_W": 0.11391581465556906,
+        "max_energy": 1.4239281862306266,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 5.022874778076213,
+        "max_M": 1.0,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 2.5114373890381065
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 400,
+      "epsilon": 1.0,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 12,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 18900,
+      "unknowns": 19764,
+      "projected_residual": 1.64166472326826e-16,
+      "residual_evaluations": 22,
+      "elapsed_seconds": 171.29332250007428,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 1.3246205293748758e-07,
+        "max_M": 1.5650718689911312e-08,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.1528354726498533,
+        "max_W": 0.11391581465556799,
+        "max_energy": 1.4239281862306348,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 5.022874778076213,
+        "max_M": 1.0,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 2.5114373890381065
+      },
+      "accuracy_target_passed": false
+    },
+    {
+      "degree": 440,
+      "epsilon": 1.0,
+      "quadrature_padding": 8,
+      "radius": 3.0,
+      "source_radius": 1.0,
+      "max_angular": 12,
+      "taper_kind": "smooth",
+      "scalar_taper": "exp(-4*s/(1-s)) for s<1, else0; scalar and momentum C-infinity; distinct seed",
+      "quadrature_points": 20700,
+      "unknowns": 21764,
+      "projected_residual": 1.2903926141231302e-16,
+      "residual_evaluations": 22,
+      "elapsed_seconds": 255.3844888000749,
+      "independent_points": 12712,
+      "physical_constraints": {
+        "max_H": 5.004856645784983e-08,
+        "max_M": 3.055463007188714e-10,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.15283547264986885,
+        "max_W": 0.11391581465556795,
+        "max_energy": 1.4239281862306403,
+        "max_H_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ],
+        "max_M_location": [
+          -0.030985020465594947,
+          2.999839983816928
+        ]
+      },
+      "uncorrected": {
+        "max_H": 5.022874778076213,
+        "max_M": 1.0,
+        "min_psi": 1.0,
+        "max_psi_minus_one": 0.0,
+        "max_W": 0.0,
+        "max_energy": 2.5114373890381065
+      },
+      "accuracy_target_passed": true
+    }
+  ],
+  "weak_validation": {
+    "weak_validation_complete": true,
+    "accepted": true,
+    "projection_checks": [
+      {
+        "max_projected_residual": 7.107002930638752e-18,
+        "quadrature_points": 9620,
+        "quadrature_padding": 8,
+        "max_angular": 8,
+        "degree": 240
+      },
+      {
+        "max_projected_residual": 1.1321369341107187e-17,
+        "quadrature_points": 14628,
+        "quadrature_padding": 16,
+        "max_angular": 8,
+        "degree": 240
+      },
+      {
+        "max_projected_residual": 8.715514142707347e-13,
+        "quadrature_points": 11700,
+        "quadrature_padding": 8,
+        "max_angular": 12,
+        "degree": 240
+      },
+      {
+        "max_projected_residual": 8.715508392173899e-13,
+        "quadrature_points": 13780,
+        "quadrature_padding": 8,
+        "max_angular": 16,
+        "degree": 240
+      }
+    ],
+    "fresh_validation": {
+      "points": 19508,
+      "max_H": 3.027166073366061e-08,
+      "max_M": 8.779845874300225e-09,
+      "square_half_width": 2.1,
+      "square_max_H": 1.8847506511217305e-09,
+      "square_max_M": 9.22257739805281e-11,
+      "min_psi": 1,
+      "max_H_location": [
+        1.8369701987210297e-16,
+        3
+      ],
+      "max_M_location": [
+        -5.51091059616309e-16,
+        -3
+      ]
+    },
+    "batch_projection_identity": true
+  },
+  "weak_accepted": true,
+  "validation_limit": "Reported maxima are finite sampled maxima, not certified continuous supremum bounds. Expanded angular and higher-quadrature checks evaluate the fixed saved coefficients; they are not independent new nonlinear solves. The C-infinity taper is a different physical initial-data family from the polynomial taper, matching its support, center value and center spatial Hessian, not its whole profile or energy.",
+  "strong_cap8_validation": {
+    "degree": 360,
+    "max_angular": 8,
+    "projection_checks": [
+      {
+        "max_projected_residual": 9.03123557918133e-10,
+        "quadrature_points": 17100,
+        "quadrature_padding": 8,
+        "max_angular": 12,
+        "degree": 360
+      },
+      {
+        "max_projected_residual": 3.7834870097190953e-16,
+        "quadrature_points": 20988,
+        "quadrature_padding": 16,
+        "max_angular": 8,
+        "degree": 360
+      }
+    ],
+    "fresh_validation": {
+      "points": 19508,
+      "max_H": 1.0354411078550285e-08,
+      "max_M": 1.0186079936724113e-07,
+      "square_half_width": 2.1,
+      "square_max_H": 7.968907533850711e-09,
+      "square_max_M": 2.4154794786677737e-09,
+      "min_psi": 1.0,
+      "max_H_location": [
+        -5.51091059616309e-16,
+        -3.0
+      ],
+      "max_M_location": [
+        1.8369701987210297e-16,
+        3.0
+      ]
+    },
+    "accepted": false,
+    "reason": "Expanded angular projection is above 2e-12; direct sampled momentum slightly exceeds preferred 1e-7."
+  },
+  "strong_accepted": true,
+  "interrupted_attempts": [
+    {
+      "degree": 440,
+      "max_angular": 12,
+      "reason": "Tool/plugin refresh removed exec cell124; no result or continuing solve process was found. Previous degree400 coefficients retained."
+    }
+  ],
+  "active_strong_run": {
+    "degree": 440,
+    "max_angular": 12,
+    "status": "complete_all_acceptance_checks_passed",
+    "started_utc": "2026-09-14T17:17:30.917017+00:00",
+    "projected_residual": 1.2903926141231302e-16,
+    "completed_utc": "2026-09-14T17:41:39.010070+00:00"
+  },
+  "strong_validation": {
+    "degree": 440,
+    "max_angular": 12,
+    "epsilon": 1.0,
+    "radius": 3.0,
+    "source_radius": 1.0,
+    "taper_kind": "smooth",
+    "projection_checks": [
+      {
+        "max_projected_residual": 5.374695270871868e-13,
+        "quadrature_points": 24380,
+        "quadrature_padding": 8,
+        "max_angular": 16,
+        "degree": 440
+      },
+      {
+        "max_projected_residual": 2.444858866875976e-16,
+        "quadrature_points": 29036,
+        "quadrature_padding": 16,
+        "max_angular": 12,
+        "degree": 440
+      }
+    ],
+    "status": "complete",
+    "fresh_validation": {
+      "points": 19508,
+      "max_H": 5.004893097182439e-08,
+      "max_M": 3.0554923051843935e-10,
+      "square_half_width": 2.1,
+      "square_max_H": 1.6138918793899586e-10,
+      "square_max_M": 1.5544390159527536e-11,
+      "min_psi": 1.0,
+      "random_seed": 720481,
+      "max_H_location": [
+        1.8369701987210297e-16,
+        3.0
+      ],
+      "max_M_location": [
+        -0.010022428163569078,
+        2.9999832584422377
+      ]
+    }
+  },
+  "strong_acceptance": {
+    "degree": 440,
+    "max_angular": 12,
+    "epsilon": 1.0,
+    "quadrature_padding": 8,
+    "sampled_absolute_ADM_tolerance": 1e-07,
+    "projected_tolerance": 2e-12,
+    "meaning": "Numerically validated initial constraints on the finite disk; not a continuum existence, exterior-matching, stability, evolution, or time-travel proof."
+  },
+  "boundary_and_matter": {
+    "radius": 3.0,
+    "source_radius": 1.0,
+    "boundary_condition": "log(psi)=0 and all three W components=0 on r=3",
+    "vacuum_annulus": "The scalar field and momentum vanish for r>=1; corrected geometry solves vacuum initial constraints in 1<r<3. No exterior completion is matched.",
+    "units": "kappa=8*pi*G=c=1",
+    "z_period": 6.283185307179586,
+    "matter": "One complex massless field represents two canonical real scalars; Pi=psi^-6 Pi_bar."
+  },
+  "timing_scope": "elapsed_seconds in refinement rows includes nonlinear solution, any convergence checkpoint and built-in physical validation, but excludes seed/basis assembly.",
+  "reproduction": {
+    "environment": ".\\.venv\\Scripts\\python.exe -B, from the time-travel workspace",
+    "weak_smooth_construction": "Use solve_case with epsilon=.03, padding=8, radius=3., source_radius=1., max_angular=8, taper_kind=\"smooth\"; warm-start degrees 40, 60, 80, 100, 120, 160, 200, 240 in sequence.",
+    "strong_smooth_construction": "Scale the weak240 coefficient vector by 1/.03**2 to initialize epsilon=1; solve degrees 240, 300, 360 at cap8, remap by (m,j,imaginary) into cap12, then solve degrees 360, 400, 440 at cap12. Each solve uses padding=8, radius=3, source_radius=1, taper_kind=\"smooth\".",
+    "angular_remapping_python": "import numpy as np\nfrom disk_basis import _modes\nold=dict(zip(_modes(old_degree,old_cap),old_coeff.reshape(-1,4)))\nnew_coeff=np.array([old.get(mode,np.zeros(4)) for mode in _modes(new_degree,new_cap)]).ravel()",
+    "saved_case_validation_python": "import numpy as np\nfrom disk_basis import _modes\nfrom ori_disk_constraints import validate_solution, projected_constraint_check\nwith np.load('ori_smooth_constraint_coefficients.npz') as f:\n    c=f['strong_coefficients']; d=int(f['strong_degree']); m=int(f['strong_max_angular'])\nprint(validate_solution(d,1.,c,radius=3.,source_radius=1.,max_angular=m,taper_kind='smooth')[0])\nold=dict(zip(_modes(d,m),c.reshape(-1,4)))\nfor angular,padding in [(16,8),(12,16)]:\n    expanded=np.array([old.get(mode,np.zeros(4)) for mode in _modes(d,angular)]).ravel()\n    print(projected_constraint_check(d,1.,expanded,padding=padding,radius=3.,source_radius=1.,max_angular=angular,taper_kind='smooth',batch_size=512))\n",
+    "fresh_cloud_python": "import json\nimport numpy as np\nfrom ori_disk_constraints import seed_data, scaled_basis, residual\nwith np.load('ori_smooth_constraint_coefficients.npz') as f:\n    degree=int(f['strong_degree']); cap=int(f['strong_max_angular']); coeff=f['strong_coefficients'].copy()\nassert degree==440 and cap==12\ntheta=np.r_[np.arange(4)*np.pi/2,(np.arange(41)+.2718)*2*np.pi/41]\nradii=np.unique(np.r_[np.linspace(0,3,301),3-10.**np.linspace(-8,-2,13),np.linspace(2.97,3,61),1-10.**np.linspace(-8,-1,15),1+10.**np.linspace(-8,-1,15)])\nx=(radii[:,None]*np.cos(theta)).ravel(); y=(radii[:,None]*np.sin(theta)).ravel()\nrng=np.random.default_rng(720481); rr=3*np.sqrt(rng.random(1733)); aa=rng.uniform(0,2*np.pi,1733)\nx=np.r_[x,rr*np.cos(aa)]; y=np.r_[y,rr*np.sin(aa)]\nfresh={'points':len(x),'max_H':0.,'max_M':0.,'square_half_width':2.1,'square_max_H':0.,'square_max_M':0.,'min_psi':float('inf'),'random_seed':720481}\nfor start in range(0,len(x),512):\n    xx=x[start:start+512]; yy=y[start:start+512]\n    data=seed_data(xx,yy,1.,source_radius=1.,taper_kind='smooth')\n    mats=scaled_basis(degree,xx,yy,3.,max_angular=cap,compact=True)\n    actual,H,M=residual(data,mats,coeff,physical=True,pointwise=True)\n    for key,samples in [('max_H',abs(H)),('max_M',M)]:\n        if actual[key]>fresh[key]:\n            j=int(np.argmax(samples)); fresh[key]=actual[key]; fresh[key+'_location']=[float(xx[j]),float(yy[j])]\n    fresh['min_psi']=min(fresh['min_psi'],actual['min_psi'])\n    mask=(abs(xx)<=2.1)&(abs(yy)<=2.1)\n    if mask.any():\n        fresh['square_max_H']=max(fresh['square_max_H'],float(np.max(abs(H[mask]))))\n        fresh['square_max_M']=max(fresh['square_max_M'],float(np.max(M[mask])))\nassert fresh['points']==19508 and max(fresh['max_H'],fresh['max_M'])<1e-7\nprint(json.dumps(fresh))\n"
+  },
+  "source_sha256": {
+    "disk_basis.py": "ba81c08f033843b0d5550382908a6767f306232d76f3288904d1a761c752816f",
+    "ori_disk_constraints.py": "295c8f79d2f47e9e684a8cd526013aa89354e2d04aa2bd75706ebfdb1c0b5b53"
+  },
+  "coefficients_file_sha256": "4aedd5b31fa743f1490ece2daaf116e0f69b58b63934a4663760e8a6da73e23f"
+}

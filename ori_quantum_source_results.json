@@ -1,0 +1,414 @@
+{
+  "model": "Massless scalar periodic image state on the fixed untwisted negative-mu Ori geometry; original coordinate order T,x,y,z; hbar=c=1",
+  "parameters": {
+    "a": "1/50",
+    "mu": "-11251/11250",
+    "nu": [
+      "227/75",
+      "223/75"
+    ]
+  },
+  "state_scope": "Analytically constructed quasifree Hadamard state only on the pre-horizon domain D/Gamma. Correct future-oriented cover modes, infrared distribution estimate, full regulated kernel/CCR, compact C-infinity image tails and Fejer positivity independently reviewed; proof in RESEARCH.md. This script checks finite nonsingular geometry and stress formulas, not that distributional proof",
+  "cover_prescription": "Cover W=sqrtDelta/(8*pi^2*sigma_+) with the original future orientation and no added smooth bisolution. Its massless Hadamard tail and subtracted cover stress vanish. Curvature-squared ambiguity tensors vanish by null alignment; gravitational couplings are fixed. Under this prescription the nonidentity stress is the full renormalized stress on D/Gamma",
+  "winding_null_pairs": [
+    {
+      "winding": 1,
+      "epsilon": 0.1,
+      "point": [
+        -0.05,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        -0.002376765504507474,
+        0.0,
+        0.0,
+        -0.19062035960864973
+      ],
+      "local_sigma": 0.009567860817362278,
+      "winding_sigma_residual": -9.261253620206679e-63,
+      "singularity_prefactor": 0.0017203879205918045
+    },
+    {
+      "winding": 1,
+      "epsilon": 0.01,
+      "point": [
+        -0.005,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        -0.00021823028723204986,
+        0.0,
+        0.0,
+        -0.019900661706336167
+      ],
+      "local_sigma": 9.567860817362278e-05,
+      "winding_sigma_residual": 0.0,
+      "singularity_prefactor": 0.0015860405027199162
+    },
+    {
+      "winding": 1,
+      "epsilon": 0.001,
+      "point": [
+        -0.0005,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        -2.1628566091018012e-05,
+        0.0,
+        0.0,
+        -0.0019990006661670663
+      ],
+      "local_sigma": 9.567860817362278e-07,
+      "winding_sigma_residual": 0.0,
+      "singularity_prefactor": 0.0015725432500020508
+    },
+    {
+      "winding": 2,
+      "epsilon": 0.1,
+      "point": [
+        -0.05,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        -0.00010270935024393938,
+        0.0,
+        0.0,
+        -0.19062035960864973
+      ],
+      "local_sigma": 0.00998132557268292,
+      "winding_sigma_residual": 0.0,
+      "singularity_prefactor": 7.788634176852175e-05
+    },
+    {
+      "winding": 2,
+      "epsilon": 0.01,
+      "point": [
+        -0.005,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        -9.430585795125343e-06,
+        0.0,
+        0.0,
+        -0.019900661706336167
+      ],
+      "local_sigma": 9.98132557268292e-05,
+      "winding_sigma_residual": -2.426280446079958e-63,
+      "singularity_prefactor": 7.152586681269346e-05
+    },
+    {
+      "winding": 2,
+      "epsilon": 0.001,
+      "point": [
+        -0.0005,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        -9.346550872198484e-07,
+        0.0,
+        0.0,
+        -0.0019990006661670663
+      ],
+      "local_sigma": 9.98132557268292e-07,
+      "winding_sigma_residual": -1.516450813497691e-64,
+      "singularity_prefactor": 7.088970126417338e-05
+    }
+  ],
+  "winding_interpretation": "Locally spacelike axis pairs approach the same base point, but one nonzero deck image is null related. Its connecting axis null geodesic stays inT<0. Nonzero kernel amplitude cannot be removed by the local zero-winding subtraction",
+  "scalar_square_coefficient": "0.0000742950869542042425750675364707671410811735644",
+  "scalar_square_formula": "phi2=coefficient/(-T) on the axis in D/Gamma under the stated cover subtraction",
+  "TT_coefficient": "0.0000070022367741811829879809029702218467404525509",
+  "TT_formula": "T_TT=C_TT/T^3<0 forT<0; C_TT=sum_n>=1 sqrtDelta_n/[64*pi^2*sinh(n*pi/2)^4]>0",
+  "full_axis_coefficients": {
+    "TT": "0.0000070022367741811829879809029702218467404525509",
+    "Tz": "0.00000371836929503269485449508878239796773982454273",
+    "xx": "0.0000396576573240943771466094384591494466725409552",
+    "yy": "0.0000396719931477071451996354193284823935302399564",
+    "zz": "0.0000391423552904965340274079961622367859456351249",
+    "trace": "0.000078895148655917315625235583193057751463584377",
+    "phi2": "0.0000742950869542042425750675364707671410811735644"
+  },
+  "full_axis_tensor": "Covariant(T,x,y,z): [[a/T^3,0,0,b/T^2],[0,cx/T^2,0,0],[0,0,cy/T^2,0],[b/T^2,0,0,d/T]]. Coefficients keysTT,Tz,xx,yy,zz; trace=trace_coefficient/T^2",
+  "coefficient_formula": "Forh=n*pi/2,s=sinhh: f=sqrt(nux*nuy)/(64*pi^2*s*sqrt(sinh(nux*h)*sinh(nuy*h))); L=cothh+sum(nui*coth(nui*h))/2; Q=cschh^2+sum(nui^2*csch(nui*h)^2)/2. Raw mixed coefficients a=f*cschh^2,b=f*(L*cothh+cschh^2)/4,ci=f*nui/(4*s*sinh(nui*h)),d=f*(L^2+Q)/8; j=a-2b+cx+cy. Stress coefficients a,b+j/2,cx-j/2,cy-j/2,d+j/2; trace=-j",
+  "coefficient_tail_bound": "1.64767034727e-86",
+  "tail_scope": "All seven coefficient sums after30 terms, bounded using monotone hyperbolic factors and a geometric f tail. Does not include arithmetic rounding; each tensor component also requires its displayed power ofT",
+  "nonminimal_coupling": {
+    "convention": "T_ab(xi)=T_ab(0)+xi*(G_ab*Q+g_ab*BoxQ-nabla_a nabla_b Q), Q=<phi^2>; same field equation becauseR=0",
+    "TT_formula": "[a+2*xi*Cphi]/T^3",
+    "trace_formula": "(1-6*xi)*minimal_trace",
+    "minimal_trace_positive_identity": "Each paired coefficient -j=f*[1/2+sum_i nui*(cosh(h)*cosh(nui*h)-1)/(4*sinh(h)*sinh(nui*h))]>0 for h,nui>0",
+    "xi_required_for_zero_trace": "1/6",
+    "conformal_TT_coefficient": "0.000031767265758915930513003415127144227100843739",
+    "conclusion": "For this image state, zero trace forcesxi1/6 and leavesT_TT<0. No realxi gives the required negative-null tensor, assuming the stated cover/renormalization prescription"
+  },
+  "positive_trace_identity_max_error": "1.3494013e-79",
+  "transverse_scalar_square": {
+    "Hx": "0.0000423011722159022475179833232616208353884253377",
+    "Hy": "0.0000411940381417281411574203066537275264575698519",
+    "formula": "On axis Q_ii=-H_i/T^2; H_i=sum_n phi2_n*[nui*(coshh*cosh(nui*h)-1)/(sinhh*sinh(nui*h))-1]/4",
+    "independent_first_pair_hessian_error": "1.4243352e-65"
+  },
+  "curvature_coupling_coefficient_increments": {
+    "TT": "0.000148590173908408485150135072941534282162347129",
+    "Tz": "0.000194937840788936752538004934621499073467755536",
+    "xx": "-0.000115489125095932383732487843124494667538743416",
+    "yy": "-0.000116596259170106490093050859732387976469598902",
+    "zz": "0.000269239531750870257712412477095508060517025205"
+  },
+  "NEC_compensation": {
+    "null_family": "s=-T>0; k=(s*(1+Rx^2+Ry^2)/2,sqrt(s)*Rx,sqrt(s)*Ry,1), so g(k,k)=0; also test kz=0 separately",
+    "contraction": "s*Tscalar(k,k)=-A*(1+q)^2/4+B*(1+q)+Cx*Rx^2+Cy*Ry^2-D, q=Rx^2+Ry^2",
+    "minimal_witness_Rx_Ry": [
+      0,
+      2
+    ],
+    "minimal_positive_contraction": "0.0000943734839368631273687284814997960847466189712",
+    "minimal_result": "At every s>0 this direction has positive scalar null stress but negative target mu/eta, so the compensator must violate the NEC there for every finite positive eta",
+    "conformal_axis_coefficients": {
+      "TT": "0.000031767265758915930513003415127144227100843739",
+      "Tz": "0.0000362080094265221536108292445526478133177837988",
+      "xx": "0.0000204094698081056465245281312717336687494170525",
+      "yy": "0.000020239283286022730184126942706417730785306806",
+      "zz": "0.0000840156105823082436461434090114881293651393258"
+    },
+    "conformal_maximum_scaled_null_contraction": "-0.00000351809710735212720540231612413628306321814606",
+    "conformal_maximum_direction": "xx",
+    "conformal_maximum_R_squared": "2.56451698829240960061787564595788754549372535",
+    "conformal_local_condition": "All axis null contractions of the required compensator are nonnegative iff abs(mu)/eta <= -conformal_maximum_scaled_null_contraction/s. Necessary local matter test only; does not construct a source",
+    "physical_normalization": "For ds_phys^2=ell^2 ds_model^2, eta=8*pi*l_P^2/ell^2 with l_P^2=hbar*G/c^3",
+    "conformal_ell_bound_in_Planck_lengths_at_s1": "0.00940274244094611311006294263931",
+    "length_bound_scope": "Local NEC condition implies ell/l_P <= this coefficient/sqrt(s). This formal scale bound does not establish semiclassical control or human passage",
+    "complete_domain_witness": "With Rx=Ry=0, C0(xi)=-A/4+B-D+xi*(mu-1/2)*Cphi. Compensator contraction mu/eta-C0/s is negative whenever s>eta*max(0,-C0)/abs(mu)",
+    "complete_domain_exclusion": "For every fixed finite xi and eta>0 finite, take Rx=Ry=0. Scalar contraction is finite C0(xi)/s while target is mu/eta<0. As s grows unbounded in D, required compensator becomes negative. Thus no NEC-obeying compensator repairs this state on the entire D; finite intervals, altered early states, other geometries and backreaction are not excluded"
+  },
+  "first_order_response": {
+    "scope": "Leading Einstein-term optical response conditional on regular aligned rank-one classical support, plus exact quantum stress measurements on the prescribed background. Neither is a self-consistent backreacted solution",
+    "null_geometry": "k=partial_T is null and affine, k_flat=-dz is closed, and transverse optical matrix is zero. All checked symbolically",
+    "support_response": "delta[rho*(l.k)^2]=0 when (l.k)_0=0, for regular first-order variations of aligned rank-one null support; other support models need their own response",
+    "first_order_optics": "beta=eta*A_xi, s=-T; initial theta1(-s0)=0 and area ratio1. Then theta1=beta*(1/s^2-1/s0^2)/2; area/area0=1+beta*(s0-s)^2/(2*s*s0^2)+O(beta^2) on fixed interior intervals",
+    "optical_control": "For 0<s<=s0, chi=abs(beta)/s bounds the displayed first-order area change by chi/2. theta1^2/(2*abs(deltaRkk))=chi*(1-s^2/s0^2)^2/8. This is not a bound on full metric, unknown shear or state-response errors",
+    "prescribed_optical_ODE": "For positive epsilon=beta/s0, radius b obeys b_rr=epsilon*b/(2*r^3), b(1)=1,b_r(1)=0. Bessel solution and numerical integration compared; imposed zero shear and fixed Ricci profile are not a solved gravity system",
+    "prescribed_optical_checks": [
+      {
+        "epsilon": 0.001,
+        "r": 0.1,
+        "linear_area": 1.00405,
+        "prescribed_area": 1.0040564817245063,
+        "radius_ODE_error": 2.220446049250313e-15,
+        "area_remainder": 6.481724506244012e-06
+      },
+      {
+        "epsilon": 0.002,
+        "r": 0.1,
+        "linear_area": 1.0081,
+        "prescribed_area": 1.0081259487334129,
+        "radius_ODE_error": 3.552713678800501e-15,
+        "area_remainder": 2.594873341295408e-05
+      },
+      {
+        "epsilon": 0.01,
+        "r": 0.1,
+        "linear_area": 1.0405,
+        "prescribed_area": 1.0411531056931838,
+        "radius_ODE_error": 6.661338147750939e-15,
+        "area_remainder": 0.0006531056931836622
+      }
+    ],
+    "observer_formula": "delta=-lambda>0; P=A*(2q+delta)^2-2B*delta*(2q+delta)+D*delta^2; rho_quantum_model=-16*P/[delta^3*(4q+delta)^3]",
+    "observer_physical_units": "rho_quantum=(hbar*c/ell^4)*rho_model; rho_classical=c^4/(8*pi*G*ell^2)*4mu/(4q+delta)^2; eta=8*pi*l_P^2/ell^2",
+    "source_ratio": "R=4*eta*P/[abs(mu)*delta^3*(4q+delta)]; R=1 has a unique positive root for both tested couplings. It measures source comparability for this observer, not a universal validity threshold",
+    "observer_asymptotic": "rho_quantum_model~-A/(q*delta^3), R~4*eta*A*q/(abs(mu)*delta^3). At R=1, ell*delta~(32*pi*A*q/abs(mu))^(1/3)*l_P^(2/3)*ell^(1/3)",
+    "observer_cases": {
+      "minimal": {
+        "observer_q": "0.70710678118654752440084436210484904",
+        "events": [
+          {
+            "eta": "1.0",
+            "delta": "0.027147985434349842182059324781786035",
+            "s": "0.019380777874468311005782532870237859",
+            "exact_ratio": "1.0",
+            "leading_delta": "0.02705501180303256686353371673901379",
+            "leading_relative_error": "0.00342469725947",
+            "null_area_first_order_change": "0.00017371463025702458812",
+            "optical_chi": "0.00036129802526686670318"
+          },
+          {
+            "eta": "1.0e-6",
+            "delta": "0.00027055769137680199213750966889619298",
+            "s": "0.00019133147864080456847745581653415061",
+            "exact_ratio": "1.0",
+            "leading_delta": "0.0002705501180303256686353371673901379",
+            "leading_relative_error": "2.79916140539e-5",
+            "null_area_first_order_change": "1.8291703967401537854e-8",
+            "optical_chi": "3.6597411068603122278e-8"
+          },
+          {
+            "eta": "1.0e-12",
+            "delta": "0.0000027055019359032766414495404126366456",
+            "s": "0.0000019130805953257202557867309487225092",
+            "exact_ratio": "1.0",
+            "leading_delta": "0.000002705501180303256686353371673901379",
+            "leading_relative_error": "2.79282749692e-7",
+            "null_area_first_order_change": "1.8300875560676585133e-12",
+            "optical_chi": "3.6601891165954695456e-12"
+          },
+          {
+            "eta": "1.0e-60",
+            "delta": "2.7055011803032566863534472321511066e-22",
+            "s": "1.9130782311006409867534306927638995e-22",
+            "exact_ratio": "1.0",
+            "leading_delta": "2.705501180303256686353371673901379e-22",
+            "leading_relative_error": "2.79276351005e-23",
+            "null_area_first_order_change": "1.830096819969725924e-44",
+            "optical_chi": "3.6601936399394518479e-44"
+          }
+        ],
+        "positivity_determinant": "2.602577694289382720632817e-10",
+        "proper_length_asymptotic_coefficient": "0.07924910160920551586760767"
+      },
+      "conformal": {
+        "observer_q": "0.70710678118654752440084436210484904",
+        "events": [
+          {
+            "eta": "1.0",
+            "delta": "0.044445128017042314568313220188768907",
+            "s": "0.031921293762667652724722301331184579",
+            "exact_ratio": "1.0",
+            "leading_delta": "0.044788041901452691639665867340326829",
+            "leading_relative_error": "0.00771544373275",
+            "null_area_first_order_change": "0.00046632713878219302129",
+            "optical_chi": "0.00099517475685989081482"
+          },
+          {
+            "eta": "1.0e-6",
+            "delta": "0.0004478435858659523649431090586206111",
+            "s": "0.00031672337744606510519856462416994483",
+            "exact_ratio": "1.0",
+            "leading_delta": "0.00044788041901452691639665867340326829",
+            "leading_relative_error": "8.22455646056e-5",
+            "null_area_first_order_change": "5.0118097265503042753e-8",
+            "optical_chi": "1.0029971900108821398e-7"
+          },
+          {
+            "eta": "1.0e-12",
+            "delta": "0.0000044788005042294944576301841907294274",
+            "s": "0.0000031669952230358930291349363443038832",
+            "exact_ratio": "1.0",
+            "leading_delta": "0.0000044788041901452691639665867340326829",
+            "leading_relative_error": "8.22969402461e-7",
+            "null_area_first_order_change": "5.0153319327120289114e-12",
+            "optical_chi": "1.0030727399854968876e-11"
+          },
+          {
+            "eta": "1.0e-60",
+            "delta": "4.4788041901452691639662181398273994e-22",
+            "s": "3.1669928144584430348589437652142553e-22",
+            "exact_ratio": "1.0",
+            "leading_delta": "4.4788041901452691639665867340326829e-22",
+            "leading_relative_error": "8.22974592403e-23",
+            "null_area_first_order_change": "5.0153675142373420467e-44",
+            "optical_chi": "1.0030735028474684093e-43"
+          }
+        ],
+        "positivity_determinant": "1.357926282634658435080478e-9",
+        "proper_length_asymptotic_coefficient": "0.1311924056572663862451079"
+      }
+    },
+    "remaining": "Full metric/constraint evolution, support conservation, metric-dependent state response and stress correlations, shear, and higher-curvature gravitational terms are uncomputed. Small optical area alone cannot establish stability; fixed-background divergence is not an injury or horizon-destruction prediction",
+    "sources": [
+      "https://arxiv.org/pdf/math/9909158 (null optical equation 2.4)",
+      "https://arxiv.org/pdf/gr-qc/0209075 (semiclassical response and validity, section III)"
+    ]
+  },
+  "abiotic_test_probe": {
+    "payload": "Neutral, nonspinning passive classical tracer. Linear Jacobi proxy for initially comoving unbound tracers; the1 micrometre numbers are infinitesimal-separation rescalings until ell is specified. Require separation small against local curvature/variation scales, e.g. d0/ell much less than1 here. Not a bonded grain or organic tissue model",
+    "geometry": "Same critical untwisted prescribed classical metric; q=1/sqrt2 is the positive magnitude of the specific Killing momentum, with p_z/m=-q in model units. Same initial four-velocity is held fixed when test mass changes",
+    "trajectory": "T=q*lambda-lambda^2/4, z=-2log(1-lambda/(4q)), x=y=0. Point-particle mass cancels from the geodesic equation when self-force and nongravitational forces are neglected",
+    "parallel_frame": "The transverse unit vectors partial_x,partial_y are parallel along the central trajectory; E_x=2*(mu-a)/(4q-lambda)^2, E_y=2*(mu+a)/(4q-lambda)^2, longitudinal eigenvalue0",
+    "separation_formula": "Start lambda=-1 with separation ratio1 and derivative0. For nu_i, p_plus/minus=(1+/-nu_i)/2, r=(4q-lambda)/(4q+1): f_i=(p_plus*r^p_minus-p_minus*r^p_plus)/nu_i",
+    "Jacobi_equation": "f_i_second=-(E_i)*f_i=(nu_i^2-1)*f_i/[4*(4q-lambda)^2]",
+    "directions": {
+      "x": {
+        "nu": "3.026666666666666666666667",
+        "classical_boundary_separation_factor": "1.0860282770937247600234510556253886",
+        "pre_boundary_factor_at_lambda_minus001": "1.0840988157064770871950856086038652",
+        "change_for_initial_1_micrometre_in_nanometres": "86.028277093724760023",
+        "tidal_eigenvalue_at_classical_boundary": "-0.2550222222222222222222222",
+        "Jacobi_residual_max": "0.0",
+        "independent_ODE_error": 4.440892098500626e-16
+      },
+      "y": {
+        "nu": "2.973333333333333333333333",
+        "classical_boundary_separation_factor": "1.082605610601138389278411947401401",
+        "pre_boundary_factor_at_lambda_minus001": "1.0807540156334510042171859253838682",
+        "change_for_initial_1_micrometre_in_nanometres": "82.605610601138389278",
+        "tidal_eigenvalue_at_classical_boundary": "-0.2450222222222222222222222",
+        "Jacobi_residual_max": "1.9446923e-62",
+        "independent_ODE_error": 0.0
+      }
+    },
+    "size_scaling": "Absolute differential displacement and tidal acceleration scale linearly with initial separation; fractional unbound-tracer separation change is independent of that size. Physical delta_acceleration_i=-c^2*E_i*separation_i/ell^2",
+    "time_scale": "Physical proper time is ell*lambda/c; ell is the model length normalization, not automatically an aperture or grain size",
+    "boundary_scope": "lambda0 is only the smooth classical boundary limit. The scalar state/backreaction already obstructs treating this as a validated physical crossing; no calendar-date map is supplied",
+    "remaining": "Internal bonding, elastic stress, heating, electromagnetic interactions, quantum wavepacket spread and self-force are omitted. Scaling a tracer result to a grain, molecule, animal or human requires separate tests. Decreasing payload mass or size does not change the source-matching or horizon-regularity conditions",
+    "sources": [
+      "https://arxiv.org/abs/1102.0529 (point-particle/small-body approximation and self-force)",
+      "https://www.preposterousuniverse.com/wp-content/uploads/grnotes-three.pdf (geodesic deviation, equation3.113)"
+    ]
+  },
+  "independent_four_image_pair_full_tensor_error": "5.6132631e-65",
+  "generic_full_kernel_KG_residuals": [
+    "1.4243352e-65",
+    "2.9673649e-67",
+    "2.9673649e-67",
+    "4.7477839e-66"
+  ],
+  "independent_first_image_pair_TT_error": "3.5608379e-66",
+  "first_image_pair_stress_at_T_minus1": [
+    [
+      "-0.0000070017390870217187488111460961074183",
+      "0.0",
+      "0.0",
+      "0.000003718119753832291567280412013555345"
+    ],
+    [
+      "0.0",
+      "0.000039590974242856096399656208517000537",
+      "0.0",
+      "0.0"
+    ],
+    [
+      "0.0",
+      "0.0",
+      "0.00003960530996217854813864201014699635",
+      "0.0"
+    ],
+    [
+      "0.000003718119753832291567280412013555345",
+      "0.0",
+      "0.0",
+      "-0.000039075733318610865511040444419219594"
+    ]
+  ],
+  "target_comparison": "Required Ori source mu/kappa*dz^2 has T_TT=0. This scalar state alone cannot equal that target for any real curvature coupling xi under the stated prescription. Other states, additional sources and changed geometry are not excluded",
+  "limitations": "Analytic state construction holds strictly before the horizon on the prescribed geometry; it is not experimental preparation or a solved source/geometry pair. Gravitational backreaction, other states, additional matter, and stable traversal have not been solved",
+  "sources": [
+    "https://arxiv.org/pdf/1202.0540 (Jacobi/worldfunction framework)",
+    "https://arxiv.org/pdf/2309.02252 (plane-wave mode/Wightman method)",
+    "https://arxiv.org/pdf/1401.2026 (free-field state requirements)",
+    "https://arxiv.org/pdf/gr-qc/0404074 (scalar stress convention)",
+    "https://arxiv.org/pdf/gr-qc/9603012 (horizon quantum-regularity obstruction)"
+  ]
+}
