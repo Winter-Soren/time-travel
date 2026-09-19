@@ -88,8 +88,9 @@ fallback. Give honest confidence in checks, never promise physical success.
   match. No historical scientific suites rerun. CRLF sourcebytes preserved;
   explicitcr-at-eol whitespaceattribute avoids misclassifying CR as trailing
   spaces. Eleven older whitespace findings retained to preserve sourcehashes.
-  Finish push verification
-  after current figure/docs are frozen; no external PR requested.
+  Initial snapshot0df06e69145690bed9c68812c401079170ccbdc7 pushed to main;
+  GitHub API verified matching remote SHA, README present, isPrivate=true,
+  defaultbranchmain. Working tree clean at verification. No PR requested.
 - Incoming project task01a0bb22-816a-7243-8021-4ac752cc8836 finished bounded
   reference and actual saved-collar increments; no further writes planned.
   Exact +sigma.Pi monopole modes, positive E, unit signed sphere flux;
@@ -144,6 +145,15 @@ fallback. Give honest confidence in checks, never promise physical success.
   PDF4e37966ed119ef032f31204bb12c0f42cfff830fe9b560c01689097cbb6c8545.
 - Next89 physics: solve variable-field exterior complex return matrix with
   actual finite-mouth mode matching, continuum, phase and error controls.
+  Concrete next analytic substep: coupled_misner is read-only auditing whether
+  the exact point-pair Aphi on spheres b<d admits a normalized angular mode
+  h_pair proportional to h_mono*[(D+1+epsilon)/(D+1-epsilon)]^(q/2),
+  D=sqrt(1+2epsilon cos(theta)+epsilon²),epsilon=b/d. If valid this absorbs
+  the partner ANGULAR residual exactly; radial derivatives of the normalized
+  angular basis remain, and no global transport/metric claim follows.
+  Root provisional stable pole-relative logfactor is(q/2)log1p[2epsilon²
+  (1-cos(theta))/((1+epsilon+D)(D+1-epsilon)(1+epsilon))]. Verify independently
+  before implementing; keep frozen88artifacts unchanged. Agent has no writes.
   Then local renormalized stress -> semiclassical geometry -> stability.
   These prepared components are not yet that coupled physical solution.
   No background bulk simulation is running; do not repeat87 or reimport.
