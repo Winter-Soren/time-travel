@@ -1,5 +1,214 @@
 # Reproduction and coupled-model iterations
 
+## Connected two-mouth Weyl calculation — increment90
+
+This increment connects two finite mouth cuts through a two-dimensional
+magnetic exterior. The test is q=1, mu=1/2, separation d=1, mouth radius
+b=.2, and positive energy E=.4 in units hbar=c=d=1. It tests transport of
+the proposed supporting field; it is not a material tracer or a human
+traversal simulation. It is also distinct from the saved q=100000 geometry.
+
+The finite-mouth completion is explicit: isolated-monopole angular modes
+attached to constant-radius cylindrical leads. The exterior contains the
+full point-pair potential up to the outer matching surface, with a free
+outgoing continuation beyond it. The mouth completion and the outer
+magnetic-tail truncation are assumptions to test, not a derived physical
+throat or a globally self-consistent Maxwell/Einstein solution.
+
+![Computed connected field, conditional ledger and unresolved radius dependence](exterior_boundary_progress.png)
+
+### Weighted equation and numerical current accounting
+
+The original reduced spinor f has measure drho dz. Using u=f/sqrt(rho)
+gives measure rho drho dz and removes fractional axis powers from the
+q=1 basis. Multiplying the stationary Weyl equation by i gives
+\[
+ \sigma_x\partial_\rho u+\sigma_z\partial_z u+
+ \frac{\sigma_x/2+i\sigma_y(\mu-A_\phi)}{\rho}u-iEu=0,
+\qquad
+ A_\phi=\frac q2\left(\frac{z+d/2}{r_l}-\frac{z-d/2}{r_u}\right).
+\]
+The sigma_x/2 term is essential: it cancels the derivative of the rho
+weight in integration by parts. Zero weight at the axis alone is not an
+operator-domain condition. The forbidden component is constrained there:
+for q=1, mu=1/2, u_minus vanishes on the outer axis segments and u_plus
+vanishes between the mouths. These select the regular leading axis powers.
+
+[two_mouth_mesh.py](two_mouth_mesh.py) triangulates the half-disk with both
+mouth half-disks removed. Its circular cuts are polygonal approximations;
+geometry error is reported and reduced with h. The outward computational
+normal points into each excised mouth. On a face set
+Gamma=n_rho sigma_x+n_z sigma_z and P_plus/minus=(I+/-Gamma)/2.
+The piecewise-linear discontinuous Galerkin equation uses the strong face
+correction P_minus(u_left-u_right), or P_minus(u-g) at a boundary.
+
+For real E and real magnetic potential, the discrete identity is
+\[
+ \|g\|_\partial^2=
+ \|P_+u\|_\partial^2+
+ \sum_{\rm internal\ faces}\|[u]\|_f^2+
+ \|P_-u-g\|_\partial^2.
+\]
+Every face norm includes rho ds. The final two terms are numerical jump
+loss and weak boundary mismatch. They must be displayed separately and
+converge away; they are not physical absorption. Boundary feedback changes
+g, so the ledger must use the total incident trace after feedback, not
+only the injected source.
+
+### Outgoing outer waves and declared mouth leads
+
+With spinor harmonics satisfying sigma_r Omega_(+/-n)=-Omega_(-/+n), the
+positive-energy outgoing free wave is proportional to
+\[
+ h_{n-1}^{(1)}(Er)\Omega_{-n}-i h_n^{(1)}(Er)\Omega_{+n}.
+\]
+This phase follows the first-order radial equations in
+[Holder, Huang and Ostrovsky, Appendix A](https://arxiv.org/pdf/1704.05481)
+and is checked independently by Cartesian differentiation. Let a_plus and
+a_minus be coefficients of normalized radial characteristic harmonics.
+At r=R the exact free map is
+\[
+ a_- =\gamma_n(ER)a_+,\qquad
+ \gamma_n=\frac{h_{n-1}^{(1)}-i h_n^{(1)}}{h_{n-1}^{(1)}+i h_n^{(1)}}.
+\]
+In particular gamma_1=-1/(1-2iER): setting a_minus=0 would not be
+transparent even for a free outgoing spherical wave. A stable inverse
+Hankel-ratio recurrence avoids huge intermediate functions.
+
+At a mouth the lead coordinate x increases into the excision, so
+Gamma=-sigma_r and H_lead=-i Gamma partial_x+Kc. The nonzero q=1 angular
+pairs have Kc=m_n sigma_x, m_n=sqrt(n(n+1))/b, n>=1; the underlying
+monopole spectrum is given by
+[Borokhov, Kapustin and Wu, section 4](https://arxiv.org/pdf/hep-th/0206054).
+For a lead with no incoming wave, its characteristic coefficients obey
+\[
+ a_- =\beta_n(E)a_+,\qquad
+ \beta_n=\frac{m_n}{E+p_n},\quad
+ p_n=\sqrt{(E+i0)^2-m_n^2},\quad \operatorname{Im}p_n\ge0.
+\]
+Below threshold this describes a decaying, zero-flux evanescent field.
+There is one unpaired zero mode: incoming at the upper mouth, outgoing at
+the lower mouth in this Weyl sector. No second opposite zero-mode chirality
+is inserted. With E=.4 all nonzero mouth modes are evanescent.
+
+[spherical_weyl_leads.py](spherical_weyl_leads.py) implements both maps,
+their angular bases, unit-flux conventions, and independent differential
+and normalization checks. Its lower zero-mode phase is
+e_minus=(-sin(theta/2),cos(theta/2)); it differs by an overall minus from
+the earlier isolated incoming-mode helper. That reference phase must be
+carried into any later throat loop, rather than interpreting it as physics.
+
+The solver projects these bases on polygonal face characteristics and
+orthonormalizes them, retaining diagonal gamma/beta in that discrete basis.
+This preserves contraction and the flux ledger, but mixes angular labels
+on a finite mesh. It is an additional geometry approximation tested with
+mesh refinement and a known free outgoing solution. It is not exact
+spherical matching on each coarse chord. Power outside the retained
+angular basis must also be reported as an unresolved modal remainder.
+
+### Controls and interpretation
+
+The independent free controls include a regular cylindrical Bessel wave
+and an outgoing Green spinor sourced inside an excised mouth:
+\[
+ \Psi=(E-i\boldsymbol\sigma\cdot\nabla)
+ \frac{e^{iE|\mathbf r-\mathbf r_0|}}{4\pi|\mathbf r-\mathbf r_0|}
+ \begin{pmatrix}1\\0\end{pmatrix}.
+\]
+The latter has total outward flux E^2/(2pi). Its analytic incoming traces
+are applied on both mouth cuts solely as a solver control; it is not the
+physical single-mouth injection experiment. These controls test complex
+wave propagation, not just an algebraic conservation identity.
+
+The connected calculation in [exterior_boundary_map.py](exterior_boundary_map.py)
+passes **14 controls** with warnings treated as errors; the recorded run
+took 29.89 seconds. Arbitrary-field integration by parts agrees to relative
+4.99e-16, independently of the linear solve. The Bessel relative L2 errors
+fall from .002154 to .000425; the outgoing Green errors fall from .05197
+to .006358 over four meshes. Passing controls does not certify the omitted
+exterior or every channel error.
+
+For the representative R=4, h=.035, 12-mode calculation,
+\[
+ T=0.4512802403+0.6227268563i.
+\]
+Its unit-input ledger is:
+
+| Contribution | Flux or remainder |
+| --- | ---: |
+| Lower-mouth zero mode, abs(T)^2 | .5914425928 |
+| Retained outgoing free-exterior modes | .4068161443 |
+| Unrepresented outgoing boundary modes | .0005861462 |
+| DG jumps and weak incoming mismatch | .0011551166 |
+
+The unrounded entries sum to one within 8.9e-16. The nonzero mouth modes
+carry no net flux to roundoff because all are evanescent at this energy.
+The last two rows are numerical/reconstruction remainders; they are not
+additional physical reservoirs.
+
+At fixed R=2, decreasing h=.12,.08,.05,.035 reduces numerical loss from
+.0236155 to .0012350. Increasing the angular cutoff from 8 to 12 at h=.05
+changes complex T by 2.63e-7. However, at **fixed h=.05 and cutoff 12**:
+
+| Magnetic-field cutoff radius R | Lower-mode flux |
+| ---: | ---: |
+| 2 | .64868418 |
+| 4 | .58987774 |
+| 8 | .59480860 |
+
+The complex-amplitude changes are .03768 and .01283, compared with .001052
+for the available R=4 mesh refinement. This nonmonotonic radius dependence
+is material: **infinite-exterior convergence is unresolved**. The saved
+JSON sets `outer_radius_convergence_certified` to false. Three energies
+E=.1,.4,1 at R=4,h=.05 also give different amplitudes and phases; they are
+samples, not a complete spectrum for a vacuum calculation.
+
+Reproduce the focused calculation without rerunning the older suites:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 two_mouth_mesh.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 spherical_weyl_leads.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 exterior_boundary_map.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 -c "from quantum_horizon_plot import exterior_boundary_progress; exterior_boundary_progress()"
+```
+
+The connected script writes its [results](exterior_boundary_map_results.json),
+including source hashes, all controls, raw complex boundary traces and one
+representative spatial field. Source/input hashes identify the model used.
+
+The remaining requirements are convergence of the connected transmission
+amplitude under spatial, angular and outer-radius refinement; extension
+to the target charge and actual curved mouth physics; and a complete
+state/spectrum before computing quantum stress. A successful conditional
+scattering calculation alone does not create or stabilize a passage.
+**13 September 2027 to 12 September 2027 remains unproved.**
+
+The next tail calculation can avoid a very large two-dimensional mesh.
+For r>d/2 expand the rescaled field in the free characteristic harmonics
+Phi_plus/minus=sqrt(2pi) eta_plus/minus. Project the *full* pair potential:
+\[
+ C(r)=\frac{\operatorname{diag}(n)}r+\frac{iJ(r)}r,\qquad
+ J_{nm}=\int_{-1}^1\Phi_{+,n}^\dagger\sigma_y\Phi_{-,m}
+                  \frac{A_\phi(r,c)}{\sqrt{1-c^2}}\,dc.
+\]
+Then a'=iEa+Cb, b'=C^dagger a-iEb, so the outward boundary relation b=Za
+obeys
+\[
+ Z'=C^\dagger-2iEZ-ZCZ.
+\]
+Starting from the free outgoing map at a larger radius L and integrating
+inward would retain magnetic propagation outside the DG matching sphere.
+The finite-mode generator preserves diag(I,-I); for real positive energy,
+I-Z^dagger Z remains positive for an exact propagated outgoing subspace.
+This gives a useful check against numerical failure without clipping singular
+values. These equations have been independently checked algebraically;
+numerical implementation and refinement in L, angular modes and integration
+tolerance are the next unfinished work. A general matrix Z can reuse the
+existing solver through its singular-value decomposition.
+For mu=1/2 an exact normalization check is
+C_11=1/r-qd/(3r^2), valid for r>d/2. C is generally nonsymmetric: keep its
+Hermitian transpose in both equations rather than replacing it by C.
+
 ## Exact angular matching and a local correction bound — increment89
 
 The second magnetic focus can be included exactly in the angular modes on

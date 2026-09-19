@@ -8,8 +8,12 @@ A computational research workbench for testing proposed chronology-changing geom
 
 The present direction tests whether charged fermions actually return through the magnetic exterior used in an idealized traversable-wormhole construction. A field-line picture alone cannot determine the spinor's return amplitude, phase, or quantum stress.
 
+A connected **q=1** model now calculates complex transmission between two finite mouths with explicitly chosen cylindrical leads. Its flux budget separates outgoing channels from numerical loss. Changing the radius where the magnetic exterior is cut off still changes the answer materially; the complete exterior return map remains unresolved.
+
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Connected exterior solve](exterior_boundary_map.py) · [results](exterior_boundary_map_results.json) | Full two-dimensional point-pair field between finite mouths; regular-axis conditions, modal lead matching, independent free controls and mesh/channel/radius comparisons | A conditional complex transmission amplitude with a closed flux ledger; the outer magnetic tail and actual curved throat are unresolved |
+| [Spherical lead maps](spherical_weyl_leads.py) · [two-mouth mesh](two_mouth_mesh.py) | Exact free outgoing partial waves, explicit q=1 product-lead modes, and a conforming polygonal mesh with geometry refinement | Boundary data and geometry for the connected test; finite facets introduce an additional controlled-by-refinement approximation |
 | [Spinful return benchmark](spinful_return.py) · [results](spinful_return_results.json) | Exact reduced Weyl-operator identities, transverse zero modes and their normalization, plus short unitary two-dimensional evolution with refinement controls | A baseline for testing the magnetic guiding approximation; the propagation box is periodic |
 | [Incoming modes](incoming_modes.py) · [report](INCOMING_MODES.md) | Isolated-monopole reference modes, gauge covariance, unit flux, positive-energy pulse, and a bounded partner-field residual at the saved model's collar | Incident reference data and one quantified matching term; the full curved two-mouth matching remains unresolved |
 | [Exact angular collar modes](dipole_collar_modes.py) · [results](dipole_collar_modes_results.json) | The partner magnetic focus is included exactly in the local angular equation; independent full-operator and normalization checks quantify the remaining radial residual | About 158-fold reduction of the local residual at the saved sphere; no accumulated transport-error bound |
@@ -17,11 +21,11 @@ The present direction tests whether charged fermions actually return through the
 | [Open-boundary spinor calibration](open_boundary_spinor.py) · [report](OPEN_BOUNDARY_SCATTERING.md) | Frozen planar outgoing modes, complex reflection phases, evanescent behavior, and an independently checked absorber loss budget | A boundary-calibration contract; absorber loss is not a physical escape probability |
 | [Scattering-to-vacuum bridge](scattering_vacuum.py) · [results](scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
-These components do not yet form a complete physical two-mouth scattering solution. The next dependency is compatible finite-mouth matching and variable-field propagation, followed by complex return amplitudes and a quantum-state/stress calculation. A one-particle probability alone does not determine the vacuum source supporting a throat.
+These components do not yet form a complete physical two-mouth scattering solution. The next calculation continues the coupled angular waves through the magnetic tail outside the finite mesh, followed by matching the actual curved throat and computing quantum state/stress. A one-particle probability alone does not determine the vacuum source supporting a throat.
 
-![Local matching improvement and the missing global return calculation](dipole_collar_progress.png)
+![Computed connected field, conditional flux budget and unresolved outer-radius dependence](exterior_boundary_progress.png)
 
-*The local wave approximation is improved; the connected exterior return map remains unresolved. The plotted correction bound uses E=0, while positive-energy injection retains the full energy-dependent bound. See [the phase-sensitive stress benchmark](scattering_vacuum_progress.png) for the next connection to the quantum source.*
+*The field is computed for the declared q=1 model. The radius comparison exposes a remaining exterior approximation; these numbers are not a certified return probability for the physical candidate. See [the phase-sensitive stress benchmark](scattering_vacuum_progress.png) for the later connection to the quantum source.*
 
 ## Quickstart
 
@@ -46,7 +50,15 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The focused incoming, boundary, and vacuum components can be reproduced independently:
+The connected model and its small geometry/lead controls can be reproduced with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 two_mouth_mesh.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 spherical_weyl_leads.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 exterior_boundary_map.py
+```
+
+The connected run took about 30 seconds in the recorded environment and rewrites its results JSON. It saves complex amplitudes, raw boundary traces, one representative field, and the unresolved outer-radius sensitivity. Earlier focused incoming, boundary, and vacuum components can also be reproduced independently:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 incoming_modes.py
@@ -61,7 +73,7 @@ These commands print their checks and **rewrite their corresponding `*_results.j
 Regenerate only the current figure from saved data:
 
 ```powershell
-.\.venv\Scripts\python.exe -B -W error -X utf8 -c "from quantum_horizon_plot import dipole_collar_progress; dipole_collar_progress()"
+.\.venv\Scripts\python.exe -B -W error -X utf8 -c "from quantum_horizon_plot import exterior_boundary_progress; exterior_boundary_progress()"
 ```
 
 For the broader local propagation benchmark:

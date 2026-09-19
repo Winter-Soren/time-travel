@@ -58,6 +58,89 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Connected exterior calculation — increment90, PROGRESS
+- Previous89 was PROGRESS and pushed as5d2cb9f94af3b65f28b59804d9a31b47100a79f9;
+  GitHub remote SHA matched, private=true, working tree clean before90.
+  Goal remains ACTIVE. No reimport, cleanup or historical suite reruns.
+- A connected conditional q=1,mu=.5,d=1,b=.2,E=.4 calculation now exists.
+  This is NOT the saved q=100000 geometry or a self-consistent physical throat.
+  Root owns two_mouth_mesh.py; coupled_misner produced exterior_boundary_map.py
+  and results; formation_updates produced spherical_weyl_leads.py. All frozen.
+- Mesh: halfdisk minus two mouth halfdisks, conforming polygonal chords,
+  classified outer/mouth/axis edges. Topology, normals and geometry-refinement
+  checks passed. Polygon membership fixes true-circle centroid clipping that
+  wrongly discarded thin valid exterior triangles. h=.12/.08/.05,R=2 gives
+  328/678/1672 triangles; weighted volume error .01243/.006092/.002383.
+  Mesh SHA94e9e2efe207cb254e89cf366607fa315909c93afea64edd779fa064c9ace258.
+- Weighted u=f/sqrt(rho), measure rho drho dz. P1 upwind DG retains
+  sigma_x/(2rho) connection and graph-domain regular-axis constraints:
+  lower component zero on outside axis, upper zero between mouths for this q/mu.
+  Exact discrete ledger: total input=outgoing+jump loss+incoming mismatch.
+  Root read implementation; independent limited mass_audit review passed.
+- Leads: exact free spherical gamma=(h[n-1]-i h[n])/(h[n-1]+i h[n]), stable
+  inverse-Hankel-ratio recurrence. Inner product leads Gamma=-sigma_r,
+  H=-iGamma d_x+Kc, m_n=sqrt(n(n+1))/b, beta=m/(E+sqrt((E+i0)^2-m²)).
+  Upper zero incoming only, lower zero outgoing only in this Weyl sector.
+  Lower e_minus phase differs by minus from old incoming_modes helper; preserve
+  convention when closing a throat loop. Constant cylinder is DECLARED physics.
+  Lead self_check passed: outer Cartesian residual3.23e-12, mouth angular6e-12,
+  weighted Gram3.59e-14, outgoing unitflux3.90e-14. Primary Holder AppendixA
+  verified; use independently checked minus-i radial phase. BKW spectrum cited.
+  Lead SHA7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c.
+- DG final warnings-as-errors run:14 controls PASS,29.89s. Source
+  849935bf7247ece2d66295c15f6baeaee7a3d7bff03b3c080c7c3318f499b0ee;
+  JSON87340629791c7c97604d3c7d86f8104fe26d593560d74041d1ee822e4d7da871.
+  Arbitrary-field current identity4.99e-16; free Bessel L2errors
+  .002154/.001021/.000425. Outgoing free Green L2errors
+  .05197/.02793/.01232/.006358; both use same connected two-mouth domain.
+  Green control analytic incoming data on both cuts is not physical single input.
+- Representative R=4,h=.035,nmax=12: T=.4512802403+.6227268563i,
+  lower flux.5914425928, retained free-outer flux.4068161443,
+  omitted outgoing mode norm.0005861462, DG loss.0011551166; sum1 within8.9e-16.
+  All nonzero mouth modes evanescent, netflux zero to roundoff. Saved actual
+  field/centroid currents/raw complex traces plus all mode coefficients.
+  Do not label omitted norm or numerical dissipation physical escape.
+- Fixed R=2,h=.12/.08/.05/.035 lower flux.6290648/.6420115/.6486838/.6505696,
+  DG loss.0236155/.0095384/.0030134/.0012350. n8->12 at h.05 changes T2.63e-7.
+  BUT fixed h=.05,n12,R=2/4/8 gives flux.6486842/.5898777/.5948086.
+  Complex changes .0376811,.0128340 exceed R4 mesh change.00105179.
+  Outer-radius convergence explicitly FALSE, nonmonotonic sensitivity material.
+  E=.1/.4/1 at R4,h.05 give lower flux.960889/.589878/.194233; samples are
+  not a full vacuum spectrum. Finite differences are not rigorous error bounds.
+- Facet bases are projected and jointly Cholesky-orthonormalized on each side
+  with zero mode first, then diagonal lead ratios retained. This is a declared
+  polygonal approximation, not exact spherical matching on a coarse chord.
+  Outer free map currently discards the actual magnetic dipole tail beyond R.
+- Figure exterior_boundary_progress() at quantum_horizon_plot.py:6606 shows
+  actual computed intensity, conditional ledger, mesh and radius sensitivities.
+  Root inspected PNG; all160 older PNG/PDF artifacts preserved by producer.
+  Plotter9912665f4fc4184f4824ffb267750b4585ecdb0083ca5e51f0fa559e1b673df6;
+  PNG56194d233a216a8a8dd39e3a4ddd1a17e929c6c7ed25b4e5482a0fe88eb045de;
+  PDF1278786a50efe90b90eba90e58ae35512aa69722432d66b6af3aab85f663a09b.
+- Root final verification: source and3input hashes match;14saved controls pass;
+  4Python sources parse; representative ledger independently recomputed
+  1.0000000000000009. 69current-document local links exist;380older tracked
+  files, including160figures, match previous Git HEAD byte-for-byte. Diff
+  whitespace check passes. No old scientific suites rerun or source/data edited.
+- NEXT91 critical path: actual magnetic tail map, not more local collar work.
+  Derived and independently audited radial expansion u=(Phi+ a+Phi- b)/r,
+  Phi=sqrt(2pi)eta from outer_characteristics(radius=1). Use GL cos(theta):
+  J=int Phi+† sigma_y Phi- Aphi/sin(theta) dc, C=(diag(n)+iJ)/r.
+  a'=iE a+C b, b'=C†a-iE b, Z=b/a obeys Z'=C†-2iE Z-Z C Z.
+  Keep C†: generally nonsymmetric (C12=-.05892556510,C21=+.05892556510
+  atq=d1,r2). Exact C11=1/r-qd/(3r²) for mu=.5,r>d/2.
+  Angular differentiation checked1.70e-11; q0 n1 Riccati identity symboliczero.
+  Initialize Z(L)=diag(free gamma(E L)); integrate inward toR, retainactual
+  pairfield throughout[R,L]. RefineL,angularcutoff,quadrature,tolerance separately.
+  Exact generator preserves diag(I,-I); check I-Z†Z>=0 within numerical error
+  without clipping. Freeq0 is direct control. SVD Z=Udiag(s)V† reuses EXISTING
+  feedback API via(G@U,s,V†@Cprojection), no frozen90 edits needed.
+  New helper should be magnetic_tail_map.py plus results if warranted.
+  General Z on facet-orthonormalized modes retains the documented geometry limit.
+  Then compare DG matchingR2/4 with tailcontinuation. Physical targetq100000,
+  curved mouths, full quantum state/stress, preparation and stability still open.
+  13Sep2027->12Sep2027 remains UNPROVED. No background jobs remain after90.
+
 ### Exact angular collar and first radial correction — increment89, PROGRESS
 - Goal remains ACTIVE; no physical medium, new law or backward passage proved.
   Latest user asks whether the direction is sound despite uncertain success.

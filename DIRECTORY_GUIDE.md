@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Connected two-mouth exterior | [exterior_boundary_map.py](exterior_boundary_map.py), [saved results](exterior_boundary_map_results.json); [lead modes](spherical_weyl_leads.py), [mesh](two_mouth_mesh.py) |
 | Incoming spinor modes | [INCOMING_MODES.md](INCOMING_MODES.md), [incoming_modes.py](incoming_modes.py), [saved results](incoming_modes_results.json) |
 | Exact angular collar modes | [dipole_collar_modes.py](dipole_collar_modes.py), [saved results](dipole_collar_modes_results.json) |
 | Local radial correction bound | [collar_dressing_bound.py](collar_dressing_bound.py), [saved results](collar_dressing_bound_results.json); derivation in [RESEARCH.md](RESEARCH.md) |

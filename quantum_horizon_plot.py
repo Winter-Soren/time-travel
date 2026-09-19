@@ -6603,6 +6603,94 @@ def dipole_collar_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def exterior_boundary_progress():
+    """Plot the saved conditional two-mouth exterior field and numerical ledger."""
+    from matplotlib.colors import LogNorm
+    from matplotlib.tri import Triangulation
+    from matplotlib.patches import Circle
+    root = Path(__file__).resolve().parent
+    record = json.loads((root/'exterior_boundary_map_results.json').read_text(encoding='utf-8'))
+    assert record['passed'] and all(record['tests'].values())
+    assert record['parameters'] == dict(q=1, mu=.5, energy=.4, d=1., b=.2)
+    case = record['representative']; field = case['field']
+    vertices = np.asarray(field['vertices']); triangles = np.asarray(field['triangles'], dtype=int)
+    density = np.asarray(field['rho_u_squared'])
+    assert vertices.ndim == 2 and vertices.shape[1] == 2 and triangles.shape == (len(density), 3)
+    assert triangles.min() >= 0 and triangles.max() < len(vertices)
+    assert np.all(np.isfinite(density)) and np.all(density >= 0) and density.max() > 0
+    assert case['energy'] == .4 and case['R'] == 4 and case['h'] == .035
+    omitted = sum(case['omitted_outgoing_norm'].values())
+    flux = np.array([case['lower_zero_flux'], case['retained_free_outer_flux'], omitted, case['ledger']['numerical_loss']])
+    assert np.all(flux > 0) and abs(case['mouth_nonzero_net_flux']) < 1e-10
+    assert abs(flux.sum()+case['mouth_nonzero_net_flux']-1) < 1e-8
+    assert abs(case['reduced_physical_plus_numerical_balance_residual']) < 1e-8
+    amplitude = complex(case['lower_zero_amplitude']['real'], case['lower_zero_amplitude']['imag'])
+    assert np.isclose(abs(amplitude)**2, flux[0], rtol=1e-13, atol=0)
+    mesh = sorted(record['mesh_refinement'], key=lambda row: row['h'], reverse=True)
+    assert len(mesh) >= 2 and len({row['R'] for row in mesh}) == 1 and len({row['nmax'] for row in mesh}) == 1
+    h = np.array([row['h'] for row in mesh])
+    numerical = np.array([row['ledger']['numerical_loss'] for row in mesh])
+    modal = np.array([sum(row['omitted_outgoing_norm'].values()) for row in mesh])
+    assert np.all(np.diff(h) < 0) and np.all(numerical > 0) and np.all(modal > 0)
+    radius = sorted(record['radius_refinement'], key=lambda row: row['R'])
+    assert [row['R'] for row in radius] == [2., 4., 8.]
+    fixed_radius_mesh = len({row['h'] for row in radius}) == len({row['nmax'] for row in radius}) == 1
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13.5, 8.1))
+    fig.suptitle('A computed exterior wave, with explicit model boundaries', fontsize=17, fontweight='bold', y=.962)
+    fig.text(.5, .906, 'q = 1  |  μ = 1/2  |  E d = 0.4  |  Unit incident current  |  No physical throat matching',
+             ha='center', fontsize=10.5, color='#475569')
+    image_ax = fig.add_axes([.067, .30, .32, .525])
+    image_ax.set_title('A. Computed wave intensity', fontsize=11.5, pad=13)
+    triangulation = Triangulation(vertices[:, 0], vertices[:, 1], triangles)
+    positive = density[density > 0]; low = max(float(positive.min()), float(density.max())*1e-4)
+    mesh_image = image_ax.tripcolor(triangulation, facecolors=density, shading='flat', cmap='viridis',
+                                   norm=LogNorm(vmin=low, vmax=float(density.max())), rasterized=True)
+    for z in (.5, -.5):
+        image_ax.add_patch(Circle((0, z), .2, facecolor='white', edgecolor='#475569', lw=1))
+    image_ax.annotate('Input lead', xy=(.18, .57), xytext=(.53, .93), color='white', fontsize=10,
+                      arrowprops={'arrowstyle': '->', 'color': 'white', 'lw': 1.2})
+    image_ax.annotate('Other-mouth lead', xy=(.18, -.55), xytext=(.50, -.92), color='white', fontsize=9.5,
+                      arrowprops={'arrowstyle': '->', 'color': 'white', 'lw': 1.2})
+    image_ax.set(xlabel='Cylindrical radius ρ / d', ylabel='Axial position z / d', xlim=(0, 1.4), ylim=(-1.2, 1.2))
+    image_ax.set_aspect('equal', adjustable='box')
+    color_ax = fig.add_axes([.40, .34, .014, .44]); colorbar = fig.colorbar(mesh_image, cax=color_ax)
+    colorbar.set_label(r'Weighted intensity $\rho |u|^2$ (log scale)', fontsize=9.7)
+    fig.text(.242, .222, f'Near-mouth crop; whole-domain radius R = {case["R"]:g} d.', ha='center', fontsize=10, color='#475569')
+    ledger_ax = fig.add_axes([.675, .595, .285, .23])
+    ledger_ax.set_title('B. Fractions of unit model input', fontsize=11.5, pad=13)
+    colors = ('#007e87', '#326bb3', '#7951b0', '#b38516')
+    bars = ledger_ax.barh(np.arange(4), flux, color=colors, height=.57)
+    for item in bars[2:]: item.set_hatch('//')
+    for y, value in enumerate(flux):
+        ledger_ax.text(value+.018, y, f'{100*value:.2f}%', va='center', fontsize=9.8, color='#334155')
+    ledger_ax.set(yticks=range(4), yticklabels=['Other-mouth mode', 'Free outer lead', 'Omitted mode norm', 'Numerical loss (DG)'],
+                  xlim=(0, max(.9, float(flux.max())+.20)), xticks=[0, .25, .5, .75])
+    ledger_ax.invert_yaxis(); ledger_ax.spines[['top', 'right']].set_visible(False)
+    ledger_ax.grid(axis='x', alpha=.13); ledger_ax.set_axisbelow(True); ledger_ax.tick_params(axis='y', length=0)
+    convergence = fig.add_axes([.61, .32, .35, .17])
+    convergence.set_title(f'C. Mesh refinement at R = {mesh[0]["R"]:g} d, mode cutoff = {mesh[0]["nmax"]}',
+                          fontsize=10.7, pad=12)
+    convergence.semilogy(h, numerical, 'o-', color='#b38516', label='Numerical loss', ms=4)
+    convergence.semilogy(h, modal, 'v-', color='#7951b0', label='Omitted mode norm', ms=4)
+    convergence.set(xlabel='Mesh scale h / d (finer →)', ylabel='Input fraction', xlim=(max(h)*1.05, min(h)*.8), xticks=h)
+    convergence.spines[['top', 'right']].set_visible(False); convergence.grid(alpha=.13)
+    convergence.legend(loc='best', frameon=False, fontsize=8.8)
+    sensitivity = ' → '.join(f'{100*row["lower_zero_flux"]:.2f}%' for row in radius)
+    resolution = f'fixed h = {radius[0]["h"]:g} d' if fixed_radius_mesh else 'reported meshes differ'
+    fig.text(.05, .188, f'Outer-radius dependence: R/d = 2 → 4 → 8 gives other-mouth model flux {sensitivity} ({resolution}).',
+             fontsize=9.8, color='#8a650f')
+    fig.text(.05, .139, 'Specified product mouth leads and free outer map. Field intensity is not a particle path; exterior convergence remains unresolved.',
+             fontsize=9.6, color='#475569')
+    fig.text(.05, .09, 'These conditional fluxes do not establish a physical return/escape probability or a stable medium.',
+             fontsize=10, color='#475569')
+    fig.text(.05, .039, '13 Sep 2027 → 12 Sep 2027 remains unproved. This is a model calculation, not a new physical law.',
+             fontsize=10.2, fontweight='bold', color='#007e87')
+    outputs = tuple(root/f'exterior_boundary_progress.{suffix}' for suffix in ('png', 'pdf'))
+    for path in outputs: fig.savefig(path, dpi=180, facecolor='white')
+    plt.close(fig); print(outputs[0]); return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()
