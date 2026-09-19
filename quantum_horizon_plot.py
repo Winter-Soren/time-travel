@@ -7016,6 +7016,94 @@ def phase_vacuum_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def local_lapse_progress():
+    """Show actual compact test supports and their raw, phase-difference responses."""
+    from matplotlib.patches import Circle
+    from matplotlib.colors import to_rgb
+    root = Path(__file__).resolve().parent
+    record = json.loads((root/'local_lapse_response_results.json').read_text(encoding='utf-8'))
+    assert record['passed'] and all(record['tests'].values())
+    p = record['parameters']; assert p['q'] == 1 and p['d'] == 1
+    regions = record['regions']; names = [r['name'] for r in regions]
+    labels = {'between_mouths': 'Between mouths', 'beside_upper_mouth': 'Beside upper cut', 'outer_midplane': 'Outer midplane'}
+    assert len(regions) == 3 and set(names) == set(labels)
+    assert all(r['peak_weight'] == 1 and min(r['polygon_clearances'].values()) > 0 for r in regions)
+    fine = record['quadrature_refinement'][-1]; mesh = record['mesh_refinement']
+    for row in [fine, *mesh]:
+        assert row['region_order'] == names and row['edges'] == fine['edges']
+        nodes, weights = np.polynomial.legendre.leggauss(row['order'])
+        for panel in row['panels']:
+            width = panel['upper']-panel['lower']
+            assert np.allclose(panel['kappa'], panel['lower']+(nodes+1)*width/2, rtol=1e-13, atol=0)
+            integrated = width/2*(weights@np.array(panel['response_integrands']))
+            assert np.allclose(integrated, panel['responses'], rtol=1e-12, atol=0)
+        assert np.array_equal(np.sum([r['responses'] for r in row['panels']], axis=0), row['total_responses'])
+        for key in ('R', 'nmax', 'L', 'rho_c', 'mass_order'):
+            assert row['config'][key] == fine['config'][key]
+    h = np.array([r['config']['h'] for r in mesh]); responses = np.array([r['total_responses'] for r in mesh])
+    assert len(mesh) >= 3 and np.all(np.diff(h) < 0) and np.all(np.isfinite(responses))
+    changes = np.diff(responses, axis=0)
+    assert np.allclose(changes, record['diagnostics']['mesh_successive_changes'], rtol=1e-12, atol=0)
+    assert np.array_equal(fine['total_responses'], record['diagnostics']['finite_window_responses'])
+    assert record['diagnostics']['combined_continuum_bound'] is None
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13.5, 7.8))
+    fig.suptitle('Where the phase contrast responds to a local clock-rate change',
+                 fontsize=17.3, fontweight='bold', y=.965)
+    fig.text(.5, .904, 'Prescribed geometry · Three compact test regions · One retained quantum sector',
+             ha='center', fontsize=11, color='#475569')
+    left = fig.add_axes([.08, .36, .35, .455])
+    left.set_title('A. Actual meridional test supports', fontsize=11.7, pad=13)
+    rho_max = max(r['center'][0]+r['radius'] for r in regions)*1.10
+    z_max = p['d']/2+p['b']+.16
+    rho = np.linspace(0, rho_max, 321); z = np.linspace(-z_max, z_max, 401)
+    rr, zz = np.meshgrid(rho, z); colors = ['#007e87', '#7951b0', '#b38516']
+    for index, (region, color) in enumerate(zip(regions, colors)):
+        r0, z0 = region['center']; radius = region['radius']
+        u = ((rr-r0)**2+(zz-z0)**2)/radius**2
+        weight = np.zeros_like(u); inside = u < 1
+        weight[inside] = np.exp(1-1/(1-u[inside]))
+        rgba = np.zeros((*u.shape, 4)); rgba[..., :3] = to_rgb(color); rgba[..., 3] = .80*weight
+        left.imshow(rgba, extent=[0, rho_max, -z_max, z_max], origin='lower', aspect='equal', zorder=2)
+        left.add_patch(Circle((r0, z0), radius, fill=False, edgecolor=color, lw=1.3, linestyle='--', zorder=3))
+        left.text(r0, z0, str(index+1), ha='center', va='center', fontsize=11, fontweight='bold', color='white', zorder=4)
+    for side in (-1, 1):
+        left.add_patch(Circle((0, side*p['d']/2), p['b'], facecolor='#edf1f5', edgecolor='#64748b', lw=1.5))
+    left.text(.018, p['d']/2+p['b']+.065, 'Upper mouth cut', fontsize=9.4, color='#475569')
+    left.text(.018, -p['d']/2-p['b']-.10, 'Lower mouth cut', fontsize=9.4, color='#475569')
+    left.set(xlim=(0, rho_max), ylim=(-z_max, z_max), xlabel=r'$\rho/d$', ylabel=r'$z/d$')
+    left.spines[['top', 'right']].set_visible(False); left.grid(alpha=.13); left.set_axisbelow(True)
+    right = fig.add_axes([.575, .36, .38, .455])
+    right.set_title('B. Signed response under mesh refinement', fontsize=11.7, pad=13)
+    right.axhline(0, color='#94a3b8', lw=1)
+    for index, (region, color, marker) in enumerate(zip(regions, colors, ['o', 's', 'D'])):
+        right.plot(h, responses[:, index], marker+'-', color=color, lw=1.6, ms=6,
+                   label=f"{index+1}  {labels[region['name']]}")
+    right.set(xlabel='Mesh scale h / d (finer →)', ylabel=r'Smeared response $\partial_\eta\Delta\mathcal{E}$', xticks=h)
+    right.set_xlim(h[0]+.005, h[-1]-.004); right.margins(y=.15)
+    right.ticklabel_format(axis='y', style='sci', scilimits=(0, 0), useMathText=True)
+    right.spines[['top', 'right']].set_visible(False); right.grid(alpha=.15); right.set_axisbelow(True)
+    right.legend(loc='best', frameon=True, facecolor='white', edgecolor='none', framealpha=1, fontsize=9.8)
+    fig.text(.255, .286, 'Off-axis disks rotate into tori. Shading is the test weight.',
+             ha='center', fontsize=9.7, color='#475569')
+    fig.text(.765, .286, r'Each test: $N=1+\eta f$, evaluated at $\eta=0$.',
+             ha='center', fontsize=10.7, color='#475569')
+    fig.text(.255, .235, 'Prescribed throat: required support is not supplied.', ha='center', fontsize=10,
+             color='#8a650f', bbox={'boxstyle': 'round,pad=.45', 'facecolor': '#fff5df', 'edgecolor': '#d8b86c'})
+    fig.text(.765, .235, 'Raw responses; no division by region volume.', ha='center', fontsize=10, color='#475569')
+    maximum_change = np.max(abs(changes[-1])); quadrature_change = np.max(np.abs(record['diagnostics']['frequency_quadrature_differences']))
+    fig.text(.05, .168, f"Window {fine['edges'][0]:g} ≤ κd ≤ {fine['edges'][-1]:g}; largest latest mesh change {maximum_change:.3g}, "
+             f"quadrature change {quadrature_change:.2g}. Normalized model units: ℏ = c = d = 1.",
+             fontsize=9.7, color='#475569')
+    fig.text(.05, .117, 'Signs describe a phase difference, not absolute negative energy or radial NEC. Continuum and frequency-tail bounds remain unresolved.',
+             fontsize=9.6, color='#475569')
+    fig.text(.05, .063, 'The geometry remains prescribed and its source incomplete. No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',
+             fontsize=10, fontweight='bold', color='#007e87')
+    outputs = tuple(root/f'local_lapse_progress.{suffix}' for suffix in ('png', 'pdf'))
+    for path in outputs: fig.savefig(path, dpi=180, facecolor='white')
+    plt.close(fig); print(outputs[0]); return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

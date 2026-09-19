@@ -58,6 +58,83 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Compact local source diagnostic — increment95, PROGRESS
+- Previous94 committed/pushed/private/clean at
+  f81280aaf1a4dc53f8045ac98bb5a4fde3210b3a; root verified before95.
+  Goal remains ACTIVE. Latest user asks whether the direction is sensible:
+  yes for testing one candidate, with no evidence yet that it leads to a
+  time machine. Confidence concerns checks, not promised physical success.
+- coupled_misner owns ONLY new local_lapse_response.py/results. It reuses
+  PhaseContrast and frozen exterior/throat helpers. Positive compact lapse
+  N=1+eta*f has the already-audited derivative -kappa*M_f. Three positive
+  smooth bumps share both Green solves per frequency. Full-space mass uses
+  the existing rho measure and vertex/spin ordering, then restricts active
+  degrees of freedom. No extra2pi and no volume-divided density claim.
+- formation_updates independently executed a7x7 complex non-Hermitian
+  Green/determinant audit: Woodbury error1.01e-15, trace1.39e-17,
+  Richardson derivative8.46e-13. Mixed adjoint gives error.1411 and wrong
+  matrix ordering.0181; fully conjugated adjoint equals ordinary transpose.
+  This runnable audit is included in the producer. mass_audit separately
+  verified exact affine-rho triangle mass and analytic bump volumes.
+- Producer pilot at h.08,kappa.4: all3 responses negative, direct finite
+  lapse perturbations converge quadratically. Production mass order16
+  versus24 changes the sampled response by at most5.55e-8 relative;
+  independent polar affine-spinor integral agrees within8.27e-8 relative.
+- Production completed in session74562: all16 checks PASS with -B -W error,
+  162.91s and340 shared frequency/config evaluations. At h.05 order16,
+  window[1e-6,12], responses are -.00614904808322/-.00318552736429/
+  -.00362369146589. Largest order8/16 difference2.76e-10. At h.035 order8:
+  -.00617105252195/-.00319798960113/-.00363797262582. Last mesh changes
+  2.20e-5/1.25e-5/1.43e-5 dominate frequency quadrature; no certified limit.
+  DirectFD at kappa.01/.4/2: maxRichardson relativeerror1.14e-9, quadratic
+  convergence. Column/transpose equation residuals at most5.29e-15.
+  Selected-frequency N8->12/R2->4/L40->80 max integrand differences
+  5.52e-8/8.06e-6/1.90e-7; NOT integrated sensitivity bounds. IR[1e-8,1e-6]
+  contributes at most3.43e-12, UV[12,16] at most1.40e-11. Omitted tails and
+  combined continuum errors unbounded; numerical IR plateau not a gap.
+  Sourcea54b8c003c791d47185f564af7d8a66e6d0035f6f3fbae69e56560f4a722968a;
+  JSON26ce1290f89044b06059b7a489a574b5c23fb59444cd0d1b5addf3ff624cef28.
+- medium_picture owns only appended local_lapse_progress() in the existing
+  plotter and new local_lapse_progress.png/.pdf. Rendered -W error from
+  actual saved data; root inspected clearPNG. Plotter39f8d2b4fb984f4c8f8d07c0f56e976bc951170d061fe1442b21c6241bbed1f6;
+  PNG219781d4b52753d315b398999ac718665fb3f214bc51e28a678fe77e8e944704;
+  PDFeeb56160011c7611aa89f7ff8be9e13a5d98584bd76ff9db044ade4128932046.
+  Root updated README,DIRECTORY_GUIDE,RESEARCH,TASK; independently verified
+  16 controls/11 input hashes/twoASTs, reconstructed all7 saved integration
+  records and three representative complex trace contractions (max4.45e-16).
+  Root verified all413 older tracked files outside the5 intended files,
+  including170 figures, unchanged from94. Current113 local links, final
+  ASTs and git diff --check PASS. All95 agents finished; no simulation
+  remains live. Commit/push verification is the remaining publication step.
+- Primary Hamiltonian checked: Obukhov/Silenko/Teryaev1106.0173 eq2.21–2.25,
+  https://arxiv.org/pdf/1106.0173. MMP1807.04726 explicitly causal. No source
+  beyond the phase-difference functional is attributed to either paper.
+- Next derived gate (NOT implemented): at flat baseline,
+  deltaE=integral sqrt(h)[rho deltaN-N*T^ij*delta h_ij/2]. Compact
+  deltaN=eta*f and delta h_ij=-2eta*f*s_i*s_j probe rho+T_ss. Vary the
+  spatial tetrad/spin connection/canonical norm/discrete fluxes consistently,
+  holding gauge connection fixed. This is the half-sum of opposite null
+  contractions; individual T_kk also contains +/-2T_0s, which stationarity
+  does not remove. Phase contrasts remain insufficient for absolute NEC.
+  No full supporting tensor, self-consistent metric, stability, tracer
+  passage or13Sep2027->12Sep2027 travel has been demonstrated.
+- NEXT preferred implementation is the smaller, more direct THROAT test,
+  not a new generic exterior metric solver. In fixed coordinate y,
+  ds²=-N²dt²+A²dy²+r²dOmega², chi=r*sqrt(N)*Psi obeys
+  chi_y=[iE(A/N)sigma3+(lambda A/r)sigma2]chi,lambda=sqrt[n(n+q)].
+  Its norm is integral(A/N)|chi|²dy; flat-dy canonical spinor=sqrt(A/N)chi.
+  Compact N_eta=N exp(eta f),A_eta=A exp(-eta f),fixedr changes frequency
+  coefficient exp(-2eta f), angular coefficient exp(-eta f). Existing
+  curved_throat_modes Riccati equations can be reused with unchangedcuts.
+  Keep computed S_ext fixed, differentiate B only in existingdeterminant:
+  dDeltaE=(1/pi) integral ReTr[Mpi^-1 S Bpi'-M0^-1 S B0']d kappa.
+  It measures integral N A r² f Delta(rho+p_r)dy dOmega; retainsfluxcaveat.
+  Independent zero-mode control dlogt=-2iE I_f, I_f=integral(A/N)fdy;
+  at i*kappa derivative=+2kappa I_f. Closedzerochannel circle gives
+  dDeltaE=-pi*I_f/(2L_total²). N_eta*A_eta=NA, so purelymagneticlocal
+  L(F²) terms at fixedr,A_i give zero radial-null variation. No95simulation
+  of this nextgate yet. It cannot alonefix phase-independent source mismatch.
+
 ### Computed phase-dependent spectral diagnostic — increment94, PROGRESS
 - Previous93 committed/pushed/private/clean at
   5808d1d80b802c2fead501df3d6a3689eab145b0; root verified before94.

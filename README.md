@@ -8,10 +8,11 @@ A computational research workbench for testing proposed chronology-changing geom
 
 The present direction tests whether charged fermions actually return through the magnetic exterior used in an idealized traversable-wormhole construction. A field-line picture alone cannot determine the spinor's return amplitude, phase, or quantum stress.
 
-A connected **q=1** model now supplies a relative spectral determinant for two loop phases on the same prescribed throat and exterior. This tests a quantum-state assumption using the computed return field. It is a finite angular-sector diagnostic: it does not yet supply the local supporting stress or a self-consistent geometry. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
+A connected **q=1** model now supplies a relative spectral determinant for two loop phases on the same prescribed throat and exterior. Compact changes of the clock rate probe its energy-density contrast in three small exterior regions. This is a finite angular-sector source diagnostic; absolute energy density, radial pressure and a self-consistent supporting geometry remain missing. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Compact local source response](local_lapse_response.py) · [results](local_lapse_response_results.json) | Direct lapse perturbations versus the analytic Green-function derivative, weighted-mass normalization and separate numerical refinements | A smeared phase difference in the energy-density diagnostic; no absolute negative energy, radial pressure, stability or material recipe |
 | [Phase-dependent determinant](phase_vacuum_contrast.py) · [results](phase_vacuum_contrast_results.json) | Full mouth response, independent determinant elimination, fermion normalization and frequency/mesh sensitivity | A retained-sector phase-contrast functional; no absolute vacuum energy, local supporting stress, or physical phase preparation |
 | [Matched spherical source](dirac_matched_source.py) · [smooth collar and return closure](dirac_return_closure.py) · [saved result](dirac_return_closure_results.json) | Derived source terms, Einstein constraints and a modeled complete-loop state at large flux | An opening branch in a truncated spherical/composite model; the nonradial exterior and its quantum source remain unresolved |
 | [Curved radial modes](curved_throat_modes.py) · [connected closure](curved_exterior_closure.py) · [results](curved_exterior_closure_results.json) | Stable finite-throat scattering, all retained angular pairs, canonical endpoint coordinates and the driven-source balance | A conditional curved-throat field response; endpoint spin/gauge matching, geometry support and continuum errors remain open |
@@ -30,9 +31,9 @@ A connected **q=1** model now supplies a relative spectral determinant for two l
 
 These components do not yet form a complete physical solution. The next source calculation must vary the field's effective action on a consistently matched geometry, include the missing angular/field content, and test its stress against the Einstein equations. The synthetic throat's junction and bulk stress mismatches cannot be fixed by tuning a phase. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
 
-![Computed return field and the phase-contrast diagnostic](phase_vacuum_progress.png)
+![Compact clock-rate probes and the computed local phase contrast](local_lapse_progress.png)
 
-*The diagram shows a prescribed field problem. A lower phase-dependent energy is not proof of negative supporting stress. The [junction-support requirement](curved_junction_progress.png), [imaginary response](imaginary_response_progress.png), and [computed field](exterior_boundary_progress.png) remain available.*
+*The colored regions are mathematical test weights, not a manufactured medium. A lower phase-dependent energy is not proof of negative supporting stress. The [global phase contrast](phase_vacuum_progress.png), [junction-support requirement](curved_junction_progress.png), and [computed field](exterior_boundary_progress.png) remain available.*
 
 ## Quickstart
 
@@ -57,7 +58,15 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The current phase-contrast calculation can be reproduced with:
+The current compact local-source calculation can be reproduced with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 local_lapse_response.py
+```
+
+It writes its own results JSON. The three probe regions share each Green-function solve. It checks direct finite lapse perturbations and records frequency, mass-quadrature and spatial-mesh comparisons separately. Selected-frequency angular and outer-boundary comparisons do not bound the complete integral's error. The derivative concerns a difference between loop phases in the retained sector, not an absolute stress tensor.
+
+The preceding global phase-contrast calculation can be reproduced with:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 phase_vacuum_contrast.py

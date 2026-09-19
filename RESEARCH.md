@@ -1,5 +1,190 @@
 # Reproduction and coupled-model iterations
 
+## Compact local source diagnostic — increment95
+
+The next question is whether the computed return field can supply a local
+source component. A negative global energy contrast alone does not answer
+that question. This increment varies the clock rate in compact regions of
+the exterior while keeping the spatial geometry, magnetic potential,
+mouths, throat and outer boundary data fixed. These variations are probes
+of a mathematical energy functional, not generated fields or a material.
+
+### Derivation and an independently testable derivative
+
+In units hbar=c=1, take
+\[
+ ds^2=-N(x)^2dt^2+d\mathbf x^2,\qquad
+ N=1+\eta f>0,
+\]
+where the nonnegative, axisymmetric smooth function f vanishes near every
+boundary cut. In the canonical spinor norm, the massless Hamiltonian is
+\[
+ H[N]=\sqrt N H_0\sqrt N
+      ={1\over2}\{N,H_0\},\qquad
+ i\kappa-H[N]=\sqrt N(i\kappa/N-H_0)\sqrt N.
+\]
+The Hamiltonian follows by specializing the charged Hermitian Dirac
+Hamiltonian in [Obukhov, Silenko and Teryaev, equations 2.21–2.25](https://arxiv.org/pdf/1106.0173)
+to zero mass, flat spatial metric and no shift or electric potential, then
+retaining the Weyl block. The anticommutator identity uses the continuum
+first-order differential operator; arbitrary finite matrix products do
+not share its exact linearity in N.
+
+The common local determinant factors cancel between the two loop phases.
+After the congruence, the weak operator and its first variation are
+\[
+ A_\kappa[N]=D+\kappa M_{1/N},\qquad
+ \partial_\eta A_\kappa\big|_0=-\kappa M_f.
+\]
+The support restriction keeps every lead map unchanged. With the same
+symmetric-sea normalization as increment94, differentiation gives
+\[
+ \partial_\eta\Delta\mathcal E\big|_0
+ ={1\over\pi}\int_0^\infty\kappa\,
+ \Re\operatorname{Tr}[(G_\pi-G_0)M_f]\,d\kappa.
+\]
+This is our derivative of the specified relative functional, not a source
+calculation supplied by the cited paper. On a consistent self-adjoint
+continuum geometry with common local subtraction it has the interpretation
+\[
+ \partial_\eta\Delta\mathcal E\big|_0
+ =\int d^3x\,f(x)\Delta T_{\hat0\hat0}(x).
+\]
+The finite calculation retains the restrictions of its frequency window,
+angular sector, numerical dissipation and assumed sewing. It does not
+establish that continuum interpretation by itself.
+
+For efficient evaluation, let Y=A_out^{-1}G_m, Z=C_m A_out^{-1}, S=C_mY
+and K=B_pi(I-SB_pi)^{-1}-B_0(I-SB_0)^{-1}. Then
+\[
+ G_\pi-G_0=YKZ,\qquad
+ \operatorname{Tr}[(G_\pi-G_0)M_f]
+ =\operatorname{Tr}_{\rm mouth}[KZM_fY].
+\]
+The row solve uses an ordinary transpose. A consistently conjugated
+adjoint solve is equivalent; replacing the transpose with an adjoint
+without also conjugating its input and output is incorrect. A separate
+seven-dimensional non-Hermitian matrix example checks this distinction
+against a directly inverted Green difference and perturbed determinants.
+
+The smooth weights are exp[1-1/(1-u)] for u<1 and zero otherwise, with
+u=((rho-rho0)^2+(z-z0)^2)/a^2. Their (rho0,z0,a) are (0.35,0,0.20),
+(0.50,0.50,0.18), and (0.80,0,0.25), in separation units. Rotating the
+off-axis meridional disks produces toroidal probe regions. The weighted
+meridional volumes are independently known:
+\[
+ \int\rho f\,d\rho dz
+ =\pi\rho_0a^2[1-eE_1(1)].
+\]
+The fixed azimuthal spinor is already normalized. Do not multiply its
+trace by another 2pi, and do not divide the smeared response by a volume
+and label the quotient the local stress.
+
+### Computed responses and checks
+
+[local_lapse_response.py](local_lapse_response.py) and its
+[saved record](local_lapse_response_results.json) compute all three weights
+with shared Green solves. At q=1, mu=0.5, b=0.2, d=1, rho_c=2, R=2,
+eight retained angular pairs and far-tail start L=40, the frequency window
+1e-6 <= kappa <= 12 gives the following smeared responses. Units are
+hbar=c=d=1; the response restores units hbar*c/d, not energy per volume.
+
+| Mesh h | Between mouths | Beside upper mouth | Outer midplane |
+| --- | ---: | ---: | ---: |
+| 0.08 | -0.006077523698 | -0.003145450946 | -0.003577803511 |
+| 0.05 | -0.006149048358 | -0.003185527553 | -0.003623691693 |
+| 0.035 | -0.006171052522 | -0.003197989601 | -0.003637972626 |
+
+These rows use eight-point Gauss quadrature on the same seven frequency
+panels. Sixteen-point quadrature at h=0.05 gives -0.006149048083,
+-0.003185527364 and -0.003623691466; the largest change is 2.76e-10.
+The latest mesh changes are 2.20e-5, 1.25e-5 and 1.43e-5. Their signs
+persist in these checks; this is not a certified continuum sign bound.
+
+All sixteen controls pass with warnings treated as errors, in 162.91
+seconds and 340 shared frequency/configuration evaluations. Direct
+finite-lapse determinants at kappa=0.01, 0.4 and 2 converge quadratically
+to the derivative; the maximum Richardson relative discrepancy is
+1.14e-9. Column and transpose equations have residuals below 5.29e-15.
+Independent reconstruction from the saved complex reduced matrices agrees
+with every stored representative trace within 4.45e-16.
+
+Weighted-mass integration uses order16. At the representative frequency,
+changing it to order24 alters the response by at most 5.55e-8 relative;
+an independent polar integral of an affine spinor norm agrees within
+8.27e-8 relative. Exact constant-weight and polynomial triangle-mass
+controls also pass. These mass controls are distinct from spatial-mesh
+and frequency-integration comparisons.
+
+At five selected frequencies, increasing the paired-mode cutoff 8 to12,
+matching radius 2 to4, and far-tail start 40 to80 gives maximum absolute
+integrand changes 5.52e-8, 8.06e-6 and 1.90e-7 respectively. These are
+sampled sensitivities, not bounds on integrated effects. The separate
+[1e-8,1e-6] interval contributes at most 3.43e-12 in magnitude among the
+three responses; [12,16] contributes at most 1.40e-11. The regions below
+1e-8 and above16 remain unbounded, as does the combined continuum error.
+The mesh-dependent near-zero determinant behavior from increment94
+remains unresolved; a small finite-mesh infrared contribution does not
+certify its uniform continuum limit.
+
+![Compact probe regions and their signed responses](local_lapse_progress.png)
+
+### What would constitute progress toward a supporting medium?
+
+A negative result would mean a lower weighted energy density in phase pi
+than in phase zero, conditionally on the stated limits. It would not show
+that either absolute density is negative, determine the radial pressure,
+or prove that rho+p_r has the sign and magnitude required by the geometry.
+The source still has to include the missing field sectors and the same
+geometry's reference contribution; then its tensor must satisfy the
+semiclassical Einstein equations and a separate stability test.
+
+The next directional variation has a definite sign. For a static effective
+action Gamma=-T E and the convention
+delta Gamma=(1/2) integral sqrt(-g) T^{mu nu} delta g_mu nu,
+\[
+ \delta E=\int\sqrt h\left(\rho\,\delta N
+                 -{N\over2}T^{ij}\delta h_{ij}\right)d^3x.
+\]
+Thus a simultaneous compact delta N=eta f and
+delta h_ij=-2 eta f s_i s_j, with a specified unit direction s, probes
+integral f(rho+T_ss) at the flat baseline. This is a derivation for a
+future calculation, not an implemented result. The spatial Dirac operator,
+spin connection, canonical norm and discretized fluxes must be varied
+consistently; a lapse variation alone cannot supply pressure. Moreover,
+rho+T_ss is the half-sum of the two opposite null contractions. An
+individual contraction also contains plus or minus 2T_0s. Stationarity
+does not establish that flux term vanishes in the retained chiral sector.
+The phase comparison would still give only differences of these quantities.
+
+The smaller next implementation is to apply that variation inside the
+existing curved throat, where the radial supporting stress is needed,
+before changing the full exterior spatial discretization. At a fixed
+coordinate y, write ds^2=-N^2dt^2+A^2dy^2+r^2dOmega^2. The rescaled
+radial spinor chi=r sqrt(N) Psi obeys
+\[
+ \partial_y\chi=\left[iE{A\over N}\sigma_3
+                   +{\lambda A\over r}\sigma_2\right]\chi,
+ \qquad \lambda=\sqrt{n(n+q)}.
+\]
+Choosing N_eta=N exp(eta f), A_eta=A exp(-eta f), and fixed r changes
+the frequency coefficient by exp(-2eta f) and the angular coefficient
+by exp(-eta f). Compact f leaves all endpoint bases unchanged. The
+existing Riccati throat integration can therefore supply a perturbed
+B_phi while the computed exterior response stays fixed. This proposed
+derivative measures integral N A r^2 f Delta(rho+p_r) dy dOmega; it still
+requires direct determinant checks and the flux caveat above. It has not
+been simulated in increment95 and cannot repair the already identified
+phase-independent geometry/source mismatch on its own.
+
+That is the physical decision point. Further transport refinement alone
+cannot establish it, and obtaining one favorable source component is not
+a reason to skip it. The present static probe does not add a chronology
+shift. The motivating [MMP construction](https://arxiv.org/html/1807.04726v3)
+is explicitly causal, so even a supported traversable configuration would
+require a separate argument for backward travel. The example
+13 September 2027 to 12 September 2027 remains unproved.
+
 ## Phase-dependent vacuum diagnostic from the computed exterior — increment94
 
 This increment connects the computed return field to a finite spectral
