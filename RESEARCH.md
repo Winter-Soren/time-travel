@@ -1,5 +1,203 @@
 # Reproduction and coupled-model iterations
 
+## Phase-dependent vacuum diagnostic from the computed exterior — increment94
+
+This increment connects the computed return field to a finite spectral
+quantity, rather than refining a field response without testing its source
+implications. The earlier increment84 already supplies a smooth spherical
+source and collar in a large-flux approximation; its exterior return paths
+are prescribed. The recent q=1 calculation tests return transport in a
+different, deliberately simplified geometry. It must not be substituted
+directly into that large-flux source or presented as its completed exterior.
+
+### A relative determinant with the geometry held fixed
+
+Let A_out be the discretized imaginary-energy exterior operator with its
+decaying outer boundary map included, but with no mouth feedback. G_m
+injects the incoming mouth coefficients and C_m extracts the outgoing
+ones. The complete mouth response and the sewn boundary determinant are
+\[
+ S_{\rm ext}(i\kappa)=C_m A_{\rm out}^{-1}G_m,\qquad
+ D_\varphi(i\kappa)=\det[I-S_{\rm ext}(i\kappa)B_\varphi(i\kappa)].
+\]
+Here B_phi is the finite curved-throat map of increment93 in the same
+orthonormal polygon coordinates. Both paired-mode cross transmissions
+receive their respective opposite phases, and the single Weyl zero mode
+retains its one direction. Comparing phase pi with phase zero keeps the
+local geometry, reflected amplitudes, magnetic field and subtraction
+prescription fixed. It changes the declared global loop holonomy. Merely
+rephasing all endpoint bases consistently would not change D.
+
+The finite matrix determinant lemma gives, exactly,
+\[
+ {\det(A_{\rm out}-G_m B_\pi C_m)\over
+  \det(A_{\rm out}-G_m B_0 C_m)}={D_\pi\over D_0}.
+\]
+This algebraic equality is not a renormalization theorem. Relative
+spectral/scattering determinants are a published route to Casimir
+quantities; see [Wirzba, equations 4 and 8–13](https://arxiv.org/pdf/0711.2395).
+Our finite mouth operator and phase comparison are the specific calculation
+here, not a result supplied by that paper for this geometry.
+
+### Fermion normalization and the limits of the interpretation
+
+For one complex first-order self-adjoint Hamiltonian H, the symmetric
+filled-sea vacuum energy is -Tr|H|/2. Its relative determinant representation
+has the normalization
+\[
+ \Delta\mathcal E=-{1\over\pi}\int_0^\infty
+ \log\left|{D_\pi(i\kappa)\over D_0(i\kappa)}\right|\,d\kappa.
+\]
+This follows from integrating log[(kappa^2+a^2)/(kappa^2+b^2)], whose
+integral is pi(|a|-|b|). Self-adjointness relates the positive- and
+negative-imaginary-frequency determinants by adjunction; it does not
+require a magnetized fixed-angular-sector spectrum to be symmetric in E.
+An unsymmetrized occupied-negative-level energy additionally contains
+Tr(H)/2. Its relative local contribution must cancel in the same regulator
+before equating the two prescriptions. The modulus alone does not compute
+the determinant phase, vacuum charge or eta invariant.
+
+The exact one-channel circle D_phi=1-exp(i phi-kappa L) gives
+Delta E_(pi,0)=-pi/(4L), agreeing with a regulated spectral sum. A second
+physical chirality would be a separately counted field. We do not double
+the computed Weyl sector or assume uncomputed angular sectors are equal.
+Published twisted-fermion mode sums provide the independent normalization
+context: [Bellucci and Saharian, equations 31 and 41](https://arxiv.org/pdf/0902.3726).
+
+The present discretization has numerical dissipation, a finite angular
+basis, and an assumed throat-to-exterior identification. Therefore the
+integral computed from it is a finite approximation to the conditional
+phase-dependent spectral energy, not a certified four-dimensional vacuum
+energy. Local ultraviolet terms can cancel between genuinely identical
+local geometries with different flat holonomy; this fact does not certify
+our continuum gluing, angular sum, infrared limit or numerical tails.
+Nor does a negative energy *difference* establish negative absolute energy
+or the local radial null stress required to support the throat. That stress
+requires variation of the complete effective action with respect to the
+metric, with the source and global state specified consistently.
+
+### Phase tuning cannot repair the unsupported product geometry
+
+There is a separate exact compatibility test within the previously matched
+large-q source of increments83/84. Use its dimensionless r_e=1 units,
+k=alpha/3, epsilon=q alpha/6 and delta=3 zeta(3) alpha/pi^2. On the
+equal-radius product R=1, N=N0 cosh(l), set wbar=w/N0^2. Its orthonormal
+Einstein components are (1,-1,1). The matched magnetic and fermionic source
+has components
+\[
+ (\hat\rho,\hat p_r,\hat p_T)=
+ \left(1+\delta+k[1+(1-\bar w)\operatorname{sech}^2l],\;
+ -1-\delta-k[1+(\bar w-1)\operatorname{sech}^2l],\;
+ 1+\delta-2\epsilon+k\right).
+\]
+Thus the Einstein-minus-source trace is exactly 4 epsilon, independently
+of the state parameter, while its radial-null component is
+-2 k(1-wbar) sech^2(l). A read-only symbolic check verifies both identities.
+Changing a loop phase cannot remove the state-independent trace mismatch.
+The corrected reference has unequal radii, and the existing opening branch
+has varying sphere radius; it cannot be represented by this exact product.
+This test applies to the large-q matched source. Its numerical parameters
+are not silently assigned to the q=1 transport benchmark.
+
+The scale hierarchy independently prevents that identification. In MMP's
+short-exterior approximation, alpha=g^2/(4 pi^2 q) and
+ell/r_e=4/(pi alpha), with overlap 1 << rho << ell/r_e. Setting
+ell/r_e=sqrt(5), as in the synthetic transport profile if b=r_e, would
+require alpha=0.5694 and g^2=22.48 at q=1. These are outside the assumed
+small-parameter regime; a change of physical units cannot alter them.
+See [MMP, equations 5.36 and 5.40](https://arxiv.org/html/1807.04726v3).
+The computed q=1 field therefore remains a transport diagnostic.
+
+### Computed contrast and its numerical limits
+
+[phase_vacuum_contrast.py](phase_vacuum_contrast.py) reuses the existing
+geometry, curved radial modes and magnetic tail. At each positive imaginary
+frequency it solves for every retained incoming mouth mode, with only the
+outer feedback included, and forms the two complete sewn determinants.
+The [saved record](phase_vacuum_contrast_results.json) contains the
+representative complex matrices and all frequency-panel samples.
+
+For q=1, mu=0.5, b=0.2, d=1, rho_c=2, R=2 and eight retained angular pairs,
+the integral over 1e-6 <= kappa <= 12 gives:
+
+| Mesh h | Phase-pi minus phase-zero functional |
+| --- | ---: |
+| 0.08 | -0.256702633302 |
+| 0.05 | -0.259860146966 |
+| 0.035 | -0.260868113673 |
+
+These use the same twelve-point Gauss rule on each of seven frequency
+panels. At h=0.05, doubling that rule gives -0.259860147289, a change of
+3.23e-10. The last spatial-mesh change is 1.008e-3 and dominates this
+quadrature comparison. Increasing the paired-mode cutoff from 8 to 12
+changes the result by 1.88e-7; it does not include the missing azimuthal
+sectors. Moving the matching sphere from R=2 to R=4 changes it by 3.29e-5,
+and moving the far-tail start from 40 to 80 changes it by 3.55e-7.
+Units are hbar=c=d=1; these numbers are not laboratory energies.
+
+Separate integrations contribute -2.11115e-6 over [1e-8,1e-6] and
+-2.00402e-11 over [12,16], at the stated h=0.05 configuration. The
+uncomputed regions below 1e-8 and above 16 have no certified bounds. Nor
+does the calculation have a combined continuum error bound. At kappa=1e-8,
+the periodic sewing's smallest singular value drops from 0.007286 to
+0.002441 to 0.001084 as h is refined; its apparent infrared regularity
+cannot be interpreted as a physical spectral gap.
+
+All thirteen controls pass with warnings treated as errors (307.38 seconds,
+748 frequency/configuration evaluations). Independent outer elimination
+and full boundary determinants agree within 1.78e-15 in log magnitude.
+The analytic phase derivative agrees with centered finite differences
+within 3.20e-10; the largest normalized sparse-equation residual is
+5.77e-15. The exact circle integral agrees with the independent zeta sum.
+Root independently reconstructed the saved matrix determinants and every
+saved comparison-panel integral, and checked the ten dependency hashes.
+A separate nonsymmetric-spectrum example verified both the -Tr|H|/2
+normalization and the additional trace term for an unsymmetrized sea.
+
+![Finite phase contrast and its mesh sensitivity](phase_vacuum_progress.png)
+
+The sign favors phase pi over phase zero in the tested finite model. It
+does not establish a minimum over all phases, an absolute energy sign,
+negative radial null stress, or stability. This is an actual link from the
+computed return field to a spectral source diagnostic; the physical source
+problem remains open. No new physical law or passage from 13 September 2027
+to 12 September 2027 is demonstrated.
+
+### Next source derivative: a compact lapse variation
+
+A concrete next test can keep the spatial metric and magnetic connection
+fixed while varying N=1+eta f with axisymmetric f in a compact region strictly away from every
+interface. For the canonical Weyl norm on the flat spatial slice, the
+spin-connection term gives
+\[
+ H[N]=\sqrt N H_0\sqrt N=N H_0-\frac{i}{2}\boldsymbol\sigma\cdot\nabla N,
+ \qquad \left.\partial_\eta H\right|_0=\tfrac12\{f,H_0\}.
+\]
+The congruence i kappa-H[N]=sqrt(N)[i kappa/N-H0]sqrt(N) makes the common
+local factors cancel between the two phases. In the real-shift weak form,
+A_kappa[N]=D+kappa M_(1/N), so its derivative is -kappa M_f, where M_f is
+the spatial mass form weighted by f. Consequently
+\[
+ \left.\partial_\eta\Delta\mathcal E\right|_0
+ ={1\over\pi}\int_0^\infty\kappa\,
+ \Re\operatorname{Tr}[(\mathcal G_\pi-\mathcal G_0)M_f]d\kappa.
+\]
+Here G_phi denotes the sewn Green operator, not Newton's constant. In a
+consistent continuum vacuum this derivative is the integral of f times the
+phase-difference energy density on the undeformed slice. It is not the
+absolute density or radial pressure, and therefore does not establish the
+radial null-energy condition by itself.
+
+This is practical without forming a dense volume Green matrix. With
+Y=A_out^-1 G_m, Z=C_m A_out^-1 and
+K=B_pi(I-S B_pi)^-1-B_0(I-S B_0)^-1, the exact finite-rank identity is
+G_pi-G_0=Y K Z and the needed trace is Tr(K Z M_f Y). Constructing Z requires
+an ordinary transpose solve, not a Hermitian-adjoint solve. The geometric
+identity and sign were independently audited; this source derivative has
+not yet been simulated. A direct perturbed determinant will be its first
+check. Common local subtractions, ultraviolet/infrared limits, the omitted
+field sectors and the dissipative discretization remain explicit conditions.
+
 ## Curved mode transport and the missing junction source — increment93
 
 This increment tests the next boundary assumption: a finite curved throat

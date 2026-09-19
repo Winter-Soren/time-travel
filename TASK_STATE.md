@@ -58,6 +58,87 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Computed phase-dependent spectral diagnostic — increment94, PROGRESS
+- Previous93 committed/pushed/private/clean at
+  5808d1d80b802c2fead501df3d6a3689eab145b0; root verified before94.
+  Goal remains ACTIVE. No new law, physical source, stable medium or
+  13Sep2027->12Sep2027 passage proved. Import and cleanup remain complete.
+  Current direction connects actual return transport to a source diagnostic;
+  do not substitute further wave-only refinement for the missing stress.
+- coupled_misner owns frozen NEW phase_vacuum_contrast.py/results.
+  PhaseContrast(h=.08,R=2,nmax=8,L=40,rho_c=2) builds geometry/ports once.
+  evaluate(kappa,audit=False) shifts/reuses the exterior matrix, applies ONLY
+  outer tail feedback and solves all mouth inputs. No mouth source forcing
+  is included in S_ext=Cm Aout^-1 Gm. Bphi reuses frozen93 curved modes and
+  Gram coordinates. Dphi=det(I-S_ext Bphi); the two phases are0 andpi.
+  integrate(evaluator,order=12,edges=...) saves explicit finite panels.
+  normalization_check() checks circle integral, independent zeta and old toy.
+  __main__ runs checks and rewrites only its own JSON, retaining failed
+  diagnostics if a control fails. No new dependency or historical solver run.
+- All13 controls PASS -B -W error,307.38s,748 frequency/config evaluations.
+  At h=.05,R2,N8,L40, window[1e-6,12], order24 gives
+  DeltaE=-.259860147289459 in hbar=c=d=1 units. Order12 differs3.23e-10.
+  Matched order12 h=.08/.05/.035: -.256702633302/-.259860146966/
+  -.260868113673; successive changes .003157513664/.001007966707.
+  N8->12 change1.87919e-7; R2->4 change3.28541e-5; L40->80 change3.54838e-7.
+  IR[1e-8,1e-6] contribution -2.111153826e-6; UV[12,16] -2.004020190e-11.
+  No bounds on omitted[0,1e-8] or[16,infinity], no combined continuum bound.
+  At kappa1e-8 periodic min singular value falls .007286/.002441/.001084
+  under mesh refinement: numerical plateau is NOT a physical spectral gap.
+  Representative kappa.4 delta log|D|=.595376247128021.
+  Independent full-boundary Schur logdet error1.78e-15, derivative3.20e-10,
+  largest sparse residual5.77e-15. No sampled positive-kappa zero; that does
+  not prove global spectral stability.
+  Source4beeb28ced0d054d3c4303091857a1b9e9416491a5a8f81de9bc36b461a2a873;
+  JSONe4aa924688b9c8a94e1d1deea99184869474bb51a035def3d4e2ccd18155cef8.
+- mass_audit independently verified -1/pi integral log|Dpi/D0| normalization
+  for symmetric sea -Tr|H|/2 of ONE complex first-order self-adjoint sector.
+  A second physical chirality is not required for the negative-frequency
+  adjoint; fixed-mu spectra need not be +/- symmetric. Unsymmetrized sea
+  additionally contains TrH/2. No determinant phase/eta/charge inferred.
+  Same local geometry and regulator cancel common local factors, but the
+  dissipative DG operator is not itself a self-adjoint continuum proof.
+  Strongest current label: retained-sector phase-contrast determinant
+  functional. Other mu sectors/Dirac chirality, full stress and absolute
+  source are absent. A negative difference is not negative radial NEC.
+  Root independent nonsymmetric-spectrum integral gave symmetric .7,
+  filled .9 and trace correction .2, verifying that distinction.
+- formation_updates executed a read-only SymPy compatibility check on the
+  matched83/84 source. On equal-radius R=1,N=N0 cosh(l), Einstein-minus-
+  source trace=4epsilon independent of w; null residual=-2k(1-wbar)sech²l.
+  Phase tuning cannot repair that unsupported product geometry. MMP short-
+  exterior ell/re=4/(pi alpha); synthetic ell/b=sqrt5 would require
+  alpha=.5694 and g²=22.48 if b=re,q1, outside controlled assumptions.
+  Saved84 smooth large-q collar is closer to a supported source model;
+  do not rerun bare Polyakov or silently transplant q1 results into it.
+  QUANTUM_COMPLETION received a historical notice: its W[h],p_perp0
+  truncation predates current matched qW[h/R²] plus local terms.
+- medium_picture added ONLY phase_vacuum_progress() at plotter line6936
+  and PNG/PDF. Saved-data assertions passed; root viewed the clear image.
+  Plotterb40a2157ba2af13aa3d3c9000826604524585c64662044bfcb4549a5b8412264;
+  PNG42a3784b9a1a0d6aefffa032249fab116712d2f00488c661143eb1a875e717e9;
+  PDF85be0b7e182377a07dd4d83fe9737d49c95860983c09d1e196b77774728e102b.
+- Root verified13 saved controls, ten dependency hashes, two current ASTs,
+  independently reconstructed canonical/facet determinant equivalence and
+  all saved comparison-panel quadratures. All408 older files outside six
+  intentionally updated docs/plotter match93 bytes, including168 figures.
+  Current110 local links and git diff --check PASS. All agents finished;
+  producer session13314 completed successfully; no simulation remains live.
+- NEXT concrete source calculation (derived and independently audited;
+  NOT yet simulated): compact axisymmetric lapse N=1+eta*f>0, f=0 near
+  every cut, fixed flat spatial metric and A_i, A_t=0. Canonical Weyl
+  H[N]=sqrtN H0 sqrtN=NH0-i sigma.gradN/2, derivative={f,H0}/2.
+  Congruence reduces weak operator to A_kappa[N]=D+kappa*M_(1/N),
+  derivative=-kappa*M_f. Common local detN factors cancel between phases.
+  dDeltaE/deta=(1/pi) integral kappa ReTr[(Gpi-G0)M_f]d kappa.
+  At N=1 continuum this is integral f*DeltaT_hat00 d³x, NOT a volume-divided
+  global energy or radial pressure. Keep finite-window/sector/DG limitations.
+  Reuse S/Y from PhaseContrast; Z=Cm Aout^-1 requires ordinary TRANSPOSE
+  solve (not adjoint). K=Bpi(I-SBpi)^-1-B0(I-SB0)^-1;
+  Gpi-G0=Y K Z, trace=Tr_small(K Z M_f Y). First verify against directly
+  perturbed determinants with common compact lapse. Then finite-frequency
+  integration/refinement can test this actual local source component.
+
 ### Curved transport and missing junction source — increment93, PROGRESS
 - Previous92 committed/pushed/private/clean at
   94e24322d6526cce73bfcb10671e8ae45e3a940d; root verified before93.

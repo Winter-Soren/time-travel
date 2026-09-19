@@ -1,5 +1,13 @@
 # Quantum-source completion: keep the fermions on their returning magnetic loops
 
+Historical proposal: the radius-independent zero-mode regulator discussed
+below is not the project's current matched spherical source. Increments83/84
+in [RESEARCH.md](RESEARCH.md) retain q W_D[h/R^2], its angular variation,
+the derived gapped-mode term and the magnetic logarithm together. See
+[dirac_return_closure.py](dirac_return_closure.py) for that implemented
+truncated source. The original proposal is preserved below; its p_perp=0
+statement applies only to its stated radius-independent truncation.
+
 Research increment, 15 September 2026. Inputs: the authoritative top of
 `TASK_STATE.md`, the finite-boundary, Polyakov-source and magnetic-return-path
 sections of `RESEARCH.md`, and the saved `quantum_taper` definitions. Those

@@ -6933,6 +6933,89 @@ def curved_junction_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def phase_vacuum_progress():
+    """Plot the retained-sector phase diagnostic, without assigning a support stress."""
+    from matplotlib.patches import Arc, Ellipse
+    root = Path(__file__).resolve().parent
+    record = json.loads((root/'phase_vacuum_contrast_results.json').read_text(encoding='utf-8'))
+    assert record['passed'] and all(record['tests'].values())
+    params = record['parameters']
+    assert params['phase_difference'] == 'pi minus 0' and params['q'] == 1 and params['d'] == 1
+    fine = record['quadrature_refinement'][-1]
+    panels = fine['panels']; nodes, weights = np.polynomial.legendre.leggauss(fine['order'])
+    for panel in panels:
+        lo, hi = panel['lower'], panel['upper']
+        assert np.allclose(panel['kappa'], lo+(nodes+1)*(hi-lo)/2, rtol=1e-13, atol=0)
+        integral = (hi-lo)/2*np.dot(weights, panel['integrand'])
+        assert np.isclose(integral, panel['integral'], rtol=1e-12, atol=0)
+        assert np.isclose(-integral/np.pi, panel['phase_contrast'], rtol=1e-12, atol=0)
+    contrast = fine['phase_contrast']
+    assert np.isclose(contrast, -sum(p['integral'] for p in panels)/np.pi, rtol=1e-13, atol=0)
+    assert np.isclose(contrast, record['diagnostics']['finite_window_phase_contrast'], rtol=1e-13, atol=0)
+    kappa = np.concatenate([p['kappa'] for p in panels]); values = np.concatenate([p['integrand'] for p in panels])
+    assert np.all(np.diff(kappa) > 0) and np.all(np.isfinite(values))
+    mesh = record['mesh_refinement']; h = np.array([r['config']['h'] for r in mesh])
+    mesh_values = np.array([r['phase_contrast'] for r in mesh])
+    assert np.all(np.diff(h) < 0) and len(mesh) >= 3
+    for row in mesh:
+        assert row['edges'] == fine['edges']
+        for key in ('R', 'nmax', 'L', 'rho_c'):
+            assert row['config'][key] == fine['config'][key]
+    changes = abs(np.diff(mesh_values))
+    assert np.allclose(changes, record['diagnostics']['mesh_successive_changes'], rtol=1e-12, atol=0)
+    assert record['diagnostics']['combined_continuum_error_bound'] is None
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13.5, 8.0))
+    fig.suptitle('A finite phase contrast from the computed return field', fontsize=18, fontweight='bold', y=.965)
+    fig.text(.5, .910, 'One retained sector | Identical local geometry | Chosen loop phases 0 and π',
+             ha='center', fontsize=11, color='#475569')
+    left = fig.add_axes([.045, .42, .41, .39]); left.set_axis_off()
+    left.set_title('A. Assumed loop geometry', fontsize=12, pad=14)
+    left.set(xlim=(-1.3, 1.3), ylim=(-1.05, 1.12))
+    left.fill_between([-.74, .74], -.18, .18, color='#d7efed')
+    for y in (-.18, .18): left.plot([-.74, .74], [y, y], color='#007e87', lw=1.5)
+    left.add_patch(Arc((0, -.03), 1.55, 1.25, theta1=180, theta2=360, color='#64748b', lw=2))
+    for x in (-.77, .77):
+        left.add_patch(Ellipse((x, 0), .14, .50, facecolor='white', edgecolor='#b38516', lw=2))
+        left.annotate('', xy=(x, .27), xytext=(np.sign(x)*.43, .79),
+                      arrowprops={'arrowstyle': '->', 'lw': 1.2, 'color': '#a77612'})
+    left.text(0, .94, 'Support at both joins remains missing', ha='center', fontsize=10.3, color='#8a650f')
+    left.text(0, .42, 'Prescribed curved throat', ha='center', fontsize=11, color='#007e87')
+    left.text(0, 0, 'Loop phase: 0 or π', ha='center', va='center', fontsize=11, color='#7951b0')
+    left.text(0, -.86, 'Computed exterior return', ha='center', fontsize=11, color='#475569')
+    fig.text(.25, .382, r'$\Delta\mathcal{E}=-\pi^{-1}\int\log|D_\pi/D_0|\,d\kappa$',
+             ha='center', fontsize=15, color='#7951b0')
+    fig.text(.25, .319, f'Finite-window contrast: {contrast:.6f}', ha='center', fontsize=12,
+             fontweight='bold', color='#7951b0')
+    fig.text(.25, .270, 'Normalized model units (ℏ = c = d = 1).', ha='center', fontsize=10, color='#475569')
+    upper = fig.add_axes([.585, .555, .37, .265])
+    upper.set_title('B. Saved integrand samples', fontsize=12, pad=12)
+    upper.semilogx(kappa, values, '-', color='#007e87', lw=1.7)
+    upper.set(xlabel=r'Imaginary-energy parameter $\kappa d$', ylabel=r'$\log|D_\pi/D_0|$')
+    upper.spines[['top', 'right']].set_visible(False); upper.grid(alpha=.15); upper.set_axisbelow(True)
+    upper.text(.97, .93, f"h/d = {fine['config']['h']:g}, mode cutoff {fine['config']['nmax']}",
+               transform=upper.transAxes, ha='right', va='top', fontsize=9, color='#475569')
+    lower = fig.add_axes([.585, .295, .37, .125])
+    lower.set_title('Same finite window: mesh sensitivity', fontsize=10.5, pad=10)
+    lower.plot(h, mesh_values, 'o-', color='#7951b0', lw=1.5, ms=5)
+    lower.set(xlabel='Mesh scale h / d (finer →)', ylabel=r'$\Delta\mathcal{E}$', xticks=h)
+    lower.set_xlim(h[0]+.005, h[-1]-.004)
+    lower.ticklabel_format(axis='y', style='plain', useOffset=False)
+    lower.spines[['top', 'right']].set_visible(False); lower.grid(alpha=.15); lower.set_axisbelow(True)
+    fig.text(.05, .192, f"Finite window: {fine['edges'][0]:g} ≤ κd ≤ {fine['edges'][-1]:g}. "
+             f"Latest mesh change: {changes[-1]:.3g}; quadrature change: {record['diagnostics']['frequency_quadrature_difference']:.2g}.",
+             fontsize=10.1, color='#475569')
+    fig.text(.05, .137, 'Mesh changes are diagnostics, not certified errors. The low-frequency plateau may reflect numerical damping.',
+             fontsize=10, color='#475569')
+    fig.text(.05, .087, 'Uncomputed tails, full vacuum stress and the source supporting this synthetic geometry remain unresolved.',
+             fontsize=10, color='#475569')
+    fig.text(.05, .037, 'No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',
+             fontsize=10.5, fontweight='bold', color='#007e87')
+    outputs = tuple(root/f'phase_vacuum_progress.{suffix}' for suffix in ('png', 'pdf'))
+    for path in outputs: fig.savefig(path, dpi=180, facecolor='white')
+    plt.close(fig); print(outputs[0]); return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

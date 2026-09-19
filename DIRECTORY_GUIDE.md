@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Computed phase-dependent spectral diagnostic | [phase_vacuum_contrast.py](phase_vacuum_contrast.py), [saved determinants and integrals](phase_vacuum_contrast_results.json), [figure](phase_vacuum_progress.png) |
 | Curved modes and junction support | [curved_throat_modes.py](curved_throat_modes.py), [curved_exterior_closure.py](curved_exterior_closure.py), [closure results](curved_exterior_closure_results.json); [throat_junction_audit.py](throat_junction_audit.py), [required-stress results](throat_junction_audit_results.json) |
 | Imaginary response and throat connection | [imaginary_weyl_leads.py](imaginary_weyl_leads.py), [imaginary_exterior.py](imaginary_exterior.py), [connected results](imaginary_exterior_results.json); [exterior_loop_closure.py](exterior_loop_closure.py), [closure results](exterior_loop_closure_results.json), [curved-mode derivation](CURVED_THROAT_MATCHING.md) |
 | Magnetic exterior continuation | [magnetic_tail_map.py](magnetic_tail_map.py), [tail checks](magnetic_tail_map_results.json); [exterior_tail_transport.py](exterior_tail_transport.py), [connected results](exterior_tail_transport_results.json), [figure](magnetic_tail_progress.png) |
