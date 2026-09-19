@@ -58,6 +58,86 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Curved transport and missing junction source — increment93, PROGRESS
+- Previous92 committed/pushed/private/clean at
+  94e24322d6526cce73bfcb10671e8ae45e3a940d; root verified before93.
+  Goal remains ACTIVE. No physical supporting medium, new law, quantum source
+  or 13Sep2027->12Sep2027 passage is proved. No reimport or cleanup needed.
+  User asks whether the direction is sound: useful feasibility tests do not
+  establish that the destination is physically reachable. Prioritize the
+  missing source; further wave refinement alone cannot supply it.
+- mass_audit owns frozen NEW curved_throat_modes.py/results. API
+  throat_scattering(E,n,ell=1,rho_c=10,q=1,rtol=1e-10,atol=1e-12,
+  profile='secant',b=None)->(S,diagnostics). For constant profile b>0;
+  for secant b MUST be None. H=-i sigma3 d/dx+V sigma1,
+  V=sqrt(n(n+q))*sec(x/ell)/ell, |x|<=ell atan(rho_c).
+  S maps [f_plus(left),f_minus(right)] to [f_minus(left),f_plus(right)].
+  Stable scattering/log-transmission embedding avoids growing transfers.
+  Ten controls PASS in1.71s: analytic constant profile8.51e-13,
+  independent transfer7.84e-14, real unitarity7.24e-13, norm identity1.90e-13.
+  The paired n=0 formal control is not two physical Weyl zero channels.
+  Source3a2c1a47d8ea358aa2604f0eab84f715957e3dd1f72a8096f3f08b3916ac70f4;
+  JSON98d76e67c1b3c4feb0133f8d1e1267d93c6d3a1359e4f5251bb458b23ba74f49.
+- coupled_misner owns frozen NEW curved_exterior_closure.py/results.
+  Reuses frozen imaginary_exterior.build_problem and its attenuation ledger.
+  Bfacet=Fin Braw Fout^-1; canonical output [upper_n,lower_0,lower_n]
+  maps to input [upper_0,upper_n,lower_n]. Upper<-lower exp(+i phase),
+  reverse exp(-i phase); same-end reflections unchanged. The single zero
+  mode returns lower->upper. Geometry b=.2,rho_c=2,ell=b sqrt(1+rho_c^2),
+  Lopt=2ell atan(rho_c); endpoint spin/gauge identification is assumed.
+  Actual incoming=e_upper0+Bfacet*out; source_work=1+2Re(looped_upper0),
+  NOT unit incoming flux after sewing. Fin/Fout, Braw/Bfacet, paired S and
+  full incoming/outgoing complex coefficients saved in representative row.
+  Thirteen controls PASS -W error in19.96s. Representative E=.4i,phase pi,
+  h=.035,R4,N12 response .334265432139 versus matched zero-only .334258568965.
+  At R2 paired h=.08/.05/.035 differences8.09467e-6/7.07384e-6/6.85249e-6;
+  absolute final mesh change4.49336e-4 exceeds these effects. No certified
+  continuum correction, physical probability or vacuum-stress conclusion.
+  Source work .550121632613, canonical throat .061688828200,
+  signed mouth geometry -.000273865222, bulk attenuation .477653190131;
+  full source-work sum closes7.8e-16.
+  Source707cc2edb494e9f51ef471448cbc512b2f357bd362b5023aeb1648c15c60ef19;
+  JSON10eb19a1c1381e13367d8c509065a102f6bfebc2d11daea8b8ae6e36b59a1c42.
+- formation_updates owns frozen NEW throat_junction_audit.py/results.
+  Independent full4D Christoffels and Gaussian-normal calculations at both
+  joins give Kthroat=diag(rho_c/ell,0,0), Kflat=diag(0,1/b,1/b).
+  Same normal throat->exterior; c=1. Israel sigma=-1/(4pi G b),
+  p=(1/b-rho_c/ell)/(8pi G), sigma+p<0. This is an unprovided surface
+  source, NOT shell stability, a material recipe or a no-go for true MMP.
+  Smooth static spherical collar ds²=-N²dt²+ds²+r²dOmega² gives
+  rho+p_s=-N/(4pi G r)*(r'/N)'. For affine null E=N²dt/dlambda>0,
+  integral Tkk dlambda=-E/(4pi G){[r'/(Nr)]+integral r'^2/(N r²)ds}.
+  Positive N,r, inner r'=0, outer r'=N=1 imply a negative finite-segment
+  radial null average. This is not a complete-geodesic ANEC theorem or a
+  quantum no-go. Full Einstein tensor independently verified; numerical
+  identity difference8.88e-16. N=1 control does not match AdS lapse slope.
+  Root exact read-only replay PASS2.34s. Default CLI is read-only;
+  --write explicitly rewrites the saved JSON.
+  Source26140a92ffaed108c829f6d1160c859e25276de3a5a4e9a223a3124580719f9c;
+  JSONadcbbe34c7a05b064be35626438e9cdf998ef4e9ebe9c00e1da9e3dd71c272a6.
+- medium_picture added ONLY curved_junction_progress() at plotter line6856
+  and its PNG/PDF. All166 previous figures and older plotter code preserved.
+  Root viewed current PNG: unsupported joins explicit, paired effect below
+  larger mesh changes, no apparatus/probability/discovery claim.
+  Plotter5876ee84e746af00a278eaac22a9462b2c8d6154318641439fb61e4d4b23bfec;
+  PNGb9de559f02c5ae87ad98eb61393378e9e5a7c7c94ce039b89ad5740887a80975;
+  PDF8426159b01b10c2255d02035d8b14e48c6674d49eeaeb5b79dd19f947e18d2c7.
+- Root verified23 saved numerical controls and source/dependency hashes;
+  independently reconstructed saved matrix conversion, both cross phases,
+  forcing work and full balance; four current Python ASTs PASS.
+  All401 older files outside the five intentionally updated docs/plotter
+  match HEAD bytes, including166 older figures. Current103 local links PASS;
+  git diff --check PASS. No historical solver reruns or new dependencies.
+  README, DIRECTORY_GUIDE and RESEARCH updated. All four agents finished;
+  no simulation remains running.
+- Next decisive calculation: derive the supporting quantum stress for a
+  consistently matched collar and compare its sign/magnitude/tensor structure
+  with the geometric requirement, including magnetic backreaction and
+  endpoint spin/gauge matching. The current sharp join is incomplete.
+  The motivating published MMP solution is causal; supporting a throat would
+  still not prove backward travel. Do not substitute tiny wave corrections,
+  additional meshes, or a declared loop phase for this source requirement.
+
 ### Imaginary response and conditional loop connection — increment92, PROGRESS
 - Previous91 was PROGRESS, committed/pushed/private/clean at
   eb255747d8538cd43d1aafb268459a9fef1bfb84; root verified HEAD before92.

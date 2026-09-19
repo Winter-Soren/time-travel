@@ -1,5 +1,136 @@
 # Reproduction and coupled-model iterations
 
+## Curved mode transport and the missing junction source — increment93
+
+This increment tests the next boundary assumption: a finite curved throat
+in place of the independent cylindrical mouth leads. It also checks what
+stress would be required to attach that prescribed geometry to the flat
+exterior. A successful field solution is not a solution of the gravitational
+and quantum-source problem.
+
+### Curved channel equation and endpoint coordinates
+
+For the canonical spinor in the [curved-mode derivation](CURVED_THROAT_MATCHING.md),
+\[
+ H_n=-i\sigma_3\partial_x+V_n\sigma_1,\quad
+ V_n=\frac{\sqrt{n(n+q)}}{\ell}\sec(x/\ell),\quad
+ |x|\leq\ell\arctan\rho_c.
+\]
+The scattering matrix maps incoming (f_plus(left),f_minus(right)) to
+outgoing (f_minus(left),f_plus(right)). Here left is the lower exterior
+mouth and right is the upper. A single Weyl zero channel travels only
+lower to upper. Its factor is exp(i E L_opt), L_opt=2 ell arctan(rho_c).
+
+For a transfer matrix M, the pair has t=1/M22, r_left=-M21/M22 and
+r_right=M12/M22. Propagating a growing transfer matrix is poorly
+conditioned for high evanescent modes. The bounded scattering equations are
+\[
+ r_R'=-iV+2iEr_R-iVr_R^2,\quad
+ (\log t)'=iE-iVr_R,\quad r_L'=-iV\exp(2\log t).
+\]
+The full mouth map identifies the opposite port normals explicitly.
+Endpoint phases multiply cross transmissions with opposite signs, while
+same-end reflections retain their phase convention. Raw angular and
+orthonormal polygon coefficients require the same Gram conversion in
+all comparisons. None of these choices derives the physical spin/gauge
+identification at the actual nonspherical collar.
+
+### The sharp join has an unprovided surface stress
+
+In units c=1, take the synthetic calibration r_e=b, ell=b sqrt(1+rho_c^2), so both cut
+spheres have radius b and lapse one in the exterior clock. Matching the
+induced metric does not match its normal derivatives. With the normal
+directed from throat toward exterior at either end, the mixed extrinsic
+curvatures are
+\[
+ K^{a}_{b,\rm throat}=\operatorname{diag}(\rho_c/\ell,0,0),\qquad
+ K^{a}_{b,\rm flat}=\operatorname{diag}(0,1/b,1/b).
+\]
+Applying the Israel junction equation, with S^a_b=diag(-sigma,p,p), gives
+\[
+ \sigma=-\frac1{4\pi G b},\qquad
+ p=\frac1{8\pi G b}\left(1-\frac{\rho_c}{\sqrt{1+\rho_c^2}}\right),
+ \quad
+ \sigma+p=-\frac1{8\pi G b}\left(1+\frac{\rho_c}{\sqrt{1+\rho_c^2}}\right)<0.
+\]
+These are our application to this specific join of the published junction
+conditions in [Poisson and Visser, equations 3 and 6–8](https://arxiv.org/pdf/gr-qc/9506083).
+They quantify an additional missing surface source. They do not identify a
+material, establish shell stability, or rule out a different smooth
+construction. The external magnetic field has also been treated without
+its gravitational backreaction; this surface calculation does not repair
+the unsolved bulk Einstein equations.
+
+### Smoothing is not a substitute for deriving a quantum source
+
+For a smooth static spherical collar in proper radial distance s,
+ds_spacetime^2=-N(s)^2 dt^2+ds^2+r(s)^2 dOmega^2, the Einstein equations give
+\[
+ \rho+p_s=-\frac{N}{4\pi G r}\left(\frac{r'}N\right)'.
+\]
+For a radial null ray with conserved E_null=N^2 dt/dlambda, integration
+over the collar yields
+\[
+ \int T_{ab}k^ak^b\,d\lambda
+ =-\frac{E_{\rm null}}{4\pi G}
+ \left[\left.\frac{r'}{Nr}\right|_{\rm inner}^{\rm outer}
+       +\int\frac{r'^2}{Nr^2}\,ds\right].
+\]
+If the inner cut has r'=0 and the outer flat cut has r'=N=1, the bracket
+is strictly positive for positive N and r. A smooth transition therefore
+still requires a negative radial null-stress average in this class.
+This is the finite-collar version of the established spherical ANEC
+identity; see [Visser, Kar and Dadhich, equations 3 and 6–7](https://arxiv.org/pdf/gr-qc/0301003).
+It is a necessary geometric condition, not an amount of obtainable
+negative-energy material, a new law, or a quantum stability proof.
+
+### Numerical result and what it establishes
+
+The [radial solver](curved_throat_modes.py) passes ten controls, including
+independent short-interval transfer integration, the analytic constant-mass
+solution, real-energy unitarity and imaginary-energy attenuation. It retains
+log-transmission when the transmission itself underflows at large barriers.
+The [connected calculation](curved_exterior_closure.py) passes thirteen
+controls, using the frozen exterior, every retained paired throat mode and
+the explicit endpoint-coordinate conversion. The [saved matrices and results](curved_exterior_closure_results.json)
+allow the conversion, phase placement and work balance to be checked without
+rerunning the exterior solver.
+
+For q=1, b=0.2, rho_c=2, E=0.4i, endpoint phase pi, h=0.035,
+outer matching radius R=4 and twelve retained angular pairs, the driven
+lower-mouth response is 0.334265432139. A matched calculation retaining
+the zero-mode connection with the previous semi-infinite paired leads gives
+0.334258568965. The difference is 6.86317e-6. At fixed R=2, matched differences
+for h=0.08, 0.05, 0.035 are 8.09467e-6, 7.07384e-6, 6.85249e-6.
+These paired comparisons settle under refinement, but the absolute mesh
+change is 4.49336e-4: they do not certify a continuum physical correction.
+All lengths remain in the model's coordinate units; no laboratory scale
+is inferred.
+
+Sewing changes the actual incoming amplitude. The correct source work is
+1+2 Re(looped upper input), not one. Its representative value 0.550121633
+equals the throat, exterior, omitted-mode, numerical-loss and bulk
+attenuation terms within 7.8e-16. The canonical throat term is 0.0616888282;
+the polygon-coordinate correction is separately recorded as -0.0002738652.
+This is a driven imaginary-energy response, not a passage probability.
+
+The [junction audit](throat_junction_audit.py) independently verifies both
+ends using four-dimensional Christoffel symbols and a Gaussian-normal
+derivative calculation. Its full spherical Einstein components reproduce
+the smooth-collar identity. A numerical integral agrees with its integrated
+form within 8.9e-16. Root replay reproduced the saved audit exactly and
+independently checked the connected matrices and source-work sum.
+
+![Prescribed throat and missing junction support](curved_junction_progress.png)
+
+The substantive next gate is the supporting source: derive a quantum stress
+on a consistently matched collar and test it against the required geometric
+stress, including the magnetic field's gravitational backreaction. The
+present synthetic sharp join is not a complete candidate medium. More wave
+resolution alone cannot supply its missing source. This is useful feasibility
+work, not a discovery of new physics or evidence that the destination is
+reachable. Travel from 13 September 2027 to 12 September 2027 remains unproved.
+
 ## Imaginary exterior response and a declared throat connection — increment92
 
 The connected q=1 calculation now supplies T(i kappa), with kappa>0,

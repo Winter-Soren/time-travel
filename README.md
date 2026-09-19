@@ -8,10 +8,12 @@ A computational research workbench for testing proposed chronology-changing geom
 
 The present direction tests whether charged fermions actually return through the magnetic exterior used in an idealized traversable-wormhole construction. A field-line picture alone cannot determine the spinor's return amplitude, phase, or quantum stress.
 
-A connected **q=1** model now calculates real-energy transmission and the **imaginary-energy response** used in vacuum calculations. A specified zero-mode throat connection is checked against direct boundary sewing, yielding its finite boundary determinant. The throat length and endpoint phase remain inputs: neither the full quantum source nor a self-consistent physical throat is established.
+A connected **q=1** model now includes transport through a prescribed curved throat. A separate geometry check exposes a missing requirement: its direct join to the flat exterior needs a negative surface energy density. Smoothing the join still requires a negative radial null-stress average under the stated static spherical endpoint conditions. These are required stresses, not a material or quantum state that supplies them.
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Curved radial modes](curved_throat_modes.py) · [connected closure](curved_exterior_closure.py) · [results](curved_exterior_closure_results.json) | Stable finite-throat scattering, all retained angular pairs, canonical endpoint coordinates and the driven-source balance | A conditional curved-throat field response; endpoint spin/gauge matching, geometry support and continuum errors remain open |
+| [Junction source audit](throat_junction_audit.py) · [results](throat_junction_audit_results.json) | Independent extrinsic-curvature calculations at both cuts, Israel stress, full spherical Einstein components and a smooth-collar integral check | Required negative stress for this prescribed join and endpoint class; not a no-go for quantum support or a material-generation recipe |
 | [Imaginary lead maps](imaginary_weyl_leads.py) · [connected response](imaginary_exterior.py) · [results](imaginary_exterior_results.json) | Decaying free/magnetic maps, independent Green-function control and the required bulk attenuation identity | Computed complex response on the positive imaginary-energy axis; its squared magnitude is not a probability |
 | [Zero-mode loop connection](exterior_loop_closure.py) · [results](exterior_loop_closure_results.json) · [curved-throat equations](CURVED_THROAT_MATCHING.md) | Direct sewn solves and finite boundary determinant ratios agree with D=1−zT; canonical curved-mode equations and endpoint conventions are derived | A conditional loop determinant, not a renormalized four-dimensional vacuum determinant or a supporting stress tensor |
 | [Magnetic tail](magnetic_tail_map.py) · [connected transport](exterior_tail_transport.py) · [results](exterior_tail_transport_results.json) | Coupled radial angular modes retain the actual pair field to a distant radius; full-matrix matching, coordinate conversion, flux accounting and independent refinements | Much smaller dependence on the artificial matching sphere in the conditional q=1 model; no certified infinity limit or physical throat |
@@ -24,11 +26,11 @@ A connected **q=1** model now calculates real-energy transmission and the **imag
 | [Open-boundary spinor calibration](open_boundary_spinor.py) · [report](OPEN_BOUNDARY_SCATTERING.md) | Frozen planar outgoing modes, complex reflection phases, evanescent behavior, and an independently checked absorber loss budget | A boundary-calibration contract; absorber loss is not a physical escape probability |
 | [Scattering-to-vacuum bridge](scattering_vacuum.py) · [results](scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
-These components do not yet form a complete physical two-mouth scattering solution. The next substantive gate is matching the curved throat, including its nonzero angular modes and physical endpoint identification, before deriving the renormalized state/stress. A few imaginary-energy samples and a finite boundary determinant are insufficient. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+These components do not yet form a complete physical solution. The next substantive gate is a collar with a derived quantum stress that satisfies its geometric requirement, together with consistent spin/gauge matching and gravitational backreaction. The junction audit prevents us from treating successful wave transport as evidence of a supported geometry. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
 
-![Imaginary exterior response and an explicitly assumed throat connection](imaginary_response_progress.png)
+![Conditional curved transport and the missing junction support](curved_junction_progress.png)
 
-*The diagram is a conditional mathematical connection, not an apparatus. Imaginary-energy values are calculation tools, not travel probabilities. The previous [magnetic-tail improvement](magnetic_tail_progress.png), [computed field](exterior_boundary_progress.png), and [phase-sensitive stress benchmark](scattering_vacuum_progress.png) remain available.*
+*The diagram is a prescribed geometry, not an apparatus. Imaginary-energy responses are not travel probabilities, and small paired-model differences are not certified physical corrections. The previous [imaginary response](imaginary_response_progress.png), [magnetic-tail improvement](magnetic_tail_progress.png), and [computed field](exterior_boundary_progress.png) remain available.*
 
 ## Quickstart
 
@@ -53,7 +55,17 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The current imaginary response and declared loop connection can be reproduced with:
+The current curved transport and source audit can be reproduced with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 curved_throat_modes.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 curved_exterior_closure.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 throat_junction_audit.py --write
+```
+
+These commands rewrite their respective results JSON files. The geometry audit assigns no SI length scale or obtainable material; it verifies the required stress of the stated synthetic geometry.
+
+The preceding imaginary response and declared zero-mode loop connection can be reproduced with:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 imaginary_weyl_leads.py
@@ -95,7 +107,7 @@ These commands print their checks and **rewrite their corresponding `*_results.j
 Regenerate only the current figure from saved data:
 
 ```powershell
-.\.venv\Scripts\python.exe -B -W error -X utf8 -c "from quantum_horizon_plot import exterior_boundary_progress; exterior_boundary_progress()"
+.\.venv\Scripts\python.exe -B -W error -X utf8 -c "from quantum_horizon_plot import curved_junction_progress; curved_junction_progress()"
 ```
 
 For the broader local propagation benchmark:

@@ -6853,6 +6853,86 @@ def imaginary_response_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def curved_junction_progress():
+    """Show the missing geometric source and a conditional paired-mode comparison."""
+    from matplotlib.patches import Ellipse
+    root = Path(__file__).resolve().parent
+    modes = json.loads((root/'curved_throat_modes_results.json').read_text(encoding='utf-8'))
+    record = json.loads((root/'curved_exterior_closure_results.json').read_text(encoding='utf-8'))
+    audit = json.loads((root/'throat_junction_audit_results.json').read_text(encoding='utf-8'))
+    assert modes['passed'] and all(modes['tests'].values()) and record['passed'] and all(record['tests'].values())
+    assert record['input_source_sha256']['curved_throat_modes.py'] == modes['source_sha256']
+    assert audit['status'] == 'PASS: geometric sharp-junction audit'
+    p = record['parameters']; assert p == dict(q=1, mu=.5, b=.2, d=1., rho_c=2., energy='i*kappa')
+    shell = next(row for row in audit['examples'] if row['rho_c'] == p['rho_c'] and row['b'] == p['b'])
+    assert shell['four_pi_G_b_sigma'] == -1 and shell['eight_pi_G_b_sigma_plus_pressure'] < 0
+    smooth = audit['smooth_collar_gate']['quadrature_control']
+    assert smooth['absolute_difference'] < 1e-12 and smooth['four_pi_G_b_over_E_integral'] < 0
+    paired = sorted(record['paired_mesh_refinement'], key=lambda row: row['h'], reverse=True)
+    h = np.array([row['h'] for row in paired]); assert np.array_equal(h, [.08, .05, .035])
+    to_complex = lambda row: complex(row['driven_lower_response']['real'], row['driven_lower_response']['imag'])
+    differences, curved_values = [], []
+    for row in paired:
+        curved, zero = row['curved'], row['zero_only']
+        for key in ('kappa', 'h', 'R', 'nmax', 'L', 'phase'):
+            assert curved[key] == zero[key]
+        assert (curved['kappa'], curved['R'], curved['nmax'], curved['L'], curved['phase']) == (.4, 2., 12, 40., np.pi)
+        for key in ('b', 'rho_c', 'ell', 'optical_length', 'endpoint_lapse'):
+            assert np.isclose(curved['geometry'][key], zero['geometry'][key], rtol=1e-13, atol=0)
+        delta = abs(to_complex(curved)-to_complex(zero)); differences.append(delta); curved_values.append(to_complex(curved))
+        assert np.isclose(delta, row['complex_response_difference'], rtol=1e-11, atol=0)
+        assert abs(curved['reduced_source_work_balance_residual']) < 1e-10
+        assert abs(zero['reduced_source_work_balance_residual']) < 1e-10
+    differences = np.array(differences); mesh_change = abs(np.diff(curved_values))
+    assert np.all(differences > 0) and np.all(mesh_change > 0)
+    assert np.isclose(mesh_change[-1], record['sensitivities']['fine_mesh_change'], rtol=1e-11, atol=0)
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13.5, 7.5))
+    fig.suptitle('Curved-mode propagation is calculable; the junction source is still missing',
+                 fontsize=16.8, fontweight='bold', y=.958)
+    fig.text(.5, .892, 'A prescribed throat joined to flat exteriors  |  Conditional q = 1 field model',
+             ha='center', fontsize=11, color='#475569')
+    left = fig.add_axes([.04, .355, .43, .42]); left.set_axis_off()
+    left.set_title('A. Assumed geometry — not an apparatus', fontsize=11.5, pad=16)
+    left.set(xlim=(-1.5, 1.5), ylim=(-.86, 1.17))
+    x = np.linspace(-1.3, 1.3, 300); width = .27+.48*np.maximum(abs(x)-.48, 0)
+    left.fill_between(x, -width, width, color='#edf1f5')
+    inner = abs(x) <= .48; left.fill_between(x, -width, width, where=inner, color='#d7efed')
+    left.plot(x, width, color='#64748b', lw=1.5); left.plot(x, -width, color='#64748b', lw=1.5)
+    for join in (-.48, .48):
+        left.add_patch(Ellipse((join, 0), .13, .60, facecolor='none', edgecolor='#b38516', lw=2.3))
+        left.annotate('', xy=(join, .32), xytext=(np.sign(join)*.18, .77),
+                      arrowprops={'arrowstyle': '->', 'color': '#a77612', 'lw': 1.3})
+    left.text(0, .93, 'Required support not supplied', ha='center', fontsize=11.2, color='#8a650f', fontweight='bold')
+    left.text(-1.02, .78, 'Exterior', ha='center', fontsize=10.5, color='#475569')
+    left.text(1.02, .78, 'Exterior', ha='center', fontsize=10.5, color='#475569')
+    left.text(0, 0, 'Prescribed\nthroat', ha='center', va='center', fontsize=10, color='#007e87')
+    left.text(0, -.69, 'Both sharp joins require negative surface energy.', ha='center', fontsize=10.2, color='#8a650f')
+    fig.text(.255, .283, r'Exact normalized requirement: $4\pi G b\,\sigma=-1$.',
+             ha='center', fontsize=11, color='#8a650f')
+    right = fig.add_axes([.615, .375, .345, .40])
+    right.set_title('B. Conditional model comparison', fontsize=11.5, pad=16)
+    right.semilogy(h, differences, 'D-', color='#007e87', lw=1.7, ms=6, label='Curved − zero-only connection')
+    right.semilogy(h[1:], mesh_change, 'o--', color='#64748b', lw=1.5, ms=6, label='Curved: mesh-step change')
+    right.set(xlabel='Mesh scale h / d (finer →)', ylabel='Response-amplitude difference',
+              xlim=(.084, .031), xticks=h)
+    right.spines[['top', 'right']].set_visible(False); right.grid(alpha=.15); right.set_axisbelow(True)
+    right.legend(loc='best', frameon=False, fontsize=9.2)
+    fig.text(.7875, .283, 'Imaginary energy κd = 0.4; chosen phase π; not probability.',
+             ha='center', fontsize=9.7, color='#475569')
+    fig.text(.05, .208, 'The smaller mode difference is compared on matched meshes. Refinement changes are diagnostics, not certified errors.',
+             fontsize=9.9, color='#475569')
+    fig.text(.05, .148, 'For static spherical smoothing, positive lapse/radius and radius slope 0 → 1 still require negative averaged radial-null stress.',
+             fontsize=9.8, color='#475569')
+    fig.text(.05, .09, 'Neither the required material/quantum source nor a complete gravitational solution is supplied by this field calculation.',
+             fontsize=9.9, color='#475569')
+    fig.text(.05, .037, 'No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',
+             fontsize=10.5, fontweight='bold', color='#007e87')
+    outputs = tuple(root/f'curved_junction_progress.{suffix}' for suffix in ('png', 'pdf'))
+    for path in outputs: fig.savefig(path, dpi=180, facecolor='white')
+    plt.close(fig); print(outputs[0]); return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

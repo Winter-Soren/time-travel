@@ -1,0 +1,1386 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_zero_channel": true,
+    "analytic_constant_profile": true,
+    "independent_short_transfer": true,
+    "independent_transfer_determinant": true,
+    "integrated_norm_identity": true,
+    "real_energy_unitarity": true,
+    "imaginary_energy_passivity": true,
+    "symmetric_profile_reflections": true,
+    "tolerance_refinement": true,
+    "large_barrier_log_transmission": true
+  },
+  "controls": {
+    "zero_mode_error": 0.0,
+    "constant_profile_error": 8.514778358034199e-13,
+    "real_energy_unitarity_error": 7.240874566605271e-13,
+    "minimum_imaginary_passivity_eigenvalue": 0.013237871846051852,
+    "reflection_symmetry_error": 4.299005595953531e-12,
+    "independent_short_transfer": [
+      {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "ell": 0.7,
+        "rho_c": 0.8,
+        "n": 1,
+        "scattering_maximum_difference": 7.842796499485713e-14,
+        "transfer_determinant_error": 8.68749516769185e-15,
+        "integrated_norm_identity_error": 8.426592756904938e-14,
+        "norm_quadrature_error_estimate": 2.402086911335237e-14,
+        "norm_matrix": {
+          "real": [
+            [
+              0.43276633643136436,
+              0.024699011067245768
+            ],
+            [
+              0.02469901106724577,
+              0.4327663364311988
+            ]
+          ],
+          "imag": [
+            [
+              2.275906161241328e-19,
+              7.333023077649159e-14
+            ],
+            [
+              -7.33371696703955e-14,
+              -3.6392523440668336e-19
+            ]
+          ]
+        },
+        "nfev": 347
+      },
+      {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.3
+        },
+        "ell": 0.7,
+        "rho_c": 0.8,
+        "n": 1,
+        "scattering_maximum_difference": 6.539213615042172e-14,
+        "transfer_determinant_error": 1.0436096431476471e-14,
+        "integrated_norm_identity_error": 1.9018120411828932e-13,
+        "norm_quadrature_error_estimate": 2.083207703036014e-14,
+        "norm_matrix": {
+          "real": [
+            [
+              0.37586158927628255,
+              0.0
+            ],
+            [
+              0.0,
+              0.37586158927615043
+            ]
+          ],
+          "imag": [
+            [
+              0.0,
+              7.897502096732012e-14
+            ],
+            [
+              -7.897155152036817e-14,
+              0.0
+            ]
+          ]
+        },
+        "nfev": 347
+      }
+    ],
+    "tolerance_refinement": [
+      {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 1,
+        "maximum_change": 7.488449990043985e-12
+      },
+      {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 1,
+        "maximum_change": 5.965561378218354e-12
+      },
+      {
+        "energy": {
+          "real": 4.0,
+          "imag": 0.0
+        },
+        "n": 4,
+        "maximum_change": 7.215644284320392e-12
+      },
+      {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 12,
+        "maximum_change": 6.904143923236461e-11
+      }
+    ],
+    "high_barrier": {
+      "energy": {
+        "real": 0.0,
+        "imag": 0.4
+      },
+      "n": 160,
+      "q": 1,
+      "ell": 1.0,
+      "rho_c": 10.0,
+      "angular_eigenvalue": 160.49922118191105,
+      "optical_length": 2.9422553486074694,
+      "profile": "secant",
+      "constant_radius": null,
+      "rtol": 3e-12,
+      "atol": 3e-14,
+      "nfev": 10730,
+      "accepted_steps": 814,
+      "log_transmission": {
+        "real": -961.7329903882255,
+        "imag": 0.0
+      },
+      "transmission_underflowed": true,
+      "endpoint_reflection_symmetry_error": 1.411093464298574e-13,
+      "unitarity_defect_maximum": 0.0004973895084650071,
+      "passivity_defect_eigenvalues": [
+        0.0004973895081828994,
+        0.0004973895084650071
+      ],
+      "minimum_passivity_defect_eigenvalue": 0.0004973895081828994,
+      "singular_values_clipped": false,
+      "zero_mode_scope": "Nonzero angular pair",
+      "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+    },
+    "high_barrier_scattering": {
+      "real": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "imag": [
+        [
+          -0.9997512743135339,
+          0.0
+        ],
+        [
+          0.0,
+          -0.999751274313675
+        ]
+      ]
+    }
+  },
+  "synthetic_calibration": {
+    "q": 1,
+    "sphere_radius": 0.2,
+    "rho_c": 4.0,
+    "ell": 0.8246211251235321,
+    "optical_length": 2.1865945070451716,
+    "boundary_lapse": 1.0,
+    "meaning": "ell=b*sqrt(1+rho_c^2) is a synthetic N_cut=1 calibration, not a matched MMP collar"
+  },
+  "samples": [
+    {
+      "energy": {
+        "real": 0.4,
+        "imag": 0.0
+      },
+      "n": 0,
+      "curved_scattering": {
+        "real": [
+          [
+            0.0,
+            0.641274818205604
+          ],
+          [
+            0.641274818205604,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            0.7673112846396628
+          ],
+          [
+            0.7673112846396628,
+            0.0
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.0,
+            0.641274818205604
+          ],
+          [
+            0.641274818205604,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            0.7673112846396628
+          ],
+          [
+            0.7673112846396628,
+            0.0
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 0,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 0.0,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 0,
+        "accepted_steps": 0,
+        "log_transmission": {
+          "real": 0.0,
+          "imag": 0.8746378028180687
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 0.0,
+        "unitarity_defect_maximum": 0.0,
+        "passivity_defect_eigenvalues": [
+          0.0,
+          0.0
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.0,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Formal paired zero control; retain only the physical Weyl chirality",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 0,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 0.0,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 0,
+        "accepted_steps": 0,
+        "log_transmission": {
+          "real": 0.0,
+          "imag": 0.8746378028180687
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 0.0,
+        "unitarity_defect_maximum": 0.0,
+        "passivity_defect_eigenvalues": [
+          0.0,
+          0.0
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.0,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Formal paired zero control; retain only the physical Weyl chirality",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.4,
+        "imag": 0.0
+      },
+      "n": 1,
+      "curved_scattering": {
+        "real": [
+          [
+            0.0825643707963857,
+            0.005710535545486186
+          ],
+          [
+            0.005710535545486186,
+            0.08256437079653484
+          ]
+        ],
+        "imag": [
+          [
+            -0.9965692603258697,
+            0.00047310989109768564
+          ],
+          [
+            0.00047310989109768564,
+            -0.9965692603255258
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.05656854249491278,
+            3.9402255961688107e-07
+          ],
+          [
+            3.9402255961688107e-07,
+            0.056568542494915434
+          ]
+        ],
+        "imag": [
+          [
+            -0.9983987179477316,
+            2.232503057842221e-08
+          ],
+          [
+            2.232503057842221e-08,
+            -0.9983987179478205
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 1,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 1.4142135623730951,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 626,
+        "accepted_steps": 46,
+        "log_transmission": {
+          "real": -5.1620222480467834,
+          "imag": 0.08265982503466782
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 3.747842199671281e-13,
+        "unitarity_defect_maximum": 6.392664175791651e-13,
+        "passivity_defect_eigenvalues": [
+          -6.392719053549981e-13,
+          2.1321769848635936e-14
+        ],
+        "minimum_passivity_defect_eigenvalue": -6.392719053549981e-13,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 1,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 1.4142135623730951,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 566,
+        "accepted_steps": 46,
+        "log_transmission": {
+          "real": -14.74525510590231,
+          "imag": 0.056598755911822576
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 8.896856590522628e-14,
+        "unitarity_defect_maximum": 1.7141843500212417e-13,
+        "passivity_defect_eigenvalues": [
+          -6.66133814775787e-15,
+          1.7141843500213109e-13
+        ],
+        "minimum_passivity_defect_eigenvalue": -6.66133814775787e-15,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.4,
+        "imag": 0.0
+      },
+      "n": 2,
+      "curved_scattering": {
+        "real": [
+          [
+            0.04046367886818026,
+            7.280452215540602e-05
+          ],
+          [
+            7.280452215540602e-05,
+            0.040463678868161164
+          ]
+        ],
+        "imag": [
+          [
+            -0.9991810073172236,
+            2.9483534845770503e-06
+          ],
+          [
+            2.9483534845770503e-06,
+            -0.999181007317135
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.032659863237108,
+            4.745437184505868e-12
+          ],
+          [
+            4.745437184505868e-12,
+            0.03265986323712774
+          ]
+        ],
+        "imag": [
+          [
+            -0.9994665243684193,
+            1.5506805447458235e-13
+          ],
+          [
+            1.5506805447458235e-13,
+            -0.9994665243686822
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 2,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 2.4494897427831783,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 770,
+        "accepted_steps": 61,
+        "log_transmission": {
+          "real": -9.52691316158552,
+          "imag": 0.04047472904551677
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 9.063038267708052e-14,
+        "unitarity_defect_maximum": 2.000621890374532e-13,
+        "passivity_defect_eigenvalues": [
+          -2.0006218927504322e-13,
+          -2.1538326440138035e-14
+        ],
+        "minimum_passivity_defect_eigenvalue": -2.0006218927504322e-13,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 2,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 2.4494897427831783,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 590,
+        "accepted_steps": 48,
+        "log_transmission": {
+          "real": -26.073303934302267,
+          "imag": 0.032665672223774
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 2.6364094939860377e-13,
+        "unitarity_defect_maximum": 2.815525590449397e-13,
+        "passivity_defect_eigenvalues": [
+          -2.815525590449398e-13,
+          2.453592884421596e-13
+        ],
+        "minimum_passivity_defect_eigenvalue": -2.815525590449398e-13,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.4,
+        "imag": 0.0
+      },
+      "n": 4,
+      "curved_scattering": {
+        "real": [
+          [
+            0.020041226932426905,
+            1.4937392307998295e-08
+          ],
+          [
+            1.4937392307998295e-08,
+            0.020041226930065114
+          ]
+        ],
+        "imag": [
+          [
+            -0.9997991544420716,
+            2.9942380694717683e-10
+          ],
+          [
+            2.9942380694717683e-10,
+            -0.9997991544417375
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.0178885438199973,
+            1.1749177400632616e-21
+          ],
+          [
+            1.1749177400632616e-21,
+            0.017888543820035248
+          ]
+        ],
+        "imag": [
+          [
+            -0.9998399871978506,
+            2.1020931096123124e-23
+          ],
+          [
+            2.1020931096123124e-23,
+            -0.9998399871977784
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 4,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 4.47213595499958,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 1010,
+        "accepted_steps": 83,
+        "log_transmission": {
+          "real": -18.019197351056967,
+          "imag": 0.020042568769513845
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 2.38530048310734e-12,
+        "unitarity_defect_maximum": 7.240874566605271e-13,
+        "passivity_defect_eigenvalues": [
+          -3.863576125695549e-14,
+          7.240874566605271e-13
+        ],
+        "minimum_passivity_defect_eigenvalue": -3.863576125695549e-14,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 4,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 4.47213595499958,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 710,
+        "accepted_steps": 55,
+        "log_transmission": {
+          "real": -48.19292879058088,
+          "imag": 0.01788949801309739
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 8.153420636614393e-14,
+        "unitarity_defect_maximum": 3.4494629375103614e-13,
+        "passivity_defect_eigenvalues": [
+          2.0194956817931597e-13,
+          3.4494629375103604e-13
+        ],
+        "minimum_passivity_defect_eigenvalue": 2.0194956817931597e-13,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.4,
+        "imag": 0.0
+      },
+      "n": 12,
+      "curved_scattering": {
+        "real": [
+          [
+            0.0066631989770195785,
+            3.800394765618209e-23
+          ],
+          [
+            3.800394765618209e-23,
+            0.006663198974045431
+          ]
+        ],
+        "imag": [
+          [
+            -0.9999778006432293,
+            2.5323348670934893e-25
+          ],
+          [
+            2.5323348670934893e-25,
+            -0.999977800643067
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.006405126152203323,
+            9.956540253266511e-60
+          ],
+          [
+            9.956540253266511e-60,
+            0.006405126152203093
+          ]
+        ],
+        "imag": [
+          [
+            -0.9999794869690007,
+            6.377420456389119e-62
+          ],
+          [
+            6.377420456389119e-62,
+            -0.9999794869690786
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 12,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 12.489995996796795,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 1802,
+        "accepted_steps": 150,
+        "log_transmission": {
+          "real": -51.624329992234344,
+          "imag": 0.006663248282213567
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 2.978573717749114e-12,
+        "unitarity_defect_maximum": 4.869438186005937e-13,
+        "passivity_defect_eigenvalues": [
+          1.226796442210798e-13,
+          4.869438186005939e-13
+        ],
+        "minimum_passivity_defect_eigenvalue": 1.226796442210798e-13,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.4,
+          "imag": 0.0
+        },
+        "n": 12,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 12.489995996796795,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 1058,
+        "accepted_steps": 82,
+        "log_transmission": {
+          "real": -135.8568554192797,
+          "imag": 0.006405169948746213
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 7.782697600928504e-14,
+        "unitarity_defect_maximum": 1.8851586958135158e-13,
+        "passivity_defect_eigenvalues": [
+          3.2862601528904646e-14,
+          1.8851586958135158e-13
+        ],
+        "minimum_passivity_defect_eigenvalue": 3.2862601528904646e-14,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.0,
+        "imag": 0.4
+      },
+      "n": 0,
+      "curved_scattering": {
+        "real": [
+          [
+            0.0,
+            0.4170130332739886
+          ],
+          [
+            0.4170130332739886,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.0,
+            0.4170130332739886
+          ],
+          [
+            0.4170130332739886,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 0,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 0.0,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 0,
+        "accepted_steps": 0,
+        "log_transmission": {
+          "real": -0.8746378028180687,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 0.0,
+        "unitarity_defect_maximum": 0.8261001300796273,
+        "passivity_defect_eigenvalues": [
+          0.8261001300796273,
+          0.8261001300796273
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.8261001300796273,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Formal paired zero control; retain only the physical Weyl chirality",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 0,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 0.0,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 0,
+        "accepted_steps": 0,
+        "log_transmission": {
+          "real": -0.8746378028180687,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 0.0,
+        "unitarity_defect_maximum": 0.8261001300796273,
+        "passivity_defect_eigenvalues": [
+          0.8261001300796273,
+          0.8261001300796273
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.8261001300796273,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Formal paired zero control; retain only the physical Weyl chirality",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.0,
+        "imag": 0.4
+      },
+      "n": 1,
+      "curved_scattering": {
+        "real": [
+          [
+            0.0,
+            0.0045979160713583425
+          ],
+          [
+            0.0045979160713583425,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9211965301251239,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9211965301247613
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.0,
+            3.5609419086994637e-07
+          ],
+          [
+            3.5609419086994637e-07,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9450301795488351,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9450301795489252
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 1,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 1.4142135623730951,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 650,
+        "accepted_steps": 47,
+        "log_transmission": {
+          "real": -5.382152106100837,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 3.6259883984257613e-13,
+        "unitarity_defect_maximum": 0.15137581205390038,
+        "passivity_defect_eigenvalues": [
+          0.15137581205323236,
+          0.15137581205390038
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.15137581205323236,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 1,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 1.4142135623730951,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 554,
+        "accepted_steps": 45,
+        "log_transmission": {
+          "real": -14.848070559994431,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 9.015010959956271e-14,
+        "unitarity_defect_maximum": 0.10691795974176976,
+        "passivity_defect_eigenvalues": [
+          0.10691795974159934,
+          0.10691795974176976
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.10691795974159934,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.0,
+        "imag": 0.4
+      },
+      "n": 2,
+      "curved_scattering": {
+        "real": [
+          [
+            0.0,
+            6.436880372194603e-05
+          ],
+          [
+            6.436880372194603e-05,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.960378384787168,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9603783847870903
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.0,
+            4.470786007575447e-12
+          ],
+          [
+            4.470786007575447e-12,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9678733279497137,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9678733279496609
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 2,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 2.4494897427831783,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 770,
+        "accepted_steps": 62,
+        "log_transmission": {
+          "real": -9.650881456475952,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 7.771561172376096e-14,
+        "unitarity_defect_maximum": 0.07767335389039676,
+        "passivity_defect_eigenvalues": [
+          0.07767335389024743,
+          0.07767335389039676
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.07767335389024743,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 2,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 2.4494897427831783,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 602,
+        "accepted_steps": 48,
+        "log_transmission": {
+          "real": -26.133456882140315,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 5.284661597215745e-14,
+        "unitarity_defect_maximum": 0.06322122104364825,
+        "passivity_defect_eigenvalues": [
+          0.063221221043546,
+          0.06322122104364825
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.063221221043546,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.0,
+        "imag": 0.4
+      },
+      "n": 4,
+      "curved_scattering": {
+        "real": [
+          [
+            0.0,
+            1.397688115745259e-08
+          ],
+          [
+            1.397688115745259e-08,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9801607943261887,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9801607943286469
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.0,
+            1.136717332341024e-21
+          ],
+          [
+            1.136717332341024e-21,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9822714433819573,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9822714433824438
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 4,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 4.47213595499958,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 1034,
+        "accepted_steps": 85,
+        "log_transmission": {
+          "real": -18.085861218201934,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 2.458144798822559e-12,
+        "unitarity_defect_maximum": 0.03928481726585453,
+        "passivity_defect_eigenvalues": [
+          0.03928481726103572,
+          0.03928481726585453
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.03928481726103572,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 4,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 4.47213595499958,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 710,
+        "accepted_steps": 55,
+        "log_transmission": {
+          "real": -48.22614237733397,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 4.864997293907436e-13,
+        "unitarity_defect_maximum": 0.03514281151632637,
+        "passivity_defect_eigenvalues": [
+          0.035142811515370576,
+          0.03514281151632637
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.035142811515370576,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    },
+    {
+      "energy": {
+        "real": 0.0,
+        "imag": 0.4
+      },
+      "n": 12,
+      "curved_scattering": {
+        "real": [
+          [
+            0.0,
+            3.712164209785486e-23
+          ],
+          [
+            3.712164209785486e-23,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9933590127166548,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9933590127209538
+          ]
+        ]
+      },
+      "constant_scattering": {
+        "real": [
+          [
+            0.0,
+            9.838309899992107e-60
+          ],
+          [
+            9.838309899992107e-60,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9936153864578327,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9936153864580238
+          ]
+        ]
+      },
+      "diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 12,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 12.489995996796795,
+        "optical_length": 2.1865945070451716,
+        "profile": "secant",
+        "constant_radius": null,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 1814,
+        "accepted_steps": 151,
+        "log_transmission": {
+          "real": -51.64784208736758,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 4.299005595953531e-12,
+        "unitarity_defect_maximum": 0.013237871854592798,
+        "passivity_defect_eigenvalues": [
+          0.013237871846051852,
+          0.013237871854592798
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.013237871846051852,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      },
+      "constant_diagnostics": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.4
+        },
+        "n": 12,
+        "q": 1,
+        "ell": 0.8246211251235321,
+        "rho_c": 4.0,
+        "angular_eigenvalue": 12.489995996796795,
+        "optical_length": 2.1865945070451716,
+        "profile": "constant",
+        "constant_radius": 0.2,
+        "rtol": 3e-12,
+        "atol": 3e-14,
+        "nfev": 1022,
+        "accepted_steps": 82,
+        "log_transmission": {
+          "real": -135.86882164146158,
+          "imag": 0.0
+        },
+        "transmission_underflowed": false,
+        "endpoint_reflection_symmetry_error": 1.9118040484045196e-13,
+        "unitarity_defect_maximum": 0.012728463794251854,
+        "passivity_defect_eigenvalues": [
+          0.012728463793871936,
+          0.012728463794251854
+        ],
+        "minimum_passivity_defect_eigenvalue": 0.012728463793871936,
+        "singular_values_clipped": false,
+        "zero_mode_scope": "Nonzero angular pair",
+        "normalization": "Canonical current per common coordinate time, f_dagger*sigma_3*f"
+      }
+    }
+  ],
+  "source_sha256": "3a2c1a47d8ea358aa2604f0eab84f715957e3dd1f72a8096f3f08b3916ac70f4",
+  "input_sha256": {
+    "CURVED_THROAT_MATCHING.md": "4e4dbf8b4811a3b45bdfa1025b4b163459a3d9a4334c6e361a8ec482aeda19dc"
+  },
+  "equations": {
+    "potential": "V_n=sqrt(n(n+q))*sec(x/ell)/ell",
+    "generator": "f_prime=(i*E*sigma_3+V*sigma_2)*f",
+    "embedding": "r_right_prime=2iE*r_right-iV*(1+r_right^2); log_t_prime=iE-iV*r_right; r_left_prime=-iV*exp(2log_t)",
+    "current": "j_prime=-2*Im(E)*f_dagger*f",
+    "scattering": "[f_minus(left),f_plus(right)]=S*[f_plus(left),f_minus(right)]",
+    "norm_identity": "I-S_dagger*S=2*Im(E)*integral(F_dagger*F dx), F for the two unit incoming characteristics"
+  },
+  "scope": [
+    "A prescribed, static, spherical optical potential with an unchanged angular bundle. This does not solve Einstein-Maxwell equations or determine the quantum source.",
+    "Nonzero angular pairs use the sigma_1 mass convention. A single Weyl zero sector has one chirality; its formal paired control matrix must not create an extra physical channel.",
+    "Canonical current is per common coordinate time. A local physical spinor requires the radius, lapse, spin-frame and gauge transitions before sewing to an exterior.",
+    "The constant-profile comparison and N_cut=1 calibration are synthetic finite-boundary tests. No physical collar, endpoint phase, spin structure, or transparent junction is inferred.",
+    "At imaginary energy these are resolvent data, not propagation probabilities. Numerical passivity defects are reported without clipping; tolerances are not certified error bounds.",
+    "Log transmission is retained even if its floating-point exponential underflows. No all-frequency, full angular, ultraviolet, vacuum-stress, stability or backward-time conclusion follows."
+  ]
+}

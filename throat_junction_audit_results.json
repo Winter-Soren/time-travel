@@ -1,0 +1,138 @@
+{
+  "status": "PASS: geometric sharp-junction audit",
+  "conventions": {
+    "metric": "signature -+++, c=1, G symbolic",
+    "normal": "throat toward exterior at each end; same oriented normal in both limiting geometries",
+    "extrinsic": "K_ab=e_a^mu e_b^nu nabla_mu n_nu",
+    "jump": "K_exterior-K_throat",
+    "surface_tensor": "S^a_b=-(jumpK^a_b-delta^a_b trace(jumpK))/(8*pi*G)=diag(-sigma,p,p)",
+    "units": "b=0.2 is in the existing chosen coordinate length units; no SI scale assigned"
+  },
+  "exact": {
+    "calibration": "ell=b*sqrt(1+rho_c^2), N_cut=1, r_cut=b",
+    "inner_K_mixed": "diag(rho_c/ell,0,0), at BOTH ends with the stated normals",
+    "outer_K_mixed": "diag(0,1/b,1/b)",
+    "sigma": "-1/(4*pi*G*b)",
+    "pressure": "(1/b-rho_c/ell)/(8*pi*G)",
+    "sigma_plus_pressure": "-(1/b+rho_c/ell)/(8*pi*G)",
+    "dimensionless_sigma": "4*pi*G*b*sigma=-1",
+    "dimensionless_pressure": "8*pi*G*b*p=1-rho_c/sqrt(1+rho_c^2)",
+    "dimensionless_nec": "8*pi*G*b*(sigma+p)=-1-rho_c/sqrt(1+rho_c^2)<0"
+  },
+  "verification": {
+    "connection_and_unit_normals": "exact symbolic; both ends",
+    "first_fundamental_form": "exactly continuous after clock calibration",
+    "independent_gaussian_normal_derivative": "exact symbolic; both ends",
+    "israel_and_intrinsic_null_contraction": "exact symbolic",
+    "smooth_flat_identification_control": "zero jump and zero layer",
+    "numerical_examples": "same symbolic expressions; cancellation-safe positive pressure"
+  },
+  "examples": [
+    {
+      "rho_c": 2,
+      "b": 0.2,
+      "ell": 0.447213595499958,
+      "N_cut": 1.0,
+      "K_inner_mixed_times_b": [
+        0.8944271909999159,
+        0.0,
+        0.0
+      ],
+      "K_outer_mixed_times_b": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "four_pi_G_b_sigma": -1.0,
+      "eight_pi_G_b_pressure": 0.10557280900008412,
+      "eight_pi_G_b_sigma_plus_pressure": -1.8944271909999157
+    },
+    {
+      "rho_c": 5,
+      "b": 0.2,
+      "ell": 1.019803902718557,
+      "N_cut": 0.9999999999999999,
+      "K_inner_mixed_times_b": [
+        0.9805806756909202,
+        0.0,
+        0.0
+      ],
+      "K_outer_mixed_times_b": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "four_pi_G_b_sigma": -1.0,
+      "eight_pi_G_b_pressure": 0.019419324309079843,
+      "eight_pi_G_b_sigma_plus_pressure": -1.9805806756909203
+    },
+    {
+      "rho_c": 10,
+      "b": 0.2,
+      "ell": 2.009975124224178,
+      "N_cut": 1.0000000000000002,
+      "K_inner_mixed_times_b": [
+        0.9950371902099892,
+        0.0,
+        0.0
+      ],
+      "K_outer_mixed_times_b": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "four_pi_G_b_sigma": -1.0,
+      "eight_pi_G_b_pressure": 0.004962809790010864,
+      "eight_pi_G_b_sigma_plus_pressure": -1.995037190209989
+    }
+  ],
+  "smooth_collar_gate": {
+    "independent_symbolic_curvature": "Full 4D Christoffel/Ricci contraction reproduces both orthonormal Einstein components exactly.",
+    "energy": "8*pi*G*rho=(1-r_prime^2-2*r*r_second)/r^2",
+    "radial_pressure": "8*pi*G*p_l=2*N_prime*r_prime/(N*r)+(r_prime^2-1)/r^2",
+    "radial_null_identity": "rho+p_l=-N/(4*pi*G*r)*(r_prime/N)_prime",
+    "affine_null_vector": "k^t=E/N^2, k^l=E/N, E>0 constant",
+    "finite_collar_integral": "I=int T_ab*k^a*k^b dLambda=-E/(4*pi*G)*([r_prime/(N*r)]_inner^outer+int r_prime^2/(N*r^2) dl)",
+    "strict_sign_conditions": "Static spherical smooth collar, N>0, r>0, inner r_prime=0, outer r_prime=N=1: I<0.",
+    "scope": "Smoothing with these endpoint conditions still requires a negative radial-null stress average inside the collar. This is a finite-segment identity, not a complete-geodesic ANEC statement, instability result or no-go for quantum-supported smooth collars.",
+    "quadrature_control": {
+      "profile": "N=1; r=b+w*(s^3-s^4/2), s=l/w in [0,1]",
+      "scope": "Checks the integral identity and radial endpoint data, not the nonzero inner lapse derivative of the AdS throat.",
+      "b": 0.2,
+      "width": 0.1,
+      "r_out": 0.25,
+      "four_pi_G_over_E_integral_direct": -4.711661610621992,
+      "four_pi_G_over_E_integral_boundary_formula": -4.711661610621993,
+      "four_pi_G_b_over_E_integral": -0.9423323221243985,
+      "positive_squared_derivative_integral": 0.7116616106219933,
+      "absolute_difference": 8.881784197001252e-16,
+      "reported_quad_errors": [
+        5.230995204354985e-14,
+        7.901031058543599e-15
+      ]
+    }
+  },
+  "interpretation": {
+    "required_layer": "Negative surface energy and tangential null-energy violation are required by this sharp prescribed metric join in Einstein gravity.",
+    "not_established": [
+      "A material or quantum state that provides this singular surface stress.",
+      "The total stress of the nonbackreacting magnetic scattering exterior: flat space with a retained test magnetic field is not its Einstein-Maxwell solution.",
+      "Bulk Einstein-Maxwell consistency, surface electromagnetic currents, or stability.",
+      "A no-go theorem for a smooth MMP collar; smoothing changes the geometry and stress problem."
+    ]
+  },
+  "primary_sources": [
+    {
+      "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability (1995)",
+      "url": "https://arxiv.org/pdf/gr-qc/9506083",
+      "equations": "(3), (6)-(8)",
+      "use": "Extrinsic-curvature convention and Israel surface-stress relation; actual full text read."
+    },
+    {
+      "title": "Maldacena, Milekhin and Popov, Traversable wormholes in four dimensions",
+      "url": "https://arxiv.org/pdf/1807.04726",
+      "equations": "(5.18)-(5.20)",
+      "use": "Leading product throat geometry only; this sharp flat matching is our synthetic calculation."
+    }
+  ]
+}
