@@ -1,0 +1,337 @@
+{
+  "passed": true,
+  "tests": {
+    "full_reduced_dirac_residual_identity": true,
+    "exact_angular_equation_and_radial_F_derivative": true,
+    "independent_normalizer_derivative": true,
+    "radial_log_derivative_slope_identity": true,
+    "unit_flux_and_implemented_mode": true,
+    "independent_residual_norm_integral": true,
+    "regular_axis_factors_and_gauge_covariance": true,
+    "actual_collar_quadrature_refinement": true,
+    "actual_collar_beta_variance": true,
+    "actual_collar_small_b_leading": true,
+    "actual_collar_exact_analytic_enclosure": true,
+    "zero_diagonal_radial_connection": true
+  },
+  "moderate_checks": [
+    {
+      "k": 0,
+      "b": 0.05,
+      "max_full_dirac_residual": 1.0791555574376145e-37,
+      "max_angular_ode_residual": 4.428192830368139e-39,
+      "max_F_derivative_error": 1.8367099231598242e-40,
+      "max_g_tau_derivative_error": 3.6734198463196485e-40,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 2.803036902508403e-19,
+      "implementation_error": 8.046778508985962e-16,
+      "residual_norm_quadrature_relative_error": 3.70709286812975e-16
+    },
+    {
+      "k": 0,
+      "b": 0.3,
+      "max_full_dirac_residual": 3.601842670546093e-38,
+      "max_angular_ode_residual": 1.744874427001833e-39,
+      "max_F_derivative_error": 0.0,
+      "max_g_tau_derivative_error": 2.938735877055719e-39,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 1.4213904733847816e-17,
+      "implementation_error": 8.18328115436252e-16,
+      "residual_norm_quadrature_relative_error": 6.191699180225665e-16
+    },
+    {
+      "k": 0,
+      "b": 0.7,
+      "max_full_dirac_residual": 1.2551030336280547e-38,
+      "max_angular_ode_residual": 2.204051907791789e-39,
+      "max_F_derivative_error": 2.938735877055719e-39,
+      "max_g_tau_derivative_error": 2.938735877055719e-39,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 7.802908260372577e-17,
+      "implementation_error": 5.49796564823018e-16,
+      "residual_norm_quadrature_relative_error": 2.1722546933412276e-14
+    },
+    {
+      "k": 2,
+      "b": 0.05,
+      "max_full_dirac_residual": 1.035692129074556e-37,
+      "max_angular_ode_residual": 4.428192830368139e-39,
+      "max_F_derivative_error": 1.8367099231598242e-40,
+      "max_g_tau_derivative_error": 3.6734198463196485e-40,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 1.0244077193225959e-18,
+      "implementation_error": 5.15746233731953e-16,
+      "residual_norm_quadrature_relative_error": 4.071230081043221e-16
+    },
+    {
+      "k": 2,
+      "b": 0.3,
+      "max_full_dirac_residual": 8.007547517260008e-39,
+      "max_angular_ode_residual": 1.744874427001833e-39,
+      "max_F_derivative_error": 0.0,
+      "max_g_tau_derivative_error": 2.938735877055719e-39,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 9.007711084934097e-18,
+      "implementation_error": 3.810547162576622e-16,
+      "residual_norm_quadrature_relative_error": 2.864942831876282e-16
+    },
+    {
+      "k": 2,
+      "b": 0.7,
+      "max_full_dirac_residual": 1.0045461270930825e-38,
+      "max_angular_ode_residual": 2.204051907791789e-39,
+      "max_F_derivative_error": 2.938735877055719e-39,
+      "max_g_tau_derivative_error": 2.938735877055719e-39,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 1.734731206571239e-15,
+      "implementation_error": 1.0275761671406105e-15,
+      "residual_norm_quadrature_relative_error": 2.824774297998521e-12
+    },
+    {
+      "k": 4,
+      "b": 0.05,
+      "max_full_dirac_residual": 1.189645281313836e-37,
+      "max_angular_ode_residual": 4.428192830368139e-39,
+      "max_F_derivative_error": 1.8367099231598242e-40,
+      "max_g_tau_derivative_error": 3.6734198463196485e-40,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 3.119809075349618e-20,
+      "implementation_error": 6.669592558289163e-16,
+      "residual_norm_quadrature_relative_error": 2.137946455486767e-16
+    },
+    {
+      "k": 4,
+      "b": 0.3,
+      "max_full_dirac_residual": 9.423771596752533e-39,
+      "max_angular_ode_residual": 1.744874427001833e-39,
+      "max_F_derivative_error": 0.0,
+      "max_g_tau_derivative_error": 2.938735877055719e-39,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 7.624078037610713e-18,
+      "implementation_error": 4.0150629362316035e-16,
+      "residual_norm_quadrature_relative_error": 9.065851136647815e-17
+    },
+    {
+      "k": 4,
+      "b": 0.7,
+      "max_full_dirac_residual": 2.8623417085406146e-38,
+      "max_angular_ode_residual": 2.204051907791789e-39,
+      "max_F_derivative_error": 2.938735877055719e-39,
+      "max_g_tau_derivative_error": 2.938735877055719e-39,
+      "normalization_derivative_error": 0.0,
+      "unit_flux_error": 5.135892964645076e-14,
+      "implementation_error": 2.5373594149331947e-14,
+      "residual_norm_quadrature_relative_error": 1.698156263982014e-11
+    }
+  ],
+  "axis_error": 0.0,
+  "gauge_error": 2.204051907791789e-39,
+  "actual_collar": [
+    {
+      "q": 100000,
+      "k": 0,
+      "b": 98.99996752543319,
+      "d": 4188251800.784477,
+      "order": 40,
+      "log_normalization": 5.587276615993818e-16,
+      "mean_g": 5.643715471413277e-18,
+      "radial_residual_norm": 5.64365903511311e-18,
+      "leading_radial_residual": 5.643659435303749e-18,
+      "relative_to_leading_minus_one": -7.090977826928415e-08,
+      "normalized_basis_distance": 2.79361037203551e-16,
+      "analytic_radial_residual_lower": 5.643659034939434e-18,
+      "analytic_radial_residual_upper": 5.643659835668102e-18,
+      "analytic_enclosure_factors": [
+        0.9999999290594481,
+        1.0000000709405585
+      ],
+      "berry_diagonal_residual": 2.0418722290716542e-69,
+      "beta_variance_relative_error": 1.3246893102122194e-17,
+      "profiles": [
+        {
+          "t": 0.0,
+          "relative_amplitude_minus_one": -2.793638307996909e-16,
+          "radial_log_derivative": -5.643715471413277e-18
+        },
+        {
+          "t": 9.99990000099999e-06,
+          "relative_amplitude_minus_one": -1.3210583527497338e-28,
+          "radial_log_derivative": -4.004377560692704e-30
+        },
+        {
+          "t": 2.999950000799987e-05,
+          "relative_amplitude_minus_one": 5.587220744069698e-16,
+          "radial_log_derivative": 1.128731807022221e-17
+        }
+      ],
+      "previous_potential_residual": 8.92345327202352e-16,
+      "new_over_previous_residual": 0.006324523548307134,
+      "leading_new_over_previous": 0.006324523697797325
+    },
+    {
+      "q": 100000,
+      "k": 16,
+      "b": 98.99996752543319,
+      "d": 4188251800.784477,
+      "order": 40,
+      "log_normalization": 9.498370247261337e-15,
+      "mean_g": 9.594316301511426e-17,
+      "radial_residual_norm": 2.3267540690617385e-17,
+      "leading_radial_residual": 2.3267542339985687e-17,
+      "relative_to_leading_minus_one": -7.088708718348743e-08,
+      "normalized_basis_distance": 1.1517429135984753e-15,
+      "analytic_radial_residual_lower": 2.326754068937339e-17,
+      "analytic_radial_residual_upper": 2.3267543990598137e-17,
+      "analytic_enclosure_factors": [
+        0.9999999290594481,
+        1.0000000709405585
+      ],
+      "berry_diagonal_residual": 1.611677784720703e-68,
+      "beta_variance_relative_error": 5.238662080885528e-16,
+      "profiles": [
+        {
+          "t": 8.754443381899413e-05,
+          "relative_amplitude_minus_one": -2.303485827188038e-15,
+          "radial_log_derivative": -4.6535081380964763e-17
+        },
+        {
+          "t": 0.00016999830001699983,
+          "relative_amplitude_minus_one": -2.2461034130946618e-27,
+          "radial_log_derivative": -6.807693150476579e-29
+        },
+        {
+          "t": 0.00025245216621500553,
+          "relative_amplitude_minus_one": 2.303485827201509e-15,
+          "radial_log_derivative": 4.6535081381372795e-17
+        }
+      ],
+      "previous_potential_residual": 3.678939688139726e-15,
+      "new_over_previous_residual": 0.006324523548354969,
+      "leading_new_over_previous": 0.006324523697797325
+    },
+    {
+      "q": 100000,
+      "k": 50000,
+      "b": 98.99996752543319,
+      "d": 4188251800.784477,
+      "order": 40,
+      "log_normalization": 2.7936942467978034e-11,
+      "mean_g": 2.821914272914011e-13,
+      "radial_residual_norm": 8.923498310580798e-16,
+      "leading_radial_residual": 8.923498310574371e-16,
+      "relative_to_leading_minus_one": 7.202544018640759e-13,
+      "normalized_basis_distance": 4.417130214802743e-14,
+      "analytic_radial_residual_lower": 8.923497677536476e-16,
+      "analytic_radial_residual_upper": 8.923498943612327e-16,
+      "analytic_enclosure_factors": [
+        0.9999999290594481,
+        1.0000000709405585
+      ],
+      "berry_diagonal_residual": 7.185964075144289e-68,
+      "beta_variance_relative_error": 2.3975079912571614e-14,
+      "profiles": [
+        {
+          "t": 0.4968427539122925,
+          "relative_amplitude_minus_one": -8.834260428614313e-14,
+          "radial_log_derivative": -1.7846996618159894e-15
+        },
+        {
+          "t": 0.5000049999500005,
+          "relative_amplitude_minus_one": -3.3000442666063768e-24,
+          "radial_log_derivative": -1.0005755481928238e-25
+        },
+        {
+          "t": 0.5031672459877085,
+          "relative_amplitude_minus_one": 8.834260430596448e-14,
+          "radial_log_derivative": 1.7846996624162877e-15
+        }
+      ],
+      "previous_potential_residual": 1.4109360225318502e-13,
+      "new_over_previous_residual": 0.006324523697798892,
+      "leading_new_over_previous": 0.006324523697797325
+    },
+    {
+      "q": 100000,
+      "k": 99999,
+      "b": 98.99996752543319,
+      "d": 4188251800.784477,
+      "order": 40,
+      "log_normalization": 5.587276880124842e-11,
+      "mean_g": 5.643715871611923e-13,
+      "radial_residual_norm": 5.643659835494426e-18,
+      "leading_radial_residual": 5.643659435303749e-18,
+      "relative_to_leading_minus_one": 7.090978498665978e-08,
+      "normalized_basis_distance": 2.793610636161258e-16,
+      "analytic_radial_residual_lower": 5.643659034939434e-18,
+      "analytic_radial_residual_upper": 5.643659835668102e-18,
+      "analytic_enclosure_factors": [
+        0.9999999290594481,
+        1.0000000709405585
+      ],
+      "berry_diagonal_residual": 8.508953794189854e-70,
+      "beta_variance_relative_error": 1.3246893102122194e-17,
+      "profiles": [
+        {
+          "t": 0.999970000499992,
+          "relative_amplitude_minus_one": -5.587221272323837e-16,
+          "radial_log_derivative": -1.1287319670992865e-17
+        },
+        {
+          "t": 0.999990000099999,
+          "relative_amplitude_minus_one": -1.3218128223672936e-28,
+          "radial_log_derivative": -4.005902215655264e-30
+        },
+        {
+          "t": 1.0,
+          "relative_amplitude_minus_one": 2.7936385721305817e-16,
+          "radial_log_derivative": 5.643716271818604e-18
+        }
+      ],
+      "previous_potential_residual": 8.923454115703732e-16,
+      "new_over_previous_residual": 0.006324523847287524,
+      "leading_new_over_previous": 0.006324523697797325
+    }
+  ],
+  "actual_refinement_relative_errors": [
+    4.440892098500626e-16,
+    1.1102230246251565e-16,
+    7.327471962526033e-15,
+    4.440892098500626e-16
+  ],
+  "saved_collar_parameters": {
+    "q": 100000,
+    "isotropic_b": 98.99996752543319,
+    "areal_R": 100.0,
+    "separation_d": 4188251800.784477,
+    "b_over_d": 2.3637539535442946e-08,
+    "common_clock": 6165936382.795819,
+    "lapse_at_infinity_normalization": 0.9899996821709947,
+    "central_optical_x": 1.5708225328305907
+  },
+  "frozen_input_sha256": "e5e765d6e1adcde9c91034ce5fbf3928563accb419fddf5f160c2323dc99bed5",
+  "upstream_closure_input_sha256": "6baf84864641725f0e2378a368e99eeef5beb0dd08b053a84ea21b674d2fce03",
+  "monopole_helper_source_sha256": "0e0266ba4e25fac86b96c1a94edc14d68347ec048194f6f12ed3e4972ed1d455",
+  "source_sha256": "72fd5b01a6d3e270edfcdf30e7d5dc2d7e5dbc8564120eb76e3889ef0870c88c",
+  "units": "Saved-collar lengths in re; radial residual in inverse re; normalized basis distance dimensionless.",
+  "equations": {
+    "F": "(q/2)*log1p[2*eps^2*(1-cos(theta))/((1+eps+D)*(D+1-eps)*(1+eps))]",
+    "g": "q*eps*(1-cos(theta))/[d*D*(1+eps)*(1+eps+D)]",
+    "D": "sqrt(1+2*eps*cos(theta)+eps^2), eps=b/d",
+    "angular": "h_corrected=h_monopole*exp(F)/sqrt(<exp(2F)>_Beta)",
+    "radial": "partial_b Y=(g-<g>_corrected)Y; <Y,partial_bY>=0",
+    "full_residual": "(H-E)Psi=-i exp(iEb)partial_bY/b",
+    "norm": "sphere-weighted residual norm=sqrt(Var_corrected(g))",
+    "slope": "partial_t g=(q*b/d^2)*D^(-3), t=sin^2(theta/2)",
+    "enclosure": "M=(1-eps^2)^(-q); sigma_lead*(1+eps)^(-3)/sqrt(M) <= sigma <= sigma_lead*(1-eps)^(-3)*sqrt(M)",
+    "leading": "q*b/d^2*sqrt(Var_Beta(t)); new/old leading=2/sqrt(q+1)"
+  },
+  "scope": [
+    "Exact angular basis on upper-centered spheres 0<b<d in flat point-pair field.",
+    "Radial coupling remains; diagonal zero is not absence of coupling.",
+    "Radial derivative is orthogonal to all angular zero modes: same k by normalization, different k by azimuthal phase.",
+    "Analytic enclosures are exact formulas; reported decimal endpoints are not interval-arithmetic certificates.",
+    "Fixed-order numerical quadrature is validated at the reported moderate-q tests and saved collar, not uniformly for all q and b/d.",
+    "No global return amplitude, continuum current, curved finite-mouth match or time travel result.",
+    "No q-mode continuation asserted across b=d, where the second focus changes enclosed flux."
+  ]
+}

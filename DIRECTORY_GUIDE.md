@@ -12,6 +12,8 @@ project root; consult the reports before starting potentially expensive runs.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
 | Incoming spinor modes | [INCOMING_MODES.md](INCOMING_MODES.md), [incoming_modes.py](incoming_modes.py), [saved results](incoming_modes_results.json) |
+| Exact angular collar modes | [dipole_collar_modes.py](dipole_collar_modes.py), [saved results](dipole_collar_modes_results.json) |
+| Local radial correction bound | [collar_dressing_bound.py](collar_dressing_bound.py), [saved results](collar_dressing_bound_results.json); derivation in [RESEARCH.md](RESEARCH.md) |
 | Open-boundary scattering | [OPEN_BOUNDARY_SCATTERING.md](OPEN_BOUNDARY_SCATTERING.md), [open_boundary_spinor.py](open_boundary_spinor.py), [saved results](open_boundary_spinor_results.json) |
 | Quantum-source analysis | [QUANTUM_COMPLETION.md](QUANTUM_COMPLETION.md) |
 | Source-energy analysis | [SOURCE_FEASIBILITY.md](SOURCE_FEASIBILITY.md) |

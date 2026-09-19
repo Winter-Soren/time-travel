@@ -1,0 +1,387 @@
+{
+  "passed": true,
+  "tests": {
+    "frozen_inputs_match": true,
+    "sufficient_domain_and_gap_flux_guards": true,
+    "direct_closed_cdf_density_and_endpoints": true,
+    "direct_angular_inverse": true,
+    "direct_cartesian_dirac_residual": true,
+    "independent_corrector_quadrature": true,
+    "direct_normalized_flux": true,
+    "direct_corrector_and_residual_below_bounds": true,
+    "saved_radial_residual_below_sigma_bound": true,
+    "high_precision_evaluation": true,
+    "tiny_flux_factor_offset_retained": true
+  },
+  "actual_collar": [
+    {
+      "q": 100000,
+      "k": 0,
+      "b": 98.99996752543319,
+      "d": 4188251800.784477,
+      "epsilon": 2.3637539535442946e-08,
+      "log_M": 5.587332752896285e-11,
+      "beta_variance": 9.99960001099974e-11,
+      "gap0": 3.194236877607819,
+      "angular_perturbation_bound": 1.4109431438961075e-13,
+      "gap_lower_bound": 3.1942368776076777,
+      "gap_perturbation_ratio": 4.417152509217696e-14,
+      "sigma_bound": 5.643659835668103e-18,
+      "rho_bound": 5.700668774891224e-20,
+      "G_bound": 5.643772308774642e-13,
+      "chi_second_bound": 5.700668775209739e-20,
+      "radial_operator_C_bound": 2.850391192067533e-15,
+      "eta_bound": 1.766825708898245e-18,
+      "eta_prime_bound": 3.569346163954863e-20,
+      "flux_deficit_upper": 3.121673085623787e-36,
+      "flux_factor_minus_one_upper": 1.5608365428118935e-36,
+      "energy": 0.0,
+      "flux_normalized_residual_bound": 3.569346163954863e-20,
+      "decimal_values": {
+        "eta_bound": "1.76682570889824520710961816842501234783616122e-18",
+        "eta_prime_bound": "3.56934616395486280349234780777865200668301809e-20",
+        "flux_deficit_upper": "3.12167308562378671282495996016977221053652395e-36",
+        "flux_factor_minus_one_upper": "1.56083654281189335641247998008488610892257805e-36",
+        "flux_normalized_residual_bound": "3.56934616395486280979876037421143464936497317e-20"
+      },
+      "saved_undressed_radial_residual": 5.64365903511311e-18,
+      "energy_comparisons": [
+        {
+          "label": "zero",
+          "energy": 0.0,
+          "residual_bound": 3.569346163954863e-20,
+          "bound_over_saved_undressed_residual": 0.006324524819354765,
+          "bound_over_energy": null
+        },
+        {
+          "label": "minimum_sampled",
+          "energy": 4.757400615445382e-14,
+          "residual_bound": 3.569346163971674e-20,
+          "bound_over_saved_undressed_residual": 0.006324524819384552,
+          "bound_over_energy": 7.502723551141416e-07
+        },
+        {
+          "label": "maximum_sampled",
+          "energy": 1.3334509095484067e-10,
+          "residual_bound": 3.56934621107437e-20,
+          "bound_over_saved_undressed_residual": 0.006324524902845825,
+          "bound_over_energy": 2.676773614623116e-10
+        },
+        {
+          "label": "weighted_rms",
+          "energy": 1.0319386260789103e-10,
+          "residual_bound": 3.569346200419977e-20,
+          "bound_over_saved_undressed_residual": 0.0063245248839673045,
+          "bound_over_energy": 3.458874501076226e-10
+        }
+      ]
+    },
+    {
+      "q": 100000,
+      "k": 16,
+      "b": 98.99996752543319,
+      "d": 4188251800.784477,
+      "epsilon": 2.3637539535442946e-08,
+      "log_M": 5.587332752896285e-11,
+      "beta_variance": 1.6996600127496567e-09,
+      "gap0": 3.194236877607819,
+      "angular_perturbation_bound": 1.4109431438961075e-13,
+      "gap_lower_bound": 3.1942368776076777,
+      "gap_perturbation_ratio": 4.417152509217696e-14,
+      "sigma_bound": 2.326754399059814e-17,
+      "rho_bound": 2.3502579063557015e-19,
+      "G_bound": 5.643772308774642e-13,
+      "chi_second_bound": 2.350257906487018e-19,
+      "radial_operator_C_bound": 2.850391192067533e-15,
+      "eta_bound": 7.284226211809424e-18,
+      "eta_prime_bound": 1.4715613857981742e-19,
+      "flux_deficit_upper": 5.305995150481148e-35,
+      "flux_factor_minus_one_upper": 2.652997575240574e-35,
+      "energy": 0.0,
+      "flux_normalized_residual_bound": 1.4715613857981742e-19,
+      "decimal_values": {
+        "eta_bound": "7.28422621180942440246452881393700901085504436e-18",
+        "eta_prime_bound": "1.47156138579817411862382459779764320927942193e-19",
+        "flux_deficit_upper": "5.30599515048114774181654354317944657987082478e-35",
+        "flux_factor_minus_one_upper": "2.65299757524057387090827177158972339551135441e-35",
+        "flux_normalized_residual_bound": "1.47156138579817412934301061651530401453095724e-19"
+      },
+      "saved_undressed_radial_residual": 2.3267540690617385e-17,
+      "energy_comparisons": [
+        {
+          "label": "zero",
+          "energy": 0.0,
+          "residual_bound": 1.4715613857981742e-19,
+          "bound_over_saved_undressed_residual": 0.006324524819211254,
+          "bound_over_energy": null
+        },
+        {
+          "label": "minimum_sampled",
+          "energy": 4.757400615445382e-14,
+          "residual_bound": 1.471561385805105e-19,
+          "bound_over_saved_undressed_residual": 0.006324524819241041,
+          "bound_over_energy": 3.0932046820432403e-06
+        },
+        {
+          "label": "maximum_sampled",
+          "energy": 1.3334509095484067e-10,
+          "residual_bound": 1.4715614052244903e-19,
+          "bound_over_saved_undressed_residual": 0.006324524902702314,
+          "bound_over_energy": 1.1035737384009561e-09
+        },
+        {
+          "label": "weighted_rms",
+          "energy": 1.0319386260789103e-10,
+          "residual_bound": 1.471561400831923e-19,
+          "bound_over_saved_undressed_residual": 0.0063245248838237934,
+          "bound_over_energy": 1.4260163963659945e-09
+        }
+      ]
+    },
+    {
+      "q": 100000,
+      "k": 50000,
+      "b": 98.99996752543319,
+      "d": 4188251800.784477,
+      "epsilon": 2.3637539535442946e-08,
+      "log_M": 5.587332752896285e-11,
+      "beta_variance": 2.49995000074999e-06,
+      "gap0": 3.194236877607819,
+      "angular_perturbation_bound": 1.4109431438961075e-13,
+      "gap_lower_bound": 3.1942368776076777,
+      "gap_perturbation_ratio": 4.417152509217696e-14,
+      "sigma_bound": 8.923498943612327e-16,
+      "rho_bound": 9.013638892465882e-18,
+      "G_bound": 5.643772308774642e-13,
+      "chi_second_bound": 9.013638892969505e-18,
+      "radial_operator_C_bound": 2.850391192067533e-15,
+      "eta_bound": 2.793624670157705e-16,
+      "eta_prime_bound": 5.643688253877081e-18,
+      "flux_deficit_upper": 7.804338797713748e-32,
+      "flux_factor_minus_one_upper": 3.902169398856874e-32,
+      "energy": 0.0,
+      "flux_normalized_residual_bound": 5.643688253877083e-18,
+      "decimal_values": {
+        "eta_bound": "2.79362467015770534260301513111582463144925935e-16",
+        "eta_prime_bound": "5.64368825387708164901283286067541855392369518e-18",
+        "flux_deficit_upper": "7.80433879771374797139804114842243901495183671e-32",
+        "flux_factor_minus_one_upper": "3.90216939885687398569902057421144791136617898e-32",
+        "flux_normalized_residual_bound": "5.64368825387708322564750653170346197108254745e-18"
+      },
+      "saved_undressed_radial_residual": 8.923498310580798e-16,
+      "energy_comparisons": [
+        {
+          "label": "zero",
+          "energy": 0.0,
+          "residual_bound": 5.643688253877083e-18,
+          "bound_over_saved_undressed_residual": 0.006324524370879559,
+          "bound_over_energy": null
+        },
+        {
+          "label": "minimum_sampled",
+          "energy": 4.757400615445382e-14,
+          "residual_bound": 5.643688253903664e-18,
+          "bound_over_saved_undressed_residual": 0.006324524370909346,
+          "bound_over_energy": 0.00011862966165979085
+        },
+        {
+          "label": "maximum_sampled",
+          "energy": 1.3334509095484067e-10,
+          "residual_bound": 5.643688328380311e-18,
+          "bound_over_saved_undressed_residual": 0.006324524454370613,
+          "bound_over_energy": 4.2323930247208207e-08
+        },
+        {
+          "label": "weighted_rms",
+          "energy": 1.0319386260789103e-10,
+          "residual_bound": 5.6436883115340674e-18,
+          "bound_over_saved_undressed_residual": 0.0063245244354920935,
+          "bound_over_energy": 5.469015471374076e-08
+        }
+      ]
+    },
+    {
+      "q": 100000,
+      "k": 99999,
+      "b": 98.99996752543319,
+      "d": 4188251800.784477,
+      "epsilon": 2.3637539535442946e-08,
+      "log_M": 5.587332752896285e-11,
+      "beta_variance": 9.99960001099974e-11,
+      "gap0": 3.194236877607819,
+      "angular_perturbation_bound": 1.4109431438961075e-13,
+      "gap_lower_bound": 3.1942368776076777,
+      "gap_perturbation_ratio": 4.417152509217696e-14,
+      "sigma_bound": 5.643659835668103e-18,
+      "rho_bound": 5.700668774891224e-20,
+      "G_bound": 5.643772308774642e-13,
+      "chi_second_bound": 5.700668775209739e-20,
+      "radial_operator_C_bound": 2.850391192067533e-15,
+      "eta_bound": 1.766825708898245e-18,
+      "eta_prime_bound": 3.569346163954863e-20,
+      "flux_deficit_upper": 3.121673085623787e-36,
+      "flux_factor_minus_one_upper": 1.5608365428118935e-36,
+      "energy": 0.0,
+      "flux_normalized_residual_bound": 3.569346163954863e-20,
+      "decimal_values": {
+        "eta_bound": "1.76682570889824520710961816842501234783616122e-18",
+        "eta_prime_bound": "3.56934616395486280349234780777865200668301809e-20",
+        "flux_deficit_upper": "3.12167308562378671282495996016977221053652395e-36",
+        "flux_factor_minus_one_upper": "1.56083654281189335641247998008488610892257805e-36",
+        "flux_normalized_residual_bound": "3.56934616395486280979876037421143464936497317e-20"
+      },
+      "saved_undressed_radial_residual": 5.643659835494426e-18,
+      "energy_comparisons": [
+        {
+          "label": "zero",
+          "energy": 0.0,
+          "residual_bound": 3.569346163954863e-20,
+          "bound_over_saved_undressed_residual": 0.006324523922413481,
+          "bound_over_energy": null
+        },
+        {
+          "label": "minimum_sampled",
+          "energy": 4.757400615445382e-14,
+          "residual_bound": 3.569346163971674e-20,
+          "bound_over_saved_undressed_residual": 0.006324523922443268,
+          "bound_over_energy": 7.502723551141416e-07
+        },
+        {
+          "label": "maximum_sampled",
+          "energy": 1.3334509095484067e-10,
+          "residual_bound": 3.56934621107437e-20,
+          "bound_over_saved_undressed_residual": 0.006324524005904528,
+          "bound_over_energy": 2.676773614623116e-10
+        },
+        {
+          "label": "weighted_rms",
+          "energy": 1.0319386260789103e-10,
+          "residual_bound": 3.569346200419977e-20,
+          "bound_over_saved_undressed_residual": 0.006324523987026011,
+          "bound_over_energy": 3.458874501076226e-10
+        }
+      ]
+    }
+  ],
+  "independent_q1": {
+    "q": 1,
+    "k": 0,
+    "b": 0.2,
+    "d": 1.0,
+    "energy": 0.4,
+    "quadratures": [
+      {
+        "order": 24,
+        "norm_t": 0.008219854848066612,
+        "norm_t_prime": 0.0829549955491136,
+        "inner_t_t_prime": 0.0006811302152687085,
+        "norm_h_prime": 0.058569250216727056,
+        "norm_h_squared": 1.0,
+        "flux_factor": 1.0000337847188954,
+        "flux_factor_prime": 0.0006811992529796376,
+        "flux_normalized_residual": 0.08322639913037759,
+        "normalized_flux": 1.0
+      },
+      {
+        "order": 48,
+        "norm_t": 0.008219854848066612,
+        "norm_t_prime": 0.0829549955491136,
+        "inner_t_t_prime": 0.0006811302152687085,
+        "norm_h_prime": 0.058569250216727056,
+        "norm_h_squared": 1.0,
+        "flux_factor": 1.0000337847188954,
+        "flux_factor_prime": 0.0006811992529796376,
+        "flux_normalized_residual": 0.08322639913037759,
+        "normalized_flux": 1.0
+      }
+    ],
+    "quadrature_relative_difference": 6.78903120849734e-33,
+    "cdf_density_identity_error": 0.0,
+    "cdf_endpoint_error": 1.5547577760065312e-66,
+    "angular_inverse_error": 7.418412301374843e-68,
+    "full_cartesian_dirac_identity_error": 1.176453879211674e-65,
+    "actual_over_bound": {
+      "sigma_bound": 0.5089040055983232,
+      "eta_bound": 0.4994480593659131,
+      "eta_prime_bound": 0.32841078798413753,
+      "flux_normalized_residual_bound": 0.3082950714523404
+    },
+    "bound": {
+      "epsilon": 0.2,
+      "log_M": 0.04082199452025513,
+      "beta_variance": 0.08333333333333333,
+      "gap0": 7.0710678118654755,
+      "angular_perturbation_bound": 0.078125,
+      "gap_lower_bound": 6.9929428118654755,
+      "gap_perturbation_ratio": 0.011048543456039806,
+      "sigma_bound": 0.11508899433374797,
+      "rho_bound": 1.1508899433374797,
+      "G_bound": 0.20833333333333334,
+      "chi_second_bound": 1.1748668171570105,
+      "radial_operator_C_bound": 0.9765625,
+      "eta_bound": 0.016457877238530743,
+      "eta_prime_bound": 0.25259522093750586,
+      "flux_deficit_upper": 0.00027086172319854826,
+      "flux_factor_minus_one_upper": 0.00013545838008817564,
+      "energy": 0.4,
+      "flux_normalized_residual_bound": 0.269956956296149
+    }
+  },
+  "parameters": {
+    "q": 100000,
+    "isotropic_b": 98.99996752543319,
+    "areal_R": 100.0,
+    "separation_d": 4188251800.784477,
+    "b_over_d": 2.3637539535442946e-08,
+    "common_clock": 6165936382.795819,
+    "lapse_at_infinity_normalization": 0.9899996821709947,
+    "central_optical_x": 1.5708225328305907
+  },
+  "sampled_energy_scales": {
+    "zero": 0.0,
+    "minimum_sampled": 4.757400615445382e-14,
+    "maximum_sampled": 1.3334509095484067e-10,
+    "weighted_rms": 1.0319386260789103e-10
+  },
+  "high_precision_relative_differences": [
+    1.688598677776409e-61,
+    1.9065885376295742e-61,
+    1.646046038759716e-61,
+    1.688598677776409e-61
+  ],
+  "input_sha256": {
+    "incoming_modes_results.json": "e5e765d6e1adcde9c91034ce5fbf3928563accb419fddf5f160c2323dc99bed5",
+    "incoming_modes.py": "0e0266ba4e25fac86b96c1a94edc14d68347ec048194f6f12ed3e4972ed1d455",
+    "dipole_collar_modes_results.json": "18fff57340f45fc04ea447accacd65b02f0b2d3485da6a771bc5936de65ca466",
+    "dipole_collar_modes.py": "72fd5b01a6d3e270edfcdf30e7d5dc2d7e5dbc8564120eb76e3889ef0870c88c"
+  },
+  "upstream_closure_input_sha256": "6baf84864641725f0e2378a368e99eeef5beb0dd08b053a84ea21b674d2fce03",
+  "source_sha256": "50bf03386c5e7de74b3c84871dcc7cc3741c75bbbb327d9d48fcfdc899274a7d",
+  "units": "re=1 and hbar=c=1. b,d in re; E, sigma, eta_prime and residual in inverse re; eta and flux offsets dimensionless. Saved exterior energy numbers are comparisons in the flat model, without a new curved tetrad matching.",
+  "equations": {
+    "angular": "H=-i*sigma_z*d_b+K; K=(-i/b)*[[0,d_theta+V],[d_theta-V,0]]; h_theta=V*h; integral h^2 dtheta=1.",
+    "radial_source": "h_b=(g-mean(g))*h; sigma=||h_b||; J(theta)=integral_0^theta h*h_b ds; t=-b*J/h.",
+    "inverse": "K*(0,t)=i*(h_b,0), with t in the negative-chirality complement.",
+    "gap": "gap0=sqrt(q+1)/b; delta=q*b/[4*(d-b)^2]<gap0/2; Delta=gap0-delta.",
+    "moment_bounds": "eps=b/d; M=(1-eps^2)^(-q); v=(k+1)*(q-k)/[(q+1)^2*(q+2)]; alpha=q*b/d^2; sigmaB=alpha*sqrt(v*M)/(1-eps)^3; rhoB=(q/d^2)*(1+eps+2eps^2)*sqrt(v*M)/(1-eps)^5.",
+    "derivative_bound": "G=alpha/(1-eps^2); chiSecondB=rhoB+G*sigmaB; etaB=sigmaB/Delta; C=q/[2*d^2*(1-eps)^3]; etaPrimeB=(chiSecondB+sigmaB/b+C*etaB)/Delta.",
+    "raw_residual": "For exp(i*E*b)*(h,t), (H-E)state=(0,i*t_b-2*E*t); raw outward flux=1-||t||^2.",
+    "normalized_residual": "F=(1-||t||^2)^(-1/2); residual=(-i*Fprime*h, i*(F*t_b+Fprime*t)-2*E*F*t).",
+    "bound": "[etaPrimeB+2*abs(E)*etaB+etaB*etaPrimeB*sqrt(1+etaB^2)/(1-etaB^2)]/sqrt(1-etaB^2), requiring etaB<1.",
+    "q1_cdf": "D=sqrt((1+b)^2-4*b*tau); I=[tau+1+b-D-(1-b)*log(2/(D+1-b))]/(1+b); CDF=I/I(1,b); P=d_tau I/I(1,b); J=.5*d_b CDF."
+  },
+  "proof_outline": [
+    "The exact zero-mode count and the bounded angular perturbation give the isolated complementary gap under delta<gap0/2; solve the angular inverse on negative chirality.",
+    "The normalized Beta-density tilt and radial derivative bounds give ||h_b||<=sigmaB and ||h_bb||<=chiSecondB.",
+    "Differentiate K*t=i*h_b using K_b=-K/b plus a multiplication operator bounded by C, yielding ||t_b||<=etaPrimeB.",
+    "Cauchy-Schwarz gives abs(Fprime)<=etaB*etaPrimeB/(1-etaB^2)^(3/2). Apply the triangle inequality to the normalized residual and ||(h,t)||<=sqrt(1+etaB^2)."
+  ],
+  "scope": [
+    "Analytic sufficient local bound for a constructed flux-normalized dressed state on an upper-centered sphere in the flat point-pair field, with 0<b<d and the stated gap/flux guards.",
+    "Reported decimal bounds use high-precision arithmetic, not outward-rounded interval certification. Saved input decimals retain their original precision.",
+    "The q=1 corrector is constructed independently from its closed normalized CDF, including its radial derivative; Cartesian Dirac differentiation checks signs and frame conversion.",
+    "The four physical-q rows are analytic bound evaluations, not numerical inversion of the high-q angular operator.",
+    "The sampled energies and weighted RMS are comparison scales, not a continuum or ultraviolet cutoff and not a unique assignment of loop energy to angular k.",
+    "A local residual bound does not bound accumulated transport error without a propagation estimate and boundary data. No physical return/escape amplitude, vacuum stress, global state, curved-mouth matching, stable medium, or backward date passage is established."
+  ]
+}

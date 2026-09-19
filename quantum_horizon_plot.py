@@ -6529,6 +6529,80 @@ def scattering_vacuum_progress():
     plt.close(fig); print(outputs[0]); return outputs
 
 
+def dipole_collar_progress():
+    """Compare saved collar residuals with the analytic first-corrector bound."""
+    import hashlib
+    from matplotlib.patches import Circle, FancyArrowPatch
+    root = Path(__file__).resolve().parent
+    angular_path = root/'dipole_collar_modes_results.json'
+    angular = json.loads(angular_path.read_text(encoding='utf-8'))
+    bound = json.loads((root/'collar_dressing_bound_results.json').read_text(encoding='utf-8'))
+    assert angular['passed'] and all(angular['tests'].values())
+    assert bound['passed'] and all(bound['tests'].values())
+    assert bound['input_sha256'][angular_path.name] == hashlib.sha256(angular_path.read_bytes()).hexdigest()
+    parameters = angular['saved_collar_parameters']; assert parameters == bound['parameters']
+    assert parameters['q'] == 100000 and 0 < parameters['isotropic_b'] < parameters['separation_d']
+    ks = (0, 16, 50000)
+    modes = [next(row for row in angular['actual_collar'] if row['k'] == k) for k in ks]
+    dressed = [next(row for row in bound['actual_collar'] if row['k'] == k) for k in ks]
+    previous = np.array([row['previous_potential_residual'] for row in modes])
+    exact = np.array([row['radial_residual_norm'] for row in modes])
+    upper = np.array([row['flux_normalized_residual_bound'] for row in dressed])
+    assert np.all(np.isfinite([previous, exact, upper])) and np.all(0 < upper)
+    assert np.all(upper < exact) and np.all(exact < previous)
+    for mode, row in zip(modes, dressed):
+        assert row['q'] == parameters['q'] and row['b'] == parameters['isotropic_b']
+        assert np.isclose(row['saved_undressed_radial_residual'], mode['radial_residual_norm'], rtol=1e-14, atol=0)
+        zero = next(item for item in row['energy_comparisons'] if item['label'] == 'zero')
+        assert zero['energy'] == 0 and np.isclose(zero['residual_bound'], row['flux_normalized_residual_bound'], rtol=1e-14, atol=0)
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10})
+    fig = plt.figure(figsize=(13, 7.2))
+    fig.suptitle('Correcting the local collar mode reduces its Dirac residual',
+                 fontsize=17, fontweight='bold', y=.955)
+    fig.text(.5, .885, 'Flat point-pair model  |  q = 100,000  |  A local mathematical test',
+             ha='center', fontsize=11, color='#475569')
+    left = fig.add_axes([.045, .32, .40, .46]); left.set_axis_off()
+    left.set_title('A. Local collar only — schematic, not to scale', fontsize=11, pad=17)
+    left.set(xlim=(0, 1), ylim=(0, 1)); left.set_aspect('equal', adjustable='box')
+    left.add_patch(Circle((.22, .53), .145, facecolor='#e6f4f3', edgecolor='#007e87', linewidth=1.7))
+    left.scatter([.22, .82], [.53, .53], s=45, c=['#007e87', '#475569'], zorder=5)
+    left.annotate('', xy=(.325, .625), xytext=(.22, .53), arrowprops={'arrowstyle': '->', 'color': '#007e87', 'lw': 1.3})
+    left.text(.31, .65, 'b', fontsize=11, color='#007e87')
+    left.text(.22, .29, 'Selected focus', ha='center', fontsize=10)
+    left.text(.82, .29, 'Partner focus', ha='center', fontsize=10)
+    left.annotate('', xy=(.82, .39), xytext=(.22, .39), arrowprops={'arrowstyle': '<->', 'color': '#64748b', 'lw': 1.2})
+    left.text(.52, .41, 'Separation d', ha='center', fontsize=9.8, color='#475569')
+    left.add_patch(FancyArrowPatch((.23, .70), (.82, .60), connectionstyle='arc3,rad=-.32',
+                                  arrowstyle='-', linestyle='--', linewidth=1.5, color='#a77612'))
+    left.text(.56, .92, 'Global return / escape unsolved', ha='center', fontsize=10, color='#8a650f')
+    left.text(.5, .16, 'Angular solution valid inside 0 < b < d', ha='center', fontsize=10.3, color='#007e87')
+    left.text(.5, .065, 'Saved collar: b/d = 2.36 × 10⁻⁸', ha='center', fontsize=10, color='#475569')
+    right = fig.add_axes([.575, .355, .375, .425])
+    right.set_title('B. Local residuals and an upper bound', fontsize=11.5, pad=17)
+    series = [(previous, '#64748b', 'o', 'Isolated mode residual'),
+              (exact, '#007e87', 'D', 'Exact-angular residual'),
+              (upper, '#7951b0', 'v', 'First-correction bound (E = 0)')]
+    for shift, (values, color, marker, label) in zip((-.19, 0, .19), series):
+        right.scatter(np.arange(3)+shift, values, s=65, marker=marker, color=color, label=label, zorder=4)
+    right.set_yscale('log')
+    right.set(xticks=range(3), xticklabels=['k = 0', 'k = 16', 'k = 50,000'],
+              ylabel='Local residual norm (1/rₑ)', xlim=(-.55, 2.55),
+              ylim=(float(upper.min())/4, float(previous.max())*4))
+    right.spines[['top', 'right']].set_visible(False); right.grid(axis='y', which='major', alpha=.15)
+    right.set_axisbelow(True); right.tick_params(axis='x', length=0, pad=9)
+    fig.legend(loc='center', bbox_to_anchor=(.7625, .255), ncol=1, frameon=False, fontsize=9.6,
+               handletextpad=.6, labelspacing=.55)
+    fig.text(.05, .176, 'E = 0 isolates the derivative correction; a finite-energy input adds an energy-dependent term to the bound.',
+             fontsize=10, color='#475569')
+    fig.text(.05, .119, 'Small local residuals do not establish transport accuracy, global return, escape or a stable medium.',
+             fontsize=10, color='#475569')
+    fig.text(.05, .052, 'Model calculation, not a new physics discovery. 13 Sep 2027 → 12 Sep 2027 remains unproved.',
+             fontsize=10.3, fontweight='bold', color='#007e87')
+    outputs = tuple(root/f'dipole_collar_progress.{suffix}' for suffix in ('png', 'pdf'))
+    for path in outputs: fig.savefig(path, dpi=180, facecolor='white')
+    plt.close(fig); print(outputs[0]); return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

@@ -12,14 +12,16 @@ The present direction tests whether charged fermions actually return through the
 | --- | --- | --- |
 | [Spinful return benchmark](spinful_return.py) · [results](spinful_return_results.json) | Exact reduced Weyl-operator identities, transverse zero modes and their normalization, plus short unitary two-dimensional evolution with refinement controls | A baseline for testing the magnetic guiding approximation; the propagation box is periodic |
 | [Incoming modes](incoming_modes.py) · [report](INCOMING_MODES.md) | Isolated-monopole reference modes, gauge covariance, unit flux, positive-energy pulse, and a bounded partner-field residual at the saved model's collar | Incident reference data and one quantified matching term; the full curved two-mouth matching remains unresolved |
+| [Exact angular collar modes](dipole_collar_modes.py) · [results](dipole_collar_modes_results.json) | The partner magnetic focus is included exactly in the local angular equation; independent full-operator and normalization checks quantify the remaining radial residual | About 158-fold reduction of the local residual at the saved sphere; no accumulated transport-error bound |
+| [Local radial correction](collar_dressing_bound.py) · [results](collar_dressing_bound_results.json) | An explicit opposite-spin correction, an energy-dependent analytic residual bound, and an independently constructed small-q control | A more accurate flux-normalized incident approximation; validity requires the stated angular-gap and flux conditions |
 | [Open-boundary spinor calibration](open_boundary_spinor.py) · [report](OPEN_BOUNDARY_SCATTERING.md) | Frozen planar outgoing modes, complex reflection phases, evanescent behavior, and an independently checked absorber loss budget | A boundary-calibration contract; absorber loss is not a physical escape probability |
 | [Scattering-to-vacuum bridge](scattering_vacuum.py) · [results](scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical two-mouth scattering solution. The next dependency is compatible finite-mouth matching and variable-field propagation, followed by complex return amplitudes and a quantum-state/stress calculation. A one-particle probability alone does not determine the vacuum source supporting a throat.
 
-![Reference preparation, missing physical return matrix, and conditional phase-sensitive stress](scattering_vacuum_progress.png)
+![Local matching improvement and the missing global return calculation](dipole_collar_progress.png)
 
-*Computed conditional results: equal return probabilities give different stresses when phase or delay changes. The middle step remains unsolved for the physical exterior.*
+*The local wave approximation is improved; the connected exterior return map remains unresolved. The plotted correction bound uses E=0, while positive-energy injection retains the full energy-dependent bound. See [the phase-sensitive stress benchmark](scattering_vacuum_progress.png) for the next connection to the quantum source.*
 
 ## Quickstart
 
@@ -48,6 +50,8 @@ The focused incoming, boundary, and vacuum components can be reproduced independ
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 incoming_modes.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 dipole_collar_modes.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 collar_dressing_bound.py
 .\.venv\Scripts\python.exe -B -W error -X utf8 open_boundary_spinor.py
 .\.venv\Scripts\python.exe -B -W error -X utf8 scattering_vacuum.py
 ```
@@ -57,7 +61,7 @@ These commands print their checks and **rewrite their corresponding `*_results.j
 Regenerate only the current figure from saved data:
 
 ```powershell
-.\.venv\Scripts\python.exe -B -W error -X utf8 -c "from quantum_horizon_plot import scattering_vacuum_progress; scattering_vacuum_progress()"
+.\.venv\Scripts\python.exe -B -W error -X utf8 -c "from quantum_horizon_plot import dipole_collar_progress; dipole_collar_progress()"
 ```
 
 For the broader local propagation benchmark:
@@ -77,7 +81,7 @@ The research scripts and neighboring artifacts intentionally retain their existi
 | Area | Main entrypoints and documentation |
 | --- | --- |
 | Current findings and derivations | [RESEARCH.md](RESEARCH.md); [TASK_STATE.md](TASK_STATE.md) records the latest state and unresolved dependencies |
-| Fermion source and magnetic exterior | `dirac_*.py`, `magnetic_*.py`, [QUANTUM_COMPLETION.md](QUANTUM_COMPLETION.md), and the four current components above |
+| Fermion source and magnetic exterior | `dirac_*.py`, `magnetic_*.py`, [QUANTUM_COMPLETION.md](QUANTUM_COMPLETION.md), and the current components above |
 | Reduced throat dynamics and matching | [mmp_pulse.py](mmp_pulse.py), [polyakov_response.py](polyakov_response.py), [moving_exterior_maps.py](moving_exterior_maps.py), [moving_exterior_nonlinear.py](moving_exterior_nonlinear.py) |
 | Earlier chronology and cavity models | [coupled_misner.py](coupled_misner.py), [coupled_ori.py](coupled_ori.py), [casimir_cavity.py](casimir_cavity.py), [ori_quantum_source.py](ori_quantum_source.py), and the `ori_*` constraint/evolution files |
 | Forward time-dilation and source feasibility | [future_time.py](future_time.py), [SOURCE_FEASIBILITY.md](SOURCE_FEASIBILITY.md); this branch is distinct from backward calendar-time travel |

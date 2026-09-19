@@ -18,7 +18,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 ## User-requested additional project chats and team review loop
 - User explicitly authorized additional chats in this same project and a
   coordinated circle of teams. Created two local project chats on15Sep2026;
-  project ID ee3e73e2-32df-41c5-a5bc-ad7646959ca6 is not a Git repository.
+  project ID ee3e73e2-32df-41c5-a5bc-ad7646959ca6 was not yet a Git repository.
 - Quantum source and throat completion:
   thread01a0a614-08ee-7040-b564-0b00348cc941, hostlocal.
   Owns QUANTUM_COMPLETION.md only; primary-source/analytic recommendation
@@ -57,6 +57,77 @@ fallback. Give honest confidence in checks, never promise physical success.
   This is an added research strand, not replacement of the active objective.
 
 ## Latest verified update — authoritative; entries below this block are history
+
+### Exact angular collar and first radial correction — increment89, PROGRESS
+- Goal remains ACTIVE; no physical medium, new law or backward passage proved.
+  Latest user asks whether the direction is sound despite uncertain success.
+  It is a feasibility investigation, not evidence of a guaranteed destination.
+- Previous88 private repository work is COMPLETE. Origin
+  https://github.com/Winter-Soren/time-travel.git, main; verified private and
+  synchronized through a1e76ff713197b4569a6269ff04e42e1af4a42b3 before89.
+  Cleanup task finished and its created-thread directive was already emitted.
+  Do not reimport, reinitialize Git, repeat cleanup, or re-emit old directives.
+- dipole_collar_modes.py / results: exact point-pair angular zero modes on
+  upper-centered spheres 0<b<d, normalized against Beta(k+1,q-k).
+  F=(q/2)log1p[4epsilon^2 tau/((1+epsilon+D)(D+1-epsilon)(1+epsilon))].
+  D=sqrt(1+2epsilon cos(theta)+epsilon^2), epsilon=b/d, tau=sin²(theta/2).
+  g=F_b=2q epsilon tau/[d D(1+epsilon)(1+epsilon+D)].
+  h_b=(g-mean(g))h; residual sigma=sqrt(Var(g)); diagonal connection zero
+  does not remove off-kernel coupling. No q-mode continuation across b=d.
+  Exact variance enclosure from g_tau=qb/(d²D³) and density tilt M=(1-eps²)^-q.
+  12 checks PASS, warnings-as-errors,4.81s; independent full cylindrical
+  Dirac residual identity <=1.19e-37, normalization variance relative1.70e-11,
+  actual24/40quadrature relative7.33e-15. Frozen88 source/results unchanged.
+  Source72fd5b01a6d3e270edfcdf30e7d5dc2d7e5dbc8564120eb76e3889ef0870c88c;
+  JSON18fff57340f45fc04ea447accacd65b02f0b2d3485da6a771bc5936de65ca466.
+- Actual saved q100000,b98.99996752543319,d4188251800.784477 in re units:
+  k0/16/50000 radial residual5.64366e-18/2.32675e-17/8.92350e-16 per re.
+  ~158.115 times smaller than isolated-mode potential residual; this is NOT
+  a physical-success factor or a bound on accumulated scattering error.
+- collar_dressing_bound.py / results: in radial spin frame K(h,0)=0,
+  eta=(0,t), t=-bJ/h, J=int h*h_b dtheta, K eta=i chi_b.
+  Residual after correction=(0,i t_b-2E t). Raw flux1-||t||²; retain derivative
+  of (1-||t||²)^-.5 when normalizing every sphere. Bound derivation in RESEARCH.
+  Sufficient guards delta=qb/[4(d-b)²]<sqrt(q+1)/(2b), etaB<1.
+  Complement gap>=sqrt(q+1)/b-delta. Exact angular-domain assumptions explicit.
+  E0 unit-flux residual bounds k0/16/50000:
+  3.569346164e-20/1.471561386e-19/5.643688254e-18 per re.
+  Full B(E) retains2|E|etaB; saved sampled energies are comparison scales,
+  not k assignments, UV cutoffs or continuum bounds. Decimals not interval-certified.
+  11 controls PASS, warnings-as-errors,1.60s. Independent q1,k0,b.2,d1,E.4
+  closed-CDF corrector norm.00821985485,derivative.08295499555,
+  normalized residual.08322639913 < analyticbound.26995695630.
+  Quadrature24/48relative6.79e-33; Cartesian-frame reduced Dirac identity1.18e-65.
+  Source50bf03386c5e7de74b3c84871dcc7cc3741c75bbbb327d9d48fcfdc899274a7d;
+  JSON15d6d0b1ac5b0e70e1dc29f3c7ea5909ca35f257cc9af58f45e73b2ae236ed57.
+  Read-only independent analytic audit passed signs, gap and derivative bounds.
+- Root read both implementations and primary MMP AppendixC, BKW section4
+  monopole spectrum, Nersessian/Ohanyan eq8–12, and Baye R-matrix abstract.
+  MICZ separability uses an added squared scalar potential absent from our
+  H²=Pi²-sigma.B; cannot import that separated solution. Not a general
+  nonseparability theorem. Baye radial massive method needs adaptation.
+- Root verification: both current source/result pairs and4input hashes match;
+  12+11 saved controls pass;3modified/new Python sources parse. Six frozen88
+  scientific files and158earlier figures match Git HEAD byte-for-byte.
+  59current-document local links resolve; diff whitespace check passes.
+  New dipole_collar_progress() helper at quantum_horizon_plot.py:6532 rendered
+  ONLY the new plot, and root inspected the PNG. No overlapping labels.
+  Plotter64c9eac2b1eff8a598db7533aeb0d1ecdd7e9ee6e3a2710ff9710b5a3dd7fc18;
+  PNG83b98f01bdd95f85893844f2f8d11d83a46d40d5f02845a6c46ad05f8f124c80;
+  PDFa4fbc935f95c5643117e7e631303e760bb87953467351013fa770005c9ba298b.
+  README/DIRECTORY_GUIDE link current models and reproduce only focused checks.
+  Incoming task verified idle, cursor1baf1b39-4415-40a1-adab-197b0ff39486:8.
+  All production/audit agents completed bounded assignments; no bulk jobs live.
+- Next90: move to a connected finite-q fixed-mu 2D exterior boundary map.
+  Excise two finite mouth spheres; include nonzero angular channels and
+  outgoing infinity, explicit gauge patches/axis domain and phase conventions.
+  Inner normals point into each excised mouth. Require free/single-monopole
+  controls, conserved total mouth+infinity flux, grid/channel/outer refinement.
+  Do not spend another increment only polishing the local collar. Tiny local
+  residuals do not control radial propagation (current indefinite), curved
+  matching, continuum, vacuum stress or semiclassical stability.
+  Actual return matrix -> quantum state/stress -> geometry/stability remains
+  the connected dependency chain. 13Sep2027->12Sep2027 remains UNPROVED.
 
 ### Incident modes, real-collar defect and phase-sensitive source — increment88, PROGRESS
 - Original goal remains ACTIVE. Latest user asks accelerate physics, a cleanup

@@ -1,5 +1,181 @@
 # Reproduction and coupled-model iterations
 
+## Exact angular matching and a local correction bound — increment89
+
+The second magnetic focus can be included exactly in the angular modes on
+a sphere around the first focus. The remaining radial residual is about
+158 times smaller at the saved matching sphere than the isolated-monopole
+residual. A first radial correction has an explicit analytic residual bound.
+These are local improvements to a specified flat-background wave model,
+not a transmission probability, a stable throat, or a new physical law.
+
+![Local matching improvement and the unresolved global exterior](dipole_collar_progress.png)
+
+### Exact angular solution in the point-pair field
+
+Use the existing convention H=sigma·(-i grad-A), q>0 an integer, and spheres
+of radius 0<b<d around the upper focus. Write epsilon=b/d, c=cos(theta),
+tau=(1-c)/2, and D=sqrt(1+2 epsilon c+epsilon^2). The azimuthal one-form
+component is
+\[
+ A_\phi=\frac q2\left(\frac{1+\epsilon c}{D}-c\right).
+\]
+For mu=k+1/2, k=0,...,q-1, the isolated angular probability in tau is
+P0=Beta(k+1,q-k). Let h be the angular spin component with norm
+integral h^2 dtheta=1. Its exact correction is
+\[
+ h_b=\frac{h_0e^F}{\sqrt{\langle e^{2F}\rangle_0}},\qquad
+ F=\frac q2\log\!\left[1+
+ \frac{4\epsilon^2\tau}{(1+\epsilon+D)(D+1-\epsilon)(1+\epsilon)}\right].
+\]
+This north-pole-relative form avoids subtracting nearly equal numbers.
+It solves h_theta/h=(mu-A_phi)/sin(theta). The correction is regular at
+both poles for b<d and preserves the q zero modes and their patchwise powers.
+There is no continuation of this q-mode basis asserted through b=d, where
+the partner focus changes the enclosed flux.
+
+The standard monopole angular/radial decomposition is described in
+[Maldacena, Milekhin and Popov, Appendix C](https://arxiv.org/html/1807.04726v3).
+The point-pair factor above and the bounds below are our derivations for
+that fixed exterior field; they do not solve its curved finite-mouth match.
+
+Normalization matters when differentiating the basis:
+\[
+ g=\partial_b F=\frac{2q\epsilon\tau}{dD(1+\epsilon)(1+\epsilon+D)},\qquad
+ \partial_b h_b=(g-\langle g\rangle_b)h_b,\qquad
+ \sigma=\|\partial_b h_b\|=\sqrt{\operatorname{Var}_b(g)}.
+\]
+The derivative is orthogonal to every zero mode: normalization removes its
+same-k component, and the azimuthal phases remove the others. This does
+not remove coupling to the nonzero angular modes.
+
+Define v=(k+1)(q-k)/[(q+1)^2(q+2)], M=(1-epsilon^2)^(-q), and
+sigma0=(qb/d^2)sqrt(v). Since g_tau=qb/(d^2 D^3),
+\[
+ \frac{\sigma_0}{(1+\epsilon)^3\sqrt M}
+ \le\sigma\le\frac{\sigma_0\sqrt M}{(1-\epsilon)^3}.
+\]
+This uses the variance pair identity for P0 and the bounded density ratio
+1/M <= Pb/P0 <= M. The exact-angular state's full Weyl residual has this
+surface norm; an exact angular solution is not an exact radial solution.
+
+### Correcting the remaining radial term
+
+In the radial spin frame with the radial Jacobian removed,
+\[
+ \bar H=-i\sigma_z\partial_b+K_b,\quad
+ K_b=\frac1b\begin{pmatrix}0&-i(\partial_\theta+V)\\
+ -i(\partial_\theta-V)&0\end{pmatrix},\quad
+ V=\frac{\mu-A_\phi}{\sin\theta},\quad \chi=(h_b,0).
+\]
+The smooth monopole-bundle domain makes K self-adjoint. Its isolated
+complement gap is Delta0=sqrt(q+1)/b, from the known sphere spectrum
+[Borokhov, Kapustin and Wu, section 4](https://arxiv.org/pdf/hep-th/0206054).
+Here q is their integer flux n, not their appendix half-flux symbol.
+The partner perturbation obeys delta=qb/[4(d-b)^2]. With delta<Delta0/2
+and the preserved exact kernel, the complement gap is at least
+Delta=Delta0-delta>0.
+
+The first correction has the opposite radial spin:
+\[
+ \eta=iK_\perp^{-1}\chi'=(0,t),\qquad
+ J(\theta)=\int_0^\theta h_b^2(g-\langle g\rangle_b)\,ds,\qquad
+ t=-\frac{bJ}{h_b}.
+\]
+Normalization gives J(pi)=0 and regularity at both poles. Direct substitution
+gives the exact residual identity for this approximate state:
+\[
+ (\bar H-E)e^{iEb}(\chi+\eta)=e^{iEb}(0,it_b-2Et).
+\]
+Its signed radial flux is 1-||eta||^2, while its positive norm squared is
+1+||eta||^2. Flux normalization at each radius introduces an additional
+radial derivative; the bound retains it.
+
+The following explicit quantities bound the norms without approximating
+the point-pair field:
+\[
+ \sigma_B=\frac{qb\sqrt{vM}}{d^2(1-\epsilon)^3},\quad
+ \rho_B=\frac{q(1+\epsilon+2\epsilon^2)\sqrt{vM}}{d^2(1-\epsilon)^5},\quad
+ G=\frac{qb}{d^2(1-\epsilon^2)},\quad
+ C=\frac{q}{2d^2(1-\epsilon)^3},
+\]
+\[
+ \eta_B=\frac{\sigma_B}{\Delta},\qquad
+ \eta'_B=\frac{\rho_B+G\sigma_B+\sigma_B/b+C\eta_B}{\Delta}.
+\]
+For eta_B<1 the unit-flux residual norm is bounded by
+\[
+ B(E)=\frac{\eta'_B+2|E|\eta_B+
+ \eta_B\eta'_B\sqrt{1+\eta_B^2}/(1-\eta_B^2)}
+ {\sqrt{1-\eta_B^2}}.
+\]
+To check the derivative estimate, put a=g-mean(g). Then
+chi''=[g_b-mean(g_b)+a^2-2 sigma^2]chi,
+||a^2-2 sigma^2||^2=mean(a^4)<=G^2 sigma^2, and
+K'=-K/b+C_multiplier with ||C_multiplier||<=C. Differentiating
+K eta=i chi' gives the displayed eta'_B. This uses the angular Hilbert
+norm; radial current is indefinite, so it supplies no automatic unitary
+radial propagation or global scattering-error bound.
+
+### Saved matching sphere and verification
+
+For q=100000, b=98.99996752543319 re, and d=4188251800.784477 re:
+
+| k | Isolated residual | Exact-angular residual | Corrected unit-flux bound B(0) |
+| ---: | ---: | ---: | ---: |
+| 0 | 8.92345e-16 | 5.64366e-18 | 3.56935e-20 |
+| 16 | 3.67894e-15 | 2.32675e-17 | 1.47156e-19 |
+| 50000 | 1.41094e-13 | 8.92350e-16 | 5.64369e-18 |
+
+All entries have units inverse re. The first two columns are computed
+norms; the last is an analytic upper bound evaluated at E=0. Positive-energy
+injection must retain B(E), including its 2|E| eta_B term. The original
+residual was already small relative to the local angular gap: these ratios
+do not measure progress toward a physical machine.
+
+[dipole_collar_modes.py](dipole_collar_modes.py) checks the full cylindrical
+Weyl operator against independently differentiated normalization integrals,
+axis behavior, quadrature refinement, and the analytic variance enclosure.
+[collar_dressing_bound.py](collar_dressing_bound.py) evaluates the bound
+and checks an independent q=1 closed-CDF corrector against direct derivatives
+and quadrature. Source/input hashes and quantitative errors accompany both
+saved result files. Analytic formulas are exact under the stated assumptions;
+their printed decimal endpoints are not interval-arithmetic certificates.
+The two components passed 12 and 11 controls respectively with warnings
+treated as errors. The independent q=1 test at b/d=.2 and E=.4 gives a
+unit-flux residual .08322639913 below the bound .26995695630; its 24/48-point
+quadratures agree to relative 6.79e-33. The Cartesian-frame reduced Dirac
+identity discrepancy is 1.18e-65 at the three checked interior angles.
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 dipole_collar_modes.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 collar_dressing_bound.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 -c "from quantum_horizon_plot import dipole_collar_progress; dipole_collar_progress()"
+```
+
+### Next: the connected exterior, not further local refinement
+
+The next calculation must connect both finite mouth surfaces to infinity,
+retain nonzero angular modes, and determine a complex return map with a
+conserved flux budget. Start with a finite-q, fixed-mu stationary 2D Weyl
+problem, explicit axis/gauge regularity, and converged outer matching.
+The massive radial Dirac R-matrix method of
+[Baye](https://doi.org/10.1103/PhysRevA.92.042112) provides a boundary-matching
+methodology, but adapting it to this massless, two-mouth domain is new work
+here. Its published radial examples are not a solution of our geometry.
+
+The separated two-centre MICZ model adds a squared monopole scalar potential,
+as explicit in [Nersessian and Ohanyan, equations 8–12](https://arxiv.org/pdf/0705.0727).
+That term is absent from our H^2=Pi^2-sigma·B. Its separability cannot simply
+be imported; this observation is not a theorem excluding every possible
+spinor separation. A two-dimensional bridge also avoids extending the
+local q-mode basis past its domain.
+
+After the return map, the missing chain is quantum state and renormalized
+stress, then self-consistent geometry and stability. A local residual bound
+does not identify obtainable matter or prepare a wormhole. Passage from
+**13 September 2027 to 12 September 2027 remains unproved**.
+
 ## Connect incoming modes, open boundaries and quantum stress — increment88
 
 Three executable components now specify the missing transport-to-source
