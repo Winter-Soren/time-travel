@@ -1,166 +1,120 @@
-# Technical assessment: Dirac routing near a magnetic null ring
+# Technical assessment: a bounded Dirac response in a balanced dihole exterior
 
-**Proposed brief for first methodological feedback.** This note assesses
-scattering near a magnetic null as possible matching data for fermions in a
-specified curved exterior. It makes no claim of novelty, wormhole support or
-chronology change.
+**Proposed brief for first methodological feedback.** We have an a posteriori
+numerical enclosure for one compact quantum-field response in a specified curved
+exterior. This is an AI-assisted calculation with independent agent checks,
+not external peer review. No novelty, supporting material, stable wormhole or
+chronology change is claimed.
 
-The background is the externally balanced, magnetic Einstein–Maxwell dihole
-of [Emparan, *Black diholes*, equations 8–16](https://arxiv.org/pdf/hep-th/9906160).
-It contains oppositely charged extremal horizons and has Melvin asymptotics;
-it is not a traversable throat. Our dimensionless calibration is $Q/D=0.2$,
-where $D$ is the Weyl coordinate separation, not the proper horizon separation.
-The motivation comes from [Maldacena, Milekhin and Popov](https://arxiv.org/abs/1807.04726):
-charged massless fermions can provide negative Casimir energy in their
-four-dimensional traversable-wormhole construction, which does not violate
-ambient causality. That construction does not validate this different, static
-exterior.
+## Physical question and background
 
-An earlier project energy ansatz assumed fixed exterior optical lengths,
-closed antiperiodic Dirac channels, transparent open channels in their
-infinite-line vacuum, and a positive classical opening cost. It has a finite
-minimum only when the closed-channel fraction $f>1/4$. This is a conditional
-statement about that ansatz, not a wormhole-support theorem. Classical flux
-connectivity cannot simply be substituted for $f$. That missing quantum
-connection motivates the present calculation. Tunnelling between Dirac
-zero-mass lines is established subject matter; see
-[Tudorovskiy and Katsnelson](https://arxiv.org/abs/1206.2244).
+The motivation is whether a controlled exterior fermion response can eventually
+supply useful input to a quantum stress or throat-matching calculation.
+[Maldacena, Milekhin and Popov](https://arxiv.org/abs/1807.04726) construct a
+four-dimensional traversable wormhole supported by charged-fermion Casimir
+energy. Their result does not validate the different geometry used here.
 
-[Anglin and Schulz](https://arxiv.org/abs/1612.05126) analytically solve a
-right-angle channel splitter for a checkerboard step mass. Its mass profile
-differs from the smooth saddle below; the splitting mechanism itself is
-established physics.
+Our background is the externally balanced magnetic Einstein–Maxwell solution
+in [Emparan, *Black diholes*, equations8–16](https://arxiv.org/pdf/hep-th/9906160).
+It has two oppositely charged extremal horizons and Melvin asymptotics. It is a
+known classical black-hole exterior, not a traversable throat. Set the Weyl
+coordinate separation D=1 and charge radius Q=1/5. The geometric parameters
+are linked exact radicals; stored floating values are not treated as independent
+exact parameters. Changing quantized flux at fixed Q/D requires consistent
+coupling calibration or physical rescaling.
 
-In natural units, for one chirality, quantized flux $q>0$ and half-integer
-azimuthal label $\mu$, write the metric as
-$ds^2=-N^2dt^2+P^2(d\rho^2+dz^2)+\rho^2N^{-2}d\phi^2$ and set
-$c=N/P$, $b=N^2/\rho$, $a=A_\phi/q$. In the flat-norm spinor representation,
-the physical Hamiltonian is
+For one massless chirality and half-integer angular label mu, the canonical
+flat-norm Hamiltonian is
 
 $$
-H=-i\sigma_x(c\partial_\rho+\tfrac12c_\rho)
-  -i\sigma_z(c\partial_z+\tfrac12c_z)
-  +\sigma_y b(\mu-qa).
+H_\mu=-i\sigma_x(v\partial_\rho+v_\rho/2)
+      -i\sigma_z(v\partial_z+v_z/2)
+      +\sigma_y\frac{N^2}{\rho}(\mu-q a),\qquad v=N/P.
 $$
 
-At the equatorial null ring $(\rho_*,0)$, both first derivatives of $a$ vanish.
-The source-free Maxwell equation
-$\partial_\rho(ba_\rho)+\partial_z(ba_z)=0$ therefore implies
-$a_{zz}=-a_{\rho\rho}$ there. With $a_2=a_{\rho\rho}/2>0$,
+Here a is the charge-included gauge coefficient divided by q. The
+[natural-domain proof](DIHOLE_DIRAC_DOMAIN.md) includes the regular axis and
+magnetic gauge patches. The optical metric is complete: infinity and the
+horizon ends have infinite optical distance. The conformal spinor map is
+unitary, and a [complete Dirac-bundle theorem](https://arxiv.org/pdf/1606.06190)
+gives essential self-adjointness. The lifted axial symmetry supplies the
+reducing fixed-mu sector. This conclusion concerns the uncut exact exterior;
+it does not extend automatically to a replacement throat.
+
+## Concrete result
+
+A local saddle reduction near the magnetic null supplied an initial trial.
+Two corrections in the actual curved coefficients then reduced its residual.
+The present result encloses that trial's full continuum residual directly;
+it does not infer accuracy solely from basis or grid convergence.
+
+Use q=512000, mu=398908.5 and the compact unnormalized Gaussian source h, with
+cutoff5/7 in each rescaled coordinate. The trial has128 Hermite modes per
+coordinate and cutoff7/9, wholly away from the axis and horizons. The coordinate
+scale and center are specified dyadics; the energy scale is the exact ratio
+Eq=v*/L. Define Hq=T^-1 Hmu T/Eq using the unitary coordinate map.
+At scaled imaginary frequency i, the response is
 
 $$
-a=a_*+a_2[(\rho-\rho_*)^2-z^2]+O((|\rho-\rho_*|+|z|)^3).
+G=\langle h,(H_q-i)^{-1}h\rangle.
 $$
 
-This Hessian relation is exact; using its quadratic Taylor polynomial is a
-local approximation. Balancing kinetic and quadratic terms gives
+For A=chi_t a, the exact reflection construction B=-sigma_z A(v,u) supplies
+the adjoint trial. The reflected residual has the same norm. The dual identity
+gives an exact disk bound with center iC and radius at most
 
 $$
-L_q=\left(\frac{c_*}{qb_*a_2}\right)^{1/3},\qquad
-E_q=\frac{c_*}{L_q},\qquad
-\eta=\frac{b_*(\mu-qa_*)}{E_q}.
+2.785503521209716\times10^{-6}.
 $$
 
-Let $s=(\rho-\rho_*)/L_q$, $t=z/L_q$, $u=(s+t)/\sqrt2$ and
-$v=(s-t)/\sqrt2$. The leading dimensionless operator is
+The imaginary-axis projection is
 
 $$
-H_0=-iA_U\partial_u-iA_V\partial_v+\sigma_y(\eta-2uv),\qquad
-A_U=\frac{\sigma_x+\sigma_z}{\sqrt2},\quad
-A_V=\frac{\sigma_x-\sigma_z}{\sqrt2}.
+\boxed{\operatorname{Im}G\in
+[0.41900184413867064,\;0.4190074151728139]}.
 $$
 
-The actual operator has coefficient corrections of order $q^{-1/3}$ on
-bounded rescaled regions, including the kinetic connection terms. This is
-not a bound on the global scattering error. Both derivatives occur at leading
-order, so independent frozen transverse slices cannot resolve this crossing.
-For the chosen geometry, $L_q\simeq0.940916Dq^{-1/3}$; at $q=1$ the local
-approximation is not controlled over the exterior. Changing $q$ at fixed
-couplings also requires consistent physical rescaling.
+The source norm squared is enclosed in
+[0.9999999999999585,0.9999999999999833], rather than assumed to equal1.
+Physical responses for the unitary-transformed source divide by Eq.
+This is an imaginary-frequency resolvent response, not a transmission probability
+or a stress component.
 
-The implemented pilot solves $H_0\psi=0$ on $[-R,R]^2$ using piecewise-linear
-discontinuous Galerkin elements. Each face is attached to a **frozen**,
-translation-invariant linear-mass lead. Its transverse channels are exact
-Hermite functions: each $v$ face has one incoming chiral Gaussian, each $u$
-face one outgoing Gaussian, and massive pairs have
-$\lambda_j=2\sqrt{Rj}$. In the fixed channel phases, the decaying massive
-relation at zero energy is $a_{\rm in}=-i a_{\rm out}$. Zero modes are
-longitudinal scattering states. Whole-line normalization and finite-face
-Gram matrices are kept distinct.
+All numerical components are covered: exact-parameter evaluation, distinct
+interval-validated Gauss nodes and weights, Hermite functions and derivatives,
+outward interval contractions, coefficient cancellation, pairwise sums, and
+an analytic integration remainder. The certificate assumes IEEE754 elementary
+arithmetic with gradual underflow and the documented mpmath interval behavior;
+it is not a formal verification of those libraries or hardware.
 
-The output is a complex $2\times2$ matrix from $(v_+,v_-)$ inputs to
-$(u_+,u_-)$ outputs. Raw squared amplitudes retain numerical losses; they
-are not rescaled to sum to one. The driver separately reports interior jump
-loss, incoming-trace mismatch, unresolved outgoing components, current-balance
-error and the conditioning of boundary feedback. Mesh, retained-mode and
-box-size sensitivities must accompany any routing conclusion.
+The full driver takes about23 seconds. Its controls include exact-rational
+arithmetic cases, Gauss/Hermite identities, and an independent100-digit
+reconstruction of N/P derivatives and the original gauge potential. The
+[results](../results/dihole_probe_certificate_results.json) record all source
+hashes, parameter definitions, enclosures and limitations. Earlier local
+scattering pilots and their unresolved matching errors remain in the
+[research record](RESEARCH.md).
 
-For $\eta=1$, $R=2.5$, mesh spacing $h=0.0625$ and three massive pairs per
-face, the [saved finite calculation](../results/null_saddle_scattering_results.json)
-gives, in the stated input/output order and fixed spin phases,
+## Question for methodological feedback
 
-$$
-S\simeq i\begin{pmatrix}
--0.988650955 & 0.149611923\\
- 0.149611923 & 0.988650955
-\end{pmatrix}.
-$$
+**Which quantum-state prescription and additional response kernels would make
+these certified exterior probes useful for a renormalized fermion stress
+calculation or a controlled throat-matching problem?** In particular, we seek
+advice on the frequency/angular completion and ultraviolet subtraction before
+attempting any self-consistent support claim.
 
-For input $v_+$, the raw output powers are $0.977430711$ and $0.022383728$,
-totalling $0.999814439$. DG loss is $0.000167392$ and unresolved outgoing
-norm is $0.0000181694$; these are numerical deficits, not physical absorption.
-At $\eta=0$, $h=0.125$, each output is $0.499353826$, without normalization
-to $0.5$. The reflected $\eta=-1$ case exchanges the preferred output.
+One compact source, one angular sector and one imaginary frequency cannot
+determine the vacuum stress. The state, full response kernels, renormalization,
+backreaction, throat attachment, formation and stability remain unresolved.
+No trajectory to an earlier date follows.
 
-The maximum change in a power is $0.00113608$ on refining $h=0.125$ to
-$0.0625$, $0.000143830$ on increasing $R$ to $3$ at the fine spacing, and
-$0.0000157071$ on adding a fourth massive pair. These are measured
-sensitivities, **not certified error bars**. Nine implementation checks pass.
-Separate AI-agent checks verified the Hessian reduction, lead phases and
-Gram conversion; there has been no external expert review. The exact
-reflection relation holds to $2.2\times10^{-15}$ and current/power
-accounting to $7.6\times10^{-15}$. A manufactured plane-wave control also
-improves under mesh refinement. The result demonstrates routing in this
-finite frozen-lead model; it does not determine the infinite-domain matrix.
-
-The remaining scientific gaps are substantial. The frozen leads need a
-controlled connection to the true bilinear tails and then to the curved
-dihole exterior; finite-channel and discretization error estimates are still
-needed. Complex phases and exterior reflections matter for that matching.
-A physical vacuum choice, renormalized stress tensor, self-consistent
-gravitational backreaction, throat attachment, formation and stability remain
-unproved. No chronology-changing trajectory follows, including travel from
-13 September 2027 to 12 September 2027.
-
-**Focused question for the professor:** Is treating this locally derived Dirac
-saddle as a two-input, two-output scattering node, followed by controlled
-matching to the dihole exterior, a mathematically sound and scientifically
-worthwhile next step?
-
-From the repository root, using the existing Python environment:
+Reproduce from the repository root using the existing environment:
 
 ```powershell
 $env:OPENBLAS_NUM_THREADS='1'
 $env:OMP_NUM_THREADS='1'
-.\.venv\Scripts\python.exe -B -W error -X utf8 scripts/null_saddle_leads.py
-.\.venv\Scripts\python.exe -B -W error -X utf8 scripts/null_saddle_scattering.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 scripts/dihole_probe_certificate.py
 ```
 
-The first command checks the analytic lead implementation; the second runs
-the finite-box driver. The derivation and prior assumptions are documented
-in [the research record](RESEARCH.md), with the
-[local scaling calculation](../scripts/dihole_null_scaling.py),
-[lead implementation](../scripts/null_saddle_leads.py), and
-[scattering driver](../scripts/null_saddle_scattering.py).
-The saved results include source, input and field hashes. The outstanding
-readiness gaps are a controlled lead-to-exterior matching procedure and
-continuum error estimates, before any physical return or support claim.
-
-A [subsequent finite-arm calculation](../results/null_saddle_matched_results.json)
-propagates the changing Hermite widths/centers and the source/detector maps.
-At the same fine mesh with four pairs it gives powers 0.977383541 and
-0.022443584. Ten coupled checks pass; a separate short-transfer audit also
-agrees. Tested remote-cap sensitivity is small; mesh error is larger. The
-four full-line arm domains overlap at corners, so this improvement still
-does not certify the complete plane or curved exterior. See the
-[updated derivation](RESEARCH.md) for assumptions and quantitative comparisons.
+This runs the helper controls, complete interval integration and progress
+figure. No email has been sent; this document is a reviewable technical brief.

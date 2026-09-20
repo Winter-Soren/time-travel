@@ -58,6 +58,53 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Full exact-curved compact-probe certificate — increment119
+- Previous goal turn PROGRESS:118 published41991bd1094b4c33059fa3cc88dcd258f22cd6be;
+  privateorigin/clean verified.119 began clean. Earlier science/history preserved.
+- NEW scripts/dihole_interval_arithmetic.py: tuple(lo,hi) binary64 arrays;
+  directed nextafter basicops, division-certifiedsqrt, pairwise sum, explicit
+  fixed-kmatmul, noBLAS.8checksPASS, includingexactFraction/subnormalcontrols.
+  ContractIEEE754 round-to-nearest+gradualunderflow explicitlydocumented.
+- NEW scripts/dihole_interval_quadrature.py: interval_grid(order=72,count=128,
+  digits=75) builds648nodes andHermite/derivative intervals. Distinctsignbrackets
+  proveall72roots; exactweightformula; highprecision recurrence beforeoutward
+  export. GL2/Hermitepolynomial/normalizationcontrolPASS. No newdependencies.
+- NEW scripts/dihole_probe_certificate.py + results/dihole_probe_certificate_results.json
+  and figures/dihole_probe_certificate_progress.png/.pdf. Finalstrictdriver23.04s.
+  ExactbalancedtargetQ=1/5,D=1,radicalsM/ag/B. rho*,L,vstar exactsaved dyadics;
+  Eq=vstar/L exactratio4589002739438825/105937722701699, not117roundedEq.
+  Exacttarget evaluateddirectly; no unaccountedparameterperturbation.
+- q512000,mu398908.5,kappa1, fixedunnormalizedsourcechi5/7*f0, trialchi7/9;
+  source/trialinsidetransformedphysicalhalfplane,minrho>.5175366484878597.
+  Reuse117wideprimal N128. NEW EXACT dualb=-sigma_z*a(v,u), coefficienttranspose
+  +signs. S=sigma_z Pz anticommutesK; Sh=h; dualresidualS*r, equalnorms.
+  Olddualcoefficientdifference1.982e-16 onlydiagnostic. No additionalPDEsolve.
+-118coarseanalyticbudgets coverexactradicals pluscenterintegrand andsourcenorm.
+  GL72bound6.973757989497458e-15 addedtoEACH combinedintegral. Actualsum now
+  enclosed withnodes/weights,basis,contractions,geometry,cancellation,rounding.
+- ||r||² in[2.7855035012315845e-6,2.785503521209716e-6]; upper=dualdiskradius.
+  C in[.41900462964219193,.41900462966929264], centeriC.
+  ImG in[.41900184413867064,.4190074151728139]; physical/Eq
+  [.00967271184965365,.009672840457698529]. Source||h||²
+  [.9999999999999585,.9999999999999833]; separateunit-sourceenclosureinJSON.
+  FieldL2error<=.0016689827803814264. Oneimaginaryfrequency, notprobability.
+-10driverchecks+8arithmeticchecks+quadraturehelpercontrolsPASS. Persisted
+  independent100digitgeometrycontrol:10parameter,24coefficient,4rotation
+  inclusions usingoriginalN/P,separategauge andmp.diff. IndependentauditsPASS
+  arithmetic,cutoffs,symmetry,errorcombination,geometry. Figureinspected.
+- Updated professorbrief tocurrent strongestboundedresult; first-feedback
+  milestonepreviouslynotified andheartbeatPAUSED. Noemailauthorized/sent.
+- Still noquantumstate,UVsubtraction,renormalizedstress,backreaction,stable
+  throat,materialrecipe or13Sep2027->12Sep2027 passage. GoalremainsACTIVE.
+- Finalverification:87imports/639links/8historicalguards/14frozeninputs PASS;
+  all519prior scientificfiles and bothhistorysuffixes byte-identical.
+  DriverSHA304bf4c74dbf49fdc85ed758db8d41087d644908f3cf367ac6ab0d117b7b133c;
+  resultSHAd3c3e55a125c539baa8e9b5c41f97429e2759850a419c23280b70522e26f2843.
+- Nextphysicsstep: identify/computeadditionalspatial/angular/frequency
+  responsekernels underaspecifiedquantumstate towardstress/return, reusing
+  intervalmachinery. Do not keep revalidating this already-certifiedoneprobe
+  or mistake it forsupportingstress. Wider/lower-frequencycontrol remainsopen.
+
 ### Natural uncut exterior domain — increment118
 - Previous goal turn PROGRESS:117 published64f1cb488b5a51cc8048587fa0ffc6ce975e4ca1;
   privateorigin/clean verified.118 began clean; old scientific files preserved.

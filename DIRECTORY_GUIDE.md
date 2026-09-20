@@ -34,6 +34,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Complete compact-probe certificate in the exact exterior | [driver](scripts/dihole_probe_certificate.py), [interval arithmetic](scripts/dihole_interval_arithmetic.py), [validated grid](scripts/dihole_interval_quadrature.py), [results](results/dihole_probe_certificate_results.json), [figure](figures/dihole_probe_certificate_progress.png) |
 | Analytic compact-probe quadrature remainder only | [bound](scripts/dihole_quadrature_remainder.py), [interval results](results/dihole_quadrature_remainder_results.json); the new quadrature sum is not yet evaluated |
 | Natural quantum domain on the uncut exterior | [proof](docs/DIHOLE_DIRAC_DOMAIN.md), [consistency checks](scripts/dihole_domain_check.py), [results](results/dihole_domain_check_results.json), [figure](figures/dihole_domain_progress.png) |
 | Compact response in the actual curved coefficients | [calculation](scripts/dihole_probe_residual.py), [results](results/dihole_probe_residual_results.json), [corrected fields](data/dihole_probe_residual_fields.npz), [figure](figures/dihole_probe_residual_progress.png) |

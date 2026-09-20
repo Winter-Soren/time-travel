@@ -1,0 +1,685 @@
+{
+  "passed": true,
+  "tests": {
+    "input_provenance": true,
+    "exact_balanced_target_inside_analytic_boxes": true,
+    "exact_coordinate_scaling": true,
+    "compact_support_inside_physical_domain": true,
+    "validated_distinct_Gauss_nodes": true,
+    "interval_Hermite_contractions": true,
+    "positive_residual_and_source_integrals": true,
+    "saved_estimate_inside_new_response_projection": true,
+    "useful_radius": true,
+    "source_normalization_resolved": true
+  },
+  "target": {
+    "exact_parameters": "D=1,Q=1/5,k=1/2,M=(sqrt(k*k+4*Q*k)-k)/2,ag=sqrt(k*k-M*M),B=M/((k+ag)*(M+k))",
+    "coordinate_constants": {
+      "L": "0x1.81663151de0c0p-7",
+      "vstar": "0x1.04dac762854e9p-1",
+      "rho_star": "0x1.559fe312c2630p-1"
+    },
+    "exact_energy": "E=vstar/L as an exact ratio, not the rounded117 energy.",
+    "parameter_enclosures": {
+      "k": {
+        "lower": 0.49999999999999994,
+        "upper": 0.5000000000000001,
+        "lower_hex": "0x1.fffffffffffffp-2",
+        "upper_hex": "0x1.0000000000001p-1"
+      },
+      "Q": {
+        "lower": 0.19999999999999996,
+        "upper": 0.2,
+        "lower_hex": "0x1.9999999999998p-3",
+        "upper_hex": "0x1.999999999999ap-3"
+      },
+      "M": {
+        "lower": 0.15311288741492743,
+        "upper": 0.15311288741492748,
+        "lower_hex": "0x1.39933fe0588ffp-3",
+        "upper_hex": "0x1.39933fe058901p-3"
+      },
+      "ag": {
+        "lower": 0.47597945723262436,
+        "upper": 0.47597945723262447,
+        "lower_hex": "0x1.e76728a9871e8p-2",
+        "upper_hex": "0x1.e76728a9871eap-2"
+      },
+      "B": {
+        "lower": 0.24020542767375574,
+        "upper": 0.2402054276737558,
+        "lower_hex": "0x1.ebf0d2c1719c8p-3",
+        "upper_hex": "0x1.ebf0d2c1719cap-3"
+      },
+      "L": {
+        "lower": 0.011761449891978136,
+        "upper": 0.011761449891978139,
+        "lower_hex": "0x1.81663151de0bfp-7",
+        "upper_hex": "0x1.81663151de0c1p-7"
+      },
+      "E": {
+        "lower": 43.317928896400815,
+        "upper": 43.31792889640083,
+        "lower_hex": "0x1.5a8b1e4e23f58p+5",
+        "upper_hex": "0x1.5a8b1e4e23f5ap+5"
+      },
+      "vstar": {
+        "lower": 0.50948165013929,
+        "upper": 0.5094816501392903,
+        "lower_hex": "0x1.04dac762854e8p-1",
+        "upper_hex": "0x1.04dac762854eap-1"
+      },
+      "rho_star": {
+        "lower": 0.6672354660415233,
+        "upper": 0.6672354660415235,
+        "lower_hex": "0x1.559fe312c262fp-1",
+        "upper_hex": "0x1.559fe312c2631p-1"
+      },
+      "sqrt2": {
+        "lower": 1.4142135623730947,
+        "upper": 1.4142135623730951,
+        "lower_hex": "0x1.6a09e667f3bcbp+0",
+        "upper_hex": "0x1.6a09e667f3bcdp+0"
+      }
+    },
+    "minimum_support_rho": {
+      "lower": 0.5175366484878597,
+      "upper": 0.51753664848786,
+      "lower_hex": "0x1.08fa9047793e9p-1",
+      "upper_hex": "0x1.08fa9047793ebp-1"
+    },
+    "center_integrand_modulus_bound": {
+      "lower": 4.382945528858207e+19,
+      "upper": 4.382945528858209e+19,
+      "lower_hex": "0x1.3020c0aeeb667p+65",
+      "upper_hex": "0x1.3020c0aeeb669p+65"
+    },
+    "source_norm_integrand_modulus_bound": {
+      "lower": 195.99999999999997,
+      "upper": 196.00000000000003,
+      "lower_hex": "0x1.87fffffffffffp+7",
+      "upper_hex": "0x1.8800000000001p+7"
+    }
+  },
+  "controls": {
+    "arithmetic": {
+      "passed": true,
+      "tests": {
+        "exact_rational_elementary_enclosures": true,
+        "subnormal_and_cancellation_enclosures": true,
+        "division_certified_square_roots": true,
+        "pairwise_sum_enclosures": true,
+        "exact_rational_matrix_enclosures": true,
+        "independent_mpmath_matrix_values": true,
+        "invalid_inputs_rejected": true,
+        "_round_to_nearest_and_gradual_underflow_smoke": true
+      },
+      "benchmark": null,
+      "runtime_seconds": 0.032695500005502254,
+      "source_sha256": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+      "scope": "Arithmetic building block under the stated IEEE754 contract; no quadrature or physical certificate by itself."
+    },
+    "quadrature": {
+      "passed": true,
+      "exact_GL2_roots": true,
+      "polynomial_moments_through_degree3": true,
+      "normalized_Hermite_and_derivative_at_zero": true,
+      "independent_nonzero_Hermite_polynomials": true,
+      "Gaussian_normalization": true,
+      "outward_grid_shapes_and_ordering": true,
+      "moment_interval_widths": [
+        4.849742261192856e-51,
+        3.1999999999999994e-51,
+        2.0784609690826527e-51,
+        1.3333333333333333e-51
+      ],
+      "small_grid_metadata": {
+        "order_per_panel": 2,
+        "count": 4,
+        "requested_digits": 50,
+        "interval_digits": 90,
+        "approximate_root_digits": 80,
+        "width": 1,
+        "total_nodes": 18,
+        "node_weight_method": "Disjoint interval Legendre sign brackets; exact derivative weight formula.",
+        "Hermite_method": "Normalized interval recurrence through index count, then exact ladder derivative.",
+        "rounding": "Every exported endpoint is moved one binary64 nextafter outwards.",
+        "tables_cover": "Exact GL roots/weights and exact width1 Hermite values there.",
+        "excludes": "Tensor contractions, curved coefficients, quadrature truncation, PDE and physical parameter errors.",
+        "max_basis_interval_width": 2.220446049250313e-16,
+        "max_derivative_interval_width": 4.440892098500626e-16,
+        "source_sha256": "750b79afdc66a4289c6e8e185b33c7dcd9ff0fffb3d7572bcbca3d92b517e911",
+        "runtime_seconds": 0.006337099999655038,
+        "normalized_root_sign_pairs": [
+          [
+            1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "root_bracket_attempts": [
+          1,
+          1
+        ],
+        "normalized_weight_sum_interval": [
+          1.9999999999999996,
+          2.0000000000000004
+        ],
+        "root_count": 2,
+        "all_brackets_disjoint": true,
+        "all_brackets_inside_unit_interval": true,
+        "all_weights_positive": true
+      }
+    },
+    "geometry": {
+      "passed": true,
+      "precision_digits": 100,
+      "points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          7.5,
+          -8.25
+        ],
+        [
+          -6.25,
+          5.75
+        ],
+        [
+          8.5,
+          8.0
+        ]
+      ],
+      "parameter_inclusions": 10,
+      "coefficient_inclusions": 24,
+      "rotation_inclusions": 4,
+      "maximum_interval_widths": {
+        "speed": "1.97619698383e-14",
+        "cu": "3.47378376064e-16",
+        "cv": "3.47378376064e-16",
+        "mass": "1.34818378683e-10",
+        "vrho": "4.32986979604e-14",
+        "vz": "4.25839918883e-14"
+      },
+      "scope": "Independent pointwise implementation control; not a global enclosure proof."
+    }
+  },
+  "runtime_versions": {
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "quadrature": {
+    "order_per_width2_panel": 72,
+    "total_nodes_per_axis": 648,
+    "analytic_absolute_remainder_per_integral": 6.973757989497458e-15,
+    "metadata": {
+      "order_per_panel": 72,
+      "count": 128,
+      "requested_digits": 75,
+      "interval_digits": 147,
+      "approximate_root_digits": 105,
+      "width": 1,
+      "total_nodes": 648,
+      "node_weight_method": "Disjoint interval Legendre sign brackets; exact derivative weight formula.",
+      "Hermite_method": "Normalized interval recurrence through index count, then exact ladder derivative.",
+      "rounding": "Every exported endpoint is moved one binary64 nextafter outwards.",
+      "tables_cover": "Exact GL roots/weights and exact width1 Hermite values there.",
+      "excludes": "Tensor contractions, curved coefficients, quadrature truncation, PDE and physical parameter errors.",
+      "max_basis_interval_width": 2.220446049250313e-16,
+      "max_derivative_interval_width": 8.881784197001252e-16,
+      "source_sha256": "750b79afdc66a4289c6e8e185b33c7dcd9ff0fffb3d7572bcbca3d92b517e911",
+      "runtime_seconds": 8.466662999999244,
+      "normalized_root_sign_pairs": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "root_bracket_attempts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "normalized_weight_sum_interval": [
+        1.9999999999999996,
+        2.0000000000000004
+      ],
+      "root_count": 72,
+      "all_brackets_disjoint": true,
+      "all_brackets_inside_unit_interval": true,
+      "all_weights_positive": true
+    }
+  },
+  "trial": {
+    "primal": "Exact saved wide_q512000_a dyadic Hermite coefficients, cutoff7/9.",
+    "dual": "NEW exact b(u,v)=-sigma_z*a(v,u), then identical cutoff7/9.",
+    "old_dual_coefficient_difference_norm": 1.9812849258719593e-16,
+    "source": "h=chi_source*f0, source cutoff5/7, unnormalized.",
+    "symmetry": "S K S=-K, S h=h, b=-Sa => adjoint residual=S*primal residual."
+  },
+  "quadrature_sum_enclosures": {
+    "residual_squared": [
+      2.7855035082053427e-06,
+      2.7855035142359576e-06
+    ],
+    "corrected_center": [
+      0.419004629642199,
+      0.4190046296692856
+    ],
+    "source_norm_squared": [
+      0.9999999999999656,
+      0.9999999999999762
+    ]
+  },
+  "integral_enclosures": {
+    "residual_squared": [
+      2.7855035012315845e-06,
+      2.785503521209716e-06
+    ],
+    "corrected_center": [
+      0.41900462964219193,
+      0.41900462966929264
+    ],
+    "source_norm_squared": [
+      0.9999999999999585,
+      0.9999999999999833
+    ]
+  },
+  "response": {
+    "center_imaginary_interval": [
+      0.41900462964219193,
+      0.41900462966929264
+    ],
+    "dual_disk_radius_upper": 2.785503521209716e-06,
+    "imaginary_G_interval": [
+      0.41900184413867064,
+      0.4190074151728139
+    ],
+    "physical_imaginary_G_interval": [
+      0.00967271184965365,
+      0.009672840457698529
+    ],
+    "unit_source_imaginary_G_interval": [
+      0.4190018441386776,
+      0.41900741517283135
+    ],
+    "solution_error_upper": 0.0016689827803814264,
+    "interpretation": "Exact response lies within r2upper of some i*C with C in center interval; imaginary_G is its imaginary-axis projection, not an asserted real-axis scattering probability."
+  },
+  "scope": [
+    "One compact source in one azimuthal sector q512000,mu398908.5 at scaled kappa1.",
+    "Natural uncut exact balanced exterior domain from docs/DIHOLE_DIRAC_DOMAIN.md.",
+    "Elementary arithmetic uses documented IEEE754 interval assumptions; no unbounded BLAS rounding estimate.",
+    "No vacuum state, ultraviolet sum, renormalized stress, backreaction, throat replacement or backward travel."
+  ],
+  "source_sha256": "304bf4c74dbf49fdc85ed758db8d41087d644908f3cf367ac6ab0d117b7b133c",
+  "input_sha256": {
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_interval_quadrature.py": "750b79afdc66a4289c6e8e185b33c7dcd9ff0fffb3d7572bcbca3d92b517e911",
+    "dihole_quadrature_remainder.py": "4f55a06e5a346bc40b2e51ce739f5561ad8658f03ed33cd906ebb8151eb1ef9d",
+    "dihole_null_scaling_results.json": "17d5e29e123a344bcee69ee399691bd3e65364f96b18b71cd5b84daffa724b6c",
+    "dihole_probe_residual_results.json": "cfcf78102a8b0fa99e813d13c041e509bea1aaa9c456088deb256e0e322d5786",
+    "dihole_probe_residual_fields.npz": "ddfab9ecbdf17313dc5f484346ac62437f7f6f5a98ce3b71d13a948a9292133c",
+    "dihole_probe_residual.py": "f3116cc447c66c5c95cf1327de105f93d4cbb2ec3242a01d06a79ffed7b89872",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "runtime_seconds": 23.040353499993216
+}

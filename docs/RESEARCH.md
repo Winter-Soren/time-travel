@@ -1,5 +1,121 @@
 # Reproduction and coupled-model iterations
 
+## Complete compact-probe enclosure in the exact balanced exterior — increment119
+
+[Driver](../scripts/dihole_probe_certificate.py), [results](../results/dihole_probe_certificate_results.json),
+[interval arithmetic](../scripts/dihole_interval_arithmetic.py), [validated GL/Hermite tables](../scripts/dihole_interval_quadrature.py),
+and [figure](../figures/dihole_probe_certificate_progress.png).
+
+The curved117 estimate is now an a posteriori response enclosure in the
+**exact** balanced classical exterior. The natural domain is the one proved
+in [increment118](DIHOLE_DIRAC_DOMAIN.md). No new PDE solve was needed: the
+saved corrected primal trial is reused, while its residual is enclosed in
+the exact operator. This changes the status of one compact resolvent probe;
+it does not provide a vacuum stress or a traversable throat.
+
+### Target, exact scaling, and the dual trial
+
+Use Q=1/5, D=1 and the linked radical geometry parameters from the domain note.
+The coordinate center rho*, length L and normalization v* are specified as the
+exact dyadics stored in117. They define the coordinate map, so they need not
+be the exact geometric null or exact value of the metric speed. Crucially,
+
+$$
+E_q=v_*/L=\frac{4589002739438825}{105937722701699}
+$$
+
+is an **exact ratio**, not the separately rounded117 energy. Thus the canonical
+map Tphi=L^-1 phi has exactly Hq=T^-1 Hphysical T/Eq. Its full transformed
+half-plane is rho*+L(u+v)/sqrt2>0; it is not all of R^2. Both compact trials
+and the source lie inside it, with minimum rho>0.5175366484878597.
+
+The case remains q=512000, mu=398908.5, kappa=1, with unnormalized
+h=chi_s pi^-1/2 exp[-(u^2+v^2)/2](1,0), source cutoff5/7 and trial cutoff7/9.
+Use the saved128-by128-by2 primal coefficients as exact dyadics.
+For S=sigma_z Pz, reflection z->-z becomes u<->v. The exact coefficients obey
+SKS=-K and Sh=h, where Hq=iK. Define the **new exact dual** b=-Sa by coefficient
+transpose and signs. Its coefficient distance from the saved numerical dual
+is1.982e-16, but the proof uses the exact construction, not this smallness.
+
+Writing $A=\chi_t a$, $B=\chi_t b$ and $r=h+(K-\kappa)A$ gives
+
+$$
+s=h+(K+\kappa)B=Sr,\qquad \|s\|=\|r\|.
+$$
+
+Both trials are admissible compact sections. No extra global-domain symmetry
+assumption is needed. The dual-corrected center is iC, where
+
+$$
+C=\int(h^T A-B^T r),\qquad |G-iC|\le\|r\|^2/\kappa,
+\quad G=\langle h,(H_q-i\kappa)^{-1}h\rangle.
+$$
+
+This identity halves the costly interval contractions without altering the
+source or the physical operator.
+
+### Complete integration and arithmetic bounds
+
+Each of the72 normalized Gauss roots has a distinct interval-verified sign
+bracket. Degree72 proves completeness of the root list. Positive weights
+are enclosed by the exact derivative formula. The nine width-two panels
+cover[-9,9] and split every cutoff change. Normalized Hermite functions and
+ladder derivatives are enclosed at the high-precision root intervals before
+outward binary64 export. The full tensor grid has648-by648 nodes.
+
+Matrix contractions use explicit fixed-index interval outer products, not
+BLAS. Elementary operations round both endpoints outward; reductions use a
+pairwise interval tree. Square-root endpoints are verified by directed division,
+so the initial library square-root approximation does not supply the proof.
+The contract is IEEE754 binary64 elementary operations with gradual underflow,
+plus mpmath interval arithmetic. These assumptions are explicit and checked
+with independent rational/subnormal controls; this is not a formal verification
+of the hardware or libraries.
+
+The actual balanced radical constants are enclosed directly, so there is no
+omitted perturbation from independently rounded geometry parameters. Evaluating
+v, both connections, and the combined angular-mass numerator with intervals
+also includes cancellation error. All exact targets lie inside118's analytic
+complex boxes. The same modulus3e25 bounds the squared residual, the **combined**
+center integrand h^T A-B^T r, and h^T h. Hence the GL72 analytic remainder
+<=6.973757989497458e-15 is added separately to each of those three enclosed sums.
+This extends118's bound to the exact target; it is no longer an uncomputed rule.
+
+### Result and checks
+
+| Quantity | Certified enclosure |
+| --- | --- |
+| Full residual norm squared | [2.7855035012315845e-6, 2.785503521209716e-6] |
+| Corrected imaginary center C | [0.41900462964219193, 0.41900462966929264] |
+| Source norm squared | [0.9999999999999585, 0.9999999999999833] |
+| Imaginary part of G | [0.41900184413867064, 0.4190074151728139] |
+| Physical imaginary response for source Th | [0.00967271184965365, 0.009672840457698529] |
+
+The scalar disk radius is at most2.785503521209716e-6; the solution L2 error is
+at most0.0016689827803814264. The response enclosure is the imaginary-axis
+projection of the rigorously bounded disk; no real-axis scattering probability
+is inferred. Source normalization, if wanted, is separately enclosed by dividing
+by the displayed source norm squared. Physical responses divide by Eq.
+
+The final strict run took23.04s. Ten driver checks, eight arithmetic checks,
+the quadrature helper's exact GL2/Hermite controls, and a100-digit independent
+geometry control pass. The latter checks10 parameters,24 coefficients and four
+Pauli rotations at four points using the original separate N/P and gauge
+formulas and numerical differentiation; it supports the implementation, while
+the interval/analytic argument supplies the global bound. Independent agents
+reviewed the complete pipeline, primitive arithmetic, geometric correspondence,
+and exact dual identity. No external expert review is implied. Figure inspected.
+All earlier scientific artifacts and history are preserved.
+
+This is progress toward controlled quantum-field input in a known
+[black-dihole exterior](https://arxiv.org/abs/hep-th/9906160). One source, one
+angular sector, and one imaginary frequency cannot determine a renormalized
+stress tensor. The next physics work must specify the quantum state and the
+additional spatial, angular and frequency responses required for a stress or
+return calculation, with ultraviolet subtraction. No negative supporting
+stress, self-consistent backreaction, stable replacement throat, obtainable
+material, or13Sep2027->12Sep2027 passage is established.
+
 ## Natural quantum domain of the exact exterior — increment118
 
 [Domain proof](DIHOLE_DIRAC_DOMAIN.md), [consistency calculation](../scripts/dihole_domain_check.py),
