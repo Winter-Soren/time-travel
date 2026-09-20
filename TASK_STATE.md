@@ -58,6 +58,48 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Natural uncut exterior domain — increment118
+- Previous goal turn PROGRESS:117 published64f1cb488b5a51cc8048587fa0ffc6ce975e4ca1;
+  privateorigin/clean verified.118 began clean; old scientific files preserved.
+- NEW docs/DIHOLE_DIRAC_DOMAIN.md proves the optical metric complete with
+  regular axes included, infinite-distance horizon ends and spatial infinity.
+  Integer-q magnetic bundle + N^1.5 unitary conformal spinor map identify the
+  complete twisted Dirac operator; Bandara-Saratchandran Thm3.5 applies.
+- Globally lifted axial action U2pi=-I gives reducing halfint-mu sectors.
+  Central local label mu-q. Canonical restriction is exactly117's Hmu,
+  including v_i/2 and flat measure; compact C2 trials are in its graph domain.
+  Independent mass_audit review PASS, no domain gap for the exact uncut exterior.
+- Exact target D=1,Q=1/5 and linked radical parameters. Independently exact
+  floating constants need not preserve balance; future bound includes their
+  evaluation error. No arbitrary axis/horizon boundary conditions assumed.
+- NEW scripts/dihole_domain_check.py + results/dihole_domain_check_results.json
+  and figures/dihole_domain_progress.png/.pdf: five sampled checks PASS;
+  optical metric relativeerror1.333e-15, axis NP error3.331e-16. Figure inspected.
+  These sanity checks are separate from the analytic domain proof.
+- NEW scripts/dihole_quadrature_remainder.py + results/dihole_quadrature_remainder_results.json:
+  analytic tensorGL remainder ONLY for exact frozen117 dyadic integrand.
+  NEW nine width2 panels, ellipse2; NOT old117 five-panel numerical quadrature.
+  Mehler finitebasis129 bounds complex4.2e10/real15, ||coeff||<.65;
+  cutoff<18,derivative<25; normalizedspeed<8,eachconnection<1.1,mass<5e5.
+  Interval-checked complex squared-residual budget3e25; tensorbound
+  8*324*3e25*2^(1-2n). GL72 gives<=6.973757989497458e-15 per squared residual.
+  Tenchecks PASS. No quadrature sum/PDE evaluated, no full physical certificate.
+  Need nodes/weights,Hermite contractions,coefficient and sum rounding plus
+  exact-balanced parameter discrepancy. Source/calibration/NPZ guards retained.
+-117 curved response/radius still numerical; quadrature/roundoff enclosure open.
+  Domain closure alone supplies no vacuum, stress tensor, replacement throat,
+  stable medium or chronology change.13Sep2027->12Sep2027 remains UNPROVED.
+- Professor initial-feedback milestone already notified; heartbeat remains
+  PAUSED. No email authorized or sent. Do not duplicate/resume it.
+- Independent quadrature audit PASS, including85-digit check of outward GL72bound.
+  New source4f55a06e5a346bc40b2e51ce739f5561ad8658f03ed33cd906ebb8151eb1ef9d;
+  resultf851298cbd32266065b010d8e92d0ee9dfc3628701cc3a4ac467aa3a84c6447c.
+- Verification:15 new checks PASS; layout84imports/630links/8historicalguards/14frozeninputs PASS.
+  All513 prior scientific files and both historical history suffixes unchanged.
+- Next: bound the compact curved integrals including exact target constants,
+  quadrature remainder and arithmetic; then assess information needed for a
+  physical quantum-stress calculation. Do not treat one scalar probe as stress.
+
 ### Compact probe corrected in the actual curved operator — increment117
 - Previous goal turn PROGRESS:116 committed/pushed83ea249865ea483528202c632eceef73ad54c1eb;
   privateorigin and cleanworktree verified;117 started clean.

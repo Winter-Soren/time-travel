@@ -34,6 +34,8 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Analytic compact-probe quadrature remainder only | [bound](scripts/dihole_quadrature_remainder.py), [interval results](results/dihole_quadrature_remainder_results.json); the new quadrature sum is not yet evaluated |
+| Natural quantum domain on the uncut exterior | [proof](docs/DIHOLE_DIRAC_DOMAIN.md), [consistency checks](scripts/dihole_domain_check.py), [results](results/dihole_domain_check_results.json), [figure](figures/dihole_domain_progress.png) |
 | Compact response in the actual curved coefficients | [calculation](scripts/dihole_probe_residual.py), [results](results/dihole_probe_residual_results.json), [corrected fields](data/dihole_probe_residual_fields.npz), [figure](figures/dihole_probe_residual_progress.png) |
 | Whole-plane saddle response with continuum bounds | [solver](scripts/null_saddle_resolvent.py), [independent interval checker](scripts/null_saddle_residual_interval.py), [results](results/null_saddle_resolvent_results.json), [fields](data/null_saddle_resolvent_fields.npz), [figure](figures/null_saddle_resolvent_progress.png) |
 | Local frequency response and corner estimate | [scripts/null_saddle_spectrum.py](scripts/null_saddle_spectrum.py), [frequency arms](scripts/null_saddle_frequency_tail.py), [spectrum](results/null_saddle_spectrum_results.json), [corner proof](scripts/null_saddle_corner.py), [corner results](results/null_saddle_corner_results.json), [figure](figures/null_saddle_spectrum_progress.png) |

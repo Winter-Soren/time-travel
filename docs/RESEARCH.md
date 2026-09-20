@@ -1,5 +1,105 @@
 # Reproduction and coupled-model iterations
 
+## Natural quantum domain of the exact exterior — increment118
+
+[Domain proof](DIHOLE_DIRAC_DOMAIN.md), [consistency calculation](../scripts/dihole_domain_check.py),
+[results](../results/dihole_domain_check_results.json), and [figure](../figures/dihole_domain_progress.png).
+
+The117 compact probe now belongs to a specified global self-adjoint operator.
+This is the exact **uncut balanced black-hole exterior**, not a replacement throat.
+The proof includes the regular axis, both horizon ends, and the magnetic bundle;
+independent review found no remaining operator-domain gap for these conventions.
+
+The optical metric is
+
+$$
+\widehat h=(P/N)^2(d\rho^2+dz^2)+\rho^2N^{-4}d\varphi^2.
+$$
+
+Since P/N=Sigma^2/h^2>=1, spatial infinity is at infinite optical distance.
+At either horizon, with coordinate distance epsilon, (P/N)epsilon^2 tends to Q^2;
+its optical distance diverges. Balance removes the conical defect on every
+axis segment. These give a complete smooth optical manifold. The unitary
+conformal spinor map N^(3/2) converts the massless Hamiltonian to its twisted
+Dirac operator. The [complete Dirac-bundle theorem](https://arxiv.org/pdf/1606.06190)
+therefore establishes essential self-adjointness; the note also gives the
+cutoff proof and the maximal distributional graph domain.
+
+Integer q permits regular magnetic gauge patches. The global lifted rotation
+has half-integer eigenvalue mu, represented as mu-q on the central patch.
+Its reducing sector reproduces exactly the canonical operator used in117,
+including the half-derivative terms and flat d-rho-d-z norm. Compact C2 trials
+lie in that domain. No arbitrary axis or horizon boundary condition is added.
+
+The exact target is D=1,Q=1/5, with M,a,B derived by linked radical formulas.
+Treating all stored floating parameters as independently exact could break
+balance. The eventual residual certificate must enclose their evaluation error
+as well as the integral and sum arithmetic. Calibration coordinates may be
+specified independently, provided that their chosen values and scales are
+used consistently in the unitary map and target coefficients.
+
+Five sampled consistency checks pass: the optical formula matches the actual
+published-metric evaluator to 1.34e-15 relative error; NP=1 on the regular axis
+to 3.34e-16; both regular gauge limits agree; the horizon asymptotic holds in
+five sampled directions; and the sampled optical lower bound holds. These
+checks support the implementation correspondence. The global result comes from
+the analytic argument, not from sampling. The figure was inspected.
+
+The117 corrected response and 2.786e-6 radius remain **numerical estimates**.
+Completing the domain removes one conditional assumption; it does not certify
+those integrals or provide a quantum state, renormalized stress, backreaction,
+a material recipe, a stable throat, or travel from13Sep2027 to12Sep2027.
+
+### Analytic integration remainder, separated from the numerical sum
+
+The [remainder helper](../scripts/dihole_quadrature_remainder.py) and
+[interval results](../results/dihole_quadrature_remainder_results.json) bound a
+second component needed for certification. They concern the exact real
+integrand defined by the saved117 **dyadic** coefficients and parameters.
+They do not silently replace those constants by the exactly balanced geometry.
+
+Partition each coordinate into nine width-two panels with endpoints
+-9,-7,-5,-3,-1,1,3,5,7,9. Every source and trial cutoff knot is a boundary.
+Continue each panel's cutoff polynomial analytically; never apply complex
+absolute-value or clipping. For either residual define F=sum_j r_j^2, the
+holomorphic continuation of its real squared norm. On an ellipse of parameter2
+in either coordinate, with the other coordinate real, a uniform bound suffices.
+
+[Mehler's formula](https://dlmf.nist.gov/18.18.E28) gives finite Hermite bounds
+by weighting the positive squared-modulus series. With129 functions, the
+complex-coordinate sum is below4.2e10 for |Im u|<=.75, while the real-coordinate
+sum is below15. The exact saved coefficient norms are below.65. A derivative
+raises the Hermite index by one and increases the coefficient norm by at most16.
+The factored cutoff polynomial has modulus below18 and derivative below25.
+
+The ellipse maps inside Re(rho) in[.515,.820], |Re(z)|<=.152, with imaginary
+parts bounded by.0063. Triangle inequalities enclose all square-root branches
+and denominators away from zero. The normalized speed, each connection term,
+and angular mass are bounded respectively by8,1.1,500000. The mass numerator
+is combined before bounding, removing the apparent lapse denominator. These
+conservative bounds give |F|<3e25. All constants are checked by isolated
+60-digit interval arithmetic and exported with outward binary64 endpoints.
+
+The [Chebyshev coefficient estimate](https://people.maths.ox.ac.uk/~trefethen/publication/PDF/2008_127.pdf),
+combined with positivity and polynomial exactness of Gauss--Legendre quadrature,
+gives our tensor bound
+
+$$
+|I-Q_n|\le 8A M\,2^{1-2n},\qquad A=324,\quad M=3\times10^{25}.
+$$
+
+For **72 nodes on each width-two panel**, this is below6.974e-15 for each
+squared-residual integral. Ten implementation checks pass, including independent
+small tensor-quadrature and finite-Mehler normalization controls.
+
+This is an analytic truncation bound for a specified integration rule, **not a
+certified residual norm or Green-response disk**. The new rule has not been
+evaluated here. The old117 five-panel numerical sum does not inherit this
+bound. Node/weight evaluation, Hermite contractions, coefficient arithmetic,
+quadrature summation, and conversion to the exact balanced target remain to be
+enclosed. The result makes the next calculation finite and concrete without
+claiming that these missing error terms have vanished.
+
 ## Compact response in the actual curved coefficients — increment117
 
 [Calculation and correction](../scripts/dihole_probe_residual.py),

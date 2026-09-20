@@ -1,0 +1,334 @@
+{
+  "passed": true,
+  "tests": {
+    "input_provenance": true,
+    "dyadic_target_and_parameter_boxes": true,
+    "Bernstein_strips_inside_geometry_box": true,
+    "square_root_branches_and_denominators": true,
+    "full_coefficient_norms_enclosed": true,
+    "Mehler_and_derivative_bounds": true,
+    "panel_cutoff_polynomial_bounds": true,
+    "complex_residual_bound_derived": true,
+    "independent_tensor_quadrature_control": true,
+    "finite_Mehler_normalization_control": true
+  },
+  "target": {
+    "q": 512000,
+    "mu": 398908.5,
+    "kappa": 1,
+    "field_keys": [
+      "wide_q512000_a",
+      "wide_q512000_b"
+    ],
+    "parameter_interpretation": "Exact saved binary64/dyadic integrand; not exact-balanced radical parameters.",
+    "source_cutoff": [
+      5,
+      7
+    ],
+    "trial_cutoff": [
+      7,
+      9
+    ],
+    "coefficient_shape": [
+      128,
+      128,
+      2
+    ]
+  },
+  "quadrature_rule": {
+    "panel_edges": [
+      -9,
+      -7,
+      -5,
+      -3,
+      -1,
+      1,
+      3,
+      5,
+      7,
+      9
+    ],
+    "ellipse_parameter": 2,
+    "complex_coordinate_real_extent": 9.25,
+    "complex_coordinate_imaginary_extent": 0.75,
+    "other_coordinate_interval": [
+      -9,
+      9
+    ],
+    "area": 324,
+    "evaluated_here": false,
+    "same_as_frozen117_rule": false
+  },
+  "enclosure": {
+    "interval_digits": 60,
+    "outward_representation": "binary64 endpoints rounded outward with nextafter; hex endpoints are exact.",
+    "physical_real_extent": {
+      "lower": 0.15177796779746433,
+      "upper": 0.15177796779746439,
+      "lower_hex": "0x1.36d75dff8c2fcp-3",
+      "upper_hex": "0x1.36d75dff8c2fep-3"
+    },
+    "physical_imaginary_extent": {
+      "lower": 0.0062374507314026445,
+      "upper": 0.006237450731402646,
+      "lower_hex": "0x1.98c70ee6db6c7p-8",
+      "upper_hex": "0x1.98c70ee6db6c9p-8"
+    },
+    "coefficient_norms": {
+      "wide_q512000_a": {
+        "lower": 0.6473117981131892,
+        "upper": 0.6473117981131894,
+        "lower_hex": "0x1.4b6c73b66c159p-1",
+        "upper_hex": "0x1.4b6c73b66c15bp-1"
+      },
+      "wide_q512000_b": {
+        "lower": 0.6473117981131892,
+        "upper": 0.6473117981131894,
+        "lower_hex": "0x1.4b6c73b66c159p-1",
+        "upper_hex": "0x1.4b6c73b66c15bp-1"
+      }
+    },
+    "geometry": {
+      "radicand_real_lower": {
+        "lower": 0.3862496199999999,
+        "upper": 0.38624962,
+        "lower_hex": "0x1.8b850537f83edp-2",
+        "upper_hex": "0x1.8b850537f83efp-2"
+      },
+      "root_real_lower": {
+        "lower": 0.6214898390158924,
+        "upper": 0.6214898390158926,
+        "lower_hex": "0x1.3e33ea8abd375p-1",
+        "upper_hex": "0x1.3e33ea8abd377p-1"
+      },
+      "root_modulus_upper": {
+        "lower": 1.0476561363348182,
+        "upper": 1.0476561363348187,
+        "lower_hex": "0x1.0c33314b0302dp+0",
+        "upper_hex": "0x1.0c33314b0302fp+0"
+      },
+      "r_modulus_upper": {
+        "lower": 1.2016561363348182,
+        "upper": 1.2016561363348186,
+        "lower_hex": "0x1.339fbc8e9883dp+0",
+        "upper_hex": "0x1.339fbc8e9883fp+0"
+      },
+      "c_modulus_upper": {
+        "lower": 0.2447835726938416,
+        "upper": 0.24478357269384166,
+        "lower_hex": "0x1.f55116fa8b71ep-3",
+        "upper_hex": "0x1.f55116fa8b720p-3"
+      },
+      "sigma_modulus_lower": {
+        "lower": 0.5862583039701935,
+        "upper": 0.5862583039701937,
+        "lower_hex": "0x1.2c2a0c651eeddp-1",
+        "upper_hex": "0x1.2c2a0c651eedfp-1"
+      },
+      "h_modulus_lower": {
+        "lower": 0.3712698706348096,
+        "upper": 0.3712698706348097,
+        "lower_hex": "0x1.7c2e2b4177753p-2",
+        "upper_hex": "0x1.7c2e2b4177755p-2"
+      },
+      "speed_modulus_upper": {
+        "lower": 3.6013995990613648,
+        "upper": 3.6013995990613656,
+        "lower_hex": "0x1.ccfaa97ce5e5cp+1",
+        "upper_hex": "0x1.ccfaa97ce5e5ep+1"
+      },
+      "speed_rho_modulus_upper": {
+        "lower": 57.97823879610044,
+        "upper": 57.978238796100456,
+        "lower_hex": "0x1.cfd36edca7704p+5",
+        "upper_hex": "0x1.cfd36edca7706p+5"
+      },
+      "speed_z_modulus_upper": {
+        "lower": 49.56834422162363,
+        "upper": 49.56834422162365,
+        "lower_hex": "0x1.8c8bf80e25f3ep+5",
+        "upper_hex": "0x1.8c8bf80e25f40p+5"
+      },
+      "lapse_numerator_modulus_upper": {
+        "lower": 1.9231580777988893,
+        "upper": 1.9231580777988897,
+        "lower_hex": "0x1.ec5416792f385p+0",
+        "upper_hex": "0x1.ec5416792f387p+0"
+      },
+      "potential_numerator_modulus_upper": {
+        "lower": 0.6057554325178517,
+        "upper": 0.6057554325178519,
+        "lower_hex": "0x1.3625937813b75p-1",
+        "upper_hex": "0x1.3625937813b77p-1"
+      },
+      "normalized_speed_upper": {
+        "lower": 7.07544125552331,
+        "upper": 7.0754412555233115,
+        "lower_hex": "0x1.c4d4078f4f799p+2",
+        "upper_hex": "0x1.c4d4078f4f79bp+2"
+      },
+      "normalized_connection_upper": {
+        "lower": 0.878648183914264,
+        "upper": 0.8786481839142642,
+        "lower_hex": "0x1.c1de2cbd33ff5p-1",
+        "upper_hex": "0x1.c1de2cbd33ff7p-1"
+      },
+      "normalized_mass_upper": {
+        "lower": 387584.46447129356,
+        "upper": 387584.4644712937,
+        "lower_hex": "0x1.7a801db9e5cdfp+18",
+        "upper_hex": "0x1.7a801db9e5ce1p+18"
+      }
+    },
+    "Mehler_complex": {
+      "lower": 40787710701.51074,
+      "upper": 40787710701.51076,
+      "lower_hex": "0x1.2fe4625db0580p+35",
+      "upper_hex": "0x1.2fe4625db0582p+35"
+    },
+    "Mehler_real": {
+      "lower": 14.477501445310926,
+      "upper": 14.47750144531093,
+      "lower_hex": "0x1.cf47b11c6ce6bp+3",
+      "upper_hex": "0x1.cf47b11c6ce6dp+3"
+    },
+    "cutoff_modulus": {
+      "lower": 17.041442871093746,
+      "upper": 17.041442871093754,
+      "lower_hex": "0x1.10a9bffffffffp+4",
+      "upper_hex": "0x1.10a9c00000001p+4"
+    },
+    "cutoff_derivative_modulus": {
+      "lower": 24.027099609374996,
+      "upper": 24.027099609375004,
+      "lower_hex": "0x1.806efffffffffp+4",
+      "upper_hex": "0x1.806f000000001p+4"
+    },
+    "complex_source_modulus": {
+      "lower": 13.45373570371776,
+      "upper": 13.453735703717763,
+      "lower_hex": "0x1.ae8500bd0fd9bp+3",
+      "upper_hex": "0x1.ae8500bd0fd9dp+3"
+    },
+    "complex_residual_norm": {
+      "lower": 4682634112013.998,
+      "upper": 4682634112014.001,
+      "lower_hex": "0x1.1090af8b037fep+42",
+      "upper_hex": "0x1.1090af8b03801p+42"
+    },
+    "complex_squared_integrand_modulus": {
+      "lower": 2.1927062226997135e+25,
+      "upper": 2.1927062226997144e+25,
+      "lower_hex": "0x1.2233c6cd5c333p+84",
+      "upper_hex": "0x1.2233c6cd5c335p+84"
+    },
+    "rounded_integrand_budget": "3e25"
+  },
+  "remainder_components": [
+    {
+      "order_per_width2_panel": 48,
+      "total_nodes_per_axis": 432,
+      "quantity": "Enclosure of the positive upper-bound constant, not of the signed actual quadrature error.",
+      "squared_residual_integral_error": {
+        "lower": 1.9629383676795478,
+        "upper": 1.9629383676795482,
+        "lower_hex": "0x1.f68320fd3f4ddp+0",
+        "upper_hex": "0x1.f68320fd3f4dfp+0"
+      }
+    },
+    {
+      "order_per_width2_panel": 64,
+      "total_nodes_per_axis": 576,
+      "quantity": "Enclosure of the positive upper-bound constant, not of the signed actual quadrature error.",
+      "squared_residual_integral_error": {
+        "lower": 4.570322035997053e-10,
+        "upper": 4.570322035997054e-10,
+        "lower_hex": "0x1.f68320fd3f4ddp-32",
+        "upper_hex": "0x1.f68320fd3f4dfp-32"
+      }
+    },
+    {
+      "order_per_width2_panel": 72,
+      "total_nodes_per_axis": 648,
+      "quantity": "Enclosure of the positive upper-bound constant, not of the signed actual quadrature error.",
+      "squared_residual_integral_error": {
+        "lower": 6.9737579894974565e-15,
+        "upper": 6.973757989497458e-15,
+        "lower_hex": "0x1.f68320fd3f4ddp-48",
+        "upper_hex": "0x1.f68320fd3f4dfp-48"
+      }
+    },
+    {
+      "order_per_width2_panel": 80,
+      "total_nodes_per_axis": 720,
+      "quantity": "Enclosure of the positive upper-bound constant, not of the signed actual quadrature error.",
+      "squared_residual_integral_error": {
+        "lower": 1.0641110213466578e-19,
+        "upper": 1.064111021346658e-19,
+        "lower_hex": "0x1.f68320fd3f4ddp-64",
+        "upper_hex": "0x1.f68320fd3f4dfp-64"
+      }
+    }
+  ],
+  "controls": {
+    "tensor_GL2_exact_error": {
+      "lower": 0.0011630730897990574,
+      "upper": 0.0011630730897990579,
+      "lower_hex": "0x1.30e48388bfebfp-10",
+      "upper_hex": "0x1.30e48388bfec1p-10"
+    },
+    "tensor_GL2_remainder_bound": {
+      "lower": 1.1428571428571426,
+      "upper": 1.142857142857143,
+      "lower_hex": "0x1.2492492492491p+0",
+      "upper_hex": "0x1.2492492492493p+0"
+    },
+    "finite_Mehler_difference": {
+      "lower": 5.2605615659997806e-39,
+      "upper": 5.260561565999782e-39,
+      "lower_hex": "0x1.ca42716dfd1b5p-128",
+      "upper_hex": "0x1.ca42716dfd1b7p-128"
+    }
+  },
+  "scope": [
+    "Certified analytic truncation component for exact GL nodes/weights and exact sums on the specified width2 rule.",
+    "No curved residual integral or quadrature sum was evaluated or enclosed by this module.",
+    "Saved117 ordinary quadrature used different panels; its numerical value does not inherit this bound.",
+    "Node/weight evaluation, Hermite contractions, coefficient cancellation and sum rounding remain to be enclosed.",
+    "The difference between dyadic calibration and exact-balanced physical parameters remains separate.",
+    "No certified curved Green disk, quantum stress, backreaction or backward-time passage is established."
+  ],
+  "formulas": {
+    "Mehler": "sum_{j<K}|phi_j(x+iy)|^2 <= t^{-(K-1)} exp((1+t)y^2/(1-t))/sqrt(pi*(1-t^2))",
+    "one_coordinate_GL": "|I-Q_n| <= length*4*M*rho^{1-2n}/(rho-1)",
+    "tensor_GL": "|I2-Q2| <= area*4*rho^{1-2n}*(M_u+M_v)/(rho-1)",
+    "mass": "F*(mu*F-q*g*Pnum)/(rho*E*Sigma^2); g=2.5"
+  },
+  "sources": [
+    {
+      "title": "NIST DLMF18.18.28: Mehler formula",
+      "url": "https://dlmf.nist.gov/18.18.E28"
+    },
+    {
+      "title": "Trefethen2008: Is Gauss quadrature better than Clenshaw-Curtis?",
+      "url": "https://people.maths.ox.ac.uk/~trefethen/publication/PDF/2008_127.pdf"
+    },
+    {
+      "title": "Emparan1999: Black diholes",
+      "url": "https://arxiv.org/abs/hep-th/9906160"
+    }
+  ],
+  "source_sha256": "4f55a06e5a346bc40b2e51ce739f5561ad8658f03ed33cd906ebb8151eb1ef9d",
+  "input_sha256": {
+    "results/dihole_null_scaling_results.json": "17d5e29e123a344bcee69ee399691bd3e65364f96b18b71cd5b84daffa724b6c",
+    "results/dihole_probe_residual_results.json": "cfcf78102a8b0fa99e813d13c041e509bea1aaa9c456088deb256e0e322d5786",
+    "data/dihole_probe_residual_fields.npz": "ddfab9ecbdf17313dc5f484346ac62437f7f6f5a98ce3b71d13a948a9292133c",
+    "scripts/dihole_probe_residual.py": "f3116cc447c66c5c95cf1327de105f93d4cbb2ec3242a01d06a79ffed7b89872",
+    "scripts/dihole_null_scaling.py": "5d916e838936013852a0b3ac3c3644c96e2cb6d62a6b27f3168ff64da3561100",
+    "scripts/balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "scripts/dihole_return_geometry.py": "b5a4c06c74f4ccc775f3061c5040d95b7bcf0bb8968df653587ca08136a40b68",
+    "scripts/null_saddle_leads.py": "222dcb8346005de9d1e1ed382c5945b371e434deee620481d28bc203c36696e9",
+    "scripts/project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "runtime_seconds": 0.7163569999975152
+}
