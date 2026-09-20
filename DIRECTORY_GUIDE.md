@@ -34,6 +34,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Certified central Dirichlet spectral level | [driver](scripts/dihole_sine_certificate.py), [analytic remainder](scripts/dihole_sine_remainder.py), [results](results/dihole_sine_certificate_results.json), [saved matrices](data/dihole_sine_certificate_state.npz), [figure](figures/dihole_sine_certificate_progress.png), [proof and assumptions](docs/RESEARCH.md) |
 | Positivity-compatible Schur spectrum and conditional matrix proof | [driver](scripts/dihole_schur_spectrum.py), [results](results/dihole_schur_spectrum_results.json), [saved trials](data/dihole_schur_spectrum_state.npz), [figure](figures/dihole_schur_spectrum_progress.png), [proof and premises](docs/RESEARCH.md) |
 | Enclosed spatial-complement gap and coupling pilot | [driver](scripts/dihole_spatial_complement.py), [results](results/dihole_spatial_complement_results.json), [saved trials](data/dihole_spatial_complement_state.npz), [figure](figures/dihole_spatial_complement_progress.png), [proof](docs/RESEARCH.md) |
 | Continuum-box angular tail and interval geometry | [driver](scripts/dihole_continuum_heat_tail.py), [results](results/dihole_continuum_heat_tail_results.json), [figure](figures/dihole_continuum_heat_tail_progress.png), [proof](docs/RESEARCH.md) |

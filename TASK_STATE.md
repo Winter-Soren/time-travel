@@ -58,6 +58,81 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Central continuum-box spectral certificate — increment127
+- Previous126 PROGRESS: publisheddb314cde291e92e621344f3b44385b60d6d29f74,
+ originmatched/private/clean verified.127beganclean; preserve556priorsciencefiles.
+- NEW scripts/dihole_sine_certificate.py + dihole_sine_remainder.py;
+ results/data/PNG/PDF dihole_sine_certificate*. Existing126/125inputs frozen.
+ GoalACTIVE; originalchatimportcomplete, norestart. No livejobafterfinalrun.
+- Discharged BOTH126centralSchurpremises. Certifiedtotaloperatorerrors:
+ M<=3.30315139595223e-6<1e-4;
+ fullresidualGram<=.0002994185542340953<.01 relativefrozen126Gram.
+ FullGram=Gtrue+(Mtrue-Mhat)^*(Mtrue-Mhat)>=Gtrue, hence126Gupperpremise.
+ Existing126conditionalmatrixproof nowyields lowestcentralDirichletlambda
+ >=exactbinary64(.18). IndependentintervalRayleightrialupper.1897432318474619.
+ Outwarddecimalreport[.1799999999999999,.1897432318474620]; figure5decimal
+ labelsrounded. EigenvalueisdimensionlessSQUAREDenergy, NOTclockrate/travel.
+- TargetunchangedA4/q512000/mu398855.5, exactbalancedradicals, dyadiccoordinate
+ map, E=vstar/L exactratio. Hmin*Hmin DirichletFriedrichs formH0^1.
+ Continuumspatialcomplementincluded, onlyONEangularsector/lowestlevel.
+- Fourwidth2panels[-4,-2,0,2,4],GL64validatedrootsweights;256nodes/axis,
+ 65536spatialpoints/131072spinrows. Sinesnormalizedsin(npi(x+4)/8)/2.
+ ExactSympygeometryfirst/secondderivs compiledbyrestrictedASTtoexisting
+ outwardia rational/sqrtufuncs. Roundedfloatliterals/unknowncallsrejected.
+ Usesintervalsforcoordinate/node/basis/geometry andexactrotatedspinmatrices.
+- Analyticremainderhelperreuses118complexboxand119exactparameterchecks;
+ ellipse2plusu/vpolydiscradius1/512fitsimagphysical.0063box. Cauchy bounds
+ firstw/m,Delta w. Entire648columnFrobeniuscomplexgrowthbounds, transpose
+ holomorphicGram, noextradimensionfactor. TensorGLerror2*64*delta_n*B.
+ RemaindersM<=7.511405761091823e-19;G<=1.1492924158296362e-7.
+ HelperindependentGL2analyticcontrolPASS; frozenmatrixFrobenius5200.36394.
+- WeightedfieldsY=sqrt(weight)*field enclosedfirst. ActualdyadicmidpointZ
+ withdirectedradiusR. Gramfielderror<=2sqrt(SV)+V. Fullresidualmidpoint
+ p@Mhat gets gamma1298*||p||F||Mhat||F plusunderflow; finalsubtraction
+ enclosedseparately. V=sumblockFrobeniusdelta²; nocancellationGram-subtraction.
+- MidpointGram256scalarrowblocks; conventionalbinary64dot/FMA assumption
+ givesgamma_(2rows+2)*S+absoluteunderflow. Copytriangleforsymmetry, then
+ outwardbalancedstreamingmatrixsum; radiusmaxrowsumcoversfinaladdition.
+ M/GmidpointtooldmatrixFrobeniusdiff2.7938086666503454e-10/1.293684155598222e-7.
+ MfieldGramerror3.2977460308483155e-6; GfieldGramerror.000299098510417261.
+- Arithmeticcontractexplicit: iaIEEE754/mpmathintervalcorrectness, conventional
+ binary64OpenBLASDGEMM nooverflow/FTZ/reducedprecision. Buildscipy-openblas
+ 0.3.30HaswellDYNAMIC_ARCH recorded; runtimegradualunderflowprobePASS.
+ Haswellsourcekernelopened(dmul/FMA), notproofofruntimedispatch/formalbinary
+ verification. Standardnumericalarithmeticassumption, notnewphysicsassumption.
+- Controls90digitgeometryinsideintervals; independent125squareinsidealltested
+ fieldintervals, rationaldoterror8.44e-17vsallowance6.29e-16. Separateagent
+ direct90digitK(Kpsi) withindependentc=(Rplus-Rminus)/(2k) all36scalar
+ inclusionsPASS. RepeatedgeometryphysicalnormalizationandquadraturradiiPASS.
+- Firstdriverattemptfailedbeforeintegrationbecauseoutwardzero-square sum
+ acquirednegative-subnormallower. norm_bound nowintersectsknownsum-of-squares
+ lowerwith0 (validnonnegativefact); strictfinal233.9848429s,session14540exit0.
+ Twoindependentread-onlysource/remainderauditsPASS; nooldscientificreruns.
+ Figureinspected. Graphsearch127notindexed (toolavailable,no projectgraph),
+ sofocusedrgreusedknownfiles; noindexingordependencyinstallation.
+- NEXT: reuseenclosedM/G (doNOTrerun65k integration) tocertifyfurtherordered
+ lowlevels/centralheat-tracepieces via126error-inflatedSchur/inertia;
+ laterotherangularsectors, pointwiseheat andnaturalexteriorboundaryerror.
+ Thetightnumerical126bracketsremainuncertifieduntiltheirfinitealgebraalso
+ checkedwith127errorbudgets. Exteriorstress/backreaction/stability remainopen.
+- No supportingmaterial, traversablethroat,newlaw or13Sep2027->12Sep2027
+ passage. PositiveH*H eigenvalueisnotgravitationalstability. Professorinitial
+ feedbackalreadyflagged; briefunchanged/heartbeatPAUSED/noemail ormonitoraction.
+- Final127 read/hash audit PASS: all14 new inputs,10 frozen126 inputs,2 generated
+ sources and source/state/result hashes match; exact-rational component sums
+ covered by stored total endpoints. Both premises match126 bit-for-value.
+- Layout verification PASS:96 imports,764 links,8 historical guards,14 frozen
+ pilot inputs. All556 prior scientific Git blobs and both126-and-older history
+ suffixes preserved byte-for-byte. Final diff whitespace check PASS.
+- Professor brief reviewed: existing119/120 claims remain correct; no update
+ needed. Initial feedback warranted; stronger physical proposal needs a
+ specified state/renormalization, controlled stress/current and quantitative
+ semiclassical gravity/throat compatibility. Formation/stability remain separate.
+- SourceSHA2c4740bffcb3e64cfc82a39d811c8dd0aae458d3168ee7d3bbf77bfc5b19aa5c;
+ helperSHA88ca892f23745a296cc8162e8326fcf22bbff3e22973bc4f7a5406c6f11c83ef;
+ resultSHAefb67761dde713c19ba51185026d209ec9bfe8e0df47e5a0587d9600158d0faf;
+ stateSHAf64c2fb4fd888e1187b68d3481e2cd857f1c9c1481c34c3385a48411e43f6980.
+
 ### Positivity-compatible Schur spectrum and conditional matrix proof — increment126
 - Previous125 PROGRESS: published3e7dafb63ff57d5ca74c954930b35426c24b0667;
  clean/privateverified.126 began clean; preserve all551 prior sciencefiles.

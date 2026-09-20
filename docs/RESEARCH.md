@@ -1,5 +1,146 @@
 # Reproduction and coupled-model iterations
 
+## Enclosed sine integrals for the central Schur certificate — increment127
+
+[Certificate driver](../scripts/dihole_sine_certificate.py),
+[analytic remainder helper](../scripts/dihole_sine_remainder.py),
+[results](../results/dihole_sine_certificate_results.json),
+[saved quadrature matrices and Rayleigh trial](../data/dihole_sine_certificate_state.npz),
+and [figure](../figures/dihole_sine_certificate_progress.png).
+
+The target is unchanged: the central angular sector mu=398855.5, q=512000,
+of the exact A=4 Dirichlet Friedrichs square. The two input premises of126
+are the operator error of the retained matrix M and an upper-order error
+for the full residual Gram. No larger finite spatial basis substitutes for
+an error bound.
+
+The final run passes both premises. Under the documented arithmetic model,
+a conservatively rounded decimal enclosure of the lowest squared-energy
+level is
+
+$$
+\boxed{0.1799999999999999\le\lambda_1(A_0)
+\le0.1897432318474620.}
+$$
+
+The lower endpoint in the saved result is the exact binary64 number written
+as0.18; the displayed decimal interval above rounds outward. The figure's
+five-decimal endpoint labels are rounded for display.
+
+| Quantity | Enclosed total operator error | Required limit |
+| --- | ---: | ---: |
+| Retained M | 3.30315139595223e-6 | 1e-4 |
+| Full residual Gram | 2.994185542340953e-4 | 1e-2 |
+
+The integration premises are therefore discharged, rather than assumed.
+The full run takes233.98 seconds. Two independent source/proof reviews
+pass; an additional direct90-digit K(K psi) check confirms36 scalar
+inclusions at independently reconstructed physical points and unequal
+quadrature weights. No external peer review is claimed.
+
+### Analytic error of the composite rule
+
+Use four width-two panels on each coordinate, with64 Gauss nodes per panel:
+256 nodes per axis and65536 spatial points. The existing complex geometry
+box contains each one-coordinate Bernstein ellipse of parameter2 and a
+polydisc of radius1/512. Positive real parts of the square-root radicands
+fix analytic branches, and the denominators rho and Sigma do not vanish.
+The mass is continued using its combined numerator, which has no spurious
+pole at a zero of the lapse numerator F.
+
+The exact balanced radicals and exact dyadic coordinate constants satisfy
+the earlier conservative parameter boxes. Cauchy estimates applied in the
+small polydisc give bounds for first speed/mass derivatives and the speed
+Laplacian. Complex sine bounds include all648 spin/basis columns. The
+analytic matrix integrands use transpose, not complex conjugation away
+from the real domain. Their operator norms are bounded by squared row
+Frobenius norms, so no extra matrix-dimension multiplier is needed.
+
+The Chebyshev/positive Gauss argument follows the coefficient estimates in
+[Trefethen, SIAM Review50(2008), sections4.2-4.3](https://people.maths.ox.ac.uk/~trefethen/publication/PDF/2008_127.pdf).
+For ellipse parameter2, delta_n=4*2^(1-2n). Applying the one-coordinate
+bound twice and summing the panel areas gives
+
+$$
+\|I-Q\|\le2\times64\times\delta_n\times B,
+$$
+
+where B is the whole-strip operator modulus of the relevant integrand.
+The resulting analytic truncation allowances are at most
+7.511405761091823e-19 for M and1.1492924158296362e-7 for the full residual Gram.
+A separate GL2 rational/logarithmic example checks the implementation.
+These bounds concern the exact composite rule, not the old single-panel
+GL60/72 estimates.
+
+### Enclosing the rule's values and arithmetic
+
+Validated Legendre root brackets, positive weights and interval sine values
+come from the existing quadrature machinery. The exact optical geometry is
+differentiated symbolically. A restricted internal AST translation replaces
+rational arithmetic and square roots by the existing outward interval
+operations. Rounded floating literals and unsupported operations are
+rejected. Independent90-digit differentiation checks all seven resulting
+speed, mass and derivative quantities at three physical points.
+
+The interval implementation applies both K and A=-K^2 to the same normalized
+sine basis, using the exact rotated spin matrices. Positive square-root
+weights are enclosed before constructing Gram matrices. For an interval
+weighted field Y, select a dyadic midpoint Z and recompute a directed radius
+R around that actual midpoint. Thus midpoint-rounding error is included.
+Outward scalar bounds S>=||Z||F^2 and V>=||R||F^2 imply
+
+$$
+\|Y^TY-Z^TZ\|\le2\sqrt{SV}+V.
+$$
+
+The full residual uses a fixed frozen matrix, A Phi-Phi Mhat. The midpoint
+projection Phi_mid Mhat receives a separate dot-product error allowance;
+interval field errors, matrix multiplication and final subtraction errors
+are combined in Frobenius norm. As established126, its exact Gram equals
+G+(M-Mhat)^*(M-Mhat), and therefore upper-bounds the true complementary Gram.
+
+Midpoint Gram products are formed in blocks of at most256 scalar rows,
+including both spin components. Under conventional binary64 product/add or
+FMA arithmetic, a conservative gamma_(2k+2) allowance bounds a length-k dot
+product. Each block's operator rounding error is bounded by
+
+$$
+\gamma_{2k+2}\|Z_{\rm block}\|_F^2+\epsilon_{\rm underflow},
+\qquad\gamma_n=\frac{nu}{1-nu},\quad u=2^{-53}.
+$$
+
+The symmetric dyadic Gram blocks are then summed with an explicit streaming
+balanced tree of outward interval additions. A maximum row-sum bound on the
+final radius controls summation error. Finally add the analytic quadrature
+remainder and a directed Frobenius bound on the difference from the frozen
+M/G matrices used by126.
+
+The arithmetic model is explicit: standard IEEE754 interval operations,
+correct mpmath interval transcendental evaluation, and a conventional
+double-precision OpenBLAS DGEMM implementation with gradual underflow and
+no overflow. The identified build is scipy-openblas0.3.30, configured for
+Haswell with dynamic architecture support. Its public
+[Haswell double-precision kernel](https://raw.githubusercontent.com/OpenMathLib/OpenBLAS/v0.3.30/kernel/x86_64/dgemm_kernel_4x8_haswell.S)
+uses double multiplication/FMA instructions, consistent with this model.
+This source inspection is not proof of the runtime dispatch or a formal
+verification of the binary/library/hardware. A runtime underflow probe and
+an exact-rational small matrix control supplement, rather than replace,
+those assumptions.
+
+### Scope and next step
+
+The saved error budgets determine whether the two premises of126 hold.
+Only when both pass does its existing interval matrix proof imply the
+central continuum squared-energy lower bound0.18. A dyadic numerical trial
+also supplies a separately interval-evaluated Rayleigh upper bound; the
+trial need not be an exact eigenvector.
+
+This is a Dirichlet-box spectral result. It does not certify other angular
+sectors, higher levels, pointwise heat, the natural exterior, renormalized
+stress, supporting matter, throat formation or physical stability.
+A positive eigenvalue of H^*H is not a stability test for gravitational
+perturbations. No13Sep2027->12Sep2027 trajectory follows.
+
 ## Positivity-compatible Schur spectrum — increment126
 
 [Driver](../scripts/dihole_schur_spectrum.py),

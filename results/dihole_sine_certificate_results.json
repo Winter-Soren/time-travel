@@ -1,0 +1,701 @@
+{
+  "passed": true,
+  "controls": {
+    "passed": true,
+    "high_precision_geometry_max_widths": [
+      4.090168230150293e-10,
+      4.4149928157821705e-10,
+      4.1329428768221987e-10
+    ],
+    "independent_square_max_outside_interval": -2.2402492787052204e-16,
+    "exact_rational_dot_error": 8.43769498715119e-17,
+    "exact_rational_dot_allowance": 6.289413434501526e-16,
+    "gradual_underflow_probe": true
+  },
+  "quadrature": {
+    "order_per_panel": 64,
+    "panel_edges": [
+      -4,
+      -2,
+      0,
+      2,
+      4
+    ],
+    "points_per_axis": 256,
+    "total_spatial_points": 65536,
+    "scalar_rows_per_block": 256,
+    "validated_rule": {
+      "normalized_root_sign_pairs": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "root_bracket_attempts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "normalized_weight_sum_interval": [
+        1.9999999999999996,
+        2.0000000000000004
+      ],
+      "root_count": 64,
+      "all_brackets_disjoint": true,
+      "all_brackets_inside_unit_interval": true,
+      "all_weights_positive": true
+    }
+  },
+  "analytic_remainder": {
+    "passed": true,
+    "target": {
+      "radius": 4,
+      "sine_count": 18,
+      "dimension": 648,
+      "q": 512000,
+      "mu_center": 398855.5,
+      "frozen_matrix": "M0",
+      "matrix_sha256": "3600ad8647b86af05e38dc5e6090f1894330457b1361bcb4b091585e986eefdc",
+      "coordinates": {
+        "L": {
+          "lower": 0.011761449891978136,
+          "upper": 0.011761449891978139,
+          "lower_hex": "0x1.81663151de0bfp-7",
+          "upper_hex": "0x1.81663151de0c1p-7"
+        },
+        "rho_star": {
+          "lower": 0.6672354660415233,
+          "upper": 0.6672354660415235,
+          "lower_hex": "0x1.559fe312c262fp-1",
+          "upper_hex": "0x1.559fe312c2631p-1"
+        },
+        "vstar": {
+          "lower": 0.50948165013929,
+          "upper": 0.5094816501392903,
+          "lower_hex": "0x1.04dac762854e8p-1",
+          "upper_hex": "0x1.04dac762854eap-1"
+        },
+        "E": {
+          "lower": 43.317928896400815,
+          "upper": 43.31792889640083,
+          "lower_hex": "0x1.5a8b1e4e23f58p+5",
+          "upper_hex": "0x1.5a8b1e4e23f5ap+5"
+        }
+      },
+      "exact_energy": "E=vstar/L, with L,rho_star,vstar exact saved dyadics.",
+      "exact_gravity": "D=1,Q=1/5,k=1/2; M=(sqrt(k^2+4Qk)-k)/2; ag=sqrt(k^2-M^2); B=M/((k+ag)(M+k))."
+    },
+    "quadrature": {
+      "order_per_panel": 64,
+      "panel_width": 2,
+      "panel_edges": [
+        -4,
+        -2,
+        0,
+        2,
+        4
+      ],
+      "total_nodes_per_axis": 256,
+      "ellipse_parameter": 2,
+      "cauchy_polydisc_radius": "1/512",
+      "analytic_rule_delta": {
+        "lower": 2.3509887016445748e-38,
+        "upper": 2.3509887016445755e-38,
+        "lower_hex": "0x1.fffffffffffffp-126",
+        "upper_hex": "0x1.0000000000001p-125"
+      }
+    },
+    "geometry_box": {
+      "rho_real": [
+        0.515,
+        0.82
+      ],
+      "z_real": [
+        -0.152,
+        0.152
+      ],
+      "imaginary_extent": 0.0063,
+      "actual_physical_real_extent": {
+        "lower": 0.06864444476798848,
+        "upper": 0.0686444447679885,
+        "lower_hex": "0x1.192aead54a178p-4",
+        "upper_hex": "0x1.192aead54a17ap-4"
+      },
+      "actual_physical_imaginary_extent": {
+        "lower": 0.0062699374539620335,
+        "upper": 0.006269937453962035,
+        "lower_hex": "0x1.9ae818500f3bbp-8",
+        "upper_hex": "0x1.9ae818500f3bdp-8"
+      },
+      "radical_parameters": {
+        "M": {
+          "lower": 0.15311288741492743,
+          "upper": 0.15311288741492748,
+          "lower_hex": "0x1.39933fe0588ffp-3",
+          "upper_hex": "0x1.39933fe058901p-3"
+        },
+        "ag": {
+          "lower": 0.47597945723262436,
+          "upper": 0.47597945723262447,
+          "lower_hex": "0x1.e76728a9871e8p-2",
+          "upper_hex": "0x1.e76728a9871eap-2"
+        },
+        "B": {
+          "lower": 0.24020542767375574,
+          "upper": 0.2402054276737558,
+          "lower_hex": "0x1.ebf0d2c1719c8p-3",
+          "upper_hex": "0x1.ebf0d2c1719cap-3"
+        }
+      },
+      "branch_and_denominator_constants": {
+        "radicand_real_lower": {
+          "lower": 0.3862496199999999,
+          "upper": 0.38624962,
+          "lower_hex": "0x1.8b850537f83edp-2",
+          "upper_hex": "0x1.8b850537f83efp-2"
+        },
+        "root_real_lower": {
+          "lower": 0.6214898390158924,
+          "upper": 0.6214898390158926,
+          "lower_hex": "0x1.3e33ea8abd375p-1",
+          "upper_hex": "0x1.3e33ea8abd377p-1"
+        },
+        "sigma_modulus_lower": {
+          "lower": 0.5862583039701935,
+          "upper": 0.5862583039701937,
+          "lower_hex": "0x1.2c2a0c651eeddp-1",
+          "upper_hex": "0x1.2c2a0c651eedfp-1"
+        },
+        "h_modulus_lower": {
+          "lower": 0.3712698706348096,
+          "upper": 0.3712698706348097,
+          "lower_hex": "0x1.7c2e2b4177753p-2",
+          "upper_hex": "0x1.7c2e2b4177755p-2"
+        }
+      }
+    },
+    "analytic_bounds": {
+      "speed": {
+        "lower": 7.07544125552331,
+        "upper": 7.0754412555233115,
+        "lower_hex": "0x1.c4d4078f4f799p+2",
+        "upper_hex": "0x1.c4d4078f4f79bp+2"
+      },
+      "mass": {
+        "lower": 387584.46447129356,
+        "upper": 387584.4644712937,
+        "lower_hex": "0x1.7a801db9e5cdfp+18",
+        "upper_hex": "0x1.7a801db9e5ce1p+18"
+      },
+      "first_speed": {
+        "lower": 3622.6259228279346,
+        "upper": 3622.6259228279355,
+        "lower_hex": "0x1.c4d4078f4f799p+11",
+        "upper_hex": "0x1.c4d4078f4f79bp+11"
+      },
+      "laplacian_speed": {
+        "lower": 7419137.88995161,
+        "upper": 7419137.889951612,
+        "lower_hex": "0x1.c4d4078f4f799p+22",
+        "upper_hex": "0x1.c4d4078f4f79bp+22"
+      },
+      "first_mass": {
+        "lower": 198443245.8093023,
+        "upper": 198443245.80930236,
+        "lower_hex": "0x1.7a801db9e5cdfp+27",
+        "upper_hex": "0x1.7a801db9e5ce1p+27"
+      },
+      "basis_frobenius": {
+        "lower": 1276.7698210097803,
+        "upper": 1276.7698210097808,
+        "lower_hex": "0x1.3f3144bf5731fp+10",
+        "upper_hex": "0x1.3f3144bf57321p+10"
+      },
+      "matrix_frobenius": {
+        "lower": 5200.363939538271,
+        "upper": 5200.36393953829,
+        "lower_hex": "0x1.4505d2b243e98p+12",
+        "upper_hex": "0x1.4505d2b243eadp+12"
+      },
+      "K_basis_frobenius": {
+        "lower": 499609117.8447244,
+        "upper": 499609117.84472454,
+        "lower_hex": "0x1.dc76e1dd83fdcp+28",
+        "upper_hex": "0x1.dc76e1dd83fdep+28"
+      },
+      "strong_A_factor": {
+        "lower": 153063764783.05554,
+        "upper": 153063764783.0556,
+        "lower_hex": "0x1.1d1a7d997871cp+37",
+        "upper_hex": "0x1.1d1a7d997871ep+37"
+      },
+      "residual_frobenius": {
+        "lower": 195427202204812.75,
+        "upper": 195427202204812.8,
+        "lower_hex": "0x1.637ae1ef09198p+47",
+        "upper_hex": "0x1.637ae1ef0919ap+47"
+      },
+      "M_integrand_operator_modulus": {
+        "lower": 2.496092706335838e+17,
+        "upper": 2.4960927063358387e+17,
+        "lower_hex": "0x1.bb652792612a6p+57",
+        "upper_hex": "0x1.bb652792612a8p+57"
+      },
+      "G_integrand_operator_modulus": {
+        "lower": 3.8191791361600777e+28,
+        "upper": 3.8191791361600786e+28,
+        "lower_hex": "0x1.ed9e099912779p+94",
+        "upper_hex": "0x1.ed9e09991277bp+94"
+      }
+    },
+    "operator_remainders": {
+      "M": {
+        "lower": 7.511405761091821e-19,
+        "upper": 7.511405761091823e-19,
+        "lower_hex": "0x1.bb652792612a6p-61",
+        "upper_hex": "0x1.bb652792612a8p-61"
+      },
+      "residual_Gram": {
+        "lower": 1.149292415829636e-07,
+        "upper": 1.1492924158296362e-07,
+        "lower_hex": "0x1.ed9e099912779p-24",
+        "upper_hex": "0x1.ed9e09991277bp-24"
+      }
+    },
+    "requested_budgets_met": {
+      "M_below_1e_6": true,
+      "residual_Gram_below_1e_4": true
+    },
+    "controls": {
+      "exact_parameter_boxes": true,
+      "complex_polydiscs_inside_old_box": true,
+      "frozen_matrix_provenance": true,
+      "directed_frobenius_norm": true,
+      "independent_analytic_GL2_control": {
+        "passed": true,
+        "exact_integral": "log(2)^2",
+        "exact_GL2_sum": "(9/13)^2",
+        "error": {
+          "lower": 0.0011630730897990574,
+          "upper": 0.0011630730897990579,
+          "lower_hex": "0x1.30e48388bfebfp-10",
+          "upper_hex": "0x1.30e48388bfec1p-10"
+        },
+        "upper_bound": {
+          "lower": 1.1428571428571426,
+          "upper": 1.142857142857143,
+          "lower_hex": "0x1.2492492492491p+0",
+          "upper_hex": "0x1.2492492492493p+0"
+        }
+      }
+    },
+    "residual_interpretation": "The integrated Gram is of A Phi-Phi Mhat. It equals R*R+(Mexact-Mhat)^*(Mexact-Mhat), so it is a valid upper surrogate for the true complementary coupling Gram. This identity uses the exact orthonormal sine basis.",
+    "scope": "Only analytic truncation of exact tensor Gauss--Legendre quadrature is bounded. No quadrature sum or arithmetic/integrand evaluation error is certified here. This is one central angular sector of the Dirichlet box, not pointwise heat or the natural exterior.",
+    "interval_digits": 75,
+    "source_sha256": "88ca892f23745a296cc8162e8326fcf22bbff3e22973bc4f7a5406c6f11c83ef",
+    "input_sha256": {
+      "dihole_heat_angular_state.npz": "218545a22a2f1d9d757f7d7535c5534c82a2233e1cdac0b938dd885ceed01bdd",
+      "dihole_probe_certificate_results.json": "d3c3e55a125c539baa8e9b5c41f97429e2759850a419c23280b70522e26f2843",
+      "dihole_quadrature_remainder.py": "4f55a06e5a346bc40b2e51ce739f5561ad8658f03ed33cd906ebb8151eb1ef9d",
+      "dihole_continuum_heat_tail.py": "5a1ea1a80229a664dc5d1e8473f27ddae460c491b6a81ad588d50174b9ef4f09",
+      "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+      "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+    }
+  },
+  "error_budgets": [
+    {
+      "quantity": "M",
+      "midpoint_to_frozen_frobenius_upper": 2.7938086666503454e-10,
+      "analytic_quadrature_remainder_upper": 7.511405761091823e-19,
+      "total_operator_error_upper": 3.30315139595223e-06,
+      "required_error_budget": 0.0001,
+      "budget_met": true,
+      "midpoint_squared_frobenius_upper": 89698.2220138496,
+      "field_radius_squared_frobenius_upper": 3.0310324551630335e-17,
+      "field_gram_error_upper": 3.2977460308483155e-06,
+      "block_dot_rounding_upper": 5.118670611272847e-09,
+      "sum_rounding_upper": 7.313625223832546e-12,
+      "quadrature_sum_operator_error_upper": 3.302872015084813e-06
+    },
+    {
+      "quantity": "residual_Gram",
+      "midpoint_to_frozen_frobenius_upper": 1.293684155598222e-07,
+      "analytic_quadrature_remainder_upper": 1.1492924158296362e-07,
+      "total_operator_error_upper": 0.0002994185542340953,
+      "required_error_budget": 0.01,
+      "budget_met": true,
+      "midpoint_squared_frobenius_upper": 1320981.2497563036,
+      "field_radius_squared_frobenius_upper": 1.6930580759605812e-14,
+      "field_gram_error_upper": 0.000299098510417261,
+      "block_dot_rounding_upper": 7.538240724689114e-08,
+      "sum_rounding_upper": 3.6375244442192513e-10,
+      "quadrature_sum_operator_error_upper": 0.0002991742565769524
+    }
+  ],
+  "spectrum": {
+    "lower": 0.18,
+    "rayleigh_upper": 0.1897432318474619,
+    "trial_norm_squared_interval": [
+      0.9999999999999291,
+      1.0000000000000728
+    ],
+    "certified": true,
+    "meaning": "Lowest dimensionless squared-energy eigenvalue of the exact central angular Dirichlet-box Friedrichs square, subject to the documented arithmetic model."
+  },
+  "arithmetic_assumptions": [
+    "The existing outward IEEE754 interval-ufunc contract, correct mpmath interval transcendental evaluation and no overflow.",
+    "The identified OpenBLAS binary64 DGEMM uses conventional double product/add or FMA dot arithmetic, without reduced precision or nonclassical matrix algorithms. Standard gamma_(2k+2) error allowances cover these operations.",
+    "Gradual underflow is assumed and probed at runtime; explicit absolute underflow allowances accompany dot bounds. The implementation is not a formal verification of BLAS, mpmath or hardware."
+  ],
+  "blas": {
+    "name": "scipy-openblas",
+    "version": "0.3.30",
+    "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24"
+  },
+  "method": "Validated fields and positive square-root weights; Frobenius field-radius bounds; 256-row midpoint Gram blocks with explicit dot-rounding allowance; outward balanced Gram summation; analytic matrix quadrature remainder.",
+  "scope": [
+    "A single angular sector of the exact A4 Dirichlet box, with the entire spatial complement covered by the Schur theorem.",
+    "No finite-basis convergence difference is used as an error certificate.",
+    "Other spectral levels/sectors, pointwise heat, exterior boundary effects, renormalized stress, supporting material and stable backward passage remain unresolved."
+  ],
+  "generated_geometry": {
+    "symbolic_source": "def _lambdifygenerated(rho, z):\n    x0 = rho**2\n    x1 = z + mpf(1)/mpf(2)\n    x2 = x0 + x1**2\n    x3 = sqrt(65)\n    x4 = (mpf(1)/mpf(20))*x3\n    x5 = z + mpf(-1)/mpf(2)\n    x6 = x0 + x5**2\n    x7 = sqrt(x6)\n    x8 = sqrt(x2)\n    x9 = x4 + (mpf(1)/mpf(2))*x7 + (mpf(1)/mpf(2))*x8 + mpf(-1)/mpf(4)\n    x10 = x9**2\n    x11 = (mpf(1)/mpf(20))*x3 + mpf(-1)/mpf(4)\n    x12 = x11**2\n    x13 = mpf(1)/mpf(4) - x12\n    x14 = x7 + x8\n    x15 = x14**(-2)\n    x16 = x13*x15\n    x17 = z**2\n    x18 = 4*x17\n    x19 = x10 - x16*x18\n    x20 = x19**(-2)\n    x21 = x20*x6\n    x22 = 2*z\n    x23 = x22 + 1\n    x24 = (mpf(105937722701699)/mpf(4589002739438825))*x21*x23\n    x25 = x22 - 1\n    x26 = x2*x20\n    x27 = (mpf(105937722701699)/mpf(4589002739438825))*x25*x26\n    x28 = x19**(-3)\n    x29 = x28*x6\n    x30 = (mpf(105937722701699)/mpf(4589002739438825))*x29\n    x31 = 16*x16\n    x32 = 1/x7\n    x33 = x32*x5\n    x34 = 1/x8\n    x35 = x1*x34\n    x36 = x33 + x35\n    x37 = x36*x9\n    x38 = 2*x37\n    x39 = x14**(-3)\n    x40 = -2*x33 - 2*x35\n    x41 = x39*x40\n    x42 = x13*x17\n    x43 = 8*x42\n    x44 = x31*z - x38 + x41*x43\n    x45 = x2*x44\n    x46 = x30*x45\n    x47 = (mpf(211875445403398)/mpf(4589002739438825))*rho\n    x48 = rho*x32\n    x49 = rho*x34\n    x50 = x48 + x49\n    x51 = x50*x9\n    x52 = 2*x51\n    x53 = -2*x48 - 2*x49\n    x54 = x39*x53\n    x55 = x43*x54 - x52\n    x56 = x2*x55\n    x57 = x21*x47 + x26*x47 + x30*x56\n    x58 = (mpf(1)/mpf(2))*sqrt(2)\n    x59 = (mpf(11222801091222071671737486601)/mpf(10333515513669438809134700953600))*x20\n    x60 = (mpf(11222801091222071671737486601)/mpf(20667031027338877618269401907200))*x23\n    x61 = (mpf(11222801091222071671737486601)/mpf(10333515513669438809134700953600))*rho\n    x62 = 12*x42\n    x63 = (mpf(11222801091222071671737486601)/mpf(41334062054677755236538803814400))*x6/x19**4\n    x64 = (mpf(1)/mpf(2))*x48 + (mpf(1)/mpf(2))*x49\n    x65 = x6**(mpf(-3)/mpf(2))\n    x66 = x0*x65\n    x67 = x2**(mpf(-3)/mpf(2))\n    x68 = x0*x67\n    x69 = 2*x9\n    x70 = x43/x14**4\n    x71 = 2*x32\n    x72 = 2*x34\n    x73 = x39*x43\n    x74 = (mpf(11222801091222071671737486601)/mpf(41334062054677755236538803814400))*x2*x29\n    x75 = (mpf(1)/mpf(2))*x33 + (mpf(1)/mpf(2))*x35\n    x76 = -x5**2*x65\n    x77 = -x1**2*x67\n    x78 = 1/rho\n    x79 = -x15*x18 + 1\n    x80 = x13*x79\n    x81 = x12*x79\n    x82 = x10 + x12 + mpf(-1)/mpf(4)\n    x83 = (mpf(1)/mpf(10))*x3 + mpf(-1)/mpf(2)\n    x84 = x83*x9\n    x85 = x82 - x84\n    x86 = x80*x85 + x82**2\n    x87 = sqrt(x13)\n    x88 = x87 + mpf(1)/mpf(2)\n    x89 = x88**(-2)\n    x90 = x4 + mpf(1)/mpf(4)\n    x91 = x90**(-2)\n    x92 = x89*x91\n    x93 = x86*x92\n    x94 = x81*x93\n    x95 = 1/x88\n    x96 = 1/x90\n    x97 = x95*x96\n    x98 = x87*x97\n    x99 = x81*x98\n    x100 = x69*x99 + x80 + x85 + (mpf(1)/mpf(4))*x94\n    x101 = x100**2\n    x102 = (mpf(2)/mpf(5))*x12\n    x103 = (mpf(4)/mpf(5))*x99\n    x104 = (mpf(2)/mpf(5))*x10 + x102 + x103*x9 + (mpf(2)/mpf(5))*x80 - mpf(2)/mpf(5)*x84 + (mpf(1)/mpf(10))*x94 + mpf(-1)/mpf(10)\n    x105 = 1/x104\n    x106 = (mpf(1)/mpf(2))*x86\n    x107 = x11*x97\n    x108 = x106*x107 + x84*x87\n    x109 = x105*x108\n    x110 = 512000*x79\n    x111 = -x109*x110 + mpf(797711)/mpf(2)\n    x112 = x101*x111*x20\n    x113 = (mpf(11222801091222071671737486601)/mpf(41334062054677755236538803814400))*x112/x0\n    x114 = x64*x83\n    x115 = -x13*x18*x54*x85 + x52*x82 + x80*(-x114 + x50*x9)\n    x116 = (mpf(1)/mpf(2))*x107\n    x117 = x105*x110\n    x118 = x17*x54\n    x119 = x9*x98\n    x120 = x118*x119*x12\n    x121 = x118*x93\n    x122 = x81*x92\n    x123 = (mpf(1)/mpf(10))*x122\n    x124 = x108*x110/x104**2\n    x125 = 2048000*x105*x108*x17*x39*x53 - x117*(x114*x87 + x115*x116) - x124*(x102*x121 - x103*x64 + (mpf(2)/mpf(5))*x114 - x115*x123 + (mpf(16)/mpf(5))*x120 + (mpf(8)/mpf(5))*x42*x54 - mpf(2)/mpf(5)*x51)\n    x126 = (mpf(11222801091222071671737486601)/mpf(41334062054677755236538803814400))*x101*x78\n    x127 = x126*x20\n    x128 = x111*x126*x28\n    x129 = -2*x114 + (mpf(1)/mpf(2))*x115*x12*x79*x89*x91 - 2*x12*x121 + 4*x12*x64*x79*x87*x95*x96 - 16*x120 - x55\n    x130 = (mpf(11222801091222071671737486601)/mpf(41334062054677755236538803814400))*x100*x111*x20*x78\n    x131 = -8*x15*z - x18*x41\n    x132 = x75*x83\n    x133 = x13*x131\n    x134 = x133*x85 + x38*x82 + x80*(-x132 + x36*x9)\n    x135 = x12*x131\n    x136 = x119*x135\n    x137 = x127*(-512000*x109*x131 - x117*(x116*x134 + x132*x87) - x124*(-x103*x75 - x123*x134 - mpf(2)/mpf(5)*x133 - mpf(1)/mpf(10)*x135*x93 - mpf(4)/mpf(5)*x136 - mpf(2)/mpf(5)*x37 + (mpf(2)/mpf(5))*x75*x83)) + x128*x44 + x130*(x106*x135*x92 + (mpf(1)/mpf(2))*x122*x134 - 2*x132 + 2*x133 + 4*x136 + x38 + 4*x75*x99)\n    return [(mpf(9007199254740992)/mpf(4589002739438825))*x2*x21, x58*(x24 + x27 + x46 + x57), x58*(-x24 - x27 - x46 + x57), (mpf(11222801091222071671737486601)/mpf(5166757756834719404567350476800))*x0*x20 + x2*x59 + x20*x25*x60 + (mpf(11222801091222071671737486601)/mpf(20667031027338877618269401907200))*x25*x28*x45 + x28*x56*x61 + x29*x44*x60 + x29*x55*x61 + x45*x63*(24*x16*z - 3*x37 + x41*x62) + x56*x63*(-3*x51 + x54*x62) + x59*x6 + x74*(-2*x50*x64 + x53*x70*(-3*x48 - 3*x49) - x69*(x32 + x34 - x66 - x68) + x73*(2*x66 + 2*x68 - x71 - x72)) + x74*(32*x13*x41*z + x31 - 2*x36*x75 + x40*x70*(-3*x33 - 3*x35) - x69*(x32 + x34 + x76 + x77) + x73*(-x71 - x72 - 2*x76 - 2*x77)), (mpf(105937722701699)/mpf(4589002739438825))*x112*x78, x58*(-x113 + x125*x127 + x128*x55 + x129*x130 + x137), x58*((mpf(11222801091222071671737486601)/mpf(41334062054677755236538803814400))*x100*x111*x129*x20*x78 + (mpf(11222801091222071671737486601)/mpf(41334062054677755236538803814400))*x101*x111*x28*x55*x78 + (mpf(11222801091222071671737486601)/mpf(41334062054677755236538803814400))*x101*x125*x20*x78 - x113 - x137)]\n",
+    "interval_source": "def _lambdifygenerated(rho, z):\n    x0 = _power(rho, 2, 1)\n    x1 = add(z, div(_number(1), _number(2)))\n    x2 = add(x0, _power(x1, 2, 1))\n    x3 = sqrt(_number(65))\n    x4 = mul(div(_number(1), _number(20)), x3)\n    x5 = add(z, div(sub(_number(0), _number(1)), _number(2)))\n    x6 = add(x0, _power(x5, 2, 1))\n    x7 = sqrt(x6)\n    x8 = sqrt(x2)\n    x9 = add(add(add(x4, mul(div(_number(1), _number(2)), x7)), mul(div(_number(1), _number(2)), x8)), div(sub(_number(0), _number(1)), _number(4)))\n    x10 = _power(x9, 2, 1)\n    x11 = add(mul(div(_number(1), _number(20)), x3), div(sub(_number(0), _number(1)), _number(4)))\n    x12 = _power(x11, 2, 1)\n    x13 = sub(div(_number(1), _number(4)), x12)\n    x14 = add(x7, x8)\n    x15 = _power(x14, -2, 1)\n    x16 = mul(x13, x15)\n    x17 = _power(z, 2, 1)\n    x18 = mul(_number(4), x17)\n    x19 = sub(x10, mul(x16, x18))\n    x20 = _power(x19, -2, 1)\n    x21 = mul(x20, x6)\n    x22 = mul(_number(2), z)\n    x23 = add(x22, _number(1))\n    x24 = mul(mul(div(_number(105937722701699), _number(4589002739438825)), x21), x23)\n    x25 = sub(x22, _number(1))\n    x26 = mul(x2, x20)\n    x27 = mul(mul(div(_number(105937722701699), _number(4589002739438825)), x25), x26)\n    x28 = _power(x19, -3, 1)\n    x29 = mul(x28, x6)\n    x30 = mul(div(_number(105937722701699), _number(4589002739438825)), x29)\n    x31 = mul(_number(16), x16)\n    x32 = div(_number(1), x7)\n    x33 = mul(x32, x5)\n    x34 = div(_number(1), x8)\n    x35 = mul(x1, x34)\n    x36 = add(x33, x35)\n    x37 = mul(x36, x9)\n    x38 = mul(_number(2), x37)\n    x39 = _power(x14, -3, 1)\n    x40 = sub(mul(sub(_number(0), _number(2)), x33), mul(_number(2), x35))\n    x41 = mul(x39, x40)\n    x42 = mul(x13, x17)\n    x43 = mul(_number(8), x42)\n    x44 = add(sub(mul(x31, z), x38), mul(x41, x43))\n    x45 = mul(x2, x44)\n    x46 = mul(x30, x45)\n    x47 = mul(div(_number(211875445403398), _number(4589002739438825)), rho)\n    x48 = mul(rho, x32)\n    x49 = mul(rho, x34)\n    x50 = add(x48, x49)\n    x51 = mul(x50, x9)\n    x52 = mul(_number(2), x51)\n    x53 = sub(mul(sub(_number(0), _number(2)), x48), mul(_number(2), x49))\n    x54 = mul(x39, x53)\n    x55 = sub(mul(x43, x54), x52)\n    x56 = mul(x2, x55)\n    x57 = add(add(mul(x21, x47), mul(x26, x47)), mul(x30, x56))\n    x58 = mul(div(_number(1), _number(2)), sqrt(_number(2)))\n    x59 = mul(div(_number(11222801091222071671737486601), _number(10333515513669438809134700953600)), x20)\n    x60 = mul(div(_number(11222801091222071671737486601), _number(20667031027338877618269401907200)), x23)\n    x61 = mul(div(_number(11222801091222071671737486601), _number(10333515513669438809134700953600)), rho)\n    x62 = mul(_number(12), x42)\n    x63 = div(mul(div(_number(11222801091222071671737486601), _number(41334062054677755236538803814400)), x6), _power(x19, 4, 1))\n    x64 = add(mul(div(_number(1), _number(2)), x48), mul(div(_number(1), _number(2)), x49))\n    x65 = _power(x6, -3, 2)\n    x66 = mul(x0, x65)\n    x67 = _power(x2, -3, 2)\n    x68 = mul(x0, x67)\n    x69 = mul(_number(2), x9)\n    x70 = div(x43, _power(x14, 4, 1))\n    x71 = mul(_number(2), x32)\n    x72 = mul(_number(2), x34)\n    x73 = mul(x39, x43)\n    x74 = mul(mul(div(_number(11222801091222071671737486601), _number(41334062054677755236538803814400)), x2), x29)\n    x75 = add(mul(div(_number(1), _number(2)), x33), mul(div(_number(1), _number(2)), x35))\n    x76 = mul(sub(_number(0), _power(x5, 2, 1)), x65)\n    x77 = mul(sub(_number(0), _power(x1, 2, 1)), x67)\n    x78 = div(_number(1), rho)\n    x79 = add(mul(sub(_number(0), x15), x18), _number(1))\n    x80 = mul(x13, x79)\n    x81 = mul(x12, x79)\n    x82 = add(add(x10, x12), div(sub(_number(0), _number(1)), _number(4)))\n    x83 = add(mul(div(_number(1), _number(10)), x3), div(sub(_number(0), _number(1)), _number(2)))\n    x84 = mul(x83, x9)\n    x85 = sub(x82, x84)\n    x86 = add(mul(x80, x85), _power(x82, 2, 1))\n    x87 = sqrt(x13)\n    x88 = add(x87, div(_number(1), _number(2)))\n    x89 = _power(x88, -2, 1)\n    x90 = add(x4, div(_number(1), _number(4)))\n    x91 = _power(x90, -2, 1)\n    x92 = mul(x89, x91)\n    x93 = mul(x86, x92)\n    x94 = mul(x81, x93)\n    x95 = div(_number(1), x88)\n    x96 = div(_number(1), x90)\n    x97 = mul(x95, x96)\n    x98 = mul(x87, x97)\n    x99 = mul(x81, x98)\n    x100 = add(add(add(mul(x69, x99), x80), x85), mul(div(_number(1), _number(4)), x94))\n    x101 = _power(x100, 2, 1)\n    x102 = mul(div(_number(2), _number(5)), x12)\n    x103 = mul(div(_number(4), _number(5)), x99)\n    x104 = add(add(sub(add(add(add(mul(div(_number(2), _number(5)), x10), x102), mul(x103, x9)), mul(div(_number(2), _number(5)), x80)), mul(div(_number(2), _number(5)), x84)), mul(div(_number(1), _number(10)), x94)), div(sub(_number(0), _number(1)), _number(10)))\n    x105 = div(_number(1), x104)\n    x106 = mul(div(_number(1), _number(2)), x86)\n    x107 = mul(x11, x97)\n    x108 = add(mul(x106, x107), mul(x84, x87))\n    x109 = mul(x105, x108)\n    x110 = mul(_number(512000), x79)\n    x111 = add(mul(sub(_number(0), x109), x110), div(_number(797711), _number(2)))\n    x112 = mul(mul(x101, x111), x20)\n    x113 = div(mul(div(_number(11222801091222071671737486601), _number(41334062054677755236538803814400)), x112), x0)\n    x114 = mul(x64, x83)\n    x115 = add(add(mul(mul(mul(sub(_number(0), x13), x18), x54), x85), mul(x52, x82)), mul(x80, add(sub(_number(0), x114), mul(x50, x9))))\n    x116 = mul(div(_number(1), _number(2)), x107)\n    x117 = mul(x105, x110)\n    x118 = mul(x17, x54)\n    x119 = mul(x9, x98)\n    x120 = mul(mul(x118, x119), x12)\n    x121 = mul(x118, x93)\n    x122 = mul(x81, x92)\n    x123 = mul(div(_number(1), _number(10)), x122)\n    x124 = div(mul(x108, x110), _power(x104, 2, 1))\n    x125 = sub(sub(mul(mul(mul(mul(mul(_number(2048000), x105), x108), x17), x39), x53), mul(x117, add(mul(x114, x87), mul(x115, x116)))), mul(x124, sub(add(add(sub(add(sub(mul(x102, x121), mul(x103, x64)), mul(div(_number(2), _number(5)), x114)), mul(x115, x123)), mul(div(_number(16), _number(5)), x120)), mul(mul(div(_number(8), _number(5)), x42), x54)), mul(div(_number(2), _number(5)), x51))))\n    x126 = mul(mul(div(_number(11222801091222071671737486601), _number(41334062054677755236538803814400)), x101), x78)\n    x127 = mul(x126, x20)\n    x128 = mul(mul(x111, x126), x28)\n    x129 = sub(sub(add(sub(add(mul(sub(_number(0), _number(2)), x114), mul(mul(mul(mul(mul(div(_number(1), _number(2)), x115), x12), x79), x89), x91)), mul(mul(_number(2), x12), x121)), mul(mul(mul(mul(mul(mul(_number(4), x12), x64), x79), x87), x95), x96)), mul(_number(16), x120)), x55)\n    x130 = mul(mul(mul(mul(div(_number(11222801091222071671737486601), _number(41334062054677755236538803814400)), x100), x111), x20), x78)\n    x131 = sub(mul(mul(sub(_number(0), _number(8)), x15), z), mul(x18, x41))\n    x132 = mul(x75, x83)\n    x133 = mul(x13, x131)\n    x134 = add(add(mul(x133, x85), mul(x38, x82)), mul(x80, add(sub(_number(0), x132), mul(x36, x9))))\n    x135 = mul(x12, x131)\n    x136 = mul(x119, x135)\n    x137 = add(add(mul(x127, sub(sub(mul(mul(sub(_number(0), _number(512000)), x109), x131), mul(x117, add(mul(x116, x134), mul(x132, x87)))), mul(x124, add(sub(sub(sub(sub(sub(mul(sub(_number(0), x103), x75), mul(x123, x134)), mul(div(_number(2), _number(5)), x133)), mul(mul(div(_number(1), _number(10)), x135), x93)), mul(div(_number(4), _number(5)), x136)), mul(div(_number(2), _number(5)), x37)), mul(mul(div(_number(2), _number(5)), x75), x83))))), mul(x128, x44)), mul(x130, add(add(add(add(sub(add(mul(mul(x106, x135), x92), mul(mul(div(_number(1), _number(2)), x122), x134)), mul(_number(2), x132)), mul(_number(2), x133)), mul(_number(4), x136)), x38), mul(mul(_number(4), x75), x99))))\n    return [mul(mul(div(_number(9007199254740992), _number(4589002739438825)), x2), x21), mul(x58, add(add(add(x24, x27), x46), x57)), mul(x58, add(sub(sub(sub(_number(0), x24), x27), x46), x57)), add(add(add(add(add(add(add(add(add(add(add(mul(mul(div(_number(11222801091222071671737486601), _number(5166757756834719404567350476800)), x0), x20), mul(x2, x59)), mul(mul(x20, x25), x60)), mul(mul(mul(div(_number(11222801091222071671737486601), _number(20667031027338877618269401907200)), x25), x28), x45)), mul(mul(x28, x56), x61)), mul(mul(x29, x44), x60)), mul(mul(x29, x55), x61)), mul(mul(x45, x63), add(sub(mul(mul(_number(24), x16), z), mul(_number(3), x37)), mul(x41, x62)))), mul(mul(x56, x63), add(mul(sub(_number(0), _number(3)), x51), mul(x54, x62)))), mul(x59, x6)), mul(x74, add(sub(add(mul(mul(sub(_number(0), _number(2)), x50), x64), mul(mul(x53, x70), sub(mul(sub(_number(0), _number(3)), x48), mul(_number(3), x49)))), mul(x69, sub(sub(add(x32, x34), x66), x68))), mul(x73, sub(sub(add(mul(_number(2), x66), mul(_number(2), x68)), x71), x72))))), mul(x74, add(sub(add(sub(add(mul(mul(mul(_number(32), x13), x41), z), x31), mul(mul(_number(2), x36), x75)), mul(mul(x40, x70), sub(mul(sub(_number(0), _number(3)), x33), mul(_number(3), x35)))), mul(x69, add(add(add(x32, x34), x76), x77))), mul(x73, sub(sub(sub(sub(_number(0), x71), x72), mul(_number(2), x76)), mul(_number(2), x77)))))), mul(mul(div(_number(105937722701699), _number(4589002739438825)), x112), x78), mul(x58, add(add(add(add(sub(_number(0), x113), mul(x125, x127)), mul(x128, x55)), mul(x129, x130)), x137)), mul(x58, sub(sub(add(add(mul(mul(mul(mul(mul(div(_number(11222801091222071671737486601), _number(41334062054677755236538803814400)), x100), x111), x129), x20), x78), mul(mul(mul(mul(mul(div(_number(11222801091222071671737486601), _number(41334062054677755236538803814400)), x101), x111), x28), x55), x78)), mul(mul(mul(mul(div(_number(11222801091222071671737486601), _number(41334062054677755236538803814400)), x101), x125), x20), x78)), x113), x137))]"
+  },
+  "generated_sha256": {
+    "symbolic_source": "f51b420318d44ce8124840837a04986946ecca474677ca7f4f43f24dfb197f02",
+    "interval_source": "62ed247dce82d83da32772981f99c32a532baf247cfa38aae1c7c0cb25e982b3"
+  },
+  "source_sha256": "2c4740bffcb3e64cfc82a39d811c8dd0aae458d3168ee7d3bbf77bfc5b19aa5c",
+  "state_sha256": "f64c2fb4fd888e1187b68d3481e2cd857f1c9c1481c34c3385a48411e43f6980",
+  "input_sha256": {
+    "dihole_sine_remainder.py": "88ca892f23745a296cc8162e8326fcf22bbff3e22973bc4f7a5406c6f11c83ef",
+    "dihole_schur_spectrum.py": "9a9ec954a168fd87fdcb4f40cf2b3e82bd0fe8189c1ca86819592b8af867bf83",
+    "dihole_schur_spectrum_results.json": "7002975a714c32d50a028dbee17dc8892aaab397b6d161d3d2c90d43ccee303c",
+    "dihole_schur_spectrum_state.npz": "3b61d965cad51a6f9476118560d659e23b2b200fed265c742e9b8d8c38831bf0",
+    "dihole_heat_angular_state.npz": "218545a22a2f1d9d757f7d7535c5534c82a2233e1cdac0b938dd885ceed01bdd",
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_interval_quadrature.py": "750b79afdc66a4289c6e8e185b33c7dcd9ff0fffb3d7572bcbca3d92b517e911",
+    "dihole_quadrature_remainder.py": "4f55a06e5a346bc40b2e51ce739f5561ad8658f03ed33cd906ebb8151eb1ef9d",
+    "dihole_continuum_heat_tail.py": "5a1ea1a80229a664dc5d1e8473f27ddae460c491b6a81ad588d50174b9ef4f09",
+    "dihole_optical_heat.py": "409c96faf0e878b7843970101082b5f3b53da3f8118e3b7513fe63833499e8d4",
+    "dihole_spatial_complement.py": "5786274191af3468b82ed11f7bd3eb88a1e907f3fe4d3b0e12444580a044e639",
+    "dihole_finite_heat.py": "ff220eb27e16db3ecc8aa46e1406fc6f5f01f00a2cdb7a6c6b17b628fad629f4",
+    "dihole_probe_certificate_results.json": "d3c3e55a125c539baa8e9b5c41f97429e2759850a419c23280b70522e26f2843",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "runtime_seconds": 233.98484290001215
+}
