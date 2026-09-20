@@ -1,5 +1,184 @@
 # Reproduction and coupled-model iterations
 
+## Positivity-compatible Schur spectrum — increment126
+
+[Driver](../scripts/dihole_schur_spectrum.py),
+[results](../results/dihole_schur_spectrum_results.json),
+[saved residual Grams and certificate trials](../data/dihole_schur_spectrum_state.npz),
+and [figure](../figures/dihole_schur_spectrum_progress.png).
+
+The omitted-space energy bound125 alone gave an unusably large coupling
+estimate. This increment uses the additional information that the *whole*
+operator obeys the same positive-form comparison. It converts the large
+coupling estimate into useful numerical bounds for low spectral levels,
+without enlarging the spatial basis or discarding the infinite complement.
+The analytic argument is valid, but the displayed spectral intervals remain
+conditional on numerical integration errors that have not yet been enclosed.
+
+### A sharper use of the same inequality
+
+Use one fixed global comparison $A\ge D=\kappa(-\Delta_D)-V$ from125, with
+N=18, the same exact dyadic epsilon and the same A=4 Dirichlet square. Let
+$P=P_{18}$, $Q=1-P$, $M=PAP$, $R=QAP$, and $C=M-D_P$. The sine projection
+reduces D. If $C>0$, positivity of the form A-D and completion of the square
+in the finite retained component give
+
+$$
+A_Q\ge D_Q+RC^{-1}R^*.
+$$
+
+The sine basis belongs to D(A), making R a bounded finite-rank map. The
+argument uses the restricted closed form on Q; it does not assume an
+unproved operator domain for A-D.
+
+For a real spectral parameter $\lambda<\gamma:=\inf\sigma(D_Q)$, put
+$T=R^*(D_Q-\lambda)^{-1}R$ and $G=R^*R$. Inverse domination and the Woodbury
+identity give
+
+$$
+\Sigma(\lambda)=R^*(A_Q-\lambda)^{-1}R
+\le F_C(T),\qquad
+F_C(T)=T-T(C+T)^{-1}T=C-C(C+T)^{-1}C.
+$$
+
+The last expression proves monotonicity in T, and the first proves
+monotonicity in C. No commutation is assumed. Since $T\le G/(\gamma-\lambda)$,
+
+$$
+\boxed{\Sigma(\lambda)\le
+C-C\left(C+\frac{G}{\gamma-\lambda}\right)^{-1}C.}
+$$
+
+This is matrix parallel addition, a standard operation introduced by
+[Anderson and Duffin, *Series and parallel addition of matrices*](https://doi.org/10.1184/R1/6479477).
+The repository record verifies that reference's identity and provenance;
+the comparison used here is derived explicitly above, rather than inferred
+from an inaccessible theorem statement. No new mathematical operation or
+physical law is claimed.
+
+A preliminary weighted Fourier-shell comparison was also tested. It improved
+the central lowest bound only from about0.187571 to0.187678 when40 sine modes
+per axis were used for the shell. The final driver uses the simpler G-only
+bound, which already succeeds, and avoids a second large mode integration.
+These preliminary shell figures are exploratory diagnostics, not certificates.
+
+Define $L(\lambda)=M-\lambda I-F_C(G/(\gamma-\lambda))$. Schur inertia and
+min-max imply
+
+$$
+n_-(M-\lambda)\le n_-(A-\lambda)\le n_-(L(\lambda)).
+$$
+
+A positive kth eigenvalue of L(lambda) therefore gives a lower bound on the
+kth eigenvalue of A; the kth Ritz value is an upper bound. For z>0, if L(-z)>0,
+
+$$
+(M+z)^{-1}\le P(A+z)^{-1}P\le L(-z)^{-1}.
+$$
+
+The numerical driver uses these statements for the lowest eight levels in
+angular offsets -128,0,+128. It also evaluates the corresponding eight-level
+partial heat trace and retained Ritz-source resolvent brackets. These are
+not the full heat trace, the pointwise heat diagonal, or a stress tensor.
+
+### Numerical result and remaining premise
+
+Reusing the frozen N=18 matrices, direct strong residual integration at Gauss
+orders60 and72 changes the residual Gram by less than3.88e-8 in Frobenius norm.
+That is a sensitivity check, not an upper bound on the integration error.
+The lowest-level numerical brackets are
+
+| Angular offset | Conditional lower value | Ritz upper value |
+| --- | ---: | ---: |
+| -128 | 0.2620376301082345 | 0.26426602383722386 |
+| 0 | 0.18757106083535519 | 0.18973992869552414 |
+| +128 | 0.2540670563997226 | 0.2578692766356073 |
+
+These are dimensionless squared energies in the fixed Dirichlet box, not
+clock offsets or calendar travel intervals. Numerical bisection margins
+near the roots are tiny, so the conditional certification test below uses
+the deliberately more conservative central threshold0.18.
+
+### Explicit error budgets and matrix certificate
+
+Suppose independent integration/evaluation bounds establish
+
+$$
+\|M-\widehat M\|\le e_M,\qquad
+0\le G\le G_+:=\widehat G+e_GI,
+\quad D_P^-\le D_P\le D_P^+.
+$$
+
+Let $C_-=\widehat M-e_MI-D_P^+$ and
+$C_+=\widehat M+e_MI-D_P^-$. Require $C_->0$.
+Monotonicity in both arguments gives the rigorous finite lower comparison
+
+$$
+L_{\rm cert}(\lambda)=\widehat M-e_MI-\lambda I
+-F_{C_+}\left(\frac{G_+}{\gamma-\lambda}\right).
+$$
+
+There is no need for interval inversion. Set
+$B_+=G_+/(\gamma-\lambda)$, $S=C_++B_+$ and choose any numerical X, interpreted
+as exact dyadic entries. Completing a second square gives
+
+$$
+C_+S^{-1}C_+\ge C_+X+X^*C_+-X^*SX,
+$$
+
+so
+
+$$
+L_{\rm trial}=D_P^--(\lambda+2e_M)I+C_+X+X^*C_+-X^*SX
+\le L_{\rm cert}.
+$$
+
+The driver checks this polynomial implication for central lambda0.18,
+$e_M=10^{-4}$ and $e_G=0.01$ (stored binary64 inputs interpreted exactly).
+Outward interval contractions verify C_->0, G_+>0 and L_trial>0. Numerical
+eigenbases only supply trial matrices; their invertibility is independently
+checked by $Q^*Q>0$, and interval congruence/Gershgorin checks establish
+positivity. X needs no solve-error certificate: an inaccurate X weakens the
+lower bound instead of invalidating the identity.
+
+The final interval congruence lower bounds are14.467514386979841 for C_-,
+0.009999995465732358 for G_+, and0.007154229181949808 for L_trial.
+Every trial-basis Gram lower bound exceeds0.9999999999988. The strict final
+run takes150.27 seconds and completes without a failed check.
+
+**The two input error budgets are still unproved.** The resulting certificate
+is an implication: *if those budgets hold, the central exact Dirichlet squared
+energy is at least0.18*. It is not an unconditional continuum spectral bound.
+This separates the remaining integration task from verified finite matrix
+algebra.
+
+A useful simplification for that next task is that the exact full residual
+built with any fixed approximate matrix satisfies
+
+$$
+\widetilde R=A\Phi-\Phi\widehat M,
+\qquad\widetilde R^*\widetilde R=G+(M-\widehat M)^2\ge G.
+$$
+
+Orthogonality of the retained and omitted parts proves the identity.
+Thus a rigorously integrated upper bound for this full residual Gram is
+sufficient; no subtraction of a large projected Gram is needed.
+
+### Checks and next step
+
+Thirty seeded noncommuting complex block controls check Woodbury, matrix
+order and inertia against direct full eigensolves. Independent agents
+verify the form-domain argument, the two-sided monotonicity and the
+one-sided error inflation. These are internal checks, not peer review.
+
+Next: enclose the coefficient evaluation and continuum integrals tightly
+enough to meet the explicit M/G budgets. Then extend spectral control to
+the required states/sectors and pointwise heat. Natural-exterior boundary
+comparison, renormalized stress, self-consistent support and physical
+stability remain unresolved. No supporting material, new law or
+13Sep2027->12Sep2027 passage is established. Professor first-feedback
+readiness is unchanged; no email or monitor action is taken.
+
 ## Spatial-complement gap and strong residual test — increment125
 
 [Driver](../scripts/dihole_spatial_complement.py),

@@ -58,6 +58,67 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Positivity-compatible Schur spectrum and conditional matrix proof — increment126
+- Previous125 PROGRESS: published3e7dafb63ff57d5ca74c954930b35426c24b0667;
+ clean/privateverified.126 began clean; preserve all551 prior sciencefiles.
+- NEW dihole_schur_spectrum.py/results/state/PNG/PDF. Reuse125 exactaction,
+ intervalcomparison and123 frozen N18 matrices. GoalACTIVE, nooldreruns.
+- Keyanalyticimprovement: SAMEglobalD=kappa L-V withfixed125eps; C=M-D_P>0
+ andA-D>=0 imply A_Q>=D_Q+R C^-1R*. ThusSigma(lambda)<=C:B with
+ B=G/(gamma-lambda),G=R*R,gamma=infD_Q>lambda;
+ C:B=C-C(C+B)^-1C. Noncommutingparalleladdition, no newphysicsclaim.
+ Formargument/domains, Woodbury, monotonicityinBOTHarguments independently
+ verified. Psinbasis inD(A); finiteRbounded. No exteriorzeroextensionclaim.
+- Initial weighted40sineshell loweredrawcentralSchur~-598 butstillfailed;
+ compatibleparalleladdition worked. Shelllower~.187678 versusG-only~.187571,
+ sofinaldriveromitsunnecessaryshellintegration. No extraPDEsolve orhighbasis.
+- Numerically Cmincentral14.467614389436783. RawG/gamma lowerSchurcentral
+ -1358.5372335316904 isunhelpful. SharpenedSchurinertia givesconditional
+ groundbrackets offsets-128/0/+128 respectively:
+ [.2620376301082345,.26426602383722386],
+ [.18757106083535519,.18973992869552414],
+ [.2540670563997226,.2578692766356073]. These are NOTcertifiedcontinuum
+ intervals; integration/coefficient/roundinginputsarenotenclosed.
+- Eightorderedlevels eachsector; retainedRitzsourceresolvents atz1/4 and
+ eight-levelpartialheattraces attau.5/1/2. Centraltraceconditionalrelative
+ widths.2873%/.4397%/.5986%; allsectorsmax.7615%. NOTfulltrace/pointwiseheat.
+ Heatparameter isnotelapsedtravelertime. BasisN18,A4 unchanged.
+- StrongfullresidualGrams integratedGL60/72, Frobeniuschanges<3.88e-8,
+ noterrorbounds. No Gramdifference cancellation/eigenvalueclipping.
+ ExactresidualbuiltwithMhat givesGtilde=G+(M-Mhat)^2>=G; usefulnextstep.
+- CONDITIONALMATRIXCERTIFICATE: choosecentral lambda=.18, assumeunproved
+ ||Mexact-Mhat||<=1e-4 andGexact<=Ghat+.01I. DirectedD_P endpoints,
+ Cminus=Mhat-eMI-Dhi>0,Cplus=Mhat+eMI-Dlo, Bplus=(Ghat+eGI)/(gamma-lambda).
+ Lcert=Mhat-eMI-lambda-Cplus:Bplus =Dlo-(lambda+2eM)I+Cplus S^-1Cplus.
+ ForANYdyadicX, Ltrial=Dlo-(lambda+2eM)I+CX+X^TC-X^TSX<=Lcert.
+ NumericalXonlytrial; noinverseaccuracyassumed. Existingintervalouterproducts
+ proveCminus,Gplus,Ltrialpositiveviaeigenbasiscongruence andGershgorin;
+ Q^TQpositiveprovesbasisinvertible, noexactorthogonalityassumed.
+- Congruencelowerbounds14.467514386979841,.009999995465732358,
+ .007154229181949808 respectively; QGramlower>.9999999999988.
+ ThiscertifiesIFthetwoinputbudgetsTHENground>=.18, NOTtheunprovedpremises.
+- 30seededcomplexnoncommutingblockcontrolscheckWoodbury/order/inertia;
+ maxerror6.67e-15. Independentagent30casesalsoPASS. Source/auditsdistinct
+ fromexternalpeerreview. Finalstrict150.26787s,session37753exit0; nojobrunning.
+ Earlierpre-certificatepilot39.17s exited0; rerunjustifiedaddedmatrixproof.
+ Finalfigureinspected. PrimaryparalleladditionreferenceCMUdoi10.1184/R1/6479477
+ metadataverified; fullPDF403, argumentderivedexplicitlyinRESEARCH.
+- NEXTcriticalpath: certifyMoperatorerror<=1e-4 andupperfullresidualGramerror
+ <=.01 usingexactgeometry/outwardquadratureplusanalyticremainder; retain
+ frozen126M/Gandtrials. DoNOTclaimsmallquadraturerefineddifferenceprovesit.
+ Thenbroadenlevels/sectors/pointwiseheat andnaturalexteriorboundarycomparison.
+- No supportingstress, material, selfconsistentthroat, stability,newlaw or
+ 13Sep2027->12Sep2027passage. Professorfirstfeedbackalreadynotified;
+ briefunchanged, heartbeatPAUSED; noemail/monitoraction. GoalremainsACTIVE.
+- Final independent source/state/input/proof/scope audit PASS, no material defect;
+ explicitly confirms .18 conclusion conditional on unproved integrationbudgets.
+- Verification PASS:94 imports,747 links,8 historical guards,14 frozen inputs;
+ all551 prior sciencefiles and both historical suffixes byte-identical;
+ all126 source/state/input hashes verified; git diff --check clean.
+- SourceSHA9a9ec954a168fd87fdcb4f40cf2b3e82bd0fe8189c1ca86819592b8af867bf83;
+ resultSHA7002975a714c32d50a028dbee17dc8892aaab397b6d161d3d2c90d43ccee303c;
+ stateSHA3b61d965cad51a6f9476118560d659e23b2b200fed265c742e9b8d8c38831bf0.
+
 ### Enclosed spatial-complement gap and coupling pilot — increment125
 - Previous124 published5bedede7fa962c9033197ffe6be51eae620bdcd0, private/clean.
  125 began clean; preserve all546 prior scientific files. Goal remains ACTIVE.
