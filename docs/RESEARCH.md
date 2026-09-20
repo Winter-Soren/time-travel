@@ -1,3 +1,41 @@
+## Common physical Euclidean form and source test -- increment137
+
+The [new operator derivation](PHYSICAL_EUCLIDEAN_OPERATOR.md) fixes the
+physical Euclidean realization and its metric-dependent Hilbert measure.
+Every proper regulator now has the same form pencil $Q+jM^2G$. The
+[actual bridge implementation](../scripts/dihole_euclidean_form.py)
+assembles the norm of the differential action before projecting its output.
+It uses compact trial spinors that vanish at both mouth cuts; their zero
+extensions are conforming local trial functions on the sewn geometry.
+They do not approximate the full exterior at a fixed bridge-only domain.
+
+For the existing paired metric variation, the Euclidean flux density is
+$P_\epsilon=e^{-\epsilon f}P$, so a fixed-space trial is represented by
+$v_\epsilon=e^{\epsilon f/2}v$. This gives the additional derivative term
+$-if'\Sigma/2$. Ten focused checks pass in11.56 seconds in three actual
+azimuthal sectors. Direct massive forms agree with $Q+m^2G$ to2.12e-15
+relative error, and the analytic metric derivative agrees with centered
+finite differences to4.77e-10. Radial/angular quadrature sensitivity is
+below5.24e-13; these are numerical controls, not outward error enclosures.
+
+Two concrete numerical shortcuts fail this check. Squaring the projected
+first-order Dirac matrix misses7.84--8.41% of the form's matrix norm in the
+chosen trial spaces; omitting the flux-density derivative changes the
+variation by roughly its full matrix norm. These are local finite-space
+diagnostics, not errors assigned to136's separately defined absorbing pilot.
+The common-P PV identity and its finite derivative also pass, but their
+restricted-form values do not constrain the physical source sign.
+
+See [saved results](../results/dihole_euclidean_form_results.json) and
+[figure](../figures/dihole_euclidean_form_progress.png). The operator note
+records conditional spectral UV/IR error bounds and the actual necessary
+source comparison. No constants for those bounds have been evaluated.
+Next: extend this same physical form to globally conforming sewn trials or
+a controlled exterior reduction, evaluate the fixed-M response with
+remainders, then use136's local subtraction and regulator removal.
+A fixed-cut bridge Dirichlet limit is not that calculation. No new law,
+stable medium or13September2027-to-12September2027 passage is established.
+
 # Reproduction and coupled-model iterations
 
 ## Complete finite angular multiplets and explicit action reference — increment136

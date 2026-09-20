@@ -58,6 +58,48 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Common physical Euclidean form and paired derivative -- increment137
+- Previous136 PROGRESS: bfeba81ed0b5b23f235d65770a869376505cbb5b was clean.
+ Import/reproduction COMPLETE; full active goal remains unachieved.
+- NEW PHYSICAL_EUCLIDEAN_OPERATOR.md constructs physical Euclidean D,
+ positive P=D^dagger D, complete geometry/fibre domains, common proper
+ shifts P+jM^2, and the relation to physical Hamiltonian determinants.
+ Keep136's explicit heat/zeta action reference. No point-split rematching.
+- Constructive flux form q=norm(P^-1/2[i*kappa*W+T4]v)^2, norm=int P|v|^2.
+ Paired variation requires v_e=exp(e*f/2)v to fix the Euclidean Hilbert
+ space. Its derivative includes -i*f'*Sigma/2. Angular action remains in
+ q but cancels from the first derivative of the residual L.
+- NEW dihole_euclidean_form.py assembles actual differential actions before
+ projection on compact bridge H1 sine trials. All10 checks PASS11.56sec.
+ mu=-.5,.5,1.5; dimensions36,42,36; radial3, paired angular3, kappaD=.7.
+ This is a local conforming building block, NOT the full sewn exterior.
+- Mass-shift agreement<=2.12e-15, skew-Dirac<=2.35e-14; paired derivative
+ finite-difference relative error<=4.77e-10, quadrature change<=5.24e-13.
+ Common-P rational identity<=3.59e-12, PV derivative FD absolute<=3.90e-9.
+ Projection before squaring loses7.84--8.41% relative form norm on these
+ trials. Omitting f' changes derivative by~100% matrix norm. These are
+ algorithm diagnostics; neither is a bound/error estimate for136 totals.
+- Source SHA 050f817fe5c0533b0f51eb82e248e315b01387e719386ba941b9555aea2fd459; result SHA c743fce035c1484d29fd9bdf3063e8bcb6206a3b2241f11de5da149dd9089adc.
+ Figure dihole_euclidean_form_progress.png/pdf inspected. Session78106
+ TERMINAL exit0. No large pilot sweep repeated;136 scripts/results frozen.
+- Conditional local spectral UV/IR bounds are recorded in the operator note;
+ constants and threshold behavior remain unevaluated. Signed heat insertion
+ starts O(s^-2) because paired delta a0=0; no rigorous remainder inferred
+ from asymptotic coefficients alone.
+- Integration checks PASS:111 module imports,8 historical guards,14 frozen
+ pilot hashes,924 Markdown links; git diff whitespace clean. Prior136
+ source/results and historical TASK/RESEARCH suffix bytes preserved.
+- NEXT: global conforming physical trial space or controlled exterior form
+ reduction, matching exact mouth spin/bundle traces; assemble same Q,G,dQ
+ and evaluate fixed-M response with physical exterior/IR/UV error control.
+ Then subtract136 local terms and remove M. Do NOT expand the compact sine
+ basis and call its fixed-cut Dirichlet limit the physical exterior.
+- Necessary one-field source target C=-.006804484661784583*(D/lP)^2 for
+ Q_HK=(hbar*c/D)C. No physical C is established; full current/backreaction,
+ stability, chronology change remain open.13Sep2027->12Sep2027 UNPROVED.
+- User asked when new laws: no honest ETA; new calculations do not themselves
+ establish new physics. Do not promise crossing the boundary or success.
+
 ### Complete finite angular multiplets and explicit action reference — increment136
 - Previous135 PROGRESS: published36e4605e590d89be9cd0742389dd8c04286cca95;
  clean/origin verified at136 start. Import COMPLETE; goal remains ACTIVE.
