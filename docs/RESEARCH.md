@@ -1,3 +1,42 @@
+## Radial modes remain negative; finite feedback matters -- increment140
+
+The [radial calculation](RADIAL_REFINEMENT.md) increases the central-sector
+independent sine modes from3 to12 while fixing angular3/exterior48 and MD=1.
+Seven connected checks pass in100.47 seconds. Exact chiral blocks reduce
+runtime without discarding cross terms or changing the full finite response.
+The two-phase numerical frequency integrals at Nr12 are about
+$-0.0006792254$ and $-0.0006792873$ in $\hbar c/D$. The last Nr10-to12 change
+is0.659% in both phases, but earlier refinements are nonmonotone; this is
+sensitivity evidence, not an infinite radial error bound.
+
+The [finite Schur identity](../scripts/dihole_radial_schur.py) separates the
+added radial modes' direct contribution from their effect on the retained
+field. At $\kappa D=0.1$, about96.9% of the Nr3-to12 correction comes through
+that feedback. Ignoring these mixed terms would miss the main low-frequency
+correction. Independent full-minus-retained responses agree to2.56e-16.
+
+The omitted frequency tails of the stored Nr6/8/10/12 finite models are
+outward bounded below1.718e-8; all16 chiral-block certificates reproduce
+exactly after reloading the saved arrays. Middle quadrature changes below
+6.09e-13 and coupled field-quadrature changes below3.35e-13 are numerical
+checks, not continuum certificates. Only the central azimuthal sector is
+refined here; other sectors remain at139. Physical exterior/axis/angular/IR
+limits and regulator removal remain unresolved.
+
+See [driver](../scripts/dihole_radial_refinement.py),
+[results](../results/dihole_radial_refinement_results.json),
+[state](../data/dihole_radial_refinement_state.npz), and
+[figure](../figures/dihole_radial_refinement_progress.png).
+Next is one exterior-only feedback challenge: extend the trial fields beyond
+current axial support while holding the radial12 bridge space fixed. The new
+fields vanish near the mouths and the metric variation, so they contribute
+through coupling alone. Compare the full-frequency correction with the last
+radial change, approximately4.45e-6; a larger effect prioritizes exterior
+completion. A smaller effect only passes this particular challenge.
+
+There is no new physical law, obtainable supporting medium, stable passage,
+or demonstrated13September2027-to12September2027 travel.
+
 ## Independent bridge modes identify the next dominant error -- increment139
 
 The [coupled interior-field calculation](INDEPENDENT_BRIDGE_FIELDS.md) now

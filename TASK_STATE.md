@@ -58,6 +58,62 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Radial enrichment and coupled-mode accounting -- increment140
+- Previous139 PROGRESS: published d3518c878f8ac6c11f66c5b53eddabe9dee45e66;
+  tracked tree clean at start; three140 sources carried forward untracked.
+  Import COMPLETE; original full goal remains ACTIVE, unachieved.
+- NEW dihole_radial_stream.py reuses frozen139 Nr=1 fields in radial slices;
+  independent compact modes up toNr12 without full high-order point arrays.
+  Worker8checksPASS: pointwise <=3.46e-16, summed forms <=5.52e-16;
+  unchanged global/scalar arrays bitwise. No source edit during production.
+- NEW dihole_radial_refinement.py fixes mu=.5, angular3/exterior48 and MD=1;
+  one216-dimensional raw form perphase gives nested Nr=3,4,6,8,10,12.
+  Exact zero cross-chirality blocks and exact beta pairing verified;
+  independent108-dimensional chiral blocks agree with full responses
+  to5.04e-16. Both blocks enter the positive-frequency integral once/pi.
+- All7connectedchecks PASS100.47sec. Session13027 TERMINAL exit0.
+  Global weak skew<=5.47e-13;139 Nr3 recovered<=4.17e-10 relative.
+  Coupled order64->80 and exterior24->32 changes: Q3.35e-13,
+  G4.68e-14,dQ2.22e-13; selected fibre change1.13e-13.
+- Full numerical frequency integrals0..160, phase0: Nr6 -.000594020778255,
+  Nr8 -.000645824669113,Nr10 -.000674777829325,Nr12 -.000679225419487.
+  Phasepi Nr12 -.000679287321149. Units hbar*c/D, finite MD1.
+  Nr10->12 change .65912%,.65933%; earlier progression nonmonotone.
+  These differences are NOT infinite radial remainder bounds.
+- Outward frequency tails of all saved Nr6/8/10/12 dyadic blocks combined
+  <=1.718e-8 perphase; numerical middle16->24 changes<=6.09e-13.
+  All16 stored block certificates reloaded and reproduced EXACTLY;
+  source/input/baseline/state hashes authenticated, session19750 exit0.
+  Geometry/whitening, numerical middle and physical continuum errors
+  remain outside these finite-matrix certificates.
+- NEW dihole_radial_schur.py supplies exact finite added-mode identity
+  with every j*M^2*G_LH cross term. Worker5checksPASS; production full-minus-
+  retained identity error<=2.56e-16. At k=.1 phase0, Nr3->12 direct high
+  -2.69081733e-5, feedback -8.36207757e-4: about96.9% via feedback.
+  At k=.7 direct -3.83447641e-6, feedback -1.70451487e-6.
+  This accounts for added finite modes; it does not bound omitted modes.
+- NEW docs/RADIAL_REFINEMENT.md and figures/dihole_radial_refinement_progress
+  (.png/.pdf); current navigation updated. Historical139-and-earlier text
+  preserved byte-for-byte. No changed frozen139 or older source/results.
+- Final layout verification PASS:119 module imports,8 historical source
+  guards,14 frozen pilot hashes,994 Markdown links, operator identity.
+  Git diff --check passes; figure inspected. All139-and-earlier TASK_STATE
+  and RESEARCH bytes remain identical to parent HEAD.
+- Frozen140 driver SOURCE 15f7e6dd414b87365cf3d1ef3a14ef3558201cc07c851d38853e26a601f15a1c
+  RESULT 932960a70fb70ccb8ef7a863e7abff6b0a26a1e05cfd5b6e08e5bd60129bfe99
+  STATE e464a54f41fb9bd4cff98a2c96ecdf9fa76148b67d20d459c154bfd1143ea332.
+- NEXT DECISIVE TASK: one exterior-only compact extension beyond the current
+  z support, overlapping existing exteriorfields but vanishing near cuts;
+  hold bridge radial12/angular3,mu=.5,MD1 and phase fixed. Reuse140 rawstate,
+  assemble only new exterior/cross blocks, preserve paired chiral fields.
+  Their metric derivative is zero, so sourcechange is pure Schurfeedback.
+  Integrate DeltaC_ext and compare to last radial change4.45e-6: iflarger,
+  prioritize physical exterior completion; ifsmaller, record this single
+  challenge only. Neither outcome bounds the full exterior continuum.
+- No renormalized physical source, supporting material, stability, new
+  physical law, or13Sep2027->12Sep2027 passage established. The negative
+  finite response alone supplies none of these. No discovery ETA is justified.
+
 ### Independent bridge modes and finite-matrix frequency tails -- increment139
 - Previous138 PROGRESS: published326b3223cd188baadd45dd581a44ca28d2bd06dd;
  clean at start. Import COMPLETE; original full goal remains ACTIVE.

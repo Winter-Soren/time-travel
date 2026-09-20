@@ -1,5 +1,7 @@
 # Directory guide
 
+Current increment140: [radial refinement report](docs/RADIAL_REFINEMENT.md), [driver](scripts/dihole_radial_refinement.py), [saved results](results/dihole_radial_refinement_results.json), and [visual progress](figures/dihole_radial_refinement_progress.png). Earlier evidence remains in place.
+
 Files are grouped by purpose. Run commands from the project root and consult
 the reports before starting potentially expensive calculations. Every chat
 session must follow [AGENTS.md](AGENTS.md) when creating or relocating files.
