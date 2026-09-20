@@ -58,6 +58,50 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Global sewn physical form and unresolved basis sensitivity -- increment138
+- Previous137 PROGRESS: published99aa6eb18a53df225150bb3909e3bccfe7aecf5a;
+ clean at start. Import COMPLETE, full goal remains ACTIVE/unachieved.
+- NEW GLOBAL_SEWN_FORM.md gives exact two-mouth lifts of compact exterior
+ fields, lower reflection, spin rotations, e^(-i phase) right trace and
+ Green cancellation. Piecewise global H1 form trials, not automatically
+ second-order operator-domain vectors; do not ignore seam derivative jumps.
+- NEW dihole_sewn_quadrature.py integrates the exact circular exterior in
+ rectangle rho[.005,.5],z[-.85,.85]. Positive drho*dz weights; root supplies
+ rho. Six moment/geometry checks PASS; order24 uses18,432 nodes.
+- NEW dihole_sewn_form.py reuses137 assemble over exterior+bridge. Tensor
+ Legendre double-zero bumps,24 full-component global trials per sector;
+ exact linear trace lift. Three mu=-.5,.5,1.5 and phases0,pi; MD1,33kappa
+ .01..10. Q and dQ exactly quadratic in kappa; reuse three coefficient
+ matrices. Common-P rational evaluation; fullDirac normalization1/pi.
+- Nine connected checks PASS71.35sec, including six geometric controls.
+ Session73693 TERMINAL exit0. No background calculation remains.
+ Global skew<=1.25e-12 incl48trial control, massshift<=1.09e-13, metricFD
+ <=1.05e-10. Higherquadrature Qchange1.23e-12,dQchange8.19e-10.
+- Important: mu.5 finite-window response24->48trials changes by4.169x,
+ 4.423x forphases0,pi. Values24[1.9059213387810255e-6,1.8319366359477733e-6];
+ 48[7.946254442718241e-6,8.102834444067308e-6]hbar*c/D.
+ Three-sector24totals[3.9604208733392825e-6,3.832449079696393e-6].
+ 48trial frequency sensitivity17->33nodes1.0043%,.9775%. No physical sign.
+- Initial full subtractionFD lost compact derivative under large constant
+ exterior; failedthreshold2e-8 witherror3.61e-7. Exactfailedsource/result
+ preserved as provenance/dihole_sewn_form_pre_fd_local.py and
+ results/dihole_sewn_form_pre_fd_local_results.json. Differencing bridge
+ alone is the identical full variation because exteriorf=fp=0; passes
+ unchangedthreshold. Originalerror retained. Allphysicsrecords unchanged.
+- Source ee043fdd42b7ee5efde627c1e53ce7b18f238c81fc31e354feb12662ce9a4f0f; result 6d25b12113e4123bd389f18385755f74dd1fedb1d578f25141b2cfa935561158.
+ Figure dihole_sewn_form_progress.png/pdf inspected. Exacthistorical137
+ andolder source/results unmodified; source/input hashes verified.
+- Integration verification PASS:113 imports,8 historical guards,14 frozen
+ pilot hashes,946 Markdown links; whitespace check clean.
+- NEXT: independent zero-trace bridge enrichment together with global lift
+ on compatible split angular quadrature (reuse137 compact family), then
+ exterior/axis expansion and spectral/IR/frequency remainder control.
+ The linear lift alone constrains bridge fields artificially; simply
+ increasing exterior polynomial count cannot exhaust full sewn form.
+ Keep136 local action reference; do not subtractlargeMcounterterms atfixed
+ basis or combine138finitevalueswith136absorbingpilot. No supporting
+ stress/stablemedium/newlaw;13Sep2027->12Sep2027 UNPROVED.
+
 ### Common physical Euclidean form and paired derivative -- increment137
 - Previous136 PROGRESS: bfeba81ed0b5b23f235d65770a869376505cbb5b was clean.
  Import/reproduction COMPLETE; full active goal remains unachieved.

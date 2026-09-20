@@ -1,3 +1,36 @@
+## Globally sewn physical trials and basis sensitivity -- increment138
+
+The [new connected form](GLOBAL_SEWN_FORM.md) extends quantum trial fields
+through both exact mouth cuts and into the actual exterior. Exact spin and
+phase traces cancel the Green boundary terms. The
+[calculation](../scripts/dihole_sewn_form.py) reuses137's common physical
+Euclidean form and its fixed-measure derivative; the
+[round-cut quadrature](../scripts/dihole_sewn_quadrature.py) replaces the
+previous polygonal absorbing construction for this variational pilot.
+Nine connected checks pass, including six geometry checks, in71.35 seconds.
+
+The result changes the next priority: doubling the global trial dimension
+from24 to48 changes the central-sector finite-window response by factors
+4.17 and4.42 at the two handle phases. The larger values are about
+$7.95\times10^{-6}$ and $8.10\times10^{-6}$ in $\hbar c/D$, with roughly1%
+frequency-grid sensitivity. These are finite common-form responses, not a
+renormalized physical sign or controlled source approximation. Accurate
+sewing and quadrature do not compensate for missing field patterns.
+
+One initial derivative test failed from cancellation when subtracting a
+large unchanged exterior matrix. The unchanged strict tolerance passes
+when finite-differencing only the compact varying bridge contribution;
+all physical response records are unchanged. Exact failed source/results
+are preserved and linked in the derivation. Higher quadrature changes the
+form by1.23e-12, while basis enrichment changes the response several-fold.
+
+See [results](../results/dihole_sewn_form_results.json) and
+[figure](../figures/dihole_sewn_form_progress.png). Next: add independent
+zero-trace bridge fields to the exact global lift, then control the
+physical exterior/axis and spectral remainders before136's subtraction
+and regulator removal. No new law, stable medium or backward passage is
+established;13September2027-to-12September2027 remains unproved.
+
 ## Common physical Euclidean form and source test -- increment137
 
 The [new operator derivation](PHYSICAL_EUCLIDEAN_OPERATOR.md) fixes the
