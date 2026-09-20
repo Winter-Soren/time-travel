@@ -1,5 +1,204 @@
 # Reproduction and coupled-model iterations
 
+## Actual bridge propagation and a specified source variation — increment130
+
+The previous increment supplied a compatible prescribed geometry and its
+required source. This step calculates the quantum propagation in that
+geometry, rather than refining the old artificial-box spectrum.
+[Central-cylinder driver](../scripts/dihole_cylinder_transfer.py),
+[results](../results/dihole_cylinder_transfer_results.json), and
+[figure](../figures/dihole_cylinder_transfer_progress.png).
+
+### Actual zero profile and coupled central attenuation
+
+Use q=1, mu=1/2 and R0=.025 D. The exact regular positive-chirality
+transverse zero mode in the flux-canonical measure dtheta is
+
+$$
+f_0(\theta)=C\exp\!\int^\theta
+ \frac{NP(\mu-qa)}{\sin t}\,dt.
+$$
+
+The driver factors out the known round sqrt(sin(theta)) endpoint profile
+and quadratures only its smooth correction. It reuses the existing regular
+monopole basis for the finite coupled calculation; that basis does not
+replace the actual N, P or magnetic connection by round coefficients.
+The computed optical moments are
+
+$$
+\langle W\rangle_0=82.93757936080308,\quad
+\operatorname{Var}_0(W)=0.0016508279148814747,\qquad W=P/N.
+$$
+
+Thus the exact zero mode has imaginary-frequency leakage norm
+kappa sqrt(Var(W))=0.040630381672850116 kappa. This is nonzero;
+its size relative to the mean optical factor is about 0.0490%.
+The moment quadrature changes by 1.43e-14 and 2.78e-15 respectively
+between the two tested orders. These are sensitivities, not enclosures.
+
+For propagation, diagonalize the finite Hermitian generator
+K_kappa=-i sigma3 T-kappa sigma3 W, retaining both chiralities and the
+nonzero angular modes. The q=1 zero branch has scalar estimate
+lambda0=-kappa <W>0. With 20 regular pairs and the chiral zero, its positive
+attenuation rate differs from kappa <W>0 by -8.5014e-8/D at kappa=.1/D
+and -0.00228845/D at kappa=3/D. Over coordinate length .1 D these change
+the log amplitude by +8.5014e-9 and +0.000228845 respectively.
+The 12-to-20-pair rate change is below 2.85e-13/D at the sampled frequencies.
+Eight focused controls pass, including regular-basis normalization,
+Hermiticity and agreement between the directly integrated zero profile
+and its finite spectral projection. No continuum eigenvalue enclosure or
+full finite-segment scattering statement follows from these numbers alone.
+
+### Conditional control of this propagation approximation
+
+The following elementary Feshbach estimate explains the small correction
+without treating a local leakage norm as a stress error. Put P0=|f0><f0|,
+Q0=I-P0, h=Q0 Wf0, a=-kappa <W>0 and A=Q0 K_kappa Q0. The exact projected
+resolvent, wherever defined, is
+
+$$
+P_0(K_\kappa-z)^{-1}P_0=
+[a-z-\kappa^2\langle h,(A-z)^{-1}h\rangle]^{-1}P_0.
+$$
+
+Suppose the continuum transverse operator has a nonzero gap Delta and
+0<wmin<=W<=wmax, with kappa wmax<Delta/2. Then the isolated small
+longitudinal eigenvalue lies in [-kappa wmax,-kappa wmin]. Set
+ delta=Delta-2 kappa wmax. Since the unperturbed complement inverse flips
+chirality, its quadratic expectation in h vanishes. The resolvent identity
+therefore gives the stronger cubic estimate
+
+$$
+|\lambda-a|\le
+\frac{2\kappa^3w_{\max}\operatorname{Var}_0(W)}
+ {\Delta(\Delta-2\kappa w_{\max})}.
+$$
+
+The eigenvector's complement relative to its unit P0 component has norm
+at most kappa sqrt(Var(W))/delta. A chiral Schur complement gives
+lambda>=a, consistent with the numerical attenuation decrease. This
+controls one dressed decaying branch, not an unrestricted transfer initial
+value problem: growing branches invalidate that shortcut. The numerical
+transverse gap, about56.5733/D, is not a certified continuum premise.
+The kappa=3/D example is outside this small-frequency condition. No extra
+gap-certification campaign is started, because the next required observable
+is the complete finite bridge response and its variation.
+
+### A source variation with fixed exterior cuts
+
+Choose f(s)=S'(u/delta)/2 in each collar, with delta=.05 D and the same flat
+step S as129. Set f=0 on the central segment and outside the collars. Under
+
+$$
+N_\epsilon=e^{\epsilon f}N,\qquad
+(h_{ss})_\epsilon=e^{-2\epsilon f}h_{ss},
+$$
+
+hold h_theta_theta, h_phi_phi and the magnetic connection fixed. This is a
+smooth compact metric variation, not a change within the tied N-dependent
+ansatz for every spatial component. Its energy derivative probes
+integral N sqrt(h) f(rho+p_s). In flux-canonical propagation the exact
+coefficient change is simply
+
+$$
+W_\epsilon=e^{-2\epsilon f}W,\qquad
+T_\epsilon=e^{-\epsilon f}T.
+$$
+
+For the geometric extra source computed129, the required weighted target is
+
+$$
+\int fN\sqrt h\,Q_{kk}\,d^3x=-0.17101535219941505\,D,
+\qquad Q_{kk}=8\pi G T_{{\rm extra},kk}.
+$$
+
+Divide by8pi G to obtain the required matter energy derivative in c=1
+units. The coarse/fine quadrature change is1.2e-15 D, not an error enclosure.
+A boundary-response derivative in this direction is an input to a vacuum
+calculation; it is not itself the renormalized stress. Absolute local terms,
+a common global state and the required Maxwell current remain necessary.
+
+### Full two-collar characteristic response and its metric derivative
+
+[Bridge-scattering driver](../scripts/dihole_bridge_scattering.py),
+[results including matrices](../results/dihole_bridge_scattering_results.json),
+and [figure](../figures/dihole_bridge_scattering_progress.png).
+The calculation now propagates through both actual collars and the central
+segment, on -.1 D<=s<=.1 D. It retains one q=1, mu=1/2 Weyl block.
+The complete Dirac field requires the opposite block as well.
+
+The angular basis stays fixed along s. The half-density and flux maps give
+[-i J partial_s+T(s)]w=E W(s)w with no omitted moving-basis derivative.
+Write its generator as [[A,B],[C,D]], where A=i E Wplus, D=-i E Wminus,
+B=-i X and C=i X^dagger. A stable four-block embedding evolves the
+characteristic scattering map, without forming a growing transfer matrix:
+
+$$
+R_r'=AR_r+B-R_rCR_r-R_rD,\quad
+T_{lr}'=(A-R_rC)T_{lr},\quad
+T_{rl}'=-T_{rl}(CR_r+D),\quad
+R_l'=-T_{rl}CT_{lr}.
+$$
+
+Start with Rl=Rr=0 and identity transmissions. The output ordering is
+[b_left,a_right], input ordering [a_left,b_right]. There are nmax+1 plus
+and nmax minus basis states. The one chiral zero input comes from the
+actual cut operator's kernel; no nonexistent opposite incoming zero
+is added to this Weyl block.
+
+| kappa D | Cut zero-to-zero transmission magnitude, nmax8 | Reflected characteristic norm |
+| --- | --- | --- |
+| 0 | 0.999999978256 | 0.000147462754 |
+| .1 | 0.236530016933 | 0.000209039558 |
+| 1 | 5.48110875617e-7 | 0.000223136670 |
+
+These imaginary-frequency amplitudes are not probabilities. The .1/D
+central-only dressed amplitude is about .436322; including both collars
+produces the displayed .236530 full cut response. The core approximation
+alone therefore does not supply the bridge response.
+
+Eleven focused checks pass. Real-frequency E=.1/D flux conservation holds
+to7.84e-12; the existing independent constant-mode benchmark agrees within
+2.57e-13. A tighter ODE changes the matrix by at most5.25e-12 at kappa=.1/D.
+Increasing nmax4 to8 changes the monitored zero-transmission amplitude by
+at most1.88e-12, but the entire shared matrix block changes by up to5.64e-8
+at kappa=1/D. These separate sensitivities must not be conflated or promoted
+to continuum certificates. The calculation takes about5.6 seconds, excluding
+plotting and startup.
+
+For the compact paired variation above, a centered epsilon=1e-4 difference
+at kappa=.1/D and nmax8 gives
+
+$$
+\partial_\epsilon t_{00}\ \mathrel{\simeq}\ 0.1520639825553092.
+$$
+
+The matrix-difference signal is3.04e-5, well above the tested ODE sensitivity.
+Only one finite-difference step was used; its truncation error is not enclosed.
+The saved driver reproduces the same geometric source target to the displayed
+precision. This response derivative is now available for a vacuum determinant
+variation, but its positive sign alone establishes neither the sign nor the
+size of the required renormalized energy derivative.
+
+### Next physical dependency
+
+Connect this finite-cut response and its variation to the ACTUAL balanced
+curved exterior, with consistent canonical trace normalization and spin/gauge
+sewing. The old imaginary_exterior/curved_exterior_closure calculation uses
+a different flat exterior and lapse-one round cuts, so its return matrix
+cannot be substituted here. The certified compact exterior probe120 is also
+not a complete finite-cut return map. These are reusable implementation
+components, not missing physical data that can be assumed away.
+
+A definite global spin holonomy, spectral state and common local subtraction
+must accompany the connected determinant. Its full frequency/angular limits,
+absolute local terms and Maxwell current are still required before comparing
+with the geometric source. Do not return to unrelated box refinement or
+certify the conditional central-gap estimate unless an error budget in this
+source calculation specifically requires it. No stable physical support,
+new law, chronology shift, or13 September2027 to12 September2027 passage
+has been established.
+
 ## Phase-sensitive return bound and a common support geometry — increment129
 
 [Return-force calculation](../scripts/quantum_return_support.py),

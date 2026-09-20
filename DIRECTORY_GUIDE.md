@@ -34,6 +34,8 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Actual two-collar quantum response and compact source variation | [driver](scripts/dihole_bridge_scattering.py), [results](results/dihole_bridge_scattering_results.json), [figure](figures/dihole_bridge_scattering_progress.png), [derivation](docs/RESEARCH.md) |
+| Actual central-cylinder zero profile and coupled propagation | [driver](scripts/dihole_cylinder_transfer.py), [results](results/dihole_cylinder_transfer_results.json), [figure](figures/dihole_cylinder_transfer_progress.png) |
 | Smooth bridge with actual cut data and required null source | [driver](scripts/dihole_stretched_collar.py), [results](results/dihole_stretched_collar_results.json), [figure](figures/dihole_stretched_collar_progress.png), [derivation](docs/RESEARCH.md) |
 | Phase-sensitive return-force bound and support sensitivity | [driver](scripts/quantum_return_support.py), [results](results/quantum_return_support_results.json), [figure](figures/quantum_return_support_progress.png), [assumptions](docs/RESEARCH.md) |
 | Certified central Dirichlet spectral level | [driver](scripts/dihole_sine_certificate.py), [analytic remainder](scripts/dihole_sine_remainder.py), [results](results/dihole_sine_certificate_results.json), [saved matrices](data/dihole_sine_certificate_state.npz), [figure](figures/dihole_sine_certificate_progress.png), [proof and assumptions](docs/RESEARCH.md) |

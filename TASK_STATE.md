@@ -58,6 +58,43 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Actual bridge scattering and compact source response — increment130
+- Previous129 PROGRESS: published a4f64072015bbd1ac0c180da6504b341ade452a5;
+ origin matched, private/clean verified. Original import remains complete.
+- NEW dihole_cylinder_transfer.py reuses actual129 geometry and existing
+ regular monopole basis. q1/mu.5 exact zero moments: <W>=82.93757936080308,
+ Var(W)=.0016508279148814747. Nonzero-frequency modes are coupled;
+ at kappa.1/D central log attenuation changes8.50e-9 over coordinate .1D.
+ Eight controls PASS, 8/12/20 basis comparison; no continuum certificate.
+- NEW dihole_bridge_scattering.py computes full two-collar + central cut
+ response via stable matrix embedding, one Weyl block, fixed regular basis.
+ nmax8 |t00| for kappa0/.1/1: .999999978256/.236530016933/5.48110875617e-7.
+ Imaginary-frequency amplitudes are not probabilities or physical return.
+ Eleven controls PASS; n4->8 zero amplitude change<=1.88e-12 but whole shared
+ matrix change up to5.64e-8. Real-E flux error7.84e-12, ODE change5.25e-12.
+- Compact paired variation N_e=e^(e f)N, hss_e=e^(-2e f)hss, angular metric
+ and A fixed; f=S'(u/.05)/2 on both collars. Exact W_e=e^(-2e f)W,
+ T_e=e^(-e f)T. At kappa.1/D centered eps1e-4 dt00/de=.1520639825553092.
+ Matching weighted geometric target=-.171015352199415 D; divide8piG for
+ required matter energy derivative. Boundary derivative is NOT vacuum stress.
+- Independent Feshbach derivation bounds one central branch conditionally
+ using a continuum gap; the numerical gap is not that premise. Do not start
+ another gap-certification campaign without source-observable need.
+- NEXT: actual curved exterior boundary response at these finite cuts,
+ correctly normalized/sewn to this bridge and its compact variation, then
+ global state/holonomy + renormalized source/current. The old flat exterior
+ matrix and120 compact probe do not supply this return map. Reuse components,
+ do not silently reuse their incompatible physical boundary assumptions.
+- Source/result SHA256, frozen after successful runs:
+ cylinder source 2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a;
+ cylinder result 359eb299355fcccb30c6da9ff628ebff3e2417ab639a4113335f8446985e613a;
+ bridge source f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114;
+ bridge result 9ec5fd656e05fd0f39dd46efbff0723fc8fce03a181ae65cf3e9bbbd9243905a.
+- All jobs/agent work terminal. Figures inspected. No old scientific file
+ modified;129-and-older TASK/RESEARCH suffixes retained byte-identically.
+ Goal ACTIVE; physical source, formation, stability and backward passage
+ unproved. Professor brief/paused heartbeat unchanged; no email sent.
+
 ### Phase-sensitive force and compatible bridge source — increment129
 - Previous128 published b6cb5512028819ba30a9de3389706b54ae8f6a1b;
  origin matched/private/clean. No old scientific driver or result modified.

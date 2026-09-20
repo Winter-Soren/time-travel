@@ -1,0 +1,283 @@
+{
+  "passed": true,
+  "tests": {
+    "normalized_zero": true,
+    "zero_moment_refinement": true,
+    "regular_basis_gram": true,
+    "hermitian_generator": true,
+    "zero_frequency_mode": true,
+    "exact_profile_vs_projection": true,
+    "attenuation_refinement": true,
+    "inputs_preserved": true
+  },
+  "q": 1,
+  "mu": 0.5,
+  "cylinder_radius": 0.025,
+  "displayed_coordinate_length": 0.1,
+  "moments": {
+    "mean_W": 82.93757936080308,
+    "variance_W": 0.0016508279148814747,
+    "rms_leakage_per_kappa": 0.040630381672850116
+  },
+  "runs": [
+    {
+      "size": 8,
+      "quadrature_order": 64,
+      "rows": [
+        {
+          "kappa": 0.0,
+          "exponent_per_coordinate_length": -0.0,
+          "overlap_with_zero": 1.0,
+          "projected_residual": 2.424221186901007e-17,
+          "hermiticity_error": 0.0,
+          "scalar_exponent": 0.0,
+          "exponent_correction": -0.0,
+          "log_amplitude_correction_length_point1": 0.0
+        },
+        {
+          "kappa": 0.01,
+          "exponent_per_coordinate_length": 0.8293757935229564,
+          "overlap_with_zero": 0.9999999999487048,
+          "projected_residual": 6.006307186241838e-14,
+          "hermiticity_error": 7.930938891731465e-17,
+          "scalar_exponent": 0.8293757936080308,
+          "exponent_correction": -8.507439197558142e-11,
+          "log_amplitude_correction_length_point1": 8.507439197558142e-12
+        },
+        {
+          "kappa": 0.03,
+          "exponent_per_coordinate_length": 2.488127378528816,
+          "overlap_with_zero": 0.999999999535176,
+          "projected_residual": 1.1013413193121057e-13,
+          "hermiticity_error": 2.3787395664331967e-16,
+          "scalar_exponent": 2.4881273808240922,
+          "exponent_correction": -2.295276413377678e-09,
+          "log_amplitude_correction_length_point1": 2.2952764133776784e-10
+        },
+        {
+          "kappa": 0.1,
+          "exponent_per_coordinate_length": 8.293757851066118,
+          "overlap_with_zero": 0.9999999944352249,
+          "projected_residual": 1.1191050685965423e-13,
+          "hermiticity_error": 7.93202309390395e-16,
+          "scalar_exponent": 8.29375793608031,
+          "exponent_correction": -8.501419124229415e-08,
+          "log_amplitude_correction_length_point1": 8.501419124229415e-09
+        },
+        {
+          "kappa": 0.3,
+          "exponent_per_coordinate_length": 24.88127151291735,
+          "overlap_with_zero": 0.9999999182651481,
+          "projected_residual": 6.039645167583651e-14,
+          "hermiticity_error": 2.3783058855642025e-15,
+          "scalar_exponent": 24.881273808240923,
+          "exponent_correction": -2.2953235720990506e-06,
+          "log_amplitude_correction_length_point1": 2.2953235720990508e-07
+        },
+        {
+          "kappa": 1.0,
+          "exponent_per_coordinate_length": 82.93749437289506,
+          "overlap_with_zero": 0.9999950935591639,
+          "projected_residual": 1.5632918082954156e-13,
+          "hermiticity_error": 7.931155732165962e-15,
+          "scalar_exponent": 82.93757936080308,
+          "exponent_correction": -8.498790802491385e-05,
+          "log_amplitude_correction_length_point1": 8.498790802491386e-06
+        },
+        {
+          "kappa": 3.0,
+          "exponent_per_coordinate_length": 248.81044963276884,
+          "overlap_with_zero": 0.9996412964720238,
+          "projected_residual": 2.894111947112859e-14,
+          "hermiticity_error": 2.3800406090401793e-14,
+          "scalar_exponent": 248.81273808240925,
+          "exponent_correction": -0.0022884496404174115,
+          "log_amplitude_correction_length_point1": 0.00022884496404174115
+        }
+      ],
+      "gram_error": 1.1435297153639112e-14,
+      "projected_zero_W": 82.93757936080311,
+      "projected_zero_variance": 0.0016508279148821164,
+      "projected_first_nonzero_transverse_abs": 56.57327237481587
+    },
+    {
+      "size": 12,
+      "quadrature_order": 96,
+      "rows": [
+        {
+          "kappa": 0.0,
+          "exponent_per_coordinate_length": -1.7053025658242404e-13,
+          "overlap_with_zero": 1.0,
+          "projected_residual": 1.7053025708634342e-13,
+          "hermiticity_error": 0.0,
+          "scalar_exponent": 0.0,
+          "exponent_correction": -1.7053025658242404e-13,
+          "log_amplitude_correction_length_point1": 1.7053025658242407e-14
+        },
+        {
+          "kappa": 0.01,
+          "exponent_per_coordinate_length": 0.8293757935229564,
+          "overlap_with_zero": 0.9999999999487048,
+          "projected_residual": 5.97300009795856e-14,
+          "hermiticity_error": 5.795060611935021e-17,
+          "scalar_exponent": 0.8293757936080308,
+          "exponent_correction": -8.507439197558142e-11,
+          "log_amplitude_correction_length_point1": 8.507439197558142e-12
+        },
+        {
+          "kappa": 0.03,
+          "exponent_per_coordinate_length": 2.4881273785285316,
+          "overlap_with_zero": 0.999999999535176,
+          "projected_residual": 1.7319479528096107e-13,
+          "hermiticity_error": 1.736891880321778e-16,
+          "scalar_exponent": 2.4881273808240922,
+          "exponent_correction": -2.2955606304719822e-09,
+          "log_amplitude_correction_length_point1": 2.2955606304719824e-10
+        },
+        {
+          "kappa": 0.1,
+          "exponent_per_coordinate_length": 8.293757851066118,
+          "overlap_with_zero": 0.9999999944352249,
+          "projected_residual": 1.0835780088579584e-13,
+          "hermiticity_error": 5.793976409762536e-16,
+          "scalar_exponent": 8.29375793608031,
+          "exponent_correction": -8.501419124229415e-08,
+          "log_amplitude_correction_length_point1": 8.501419124229415e-09
+        },
+        {
+          "kappa": 0.3,
+          "exponent_per_coordinate_length": 24.881271512917408,
+          "overlap_with_zero": 0.9999999182651481,
+          "projected_residual": 3.563079608641947e-15,
+          "hermiticity_error": 1.7381929229287607e-15,
+          "scalar_exponent": 24.881273808240923,
+          "exponent_correction": -2.2953235152556317e-06,
+          "log_amplitude_correction_length_point1": 2.295323515255632e-07
+        },
+        {
+          "kappa": 1.0,
+          "exponent_per_coordinate_length": 82.93749437289512,
+          "overlap_with_zero": 0.9999950935591639,
+          "projected_residual": 7.108513505231875e-14,
+          "hermiticity_error": 5.793976409762536e-15,
+          "scalar_exponent": 82.93757936080308,
+          "exponent_correction": -8.498790796807043e-05,
+          "log_amplitude_correction_length_point1": 8.498790796807043e-06
+        },
+        {
+          "kappa": 3.0,
+          "exponent_per_coordinate_length": 248.81044963276827,
+          "overlap_with_zero": 0.9996412964720234,
+          "projected_residual": 4.269166038730878e-13,
+          "hermiticity_error": 1.7388868123191514e-14,
+          "scalar_exponent": 248.81273808240925,
+          "exponent_correction": -0.0022884496409858457,
+          "log_amplitude_correction_length_point1": 0.00022884496409858457
+        }
+      ],
+      "gram_error": 5.218048215738236e-14,
+      "projected_zero_W": 82.93757936080308,
+      "projected_zero_variance": 0.0016508279148800791,
+      "projected_first_nonzero_transverse_abs": 56.57327237481576
+    },
+    {
+      "size": 20,
+      "quadrature_order": 160,
+      "rows": [
+        {
+          "kappa": 0.0,
+          "exponent_per_coordinate_length": -4.547473508864641e-13,
+          "overlap_with_zero": 1.0,
+          "projected_residual": 4.547473518860169e-13,
+          "hermiticity_error": 0.0,
+          "scalar_exponent": 0.0,
+          "exponent_correction": -4.547473508864641e-13,
+          "log_amplitude_correction_length_point1": 4.5474735088646414e-14
+        },
+        {
+          "kappa": 0.01,
+          "exponent_per_coordinate_length": 0.8293757935228996,
+          "overlap_with_zero": 0.9999999999487048,
+          "projected_residual": 1.1668444560792554e-13,
+          "hermiticity_error": 7.106945240642482e-17,
+          "scalar_exponent": 0.8293757936080308,
+          "exponent_correction": -8.513123539444223e-11,
+          "log_amplitude_correction_length_point1": 8.513123539444224e-12
+        },
+        {
+          "kappa": 0.03,
+          "exponent_per_coordinate_length": 2.4881273785284748,
+          "overlap_with_zero": 0.999999999535176,
+          "projected_residual": 2.300382176719789e-13,
+          "hermiticity_error": 2.1316304095659634e-16,
+          "scalar_exponent": 2.4881273808240922,
+          "exponent_correction": -2.295617473890843e-09,
+          "log_amplitude_correction_length_point1": 2.2956174738908432e-10
+        },
+        {
+          "kappa": 0.1,
+          "exponent_per_coordinate_length": 8.293757851066061,
+          "overlap_with_zero": 0.9999999944352249,
+          "projected_residual": 1.669775968418758e-13,
+          "hermiticity_error": 7.108029442814967e-16,
+          "scalar_exponent": 8.29375793608031,
+          "exponent_correction": -8.501424808571301e-08,
+          "log_amplitude_correction_length_point1": 8.501424808571301e-09
+        },
+        {
+          "kappa": 0.3,
+          "exponent_per_coordinate_length": 24.881271512917124,
+          "overlap_with_zero": 0.9999999182651481,
+          "projected_residual": 2.842174215105151e-13,
+          "hermiticity_error": 2.131975151975496e-15,
+          "scalar_exponent": 24.881273808240923,
+          "exponent_correction": -2.295323799472726e-06,
+          "log_amplitude_correction_length_point1": 2.2953237994727262e-07
+        },
+        {
+          "kappa": 1.0,
+          "exponent_per_coordinate_length": 82.93749437289512,
+          "overlap_with_zero": 0.9999950935591642,
+          "projected_residual": 9.952917346296954e-14,
+          "hermiticity_error": 7.105427357601002e-15,
+          "scalar_exponent": 82.93757936080308,
+          "exponent_correction": -8.498790796807043e-05,
+          "log_amplitude_correction_length_point1": 8.498790796807043e-06
+        },
+        {
+          "kappa": 3.0,
+          "exponent_per_coordinate_length": 248.81044963276838,
+          "overlap_with_zero": 0.9996412964720243,
+          "projected_residual": 3.711328039007084e-13,
+          "hermiticity_error": 2.1316282072803006e-14,
+          "scalar_exponent": 248.81273808240925,
+          "exponent_correction": -0.002288449640872159,
+          "log_amplitude_correction_length_point1": 0.0002288449640872159
+        }
+      ],
+      "gram_error": 2.1405099914773018e-13,
+      "projected_zero_W": 82.9375793608031,
+      "projected_zero_variance": 0.001650827914887844,
+      "projected_first_nonzero_transverse_abs": 56.57327237481593
+    }
+  ],
+  "refinement": {
+    "mean_W": 1.4210854715202004e-14,
+    "variance_W": 2.7762080828663827e-15,
+    "exponent": 2.8421709430404007e-13
+  },
+  "scope": [
+    "Actual central-cylinder coefficients; q=1,mu=1/2 only.",
+    "Zero moments integrate the exact first-order profile; errors are numerical sensitivity.",
+    "Nonzero-frequency eigenvalues use finite regular angular projections, not continuum enclosures.",
+    "One attenuation branch is not the finite-segment scattering matrix: endpoint mode matching is missing.",
+    "No collars, physical exterior return, renormalized stress, current, stability or chronology solved."
+  ],
+  "source_sha256": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+  "input_sha256": {
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  }
+}
