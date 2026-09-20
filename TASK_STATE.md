@@ -21,11 +21,11 @@ fallback. Give honest confidence in checks, never promise physical success.
   project ID ee3e73e2-32df-41c5-a5bc-ad7646959ca6 was not yet a Git repository.
 - Quantum source and throat completion:
   thread01a0a614-08ee-7040-b564-0b00348cc941, hostlocal.
-  Owns QUANTUM_COMPLETION.md only; primary-source/analytic recommendation
+  Owns docs/QUANTUM_COMPLETION.md only; primary-source/analytic recommendation
   on a derived quantum source and actual returning-field geometry.
 - Receiver source feasibility and energy:
   thread01a0a614-4027-7d40-974f-757a6d0787d8, hostlocal.
-  Owns SOURCE_FEASIBILITY.md only; source radiation/energy and physical
+  Owns docs/SOURCE_FEASIBILITY.md only; source radiation/energy and physical
   feasibility, without conflating single-proton deceleration with driver cost.
 - Both verified ACTIVE by wait_threads snapshot after creation. Cursors:
   quantum e25882a8-ad85-4739-b0a5-0e3eb99543a6:8;
@@ -47,7 +47,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - User subsequently requested another same-project task for inspiration
   from Marvel comics, Steins;Gate and Rick and Morty. Created local task
   01a0a643-a35b-7663-bf14-e449a5c6dea7, hostlocal, title requested
-  Fiction-inspired time travel physics. Owns FICTION_PHYSICS.md only.
+  Fiction-inspired time travel physics. Owns docs/FICTION_PHYSICS.md only.
   Verified active by wait_threads; cursoracfcece8-5231-462a-83a7-dc188b5572d3:1.
   Scope:~six verified fictional mechanisms, primary physics comparison,
   <=two concrete candidate calculations. No coreedits/heavy simulations,
@@ -63,7 +63,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   514866c6ab5f5cb36c9f6d917b238a92c66ef65a; local/remote equal,
   private=true and clean worktree verified. Current work began from that
   clean state. Import COMPLETE; goal remains ACTIVE and unbudgeted.
-- melvin_leads.py/results:12 PASS (~2.4s), exact regular-axis Laguerre Ritz,
+- scripts/melvin_leads.py/results:12 PASS (~2.4s), exact regular-axis Laguerre Ritz,
   23 sectors mu=-.5,.5,...,21.5, both partners,160/224 plus scale1.1.
   Exact21 upperzero channels; raw numerical zeros retained. Full radial
   residual includes3 extra coefficients. Largest refined residual5.59e-11;
@@ -85,7 +85,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   transverse H=(1-2M/|z|)U_a D U_a^-1 witha=1+2M/|z|, toO(z^-2).
   Massive outgoing ratios change by1-2M*kappa/(Omega*|z|); zero direction
   is unchanged. Expansion is for boundedrho, not a uniformwholemode bound.
-- NEW dihole_axial_tail.py/results: actualN,P,A, exactcanonical trace
+- NEW scripts/dihole_axial_tail.py/results: actualN,P,A, exactcanonical trace
   w=sqrt(v)u, frequencyweight1/v and Wtrace=NP(mu-A)/rho. One angularsector
   mu=.5, kappa=.2,2/3 massivepairs plus exactupperzero, rectangularlead.
   Actual ODE propagation toz4,8,16,32; distantstarts32/64/128 and one
@@ -106,7 +106,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Two->three-pair commonblock change .00067382 atz4 is measured sensitivity,
   not a convergencecertificate. Infinite channels, radialtail and fullsource
   remain open. Do not repeat the same farstart/refinement sweeps.
-- New melvin_channel_progress.png/pdf rendered from frozen spectrumdata,
+- New figures/melvin_channel_progress.png/pdf rendered from frozen spectrumdata,
   inspected by agent and root. All200 historical figures preserved; only
   a new helper is added to the existing plotter. Figure shows probabilities
   in radialcoordinate and positivegap, not a physicalmedium or a payload.
@@ -130,7 +130,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous goal turn classified PROGRESS:108 published at
   77115eb4209c9c4ececaf71f8b5eaa383fb0d568, local/remote equal, private=true,
   clean worktree revalidated. Import COMPLETE; goal remains ACTIVE unbudgeted.
-- rn_exterior_gate.py/results:11PASS (~1.3s), no ODE. Under b=re=.2d,
+- scripts/rn_exterior_gate.py/results:11PASS (~1.3s), no ODE. Under b=re=.2d,
   Rout.25d and black-hole RN mu>=b, exterior branch .2<=mu<.205.
   Nondecreasing r' from0 requires w>.25d (generallyw>Rout), so savedw.1
   fails that class. Overshooting r'>.5 remains possible with negative
@@ -144,7 +144,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   all513tensorpoints agree within2.31e-14/5.69e-14; second audit1.14e-13.
 - RN source3824343569d7639dafb08abc5c059726f3294b95251b759b86b829bb8ff03f55;
   data9c9965af56963674a4ae544ba412f181860727e488276a4d7bc54d3123eb2792.
-- NEW balanced_dihole.py/results implements published Emparan9906160 exact
+- NEW scripts/balanced_dihole.py/results implements published Emparan9906160 exact
   classicalEinsteinMaxwell exterior, with Melvin external field balancing
   the axis.14PASS (~2.46s): directmetricRicci andMaxwell, flat/Melvinlimits,
   gaugeflux, axisbalance, actualcutdata, separatequadrature/normalcontrols.
@@ -179,7 +179,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   renormalizedstress/current andgravitationalbackreaction before support.
   Classicalexteriorbalance is not quantumclosure orstability. Preserve all
   earlier evidence; don'trestart106 residualsweep oroldheavyDiracruns.
-- balanced_exterior_progress.png/pdf renderedfromfrozendata+analyticfields,
+- figures/balanced_exterior_progress.png/pdf renderedfromfrozendata+analyticfields,
   inspectedbyagent androot; all198 oldfigures unchanged, onlynewplothelper.
   PNG8ae34e7ce1f0a8430d62bdc61772c557c8e272ab2725d35d921d0d3c3d0e7e2c;
   PDF692bf437c2e990aecf29db203ca0bee2df24629a7655fed3554ffb8af8970760.
@@ -190,7 +190,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous turn classified PROGRESS:107 was committed/pushed and local/remote
   HEAD3850bd72bb04374645347cd3e2ca3f1ce3e609b6 verified equal, private=true,
   worktree clean. Import COMPLETE; goal ACTIVE, unbudgeted.
-- New smooth_magnetic_collar.py/results.json reuse frozen107 chi-center bases
+- New scripts/smooth_magnetic_collar.py/results.json reuse frozen107 chi-center bases
   and matching helpers. Only new collar ODEs/small matrices run (~7.42s).
   q1,b.2,d1,rhoc32; C-infinity switch S, r'=S, w.1, rout.25;
   logN=(1-S)log[cosh(asinh32+x/b)/cosh(asinh32)]. Full metric jets match
@@ -222,14 +222,14 @@ fallback. Give honest confidence in checks, never promise physical success.
   exterior is NOT a controlled electrovac approximation. Isolated extremal
   RN comparison has N=.2,r'=.2,N'/N=3.2/d,Kangular=.8/d versus1,1,0,4/d.
   These are conditional single-mouth diagnostics, not a two-body solution.
-- smooth_collar_progress.png/pdf generated and independently visually checked.
+- figures/smooth_collar_progress.png/pdf generated and independently visually checked.
   Only new plot helper rendered under strict Python; data assertions PASS.
   PNG9cd652d8a8b71945b39d79dd4362efc52b6dd300cca5e7c92b28baf899b062b2;
   PDFb5fdc79a8f779f2c003124c0cf18c7d78e080e586bbdfe1ccc34a05997c823e9.
   All196 old figures and483 historical files outside5 permitted edits
   preserved; old plotter restored exactly by removing the added helper.
 - NEXT: specify physical coupling/scale relations and use existing RN jet
-  machinery (mmp_pulse.py polyakov_junction_checks, magnetic_boundary_response,
+  machinery (scripts/mmp_pulse.py polyakov_junction_checks, magnetic_boundary_response,
   coupled_exterior/boundary) to form gravitationally consistent near-mouth
   matching before a precision quantum-source integral. Existing large-q84
   dirac_return_closure is not a q1 substitution. Allow angular backreaction
@@ -257,7 +257,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Radial-null EM stress=a_l²/(g²r²sin²theta)>=0. Pure monopole plus zero
   perturbation derivative cannot develop companion anisotropy source-free.
   Allow angular distortions into the core or derive the supporting current.
-- NEW magnetic_mouth_matching.py/results.json applies saved exact throat
+- NEW scripts/magnetic_mouth_matching.py/results.json applies saved exact throat
   bases to actual q1/b.2/d1/rhoc32 mouth data, physical Dchi/ell, lower-frame
   parity(-1)^(j+1). Solve induced decaying multipoles atL3/6/9, quad32/64.
   Piecewise source-free TEST Maxwell on sharp product-core/flat exterior;
@@ -280,7 +280,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   energy<=1.73e-18. Exactl1DtN vsODE1.81e-12. FinalqAPIpropagationfix
   independently verified to leave q1payload unchanged exceptsourcehash;
   q2projectioncontrol2.22e-16. No duplicateODE/Dirac/exteriorrun.
-- magnetic_matching_progress.png/pdf generated/inspected from frozen data.
+- figures/magnetic_matching_progress.png/pdf generated/inspected from frozen data.
   PNGcaeeac65a3924e6aae743d0bb07a41450ee6d1795d7b67a1dd84456ad5e0b0ca;
   PDF5b2dae4c2e6f0af13c42d08df927689d69c9d3f15df438cf3accd12ea99742de.
   New helper only; prior194 PNG/PDF and old plotter bytes preserved.
@@ -296,13 +296,13 @@ fallback. Give honest confidence in checks, never promise physical success.
 ### Conforming exterior trial fails the residual target — increment106
 - Previous105 increment published and verified at89e1bedf4d55a11fe979c9209288a3e3e92e949c;
   local HEAD/clean state revalidated before106. Import remains COMPLETE.
-- physical_exterior_quadrature.py/results.json implement positive rho-weighted
+- scripts/physical_exterior_quadrature.py/results.json implement positive rho-weighted
   curved-slice integration on original triangles restricted outside actual
   round mouths.4 geometry controls PASS; moments<=2.67e-15. Float geometry,
   tiny-interval handling and finite quadrature are NOT interval certified.
   Source46ec54f9839143cd95aec6b023858b1f09fc2f389d9a1d9a40d51cca6e7949fd;
   data68742994d9ce513c2ea5bffa683653688ae783e2fe31358f9269900860ebee5f.
-- conforming_exterior_trial.py/results.json: one right-Weyl m0 pilot, phasepi,
+- scripts/conforming_exterior_trial.py/results.json: one right-Weyl m0 pilot, phasepi,
   upper pressure, rho32/x.44391506147705256/kappa.06932788510988314,
   N4/J9/h.05, lowN2,5 source columns. One matching DG solve; no expansion.
   Continuous area-weighted P1 recovery, analytic finite round trace enforcing
@@ -332,7 +332,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Historical preservation PASS:478 tracked baseline files,473 unchanged
   outside the5 permitted report/plotter edits; all192 old PNG/PDF unchanged.
   Historical RESEARCH/TASK suffixes and old plotter bytes remain identical.
-- conforming_trial_progress.png/pdf generated by the one new plotter helper
+- figures/conforming_trial_progress.png/pdf generated by the one new plotter helper
   and visually inspected after fixing a legend overlap. Saved-data assertions
   PASS; all old plotter bytes/192 prior figures preserved. PNG03bc14c149fcc060
   ccb5e90def4edb5f9df72e057500a812be8da427fe8e3856; PDF3ad2ee59d121e17a
@@ -353,7 +353,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   private main at2fbe9eb44d5abb2e73bddafe1c4a75a109cd1174. Local/remote
   equality, private visibility and clean state were verified after push;
   current HEAD and clean worktree revalidated before105. Import complete.
-- complete_threshold_bound.py/results.json completed in30.694544s, session
+- scripts/complete_threshold_bound.py/results.json completed in30.694544s, session
   98557 TERMINAL exit0. All10 aggregate controls and18 sector/phase gates
   PASS; no live solver remains. Eight fresh zero-frequency sectors plus
   exact reuse of104 m0, N4/J9/h.05/rho32, both actual Weyls/phases.
@@ -369,7 +369,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   databf866d10d677fd453b46b6677ba8c28dddfe9911ba88cbe8447cffb7fcf559e8.
   Independent all9/18 reconstruction PASS: source<=8.68e-19, aggregate
   <=1.06e-22, inverse/Neumann<=2.28e-13; exact m0 and input hashes match.
-- feedback_residual_bound.py/results.json completed in1.44s,11 controls
+- scripts/feedback_residual_bound.py/results.json completed in1.44s,11 controls
   PASS, no exterior rerun. Close low core first, T_H remains passive;
   exact source-weighted Schur identity retains BOTH angular mixing legs.
   Universal weighted high inverse bound2 is used. Finite N2->N4 pi bounds
@@ -392,7 +392,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Independent20-row reconstruction PASS, trace<=6.13e-17, bounds<=1.01e-16,
   globalbounds<=3.09e-18; residual inequality and exact low-closure proof
   independently audited. Full physical high trace aboveN4 still required.
-- Root owns new tail_quadrature_bound.py/results.json.8 checks PASS in.04s.
+- Root owns new scripts/tail_quadrature_bound.py/results.json.8 checks PASS in.04s.
   Derivation: f=Aphi/(1-z²)=q sum_j C_(2j)^(3/2)(z)u^(2j+1)/(2j+1),
   u=d/(2r). Truncate atdegree108 forQ64/J9; the projected polynomial
   integrand degree<=127 is integrated exactly. Positive tail plus exact
@@ -433,7 +433,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   7e03d5ede0ceaacc551f4a13d281432f72378f29. Remote equality/private/clean
   were verified after publication; local HEAD and clean state revalidated
   before104. The103 pending-publication wording below is historical.
-- Root owns new buffered_angular_bound.py/results.json. First run1.6s,
+- Root owns new scripts/buffered_angular_bound.py/results.json. First run1.6s,
   all8 checks PASS. Uses saved102 rho32 middle matrices only; no exterior
   calculation repeated. Exact physical rotational-difference controls,
   distinct-port resolvent identity, Julia offdiagonal contraction and
@@ -455,7 +455,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   current estimate is much too loose for a sign certificate. It requires
   true continuum compression; finite-facet inputs illustrate constants.
   No infinite-angular, threshold, frequency-integral or medium proof.
-- threshold_return_bound.py/results.json completed in3.2810889s with
+- scripts/threshold_return_bound.py/results.json completed in3.2810889s with
   -B -W error; all11 controls and both Neumann gates PASS. No live solver
   remains. Bounded m0 zero-frequency pilot only, both actual Weyls/phases,
   N4/J9/h.05 and rho32. No global monkeypatch or historical-source edits.
@@ -478,7 +478,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Does not retrofit103's distant-boundary approximation at nonzero x.
   Formation reconstructed source bounds<=3.39e-21 and norms<=2.28e-13;
   residual-between-nodes, source slope and reference-gap derivations PASS.
-- ultraviolet_source_bound.py/results.json completed in~1.35s,9 controls
+- scripts/ultraviolet_source_bound.py/results.json completed in~1.35s,9 controls
   PASS. Entire all-angular full-Dirac relative pressure/either-null source
   integral x>=48 bounded by[2.7213453984193783e-20,1.9780401747169132e-6].
   Upper bound is.0447041% of |103 upper finite-window pressure|. Uniform
@@ -493,7 +493,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Assumes prescribed continuum core/well-posed passive canonical returns;
   covers all angular feedback ONLY in this high-frequency region.
 - New source_remainder_progress PNG/PDF rendered and visually checked.
-  Helper source_remainder_progress() at quantum_horizon_plot.py:7790.
+  Helper source_remainder_progress() at scripts/quantum_horizon_plot.py:7790.
   It separates conditional m0 IR, computed finite window, all-angular UV
   and pointwise angular feedback; no combined-source assertion.
   Plotter74c26533bac1d44cfca9c39b02fd5c6d6bf65164f6f6a23c1a5d79ca1d5e2ec8;
@@ -525,7 +525,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Increment102 was published to private main at
   d5d21ecb2deac51fe51cea3931c0ca63c215b686; local/remote equality, private
   visibility and clean state were verified. Import remains complete; goal ACTIVE.
-- long_throat_integral.py completed in1240.724609s; agent-owned60955
+- scripts/long_throat_integral.py completed in1240.724609s; agent-owned60955
   exited0. No live solver remains. All13 final gates and112 sector/cut
   checks PASS; no sign gate. All9 N4 and5 N2 sectors are complete.
   Source frozen at7196643d8ce2542797e0f81e77ed9d958d42ae8afa4a542c2952fbcbd01d2a37;
@@ -546,7 +546,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Independent frozen-data audit PASS:42 records,294 panels,2744 saved
   rows including reuse. Quadrature/Jacobian<=6.94e-18; null<=1.39e-17;
   sums/cutoff/spatial/endpoint/J comparisons and source/input hashes match.
-- New radial_angular_envelope.py/results.json are frozen; all5 checks
+- New scripts/radial_angular_envelope.py/results.json are frozen; all5 checks
   and independent48-record/36-decomposition audit PASS. Analytic infinite
   direct-angular bound excludes retained feedback and frequency tails.
   At rho32, x=.443915 after N4: central/upper scaled direct-null bounds
@@ -555,7 +555,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   massive threshold bound is still insufficient.
   Source f05ded740faccb712406e772cc3ecdfbd528d2bd4d9e6d3a625d004bdb3fc033;
   data4dc876664bcf983fafa840ead90fe3fd923633e22c185753d4d6ad4a10abff17.
-- New smooth_collar_mode.py/results.json: all12 checks PASS in23.70s;
+- New scripts/smooth_collar_mode.py/results.json: all12 checks PASS in23.70s;
   the physical outcome is recorded separately from test acceptance.
   Same saved84 geometry, q1e5, n1, fixed w; no root rescan. Analytic
   all-frequency periodic/antiperiodic contrast for this first multiplet
@@ -565,7 +565,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Formation independently audited bound, source/geometry and quadratures.
   Source9e3127c19f574a55171d4a0d6865a1f0776ca07b31c644257f01277d995067b3;
   data9409e212d0c86831af0de186433ddee2c99cf7e5f6844f5b061bc6f30a2000c1.
-- dirac_return_closure.py has the coordinated optional return_profile API;
+- scripts/dirac_return_closure.py has the coordinated optional return_profile API;
   default84 record is exact and undoing those3 changes restores old bytes.
   This is the only authorized historical Python edit besides append-only
   quantum_horizon_plot.py. Original84 results are unchanged.
@@ -585,8 +585,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   negative finite source is only one necessary diagnostic. No medium,
   material recipe, formation, new physical law or chronology change proved.
   13Sep2027->12Sep2027 remains UNPROVED. Goal stays ACTIVE.
-- New long_throat_integral_progress.png/.pdf generated and inspected.
-  Append-only helper at quantum_horizon_plot.py:7702.
+- New figures/long_throat_integral_progress.png/.pdf generated and inspected.
+  Append-only helper at scripts/quantum_horizon_plot.py:7702.
   Plotter3f17370d6856288560b6fac38d571c4dc95d80079b465c43e5204b2a2dc85669;
   PNGb3aa9c037edd8c547339dbdfb41b1f62119857083f223d5b4cd67ed274a53a3f;
   PDFcbe264a5b93ae9bfbe13f805b2c37d74d0a3a6881010bd80f2bbc1300e298d15.
@@ -607,7 +607,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   published to private main at d9e442a3cbaafa70faf2fe07f448beb750bde413.
   Clean HEAD was revalidated before this increment. The older101 entry's
   pending-publication text is historical. Import remains complete; goal ACTIVE.
-- New long_throat_source.py/results.json: all20 gates PASS,63 new actual
+- New scripts/long_throat_source.py/results.json: all20 gates PASS,63 new actual
   paired-Weyl exterior responses,98.1919703s. Agent-owned session36160
   ended exit0; no live solver remains. Source is frozen at
   ba2f8a3252683b6ad07a87fa7c724a9513244e6047c176568b77160165d3144f;
@@ -633,7 +633,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   K/ell includes d_kappa=dx/ell. No volume/degen/q multiplier applied.
   Max exterior residual5.41e-15, cap control3.89e-15 and tightened radial
   source change5.29e-11. All17 input hashes preserved; sign never a gate.
-- New angular_defect_bound.py/results.json, root-owned and frozen.
+- New scripts/angular_defect_bound.py/results.json, root-owned and frozen.
   Source SHAe2a96628a8f8910494445d621f93c7ed8f895f584f9d92ed4ea0a9c202be5420;
   data SHA7657c1f8a7c4866c629cbcc2a4d6fff62bfa61d8f2a1be0754380f8b8572f249.
   All10 gates PASS in1.97s:18 saved101 sector/phase matrix checks,
@@ -678,7 +678,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   weighted low-cut reconstructions; sector sums/baseline/differences exact.
   Independent observables8.33e-17, traces1.11e-16, low-cut5.55e-17;
   independent geometry/probe quadrature2.22e-15/1.78e-15. All hashes match.
-- New long_throat_source_progress.png/.pdf and append-only plot helper
+- New figures/long_throat_source_progress.png/.pdf and append-only plot helper
   were generated and visually inspected. No historical figures rerun.
   Plotter SHAdb83cea50376b71e4cc7efa1a5a7deb1a319fb74560567ac204d647a4a98e2ba;
   PNG0f96e5a2aab1fc867276d6d7b71d8644fc759909b92a579b453fd206843be3ad;
@@ -700,7 +700,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   exact cross-cutoff reuse, continuum-state argument and conditional source
   bounds supplied new executable evidence/derivations. This turn finished
   the live calculation; import remains complete and goal remains ACTIVE.
-- New complete_angular_source.py/results.json owned by coupled_misner are
+- New scripts/complete_angular_source.py/results.json owned by coupled_misner are
   FROZEN. Pilot45samples passed18gates in50.11285s, with all3saved99 legacy
   matrix/source witnesses exact. Original executed pilot source text/SHA
   279bc13975c00296fd9828d770431aca474dc1a81b9a8336dca5f6b601575a87
@@ -768,7 +768,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   establish the full-field NEC or rule out other states/geometries. A later
   large-q pivot must use a matched geometry and actual return control;
   multiplying the present q1 result byq does not fix the optical sign.
-- New complete_angular_source_progress.png/.pdf generated from frozen
+- New figures/complete_angular_source_progress.png/.pdf generated from frozen
   results, with prescribed-core/probe schematic; agent and root inspected.
   No prior figures regenerated. README/RESEARCH/DIRECTORY_GUIDE updated.
   Root checks:439historical files and182oldPNG/PDF unchanged; RESEARCH100
@@ -792,12 +792,12 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous99 classified PROGRESS. Private publication verified at
   fa45e78381f65e38474d1786735c5b29d0f12316; cleanHEAD revalidated before100.
   Import complete; goal ACTIVE. No stable medium or backward travel proved.
-- coupled_misner owns NEW angular_reference_sum.py/results.json only.
+- coupled_misner owns NEW scripts/angular_reference_sum.py/results.json only.
   Reuses exact99 mu=.5 coarse/fine/finer_mesh integrations; computes
   mu=-.5,+1.5 with same panels1e-6..96,orders8/12 h=.05 andorder8 h=.035.
   Process session34177 finished successfully; checkpoints retained during run.
   This is three actual sectors, not the complete higher multiplet sum.
-- mass_audit owns NEW complete_angular_modes.py only: arbitrary integer
+- mass_audit owns NEW scripts/complete_angular_modes.py only: arbitrary integer
   m=mu-.5,absolute n=max(1,abs(m))..N. Existing m0,+/-1 delegate exactly;
   normalized pole-safe Jacobi partners for other m. One runnable basis
   check, no exterior reruns. Root owns docs; figure work not yet assigned.
@@ -870,7 +870,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   M_n=sqrt(n(n+1)) normalizable fornonzero; zeroM0pairsR/L atcaps.
   Zahn1210.4031Eq38curvature/gauge ambiguities null0onproduct butnot
   generalcollar. DonotusegloballyhyperbolicHadamardtheorem silentlyforAdS.
-- coupled_misner owns NEW ads_reference_source.py/results only.
+- coupled_misner owns NEW scripts/ads_reference_source.py/results only.
   Firstcap/saved98matrixpilot, no exteriorreruns forfrozenrows; n0exact
   crosschiralityreference; n>0normalizableRiccaticaps. Rootownsdocs.
   mass_audit readonlyreference/domain; formation_updates readonlygluing.
@@ -925,7 +925,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   panels1.39e-17,totals/comparisons2.78e-17,null identities3.03e-17.
   All14 dependency hashes match. Reversed the2 documented prose-only
   post-run edits and recovered executed source SHA exactly.
-- Source ads_reference_source.py SHA
+- Source scripts/ads_reference_source.py SHA
   229442a836e685a6f4652e456a878705f08bbfd475a1128e5e493fd78dcc0f1f;
   results SHA bf913d5c3749e10421269a4ae080316b7fa10900010040b60d76ae87edcb890c.
   Executed source4faefd38ab3e567513e1a9d1013e06ffacfe9a9de93ffb3b70334e3cb94174d6
@@ -950,9 +950,9 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous97 classified PROGRESS: committed/pushed/private/clean verified
   at635a42258ce7abacdc86eb40cbeb185b09f7e5fb. Root revalidated clean HEAD
   before98. Goal ACTIVE; imported ChatGPT/Downloads work remains complete.
-- formation_updates owns NEW azimuthal_modes.py only, exposing local
+- formation_updates owns NEW scripts/azimuthal_modes.py only, exposing local
   q1 mouth bases/checks for global mu=-.5,+.5,+1.5. coupled_misner owns
-  NEW azimuthal_source.py/results; reuse97 actual opposite assembly,
+  NEW scripts/azimuthal_source.py/results; reuse97 actual opposite assembly,
   port factors, Green response, observables, integration wherever suitable.
   mass_audit read-only angular/gauge/domain audit. medium_picture owns only
   appended azimuthal_source_progress() plusPNG/PDF, preserving176oldfigures.
@@ -1029,7 +1029,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Goal remains ACTIVE. Latest user asks whether the direction is proper:
   it is a defensible candidate test, not evidence of an attainable time
   machine. Source support and chronology change remain separate gates.
-- coupled_misner owns dirac_sewing_audit.py/results only. It independently
+- coupled_misner owns scripts/dirac_sewing_audit.py/results only. It independently
   rebuilds opposite Weyl volume and every upwind face on the same mesh,
   keeps the regular axis and positive kappa mass, recomputes swapped ports
   and Gram factors, and solves the actual physical left outer response.
@@ -1099,7 +1099,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous95 was PROGRESS: completed/pushed/private/clean at
   35c93b0567bcdfbb8c7fd831e247459610c862fe; root revalidated clean HEAD.
   Goal remains ACTIVE; import/reproduction and cleanup remain complete.
-- coupled_misner owns ONLY throat_null_response.py/results. Frozen95/93
+- coupled_misner owns ONLY scripts/throat_null_response.py/results. Frozen95/93
   helpers reused; compact N_eta=N exp(eta f),A_eta=A exp(-eta f),r=b fixed.
   Two bumps: centers0/.60 timescut and widths.65/.25 timescut, cut=atan(2).
   Shared Riccati baseline/tangents vary BOTH Eell(-2f) and lambda secσ(-f).
@@ -1176,7 +1176,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Goal remains ACTIVE. Latest user asks whether the direction is sensible:
   yes for testing one candidate, with no evidence yet that it leads to a
   time machine. Confidence concerns checks, not promised physical success.
-- coupled_misner owns ONLY new local_lapse_response.py/results. It reuses
+- coupled_misner owns ONLY new scripts/local_lapse_response.py/results. It reuses
   PhaseContrast and frozen exterior/throat helpers. Positive compact lapse
   N=1+eta*f has the already-audited derivative -kappa*M_f. Three positive
   smooth bumps share both Green solves per frequency. Full-space mass uses
@@ -1207,7 +1207,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Sourcea54b8c003c791d47185f564af7d8a66e6d0035f6f3fbae69e56560f4a722968a;
   JSON26ce1290f89044b06059b7a489a574b5c23fb59444cd0d1b5addf3ff624cef28.
 - medium_picture owns only appended local_lapse_progress() in the existing
-  plotter and new local_lapse_progress.png/.pdf. Rendered -W error from
+  plotter and new figures/local_lapse_progress.png/.pdf. Rendered -W error from
   actual saved data; root inspected clearPNG. Plotter39f8d2b4fb984f4c8f8d07c0f56e976bc951170d061fe1442b21c6241bbed1f6;
   PNG219781d4b52753d315b398999ac718665fb3f214bc51e28a678fe77e8e944704;
   PDFeeb56160011c7611aa89f7ff8be9e13a5d98584bd76ff9db044ade4128932046.
@@ -1254,7 +1254,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   13Sep2027->12Sep2027 passage proved. Import and cleanup remain complete.
   Current direction connects actual return transport to a source diagnostic;
   do not substitute further wave-only refinement for the missing stress.
-- coupled_misner owns frozen NEW phase_vacuum_contrast.py/results.
+- coupled_misner owns frozen NEW scripts/phase_vacuum_contrast.py/results.
   PhaseContrast(h=.08,R=2,nmax=8,L=40,rho_c=2) builds geometry/ports once.
   evaluate(kappa,audit=False) shifts/reuses the exterior matrix, applies ONLY
   outer tail feedback and solves all mouth inputs. No mouth source forcing
@@ -1336,7 +1336,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   User asks whether the direction is sound: useful feasibility tests do not
   establish that the destination is physically reachable. Prioritize the
   missing source; further wave refinement alone cannot supply it.
-- mass_audit owns frozen NEW curved_throat_modes.py/results. API
+- mass_audit owns frozen NEW scripts/curved_throat_modes.py/results. API
   throat_scattering(E,n,ell=1,rho_c=10,q=1,rtol=1e-10,atol=1e-12,
   profile='secant',b=None)->(S,diagnostics). For constant profile b>0;
   for secant b MUST be None. H=-i sigma3 d/dx+V sigma1,
@@ -1348,7 +1348,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   The paired n=0 formal control is not two physical Weyl zero channels.
   Source3a2c1a47d8ea358aa2604f0eab84f715957e3dd1f72a8096f3f08b3916ac70f4;
   JSON98d76e67c1b3c4feb0133f8d1e1267d93c6d3a1359e4f5251bb458b23ba74f49.
-- coupled_misner owns frozen NEW curved_exterior_closure.py/results.
+- coupled_misner owns frozen NEW scripts/curved_exterior_closure.py/results.
   Reuses frozen imaginary_exterior.build_problem and its attenuation ledger.
   Bfacet=Fin Braw Fout^-1; canonical output [upper_n,lower_0,lower_n]
   maps to input [upper_0,upper_n,lower_n]. Upper<-lower exp(+i phase),
@@ -1368,7 +1368,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   full source-work sum closes7.8e-16.
   Source707cc2edb494e9f51ef471448cbc512b2f357bd362b5023aeb1648c15c60ef19;
   JSON10eb19a1c1381e13367d8c509065a102f6bfebc2d11daea8b8ae6e36b59a1c42.
-- formation_updates owns frozen NEW throat_junction_audit.py/results.
+- formation_updates owns frozen NEW scripts/throat_junction_audit.py/results.
   Independent full4D Christoffels and Gaussian-normal calculations at both
   joins give Kthroat=diag(rho_c/ell,0,0), Kflat=diag(0,1/b,1/b).
   Same normal throat->exterior; c=1. Israel sigma=-1/(4pi G b),
@@ -1413,7 +1413,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   eb255747d8538cd43d1aafb268459a9fef1bfb84; root verified HEAD before92.
   Goal remains ACTIVE. No physical medium, new law, quantum supporting
   stress or 13Sep2027->12Sep2027 passage is proved. No reimport/cleanup.
-- mass_audit owns frozen NEW imaginary_weyl_leads.py/results. APIs:
+- mass_audit owns frozen NEW scripts/imaginary_weyl_leads.py/results. APIs:
   outer_decaying_ratios(kappa,R,mu=.5,nmax=12),
   mouth_decaying_ratios(kappa,b,nmax=12),
   tail_map(kappa,R,L,q=1,d=1,mu=.5,nmax=12,angular_order=64,
@@ -1424,7 +1424,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   integrated j'=-2k(|a|²+|b|²) error6.06e-14. No clipping/probability claim.
   Source5d738dc2a7708730f85616f4af7bd4176f5c99e5f658456e59b229de039eb9d5;
   JSONb8c2ceb4f4c7b19ba27f6a7565bbc2768a47a513b9bebbf8dc176ed7a8ea5333.
-- coupled_misner produced frozen NEW imaginary_exterior.py/results.
+- coupled_misner produced frozen NEW scripts/imaginary_exterior.py/results.
   shifted_model uses frozen ExteriorDG atE0, adds kappa*weighted mass and
   refactors LU. build_problem(kappa=.4,h=.08,R=2,nmax=8,L=40)->dict with
   model,ports,feedback=(G,ratios,C),source,receiver,mass,diag/boundary maps.
@@ -1438,7 +1438,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   N8->12 1.65e-7; h.05->.035 7.48e-4. No continuum/infinity error bound.
   Sourceb727d5f297ab1bc7fcd253c5d39884415f08c6aebc0aea2b1555e4d9116b50cf;
   JSON4e426b40fb9f291cd9df0c13dd7226efb0690e894b5aecdab9a999407471321d.
-- Root produced frozen NEW exterior_loop_closure.py/results. Declared
+- Root produced frozen NEW scripts/exterior_loop_closure.py/results. Declared
   zero-mode optical length1/4 and endpointphase0/pi give z=exp(i phase-kL).
   Full sewn DG and finite boundary determinant directlycheck
   D=1-zT and u_sewn=u_open/D. 6checksPASS1.314s; determinant/responseerror
@@ -1449,7 +1449,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Samplesbelowunitloopfactor do not prove globalspectralstability.
   Sourceecfbd7d9bf8e933dc0513b94d7ed5557fb8e46682909f286d7ec64d5326df802;
   JSON905c70a15c9064dfd5b9ff7d9001f016f968dab682e10a478bd1beda1932546c.
-- formation_updates produced CURVED_THROAT_MATCHING.md (77lines), source
+- formation_updates produced docs/CURVED_THROAT_MATCHING.md (77lines), source
   4e4dbf8b4811a3b45bdfa1025b4b163459a3d9a4334c6e361a8ec482aeda19dc.
   OpenedprimaryMMPAppendixC, Freivogel2606.12528v2AppendixC, BKWspectrum.
   ds²=N²(-dt²+dx²)+r²dOmega²; Psi=chi/(r sqrtN), canonical H=-iσ3∂x+
@@ -1485,8 +1485,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   new law, obtainable matter, or 13Sep2027->12Sep2027 passage is proved.
   Goal remains ACTIVE. Previous90 HEAD50c008c5de21a3244f47a009bf356288286da3c8
   was clean and synchronized to the private origin before91.
-- mass_audit produced magnetic_tail_map.py/results; root integrated new
-  exterior_tail_transport.py/results; coupled_misner audited coordinates
+- mass_audit produced scripts/magnetic_tail_map.py/results; root integrated new
+  scripts/exterior_tail_transport.py/results; coupled_misner audited coordinates
   and integration; medium_picture produced one schematic/data figure.
   All90 scientific inputs remain frozen. No import/cleanup/history reruns.
 - Actual point-pair field continued R->L in free spherical characteristic
@@ -1523,7 +1523,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   probabilities. Product mouth leads and flat q1 geometry remain assumptions.
   Wrapper source607b54125ea7fb716f36c5ab8edf19419101ca3f0e72fa589e1139192097bd37;
   JSON87658e8b58ee2376ce2cb94427d435e8c8ddc67619f47998f1999545649e8fe5.
-- magnetic_tail_progress() appended at quantum_horizon_plot.py:6694.
+- magnetic_tail_progress() appended at scripts/quantum_horizon_plot.py:6694.
   Root and producer visually inspected PNG. Old162artifacts unchanged.
   Plotter61c1db9a3978bb2eb690adb227548c640f22023a87c11fc7d79205fde52aa554;
   PNG52afe1fa924bd8f58369203387ba083f2f739d2d09f65aade5c8368dcc348c0c;
@@ -1549,7 +1549,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Goal remains ACTIVE. No reimport, cleanup or historical suite reruns.
 - A connected conditional q=1,mu=.5,d=1,b=.2,E=.4 calculation now exists.
   This is NOT the saved q=100000 geometry or a self-consistent physical throat.
-  Root owns two_mouth_mesh.py; coupled_misner produced exterior_boundary_map.py
+  Root owns scripts/two_mouth_mesh.py; coupled_misner produced scripts/exterior_boundary_map.py
   and results; formation_updates produced spherical_weyl_leads.py. All frozen.
 - Mesh: halfdisk minus two mouth halfdisks, conforming polygonal chords,
   classified outer/mouth/axis edges. Topology, normals and geometry-refinement
@@ -1596,7 +1596,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   with zero mode first, then diagonal lead ratios retained. This is a declared
   polygonal approximation, not exact spherical matching on a coarse chord.
   Outer free map currently discards the actual magnetic dipole tail beyond R.
-- Figure exterior_boundary_progress() at quantum_horizon_plot.py:6606 shows
+- Figure exterior_boundary_progress() at scripts/quantum_horizon_plot.py:6606 shows
   actual computed intensity, conditional ledger, mesh and radius sensitivities.
   Root inspected PNG; all160 older PNG/PDF artifacts preserved by producer.
   Plotter9912665f4fc4184f4824ffb267750b4585ecdb0083ca5e51f0fa559e1b673df6;
@@ -1620,7 +1620,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Exact generator preserves diag(I,-I); check I-Z†Z>=0 within numerical error
   without clipping. Freeq0 is direct control. SVD Z=Udiag(s)V† reuses EXISTING
   feedback API via(G@U,s,V†@Cprojection), no frozen90 edits needed.
-  New helper should be magnetic_tail_map.py plus results if warranted.
+  New helper should be scripts/magnetic_tail_map.py plus results if warranted.
   General Z on facet-orthonormalized modes retains the documented geometry limit.
   Then compare DG matchingR2/4 with tailcontinuation. Physical targetq100000,
   curved mouths, full quantum state/stress, preparation and stability still open.
@@ -1635,7 +1635,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   synchronized through a1e76ff713197b4569a6269ff04e42e1af4a42b3 before89.
   Cleanup task finished and its created-thread directive was already emitted.
   Do not reimport, reinitialize Git, repeat cleanup, or re-emit old directives.
-- dipole_collar_modes.py / results: exact point-pair angular zero modes on
+- scripts/dipole_collar_modes.py / results: exact point-pair angular zero modes on
   upper-centered spheres 0<b<d, normalized against Beta(k+1,q-k).
   F=(q/2)log1p[4epsilon^2 tau/((1+epsilon+D)(D+1-epsilon)(1+epsilon))].
   D=sqrt(1+2epsilon cos(theta)+epsilon^2), epsilon=b/d, tau=sin²(theta/2).
@@ -1652,7 +1652,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   k0/16/50000 radial residual5.64366e-18/2.32675e-17/8.92350e-16 per re.
   ~158.115 times smaller than isolated-mode potential residual; this is NOT
   a physical-success factor or a bound on accumulated scattering error.
-- collar_dressing_bound.py / results: in radial spin frame K(h,0)=0,
+- scripts/collar_dressing_bound.py / results: in radial spin frame K(h,0)=0,
   eta=(0,t), t=-bJ/h, J=int h*h_b dtheta, K eta=i chi_b.
   Residual after correction=(0,i t_b-2E t). Raw flux1-||t||²; retain derivative
   of (1-||t||²)^-.5 when normalizing every sphere. Bound derivation in RESEARCH.
@@ -1678,7 +1678,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   12+11 saved controls pass;3modified/new Python sources parse. Six frozen88
   scientific files and158earlier figures match Git HEAD byte-for-byte.
   59current-document local links resolve; diff whitespace check passes.
-  New dipole_collar_progress() helper at quantum_horizon_plot.py:6532 rendered
+  New dipole_collar_progress() helper at scripts/quantum_horizon_plot.py:6532 rendered
   ONLY the new plot, and root inspected the PNG. No overlapping labels.
   Plotter64c9eac2b1eff8a598db7533aeb0d1ecdd7e9ee6e3a2710ff9710b5a3dd7fc18;
   PNG83b98f01bdd95f85893844f2f8d11d83a46d40d5f02845a6c46ad05f8f124c80;
@@ -1709,7 +1709,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   c4c8dbfe811130a7d86b4fb045c68e517aca986786a40674cc3cc8d1a79065c4.
   DIRECTORY_GUIDE.md and maintenance/cleanup-2026-09-20.json record evidence.
   Research source/data/checkpoints/figures preserved in place; .venv untouched.
-  Initial369retained hashes passed; final368 plus incoming_modes.py concurrent
+  Initial369retained hashes passed; final368 plus scripts/incoming_modes.py concurrent
   research edit recorded separately. Seven chronology audit JSON files
   ALREADY disagreed with old manifest; preserved, not silently repaired.
 - Git main initialized, origin https://github.com/Winter-Soren/time-travel.git.
@@ -1760,7 +1760,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Varying tangential W needs Q[E+sqrt(E²-Q†Q)]^-1 with properdomain, Q=-i ds+iW;
   frozen W canmisszero modes. Source0440ce452be4cf87427ad7692a70c6b037fe9f3c25cce41d236173ef1957ebee;
   JSON7d43e803d310a8259f9bc9d8208179e824cbedb22fa74e5da310456e55a1f94c.
-- Coupled agent produced scattering_vacuum.py/results: specified unitary
+- Coupled agent produced scripts/scattering_vacuum.py/results: specified unitary
   loop+reservoir, negative-energy sea, reference subtract same one-pass delay,
   two chiral copies with conjugate phases. NOT actual exterior scattering.
   D=1+r exp[i beta+iE(L+tau)], EDirac=2ReLi2(-r exp(i beta))/[pi(L+tau)],
@@ -1799,7 +1799,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   13Sep2027->12Sep2027 remains UNPROVED; forward-dilation fallback separate.
 
 ### Spinful transverse modes and local 2D propagation — increment87, PROGRESS
-- Previous86 was PROGRESS. New spinful_return.py/JSON derives exact Weyl
+- Previous86 was PROGRESS. New scripts/spinful_return.py/JSON derives exact Weyl
   sector conventions, transversezero modes, and propagates a short local2D
   testpacket. This is NOT a full return/escape calculation or vacuum update.
 - Standard Cartesian H=sigma·(-i grad-A), Aphi=q/2(cos_lower-cos_upper).
@@ -1886,7 +1886,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   at the boundary of physics. Answered precisely: investigating an open
   problem, but verified work remains within GR/QFT; failure of an approximation
   is not failure of physical laws. No discovery, breakthrough ETA or medium.
-- New magnetic_path_validity.py/JSON computes exact Cartesian first/second
+- New scripts/magnetic_path_validity.py/JSON computes exact Cartesian first/second
   derivative contractions along flat opposite-point-charge paths. Reuses
   _magnetic_return_path, _magnetic_loop_source and85 path_variation.
   eta1=||dB||/B^1.5; eta2=||ddB||/B², Frobenius tensors include field direction.
@@ -1934,7 +1934,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Frozen sourceSHA d8918c03455bbbefcb28564a0271a5e34f69d9d4f8bee143658dd35478975b74;
   JSONc95fa072f86172ce6619202005214b39ca4a0a48d58745bc4c08eb15dfd1075e.
   Root verified84/85 source/data hashes unchanged; no old solver reruns.
-- Figure magnetic_validity_progress.png/pdf generated fromfrozendata and
+- Figure figures/magnetic_validity_progress.png/pdf generated fromfrozendata and
   inspected by agent ANDroot. Helpersinquantum_horizon_plot.py at6322;
   plotterSHA722d6af8c4550ad46eb1d0b64253c4942359ef632866e21f35ec80c478492108.
   PNG0dbd39145684d9028129d9ad559122cf0d28dbd4fe2886e820df4b37967112ff;
@@ -1956,7 +1956,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   field correction from the SAME local magnetic log action, at fixed flux.
   It is a conditional regular point-source calculation, not a complete
   finite-mouth exterior, physical medium, stability proof or new law.
-- New magnetic_path_polarization.py reuses existing magnetic path helpers
+- New scripts/magnetic_path_polarization.py reuses existing magnetic path helpers
   and84 saved full-flux weights/conditioning. With psi0=2u(1-v²)/(u²-v²),
   D=u²-v²,C=u²(1+3v²)+v4-v², the correction satisfies
   [(u²-1)partial_uu+(1-v²)partial_vv]psi1=
@@ -1997,7 +1997,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Frozen SHA256 source25f8848948ab099aeb13ea721c359ad15207a690fcb1094d490104839bc8352e;
   JSONf6adb6e9fb95f79105642d17092db8f3bae9a95dca38d37c7e6329d3b131e678.
   Root verified saved controls/hashes. Increment84 source/data unchanged.
-- medium_picture regenerated and root inspected magnetic_path_progress.png
+- medium_picture regenerated and root inspected figures/magnetic_path_progress.png
   and PDF using FINAL data. Actual nu1 contour; displacement500x explicitly
   labeled, other panel gives actual ppm. Assumed points, no invented
   finite entrance. All150 older image artifacts byte-identical per audit.
@@ -2014,7 +2014,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Goal remains ACTIVE. 13Sep2027 -> 12Sep2027 remains UNPROVED.
 
 ### Corrected return-state closure — increment84, PROGRESS
-- Previous83 was PROGRESS. New dirac_return_closure.py/JSON integrates83
+- Previous83 was PROGRESS. New scripts/dirac_return_closure.py/JSON integrates83
   source through finite R100 collar and closes its spherical mean using
   EXISTING prescribed point-magnetic paths from67. It does NOT solve a
   full two-mouth exterior; nonlinearMaxwell/metric/path correction next.
@@ -2065,9 +2065,9 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Source595b0d4578bc13f828020b956a2d5ce41e0e11b12de47df4e0d5a19119829140;
   JSON6baf84864641725f0e2378a368e99eeef5beb0dd08b053a84ea21b674d2fce03.
   Run .\.venv\Scripts\python.exe -B -W error -X utf8 dirac_return_closure.py.
-  83source/JSON unchanged/rootverified. polyakov_response.py reusedonly,
+  83source/JSON unchanged/rootverified. scripts/polyakov_response.py reusedonly,
   currentSHA6c346f668fdf07ebd2ff570f358d4c2eee131a6328d7ecc28164a8501cdce83d.
-- return_closure_progress.png/pdf renderedandrootviewaccepted.
+- figures/return_closure_progress.png/pdf renderedandrootviewaccepted.
   PNGe76d73ae57924508090f06acb8c1dfc9df32096108eabbcc81df0d6f3aefc69f;
   PDF9c0da9402c45ff323bb5b949c708bedf53d70e4c520e4ab2864ccc4714d03a2e;
   plotter52a501db1668fc7097ddce31e3468bf5eff9d80af1a6f16f528424166941b1c5.
@@ -2095,7 +2095,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Keep qW_D[h/R²;state] and magnetic log once; no determinant doublecount.
   Standard4D counterterms cannot shift linearq; arbitrary new reduced
   functionals could. No uniqueness from symmetry alone.
-- New dirac_matched_source.py/JSON: 10 cases q1000/100000, eta[-.3,.3].
+- New scripts/dirac_matched_source.py/JSON: 10 cases q1000/100000, eta[-.3,.3].
   R/q²=C0*exp(4eta)+(C1H+C1S*exp(4eta))/q+o(1/q).
   All8 controls PASS; 10 symbolic residuals0. Largest highq coefficient
   mismatch5.74e-8; q1000 mismatch5.74e-6. Mainfine highq shift<=2.57e-9.
@@ -2119,7 +2119,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Full8control process65801 EXIT0. Subsequently only productmetadata/
   strictorder values changed; geometryandidentities rerun, spectrauntouched.
   No livejobs. 81/82 helpers/results untouched;82hashes rootverified.
-- matched_source_progress.png/pdf rendered, root viewed accepted.
+- figures/matched_source_progress.png/pdf rendered, root viewed accepted.
   PNG88ff6e4285cdea5270caa7b16af5f02018fbd7ac406627f9a4ef266a1b6bec1c;
   PDF5a836a9dfd80f529aa2452eafae9fcae3e8c6c41485ea2e88e62a5b884f714ba;
   plotter8b18ab0b58fdd7d0d46452ee533d1aa4d29aae9e8363a405322305f800913e8f.
@@ -2196,7 +2196,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   conservative quadrature estimate1.1e-11 (not a rigorous error bound).
   Local80 comparator=-0.01170508212878048; local+minimaltrace repair
   =-0.0201485140989753. Candidate completion misses this finite response.
-- Final new dirac_flux_response.py/JSON frozen and root replay EXACT:
+- Final new scripts/dirac_flux_response.py/JSON frozen and root replay EXACT:
   six controls pass, R2=-.03242773217598176, R3=-.1031821229596521.
   Direct-vs-IBP max4.30e-16; finite-difference max3.92e-14; independent
   root integrals within1.1e-15. Convergence observed, not certifiedbound.
@@ -2207,7 +2207,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   particular q2/q3 response. Rejects the definedsumasexactproductcontrast;
   NOT allcompletions, NO q1e5errorbar, NO discoveryofnewphysics.
   RESEARCH81 records equations, primarysource, sign, scope and checks.
-  mmp_pulse.py and79 nonlinearJSON remain at recordedhashes.
+  scripts/mmp_pulse.py and79 nonlinearJSON remain at recordedhashes.
 - Numerical worker finished; no livephysicsprocess. FigurePNG/PDF rendered
   fromfrozenJSON via appended dirac_flux_progress() and inspected by root:
   readable, correctbars, signed/magnitude and lowfluxlimitations explicit.
@@ -2231,11 +2231,11 @@ fallback. Give honest confidence in checks, never promise physical success.
   independentlychecked LLLtracefromR2 and nonlinearMaxwellmonopole.
   SourceSHA5c6986e2ce09b544d44e96576f6da03b6da53dc32cb12f973dae0441a84b7a87;
   JSONffa8633b3a317403ba0ba8cb866f11665fd19b48db42c95b107c5c1dad7bc4f2.
-  mmp_pulse.py and nonlinear79JSON hashesunchanged; no live physicsjobs.
-  magnetic_polarization_progress.png/.pdf rendered and inspected by root;
+  scripts/mmp_pulse.py and nonlinear79JSON hashesunchanged; no live physicsjobs.
+  figures/magnetic_polarization_progress.png/.pdf rendered and inspected by root;
   figure explains zero radialNEC and required-but-unidentified trace.
   Plotter extension preserves all140 prior images; no remaining livejobs.
-  RESEARCH.md updated with derivation, sources and completed checks.
+  docs/RESEARCH.md updated with derivation, sources and completed checks.
 - Results: LA/RS=1.000016667083345, radialNECexact0; localmagneticsector
   cannotflareoutalone. Necessary missingtraceonclassicalproductthroat
   211.08734721739822 re^-4, sameO(q) asbareLLLanomaly. Notastresstensor.
@@ -2266,7 +2266,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   gauge+bareLLL=-q²/(48pi²)-q/(48pi²). Required missing trace
   =q/(48pi²)+11/(720pi²). Not a selected tensor or full source completion.
   Standard 4D Dirac a,c count ONE field, not q independent4Dspecies.
-- Worker reproduce_import owns only new magnetic_polarization.py/.json;
+- Worker reproduce_import owns only new scripts/magnetic_polarization.py/.json;
   symbolic identities plus independent mass quadrature and numerical guards.
   medium_picture owns only new plot helper and magnetic_polarization_progress
   PNG/PDF; render after freeze. Root owns report/state and final checks.
@@ -2290,10 +2290,10 @@ fallback. Give honest confidence in checks, never promise physical success.
   without repeating the successful solve. Previous three artifact hashes
   preserved. Coupled_misner independent source/energy/null-return audit PASS;
   mass_audit and formation_updates independently derived balance. No live
-  numerical jobs. finite_motion_progress.png/.pdf rendered and inspected by
+  numerical jobs. figures/finite_motion_progress.png/.pdf rendered and inspected by
   worker and root; figure data gates pass, all138 earlier images unchanged.
   Root saved-probe exterior null equations also checked (<1e-12).
-  RESEARCH.md now contains the finite-motion derivation.
+  docs/RESEARCH.md now contains the finite-motion derivation.
 - Meaning: more reliable assumed model, no physics discovery or material
   construction. No evidence for13Sep2027->12Sep2027. Next decisive work:
   specified source and physical throat/exterior gravitational matching;
@@ -2324,7 +2324,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   ofimprovedenergy=Omega²h(t)/3, zerofirstorderaftercompactdrive.
   Rootmoving_energy_identity_checks()symbolicfourresidualsexact0-Werror;
   includespassivevacuumzero-drivecontrol. BothagentsindependentPASS.
-- reproduce_import ownsonlyNEW moving_exterior_nonlinear.py/.json.
+- reproduce_import ownsonlyNEW scripts/moving_exterior_nonlinear.py/.json.
   Implement8proper-clockvariables integratedincommonLABtwithlapses(1,sqrt(1-v²))
   plus3energyprimitives ifneeded. Exactrecursivequantumsource/composed
   histories; onlycompletedlabhistory, inverseclockqueriesadaptivesteps.
@@ -2346,14 +2346,14 @@ fallback. Give honest confidence in checks, never promise physical success.
   For A fixed, B atd(s)=D+h(s), first order: E_A=s-D-h(s-D),
   E_B=s-D-h(s), i_A=(h'''+Omega²h')(s-D)/3,
   i_B=(h'''+Omega²h')(s)/3. Proper clock lapse differs atsecondorder.
-- Root owns new moving_exterior_maps.py and moving_exterior_map_results.json.
+- Root owns new scripts/moving_exterior_maps.py and moving_exterior_map_results.json.
   Exact finite-amplitude maps/jets pass-Werror: independent rapidity identity
   max2.22e-16; passive flat-vacuum covariantstress cancellation1.73e-18;
   map/source/clock-lag linearization errors scalequadratically underhalving.
   FinaldurationT4; mass_audit reviewedtheactualfile andpassed.
   Atamplitude.001: peakv.0006663c, properclocklag3.5645e-7,
   maxsourceexactminuslinear9.6804e-7; theoreticaltruncation NOT solvererror.
-- reproduce_import owns only mmp_pulse.py minimalnestedsolverextraction plus
+- reproduce_import owns only scripts/mmp_pulse.py minimalnestedsolverextraction plus
   new moving_exterior_response_checks and moving_exterior_response_results.json.
   Defaultsolver arithmetic preserved; capturednonzero-pulse D.1baseline
   bitwiseequal at83points.55otherfunctionsASTunchanged. Persistedmetadata
@@ -2379,7 +2379,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   [h''(s)+h''(s-D)+Omega²(h(s)+h(s-D))]/3.
   NOT physicalMinkowskistoredenergy/mechanicalwork. Compactdrive RHSreturns0
   atfirstorder; this doesnotshowzero apparatuscost orparticleproduction.
-- RESEARCH.md openswith78derivation/results/limitsandfocusedreplaycommands.
+- docs/RESEARCH.md openswith78derivation/results/limitsandfocusedreplaycommands.
   medium_picture ownsonlynewmoving_exterior_progress() atline5754
   andPNG/PDF,renderedfromfrozenverifiedJSON. RootinspectedPNG:clearlabels,
   positivefullreturnexplicit, negativechangesnotmisrepresentedaspasttravel.
@@ -2402,7 +2402,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   quadrature=(nu,weights), validated positive/fullnormalized; defaultunchanged.
 - Global256/512 attempt86432 TERMINALexit1:256 completed, then512 pathlength
   triggeredoldtiny-nu quadrature warning. Partial256 record saved in
-  distributed_loop_refinement_results.json; it is NOT a completed/refined result.
+  results/distributed_loop_refinement_results.json; it is NOT a completed/refined result.
 - formation_updates fixed ONLY _magnetic_return_length below nu1e-4:
   scaled exactspeed + breakpoints1-sqrt(nu),1-nu. Same relative/absolute
   tolerances; original branch preservedabove threshold. Previously nu1e-6
@@ -2415,13 +2415,13 @@ fallback. Give honest confidence in checks, never promise physical success.
   Entireν0..2retained, weights dν/2; no causalinactive-tailrenormalization.
   `_magnetic_closure_paths` explicitquadrature handlesarbitrarynodes.
 - Run71322 COMPLETEexit0: orders8/16perpanel,312/624channels, plushalfdt16.
-  distributed_loop_panel_results.json explicitlyUNCONVERGED:
+  results/distributed_loop_panel_results.json explicitlyUNCONVERGED:
   maxsource8/16difference1.6171064934e-6 vs2e-7 (~1.1476%peak),
   timehalf5.2867e-13 PASSES. Clockdifferences<=5.732e-10,
   transitdifferences<=3.10e-11 but not sourceconvergence. Extra scalarcheck
   correctlyskipped. MeanOmega1.619485036047899 matchesleadingπconvention.
 - Run5606 TERMINALexit0:16/32panelpair +halfdt32 +scalarcontrol completed.
-  distributed_loop_panel_fine_results.json is CONVERGED under its declared
+  results/distributed_loop_panel_fine_results.json is CONVERGED under its declared
   finite-sample checks; all_declared_checks_pass=true.624/1248channels.
   Source difference5.939022139503987e-8 < unchanged2e-7 threshold;
   ratio to sampled peak0.0421464411968%, down from3.27%originalcomparison.
@@ -2445,7 +2445,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   SwapA/BforJ_B. Both Laplaceidentitiesexact;singlechanneldeltameasure
   recoversoldrecurrence. FinitecausalcutoffsdoNOTtruncatefull localmean.
   No newconvolutionsolverimplemented. Useful fallbackifpanelsstillfail.
-- RESEARCH.md nowopenswith77methods/results/limitsandreruncommands.
+- docs/RESEARCH.md nowopenswith77methods/results/limitsandreruncommands.
   medium_pictureaddedonlydistributed_sampling_progress() atline5685,
   renderedPNG/PDF; rootinspectedPNG, legibleandappropriatelylimited.
   Priorplotcodeand134olderimagesunchanged. All77workersfinished;
@@ -2460,7 +2460,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 ### Distributed clock response — increment76, PROGRESS
 - User requests faster concrete progress. Stop further static-precision-only
   extensions; examine clock dynamics. Active goal remains unproved/in progress.
-- Root completed stationary_offset_gate_checks() in polyakov_response.py;
+- Root completed stationary_offset_gate_checks() in scripts/polyakov_response.py;
   new stationary_offset_gate_results.json. Saved67 exterior paths fixed;
   full mean collar solved at S/d=0,1,3,10. Fine w=1.619485,1.477559,1.337462,
   1.174898; exit delays/d=4.625063,4.999589,5.490309,6.381906, all positive.
@@ -2481,14 +2481,14 @@ fallback. Give honest confidence in checks, never promise physical success.
   zeros removed. Not damping, bounded arbitrary histories or nonlinear/4D
   stability; does NOT automatically apply to the separate shifted excited state.
 - mass_audit completed distributed_clock_spectrum_checks() before the
-  stationary helper in polyakov_response.py and its new JSON. Nine cases,
+  stationary helper in scripts/polyakov_response.py and its new JSON. Nine cases,
   50-digit arithmetic, explicit N^-5 tails, exact resonance derivative3pi/4
   and weightpi/32. Max anti/symmetric errors1.637e-12/5.952e-12 within tails.
   D0 identity5.35e-51. Root -Werror replay exactly matches saved JSON.
   formation_updates independently checked proof/continuum/resonances.
   Spectrum JSON SHA97ff5ebbfb3a701849cdf4cb0fb91359002b1f697acf2f53e198c79c7190faf6.
 - reproduce_import owns ONLY new distributed_loop_response_checks() in
-  mmp_pulse.py and new result JSON: finite one-pass small pulse, 64/128 delays,
+  scripts/mmp_pulse.py and new result JSON: finite one-pass small pulse, 64/128 delays,
   4 shortest-loop times and one timestep-halving. Run18054 failed convergence
   assertion before saving. Replay72725 COMPLETED exit0 with incremental saves;
   same original dense evaluator retained (no optimization patch).
@@ -2510,7 +2510,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   rerendered only this figure with -Werror exit0. Uses static cases and the
   verified spectrum, no pulse pass. Diagram is assumed, not a blueprint.
   Agent verified all132 previous image artifacts unchanged.
-- Root added detailed76 section at top RESEARCH.md with proof, assumptions,
+- Root added detailed76 section at top docs/RESEARCH.md with proof, assumptions,
   stationary table, primary sources, runnable commands, spectrum checks and
   honest UNCONVERGED pulse section. New figure inspected.
   Saved67/74/75 JSON hashes unchanged. No old full-suite reruns.
@@ -2525,7 +2525,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Addedgravity-induced Maxwellpath bending, same O(m/d) asotherknown
   corrections. Shapiro/unbentopticalfactor already67, NOT doublecounted.
 - formation_updates extractedunchanged _weak_magnetic_return_path() in
-  mmp_pulse.py; oldweakcheckusesalias.80exactcomparisons, baseline4.44e-16,
+  scripts/mmp_pulse.py; oldweakcheckusesalias.80exactcomparisons, baseline4.44e-16,
   complexstep/FD5.64e-12. Otherbytespreserved. Root extractedshared
   _return_path_length_weight inpolyakov_response;3old74profilevaluesexact.
 - New BEGIN_GRAVITY_PATH_FEEDBACK, polyakov_gravity_feedback_results.json.
@@ -2565,7 +2565,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 ### Magnetic path feedback with mean-throat adjustment — increment74, PROGRESS
 - Previous73 was PROGRESS; goal ACTIVE, import complete. No stability,
   construction, newphysics or yesterdaytravel established.
-- New BEGIN_RETURN_PATH_FEEDBACK helpers in polyakov_response.py and
+- New BEGIN_RETURN_PATH_FEEDBACK helpers in scripts/polyakov_response.py and
   polyakov_feedback_results.json. Reuses67fullprofile and73current. Eight
   Duffytriangles integrate fullfree-space azimuthalGreen, ellipkm1 forselfring,
   hyp2f1 forsmallm. Reciprocalupperfluxmapping resolveslongpaths. LLLfrequency
@@ -2607,7 +2607,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 ### Returning-current magnetic input — increment73, PROGRESS
 - Goal remains ACTIVE; import complete. No physical stable medium, new
   physics discovery or 13Sep2027->12Sep2027 passage established.
-- New BEGIN_RETURN_CURRENT_FIELD in polyakov_response.py, result
+- New BEGIN_RETURN_CURRENT_FIELD in scripts/polyakov_response.py, result
   polyakov_return_current_results.json. Reuses full67 periods/weights.
   mmp_pulse._magnetic_loop_source accepts optional circumference override;
   defaults preserved, three sample currents exactly unchanged.
@@ -2652,7 +2652,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous71 was PROGRESS. Goal remains ACTIVE; import complete. No new
   project task, source material, global solution, stability or yesterday
   passage proved. User wants faster productive work; agents remained bounded.
-- New BEGIN_OVERLAP_TRANSPORT block in polyakov_response.py and
+- New BEGIN_OVERLAP_TRANSPORT block in scripts/polyakov_response.py and
   polyakov_overlap_results.json. Reuses static collar, invariant operator,
   current67 state and71 RN basis/source conventions. R10->100 only, still
   inside existing radial collar; the nonradial return exterior is NOT solved.
@@ -2713,7 +2713,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - reproduce_import independently checkedalgebra, cancellation, offsetsign
   and final72replay exact; old71replay andfilehash exact. Boundary metadata
   explicitlyincludesepsilon afterreview. No remaining defects reported.
-- New RESEARCH leading72section and overlap_transport_progress.png/.pdf;
+- New RESEARCH leading72section and figures/overlap_transport_progress.png/.pdf;
   medium_picture and root inspected. Shows finiteband/partialcancellation
   anddiagnosticcumulateddelta_cg/A; physicalexterior stillunresolved.
   All124 earlierPNG/PDFs unchanged; priorplotting restored exactly upon
@@ -2734,7 +2734,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Goal remains ACTIVE; previous70 PROGRESS. Import/reproduction complete.
   No physical stability, manufacture, discovery or13Sep2027->12Sep2027
   passage established. Current work is conditional static linear response.
-- Added only BEGIN_CENTER_EXTERIOR block to polyakov_response.py and
+- Added only BEGIN_CENTER_EXTERIOR block to scripts/polyakov_response.py and
   polyakov_center_results.json. No dependencies; reuses StaticBackground,
   invariant quotient, saved69 maps and full67 closure/profile. No old suites.
 - Reflection-even sector with fixed internal flux labels: P even, X odd,
@@ -2798,13 +2798,13 @@ fallback. Give honest confidence in checks, never promise physical success.
   "import polyakov_response as p; p.save_center_exterior_benchmark()".
 - Prior source exactly preserved outside71block (remove marker block and
   following3newlines -> pre71SHA b9a0608a87a26ae454d93081d5c004a4ff47b52c4294abceb20a62683c668ba1).
-  RESEARCH.md has new leading71 section; prior text retained.
+  docs/RESEARCH.md has new leading71 section; prior text retained.
   Independent reproduce_import replay matched savedJSON exactly in1.18s;
   source/olddata unchanged. Source normalization and affine factors checked.
   After correction, a second no-write replay matched correctedJSON exactly;
   pulled ratios match independent radial correction within2.22e-16.
   Reviewer reports no remaining defect or live job.
-- center_exterior_progress.png/.pdf generated by medium_picture and
+- figures/center_exterior_progress.png/.pdf generated by medium_picture and
   inspected by agent and root. Two panels: symmetric center/collar schematic
   and measured local omission/source ratios. No material blueprint claim.
   Plotting helper removal restores prior plotting source exactly; all122
@@ -2821,7 +2821,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous69 was PROGRESS. Goal remains ACTIVE, import complete. No new
   goal/task, no historical full-suite reruns. No stable material, formation,
   new physics discovery or13Sep2027->12Sep2027 passage established.
-- New EMBEDDED_COLLAR block in polyakov_response.py and
+- New EMBEDDED_COLLAR block in scripts/polyakov_response.py and
   polyakov_embedded_results.json. Reuses69dense homogeneous/forced solutions
   via optional _return_solutions flag in _invariant_collar_boundary_map;
   default69resultrecord unchanged. No dependency additions.
@@ -2873,7 +2873,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Mars-Senovilla https://arxiv.org/abs/gr-qc/0201054 (CQG1993), PDFread.
   EarlierfiniteRNboundarymeaningreused, vacuumfieldoperatordidnotreplacecollar.
   Newformulas/operatorours; notrepresentedasquotedpublishedresults.
-- RESEARCH.md leadsection70; figureembedded_collar_progress.png/.pdf
+- docs/RESEARCH.md leadsection70; figureembedded_collar_progress.png/.pdf
   visualizesmovablecuts andsavedcumulativeopticalcoefficient.
   Rootinspectedfigure; preservedpriorcodeafterreversingdeclaredthree-line
   optionalreturnextension andremoving70block. Priorreport/JSONhashesandASTs
@@ -2894,7 +2894,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous68 was PROGRESS. Goal remains ACTIVE; import complete. Original
   objective preserved. No new task/goal, no historical full-suite reruns.
   No material, formation, new physics or13Sep2027->12Sep2027 passage proved.
-- New INVARIANT_COLLAR block in polyakov_response.py and saved
+- New INVARIANT_COLLAR block in scripts/polyakov_response.py and saved
   polyakov_invariant_results.json. Earlier blocks/data unchanged. Reuses
   _static_collar_solution/fields; no new dependencies or alternative physics.
 - D=B²-R B_l-1. Gauge invariants P=2m+2B²v/D, X=2m_l-2Bv/(RD).
@@ -2948,8 +2948,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   response with endpointbending using theseinvariants, combinewithphysical
   throat/exterior matchingandcomplete-loopstatefeedback. Boundaryvalues,
   globalstateclosure,time-dependent/nonlinearstability,formation unresolved.
-- RESEARCH.md leadsection69 containsderivation,map,checksandlimits.
-  Newfigure invariant_collar_progress.png/pdf uses saveddata only; same
+- docs/RESEARCH.md leadsection69 containsderivation,map,checksandlimits.
+  Newfigure figures/invariant_collar_progress.png/pdf uses saveddata only; same
   alpha/source butdifferentboundaryassumptions explicitlymarked.
 - Reproduceonly69: .\.venv\Scripts\python.exe -B -X utf8 -c
   "import polyakov_response as p; p.save_invariant_collar_benchmark()".
@@ -2964,7 +2964,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous67 was PROGRESS. Goal remains ACTIVE; import complete. No new
   goal/task or historical benchmark reruns. No stable medium, formation,
   new physics discovery or 13Sep2027->12Sep2027 travel established.
-- Added FLUX_CHANNEL_CURRENT block in polyakov_response.py and
+- Added FLUX_CHANNEL_CURRENT block in scripts/polyakov_response.py and
   polyakov_channel_results.json. Reuses the actual67 mean-state collar,
   existing4D linear Einstein/Maxwell helper and installed numerical tools.
   This is a proposed static flux-following Polyakov channel action, NOT
@@ -3014,13 +3014,13 @@ fallback. Give honest confidence in checks, never promise physical success.
   loop feedback delta w=-2w*delta L/L. Collar delta L=int(v-h)dx/2 alone
   omits exterior paths and endpoint motion. Full finite anisotropy as
   a seed does not validate quadratic angular mixing. Formation remains open.
-- New figure flux_channel_current_progress.png/.pdf and appended helper
+- New figure figures/flux_channel_current_progress.png/.pdf and appended helper
   quantum_horizon_plot.flux_channel_current_progress; root visually checked.
   Prior plotting bytes and116 prior PNG/PDF artifacts preserved by agent.
-  RESEARCH.md leads with68 derivation, trial, limitations and next step.
+  docs/RESEARCH.md leads with68 derivation, trial, limitations and next step.
 - Sources read: MMP https://arxiv.org/html/1807.04726v3#S2.SS3;
   https://arxiv.org/pdf/hep-th/9906056 for classical product limit only;
-  existing QUANTUM_COMPLETION.md action/state discussion. New equations
+  existing docs/QUANTUM_COMPLETION.md action/state discussion. New equations
   are our conditional derivation, not attributed as published formulas.
 - Reproduce only68: .\.venv\Scripts\python.exe -B -X utf8 -c
   "import polyakov_response as p; p.save_flux_channel_benchmark()".
@@ -3034,7 +3034,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous66 was PROGRESS. Goal remains ACTIVE; original import complete.
   No new goal/task; no old benchmark reruns. Do not claim stable physical
   medium, formation, new physics or 13Sep2027->12Sep2027 travel.
-- Completed MAGNETIC_STATE_CLOSURE block in polyakov_response.py;
+- Completed MAGNETIC_STATE_CLOSURE block in scripts/polyakov_response.py;
   polyakov_closure_results.json. New self-consistent MONOPOLE state only.
   Reuses existing point-magnetic paths and actual static same-source collar.
   One common osculating isolated-RN clock A=N100/b100; not a completed
@@ -3083,7 +3083,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   https://arxiv.org/pdf/1409.3743 Eqs1-3 weak optical metric. Their geodesic
   paths do not establish our prescribed magnetic curves in curved space.
 - RESEARCH updated with result/derivation/limits; new scientific plot
-  magnetic_state_closure_progress.png/.pdf via existingplotmodule.
+  figures/magnetic_state_closure_progress.png/.pdf via existingplotmodule.
 - Closure-only replay used source SHA256
   c14ed3590cb5ad43d8a222e4801a4c2ef13def6cacbb95d4aab9632a7c7abce9;
   finalsource also has the separately checked ANGULAR_CASIMIR_RESPONSE block.
@@ -3119,13 +3119,13 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Final67 artifacts verified; source/plot syntax passes; all numerical and
   symbolic checks above pass. Prior66 source/report bytes and old artifacts
   preserved; owned67 scratch removed. No67 tool jobs remain running.
-  polyakov_response.py SHA256 63acfdada918b2c75d72b334df3644bbd2a6a41abbd7d71cb986f25164c59dd7
-  polyakov_closure_results.json SHA256 ff0d53845c03f8b19c0bc69e8e77be23e045149e7046920e13018d5eb7a571d0
-  polyakov_angular_results.json SHA256 cc3acd63a60b97377b95b671ca21ebfdede90d435b7f80c1a9f4dcc1ced6b267
-  quantum_horizon_plot.py SHA256 b90ca335d453036cf7fee372933f0b2a1e9b389ed034673cf4cd4dcbe133d42b
-  magnetic_state_closure_progress.png SHA256 ebb8961dbc7cb841c28742e613ca0faf4cba1ff3c124945d67a612ee117426ce
-  magnetic_state_closure_progress.pdf SHA256 147f7da2ddc1bf052ce303dbed5107e45e715b501e2226c1c30924d75612e5bf
-  RESEARCH.md SHA256 4a6251a2439cd6f3985c180f2a1d4e128c2c5f19e83d0b5e31fc3a2d5eeb5e8a
+  scripts/polyakov_response.py SHA256 63acfdada918b2c75d72b334df3644bbd2a6a41abbd7d71cb986f25164c59dd7
+  results/polyakov_closure_results.json SHA256 ff0d53845c03f8b19c0bc69e8e77be23e045149e7046920e13018d5eb7a571d0
+  results/polyakov_angular_results.json SHA256 cc3acd63a60b97377b95b671ca21ebfdede90d435b7f80c1a9f4dcc1ced6b267
+  scripts/quantum_horizon_plot.py SHA256 b90ca335d453036cf7fee372933f0b2a1e9b389ed034673cf4cd4dcbe133d42b
+  figures/magnetic_state_closure_progress.png SHA256 ebb8961dbc7cb841c28742e613ca0faf4cba1ff3c124945d67a612ee117426ce
+  figures/magnetic_state_closure_progress.pdf SHA256 147f7da2ddc1bf052ce303dbed5107e45e715b501e2226c1c30924d75612e5bf
+  docs/RESEARCH.md SHA256 4a6251a2439cd6f3985c180f2a1d4e128c2c5f19e83d0b5e31fc3a2d5eeb5e8a
 - NEXT: carry this actual sourced angular response into the varying-radius
   finite collar, retaining coupled Einstein-Maxwell constraints and a
   consistent quantum stress/current response. Existing homogeneousmass6
@@ -3141,8 +3141,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   from the existing static throat to physical radius100re, retaining the
   same Polyakov source and angular equation. This is NOT a continuation of
   the finite pulse and is not formation/dynamic stability/global closure.
-- New STATIC_QUANTUM_COLLAR marked block in polyakov_response.py and
-  polyakov_collar_results.json; prior code outside insertion and all prior
+- New STATIC_QUANTUM_COLLAR marked block in scripts/polyakov_response.py and
+  results/polyakov_collar_results.json; prior code outside insertion and all prior
   response/finite/boundary/junction,mmp/forward data unchanged.
 - Proper distance variables: R=1+alpha*y,M=1+alpha²*h,n=logN,x optical;
   beta²=y²/R²-2h/R,b=alpha*beta,B=y/R²+alpha*h/R-Omega²exp(-2n)/6,
@@ -3192,7 +3192,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   plot1871f535206967200c497bccfba79e95ee70a230a6c23cb125cda0cc20f72a6c
   PNG8c68d0cf9356eafe468eaa881e0c778c14913deb908df6fdd25272017ceda6b0
   PDFda03e7683e44984d0eaac79877f01090528877b0f720f1eae7e3e849f70667d7
-- Report66 published at top of RESEARCH.md with prior bytes preserved;
+- Report66 published at top of docs/RESEARCH.md with prior bytes preserved;
   final hashes/syntax/source-preservation checks pass. Owned scratch cleaned.
 - Next: reuse EXISTING magnetic-path/optical integrals and insert this
   finite collar's clock/stress data, subtracting overlaps consistently.
@@ -3205,8 +3205,8 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous64 was PROGRESS. Goal remains ACTIVE. Import complete; no
   reimport/newgoal/newtask. No live calculation or unattended job remains.
   Code graph unavailable for this project (not indexed); read current source.
-- New marked SOURCE_RETAINING_JUNCTION block in polyakov_response.py and
-  polyakov_junction_results.json reuse the finite solver and cached splines.
+- New marked SOURCE_RETAINING_JUNCTION block in scripts/polyakov_response.py and
+  results/polyakov_junction_results.json reuse the finite solver and cached splines.
   Prior source outside insertion and all prior linear/finite/boundary,
   mmp/forward data are unchanged. Full focused benchmark2.55s.
 - Radiation-only necessary test, Maxwell subtracted: a=(1+w)/(1-w)>0,
@@ -3252,7 +3252,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   plotting code. No redundant historical full-suite reruns.
 - Run: .\.venv\Scripts\python.exe -B -c "from polyakov_response import save_junction_benchmark; save_junction_benchmark()"
   Plot: quantum_horizon_plot.source_retaining_junction_progress().
-  New source_retaining_junction_progress.png/pdf; prior plot bytes preserved.
+  New figures/source_retaining_junction_progress.png/pdf; prior plot bytes preserved.
 - Frozen SHA256:
   polyakov_response.py31a58bb81187c5859cdf4b98894d18411e3b4ac12fffa28bb45946a0d1af40aa
   junctionJSONacac4d763c7d4dcf95dfd472eb19595b15f4adec2ac4897fd2589a8e9331466b
@@ -3272,7 +3272,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous63 was PROGRESS. Goal stays ACTIVE. Original import is complete.
   No active calculation/background job. Do not repeat full historical tests.
 - Same assumed finite-source throat as63: alpha1e-9, u,v in[0,1.5].
-  Added marked RADIUS_TUBE_DIAGNOSTIC block in polyakov_response.py and
+  Added marked RADIUS_TUBE_DIAGNOSTIC block in scripts/polyakov_response.py and
   polyakov_boundary_results.json. Prior source outside insertion, prior
   finite/linear results, mmp and forward code/data are byte-preserved.
 - Track continuous Y=Ybar(.05) branches from t=.075,x=+/-.05 with
@@ -3320,7 +3320,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   RESEARCHc84c8d144df5c1b631d7fd61f277dadab7f2aee7c6acf2176e87673f03124fa2
 - Sources opened: Hayward gr-qc/9303006 SecIII for marginal classification;
   Visser-Wiltshire gr-qc/0310107 Eqs7-8,22-24 for junction conventions.
-  Report64 prepended to RESEARCH.md preserving all prior report bytes.
+  Report64 prepended to docs/RESEARCH.md preserving all prior report bytes.
 - Next useful calculation: a source-preserving exterior connection with
   compatible boundary motion, rather than forcing these area levels to be
   permanent timelike boundaries. Formation, full4D source and global
@@ -3329,7 +3329,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 ### Finite positive-energy nonlinear response — increment63, PROGRESS
 - Previous goal turn62 was PROGRESS. Goal remains ACTIVE. No reimport, new
   goal or task. This increment tests an assumed throat; it does not form one.
-- Added one marked finite-source block to polyakov_response.py and new
+- Added one marked finite-source block to scripts/polyakov_response.py and new
   polyakov_finite_results.json. Old source outside insertion and old linear
   JSON are byte-for-byte preserved. Existing mmp/forward dynamics unchanged.
 - Exact finite CFT map: amplitude .15752457643370363, width1.2, start.15,
@@ -3369,11 +3369,11 @@ fallback. Give honest confidence in checks, never promise physical success.
   exactly in6.00s, session67554 terminal. No simulation remains running.
   No historical full suite; increment61 wide direct-peak failure remains.
 - Frozen SHA256:
-  polyakov_response.py 0cb2c64c294ef24bc7d9ffe08a53ea317af498a859cad4a629727be6ac5c9ad3
-  polyakov_finite_results.json d4946c66141c8c9f0adfa7658c96a93079839dca0e687f3ad407fb4397332528
+  scripts/polyakov_response.py 0cb2c64c294ef24bc7d9ffe08a53ea317af498a859cad4a629727be6ac5c9ad3
+  results/polyakov_finite_results.json d4946c66141c8c9f0adfa7658c96a93079839dca0e687f3ad407fb4397332528
   prior linear results a1d1ed135d7e28b6d3f03f566a42f1b5ff45341e3183803d1222f76e9d993cf0
-  RESEARCH.md d21e4c7284bc101f8fdce4c4c0ea7470de6eba187affd6a15a4a2cc446d9bf1e
-- New finite_energy_response_progress.png/.pdf rendered from frozen data,
+  docs/RESEARCH.md d21e4c7284bc101f8fdce4c4c0ea7470de6eba187affd6a15a4a2cc446d9bf1e
+- New figures/finite_energy_response_progress.png/.pdf rendered from frozen data,
   visually inspected by worker and root; readable source, geometry and local
   null-ray panels. Plot source SHA256
   7a0a17ec9c3e14c02a4091366875b42a28246d3fe3481e412c7f07f7bd6e0fa5;
@@ -3423,7 +3423,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   minimum physical return G=1.164790334861480 /1.115499919096770.
   Gain refinement<=2.71e-12, inverse endpoint refinement<=1.87e-12,
   centered inverse derivative relative difference<=3.72e-10. Checks pass.
-- NEW polyakov_response.py and polyakov_response_results.json solve a
+- NEW scripts/polyakov_response.py and results/polyakov_response_results.json solve a
   separate coupled linear Einstein-Polyakov characteristic benchmark.
   Alpha1e-9,k=alpha/3,omega_squared2.094409452695286,re1;
   u,v in[0,1.5],radius-independent Polyakov action,p_perp0.
@@ -3441,16 +3441,16 @@ fallback. Give honest confidence in checks, never promise physical success.
   max conformal-log change2.3157255685e-13.
   Root read equations/source and independently replayed all saved fields
   exactly (.895s); all declared checks pass. No full historical suite rerun.
-- New combined coupled_response_progress.png/.pdf visually inspected by
+- New combined figures/coupled_response_progress.png/.pdf visually inspected by
   worker and root. Two tests clearly separated: geometry panel does not
   predict assumed phase error in timing panel. Prior plot bytes preserved.
 - Frozen SHA256:
-  mmp_pulse.py 4c619d26af2b19c6bcb64a6d4fd2317034f6dc9759de692b49e5c21ea7a369c3
-  mmp_pulse_results.json 3866462ead97b41d48b43f00f70f09f5cc273d9df6b9b4bb94daf5a08a23756d
-  polyakov_response.py c232d79af2bbe118c2e6492ff264295024b8b4176e26ea2c46e5c8c7bc74b9fd
-  polyakov_response_results.json a1d1ed135d7e28b6d3f03f566a42f1b5ff45341e3183803d1222f76e9d993cf0
-  RESEARCH.md a2d9f918ed9ae713a30b22338e993774159241eb3eb7e8c68f653cbad5872c97
-  quantum_horizon_plot.py eb1533452b70e919f3d6d48ef25181fb7f54361a9c4b17572246bd20c48b4b8d
+  scripts/mmp_pulse.py 4c619d26af2b19c6bcb64a6d4fd2317034f6dc9759de692b49e5c21ea7a369c3
+  results/mmp_pulse_results.json 3866462ead97b41d48b43f00f70f09f5cc273d9df6b9b4bb94daf5a08a23756d
+  scripts/polyakov_response.py c232d79af2bbe118c2e6492ff264295024b8b4176e26ea2c46e5c8c7bc74b9fd
+  results/polyakov_response_results.json a1d1ed135d7e28b6d3f03f566a42f1b5ff45341e3183803d1222f76e9d993cf0
+  docs/RESEARCH.md a2d9f918ed9ae713a30b22338e993774159241eb3eb7e8c68f653cbad5872c97
+  scripts/quantum_horizon_plot.py eb1533452b70e919f3d6d48ef25181fb7f54361a9c4b17572246bd20c48b4b8d
   newPNG 7859a1615336322b72bec9752aba3b315141bcedf8e975ebd90b45c32f20aeff
   newPDF b3033a6e05994e2e6c4479b40f54030806f665f2dcaf125478872eb68b13e476
 - Formation agent's next-step advice: reuse exact finite state
@@ -4133,7 +4133,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   and smooth approximation justify the sampler. No novelty claim.
 - Root exact byte reconstructions preserve all50 core/data/report content.
   Current report8921efec429eae632b688528c153bca7f004273989974dc9f62ce9bbe2d89f16.
-  Root visually accepted nonstationary_support_progress.png; figure's
+  Root visually accepted figures/nonstationary_support_progress.png; figure's
   saved-data checks pass and old plotting source preserved exactly.
   PNGdb77f3a78c8074647fede05336ade4ac261c9e79a4d274549778eba039683d22;
   PDF227dffac431b764afbf80b3baf1ee3659a0eafc7aaa630c0f3dcdda68459de13;
@@ -4190,7 +4190,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   reconstructed exactly ataf6e9e18... andc38810f0... . No numerical job runs.
   Final report2ee5e62a714e9b2f018e18e085fb3bc2156551a0a0f3ba75766e34476fde6bf5;
   plot source7da57d4b14cef916498eb209e4fdbae265c7a5cf74960e06d803da4a464aa7bb.
-  Root visually accepted charged_mouth_progress.png, explicitly titled
+  Root visually accepted figures/charged_mouth_progress.png, explicitly titled
   'Static electrical model - not a physical medium'.
   PNGfeaf2911f6e3a0bca9c72d6591854c69c02160b738a09bd6398d6097f173da30;
   PDF5d5e20c72cdc922f0b4aae0e680786fa08fdaae5f92435d66b231c53daac4bdb.
@@ -4254,7 +4254,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Forward32 hashes a3652aa2…/385bfb9b… unchanged. No numerical job running.
   Actual-code audits by mass_audit and reproduce_import PASS, including exact
   focused replay. All increment deliverables and reviews are complete.
-- Root visually accepted throat_charge_progress.png; PNG hash
+- Root visually accepted figures/throat_charge_progress.png; PNG hash
   d1052d776a204807102cfe172c86bcfa50d13d6643b82109e6dfffa6af86a3a8;
   PDFd0893926355c0a7b5da12441f99be14c40e93aaaeecd108a343e5405893f7dd1.
   Plot sourcec38810f089c4b967664fcdd61c24da158fc77c4e00d00c195c1f7ccb5f3c5a3c;
@@ -4334,7 +4334,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   external drive realization remain unresolved. No damping/stability proved.
 - Root preserved all47 prior source/data byte-for-byte at19f1ade2…/c5aadcbd…;
   forward32 exact a3652aa2…/385bfb9b… unchanged. No live numerical jobs.
-- Figure loop_retarded_progress.png/.pdf complete and root visually accepted.
+- Figure figures/loop_retarded_progress.png/.pdf complete and root visually accepted.
   Plot sourcecde718451dfcd224fdf86b3d596db9c76aff5ef756e8c475c4e2e171edf1043c;
   PNGa0c3d90b8b2e1c87c66ae7e8b388bdaed894364a9e27df099854481aec30e07d;
   PDF4ecf35f45ffc53afb5f32988d2cfc8fafbffd1ee747064828bdaf3dda4a22423.
@@ -4458,7 +4458,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   SHA0277b7af… and all old source bytes to SHAe0ce7791… exactly, including
   after the metadata clarification. Forward32 source/data remain unchanged.
 - medium_picture owns additive rotating_screening_progress PNG/PDF and
-  plot helper; formation_updates owns <=110-line RESEARCH.md prepend.
+  plot helper; formation_updates owns <=110-line docs/RESEARCH.md prepend.
   Both final artifacts accepted. Plot source
   b381c85144ec0d70d86a1e2aed1a81202ff825cdae3697f901e009d65a8de11f;
   PNG e0a2957161836da537fa711624f0eec25d718b9ecc26bb8e872204d749bd4db1;
@@ -4510,7 +4510,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   self-redshift and finite-surface lapse/simultaneity remain separate.
   Equal exchange-symmetric mouths have equal rates, creating no relative
   time offset. Source factor1+3/D is only this isolated clock correction.
-- smooth_audit owns future_time.py/results for proposed32nd discrete-RF
+- smooth_audit owns scripts/future_time.py/results for proposed32nd discrete-RF
   block. Equations independently approved by mass_audit. Native C temporary
   executable with installed GCC, <=100k-turn cost/independent-short-ODE
   pilot before a full33.76m actual-turn representative with refinement.
@@ -4555,7 +4555,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Prior plot source byte preservation checked by owner. In-memory rendering
   from final forward JSON reproduces PNG exactly (PDF matches except its
   timestamp); wrapper wording did not change plotted data. No rerender needed.
-  RESEARCH.md final154-line prepend reviewed by root, new sectionline3,
+  docs/RESEARCH.md final154-line prepend reviewed by root, new sectionline3,
   reproductionline123, priorhistoryline157. SHA
   3d4d9e7fd837a1fec8a69127c24a91f4db0df3056cf493aabc04b52753c324ba.
   Root executed the exact documented reproduction successfully and restored
@@ -4607,8 +4607,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   of full-ramp instability. It does not bound
   accumulated full-ramp gap effects. Four samples do not prove capture of
   the whole initial box, full apparatus confinement or a working receiver.
-- medium_picture owns new sourced_mouth_rf_progress.png/.pdf and an
-  additive plot helper. formation_updates owns the RESEARCH.md prepend;
+- medium_picture owns new figures/sourced_mouth_rf_progress.png/.pdf and an
+  additive plot helper. formation_updates owns the docs/RESEARCH.md prepend;
   figure is frozen and root visually inspected it: readable, no clipping.
   Plot helper source3d0db7e662654c939bfad8609c11dcb8884e39324650d4abc871595453477923;
   PNG013c1b5b740f9eec9da29796555de2a682230367014132f7e3e239675c696bc4;
@@ -4618,7 +4618,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   analytic replay PASS1.011s, prior30LF restore61d0c82…. Fresh root rerun
   of both refined16turn windows reproduces every physical/numerical value
   exactly in.963s, excluding nondeterministic execution_seconds.
-- RESEARCH.md final prepend is read and accepted by root; SHA
+- docs/RESEARCH.md final prepend is read and accepted by root; SHA
   aec51ba04b0925fa1e04966dd7e25e1192cb43e2a69b6f22dc548ad7d3acdad4.
   Root verified prior history exact SHA1b58fd47…; new section line3,
   reproduction line240, previous history line298. Reproduction correctly
@@ -4638,7 +4638,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ### Exterior Maxwell patch, staged RF and fiction checks — PROGRESS
 - Current turn PROGRESS; goal remains active. Import/model reproduction is
-  complete. The user-requested fiction task produced FICTION_PHYSICS.md:
+  complete. The user-requested fiction task produced docs/FICTION_PHYSICS.md:
   six sourced story mechanisms and two diagnostic calculations. Root read
   the report, opened primary quantum-operation/postselection papers, and
   independently ran its standard-library block: raw TV0, selected TV1,
@@ -4683,7 +4683,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   JSON61d0c82de43ab18e409e11509302c152d4f5b7099ae468be5b36bd0276ce1b01.
   Radiation14.178212719eV is for one smoothreferenceproton; it is not
   totalapparatus/source radiation or an energy-recovery budget. No jobs.
-- medium_picture completed patch_rf_progress.png/.pdf and helperatline2849.
+- medium_picture completed figures/patch_rf_progress.png/.pdf and helperatline2849.
   Root inspected finalfigure; clipping/annotation spacing fixed beforefreeze.
   Source644d0dd4306e2cdd665e738e8d121652a433142fbc37227fb56452d9e8cad206;
   PNGe3530ee1bb9a97532ce980c1e1bbdc1b4e8a4a259341aff7d8b4ccb520b92074;
@@ -4697,7 +4697,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   to SHA803afe8d63061de42971143cfd2d499d9a2d78ab2007235223601e25ed88e6be.
   FinalRESEARCH SHA1b58fd470874c44996fc3984a59548762c84131f15278f11c961e987f4f6868d;
   378560bytes,zeroCR. No reportwork remains.
-  Quantum project task completed section8 in QUANTUM_COMPLETION.md; root
+  Quantum project task completed section8 in docs/QUANTUM_COMPLETION.md; root
   read it; coupled_misner independently reviewed the formulationPASS.
   Transfer signs, sourceintegral orientation, RNpotential, companionfield
   sign and overlap scales are consistent. S1and sourcedreconstruction are
@@ -4746,7 +4746,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   This identifies the Maxwell response that must be solved next; the field
   has not yet been corrected. Angular stress is negative semidefinite and
   cannot be substituted for the earlier positive isotropic taper pressure.
-- smooth_audit owns future_time.py/results and new29th spectrum block.
+- smooth_audit owns scripts/future_time.py/results and new29th spectrum block.
   Main27830 and final spatial29152 are terminal exit0; frequency refinement
   also completed. No physics jobs remain. No trajectory reruns this increment.
   Final evaluated radiation3.2740472480895234TJ; omitted positive X80 tail
@@ -4781,7 +4781,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Proposed unsimulated benchmark: current C~195.662m,gamma10,250eV net
   removal/turn to5.3MeV; continuum24.11slab/7.072sproper,1T->.01070T.
   Electrical energy recovery and low-energy extraction remain unproved.
-- Final loop_source_radiation_progress.png/.pdf rendered and inspected.
+- Final figures/loop_source_radiation_progress.png/.pdf rendered and inspected.
   Source a9b42eb07b26274ac278132a9553362640654ada780213dfe3abfcf9327c54d7;
   PNG701116633433c891bff921485d9b00a7ac6631a3bec1d613dae068999b9cd358;
   PDF2d68d701a438a3c14eb1879397519a5127d3870581ee5a5a5ea4987f98b6130a.
@@ -4861,20 +4861,20 @@ fallback. Give honest confidence in checks, never promise physical success.
   blocks recover exact LF SHAe0e87fcc21d3db3ff8d540e83653b4aaa17177d00b6e957e86fc310b5416c55c.
   Frozen sourceeee735ed1eef15af31182e25e9ef5ad6324aa4b863a8a43f36ea54a9962dae07;
   JSON688185af47ae5368369281852d99f06b86c6a970e5a2ef18e7cdad0be4e7b1cd.
-- New taper_timing_progress.png/.pdf rendered and visually inspected by
+- New figures/taper_timing_progress.png/.pdf rendered and visually inspected by
   author and root. Four panels show taper pressures,8 durations,and selected
   path with offset/two reversals. Prior plotting code preserved byte-for-byte.
   Plot source4eb227acd6758e399abba20c2b8c29690f3447d53bc12e01037156618fc25b34;
   PNG12294cb0d46d421ad89451f30da3bc96c10f3e2e39a88b74de00b4d5e7ae7e47;
   PDF02e541ff3fb315c4d04a1ebc2c39c29e5206bbd044d439a6296789d04dd67b69.
-- SOURCE_FEASIBILITY.md derives isolated prescribed-source vacuum radiation
+- docs/SOURCE_FEASIBILITY.md derives isolated prescribed-source vacuum radiation
   >=0.3676GJ from the exact spatial Fourier expression and positive low-band
   inequalities, not a long-wavelength approximation to the full short pulse.
   Independent Parseval/Bessel/coefficient review passes. Stored energy
   >=6.3552GJ is separate: driver work=W_rad-U0, with total U0 uncomputed.
   Full spectrum, physical conductor/drive response and mechanical traction
   remain uncomputed. Do not add the two lower bounds as a driver demand.
-- QUANTUM_COMPLETION.md recommends complete magnetic-loop lowest-Landau-level
+- docs/QUANTUM_COMPLETION.md recommends complete magnetic-loop lowest-Landau-level
   fermion action, varied in metric and gauge field together. Independent
   radius Ward, spherical limit, normalization, angular spectrum and force
   checks PASS within the leading adiabatic approximation. Derived force
@@ -4925,7 +4925,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Root sessions3918 and67884 are terminal exit0. No historical full rerun.
   Frozen source13cc93955f663262f78930068ac4ff37c69da1b39b6a688a45af7aa2ff3a4467;
   JSON8f2b89ef5a3b0f63ba0f254500925444aa7f62c73c063d40aee10b7007fb72d4.
-- Forward worker owns future_time.py/results. New normalized angular charge
+- Forward worker owns scripts/future_time.py/results. New normalized angular charge
   weight2cos²theta removes the endpoint current-density divergence. Exact
   Jr=-qdot*D*N/(2*pi²*r*b²), D=sqrt(b²-z²), with N the sum of the two radial
   branch indicators; integralJ²/qdot²=0.59046130491792895m^-1. The total
@@ -4960,7 +4960,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Frozen source00f5e4ba718bf874b9deb7ca0f3ec66bf879eaf2aaea8e9353998a625e74dd4f;
   JSONe0e87fcc21d3db3ff8d540e83653b4aaa17177d00b6e957e86fc310b5416c55c.
   Worker sessions61088,31965,41731 and independent91190 are terminal exit0.
-- New finite_boundary_progress.png/.pdf rendered from frozen blocks and
+- New figures/finite_boundary_progress.png/.pdf rendered from frozen blocks and
   inspected by the image agent and root; no clipping/overlap. Figure shows
   boundary data, six exterior response cases, the repaired current profile
   and both reflected trajectories. Opened in Codex (queued). Earlier plot
@@ -4968,7 +4968,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Plot source31acd2129088b05cd4e4c98d41dd984ec41bdedb10f3c3b48a283cc27cd21e02;
   PNG7ed16521e0f7078a5762b80a1df4c761e927ea175b822e5e2cd16a325fe88dc7;
   PDF5028de6862a3ac33559d021e3a552e59673d9780f5467b7f43884bedba99443c.
-- RESEARCH.md now starts with the finite-boundary/regularized-current
+- docs/RESEARCH.md now starts with the finite-boundary/regularized-current
   result, definitions, primary paper links, example coefficients, source
   burdens, trajectory/check table, date limitation and missing physics.
   Root read the new section against frozen results. Historical section text
@@ -4985,7 +4985,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 ### Coupled exterior and causal receiver discharge — current turn: PROGRESS
 - Previous turn PROGRESS; this turn PROGRESS. Goal remains active. Import is
   complete. No goal completion, time machine, new material or calendar route.
-- Root added coupled_exterior_checks at mmp_pulse.py:921 and saved the39th
+- Root added coupled_exterior_checks at scripts/mmp_pulse.py:921 and saved the39th
   block coupled_exterior. All38 preceding blocks recover exact CRLF SHA256
   65b0d57578d352fc6f2ef1d8521d4f5cb4dc539bb5dd025f4bf040a85911dab8.
 - Physical electric-RN polar l1 master, the dual of our magnetic scalar:
@@ -5015,7 +5015,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   syntax/preservation checks pass. Frozen source SHA256
   ddffef54ace51d6fdf86930cb375b211f4b54432ce04425ea8e24c70327aa5ab;
   JSON 8606630aa42e7de87ac194918b7dfe3da8ab26c83dfea54c01bacd5a88613c7e.
-- smooth_audit completed future_time.py/results: causal receiver discharge
+- smooth_audit completed scripts/future_time.py/results: causal receiver discharge
   frozen as26thblock switched_receiver. All25 precedingblocks exactly
   recover LF SHA25adb419a371e5ce481c44bc0f145b4687a24301ab90ab5df21d708aa7661f1c.
   Every prior function AST except run_checks unchanged. Focused cached
@@ -5061,8 +5061,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   multipole sum implies Uoutside20.2m>=6.355200924575e9J. Not dissipation,
   source radiation, fullenergy estimate or universal receiver lowerbound.
   Value saved in switched_receiver.source_energy_lower_bound; rootreadsources.
-- medium_picture owns only additions to quantum_horizon_plot.py and new
-  exterior_discharge_progress.png/pdf; final actualdatafigure rendered.
+- medium_picture owns only additions to scripts/quantum_horizon_plot.py and new
+  figures/exterior_discharge_progress.png/pdf; final actualdatafigure rendered.
   Root inspected PNG11:58:24: clear, no overlap, actualreversalvisible.
   Finalplot sourceSHA a6ae9bd8e0cc4d443aa84720cf370b1cd4a88b3f401709c835eca27245b7c673;
   PNG40419f2eb67ee087f820317bbe0e788279af383f0bee6ff897ad9095bddf8874;
@@ -5149,7 +5149,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   receiver9.8921/storage39.9034m conditional. Finalfrozencomparecenter.167420um,
   downstream3.570022um;lab/proper3.92e−17/4.61e−17s,gamma3.05e−12.
   Independentfieldchecks,old24preservation andplotdata PASS. Nojobslive.
-- Final coupled_receiver_progress.png/pdf rendered from the frozen results.
+- Final figures/coupled_receiver_progress.png/pdf rendered from the frozen results.
   Root inspected the revised PNG: labels, captions and disclosures are clear.
   Plot data assertions pass; earlier plot code is preserved. Source SHA256
   ee2ef4a059668113be6362607c3c1624d1464b0088a85803e658f9eb8294ccef;
@@ -5215,8 +5215,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   within 7.11e-15; mixed Green identity within 6.51e-19 absolute.
   Source framework MMP1807.04726, RN1603.07894, gr-qc/0012006 opened.
   Root verified syntax and exact preservation of all 36 preceding blocks.
-  mmp_pulse.py SHA256 6c100cae2f75d6b8c2152e17f676780ee5c351b0f0c47a5ec3702d88933714a1.
-  mmp_pulse_results.json SHA256 21b66b6c4533822178477b9b96d4bc72d41b4866e16df9ebf5d3daa8037266af.
+  scripts/mmp_pulse.py SHA256 6c100cae2f75d6b8c2152e17f676780ee5c351b0f0c47a5ec3702d88933714a1.
+  results/mmp_pulse_results.json SHA256 21b66b6c4533822178477b9b96d4bc72d41b4866e16df9ebf5d3daa8037266af.
 - Literature follow-up completed: Michelson–Spradlin hep-th/9906056 §3.7
   Eq3.37 magnetic AdS2xS2 physical dipole scalar mass²r_e²=6.
   In Y=cos(theta) conventions, sphere metric trace pi and Aphi=a sin²theta,
@@ -5256,8 +5256,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   60cd9bb2844998ae5baf93e1ca68218f5499d30fc0b4e1f0864d185d8b2a1f5e.
   Root first imposed CRLF mistakenly; corrected LF check matches exactly,
   no data edits needed. Distinguish backward JSON's previous CRLF convention.
-  future_time.py SHA3e9ff1cb5344c01a45e2b52b11b6a0a97397d960f43bc8bf18304cd416bb6de1.
-  future_time_results.json SHA2817b635ebdbe017743c28ecd83b179c845c2bdfbc189e29d7fc4518aeb6a910.
+  scripts/future_time.py SHA3e9ff1cb5344c01a45e2b52b11b6a0a97397d960f43bc8bf18304cd416bb6de1.
+  results/future_time_results.json SHA2817b635ebdbe017743c28ecd83b179c845c2bdfbc189e29d7fc4518aeb6a910.
 - reproduce_import independentcombined3D46154completed42.35s,terminal.
   t18.4810041761271us,tau1.84805746129375us, endpoint
   (−4985.029393065715,−386.6289567487024,−.067195704763795)m;
@@ -5277,12 +5277,12 @@ fallback. Give honest confidence in checks, never promise physical success.
   r0>s,w0>0, w0²−2eC/[p(r0-s)]>0 preventsfutureradialturnin3D.
   Combinedindependentsphericalmargin.91334399628. Implemented and reviewed;
   donotapplyoldmidplanebarrierto3Dlaunches.
-- Figure boundary_launch_progress.png/pdf generated from frozen results;
+- Figure figures/boundary_launch_progress.png/pdf generated from frozen results;
   root visually inspected the final image: readable labels, no clipping,
   correct static-probe and launch-sensitivity scope. RESEARCH updated with
   results, equations, primary citations, next steps and figure. App image
   preview request returned queued; final response embeds local PNG.
-  quantum_horizon_plot.py SHA2551bc56e64cb977c1c062f61918d736c12eea86be027c535133c20efafa3f38.
+  scripts/quantum_horizon_plot.py SHA2551bc56e64cb977c1c062f61918d736c12eea86be027c535133c20efafa3f38.
   PNG SHA4f3a2b019279f2e8ac7c21faa4213040d313b67819c03d9ecb46c090fd79a67e.
   PDF SHA969ef92c10b9f255e83f1fddb1881dba85f085483ecce6b4403dd544507a63b7.
 - This bounded increment is verified; overall goal remains ACTIVE/PROGRESS,
@@ -5412,7 +5412,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - RootsourceSHAcd08c2aee61b50d7a69a0f1ffadfdc90256ad4b1fd43ef9b85840a3090820659;
   JSONSHAf224d408ab0d63b31850f87153668ecee305afd8e04977d8dd2d76fcdcacc58d.
   RESEARCHnewtopopticalsectiondone. No rootcomputejoblive.
-- Forward work COMPLETE for this increment: smooth_audit owns future_time.py/results.
+- Forward work COMPLETE for this increment: smooth_audit owns scripts/future_time.py/results.
   Geometryparameterizationdefaults reproduceall21oldblocks.18newcases
   completed:6checkpointsuccess,12notwithin30us. No furthersearchplanned.
   Selecteda=h1.25m,I-5.25MA,T1.28us,phi6.1869361023549825.
@@ -5477,7 +5477,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   audited path calculation, source distribution and leading variational
   closure and finite-conductor calculation are implemented and verified.
   Goal ACTIVE/unbudgeted. No import, goal or thread restart is needed.
-- Root owns mmp_pulse.py, mmp_pulse_results.json, RESEARCH.md, TASK_STATE.md.
+- Root owns scripts/mmp_pulse.py, results/mmp_pulse_results.json, docs/RESEARCH.md, TASK_STATE.md.
   Added magnetic_return_path_checks(), wired additively in run_checks, and
   saved magnetic_return_paths (34 result blocks). All33 previous blocks
   exactly recover prior CRLF hash
@@ -5513,9 +5513,9 @@ fallback. Give honest confidence in checks, never promise physical success.
   <=pi²eps³/(6D²)=1.645e-13. It does NOT bound actual escaping-mode stress,
   anomaly changes, finite-q corrections, leakage or backreaction.
 - Current frozen root hashes:
-  mmp_pulse.py bb8234196f0de2167c5273ecfa870ea7f058be49d25c63b543c4a53bf78bec5d
-  mmp_pulse_results.json 66a58e7205f3427d0ba738fa84929947ce9eeabb4d0dc0bffbf48786ff7ed156
-- Forward: smooth_audit owns future_time.py/results. Finite wire/control
+  scripts/mmp_pulse.py bb8234196f0de2167c5273ecfa870ea7f058be49d25c63b543c4a53bf78bec5d
+  results/mmp_pulse_results.json 66a58e7205f3427d0ba738fa84929947ce9eeabb4d0dc0bffbf48786ff7ed156
+- Forward: smooth_audit owns scripts/future_time.py/results. Finite wire/control
   pair audit complete; mass_audit independent formulas/numbers PASS.
   Leading surface-current selfL=mu0*a*(ln(8a/b)-2), exact filament
   M=.709299630929uH for a5m,separation10m. Peak pairU=(L+M)I²;
@@ -5550,7 +5550,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   subsection, no materialcorrections. Final integrated implementation, data
   and figure review completed. Source-preservation audit also passes:
   removing only conductorhelper and itscache/hook reconstructs exact prior
-  future_time.py SHA d4ff8c90f288ae6e89ecb78cae9a12fa3fd797673b78aac1f87434fb4a472935.
+  scripts/future_time.py SHA d4ff8c90f288ae6e89ecb78cae9a12fa3fd797673b78aac1f87434fb4a472935.
   Increment complete; broader goal remains ACTIVE and unachieved.
 - NEXT backward: finite-cutoff sensitivity of optical closure and angular
   gravitationalresponse, not average-only spherical substitution. Coupled's
@@ -5604,7 +5604,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   andnormalizedpressure/massunits andfinitecutoffquantifier. Numericcases
   unchanged. Sourcesopened:gr-qc/0310107IsraelEq8,2102.03544chargedPolyakov
   exterior(Boulwarescalar/regularizedlift,notourNSstate),MMP1807.04726.
-- Forward:smooth_audit owns future_time.py andJSON. Parameterized oldretarded
+- Forward:smooth_audit owns scripts/future_time.py andJSON. Parameterized oldretarded
   controloptionalpulseparameters/screening; screening mustacceptnetdecelerating
   validtrajectories anddistinguishfailedODE/time-limitednonarrival/uncleared.
   Defaultoldcontrol+sourceaudits reproduceexactly. Searchclosedat21trials.
@@ -5624,18 +5624,18 @@ fallback. Give honest confidence in checks, never promise physical success.
   source|dI/dt|1.9129915e13A/s. Radiationreduces2991.407004868351times,
   butstoredmagneticenergy/circuitlossesareunmodeled; nocompletenergyreductionclaim.
 - Modelsource/resulthashes atfinalwrapper:
-  mmp_pulse.py 940c6fa1dfb89de76f5516d0709d377b3835e508b533c8c27e8b85f2a5060cd6
-  mmp_pulse_results.json 34b4270bdd974fbb3a475c30b690a08f16e6218948555a830f47766ed570de98
-  future_time.py d4ff8c90f288ae6e89ecb78cae9a12fa3fd797673b78aac1f87434fb4a472935
-  future_time_results.json e858ee37fac4a26a169a888ea592c9cdf9f8a5ee92713690b520abbe7ce65de5
+  scripts/mmp_pulse.py 940c6fa1dfb89de76f5516d0709d377b3835e508b533c8c27e8b85f2a5060cd6
+  results/mmp_pulse_results.json 34b4270bdd974fbb3a475c30b690a08f16e6218948555a830f47766ed570de98
+  scripts/future_time.py d4ff8c90f288ae6e89ecb78cae9a12fa3fd797673b78aac1f87434fb4a472935
+  results/future_time_results.json e858ee37fac4a26a169a888ea592c9cdf9f8a5ee92713690b520abbe7ce65de5
 - Finalscreenaddsnonterminal5kmeventduringpulse: noneof21trials crosses5km
   beforeclearance. Same21attemptsrerun31.10s preservesallpreviousnewblockvalues
   exactly,onlyaddsacceptancefields. Selectedphysics/plotdataunchanged. No
   further sourceeditsplanned. Rootsyntax/hashpreservationchecks pass.
 - medium_picture renderedjunction_pulse_progress.png/.pdf; agentandroot
   inspectedPNG(no materialissues). Allfigureassertions/syntaxpass. Source
-  quantum_horizon_plot.py a723e5ee0b34e05a899df3893e1b81633f62ba16966658b70bd7a42703244dc4
-  junction_pulse_progress.png 3848e9695c4311a162dd4d6f544d102dc684a3d7ad6fbb061595b13620dc002c
+  scripts/quantum_horizon_plot.py a723e5ee0b34e05a899df3893e1b81633f62ba16966658b70bd7a42703244dc4
+  figures/junction_pulse_progress.png 3848e9695c4311a162dd4d6f544d102dc684a3d7ad6fbb061595b13620dc002c
 - FinalindependentauditPASS:reproduce_import SI/Radau session9413completed
   in16.03s(40123RHSevals); no needpollorrestart. LiteralCartesian2048/control
   loop+256/staticloop,SImechanicalmomenta,fullretardedE/Bthroughout(nofield
@@ -5661,7 +5661,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Imported chat and Downloads model already complete. Backward medium stays
   primary; future time dilation is the authorized fallback. No full physical
   time machine, created topology, or prior-day return proved.
-- Root added mmp_pulse.py::polyakov_static_checks(interior), saved JSON
+- Root added scripts/mmp_pulse.py::polyakov_static_checks(interior), saved JSON
   polyakov_static (32keys). All31earlierblocks exactly recover previous raw
   CRLF SHA cf8559db62dc3402272e87e820931bb28b88d100f6df92be940feec44e88b7b6.
   The new helper reproduces exactly; no old solver reruns. Source action:
@@ -5704,7 +5704,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   feed/shieldcurrentscouldchangecoherentradiation, so not universalenergyfloor.
   Finitefarenergydoesnotfixfilamentself-energy divergence. Sourcecoordination
   matters: loopcircumference/c104.8ns>T80ns. Noinstantuniformsinglelocalfeed.
-- smooth_audit saved future_time.py::proton_control_source_feasibility_checks
+- smooth_audit saved scripts/future_time.py::proton_control_source_feasibility_checks
   and JSONsource_feasibility(19keys), preservingall18earlierblocks. Root
   recoveredpriorrawCRLFhash9c83e4d04dc47781a7b2f50e17ca367aa3e8632b32f0c235896fc4bb6d54df62.
   Sourcearc/timefrontsplits; mainordersangular128,time96,source48. Radiated
@@ -5715,18 +5715,18 @@ fallback. Give honest confidence in checks, never promise physical success.
   4.92409519258319e16W relativecontrolpairmidpoint(u40ns), notterminalpower.
   Peak|dI/dt|5.101310711908737e14A/s; duration/circumferencelighttime.763415.
 - Rootsyntaxchecksallmodifiedmodels pass; actualsource/resultSHA256:
-  mmp_pulse.py eb9690467a23334673d88dbb0710c7a105a4b1fa3564705a1f3db8ea31f045a1
-  mmp_pulse_results.json df42c23a319dfd586b281a46b231dbf8c007515960ccc6acc3848a702e2b0ede
-  future_time.py 92e31c9c1d3a7f87093906f989c2c252fe77397a2f1fc00c8462f8457f5704b0
-  future_time_results.json 79019423ec4353fa98f34aa0e4a2fa79eb46545570ac48f50f39333b39481047
+  scripts/mmp_pulse.py eb9690467a23334673d88dbb0710c7a105a4b1fa3564705a1f3db8ea31f045a1
+  results/mmp_pulse_results.json df42c23a319dfd586b281a46b231dbf8c007515960ccc6acc3848a702e2b0ede
+  scripts/future_time.py 92e31c9c1d3a7f87093906f989c2c252fe77397a2f1fc00c8462f8457f5704b0
+  results/future_time_results.json 79019423ec4353fa98f34aa0e4a2fa79eb46545570ac48f50f39333b39481047
 - RESEARCHtophasfinalsource/static equations, calibrations, sourcepower
   scopesandaudits. Both new focused helpers reproduceexactly; source scopes
   and residual normalization clarified following review, numericsunchanged.
   medium_picture renderedpolyakov_source_progress.png/.pdf fromfinalJSON;
   agent and root inspectedPNG: no clipping, model/trajectory limits clear.
   Allfigureassertions and finalASTchecks passed; oldplotmainnotrerun.
-  quantum_horizon_plot.py 1975137593879efc16ac0c078dd946734268a232a5383ff654f658ff2ad69b10
-  polyakov_source_progress.png 7150cd0003f780299e73cf113651fb38b56888cad9f77cd6df4d829afb991781
+  scripts/quantum_horizon_plot.py 1975137593879efc16ac0c078dd946734268a232a5383ff654f658ff2ad69b10
+  figures/polyakov_source_progress.png 7150cd0003f780299e73cf113651fb38b56888cad9f77cd6df4d829afb991781
   All agent jobs complete; no live computation or background work promised.
 - NEXT primary: exterior/state-compatible matching and actual dynamical
   perturbations using specified source, not another static-only claim.
@@ -5740,7 +5740,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Imported ChatGPT/Downloads context is already complete. Backward medium
   remains primary; latest steering explicitly permits future time dilation
   if backward travel fails. No physical apparatus or past return proved.
-- Root added mmp_pulse.py::angular_metric_checks(interior), integrated into
+- Root added scripts/mmp_pulse.py::angular_metric_checks(interior), integrated into
   run_checks, with JSON angular_metric (31 keys). The earlier 30 sections
   exactly recover their prior raw SHA256 when serialized with Windows CRLF.
   Initial LF-only hash assertion failed because of newline convention;
@@ -5767,7 +5767,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   pulse pressure change is order alpha^2 epsilon. Full source/trace/radius
   calibration remains needed. MMP metric-proportional terms shift reference
   radii; full vs trace-subtracted static central area differs alpha/3.
-- smooth_audit added future_time.py::proton_retarded_control_checks(ring,coils),
+- smooth_audit added scripts/future_time.py::proton_retarded_control_checks(ring,coils),
   JSON proton_retarded_control (18 keys). Prior17 sections recover exact old
   CRLF raw SHA. Focused helper reproduces saved block exactly (~6.2s).
   Original storage coils unchanged; two control loops radius5m at
@@ -5790,17 +5790,17 @@ fallback. Give honest confidence in checks, never promise physical success.
   Actual changed energy/angularmomentum escape bound has saved margin.00409588;
   independent512cell+tail bound margins.00767058/1.75237107. High precision
   is not formal outward-rounded interval certification; exact midplane only.
-- RESEARCH.md top has equations, source conventions, final numbers, independent
+- docs/RESEARCH.md top has equations, source conventions, final numbers, independent
   audit and limitations. medium_picture added angular_control_progress() to
-  quantum_horizon_plot.py and rendered PNG/PDF. Agent and root inspected PNG;
+  scripts/quantum_horizon_plot.py and rendered PNG/PDF. Agent and root inspected PNG;
   pulse timing, changing gamma, path and one-component residual scopes clear.
   All figure assertions pass. Old main/plots not rerun. Source/result hashes:
-  mmp_pulse.py b78413f1d359c21cc90028fb07d4d59d6ff531dd51211ce9e3ada240d4f0e3b9
-  mmp_pulse_results.json cf8559db62dc3402272e87e820931bb28b88d100f6df92be940feec44e88b7b6
-  future_time.py 6a2aa40d9d77faeb4f1363be196821b3fec43d65c121e1656d147947682c1641
-  future_time_results.json 9c83e4d04dc47781a7b2f50e17ca367aa3e8632b32f0c235896fc4bb6d54df62
-  quantum_horizon_plot.py 44cc0667b878be3164834e92af4b2a8decd5ebc5df558c303b1204f62b827b27
-  angular_control_progress.png 1908ee212e706eab7448a9eba73c26d4aa2b02e57689d658f74319f30033be33
+  scripts/mmp_pulse.py b78413f1d359c21cc90028fb07d4d59d6ff531dd51211ce9e3ada240d4f0e3b9
+  results/mmp_pulse_results.json cf8559db62dc3402272e87e820931bb28b88d100f6df92be940feec44e88b7b6
+  scripts/future_time.py 6a2aa40d9d77faeb4f1363be196821b3fec43d65c121e1656d147947682c1641
+  results/future_time_results.json 9c83e4d04dc47781a7b2f50e17ca367aa3e8632b32f0c235896fc4bb6d54df62
+  scripts/quantum_horizon_plot.py 44cc0667b878be3164834e92af4b2a8decd5ebc5df558c303b1204f62b827b27
+  figures/angular_control_progress.png 1908ee212e706eab7448a9eba73c26d4aa2b02e57689d658f74319f30033be33
 - NEXT primary: specified renormalized angular pressure/effective source and
   exterior-compatible initial/boundary data for evolving metric/radius/mouths.
   Do not merely multiply the old cutoff lapse by exp(psi): cutoff displacement
@@ -5819,7 +5819,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   in the exact storage-coil field. Goal ACTIVE and unbudgeted. No new task,
   goal, import, frozen gravity rerun, or claim of physical time travel.
 - Root extracted existing nonlinear solver to
-  mmp_pulse.py::nonlinear_pulse_solution(epsilon, refinement=1, loops=4,
+  scripts/mmp_pulse.py::nonlinear_pulse_solution(epsilon, refinement=1, loops=4,
   samples=None, interior=False). Existing nonlinear_pulse_checks delegates
   to it with the original samples. coupled_misner independently ran that
   complete old block: EXACT semantic match, SHA256
@@ -5854,7 +5854,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   not later fluctuation control. mass_audit unequal-clock independent helper
   residual1.9e-14, RMS integrals agree3.6e-15; coupled_misner derivatives and
   finite-cutoff baseline independently checked. No duplicate oldgravity runs.
-- smooth_audit owns/completed future_time.py shared coil helper extraction
+- smooth_audit owns/completed scripts/future_time.py shared coil helper extraction
   and proton_finite_coil_escape_checks. JSON17keys, previous16 unchanged.
   Same R31.1405m,gamma10,a50m,z±40m,current1.05988e8Aturn filament source.
   Prescribed post-control pr=p0sinθ,pphi=−p0cosθ,pz0; no control yet.
@@ -5873,18 +5873,18 @@ fallback. Give honest confidence in checks, never promise physical success.
   needs deltaell=1−cosθ>0, requiring azimuthal symmetrybreaking or different
   endpoints. Not a no-go for other axisymmetric escape at differentenergy.
 - RESEARCH top updated with equations, limits and results. New visual helper
-  quantum_horizon_plot.py::interior_escape_progress() rendered final-data
-  interior_escape_progress.png/.pdf. Agent and root inspected PNG; positive
+  scripts/quantum_horizon_plot.py::interior_escape_progress() rendered final-data
+  figures/interior_escape_progress.png/.pdf. Agent and root inspected PNG; positive
   peaks are not clipped, labels/readout scope corrected. All plot validation
   assertions passed. Final zero-input control exactly reproduces saved JSON,
   including corrected stress-unit metadata. Generated temporary case files
   removed. No root or agent computation remains live. Source/JSON hashes:
-  mmp_pulse.py 5b8d3395fec13232ac63838243d7d1a0fb529972613fa61ed83a5a1161732c64
-  mmp_pulse_results.json 3c01d8f2ace5032971e559b9e25f0e291e675dddfd9259a684a0f88077a54e30
-  future_time.py 4f6b82b499473d7315fabe42d21ef8f31211f38f46fe66cba1a19f924beb1efd
-  future_time_results.json 83f5092914b9b4ab39dd31416a0d72a0b9ff4f67499a2875077d1f3405d2cb45
-  quantum_horizon_plot.py 669f24a42b1ce644f81a84066744ab91aff715849a41af9a0ef29baf05375761
-  interior_escape_progress.png 1b59d114620e70baca2d6e742e935134143ee988587eadd445f042830f80d435
+  scripts/mmp_pulse.py 5b8d3395fec13232ac63838243d7d1a0fb529972613fa61ed83a5a1161732c64
+  results/mmp_pulse_results.json 3c01d8f2ace5032971e559b9e25f0e291e675dddfd9259a684a0f88077a54e30
+  scripts/future_time.py 4f6b82b499473d7315fabe42d21ef8f31211f38f46fe66cba1a19f924beb1efd
+  results/future_time_results.json 83f5092914b9b4ab39dd31416a0d72a0b9ff4f67499a2875077d1f3405d2cb45
+  scripts/quantum_horizon_plot.py 669f24a42b1ce644f81a84066744ab91aff715849a41af9a0ef29baf05375761
+  figures/interior_escape_progress.png 1b59d114620e70baca2d6e742e935134143ee988587eadd445f042830f80d435
 - NEXT primary: finite-cutoff/exterior corrections and source-state validity
   for the coupled throat; merely longer/larger pulse runs are not sufficient.
   Forward: finite localized control in the SAME coil field, then3D robustness,
@@ -5902,7 +5902,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   field plus storage trajectory and continuum aperture barrier. Goal ACTIVE,
   unbudgeted. No new goal/task/import or frozen gravity runs. No root process
   remains live; no background work promised.
-- Added mmp_pulse.py::nonlinear_pulse_checks(linear_record), nonlinear_pulse
+- Added scripts/mmp_pulse.py::nonlinear_pulse_checks(linear_record), nonlinear_pulse
   JSON. Reuses oldloop0.1_one_pass for linear limit; all28earlierblocks unchanged.
   FixedD=.1,w=.4,4backgroundloops,sfinal12.9663706144. Initial throat exists,
   fixedleadingAdS2 chart,freeNSvacuum,fixedinducedmetric/dilaton boundarymodel,
@@ -5978,9 +5978,9 @@ fallback. Give honest confidence in checks, never promise physical success.
   PNG/PDFgeneratedandvisuallyinspected, clockannotationmovedbelowcurve.
   Finalmetadata-onlycoilwordingcorrectionsverifiedbyfocusedexactJSONreproduction;
   allnumbersunchanged. FinalSHA256:
-  mmp_pulse.py daee92fb4a5d0e4fde64977e1f5132183e5b2685d32eaa070ba6ddc9ab592966
-  future_time.py 7375a91a088b3f2c727d00b4640798d50a54bc8a05964d62269329e06d752355
-  quantum_horizon_plot.py ce5fa4024fb3287f0fff2bb46784a940585fe729389173d4c2539bcb3a0e0bdd
+  scripts/mmp_pulse.py daee92fb4a5d0e4fde64977e1f5132183e5b2685d32eaa070ba6ddc9ab592966
+  scripts/future_time.py 7375a91a088b3f2c727d00b4640798d50a54bc8a05964d62269329e06d752355
+  scripts/quantum_horizon_plot.py ce5fa4024fb3287f0fff2bb46784a940585fe729389173d4c2539bcb3a0e0bdd
 - NEXT primary: extendnonlinearcoupledclockresponsein time/sourceamplitude
   withrealcausal/approximationchecks; investigatephysicalexterior/source
   matching, notjustprescribedclocksagain. Finitecutoffs,4Dmetric,LLLinteractions,
@@ -5998,7 +5998,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   clocks, necessary nonlinear JT balance test, and a Maxwell-consistent local
   outgoing-field candidate. Goal ACTIVE/unbudgeted. No new goal/task/import;
   frozen gravity calculations untouched. All root processes finished.
-- Added mmp_pulse.py::driven_clock_checks and driven_clock JSON. l(s)=s,
+- Added scripts/mmp_pulse.py::driven_clock_checks and driven_clock JSON. l(s)=s,
   r=s+.05H(s), H'=C-infinity step g(s), static before0, affine r=1.05s-.025
   after1. D=D_fast=.1 is ASSUMED common exterior delay, L0=pi+.1.
   Coordinates/times dimensionless with fixed throat scale; no calendar map.
@@ -6038,7 +6038,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   spread6.55e-13. Full mmp.run_checks exactly reproduces all28saved blocks.
   mass_audit reviewed actual implementation; coupled_misner independently
   reproduced early residuals~1.1e-16 and verified physical qualifications.
-- smooth_audit added future_time.py::proton_outgoing_candidate_checks and
+- smooth_audit added scripts/future_time.py::proton_outgoing_candidate_checks and
   proton_outgoing_candidate JSON; all14previous sections/source preserved.
   Seed is saved nominal kicker departure. Right-handed local(s,x,z) frame;
   w=(s+iz)/a,a1m,A=a sqrt(pi)erf(w)/2,C=exp(-w²),Psi=(Bd+gx)ImA.
@@ -6067,9 +6067,9 @@ fallback. Give honest confidence in checks, never promise physical success.
 - RESEARCH top updated; driven_outgoing_progress PNG/PDF generated and
   visually inspected after fixing legend overlap. Schematic plus timing
   and outgoing trajectory, explicit prescribed/local/unproved labels.
-  SHA256 mmp_pulse.py fc78493b6844bef2919781b364d530526648735c9f79c27f5ece65fdc26f476e
-  future_time.py 4273946dd106144708868711be94fb1b96beb48501d4c36c1096b5b68d1e1b1a
-  quantum_horizon_plot.py e9312b6c98c212973cdf994655dfc3ad130fc51d81954894bf036596f3b62323
+  SHA256 scripts/mmp_pulse.py fc78493b6844bef2919781b364d530526648735c9f79c27f5ece65fdc26f476e
+  scripts/future_time.py 4273946dd106144708868711be94fb1b96beb48501d4c36c1096b5b68d1e1b1a
+  scripts/quantum_horizon_plot.py e9312b6c98c212973cdf994655dfc3ad130fc51d81954894bf036596f3b62323
 - NEXT primary: introduce independently specified weak positive-energy
   boundary pulse with explicit launch/circulation/state/conservation rule;
   solve dynamical r,l plus retarded CFT/bulk response. Do not postdefine force
@@ -6088,7 +6088,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   bound, conditional physical scale matching, finite magnetic-fringe kicker.
   Goal ACTIVE/unbudgeted. No new goal/import/task or old gravity evolution.
   All root processes finished; no background computation is promised.
-- mmp_pulse.py::stationary_balance_checks added; stationary_balance JSON saved.
+- scripts/mmp_pulse.py::stationary_balance_checks added; stationary_balance JSON saved.
   Free positive-energy NS sector: P_long/short=L+/-|Delta|>0,
   f_i=2pi*(<L0_i>-q/24)/P_i², each L0_i>=0. Stationarity removes nonconstant
   stress modes. Equal total chiral means imply f>=-pi*q/(12P_long²), hence
@@ -6128,7 +6128,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - mass_audit and coupled_misner independently checked actual code/state/units,
   exact formulas and physical scope. Full mmp.run_checks() exactly reproduced
   ALL saved blocks after final source edits. Previous keys retained unchanged.
-- future_time.py::proton_kicker_checks and proton_kicker JSON added by smooth.
+- scripts/future_time.py::proton_kicker_checks and proton_kicker JSON added by smooth.
   Exact local vacuum field s=-Y,w=s+iZ,b=Bk/2[tanh((w+l/2)/a)-tanh((w-l/2)/a)],
   deltaB=(0,-Im b,Re b),E=0; analytic in|Z|<pi a/2. Cauchy-Riemann,
   actual complex-vs-real profile and Lorentz energy/clock checked.
@@ -6149,9 +6149,9 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Full future.run_checks() exactly reproduced all14 blocks including kicker;
   worker also verified all13 preceding blocks/source outside addition unchanged.
   Final SHA256:
-  mmp_pulse.py aa00667963f7b8b1511c56034b24ef7cc2c0a90381d6a727a4963e5d0b9cf3c0
-  future_time.py 2a5359b29a8380fde163709dae8a3e484740b20c09519b9900796e9cfdea2f65
-  quantum_horizon_plot.py fcee8fd11b6e751e7b085b6eba4e9774c35e57fac19c616efe1c460a898682cd
+  scripts/mmp_pulse.py aa00667963f7b8b1511c56034b24ef7cc2c0a90381d6a727a4963e5d0b9cf3c0
+  scripts/future_time.py 2a5359b29a8380fde163709dae8a3e484740b20c09519b9900796e9cfdea2f65
+  scripts/quantum_horizon_plot.py fcee8fd11b6e751e7b085b6eba4e9774c35e57fac19c616efe1c460a898682cd
 - balance_kicker_progress PNG/PDF generated and visually inspected; annotation
   and legend spacing adjusted. Dashed post-boundary track explicitly retains
   ideal field. RESEARCH top updated with proofs, state limits, sources and kick.
@@ -6184,7 +6184,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   This turn also PROGRESS: checked helical-vacuum/source test and effective
   RF mean balance + longitudinal focusing. Goal ACTIVE/unbudgeted. No new
   goal/task/import or frozen gravity evolution. No root process remains live.
-- mmp_pulse.py::time_offset_checks: separate fixed flat1+1 quotient family,
+- scripts/mmp_pulse.py::time_offset_checks: separate fixed flat1+1 quotient family,
   (t,x)~(t+Delta,x+L), c=hbar=1. For |Delta|<L, single-valued
   T=t-(Delta/L)x has timelike gradient: global time, no CTC. Equality gives
   null compact identification; beyond it timelike. NOT formation evolution.
@@ -6213,7 +6213,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - mass_audit independently derived source/dilaton and reviewed actual code.
   Focused JSON exactly reproduced, six mismatch samples agree2.9e-14 scaled.
   Reviewed metadata clarifies total j normalization and time-bounded modes.
-- future_time.py::proton_rf_checks: localized effective thin RF gap; no actual
+- scripts/future_time.py::proton_rf_checks: localized effective thin RF gap; no actual
   cavity Maxwell solution. Effective voltage includes transit factor. Uses
   circle family with n=.4,gamma10,B1T,R31.1405m, loss from existing ring.
   Later lab arrival => larger phase; gain+eV sinphi. eta_T=497/300>0,
@@ -6241,9 +6241,9 @@ fallback. Give honest confidence in checks, never promise physical success.
   edits. All prior JSON blocks excluding the new time_offset/proton_rf blocks
   exactly reproduced; final added blocks saved. No old gravity run touched.
   Final SHA256:
-  mmp_pulse.py b4dad22191669487a588c55f4188745a6959ec9b120ff55ed541f639a2efaa54
-  future_time.py 13cab9429a37880d601fd6c0aec7c9ec179c231a425170922a9b4981eb395d1c
-  quantum_horizon_plot.py 970fcc45d820f25bfb89eeedd06e7eaa513b769e6b95756a8209febc81693682
+  scripts/mmp_pulse.py b4dad22191669487a588c55f4188745a6959ec9b120ff55ed541f639a2efaa54
+  scripts/future_time.py 13cab9429a37880d601fd6c0aec7c9ec179c231a425170922a9b4981eb395d1c
+  scripts/quantum_horizon_plot.py 970fcc45d820f25bfb89eeedd06e7eaa513b769e6b95756a8209febc81693682
 - Added offset_rf_progress() to existing plot script. PNG/PDF generated,
   visually inspected (three panels: assumed passage, stress ratios, RF phase
   portrait); final metadata edits do not change plotted numbers. RESEARCH
@@ -6262,7 +6262,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous turn was PROGRESS: protonconfinement and firstintervalMMPfeedback.
   This turn adds complete delayedreturns, analyticD0spectrum, slowprotonloss.
   GoalACTIVE, no newgoal/import/task/gravityrun. No rootprocess remainslive.
-- mmp_pulse.py::loop_return_checks added. Full finitewinding source sums
+- scripts/mmp_pulse.py::loop_return_checks added. Full finitewinding source sums
   integrate A,A',A'',B,B',B'',integralA,integralB through8L, L=pi+D.
   D0,.1, one_pass andcirculating. one_pass i=p-p_L telescopescarriertrain
   to p; circulating i=p gives sum p(x-nL), NOT repeatedexternalinjection.
@@ -6301,7 +6301,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Alloldbaseline/firstintervalkeys unchanged; earlierloopvaluesexactlyreproduced
   wheninteriorreconstructionadded. FinalfullrunexactlyreproducedALLsaved
   MMPkeys includingloops/interior/spectrum; sourcehashesmatchbothrecords.
-- future_time.py::proton_slow_loss_checks: adiabaticcircularequilibria plus
+- scripts/future_time.py::proton_slow_loss_checks: adiabaticcircularequilibria plus
   leadinglinearLL/WKBenvelopes. f1.2-.2r²,h=rf,gamma=sqrt(1+99h²),
   rdot=-kappa*gamma*f²*h/h', kapp3.131383481595541e-11/s.
   At1daydeltaR=-1.404109574175mm,gamma9.99973215639834,
@@ -6336,7 +6336,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Previous turn was PROGRESS (uniform proton ring, fixed-source MMP pulse,
   accepted classical257 grid). This turn adds two checked reduced models.
   Goal remains ACTIVE/unbudgeted. No new import, goal, task or gravity run.
-- future_time.py adds proton_focusing_checks(), exact local source-free
+- scripts/future_time.py adds proton_focusing_checks(), exact local source-free
   Maxwell field from harmonic scalar potential and explicit Aphi.
   Symbolic div/curl/index, Aphi-to-B, potential gradient/Hessian all pass.
 - n=.4, B0=1T, R31.14050793m, radialgradient-.01284500564T/m;
@@ -6356,7 +6356,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - smooth_audit inspected actualODE andAphi and symbolicallyproved both
   invariantderivatives andclockrate; found nodefect. Allassertionspass.
   Finalfuture_time.pySHA46384ef419436bd5cb515a14db327ad1c3ed260c6ab30afb989ab29055f5f1d4.
-- mmp_pulse.py adds boundary_feedback_checks(), preservesallbaselinekeys;
+- scripts/mmp_pulse.py adds boundary_feedback_checks(), preservesallbaselinekeys;
   oldtop-levelmodel/remaining referonlytohistoricalfixed-sourcebaseline.
   Newblock integrates S=A+B,C=A-B normalizedbyalpha on0<=x<=pi,
   D0 and commonfiniteexteriordelayD.1. LeadingJT metric,fixedexteriorlapse,
@@ -6389,7 +6389,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   and exactlyreproducednewJSON. No concretefindings. Priorbaselinepreserved.
   Finalmmp_pulse.pySHAa26ce1470eeead4a3e76ba8f3c0824c0286e4c446ebb826e0476200b2dfcc2e0.
 - RESEARCHupdated withderivations,assumptions,values,sources,reproducecommands.
-  quantum_horizon_plot.py renders proton_focusing_progress andmmp_feedback_progress
+  scripts/quantum_horizon_plot.py renders proton_focusing_progress andmmp_feedback_progress
   PNG/PDF; rootinspected andadjustedfooter/legend/diagramlabelspacing.
   Oldgravity/quantumsourceunchanged. No rootbackgroundprocess remainsrunning.
 - Next: fullreturnMMP linear evolution with explicitpulseconvention, then
@@ -6419,11 +6419,11 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Fine NPZ FILE SHA2561e2baa8cef47cdde5d08ba56c366bd7492f944c92ad66d57dd21439e66384ae8.
   Unpacked state C-order BYTE SHA256d30a7c2668c22a251498b1b6ba0cdf1b33db5b0126696c8acc6ae2569293c44d.
   Agent's initial ambiguous file/array hash label resolved by exact-path reread.
-  Saved ori_radius4_symmetric_weak_refinement_audit.json with explicit hash
+  Saved results/ori_radius4_symmetric_weak_refinement_audit.json with explicit hash
   definitions, all5cases and read-only reproductioncode. Agent reran the
   stored command and exactly reproduced the report/all27 fine diagnostics.
   Audit SHA256e525c38cbae224135f45bad51408918527588bcafe19bcd04822b3e1741e40f1.
-- Added proton_ring_checks() in future_time.py; all prior future results
+- Added proton_ring_checks() in scripts/future_time.py; all prior future results
   exactly preserved, then fullsavedresults reproduced. SHA256:
   48c33dd80bf523d7b4565d2699475be938a6e4127a6e5e4ee76e9f47ce574ecd.
   Proton gamma10,B1T,R31.14050793m,circumference195.66158188m,
@@ -6439,7 +6439,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   No verticalfocusing, 1dayconfinement, injection/extraction, measuredproton
   clock, grain/organic survival or fullfacilitydesign. ConstantsCODATA2022
   verified againstNIST; primarymuonexperiment andCERN equationsopened/read.
-- New mmp_pulse.py and resultsJSON. SHA256:
+- New scripts/mmp_pulse.py and resultsJSON. SHA256:
   8913d76717de3979c8cb8cfc253dcf4d5f5a475dfb1218724fa55afa9922482e.
   FixedleadingAdS2 metric andCasimirsource, classicalchiral j>=0:
   delta_phi=A(u)tan(chi)+A', A'''+A'=-j, retardedzero data.
@@ -6458,7 +6458,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   coefficients arenotuniformsmall-phi4Dlimit orphysicalfixedcutoffcondition.
   mass_audit+coupled_misner independentlycheckedequations/normalization/signs.
 - RESEARCH updated withthree resultsets,scope,sources,reproductioncommands.
-  proton_ring_progress.png/.pdf generatedandinspected; fixedfooter overlap.
+  figures/proton_ring_progress.png/.pdf generatedandinspected; fixedfooter overlap.
   Quantum29section sourceandresults untouched thisturn; frozen code/data intact.
 - Next substantive actions: solveMMP movingboundary+Casimirresponse before
   closure/transmission claims; testprotonringtransversefocusing andfinite
@@ -6479,9 +6479,9 @@ fallback. Give honest confidence in checks, never promise physical success.
   separation small versus local curvature/variation scales (d0/ell<<1 here).
   Ell is unspecified. Not bonded-grain strain/survival; no physical horizon
   crossing. Smaller mass/size does not remove source or quantum obstacles.
-- Final ori_quantum_source.py SHA256:
+- Final scripts/ori_quantum_source.py SHA256:
   9572d0273398b5328ba72ec3b148b6bb070a925cb027e3d298e97615c8e2d271.
-- New future_time.py and future_time_results.json implement finiteproper-
+- New scripts/future_time.py and results/future_time_results.json implement finiteproper-
   acceleration four-leg flatspacetime roundtrip. Rapidity0,h,0,-h,0;
   t=4c*sinh(h)/a,tau=4ch/a,xmax=2c²(cosh(h)-1)/a,Kmax=(cosh(h)-1)mc².
   Source SHA2562a31b11e52d20963091f8a0f302c09f9b600243ab718ccd562183c3a460819f0.
@@ -6507,7 +6507,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   pulse, includingboundary/Casimirresponse beforeclosureclaims; NOT yetrun.
   Alternative forwardtest: specifiedsingleparticle force/clockprotocol and
   achievableproper-timeoffset. Do not relabel this as backward travel.
-- Updated quantum_horizon_plot.py with probe_future_progress(), generates
+- Updated scripts/quantum_horizon_plot.py with probe_future_progress(), generates
   PNG/PDF. Image inspected; removed label overlaps and regenerated.
   Existing threefigures untouched. RESEARCH has equations,sources,commands.
 - Frozen evolution/data/coupled_ori/casimir hashes rechecked unchanged.
@@ -6524,9 +6524,9 @@ fallback. Give honest confidence in checks, never promise physical success.
   as described above. No new evolution started. Quantum response not included.
 - Parameters: end=-.01, half_width2.8, stretch3, boundary_order2, CFL.15,
   strongFalse, adaptive, accepted R4 data. Solver and data MUST stay frozen.
-- Solver ori_evolution.py SHA256:
+- Solver scripts/ori_evolution.py SHA256:
   a389f71d34d780d5693c84fd014e5bad21b4d18f926df7aa568ca0b34f5ac645.
-- Data ori_radius4_accepted_coefficients.npz SHA256:
+- Data data/ori_radius4_accepted_coefficients.npz SHA256:
   029531840edee1e79f5760f843c9b71ab04c9039cece9a6f311e816e0e1cb394.
 - Root has no live exec or functions.exec cells. All evolution jobs terminal.
   coupled_misner, mass_audit and smooth_audit completed this turn's bounded
@@ -6603,7 +6603,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   fixed its three qualifications: zero initial expansion, 0<s<=s0 bound,
   separate congruences. Null rays are fixedz; graph samples z-invariant
   congruence at observer events, not one beam carried with the observer.
-- Plotter also writes ori_quantum_response_progress.png/.pdf; finalPNG
+- Plotter also writes figures/ori_quantum_response_progress.png/.pdf; finalPNG
   inspected. Root opened Galloway math/9909158 Eq2.4 and Anderson/Molina-
   Paris/Mottola gr-qc/0209075 sectionIII. Do not apply flat stability result
   to curved quotient. Higher-curvature variations need not vanish even
@@ -6618,7 +6618,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   calendar mapping, material prescription or regular quantum crossing.
 
 ### Earlier curved-geometry horizon audit (PROGRESS checkpoint)
-- coupled_ori.py now has quantum_horizon_geometry_checks() plus one main hook.
+- scripts/coupled_ori.py now has quantum_horizon_geometry_checks() plus one main hook.
   Source SHA256 d1b1ed70792215eda7c34b5a6e53d1a12e49fe0f49c6cf4c0f9148406fad5a18.
   Removing only new helper/hook exactly reconstructed old source hash
   22e6f21d9dcb93e65d6a344e6f6ea848b026da3b1944448fccc65459fe7602e9.
@@ -6656,19 +6656,19 @@ fallback. Give honest confidence in checks, never promise physical success.
   Not universal divergence along every approach, not automatically Maxwell,
   Dirac/interactingfields, not a nonlinearbackreaction/quantumgravity result.
   R0 makes finite xiR term vanish. Do not equate finite mean withregularstate.
-- New quantum_horizon_plot.py writes quantum_horizon_progress.png/pdf;
+- New scripts/quantum_horizon_plot.py writes figures/quantum_horizon_progress.png/pdf;
   root generated and inspectedPNG. Left actualgeneratorflow inmathematical
   bounded toroidal embedding, notphysicaltunnel; right finiteclassicaldata.
   Theorem/date caveats explicit. Ready to show user.
 
 ### Prior curved scalar state and source calculation (PROGRESS checkpoint)
-- New ori_quantum_source.py/results.json: 60-digit, full off-axis image
+- New scripts/ori_quantum_source.py/results.json: 60-digit, full off-axis image
   geometry/differentiation, full axis scalar stress and all-real-xi test.
   Final command and separate run_checks both completed exit0; all27 saved
   JSON sections exactly matched. Source unchanged before/after. Final SHA:
   da7ab25a61e235ee92c952d0cf805e76c44e4ee4203f143499d7bf66ab85fedd.
-  Frozen ori_evolution.py, accepted R4 data, coupled_ori.py and
-  casimir_cavity.py hashes all independently rechecked unchanged.
+  Frozen scripts/ori_evolution.py, accepted R4 data, scripts/coupled_ori.py and
+  scripts/casimir_cavity.py hashes all independently rechecked unchanged.
 - State construction PASSED independent analytical review (mass + smooth)
   strictly on critical untwisted D/Gamma. New detailed proof in RESEARCH.md.
   This is a mathematical free-field state on a prescribed geometry, not
@@ -6721,7 +6721,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   sigma=epsilon²(1-exp(-pi*n))>0 while nth-image sigma0 with nonzero
   prefactor. Their connecting null curve remains inT<0, endpoints approach
   same central base point. This illustrates KRW, not a valid crossing.
-- quantum_horizon_plot.py now also generates ori_quantum_source_progress
+- scripts/quantum_horizon_plot.py now also generates ori_quantum_source_progress
   PNG/PDF: toroidal representation plus failed TT condition. Root generated
   and inspected PNG. Field-state picture is a mathematical map, no entrance
   or material tube. Old horizon visual remains reproducible.
@@ -6777,7 +6777,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   Root70digit sum verified;30termpositive tail3.08065e-84 excludingrounding.
   Flatcoefficient.000622674915934919237872317923830523/(-T).
 - Earlier candidate-state gaps are now closed under the assumptions above;
-  ori_quantum_source.py is the new finite-kernel checker. The analytical
+  scripts/ori_quantum_source.py is the new finite-kernel checker. The analytical
   state proof is documented separately. KRW still obstructs a regular
   crossing for the complete branch under its stated assumptions.
 - References/readsources inRESEARCH: Harte-Drivas1202.0540 Jacobi/worldfunction,
@@ -6787,12 +6787,12 @@ fallback. Give honest confidence in checks, never promise physical success.
   curvature/finite-domain/samplingcontrol.
 
 ### Quantum source: final code/results verified, no active writers
-- casimir_cavity.py SHA256:
+- scripts/casimir_cavity.py SHA256:
   a46405b54a097a0ddbda03e765d2a6246b0cb51eac56a8bd77b96e80cf8cc884.
 - Root FULL run_checks session54762 completed exit0 in57.06s: all28 saved
   JSON keys exactly equal, source unchanged before/after. mass preserved27
   prior keys/helpers; coupled independently reviewed new spatial construction.
-- Reproduce: .\.venv\Scripts\python.exe -B casimir_cavity.py (~60s).
+- Reproduce: .\.venv\Scripts\python.exe -B scripts/casimir_cavity.py (~60s).
 - Existing cube one-event construction and stationary parity obstruction remain.
 - Actual rectangle sides(L,L,sqrt(5/8)L), units hbar*c/L^4:
   D=.3773056471909427,px=py=p=-.0012844707395398853,
@@ -6859,13 +6859,13 @@ fallback. Give honest confidence in checks, never promise physical success.
   Closedbox, centeronlymean, nearby mismatch, >=15.7xnoise, unproveddateroute.
   Schematic trace is explicitly labelled. Minor clipped left dimension label;
   full side relation is legible in top description. No physicalportal claim.
-- casimir_source_plot.py reads savedJSON, writes casimir_source_progress.png/pdf.
+- scripts/casimir_source_plot.py reads savedJSON, writes figures/casimir_source_progress.png/pdf.
   ROOT generated/inspected PNG. Left: sampledaxiserrors; right: noisevsGaussian
   width; scopes explicit. Reproduce with localvenvPython; no new dependencies.
-- RESEARCH.md has complete noise/spatial/regional/guide/MMP results and temporal
+- docs/RESEARCH.md has complete noise/spatial/regional/guide/MMP results and temporal
   control update. No pending source writes or plot jobs.
 - Continue257 to accepted endpoint; then compare corrected65/129/257 plus controls.
-  ori_large_analysis.py does not automatically supportR4/257; adapt explicitly.
+  scripts/ori_large_analysis.py does not automatically supportR4/257; adapt explicitly.
 - Next physical question is the cover/quotient quantum-state validation above,
   followed by source/backreaction. Flatcenter matching is exhausted as an
   exactregional construction; the complete curved branch now has a KRW obstacle. Do not claim this solves creation, stability,
@@ -6885,7 +6885,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   n129->257 sampledpeak change .01646%; full257endpoint still pending.
 - Original R4 main129 session73698 FAILED exit1 in tidal symmetry assertion.
   Replay71973 FAILED at-.01/975steps, captured original failure state/report:
-  ori_radius4_weak_129_failure.npz/.json. No accepted main129 endpoint.
+  data/ori_radius4_weak_129_failure.npz/.json. No accepted main129 endpoint.
   Metric/velocity antisymmetry7.55e-15/1.108e-11 drives E asymmetry1.646e-10
   above1.102e-10 tolerance. Projecting g/v changesstate<=5.541e-12 and restores
   originaldiagnostics; that projection is not a corrected evolution.
@@ -6926,7 +6926,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - coupled_ori exact audits COMPLETED and rootverified: rotating-screenRiccati
   certificates (a.02,mu.12,w.1/.2); finite spectator mass doesnotremovebadroot;
   negative-null support onebranchthreshold mu<=-1-2a²/(9+16w²).
-  Docs in RESEARCH.md and runnablefunctions/results in coupled_ori files.
+  Docs in docs/RESEARCH.md and runnablefunctions/results in coupled_ori files.
   Oldninekey canonicalJSON SHA814e6b9cc05b83ca36a96587d88b5183c3f0158ab8445ef8429a814087c54d32.
 - Negative-support cutoff audit exactnullrays provesfixedsmoothcutoff cannot
   import singular++asymptotic viafinitepropagation alone. Bothaxisgeodesics
@@ -6945,8 +6945,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   resultSHA732b02c0e240e7bad524fc83d1f1e75b8cd72ec50cdfbf5e203b7afe13c8179d.
   SameEMfield under3platepairs isNOT3independentfields. No actualjointstate,
   sourcepreparation/conservation/fluctuations/backreaction/stability demonstrated.
-  RESEARCH.md includes5beamderivation and4beamcoefficientbound.
-- NEW casimir_cavity.py/results.json created by coupled_misner. Root read/reran
+  docs/RESEARCH.md includes5beamderivation and4beamcoefficientbound.
+- NEW scripts/casimir_cavity.py/results.json created by coupled_misner. Root read/reran
   originalrun_checks exactJSON match. Same singleEMfield idealPECcube, localcenter:
   rho=q*hbar*c/L^4,q=-.269624593197241, pressuresrho/3, vacuumflux0.
   Resummedimages +physicaltransversemodes agree finite-tau within1.82238e-12.
@@ -6959,7 +6959,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   rhoideal1micron=-.008524253701862312J/m³. ellNOTaperture; perfectconductor
   atformalLmaxunreliable; nofabricationbound/noallsourceexclusion. Rootopened
   LambrechtReynaudquant-ph9907105finiteconductivitysource.
-- mass_audit NOW OWNS only coherent_center_checks() in casimir_cavity.py,
+- mass_audit NOW OWNS only coherent_center_checks() in scripts/casimir_cavity.py,
   minimalrun_checks hookup/resultskey plusobsoletepointstate-limit wording.
   IMPLEMENTED, rootREAD; focusedrun/preservation/finalrootrerun pending.
   SixexactnormalizedPECmodes: (0,1,1)permutationsEcenter=2ei,curl0;
@@ -7001,8 +7001,8 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Not a git repository. Graph tools report project not indexed; use focused
   rg -uu/direct reads. Preserve other agents' edits. No need to reread browser,
   Downloads, archive or settled baseline checks without a new reason.
-- RESEARCH.md contains equations, assumptions, results, sources and executable
-  reproduction commands. ori_large_analysis.py recomputes completed comparisons
+- docs/RESEARCH.md contains equations, assumptions, results, sources and executable
+  reproduction commands. scripts/ori_large_analysis.py recomputes completed comparisons
   and PNG/PDF charts from saved states; run takes about8seconds.
 
 ## Imported and previous verified work
@@ -7013,24 +7013,24 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Original144scalarODEs/2916coupling cases verified. S=T+b*x²+d*y² reduction
   is genuinely4D, not an axis approximation. Fixed-background spectator tests
   must not be called full gravitational evolution.
-- coupled_ori.py/results: exact canonical scalar null support; 48spectatorcases
+- scripts/coupled_ori.py/results: exact canonical scalar null support; 48spectatorcases
   at3resolutions,216twisted modes. Twisting did not remove divergent branch in
   that sector. Existing energy exponent2s-2 is CORRECT for regular observer;
   ADM-normal observer has different exponent2s-1. No novelty claim.
-- coupled_misner.py/results:6 fully coupled homogeneous Einstein-scalar runs,
+- scripts/coupled_misner.py/results:6 fully coupled homogeneous Einstein-scalar runs,
   exact R=-epsilon²/q² blowup for nonzeroepsilon. This is not the curved Ori PDE.
-- Original unit-radius initial data accepted: ori_constraint_coefficients.npz,
+- Original unit-radius initial data accepted: data/ori_constraint_coefficients.npz,
   ori_constraint_results.json. Weakdegree22 H4.35e-11,M1.66e-13; strongdegree34
   H1.78e-8,M1.77e-10 over3944points. Original9checks pass. Failed square/parity
   prototypes removed; do not revive them as verified methods.
-- Original short curved evolution: ori_evolution_results.json and
-  ori_evolution_states.npz (weak/strong n97,t=-.8,L=.7). Elevenruns verify
+- Original short curved evolution: results/ori_evolution_results.json and
+  data/ori_evolution_states.npz (weak/strong n97,t=-.8,L=.7). Elevenruns verify
   n25/49/97 refinement, walls, timestep, exact solutions. Finite invariant
-  curvature growth confirmed in ori_observer_checks.json; strong Ricci²
+  curvature growth confirmed in results/ori_observer_checks.json; strong Ricci²
   .111237->50.478436, source endpoint50.478554. No asymptotic inference.
 
 ## Completed current increment: larger weak polynomial family
-- FINAL accepted ori_large_constraint_coefficients.npz: epsilon.03,radius3,
+- FINAL accepted data/ori_large_constraint_coefficients.npz: epsilon.03,radius3,
   source_radius1,degree200,max_angular8,taper_kind=polynomial,accepted=True.
   Radial/angular/quadrature checks and fresh19508points pass. Full disk
   H2.89124e-8,M7.08148e-9; extraction squareL2.1 H1.52550e-9,M1.54816e-10.
@@ -7041,7 +7041,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Radius1 and radius3 are DIFFERENT constraint completions even inside pulse:
   psi,W and physicalPi change. Do not splice their histories. All new numerical
   comparisons use identical accepted radius3 coefficients; file hash recorded.
-- ori_evolution.py: second-order generalized harmonic Einstein-scalar PDE,
+- scripts/ori_evolution.py: second-order generalized harmonic Einstein-scalar PDE,
   constant covariantH=(0,0,0,-1.25), chi=Phi(t,x,y)exp(iz), metricz-independent.
   Full4D tensor/scalar z derivatives retained; restricted closed sector, not
   arbitrary3D perturbations. Actual connection in KG; no damping/dissipation.
@@ -7080,13 +7080,13 @@ fallback. Give honest confidence in checks, never promise physical success.
   circumscribingdiskR>3.67555 BEFORE prescribedlayers. FutureR4/L2.8 is possible;
   actual perturbedcones must be checked. Do not simply extend the R3 square wall
   toward onset. Foliation failure does not prove singularity or valid extension.
-- Canonical guarded state files: polynomial_weak_33.npz,polynomial_weak_65.npz,
-  polynomial_weak_linear_65.npz,polynomial_weak_half_dt_65.npz,
-  ori_large_polynomial_129.npz,ori_large_linear_129.npz (state,t keys).
+- Canonical guarded state files: data/polynomial_weak_33.npz,data/polynomial_weak_65.npz,
+  data/polynomial_weak_linear_65.npz,data/polynomial_weak_half_dt_65.npz,
+  data/ori_large_polynomial_129.npz,data/ori_large_linear_129.npz (state,t keys).
   State layout g16,v16,RePhi,ImPhi,Reu,Imu. Earlier ori_large_polynomial_33/65.npz
   are pre-guard runs; do not use them for the guarded comparisons.
-- ori_large_analysis.py rechecks saved endpoint diagnostics, comparisons and
-  algebraicchecks; outputs ori_large_evolution.png/.pdf. PNG visually inspected
+- scripts/ori_large_analysis.py rechecks saved endpoint diagnostics, comparisons and
+  algebraicchecks; outputs figures/ori_large_evolution.png/.pdf. PNG visually inspected
   after fixing overlapping log ticks. No root numerical sessions remain live.
 
 ## Observer diagnostics and exact Maxwell result
@@ -7111,11 +7111,11 @@ fallback. Give honest confidence in checks, never promise physical success.
   Symbolic identities checked; all previous scalar/mode/Maxwell results preserved.
 
 ## Smooth-family continuation and current work
-- formation_updates owns disk_basis.py,ori_disk_constraints.py and smoothdata.
+- formation_updates owns scripts/disk_basis.py,scripts/ori_disk_constraints.py and smoothdata.
   Accepted polynomial NPZ untouched. Optional compact basis storage added,
   public defaults remain full3Djets. Compact/full fields, constraints and
   preconditioner bitwise match; unitradiusdegree14 regression passes.
-- ori_smooth_constraint_coefficients.npz/results: DISTINCT C-infinity seed
+- data/ori_smooth_constraint_coefficients.npz/results: DISTINCT C-infinity seed
   exp[-4s/(1-s)] inside1,zerooutside. WEAK ACCEPTED atdegree240/cap8:19508points
   H3.02717e-8,M8.77985e-9; square H1.88475e-9,M9.22258e-11. Both members and
   aggregate now accepted; strong440 validation completed below.
@@ -7134,7 +7134,7 @@ fallback. Give honest confidence in checks, never promise physical success.
   squareL2.1 H1.6138919e-10,M1.5544390e-11. All flags accepted, PID exited.
   Full reproduction in report; pending-validationJSON nowstatuscomplete.
   Optional projected-coefficient checkpoint callback passed a small check;
-  root froze full acceptedbundle as ori_smooth_accepted_coefficients.npz,
+  root froze full acceptedbundle as data/ori_smooth_accepted_coefficients.npz,
   SHA2564aedd5b31fa743f1490ece2daaf116e0f69b58b63934a4663760e8a6da73e23f.
 - solve_case(degree,epsilon,padding=8,radius=3.,source_radius=1.,max_angular=cap,
   taper_kind='smooth',initial_coefficients=...) returns(record,coefficients).
@@ -7142,13 +7142,13 @@ fallback. Give honest confidence in checks, never promise physical success.
   disk_basis._modes; never prefix-pad across caps. Agent will send final commands.
   solve_case elapsed_seconds excludes basis/geometry construction; it is not
   total wall time. evolve seconds includes its initial reconstruction.
-- Root created immutable ori_smooth_weak_coefficients.npz from accepted weak
+- Root created immutable data/ori_smooth_weak_coefficients.npz from accepted weak
   fields only, accepted=True, SHA256
   5f274dfc0a2d4447ebf51f38ac41d01bb1bae47017d7755fc58b60cd42e7d83b.
   This avoids reading the lazy aggregate NPZ while the strong agent updates it.
 - Smoothweak33/65/linear65/halfdt65 all completed in session55527, exit0.
   Files smooth_weak_*.npz and ori_smooth_guarded_results.json. Fine129 session
-  79279 also completed, exit0: ori_smooth_weak_129.json/.npz. All t=-.1,L2.1,
+  79279 also completed, exit0: results/ori_smooth_weak_129.json/.npz. All t=-.1,L2.1,
   stretch2.5,adaptiveCFL.15 (halfdt.075), same immutable weak coefficients.
 - Completed smooth comparisons including finewall control: state differences
   .00236192623743 / .0000978319752822, ratio24.14, observedorder4.59351.
@@ -7158,19 +7158,19 @@ fallback. Give honest confidence in checks, never promise physical success.
   Ricci²2.81179e-8 vs source2.82935e-8,regular tidal.00730234,energy.00207245.
   No onset reached; central gzz.1001062 and inversegtt-.1002557.
 - Root finewall session40693 COMPLETED at t=-.1,exit0. Output
-  ori_smooth_linear_129.json/.npz and checkpoint retained. No live root runs.
-  ori_smooth_evolution_results.json: all6comparisonchecks TRUE, endpoints
+  results/ori_smooth_linear_129.json/.npz and checkpoint retained. No live root runs.
+  results/ori_smooth_evolution_results.json: all6comparisonchecks TRUE, endpoints
   independently recomputed. Finewallstate4.95445e-7,halfdt65state1.67267e-8;
   wall Einsteinmax3.78913e-5 versus main3.79052e-6. Wallchange centralRicci²
   1.44736e-12,regularK3.84593e-8. Sampled margins coarse-.08870,medium.06198,
   fine.14177. Mainfine source/geometricRicci² discrepancy.62%.
-- ori_evolution.py now has optional adaptive checkpoint_path: atomically saves
+- scripts/ori_evolution.py now has optional adaptive checkpoint_path: atomically saves
   state plus case/time/counters/samples at diagnostic times; auto-resume checks
   exact case, initial-state hash and whole evolution-code hash. Interrupted
   n9 exact run resumes bitwise-identically; changed CFL is rejected. All
   self_check entries passed. DO NOT edit this file during live checkpointed
   runs unless necessary: a changed code hash deliberately rejects resume.
-- ori_large_analysis.py now accepts --smooth to reuse the SAME comparison
+- scripts/ori_large_analysis.py now accepts --smooth to reuse the SAME comparison
   procedure on this separate family; the original polynomial comparisons and
   all6checks were reproduced exactly after path-selection changes.
   It also records a conditional local physical-scale illustration. Both
@@ -7182,7 +7182,7 @@ fallback. Give honest confidence in checks, never promise physical success.
 - Independent read-only smooth_audit found no compact/full or cutoff defect:
   bitwise constraints/fields at degrees8/17/240; independent seed gradient
   error4.66e-14,normalmomentum1.71e-14; existing basis/reconstruction checks pass.
-- Topology correction is now in RESEARCH.md: D²xS1 is a toroidal PATCH inside
+- Topology correction is now in docs/RESEARCH.md: D²xS1 is a toroidal PATCH inside
   ordinary R3; Euclidean embedding does not supply curved gamma/K. Ori2005
   completedconstruction is topologicallytrivial but its outside matter model
   was unspecified. Ori2007 has dust/vacuum with well-posed matter equations;
@@ -7208,8 +7208,8 @@ fallback. Give honest confidence in checks, never promise physical success.
   independent symbolic checks also prove an affine isometry preservingzperiod
   removes cx,cy for a!=0. Thus |c|<|a|r0 means retention inside fixedpatch,
   NOT invariant physical perturbation tolerance. Root reran check,exit0;
-  all preexisting result sections preserved. RESEARCH.md has explicitcorrection.
-- Freely falling observer added to ori_evolution.py after all old weak runs
+  all preexisting result sections preserved. docs/RESEARCH.md has explicitcorrection.
+- Freely falling observer added to scripts/ori_evolution.py after all old weak runs
   finished. axis_geodesic_velocity derives U, dU/dt from conservedpz=-.5 on
   centralaxis; rationalbranch avoids cancellation atgzz0. Fullgeodesic residual,
   normalization andmomentum checked; tidalhelper reused for prescribed/freefall.
@@ -7223,22 +7223,22 @@ fallback. Give honest confidence in checks, never promise physical success.
   comparisons unchanged/all6checks pass. Smoothfineendpoint freefall rho.001300227,
   K.01171422,U^t.59213946,U^z.91672837,residual2.22e-13; finewallKchange2.25e-8.
   Oldweak histories have only endpoint freefall; newruns recordallsamples.
-  RESEARCH.md distinguishes prescribedV fromgeodesic and derives finite-pz
+  docs/RESEARCH.md distinguishes prescribedV fromgeodesic and derives finite-pz
   exactgeodesics. No integratedproper-time/windinghistory claimed fornumericalruns.
 - NEW strongsmoothshort actualcase: end-.8,L2.1,stretch2.5,strongTrue,
-  data_path ori_smooth_accepted_coefficients.npz (strong_ fields).
-  Controls session61873 COMPLETED,exit0: ori_smooth_strong_short_controls.json
+  data_path data/ori_smooth_accepted_coefficients.npz (strong_ fields).
+  Controls session61873 COMPLETED,exit0: results/ori_smooth_strong_short_controls.json
   and ori_smooth_strong_short_{33,65,linear_65,half_dt_65}.npz/checkpoints.
-  Fine129 session98739 COMPLETED,exit0: ori_smooth_strong_short_129.json/.npz.
+  Fine129 session98739 COMPLETED,exit0: results/ori_smooth_strong_short_129.json/.npz.
   Fineendpoint H2.21605e-5,M5.44475e-6,gauge3.40650e-6;
   Ricci²21.8425307/source21.8423943; freefallrho3.7256603,K3.7891150,
   geodesicresidual1.64e-14; gzz1.518737,inversegtt-.845809.
   Finewall session76128 COMPLETED,exit0. ori_smooth_strong_short_linear_129.
-  All6checks pass in ori_smooth_strong_short_evolution_results.json;
+  All6checks pass in results/ori_smooth_strong_short_evolution_results.json;
   state differences .001540158887/.0001142660285,ratio13.47871,order3.75261.
   Finewall difference3.43170e-13,halfdt65difference1.88747e-8.
   Ricci² growth147.604-fold;source relativeerror6.2446e-6. Positive marginsall3.
-- ori_large_analysis.py --strong completed/passes; both weakbranches also
+- scripts/ori_large_analysis.py --strong completed/passes; both weakbranches also
   rerun/unchanged/pass. Newruns withallfreefallhistory getthirdenergyplottrace;
   charttitle neutral and timeaxis MaxNLocator5. Added --strong-mid for the
   same family's t=-.5 extension. Both strong branches now run/pass; earlier
@@ -7250,9 +7250,9 @@ fallback. Give honest confidence in checks, never promise physical success.
   gzz.97882361,inversegtt-1.4875593;medium/fine statediff.003350211.
   Sampledmargin medium1.037287,fine1.116624. Fine elapsed443.3s.
   Controls session58624 COMPLETED,exit0: n33,linear65,halfdt65 to-.5; outputs
-  ori_smooth_strong_mid_controls.json and matching state/checkpointstems.
+  results/ori_smooth_strong_mid_controls.json and matching state/checkpointstems.
   Finewall session62216 COMPLETED,exit0: ori_smooth_strong_mid_linear_129.
-  ori_smooth_strong_mid_evolution_results.json all6checks pass, endpoints
+  results/ori_smooth_strong_mid_evolution_results.json all6checks pass, endpoints
   independently recomputed; PNG/PDF generated and PNG visuallychecked.
   Statedifferences.01422778787/.003350211152,ratio4.24683,order2.08639;
   finewall8.58202e-13,halfdt65 2.12762e-7. SourceRicci²disagreement .005047%,
@@ -7270,17 +7270,17 @@ fallback. Give honest confidence in checks, never promise physical success.
   fine later drops415.0795 at-.37 and7.23110 at-.28, then rebounds.
   Fine sampledmargin.251349,elapsed893.5s. Late endpoints not preciseyet.
   Late controls session9595 COMPLETED,exit0: n33,linear65,halfdt65 to-.1;
-  ori_smooth_strong_late_controls.json + matching state/checkpoint stems.
+  results/ori_smooth_strong_late_controls.json + matching state/checkpoint stems.
   Finewall129 late session71195 COMPLETED,exit0, stemori_smooth_strong_late_linear_129.
   --strong-late ran,exit0; endpointdiagnostics recomputed,all6trendchecks pass,
   PNG/PDF generated and PNGvisuallyinspected. Passing checks is NOT endpoint
   precision: gridRicci²change32.6% persists. Finewallstate4.95737e-10,
   halfdt65 5.49026e-6, finefreefallwallK1.03027e-8.
   LIVE fourth-grid257 late session26355, stemori_smooth_strong_late_257.
-  Added ori_large_analysis.py --strong-late, fullthreegridreport now complete;
+  Added scripts/ori_large_analysis.py --strong-late, fullthreegridreport now complete;
   strong-mid re-run preserves allpriorcomparisons/checks afterroutingchange.
   Preserve evolutioncode during all live checkpointed runs.
-- formation_updates owns ONLY NEW ori_radius4_constraint_coefficients.npz and
+- formation_updates owns ONLY NEW data/ori_radius4_constraint_coefficients.npz and
   ori_radius4_constraint_results.json. Degree320/cap12 completed solve and
   validation but is REJECTED: expandeddegree360/cap16projection3.92467e-11
   exceeds2e-12. Padding16samebasis8.88263e-16;fresh19823pt H8.27978e-8,
@@ -7292,10 +7292,10 @@ fallback. Give honest confidence in checks, never promise physical success.
   1.01710709e-17, fresh19823pt H4.0291902e-9,M1.0264904e-9,
   L2.8subset H1.9607579e-10,M7.4107303e-12,minpsi1. Agent finalizing acceptance
   metadata FINALIZED: accepted/weakacceptedTrue. Frozen original and root
-  byte-for-byte snapshot ori_radius4_accepted_coefficients.npz both SHA256
+  byte-for-byte snapshot data/ori_radius4_accepted_coefficients.npz both SHA256
   029531840edee1e79f5760f843c9b71ab04c9039cece9a6f311e816e0e1cb394.
   WeakR4 evolution L2.8,stretch3,end-.01,n65 session17271 COMPLETED,exit0.
-  ori_radius4_weak_65.json/.npz/checkpoint. EndpointH.000126732,M.000498319,
+  results/ori_radius4_weak_65.json/.npz/checkpoint. EndpointH.000126732,M.000498319,
   gauge.0000270927,Einstein.0391042; Ricci²9.86157e-7/source8.18335e-7;
   gzz.01015304,inversegtt-.01018118,freefallK.06914774,rho.08738406.
   This coarse result needs refinement; no stabilityclaim.
