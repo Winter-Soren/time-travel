@@ -1,5 +1,199 @@
 # Reproduction and coupled-model iterations
 
+## Infinite angular-tail certificate for the fixed spatial model — increment123
+
+[Driver](../scripts/dihole_heat_angular.py), [results](../results/dihole_heat_angular_results.json),
+[saved matrix family and added sectors](../data/dihole_heat_angular_state.npz),
+and [figure](../figures/dihole_heat_angular_progress.png).
+
+The122 model with N=18,A=4 now includes 4095 angular sectors and an
+**interval-certified bound on every remaining angular sector** of its saved
+finite matrix family. All 769 previously calculated sectors are reused. The
+3326 added sectors cover j=+-385,...,+-2047. This removes the arbitrary angular
+cutoff from this finite spatial model to a quantified tolerance; it does not
+remove the spatial projection, coefficient quadrature or box boundary.
+
+### Exact finite-family tail argument
+
+Regard the saved symmetric binary64 matrices as exact dyadic inputs:
+
+$$
+M(j)=M_0+jM_1+j^2M_2,\qquad j\in\mathbb Z.
+$$
+
+For sign sigma=+-1, anchor J=2048 and integer n>=0,
+
+$$
+M(\sigma(J+n))=M(\sigma J)+nD_\sigma+n^2M_2,
+\qquad D_\sigma=\sigma M_1+2JM_2.
+$$
+
+Outward interval arithmetic verifies the following common lower constants:
+M(sigma J)>=160 I, D_sigma>=0.05 I and M2>=0.0003 I, with constants interpreted
+as the specified dyadics in the executable certificate. There is ample margin:
+
+| Verified lower quantity | Negative angular side | Positive angular side |
+| --- | --- | --- |
+| Gershgorin lower bound for D_sigma | 0.0567147130674603 | 0.149973923934639 |
+| Gershgorin lower bound for Q transpose Q | 0.999999999999094 | 0.999999999998833 |
+| Gershgorin lower bound for Q transpose (M(sigma J)-160 I) Q | 10.4100225171631 | 11.1952896272260 |
+
+The direct interval Gershgorin bound for M2 is 0.0003098829655499639.
+Each Q is a complete approximate eigenbasis supplied by LAPACK. The proof does
+not assume that it is exactly orthogonal: the verified Gram bound proves it is
+invertible, and positive congruence proves the anchor inequality. The anchor
+matrix is assembled outwardly from M0,M1,M2, rather than certifying only an
+already-rounded matrix sum. Interval products use the existing explicit
+IEEE754 outer-product implementation, with no opaque BLAS products in the proof.
+
+For the saved point-evaluation matrix V_x, spectral completeness gives
+
+$$
+\operatorname{tr}[V_x e^{-\tau M(j)}V_x^*]
+\le\|V_x\|_F^2 e^{-\tau\lambda_{\min}(M(j))}.
+$$
+
+Since n^2>=n, both unsummed sides including the anchors obey
+
+$$
+T_{|j|\ge2048}(x)\le
+2\|V_x\|_F^2\frac{e^{-160\tau}}
+{1-e^{-\tau(0.05+0.0003)}}.
+$$
+
+The factor 2 here counts the two angular tails. It is separate from the
+opposite-chirality factor already present in the122 optical normalization.
+Evaluation weights, dyadic normalization and the final exponentials are all
+bounded outwardly, with 75-digit mpmath interval exponentials. No operator
+monotonicity of the matrix exponential is assumed; only the scalar spectral
+minimum and completeness are used.
+
+### Completed numerical sum and its separate error components
+
+The normalized heat values for the fixed N=18,A=4 spatial model are:
+
+| Scaled heat parameter tau | At the magnetic null | c=-1 | c=+1 |
+| --- | --- | --- | --- |
+| 0.5 | 4.148407699410 | 6.482046338648 | 6.377114956708 |
+| 1 | 4.944430471697 | 11.606830982392 | 11.338883615946 |
+| 2 | 7.832867314386 | 22.594496788293 | 21.939722955866 |
+
+These are floating eigensolve results, not interval enclosures for the entire
+sum. In the same normalized units, the largest certified infinite-angular
+remainder over the three points is below 1.50e-33,3.88e-68 and1.83e-137 at the
+respective three heat parameters. The separate positive-eigenvalue cutoff at 80
+has a finite-matrix omission indicator below 1.80e-14 at tau=0.5; this indicator
+does not enclose eigensolver roundoff or misclassification near the cutoff.
+472 newly computed sectors have no retained eigenvalue below 80. Their retained
+contribution is zero, with their spectrum covered by that separate omission
+term under exact finite-matrix spectral evaluation.
+
+Compared with the saved cutoff 384, the added normalized contribution at tau=0.5
+is approximately 6.05643e-8 at the center,0.000514794 at c=-1 and0.000686427
+at c=+1. The largest relative change across all nine sampled values is 0.010764%.
+The earlier 1%-2% differences between cutoffs 256 and 384 were already included
+in 122; they were not an estimate of its missing tail. The small central shell
+contributions are not monotone, which also rules out treating a decreasing
+last shell as an automatic geometric remainder bound.
+
+The figure omits zero retained contributions from its logarithmic shell plot.
+They are not assigned a fictitious tiny positive value. The tail bound is
+reported separately from the sampled shell contributions.
+
+### Checks, limitations and next physical step
+
+Three reconstructed old sectors, j=-384,0,384, agree bit-for-bit with their
+saved heat values. The old source and every prior input hash are checked.
+A small noncommuting Gram family tests both angular signs, interval polynomial
+assembly, the positive congruence and the complete-tail inequality. A negative
+matrix direction is also correctly rejected by the lower-bound routine.
+Independent analytic and implementation audits pass. The actual finite matrix
+family, evaluation factors and newly computed sectors are saved for reuse.
+
+This is a certificate for a specifically identified numerical family, not for
+the continuum geometry. A Galerkin minimum eigenvalue does not lower-bound the
+omitted spatial spectrum. The finite evaluation norm also grows with the
+spatial basis size and cannot be used as a continuum point-evaluation bound.
+The remaining 122 spatial and mixed boundary sensitivities therefore still
+matter. The reference background is still the classical
+[balanced black dihole](https://arxiv.org/abs/hep-th/9906160).
+
+Next, obtain a spatial-continuum heat estimate and control the artificial
+boundary. One possible route combines a continuum angular spectral gap with
+a local heat-kernel estimate; neither follows from this finite certificate.
+A fixed spatial projection also has the wrong small-heat-parameter asymptotics
+for direct insertion into the full ultraviolet-subtracted energy integral.
+Renormalized stress, gravitational response, formation and stability remain
+open. No material, new physical law or 13 September 2027 to 12 September 2027
+passage is established. Professor-first-feedback readiness is unchanged.
+
+### Conditional continuum-box bound prepared for the next calculation
+
+This is our application of standard form domination and a direct Nash estimate,
+not a numerical certificate yet. It concerns the same Dirichlet box, with all
+spatial modes retained. The relevant domination framework is
+[Lenz, Schmidt and Wirth, theorem3.5 and section4.2](https://arxiv.org/html/1711.07225).
+Its weighted bundle forms apply after shifting the bounded curvature/magnetic
+potential to be nonnegative. On the off-axis box, positive smooth weights and
+Dirichlet form domains supply the required modulus/domain compatibility.
+
+Set m=alpha^2 beta, pmin=beta_min/(EL)^2 and
+
+$$
+C_N=\frac{(m_{\max}/m_{\min})^2}{\pi p_{\min}},\qquad
+C=\max\left(0,\sup_\Omega\frac{\sqrt{F_{ij}F^{ij}/2}-R/4}{E^2}\right).
+$$
+
+The reduced optical Lichnerowicz form has horizontal covariant energy
+(EL)^-2 integral beta |grad_spin psi|^2, a nonnegative angular covariant square
+including its spin connection, and an endomorphism bounded below by -C.
+F already includes charge. The scalar comparison form has measure m d^2xi
+and energy (EL)^-2 integral beta |grad f|^2. Zero extension and Fourier splitting
+give ||f||_2^4 <= ||grad f||_2^2 ||f||_1^2/pi; bounding the weights yields
+||f||_(2,m)^4 <= C_N q_scalar[f] ||f||_(1,m)^2. Scalar L1 contraction and the
+energy derivative therefore bound its heat diagonal by C_N/tau.
+
+Form domination gives the rank-two canonical diagonal at most
+2m(x) C_N exp(C tau)/tau. If the continuum squared operator in sector j has
+spectral lower bound g_j, splitting its own heat semigroup into two equal time
+steps improves this to
+
+$$
+\operatorname{tr}_2 K^{\rm can}_j(\tau;x,x)
+\le\frac{4m(x)C_N}{\tau}\exp[(C-g_j)\tau/2].
+$$
+
+A gap follows directly from the mass sign. Write H_j=T+Gamma m_j with
+Gamma=sigma_y, {T,Gamma}=0, and
+m_j=(E beta)^-1(j+mu0-q a). Gamma preserves the zero-boundary form domain.
+The identity Re <H_j psi,Gamma psi>=integral m_j |psi|^2, followed by
+Cauchy-Schwarz, gives
+
+$$
+g_j=c_{\min}^2(|j|-D)^2\quad(|j|>D),\qquad
+c_{\min}=\inf_\Omega(E\beta)^{-1},\qquad
+D=\sup_\Omega|\mu_0-q a|.
+$$
+
+This argument needs no mass-gradient penalty. For a proposed cutoff J with
+n0=J+1>D and a_tau=tau*cmin^2/2, geometric summation gives the full rank-four
+optical continuum-box tail
+
+$$
+T_{\rm opt}^{|j|>J}(s;x)\le
+\frac{8C_N}{\pi L^2\tau}
+\frac{\exp[C\tau/2-a_\tau(n_0-D)^2]}
+{1-\exp[-a_\tau(2(n_0-D)+1)]},\qquad \tau=sE^2.
+$$
+
+Both angular signs and both chiralities are included once; m(x) cancels in
+the optical normalization. The next numerical task is to enclose all six
+geometric constants (mmin,mmax,beta_min,cmin,D,C) on the full box and evaluate
+the bound. It may be too loose; no useful numerical value is assumed here.
+Even a successful bound would cover only the omitted angular sectors of the
+continuum box. The retained spatial-mode error and natural-exterior boundary
+comparison would still need their own estimates.
+
 ## Finite curved heat diagonal and angular sums — increment122
 
 [Driver](../scripts/dihole_finite_heat.py), [results](../results/dihole_finite_heat_results.json),

@@ -6,6 +6,8 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The [angular completion](scripts/dihole_heat_angular.py) now reuses 769 sectors, calculates 3326 more, and bounds every remaining angular sector of the fixed N=18,A=4 matrix model. Interval arithmetic certifies a normalized tail below 1.50e-33 at the shortest tested heat parameter. Adding the missing modes changes the sampled results by at most 0.0108%; spatial and boundary errors remain separate. See [results](results/dihole_heat_angular_results.json), [saved matrices](data/dihole_heat_angular_state.npz), and [proof and limits](docs/RESEARCH.md).
+
 The [finite heat calculation](scripts/dihole_finite_heat.py) now sums769 angular sectors in the actual curved exterior at three locations. Spatial refinement is reassuring at the shortest tested heat parameter, but longer-range values and off-center angular sums still change at the percent level. This is a finite-box pilot, with no certified exterior limit or renormalized stress. See [results](results/dihole_finite_heat_results.json), [derivation and limitations](docs/RESEARCH.md), and [figure](figures/dihole_finite_heat_progress.png).
 
 The [optical heat calculation](scripts/dihole_optical_heat.py) now evaluates the short-distance subtraction coefficients needed for a full quantum-stress calculation, including curvature, the magnetic field, and their response to a lapse change. Exact spectral benchmarks, direct metric variations and independent curvature checks pass. Near the magnetic null the curvature term remains nonzero. These coefficients do not supply the finite vacuum energy or supporting stress. See [results](results/dihole_optical_heat_results.json), [derivation](docs/OPTICAL_HEAT_SUBTRACTION.md), and [figure](figures/dihole_optical_heat_progress.png).
@@ -109,6 +111,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scripts/scattering_vacuum.py) · [results](results/scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Angular completion at fixed spatial resolution](figures/dihole_heat_angular_progress.png)
+
+*The infinite angular tail is bounded for the saved matrices. Zero retained shell contributions are omitted from the logarithmic plot; physical stress remains unresolved.*
 
 ![Finite curved heat response and spatial refinement](figures/dihole_finite_heat_progress.png)
 

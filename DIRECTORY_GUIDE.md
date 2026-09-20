@@ -34,6 +34,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Angular completion of the fixed spatial heat model | [driver](scripts/dihole_heat_angular.py), [results](results/dihole_heat_angular_results.json), [saved matrices](data/dihole_heat_angular_state.npz), [figure](figures/dihole_heat_angular_progress.png), [proof](docs/RESEARCH.md) |
 | Finite curved heat diagonal and angular sums | [driver](scripts/dihole_finite_heat.py), [results](results/dihole_finite_heat_results.json), [figure](figures/dihole_finite_heat_progress.png), [scope](docs/RESEARCH.md) |
 | Optical heat subtraction and lapse counterterms | [driver](scripts/dihole_optical_heat.py), [results](results/dihole_optical_heat_results.json), [figure](figures/dihole_optical_heat_progress.png), [derivation](docs/OPTICAL_HEAT_SUBTRACTION.md) |
 | Local lapse susceptibility and specified exterior state | [driver](scripts/dihole_lapse_susceptibility.py), [results](results/dihole_lapse_susceptibility_results.json), [figure](figures/dihole_lapse_susceptibility_progress.png), [state and stress bridge](docs/EXTERIOR_STRESS_BRIDGE.md) |

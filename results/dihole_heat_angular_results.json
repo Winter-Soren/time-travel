@@ -1,0 +1,466 @@
+{
+  "passed": true,
+  "controls": {
+    "passed": true,
+    "noncommuting_direct_tail": [
+      2.769301265598414e-12,
+      8.168086158229261e-24
+    ],
+    "tail_upper": [
+      0.0008733374763691233,
+      2.2533580501056067e-08
+    ]
+  },
+  "target": {
+    "q": 512000,
+    "mu_center": 398855.5,
+    "center_gauge": 0.7790141347869983,
+    "length": 0.011761449891978137,
+    "energy": 43.31792889640083,
+    "rho_center": 0.6672354660415234,
+    "points": [
+      {
+        "uv": [
+          0.0,
+          0.0
+        ],
+        "rho": 0.6672354660415234,
+        "z": 0.0,
+        "optical_volume_density": 4.758854249020814
+      },
+      {
+        "uv": [
+          -1.0,
+          -1.0
+        ],
+        "rho": 0.6506022640911163,
+        "z": 0.0,
+        "optical_volume_density": 4.787677991717966
+      },
+      {
+        "uv": [
+          1.0,
+          1.0
+        ],
+        "rho": 0.6838686679919305,
+        "z": 0.0,
+        "optical_volume_density": 4.730230263408254
+      }
+    ],
+    "coefficient_control_max_normalized_error": 5.698884277661567e-13,
+    "coefficients": "Floating evaluation of exact-balanced formulas; checked against75-digit differentiation. No interval enclosure claimed."
+  },
+  "count": 18,
+  "radius": 4.0,
+  "quadrature": {
+    "orthogonality_error": 1.2212453270876722e-14,
+    "quadrature_order": 60
+  },
+  "scaled_heat_parameters": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "reconstructed_baseline_heat_errors": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "reused_angular_sectors": 769,
+  "added_angular_sectors": 3326,
+  "summed_angular_sectors": 4095,
+  "positive_spectrum_cutoff": 80.0,
+  "empty_retained_sectors": 472,
+  "summaries": [
+    {
+      "mode_cut": 384,
+      "normalized_heat": [
+        [
+          4.148407638846069,
+          6.481531544469887,
+          6.376428529248305
+        ],
+        [
+          4.944430399138951,
+          11.606016396007552,
+          11.33781927918572
+        ],
+        [
+          7.832867251704907,
+          22.593095690828363,
+          21.937949785292172
+        ]
+      ],
+      "added_to_384": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "final_16_offset_shell": null
+    },
+    {
+      "mode_cut": 512,
+      "normalized_heat": [
+        [
+          4.1484076412955835,
+          6.482045651418309,
+          6.377114119336989
+        ],
+        [
+          4.944430400673646,
+          11.606829916581718,
+          11.338882239783805
+        ],
+        [
+          7.832867253169877,
+          22.59449522219294,
+          21.939720971618865
+        ]
+      ],
+      "added_to_384": [
+        [
+          2.4495144744371958e-09,
+          0.0005141069484220164,
+          0.0006855900886836642
+        ],
+        [
+          1.5346954452440009e-09,
+          0.0008135205741665116,
+          0.0010629605980852766
+        ],
+        [
+          1.464970397519104e-09,
+          0.0013995313645751935,
+          0.0017711863266908802
+        ]
+      ],
+      "final_16_offset_shell": [
+        [
+          4.994915871086669e-10,
+          5.684497645514443e-07,
+          9.615547696775732e-07
+        ],
+        [
+          1.615477292613762e-10,
+          1.0046424221690396e-06,
+          1.5925128448330863e-06
+        ],
+        [
+          9.079728441171981e-11,
+          1.6264829690551706e-06,
+          2.429740297965224e-06
+        ]
+      ]
+    },
+    {
+      "mode_cut": 768,
+      "normalized_heat": [
+        [
+          4.148407663179392,
+          6.482046301290751,
+          6.377114951185203
+        ],
+        [
+          4.944430432878022,
+          11.606830940579538,
+          11.338883610770319
+        ],
+        [
+          7.832867291534893,
+          22.594496762285964,
+          21.939722953247532
+        ]
+      ],
+      "added_to_384": [
+        [
+          2.4333322720097123e-08,
+          0.0005147568208638583,
+          0.000686421936897525
+        ],
+        [
+          3.373907096674241e-08,
+          0.0008145445719858874,
+          0.0010643315845995148
+        ],
+        [
+          3.982998684566758e-08,
+          0.001401071457600423,
+          0.0017731679553590963
+        ]
+      ],
+      "final_16_offset_shell": [
+        [
+          1.8252369796862212e-09,
+          1.2707156634801701e-09,
+          2.352409131036393e-10
+        ],
+        [
+          2.9866738834635714e-09,
+          2.1648811928823896e-09,
+          5.119077286301385e-11
+        ],
+        [
+          3.1200469159975424e-09,
+          2.343292561909782e-09,
+          3.695395298644096e-11
+        ]
+      ]
+    },
+    {
+      "mode_cut": 1024,
+      "normalized_heat": [
+        [
+          4.14840768606867,
+          6.48204632412007,
+          6.3771149550135595
+        ],
+        [
+          4.944430463004679,
+          11.606830972475048,
+          11.3388836150814
+        ],
+        [
+          7.832867312306208,
+          22.594496785964573,
+          21.939722955735963
+        ]
+      ],
+      "added_to_384": [
+        [
+          4.7222600781280496e-08,
+          0.0005147796501821193,
+          0.0006864257652543687
+        ],
+        [
+          6.386572807239627e-08,
+          0.0008145764674961553,
+          0.0010643358956800276
+        ],
+        [
+          6.060130100332735e-08,
+          0.0014010951362096375,
+          0.0017731704437916062
+        ]
+      ],
+      "final_16_offset_shell": [
+        [
+          2.251370198935847e-09,
+          2.2681041405865745e-10,
+          2.0677141968870812e-10
+        ],
+        [
+          2.2441060458037496e-09,
+          2.2336131525029638e-10,
+          1.7492999339291867e-10
+        ],
+        [
+          8.070491705680358e-10,
+          8.21848737863539e-11,
+          4.5743720524414114e-11
+        ]
+      ]
+    },
+    {
+      "mode_cut": 1536,
+      "normalized_heat": [
+        [
+          4.148407699410265,
+          6.482046338647766,
+          6.377114956707638
+        ],
+        [
+          4.9444304716968945,
+          11.606830982392001,
+          11.338883615945624
+        ],
+        [
+          7.832867314385781,
+          22.594496788293455,
+          21.939722955866248
+        ]
+      ],
+      "added_to_384": [
+        [
+          6.056419673465233e-08,
+          0.0005147941778792481,
+          0.0006864274593329336
+        ],
+        [
+          7.255794363019701e-08,
+          0.0008145863844479245,
+          0.0010643367599052686
+        ],
+        [
+          6.268087359341157e-08,
+          0.0014010974650903966,
+          0.0017731705740761077
+        ]
+      ],
+      "final_16_offset_shell": [
+        [
+          1.5509861142668294e-13,
+          5.928212551058696e-13,
+          8.898143197144338e-15
+        ],
+        [
+          1.5337175352583077e-17,
+          6.784552356295947e-17,
+          1.2301384829575894e-19
+        ],
+        [
+          8.322897047114449e-26,
+          3.694743861754601e-25,
+          5.032357225396015e-28
+        ]
+      ]
+    },
+    {
+      "mode_cut": 2047,
+      "normalized_heat": [
+        [
+          4.1484076994103285,
+          6.4820463386481775,
+          6.3771149567076435
+        ],
+        [
+          4.9444304716968945,
+          11.606830982392001,
+          11.338883615945624
+        ],
+        [
+          7.832867314385781,
+          22.594496788293455,
+          21.939722955866248
+        ]
+      ],
+      "added_to_384": [
+        [
+          6.056425968504982e-08,
+          0.0005147941782901386,
+          0.0006864274593380761
+        ],
+        [
+          7.255794363231398e-08,
+          0.0008145863844479382,
+          0.0010643367599052686
+        ],
+        [
+          6.268087359341157e-08,
+          0.0014010974650903966,
+          0.0017731705740761077
+        ]
+      ],
+      "final_16_offset_shell": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "tail_certificate": {
+    "anchor": 2048,
+    "energy_lower": 160.0,
+    "derivative_lower": 0.05,
+    "quadratic_lower": 0.0003,
+    "quadratic_gershgorin_lower": 0.0003098829655499639,
+    "signs": [
+      {
+        "sign": -1,
+        "numerical_anchor_eigenvalue": 170.41002254123788,
+        "gram_gershgorin_lower": 0.9999999999990946,
+        "shifted_congruence_gershgorin_lower": 10.4100225171631,
+        "derivative_gershgorin_lower": 0.056714713067460336
+      },
+      {
+        "sign": 1,
+        "numerical_anchor_eigenvalue": 171.19528965237615,
+        "gram_gershgorin_lower": 0.9999999999988335,
+        "shifted_congruence_gershgorin_lower": 11.195289627226074,
+        "derivative_gershgorin_lower": 0.14997392393463935
+      }
+    ]
+  },
+  "normalized_infinite_angular_tail_upper": [
+    [
+      1.3787040193653826e-33,
+      1.4801875691293816e-33,
+      1.4981641598202311e-33
+    ],
+    [
+      3.563316539365258e-68,
+      3.825604895871253e-68,
+      3.87206612469946e-68
+    ],
+    [
+      1.6828192338131269e-137,
+      1.8066880751740876e-137,
+      1.8286299511300827e-137
+    ]
+  ],
+  "normalized_finite_matrix_eigen_omission_bound": [
+    [
+      1.6502981406459328e-14,
+      1.7717731716382758e-14,
+      1.7932910128685616e-14
+    ],
+    [
+      1.9830247184302714e-31,
+      2.1289910642661913e-31,
+      2.1548472474587714e-31
+    ],
+    [
+      1.0123124287352625e-65,
+      1.0868266517267635e-65,
+      1.100025950435568e-65
+    ]
+  ],
+  "scope": [
+    "The interval certificate covers |j|>=2048 for the saved exact dyadic matrix polynomial, evaluation and normalization.",
+    "LAPACK supplies trial bases to the tail proof; positivity is verified independently by outward interval products.",
+    "Finite angular contributions remain ordinary floating eigensolves; the whole displayed sum is not interval certified.",
+    "Coefficient quadrature, spatial truncation and exterior boundary errors are not covered by the angular certificate.",
+    "No renormalized stress, stable throat, supporting material or backward passage is established."
+  ],
+  "arithmetic_assumptions": "Inherited IEEE754 interval-ufunc and mpmath interval contract; exact saved dyadic inputs only.",
+  "source_sha256": "8d7541245eb2f7105bf12e849ac0c67dce75b3d41cb59f88bd83d1175fc8f6f4",
+  "input_sha256": {
+    "dihole_finite_heat.py": "ff220eb27e16db3ecc8aa46e1406fc6f5f01f00a2cdb7a6c6b17b628fad629f4",
+    "dihole_finite_heat_results.json": "9b345db0f031f660bc46fbcc5329b513c32e93def1a0ee95298d11b366d7bf11",
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_quadrature_remainder.py": "4f55a06e5a346bc40b2e51ce739f5561ad8658f03ed33cd906ebb8151eb1ef9d",
+    "dihole_heat_angular_state.npz": "218545a22a2f1d9d757f7d7535c5534c82a2233e1cdac0b938dd885ceed01bdd",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "dihole_null_scaling.py": "5d916e838936013852a0b3ac3c3644c96e2cb6d62a6b27f3168ff64da3561100",
+    "dihole_return_geometry.py": "b5a4c06c74f4ccc775f3061c5040d95b7bcf0bb8968df653587ca08136a40b68",
+    "dihole_optical_heat.py": "409c96faf0e878b7843970101082b5f3b53da3f8118e3b7513fe63833499e8d4",
+    "null_saddle_leads.py": "222dcb8346005de9d1e1ed382c5945b371e434deee620481d28bc203c36696e9",
+    "dihole_probe_certificate_results.json": "d3c3e55a125c539baa8e9b5c41f97429e2759850a419c23280b70522e26f2843",
+    "dihole_optical_heat_results.json": "d350410874f6bc17e9718b90f7e394bab7a4586e351dc8d3e758ebbefa7dbeac",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "runtime_seconds": 175.71103669999866
+}

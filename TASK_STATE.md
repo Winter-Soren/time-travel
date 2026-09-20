@@ -58,6 +58,59 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Complete fixed-model angular sum and certified tail — increment123
+- Previous goal turn PROGRESS:122 published5df4c0919d7a405466d513ca660dc9a3f3925aa5;
+  privateorigin/clean verified.123 began clean. Preserve all537 prior sciencefiles.
+- NEW scripts/dihole_heat_angular.py, results/dihole_heat_angular_results.json,
+  data/dihole_heat_angular_state.npz, figures/dihole_heat_angular_progress.png/.pdf.
+- Reused122 N18,A4,GL60 exactsame physicalsetup.769savedsectors unchanged;
+  reconstructedj=-384,0,384 heatagreesbitwise. Added3326sectors ±385..2047;
+  finite sum covers4095sectors. All3heatparameters/3points reused.
+- Fullfinite dyadicmatrixpolynomial M(j)=M0+jM1+j²M2 savedwithEeval/normalization.
+  AtJ2048: verifiedM(±J)>=160I,D±=±M1+4096M2>=.05I,M2>=.0003I.
+  M2Gersh .0003098829655499639; D- .056714713067460336,D+ .14997392393463935.
+  CompleteQ approximateeigenbases: intervalQᵀQGersh> .99999999999883;
+  intervalQᵀ(M-160I)QGersh10.4100225171631/11.195289627226074>0.
+  Qnotassumedexactorthogonal. AnchorpolynomialassembledoutwardfromdyadicM.
+- Exactanchoridentity M(s(J+n))=M(sJ)+nD_s+n²M2, n>=0;
+  allremainingangulartail<=2||Eval||F² exp(-160tau)/(1-exp[-tau(.05+.0003)]).
+  Bothsigns; existingopticalnormalizationcountsotherchiralityseparately.
+  Outwardevalnorm/factors and75digitintervalexp. Maxnormalizedtail<1.50e-33,
+  3.88e-68,1.83e-137 at tau.5,1,2. TailcertifiesFIXEDdyadicmatrixfamilyonly.
+- Completefloatheat at tau.5: [4.1484076994103285,6.4820463386481775,
+  6.3771149567076435]; at1: [4.9444304716968945,11.606830982392001,
+  11.338883615945624]; at2: [7.832867314385781,22.594496788293455,
+  21.939722955866248]. Columnscenter,c-1,c+1. Maxchangebeyond384 .010764%.
+- Finiteeigenvaluecut80 indicator<1.80e-14 at tau.5;472newsectorsemptybelow80.
+  Finite eigensolve/summationroundingnotcertified. No whole-sumenclosureclaimed.
+  Spatial/quadrature/exteriorerrorsremainseparate. Zero retainedshells omitted
+  fromlogplot, notrenderedasfictitious1e-36. Figureinspected.
+- Controls: smallnoncommutingGramfamily,twoanchorcongruences,polynomialinterval,
+  directtailcomparison,negativeGershcase. Initialcontrolusedtooaggressive .1
+  M2bound; revisedto.05 belowits .0625Gersh. Correctedoutwarddictaccessbefore
+  actualrun. Finalstrict175.71s,session57083exit0. Firstactualrun160.27s passed;
+  repeatedafterplotcorrection; savedmatrixstateSHAidentical. No livejob.
+- IndependentanalyticandimplementationauditPASS. Prior source/inputshashesstrict.
+- ConditionalCONTINUUM-BOX bound nowderived inRESEARCH123, notnumericallyevaluated:
+  m=alpha²beta,pmin=beta_min/(EL)²,CN=(mmax/mmin)²/(pi*pmin),
+  C=max(0,sup[(sqrt(F²/2)-R/4)/E²]). Lichnerowicz+weightedNash+Dirichlet
+  domination=>tr2Kcan_j(tau)<=4mCN/tau exp[(C-g_j)tau/2].
+  Masssigngap viaGammaanticommutingkinetic: g_j=cmin²(|j|-D)² for|j|>D,
+  cmin=inf1/(Ebeta),D=sup|mu0-q a|. No massgradientpenalty.
+  Forn0=J+1>D,a_tau=tau*cmin²/2, rank4opticaltail <=
+  8CN/(piL²tau)*exp(Ctau/2-a_tau(n0-D)²)/(1-exp[-a_tau(2(n0-D)+1)]).
+  Source formdomination Lenz/Schmidt/Wirth1711.07225 Thm3.5,section4.2 opened.
+- NEXT: enclose mmin,mmax,beta_min,cmin,D,C rigorously onA4; evaluateconditional
+  continuumtailbeforeanymorePDEsolves. Stillneedretainedspatialerror and
+  naturalexteriorboundarycomparison; fixedspatialprojectionhaswrongUVlimit.
+  No energyintegral,renormalizedstress,material,support,stability,newlawor
+  13Sep2027->12Sep2027passage. Professorreadinessunchanged; noemail/monitorchange.
+- Verification:91imports/707links/8historicalguards/14frozeninputs PASS;
+  all537prior sciencefiles andbothhistorysuffixes byteidentical; all123hashesPASS.
+- DriverSHA8d7541245eb2f7105bf12e849ac0c67dce75b3d41cb59f88bd83d1175fc8f6f4;
+  resultSHA1441b9925056b352b8cc91c754cdde87258c9837591638a5a72f7afde1566153;
+  stateSHA218545a22a2f1d9d757f7d7535c5534c82a2233e1cdac0b938dd885ceed01bdd.
+
 ### Finite curved heat diagonal and angular sums — increment122
 - Previous goal turn PROGRESS:121 published84be3a79aba94d6c0cda7fc8392e84ffc1f274bd;
   privateorigin/clean verified.122 began clean. Preserve all533 prior sciencefiles.
