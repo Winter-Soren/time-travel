@@ -58,6 +58,40 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Connected finite-window source calculation — increment132
+- Previous131 published9bee657643044f77cd35ca0a4cdbb3cd7424c10d, clean/origin
+ matched. Original import COMPLETE; goal ACTIVE. No old spectrum reruns.
+- NEW scripts/dihole_source_window.py reuses actual130 bridge embedding and
+ actual131 curved exterior assembly+mass over kappaD=.01..10, 33 nested
+ log nodes (17 coarse), q1 mu.5 four angular pairs, R8/R16 graded domains.
+ Conditional full-Dirac prefactor -2/pi verified independently; no extra
+ negative-frequency, charge-conjugation or mu factor. Absorbing DG does not
+ establish the common self-adjoint domain/state premise.
+- R16 fine Eint' phases0/pi=-.213410449358559/D,-.205298034684717/D;
+ phase0-minus-pi=-.008112414673842/D. Negative finite contribution, not
+ absolute support. Eint=-4.204252861743/D,-4.183279377384/D.
+- Outer changes .00800%/.00649%, quadrature .00455%/.00547%; contrast
+ outer .3748%, quadrature .01861%. Sensitivities, NOT error bounds.
+- All8 controls PASS: max solve residual6.61e-14, FD logdet identity2.57e-11,
+ flux ledger5.48e-16. FD identity does not certify epsilon truncation.
+ Source/input hashes checked; plot visually read. Run269s, session43857
+ exited0; no live computation, narrow agent finished.
+- Exact paired variation probes integral f Nsqrt(h)(rho+p_s), same mask/sign
+ as required -.171015352199415 D/(8piG); Maxwell already subtracted.
+ Any current-carrying matter/higher-curvature terms remain part of budget.
+ Window coefficient relative to target is31.3632(lP/D)^2 for phase0;
+ formal standalone equality D=5.60lP is NOT a semiclassical construction
+ or a bound on the omitted source. Phase contrast cannot equal this target.
+- NEXT: physical sewn-domain reference/renormalized source functional;
+ identify missing local/reference terms, other mu/frequency tails and
+ physical exterior/angular limits before a total support comparison.
+ Do not substitute old flat-domain tail estimates or return to box spectra.
+- SHA256 driver b2e60ae969e033c8df1c69a8e9c951d19949c2cb349aebb2e28f7d4526f061b3;
+ result0f5ba19471e71085ea043d6f79fcda8e77a27f0a3fa872985b7065f63d4d580d.
+- Historical131-and-older TASK/RESEARCH suffixes preserved byte-for-byte.
+ Professor milestone/brief and paused heartbeat unchanged, no email.
+ No new law/material/stability/time machine;13Sep2027->12Sep2027 unproved.
+
 ### Connected actual-curved return and source diagnostic — increment131
 - Previous130 PROGRESS: published2da6c567903eca2c74fbd1da3d092f30db093e26;
  origin matched and clean. Original chat/Downloads import stays COMPLETE.

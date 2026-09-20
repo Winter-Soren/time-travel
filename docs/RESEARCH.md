@@ -1,5 +1,108 @@
 # Reproduction and coupled-model iterations
 
+## Connected frequency-window source contribution — increment132
+
+[Driver](../scripts/dihole_source_window.py), [saved results](../results/dihole_source_window_results.json),
+[plot](../figures/dihole_source_window_progress.png).
+The actual130/131 bridge and curved exterior are now integrated over
+$0.01\leq\kappa D\leq10$. This is a new connected-model calculation using
+established field theory; it is not a new physical law or a support solution.
+
+### Observable, normalization and the exact source comparison
+
+Write $D_\phi=\det(I-B_\phi R_{\rm ext})$. Conditional on a common physical
+self-adjoint sewn domain and vacuum prescription, the full massless Dirac
+interaction and its compact metric derivative are
+
+$$
+E_{{\rm int},\phi}=-\frac{2}{\pi}\int_0^\infty\Re\log D_\phi\,d\kappa,
+\qquad
+E_{{\rm int},\phi}'=-\frac{2}{\pi}\int_0^\infty
+\partial_\epsilon\Re\log D_\phi\,d\kappa.
+$$
+
+The opposite Weyl block contributes equally at fixed charge and mu; no
+additional negative-frequency or mu multiplicity is inserted. The scalar
+check $D_\phi=1-e^{i\phi-\kappa L}$ gives $E_D(\pi)=-\pi/(6L)$ and
+$E_D(0)=+\pi/(3L)$. The physical exterior supplies its own phase, so the
+additional phase pi need not minimize the actual model's energy.
+The finite absorbing exterior used here does not establish this spectral
+formula's common-domain premise; the computed quantities remain conditional.
+
+The paired variation from130, $\delta\log N=f$ and
+$\delta\log h_{ss}=-2f$, with angular metric and connection fixed, obeys
+
+$$
+E_{\rm matter}'=\int fN\sqrt h\,(\rho+p_s)\,d^3x,
+\qquad I_{\rm req}=-0.171015352199415\,\frac{D}{8\pi G}.
+$$
+
+Here $N\sqrt h$ is unchanged. With nonzero radial energy flux the probe is
+half the sum of the two directed radial null contractions. The geometric
+target already subtracts Maxwell: $E_{\rm grav}'+E_{\rm EM}'=-I_{\rm req}$.
+There is no extra Maxwell term to add to that right-hand side. A complete
+extra-source calculation must also include any matter carrying the induced
+current and any specified gravitational counterterms. Fixed A means this
+variation has no separate $J\cdot\delta A$ term.
+
+### New finite-window result
+
+One q=1, mu=1/2 sector, four angular pairs, both Weyls through the stated
+conditional prefactor. Units are hbar=c=1. Simpson integration uses log kappa
+with its kappa Jacobian. Each exterior spatial assembly and physical mass is
+reused at every frequency; no old box spectrum is recalculated.
+
+| Outer radius / D | 17-point phase0 response | 33-point phase0 response | 17-point phase-pi response | 33-point phase-pi response |
+| --- | --- | --- | --- | --- |
+| 8 | -0.2134178087/D | -0.2134275232/D | -0.2052734717/D | -0.2052847038/D |
+| 16 | -0.2134007314/D | -0.2134104494/D | -0.2052868067/D | -0.2052980347/D |
+
+At R16, the phase0-minus-phase-pi response is -0.008112414674/D.
+The outer-domain changes are 0.00800% and 0.00649%; quadrature changes are
+0.00455% and 0.00547%. The smaller phase contrast changes by 0.3748% with
+outer radius and 0.01861% with quadrature. These are observed sensitivities,
+not certified errors. The corresponding finite-window interaction energies
+are -4.204252862/D and -4.183279377/D; these are not total vacuum energies.
+
+All eight checks pass. Shifted assemblies reproduce131; maximum relative
+linear residual is 6.61e-14, determinant-derivative identity discrepancy
+2.57e-11 and extreme-frequency flux discrepancy 5.48e-16. The derivative
+check shares the same epsilon samples and does not bound finite-difference
+truncation. The 33-frequency run took about269 seconds, with source/input
+hashes saved and checkpointed. No field calculation remains running.
+
+### What the sign and scale do, and do not, establish
+
+Both finite-window responses have the required negative sign for this probe.
+For a coefficient $C$ such that $E'_{\rm window}=C\hbar c/D$, its magnitude
+relative to the required source is exactly the dimensional comparison
+
+$$
+\frac{|E'_{\rm window}|}{|I_{\rm req}|}
+=\frac{8\pi|C|}{0.171015352199415}\left(\frac{\ell_P}{D}\right)^2.
+$$
+
+For the R16 values the coefficients are31.3632 and30.1710. Equating this
+computed contribution alone with the target would give D about5.60 or5.49
+Planck lengths; the present semiclassical calculation does not justify a
+physical construction at that scale. This is bookkeeping for this one
+contribution, not a bound on the full source, a universal no-go, or a
+macroscopic material recipe. Changing field content or q needs its own
+consistent charge, geometry and backreaction calculation.
+
+The next critical step is the physical sewn-domain source functional:
+reference contribution, local renormalized terms, other mu sectors and
+frequency tails must be identified before equating total source with the
+geometric target. The finite angular basis, polygonal cuts and distant
+absorbing boundary also remain approximations. Do not import old flat-
+geometry tail bounds into this calculation. A common-local-geometry phase
+contrast can cancel common local terms, but cannot itself equal I_req:
+the required geometric source is the same in both phases.
+
+No supporting material, stability, formation or chronology-changing path is
+proved. 13 September2027 to12 September2027 remains unproved. The next step
+uses this result; no further box-spectrum certification is justified here.
+
 ## Curved exterior return and connected source diagnostic — increment131
 
 This step connects the actual130 bridge to a finite-domain return problem
