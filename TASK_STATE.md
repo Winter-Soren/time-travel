@@ -58,6 +58,41 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Local lapse susceptibility and exterior state — increment120
+- Previous goal turn PROGRESS:119 published051740d891e23af21413f8c50e6e128a299388c0;
+  privateorigin/clean verified.120 began clean; older scientific files preserved.
+- NEW scripts/dihole_lapse_susceptibility.py, results/dihole_lapse_susceptibility_results.json,
+  figures/dihole_lapse_susceptibility_progress.png/.pdf, docs/EXTERIOR_STRESS_BRIDGE.md.
+- Fixed spatial metric/gauge/source/Hilbert map/baseE; N_e=N(1+e*f), H_e=H+e{f,H}/2.
+  Smooth compact Gaussian masks centered(c,c),c=-2,0,2, exactGaussian on[-9,9]^2;
+  smooth taper tozero at11, minimumrho>.484. No on-shell perturbedgeometry claim.
+- Reused119 exact certificate and every input with strict hashes. A fromsavedprimal,
+  B=-sigma_z A(v,u); S-evenmask => equalweightednorms. No PDE/residualrerun.
+- G' bounded by overlaps: D=-int f[h^T(A-B)/2+B^T A]; radius
+  ||fh||e+2||fA||e+e^2, e=.0016689827803814264. Globalfielderror coversoutertaper.
+-648x648validatedGL72/Hermite tables, intervalexp/matmul/sums/norms.
+  Moduli<3e25;6.973757989497458e-15 analyticerror addedtoeachcombinedintegral.
+- ImG' atc=-2 in[-.11138030963226019,-.10878828459020409]; c0
+  [-.28412582935984143,-.2776399945399686]; c2[-.12209239644886032,-.11837600858133387].
+  Diskradii<=.0012960125210077797,.0032429174098885043,.0018581939337332398.
+  Allsignsresolved, noneisenergydensity/NEC. Physical/unit-sourcebounds inJSON.
+- Strictfinalrun12.80s.7drivergates+4independentfinitematrixderivativecases PASS.
+  InitialFDcontrolcaughtvanishingleadingerror foruniformmask,kappa1; require
+  roundoffabsoluteerror there, retain4xconvergence othercases. Analyticalaudit,
+  implementationaudit PASS; figureinspected. No physicalexperiment performed.
+- Statebridge specifiesfullDiracnegativeenergyspectralgroundstate,emptyzeromodes,
+  regulatedresolventformula andopen-exteriorHadamard applicability usingcharged
+  ultrastaticZahnconstruction +completeopticalmetric. Nohorizonextensionclaim.
+- Next: differentiatedmatrixkernels andcontrolledsubtractedspatial/angular/frequency
+  sums towardstress; avoidmerelyaddingmasks orrecertifying119. No support,
+  backreaction,formation,stability,newlaw or13Sep2027->12Sep2027 passageproved.
+- Professorfirst-feedbackmilestonealreadyreached/notified; monitorremainsPAUSED;
+  noemailauthorized/sent. GoalremainsACTIVE.
+- Verification:88imports/661links/8historicalguards/14frozeninputs PASS;
+  all525prior scientificfiles andbothhistorysuffixes byte-identical.
+  DriverSHAe907ee1e0f003733d05de65fc490c50993f4b6a517ef365ea82c25b8414de787;
+  resultSHA5720306520c5ccc265e3324aa41abb354086560ec1644677cfc5868f1801a2c1.
+
 ### Full exact-curved compact-probe certificate — increment119
 - Previous goal turn PROGRESS:118 published41991bd1094b4c33059fa3cc88dcd258f22cd6be;
   privateorigin/clean verified.119 began clean. Earlier science/history preserved.

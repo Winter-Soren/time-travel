@@ -95,16 +95,25 @@ hashes, parameter definitions, enclosures and limitations. Earlier local
 scattering pilots and their unresolved matching errors remain in the
 [research record](RESEARCH.md).
 
+The next [metric-response calculation](../scripts/dihole_lapse_susceptibility.py)
+also encloses three local lapse derivatives using those certified fields.
+For the central smooth bump, Im G'(0) lies in
+[-0.28412582935984143,-0.2776399945399686]. This is a packet susceptibility,
+not stress. The [state and stress bridge](EXTERIOR_STRESS_BRIDGE.md) now specifies
+the full exterior spectral ground state with empty zero modes and checks local
+Hadamard applicability. Horizon regularity and any replacement-throat state
+remain separate issues.
+
 ## Question for methodological feedback
 
-**Which quantum-state prescription and additional response kernels would make
-these certified exterior probes useful for a renormalized fermion stress
-calculation or a controlled throat-matching problem?** In particular, we seek
+**Does the proposed exterior spectral ground state, and the planned kernel
+completion and subtraction, provide a sound route from these certified probes
+to renormalized fermion stress or a controlled throat-matching problem?** In particular, we seek
 advice on the frequency/angular completion and ultraviolet subtraction before
 attempting any self-consistent support claim.
 
 One compact source, one angular sector and one imaginary frequency cannot
-determine the vacuum stress. The state, full response kernels, renormalization,
+determine the vacuum stress. The full response kernels, renormalization,
 backreaction, throat attachment, formation and stability remain unresolved.
 No trajectory to an earlier date follows.
 

@@ -1,0 +1,256 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_input_provenance": true,
+    "derivative_pairing_control": true,
+    "smooth_mask_support_inside_exterior": true,
+    "analytic_overlap_budgets": true,
+    "source_norm_agrees_with_certificate": true,
+    "positive_weighted_norm_integrals": true,
+    "three_finite_derivative_enclosures": true
+  },
+  "controls": {
+    "finite_matrix": {
+      "passed": true,
+      "cases": [
+        {
+          "kappa": 1.0,
+          "mask": [
+            1.0,
+            0.0
+          ],
+          "exact_imaginary_derivative": -0.25,
+          "finite_difference_errors": [
+            6.250006090446902e-08,
+            1.5625029270438517e-08
+          ]
+        },
+        {
+          "kappa": 1.0,
+          "mask": [
+            1.0,
+            1.0
+          ],
+          "exact_imaginary_derivative": -0.5,
+          "finite_difference_errors": [
+            8.282263763703668e-14,
+            5.595524044110789e-14
+          ]
+        },
+        {
+          "kappa": 2.0,
+          "mask": [
+            1.0,
+            0.0
+          ],
+          "exact_imaginary_derivative": -0.08,
+          "finite_difference_errors": [
+            3.2000203181725695e-09,
+            7.999401835379061e-10
+          ]
+        },
+        {
+          "kappa": 2.0,
+          "mask": [
+            1.0,
+            1.0
+          ],
+          "exact_imaginary_derivative": -0.16,
+          "finite_difference_errors": [
+            3.8400011920236565e-08,
+            9.599993994191536e-09
+          ]
+        }
+      ],
+      "scope": "Checks derivative signs and pairings. Exact affine dependence is a differential-operator identity, not a finite-matrix identity."
+    }
+  },
+  "responses": [
+    {
+      "center_uv": [
+        -2,
+        -2
+      ],
+      "center_rho": {
+        "lower": 0.6339690621407091,
+        "upper": 0.6339690621407094,
+        "lower_hex": "0x1.449797c923e91p-1",
+        "upper_hex": "0x1.449797c923e93p-1"
+      },
+      "imaginary_center_interval": [
+        -0.1100842971112524,
+        -0.11008429711121188
+      ],
+      "weighted_source_norm_squared": [
+        0.16151721439571576,
+        0.1615172143957319
+      ],
+      "weighted_primal_and_dual_norm_squared": [
+        0.03477616472894048,
+        0.034776164728961174
+      ],
+      "disk_radius_upper": 0.0012960125210077797,
+      "imaginary_derivative_interval": [
+        -0.11138030963226019,
+        -0.10878828459020409
+      ],
+      "physical_imaginary_derivative_interval": [
+        -0.002571228876122804,
+        -0.0025113916422546925
+      ],
+      "unit_source_imaginary_derivative_interval": [
+        -0.11138030963226482,
+        -0.1087882845902059
+      ]
+    },
+    {
+      "center_uv": [
+        0,
+        0
+      ],
+      "center_rho": {
+        "lower": 0.6672354660415233,
+        "upper": 0.6672354660415235,
+        "lower_hex": "0x1.559fe312c262fp-1",
+        "upper_hex": "0x1.559fe312c2631p-1"
+      },
+      "imaginary_center_interval": [
+        -0.28088291194995285,
+        -0.2808829119498572
+      ],
+      "weighted_source_norm_squared": [
+        0.799999999999987,
+        0.8000000000000118
+      ],
+      "weighted_primal_and_dual_norm_squared": [
+        0.2740282098116855,
+        0.2740282098117523
+      ],
+      "disk_radius_upper": 0.0032429174098885043,
+      "imaginary_derivative_interval": [
+        -0.28412582935984143,
+        -0.2776399945399686
+      ],
+      "physical_imaginary_derivative_interval": [
+        -0.006559081576576687,
+        -0.006409355239581571
+      ],
+      "unit_source_imaginary_derivative_interval": [
+        -0.2841258293598533,
+        -0.2776399945399732
+      ]
+    },
+    {
+      "center_uv": [
+        2,
+        2
+      ],
+      "center_rho": {
+        "lower": 0.7005018699423373,
+        "upper": 0.7005018699423375,
+        "lower_hex": "0x1.66a82e5c60dccp-1",
+        "upper_hex": "0x1.66a82e5c60dcep-1"
+      },
+      "imaginary_center_interval": [
+        -0.12023420251512706,
+        -0.12023420251506713
+      ],
+      "weighted_source_norm_squared": [
+        0.16151721439571579,
+        0.16151721439573197
+      ],
+      "weighted_primal_and_dual_norm_squared": [
+        0.12595689198877855,
+        0.12595689198881735
+      ],
+      "disk_radius_upper": 0.0018581939337332398,
+      "imaginary_derivative_interval": [
+        -0.12209239644886032,
+        -0.11837600858133387
+      ],
+      "physical_imaginary_derivative_interval": [
+        -0.002818518787933204,
+        -0.002732725492588576
+      ],
+      "unit_source_imaginary_derivative_interval": [
+        -0.1220923964488654,
+        -0.11837600858133583
+      ]
+    }
+  ],
+  "variation": {
+    "lapse": "N_e=N*(1+e*f), |e|<1; fixed spatial metric, connection, source and baseline energy.",
+    "mask": "f_c=zeta(u)zeta(v)exp(-((u-c)^2+(v-c)^2)/8), c=-2,0,2.",
+    "smooth_taper": "zeta=1 on [-9,9], 0 outside [-11,11], 0<=zeta<=1; explicit flat smoothstep in EXTERIOR_STRESS_BRIDGE.md.",
+    "minimum_support_rho": {
+      "lower": 0.4842702445870457,
+      "upper": 0.4842702445870458,
+      "lower_hex": "0x1.efe489fbb5898p-2",
+      "upper_hex": "0x1.efe489fbb589ap-2"
+    },
+    "operator": "H_e=H+e*(fH+Hf)/2 exactly for this first-order differential operator.",
+    "derivative_center": "D=-integral f*(h^T*(A-B)/2+B^T*A), kappa=1.",
+    "error_radius": "||fh||*e_field+2*||fA||*e_field+e_field^2; ||fB||=||fA|| by reflection.",
+    "solution_error_upper": 0.0016689827803814264,
+    "interpretation": "G_prime lies within disk_radius of some i*D in the center interval; displayed bounds project that disk onto the imaginary axis."
+  },
+  "quadrature": {
+    "order_per_panel": 72,
+    "nodes_per_axis": 648,
+    "analytic_remainder_per_integral": 6.973757989497458e-15,
+    "complex_gaussian_modulus": {
+      "lower": 1.072843392434877,
+      "upper": 1.0728433924348775,
+      "lower_hex": "0x1.12a5dd543ccc3p+0",
+      "upper_hex": "0x1.12a5dd543ccc5p+0"
+    },
+    "integrand_modulus_bounds": {
+      "derivative_center": {
+        "lower": 93991521059260.77,
+        "upper": 93991521059260.8,
+        "lower_hex": "0x1.55f06ce606f31p+46",
+        "upper_hex": "0x1.55f06ce606f33p+46"
+      },
+      "weighted_source_squared": {
+        "lower": 225.59461715947054,
+        "upper": 225.5946171594706,
+        "lower_hex": "0x1.c33071a90b220p+7",
+        "upper_hex": "0x1.c33071a90b222p+7"
+      },
+      "weighted_trial_squared": {
+        "lower": 100838031487216.06,
+        "upper": 100838031487216.1,
+        "lower_hex": "0x1.6ed8bc2fc3c04p+46",
+        "upper_hex": "0x1.6ed8bc2fc3c06p+46"
+      }
+    },
+    "source_norm_control": [
+      0.9999999999999585,
+      0.9999999999999833
+    ]
+  },
+  "scope": [
+    "One compact source, one chirality/azimuthal sector, scaled imaginary frequency kappa=1.",
+    "A metric derivative of a packet response, not a ground-state expectation, energy density, null stress or return probability.",
+    "No supporting throat, new physical law, material recipe or backward passage.",
+    "Reuses119 IEEE754 and mpmath interval arithmetic assumptions and full solution-error bound."
+  ],
+  "runtime_versions": {
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "source_sha256": "e907ee1e0f003733d05de65fc490c50993f4b6a517ef365ea82c25b8414de787",
+  "input_sha256": {
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_interval_quadrature.py": "750b79afdc66a4289c6e8e185b33c7dcd9ff0fffb3d7572bcbca3d92b517e911",
+    "dihole_quadrature_remainder.py": "4f55a06e5a346bc40b2e51ce739f5561ad8658f03ed33cd906ebb8151eb1ef9d",
+    "dihole_null_scaling_results.json": "17d5e29e123a344bcee69ee399691bd3e65364f96b18b71cd5b84daffa724b6c",
+    "dihole_probe_residual_results.json": "cfcf78102a8b0fa99e813d13c041e509bea1aaa9c456088deb256e0e322d5786",
+    "dihole_probe_residual_fields.npz": "ddfab9ecbdf17313dc5f484346ac62437f7f6f5a98ce3b71d13a948a9292133c",
+    "dihole_probe_residual.py": "f3116cc447c66c5c95cf1327de105f93d4cbb2ec3242a01d06a79ffed7b89872",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_probe_certificate.py": "304bf4c74dbf49fdc85ed758db8d41087d644908f3cf367ac6ab0d117b7b133c",
+    "dihole_probe_certificate_results.json": "d3c3e55a125c539baa8e9b5c41f97429e2759850a419c23280b70522e26f2843"
+  },
+  "runtime_seconds": 12.803975399991032
+}

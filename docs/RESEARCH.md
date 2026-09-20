@@ -1,5 +1,116 @@
 # Reproduction and coupled-model iterations
 
+## Local lapse susceptibility in the exact exterior — increment120
+
+[Calculation](../scripts/dihole_lapse_susceptibility.py), [results](../results/dihole_lapse_susceptibility_results.json),
+[figure](../figures/dihole_lapse_susceptibility_progress.png), and
+[state and stress bridge](EXTERIOR_STRESS_BRIDGE.md).
+
+This increment computes three **metric derivatives** of the certified119
+compact response. It reuses the certified fields and their continuum error;
+no new PDE solve, residual certification or supporting-energy claim is made.
+The companion note now specifies the full exterior Dirac spectral ground state,
+with empty zero modes, and checks its local Hadamard applicability using the
+published charged ultrastatic construction. This is a state prescription on the
+open classical exterior, not a statement of regularity across the horizons.
+The susceptibility itself does not depend on choosing that quantum state.
+
+### What is varied
+
+Keep the physical spatial metric, magnetic connection, source, canonical
+Hilbert map and baseline energy E fixed. Change only the lapse:
+
+$$
+N_\epsilon=N(1+\epsilon f),\qquad
+H_\epsilon=\sqrt{1+\epsilon f}\,H\sqrt{1+\epsilon f}
+=H+\tfrac\epsilon2\{f,H\}.
+$$
+
+The last equality is exact for this first-order differential operator.
+Smooth compact f with bounded commutator preserves the graph domain; for
+|epsilon|<1 the positive lapse and common-domain self-adjoint family are valid.
+This is an off-shell gravitational perturbation, not a new solution of Einstein's
+field equations. Merely replacing N in the Weyl metric formula would incorrectly
+vary spatial metric components as well.
+
+Use f_c=zeta(u)zeta(v) exp(-((u-c)^2+(v-c)^2)/8), c=-2,0,2.
+The explicit smoothstep in the companion note has 0<=zeta<=1, equals1 on[-9,9],
+and vanishes outside[-11,11]. The larger support stays at rho>.484, away from
+axis and horizons. All trial/source overlap integrals see only the analytic
+Gaussian because the trials vanish outside[-9,9]^2. Its one-variable ellipse
+modulus is bounded by exp(9/128)<1.073. The taper still matters for the global
+operator and for bounding unknown exact fields outside the trial square.
+
+### Bounded derivative and complete error propagation
+
+Let psi=(H-i kappa)^-1 h, chi=(H+i kappa)^-1 h with kappa=1.
+With inner products conjugate-linear in the first slot,
+
+$$
+G'(0)=-\tfrac12\bigl(\langle\chi,fh\rangle+\langle h,f\psi\rangle\bigr)
+-i\kappa\langle\chi,f\psi\rangle.
+$$
+
+The resolvent equations remove all unbounded derivatives from these overlaps.
+For the saved compact trials psi_t=iA and chi_t=iB, the imaginary trial center is
+
+$$
+D=-\int f\left[\tfrac12h^T(A-B)+\kappa B^T A\right].
+$$
+
+Use the119 certified field error e<=0.0016689827803814264 for both solutions.
+The reflection-even masks and B=-sigma_z A(v,u) give ||fB||=||fA|| exactly. Thus
+
+$$
+|G'(0)-iD|\le \|fh\|e+2\|fA\|e+e^2.
+$$
+
+This bound includes the exact-field response outside the compact trials.
+The combined D integral and both weighted squared norms use648-by648 validated
+nodes, interval Hermite contractions, interval Gaussian exponentials, and
+outward sums. The analytic moduli of all three integrands are below the119
+budget3e25; the GL72 remainder6.973757989497458e-15 is added to **each** integral.
+Square roots and the final error-radius combination are outward-enclosed too.
+The input certificate, its source and all recorded inputs must match exact hashes.
+
+| Gaussian center (u,v) | Enclosure of Im G'(0) | Disk radius upper bound |
+| --- | --- | --- |
+| (-2,-2) | [-0.11138030963226019, -0.10878828459020409] | 0.0012960125210077797 |
+| (0,0) | [-0.28412582935984143, -0.2776399945399686] | 0.0032429174098885043 |
+| (2,2) | [-0.12209239644886032, -0.11837600858133387] | 0.0018581939337332398 |
+
+These are projections of certified complex disks, with their center integration
+uncertainty included. The source is the same unnormalized119 source; separate
+unit-source and physical-response enclosures are saved in JSON. Physical values
+divide by the fixed exact E, not a perturbed or independently rounded energy.
+All three signs are resolved. They are **not** signs of energy density, radial
+pressure, null energy or an ability to keep a throat open.
+
+### Verification and next physics step
+
+The strict run took12.80 seconds. Seven driver gates pass, including provenance,
+support and source normalization. An independent finite-matrix congruence control
+checks derivative signs and adjoint pairings in four cases, including a
+noncommuting mask. H=sigma_y, h=(1,0), f=diag(1,0), kappa=1 gives -i/4 exactly.
+The uniform-mask kappa1 central-difference leading error cancels; its two errors
+are below1e-12, rather than being required to exhibit a meaningless fourfold
+reduction at roundoff. The other three cases show the expected convergence.
+Independent analytic and implementation reviews pass. The figure was inspected.
+No previously tracked scientific result or source was rewritten.
+
+The [companion note](EXTERIOR_STRESS_BRIDGE.md) supplies a regulated resolvent
+formula for the full ground-state covariance and primary sources for the charged
+Hadamard subtraction. The next task is to implement the relevant differentiated
+matrix kernel and controlled subtracted spatial/angular/frequency sums. More
+single-frequency scalar samples alone cannot close that gap. The chosen exterior
+state must not be silently transferred to a replacement throat.
+
+This is progress in calculating a geometry-dependent quantum response, not a
+new physical law or a stable medium. A self-consistent supporting stress,
+formation, stability and13 September2027 ->12 September2027 passage remain open.
+The first professor-feedback milestone was already reached and notified;
+no email is authorized or sent, and its completed milestone monitor stays paused.
+
 ## Complete compact-probe enclosure in the exact balanced exterior — increment119
 
 [Driver](../scripts/dihole_probe_certificate.py), [results](../results/dihole_probe_certificate_results.json),

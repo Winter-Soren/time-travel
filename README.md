@@ -6,9 +6,11 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The new [local lapse calculation](scripts/dihole_lapse_susceptibility.py) encloses how that compact quantum response changes under three smooth, localized variations of gravitational clock rate. All three derivative signs are resolved; the central derivative lies in $[-0.2841258294,-0.2776399945]$, displayed here with outward decimal rounding. The strict calculation takes about13 seconds and reuses the existing continuum certificate. See [results](results/dihole_lapse_susceptibility_results.json), [figure](figures/dihole_lapse_susceptibility_progress.png), and [state and stress bridge](docs/EXTERIOR_STRESS_BRIDGE.md). A negative response derivative is not evidence of negative energy or throat support.
+
 The [curved-probe certificate](scripts/dihole_probe_certificate.py) now encloses one imaginary-frequency response in the **exact balanced exterior**, including the trial residual, integration remainder, parameter evaluation and arithmetic rounding. Its imaginary part lies in $[0.41900184413867064,\ 0.4190074151728139]$. The full run takes about 23 seconds and includes independent geometry controls. See [results](results/dihole_probe_certificate_results.json), [figure](figures/dihole_probe_certificate_progress.png), [derivation](docs/RESEARCH.md), and the updated [professor-assessment brief](docs/PROFESSOR_BRIEF.md).
 
-The calculation uses the [natural self-adjoint domain](docs/DIHOLE_DIRAC_DOMAIN.md), [validated quadrature tables](scripts/dihole_interval_quadrature.py), [outward interval arithmetic](scripts/dihole_interval_arithmetic.py), and [analytic integration remainder](scripts/dihole_quadrature_remainder.py). It certifies one compact source in one angular sector at one imaginary frequency, under the documented arithmetic assumptions. A quantum state, renormalized stress, self-consistent throat and time-travel medium remain unresolved.
+The calculation uses the [natural self-adjoint domain](docs/DIHOLE_DIRAC_DOMAIN.md), [validated quadrature tables](scripts/dihole_interval_quadrature.py), [outward interval arithmetic](scripts/dihole_interval_arithmetic.py), and [analytic integration remainder](scripts/dihole_quadrature_remainder.py). It certifies one compact source in one angular sector at one imaginary frequency, under the documented arithmetic assumptions. A full exterior spectral ground state is now specified in the stress bridge; its renormalized stress, a self-consistent throat and a time-travel medium remain unresolved.
 
 The [whole-plane calculation](scripts/null_saddle_resolvent.py) now replaces separate overlapping regions with one smooth field for a fixed Gaussian probe. An [independent interval calculation](scripts/null_saddle_residual_interval.py) bounds its full continuum error, including every omitted Hermite mode and rounding. Two imaginary-frequency responses have certified scalar error radii below $4.317\times10^{-8}$ and $4.086\times10^{-6}$. A lower-frequency probe remains poorly resolved. This is a controlled result for the ideal local saddle, with curved-geometry matching and quantum stress still open. See [results](results/null_saddle_resolvent_results.json) and [proof and limits](docs/RESEARCH.md).
 
@@ -50,6 +52,7 @@ Local state-admissibility arguments are now supplied for both the full invariant
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Local lapse susceptibility](scripts/dihole_lapse_susceptibility.py) · [results](results/dihole_lapse_susceptibility_results.json) | Fixed-spatial-metric variation, compact smooth masks, certified overlap integrals and inherited field-error bounds | Three enclosed response derivatives; no supporting stress or medium |
 | [Curved local probe](scripts/dihole_probe_residual.py) · [results](results/dihole_probe_residual_results.json) · [field](data/dihole_probe_residual_fields.npz) | Actual curved operator, physical mode quantization, compact source, two defect corrections and quadrature comparisons | A smaller numerical residual with fixed source; no certified curved-response interval or supporting stress |
 | [Whole-plane Gaussian response](scripts/null_saddle_resolvent.py) · [interval checker](scripts/null_saddle_residual_interval.py) · [results](results/null_saddle_resolvent_results.json) · [field](data/null_saddle_resolvent_fields.npz) | Self-adjoint domain, full continuum residual, independent coordinate control and interval primal/adjoint bounds | Certified responses to one fixed probe at two frequencies in the ideal saddle; no real-axis scattering, curved-model error bound or supporting stress |
 | [Frequency response](scripts/null_saddle_spectrum.py) · [analytic arms](scripts/null_saddle_frequency_tail.py) · [results](results/null_saddle_spectrum_results.json) · [figure](figures/null_saddle_spectrum_progress.png) | Real/complex branch, near-plane phase reference, absorption ledger and independent transfer checks | Selected finite-model responses; nonzero-frequency outer-cap phase remains unresolved, with no stress or support claim |
@@ -101,6 +104,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scripts/scattering_vacuum.py) · [results](results/scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Local lapse perturbations and bounded response derivatives](figures/dihole_lapse_susceptibility_progress.png)
+
+*The contours mark mathematical changes in clock rate. They do not depict a material or portal.*
 
 ![Curved-equation correction and support](figures/dihole_probe_residual_progress.png)
 
@@ -186,6 +193,14 @@ Start with a small symbolic check that does not rewrite results:
 ```
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
+
+The current local lapse calculation takes about13 seconds and writes its own results and figure, while checking and reusing the saved119 certificate:
+
+```powershell
+$env:OPENBLAS_NUM_THREADS='1'
+$env:OMP_NUM_THREADS='1'
+.\.venv\Scripts\python.exe -B -W error -X utf8 scripts/dihole_lapse_susceptibility.py
+```
 
 The complete retained threshold calculation takes about 31 seconds; the separate angular-quadrature check takes under 2 seconds including imports:
 
