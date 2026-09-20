@@ -1,5 +1,195 @@
 # Reproduction and coupled-model iterations
 
+## Smooth collar, magnetic response and the gravitational target — increment108
+
+This step specifies one smooth geometry and uses it for both the magnetic
+response and the required gravitational stress. It is an off-shell test:
+the geometry is prescribed, not derived from available matter. The magnetic
+calculation remains finite, and no quantum stress has been computed on it.
+
+### One smooth geometry, with the same physical clock throughout
+
+Let x be outward proper distance across each collar, 0 <= x <= w, with
+b=.2d, w=.1d, rho_c=32 and mouth separation d. Set s=x/w and
+
+\[
+ S(s)={e^{-1/s}\over e^{-1/s}+e^{-1/(1-s)}}\quad(0<s<1),
+ \qquad S=0\ (s\le0),\quad S=1\ (s\ge1).
+\]
+
+For u_c=asinh(rho_c), prescribe
+
+\[
+ r(x)=b+w\int_0^{x/w}S(v)\,dv,\qquad
+ \log N(x)=[1-S(x/w)]\log{\cosh(u_c+x/b)\over\cosh u_c}.
+\]
+
+Flatness of the switch at both endpoints makes the metric C-infinity. The
+inner radius has every derivative zero and the lapse matches the product
+core's complete jet. At the outer endpoint, r_out=b+w/2=.25d, r'=1, N=1,
+and every higher radius derivative and every lapse derivative vanish.
+The two outer spheres are disjoint. A compact handle with positive bounded
+lapse and this complete flat end has a complete optical spatial metric.
+This removes the sharp metric layer in the prescribed construction; finite
+magnetic matching does not yet establish a smooth global gauge connection.
+
+The source-free Maxwell mode equation remains (N a_j')'=N j(j+1)a_j/r^2.
+The implementation reuses the saved core bases and propagates (a_j,N a_j')
+through the collar. With the original unit-center chi bases and
+ell=b*sqrt(1+rho_c^2), their conserved N-weighted Wronskian is 1/ell.
+At N_out=1 the two-mouth response is
+
+\[
+ D_{11}=D_{22}={1\over2}(e'/e+o'/o),\qquad
+ D_{12}=D_{21}=-{1\over2\ell e o}.
+\]
+
+The reflected lower frame has the same angular parity as in107. The actual
+exterior boundary is now r_out=.25d, so its incident and induced fields must
+also be evaluated there. A response at the former .2d sphere cannot be reused.
+
+### Computed result and checks
+
+[smooth_magnetic_collar.py](smooth_magnetic_collar.py) and its
+[saved results](smooth_magnetic_collar_results.json) reuse the107 core data.
+Only the new collar integrations and small multipole systems are evaluated.
+
+| Induced cutoff | Monitored through | Largest retained mismatch | Weighted higher-mode mismatch |
+| ---: | ---: | ---: | ---: |
+| 3 | 9 | 3.469e-18 | 8.159550407e-05 |
+| 6 | 12 | 3.469e-18 | 1.563964278e-06 |
+| 9 | 15 | 3.469e-18 | 1.655222901e-08 |
+
+The bare-pair mismatch at the new outer radius is 0.0421895927738.
+At L=9 the one-collar results in d=1 units are Q_geom=-4.75454459566906
+and M=0.00945981942211883. Their dimensions differ as specified below.
+The optical collar length is 0.0934381038611349d.
+The total monitored perturbation magnetic energy of the core plus both
+collars is g_R^2 E=0.0188835538121502/d.
+
+All18 implementation controls pass, including endpoint jets, differential
+equations, normalization, exterior matching, flux, energy and separate
+angular/quadrature checks. The direct geometric-integral check differs from
+the boundary formula by 3.11e-14. One tighter collar integration
+changes the induced coefficients by at most 4.34e-18 and M by
+1.21e-17. These are floating sensitivity checks, not rigorous numerical
+or all-angular error enclosures. The derivative mismatch beyond degree15
+remains unbounded by a certificate, and the quantum source is uncomputed.
+
+Independent reconstruction of all six exterior matching systems agrees
+within4.34e-19 for coefficients,6.77e-18 for normal derivatives,2.48e-17
+for jumps and3.47e-18 for energy. Reconstructed null-density columns agree
+within1.11e-16. Independent Simpson integration of513 saved profile points
+reproduces Q_geom, M and optical length within9.58e-16; a257-point check
+agrees. No collar ODE, core, exterior PDE or Dirac solve was repeated for
+this audit. Source/input hashes and all original-center normalizations match.
+
+### Required support, with units kept separate
+
+For radial null geodesics with conserved energy E and affine parameter
+lambda, the spherical Einstein identity gives the one-collar requirement
+
+\[
+ Q_{\rm geom}={4\pi G\over E}\int T^{\rm geom}_{ab}k^ak^b\,d\lambda
+ =-{1\over r_{\rm out}}-\int_0^w{r'^2\over N r^2}\,dx<0.
+\]
+
+For the matched perturbation a=sum_j a_j(x)Y_j(cos theta), fixed monopole
+flux and G_j=2j(j+1)/(2j+1), the angular-averaged magnetic contribution is
+
+\[
+ M={g_R^2\over E}\left\langle\int T^{\rm EM}_{ab}k^ak^b d\lambda\right\rangle_\Omega
+ ={1\over2}\sum_jG_j\int_0^w{a_j'^2\over N r^2}\,dx\ge0.
+\]
+
+Q_geom has units length^-1 and M length^-3. Therefore the dimensionless
+remaining effective non-Maxwell demand is
+
+\[
+ dQ_{\rm other}=dQ_{\rm geom}-\lambda_G d^3M,\qquad
+ \lambda_G={4\pi G\over g_R^2d^2}.
+\]
+
+The coefficient lambda_G stays symbolic. Any fixed higher-curvature terms
+in the gravitational action must be included consistently in this effective
+source budget; they cannot be adjusted afterward to force support.
+The monitored magnetic sum is positive and therefore increases the required
+negative contribution. It does not supply the missing quantum energy.
+
+An angular average is only a necessary condition. In an orthonormal frame,
+B_x=a_theta/(r^2 sin theta), B_theta=-a_x/(r sin theta). Maxwell stress obeys
+T_xx+rho=B_theta^2/g_R^2,
+T_theta,theta-T_phi,phi=-B_theta^2/g_R^2 and
+T_x,theta=-B_x B_theta/g_R^2. A spherical Einstein tensor requires the
+remaining source to cancel the latter two components pointwise, or requires
+nonspherical gravitational backreaction. Symbolic tensor checks reproduce
+these identities and the zero Maxwell trace exactly.
+
+### Full charged operator on this collar
+
+The radial rescaling in [MMP, Appendix C](https://arxiv.org/html/1807.04726v3#A3)
+and [our earlier fixed-angular derivation](CURVED_THROAT_MATCHING.md) extends
+to a radially varying connection. Define optical distance dy=dx/N and
+chi=r*sqrt(N)*Psi. The physical norm int r^2 dx dOmega Psi-dagger Psi then
+becomes int dy dOmega chi-dagger chi. With Hermitian frame matrices alpha,
+
+\[
+ H_\chi=-i\alpha_x\partial_y+{N\over r}K[a],\qquad
+ K[a]=-i\left[\alpha_\theta(\partial_\theta+\tfrac12\cot\theta)
+ +\alpha_\phi\csc\theta(\partial_\phi-i a)\right].
+\]
+
+The squared operator is H_chi^2=-partial_y^2+V^2-i alpha_x V',
+with V=(N/r)K and {alpha_x,V}=0. It includes the derivative of the
+angular magnetic connection. The symmetric proper-distance Hamiltonian
+agrees with [Obukhov, Silenko and Teryaev, equation2.21](https://arxiv.org/pdf/1106.0173).
+
+K now depends on position. Use a fixed complete angular basis, or retain
+the connection from differentiating a moving eigenbasis; the old independent
+angular channels and freely transported zero mode are insufficient.
+For the right Weyl convention alpha=(sigma3,sigma1,sigma2), the left block
+is its negative with the same gauge connection and consistently identified
+spin frame. The full Dirac source includes both blocks.
+
+A compact variation delta log N=f, delta log A_r=-f of g_xx=A_r^2 probes
+int N r^2 f(rho+p_x) dx dOmega. At A_r=1, its fixed-measure operator variation
+is -i alpha_x[2Nf partial_x+(Nf)']+(Nf/r)K. A gauge variation is
+-N alpha_phi delta a/(r sin theta), probing minus the correspondingly
+weighted j^phi. Both must use the same renormalized state and local
+subtraction scheme. These formulas define an actionable stress/current
+calculation; writing them does not evaluate the Green function or its source.
+
+### A physical gate before another precision source calculation
+
+The charge-radius relation
+r_e^2=pi G q^2/g_R^2 follows from the electrovac solution in
+[MMP, equations 2.2–2.3](https://arxiv.org/html/1807.04726v3#S2.SS2).
+If b is assigned that classical magnetic radius, lambda_G=.16 for q=1
+and b=.2d, while r_e^2/r_out^2=.64. The electromagnetic metric term alone
+is then not small at the proposed join. This is a conditional diagnostic,
+not a measured 64% error in the full two-mouth metric. The mass term and
+companion gravity also matter. Near-extremal isolated RN, for comparison,
+has N(r_out)=1-r_e/r_out=.2 rather than the prescribed flat value1.
+Its proper radial derivative r'= .2, temporal extrinsic curvature
+N'/N=3.2/d and angular extrinsic curvature r'/r=.8/d also differ from
+the flat endpoint values1,0,4/d. A constant time rescaling cannot repair
+these extrinsic mismatches. This diagnostic reuses the RN endpoint logic
+already present in mmp_pulse.py::polyakov_junction_checks; the saved
+large-flux Dirac collar is a different source model, not a q=1 replacement.
+
+Exact flat space with nonzero Maxwell stress is not an Einstein-Maxwell
+solution. Cancellation by a computed additional source would be required.
+Thus this smooth flat-ended construction supplies a test background and a
+support target, but is not a controlled electrovac match when b=r_e.
+Before a high-precision quantum-source calculation, specify the physical
+couplings and replace the near-mouth exterior by a gravitationally consistent
+geometry, generally with angular dependence. Do not repeat the107 field-only
+accuracy sweep or import the old negative quantum signal unchanged.
+
+No material, formation, stability or chronology-changing result follows.
+The assumed static positive-lapse geometry has a global time coordinate;
+13 September 2027 -> 12 September 2027 remains unproved.
+
 ## Magnetic matching and a defined collar-source calculation — increment107
 
 ### A known exact reference vacuum is not required

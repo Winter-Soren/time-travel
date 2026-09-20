@@ -58,6 +58,58 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Smooth collar and gravitational exterior gate — increment108
+- Previous turn classified PROGRESS:107 was committed/pushed and local/remote
+  HEAD3850bd72bb04374645347cd3e2ca3f1ce3e609b6 verified equal, private=true,
+  worktree clean. Import COMPLETE; goal ACTIVE, unbudgeted.
+- New smooth_magnetic_collar.py/results.json reuse frozen107 chi-center bases
+  and matching helpers. Only new collar ODEs/small matrices run (~7.42s).
+  q1,b.2,d1,rhoc32; C-infinity switch S, r'=S, w.1, rout.25;
+  logN=(1-S)log[cosh(asinh32+x/b)/cosh(asinh32)]. Full metric jets match
+  product core and flat exterior. N positive; optical end complete.
+- Conserved N-Wronskian1/ell; matching uses new outer sphere .25. L3/6/9,
+  monitor+6, quad32/64. All18 controls PASS. L9 bare mismatch.0421895927738,
+  monitored higher remainder1.65522e-8; retained<=3.47e-18. Full angular
+  remainder and smooth gauge connection not certified.
+- One-collar Qgeom=(4piG/E)Igeom=-4.754544595669059 (length^-1);
+  monitored M=(g²/E)<IEM>=+.009459819422118834 (length^-3).
+  Optical length .0934381038611349; total core+two-collar perturbation
+  magnetic energy g²E=.0188835538121502. Maxwell adds positive null cost.
+  dQother=dQgeom-[4piG/(g²d²)]d³M; couplings left symbolic. Fixed higher
+  curvature terms must be consistently included in the effective budget.
+- One tighter collar integration changes beta4.34e-18,M1.21e-17.
+  Independent6systems audit: beta<=4.34e-19,derivative6.77e-18,jump2.48e-17,
+  energy3.47e-18. Reconstructed densities1.11e-16; independent saved-profile
+  integration reproduces Q/M/optical<=9.58e-16. No duplicate PDE/ODE solve.
+- Source7c82ad2273d92eb5697c667b57f3904479520cb10e100709e201f0efcf4d9103;
+  data8e38c09f3d5e8ce26287ded33322d0f200a36e9bb2fb6a818106720030dbc207.
+  Input parameters/sourcehash guarded; stale old sharp-core clock metadata
+  removed. Original107/historical physics/data unchanged.
+- Full Dirac operator derived: dy=dx/N,chi=r sqrtN Psi,
+  H=-i alpha_x partial_y+(N/r)K[a(x,theta)]. Use coupled fixed angular basis;
+  cannot retain independent monopole channels/free zero-mode assumption.
+  Smeared null-stress/current variations derived; no Green function solved.
+- IMPORTANT next-action change: if b=r_e with r_e²=piGq²/g², coupling
+  4piG/(g²d²)=.16 and charge-curvature ratio r_e²/rout²=.64. Flat near-mouth
+  exterior is NOT a controlled electrovac approximation. Isolated extremal
+  RN comparison has N=.2,r'=.2,N'/N=3.2/d,Kangular=.8/d versus1,1,0,4/d.
+  These are conditional single-mouth diagnostics, not a two-body solution.
+- smooth_collar_progress.png/pdf generated and independently visually checked.
+  Only new plot helper rendered under strict Python; data assertions PASS.
+  PNG9cd652d8a8b71945b39d79dd4362efc52b6dd300cca5e7c92b28baf899b062b2;
+  PDFb5fdc79a8f779f2c003124c0cf18c7d78e080e586bbdfe1ccc34a05997c823e9.
+  All196 old figures and483 historical files outside5 permitted edits
+  preserved; old plotter restored exactly by removing the added helper.
+- NEXT: specify physical coupling/scale relations and use existing RN jet
+  machinery (mmp_pulse.py polyakov_junction_checks, magnetic_boundary_response,
+  coupled_exterior/boundary) to form gravitationally consistent near-mouth
+  matching before a precision quantum-source integral. Existing large-q84
+  dirac_return_closure is not a q1 substitution. Allow angular backreaction
+  and source/current consistency; angle-average alone cannot support metric.
+  Do not rerun106 accuracy sweep or transfer old quantum-source numbers.
+- No stable medium, source preparation, new law, formation, stability or
+  13Sep2027->12Sep2027 passage proved. Current static ansatz is causal.
+
 ### Actual magnetic mouth matching and source definition — increment107
 - Previous goal turn classified PROGRESS:106's actual continuum trial missed
   its target and changed the next action. Published/verified private main at

@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Smooth collar, magnetic response and same-geometry support target | [smooth_magnetic_collar.py](smooth_magnetic_collar.py), [results](smooth_magnetic_collar_results.json), [figure](smooth_collar_progress.png); conditional RN exterior gate and coupled Dirac operator in [RESEARCH.md](RESEARCH.md) |
 | Finite magnetic matching on the actual mouth data | [magnetic_mouth_matching.py](magnetic_mouth_matching.py), [results](magnetic_mouth_matching_results.json), [figure](magnetic_matching_progress.png); source definition and the remaining smooth-collar requirements in [RESEARCH.md](RESEARCH.md) |
 | Actual conforming field and failed residual target | [conforming_exterior_trial.py](conforming_exterior_trial.py), [saved field/results](conforming_exterior_trial_results.json), [figure](conforming_trial_progress.png); [round-domain quadrature](physical_exterior_quadrature.py) and [controls](physical_exterior_quadrature_results.json) |
 | Two-leg angular feedback and continuum-residual target | [feedback_residual_bound.py](feedback_residual_bound.py), [results](feedback_residual_bound_results.json), [diagram](tail_completion_progress.png); finite mixing witness plus requirements for conforming physical trial fields |

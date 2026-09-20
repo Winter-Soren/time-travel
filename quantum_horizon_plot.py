@@ -8114,6 +8114,78 @@ def magnetic_matching_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def smooth_collar_progress():
+    """Show the prescribed smooth collar and separately normalized null budgets."""
+    from matplotlib.patches import FancyBboxPatch
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'smooth_magnetic_collar_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values())
+    p=d['parameters'];profile=d['profiles'];g=profile['geometry'];dens=profile['radial_null_densities']
+    assert p['d']==1 and p['core_radius']==.2 and p['collar_proper_width']==.1 and p['rho_c']==32
+    assert d['conclusions']['smooth_prescribed_geometry_constructed']
+    assert not d['conclusions']['Einstein_equations_solved'] and not d['conclusions']['all_angular_matching_certified']
+    x=np.array(profile['x']);r=np.array(g['radius']);N=np.array(g['lapse'])
+    qdensity=np.array(dens['Qgeom_density']);mdensity=np.array(dens['Maxwell_M_density_upper'])
+    assert x.shape==r.shape==N.shape==qdensity.shape==mdensity.shape and np.all(np.diff(x)>0)
+    assert x[0]==0 and x[-1]==p['collar_proper_width'] and np.all(N>0) and np.all(r>0)
+    assert np.allclose(r[[0,-1]],[p['core_radius'],p['exterior_cut_radius']],rtol=1e-13,atol=0)
+    assert np.allclose(N[[0,-1]],1,rtol=1e-13,atol=0)
+    qcalc=(np.array(g['radius_prime'])*np.array(g['lapse_prime'])/N-np.array(g['radius_second']))/(N*r)
+    assert np.allclose(qcalc,qdensity,rtol=1e-12,atol=0)
+    mcalc=np.zeros_like(x)
+    for row in profile['modal']:
+        l=row['degree'];G=2*l*(l+1)/(2*l+1)
+        mcalc+=.5*G*np.array(row['upper_prime'])**2/(N*r*r)
+    assert np.allclose(mcalc,mdensity,rtol=1e-12,atol=0) and np.all(mdensity>=0)
+    selected=profile['selected_record']
+    row=next(a for a in d['records'] if a['induced_cutoff']==selected['induced_cutoff'] and a['quadrature_order']==selected['quadrature_order'])
+    Q=d['geometry_budget']['Qgeom_integration_by_parts'];M=row['magnetic_radial_null_budget']['monitored_upper_M']
+    assert Q<0 and M>0 and selected['induced_cutoff']==9 and selected['monitor_degree']==15
+    integrate=lambda y:np.sum((y[1:]+y[:-1])*np.diff(x)/2)
+    assert np.isclose(integrate(qdensity),Q,rtol=1e-6,atol=0)
+    assert np.isclose(integrate(mdensity),M,rtol=1e-6,atol=0)
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig=plt.figure(figsize=(13.5,8.2))
+    fig.suptitle('A smooth collar still needs its supporting source',fontsize=18,fontweight='bold',y=.96)
+    fig.text(.5,.905,'One prescribed collar: radius 0.20d \u2192 0.25d over proper width 0.10d \u00b7 Smooth positive lapse \u00b7 q = 1',ha='center',fontsize=10.8,color='#475569')
+    ax=fig.add_axes([.07,.43,.36,.35]);nx=ax.twinx()
+    ax.plot(x,r,color='#007e87',lw=2);nx.plot(x,N,color='#7951b0',lw=1.8,ls='--')
+    ax.set(xlim=(0,.1),ylim=(.196,.254),xlabel='Outward proper distance x / d',ylabel='Areal radius r / d')
+    nx.set_ylim(.98,1.17);nx.set_ylabel('Lapse N (dimensionless)',color='#7951b0')
+    ax.tick_params(axis='y',colors='#007e87');ax.yaxis.label.set_color('#007e87')
+    nx.tick_params(axis='y',colors='#7951b0');ax.set_xticks(np.linspace(0,.1,6))
+    ax.grid(alpha=.16);ax.spines['top'].set_visible(False);nx.spines['top'].set_visible(False)
+    ax.set_title('A. Actual prescribed radius and clock-rate profiles',fontsize=11.6,pad=14)
+    ax.annotate('core',xy=(0,.2),xytext=(8,8),textcoords='offset points',color='#007e87',fontsize=9)
+    ax.annotate('exterior',xy=(.1,.25),xytext=(-5,8),textcoords='offset points',ha='right',color='#007e87',fontsize=9)
+    sx=fig.add_axes([.065,.305,.405,.055]);sx.set_xlim(0,1);sx.set_ylim(0,1);sx.axis('off')
+    for left,width,color,label in ((.01,.24,'#edf1f5','Product core'),(.28,.39,'#dff0f1','Smooth collar'),(.70,.28,'#edf1f5','Flat exterior')):
+        sx.add_patch(FancyBboxPatch((left,.15),width,.65,boxstyle='round,pad=.015',fc=color,ec='#94a3b8',lw=.8))
+        sx.text(left+width/2,.48,label,ha='center',va='center',fontsize=8.8,color='#334155')
+    fig.text(.073,.278,f"Region labels only \u00b7 one-collar optical length = {d['geometry_budget']['optical_length']:.6f}d",fontsize=9.2,color='#475569')
+    fig.text(.59,.819,'B. Required geometry and known magnetic term',fontsize=11.8)
+    qx=fig.add_axes([.60,.575,.34,.205]);mx=fig.add_axes([.60,.32,.34,.205])
+    qx.plot(x,qdensity,color='#b45336',lw=1.8);qx.fill_between(x,qdensity,0,color='#b45336',alpha=.10)
+    qx.axhline(0,color='#64748b',lw=.7);qx.set(xlim=(0,.1),ylim=(min(qdensity)*1.13,6),ylabel=r'$dQ/dx$ [$d^{-2}$]')
+    qx.text(.035,1.045,r'$Q=(4\pi G/E)\,I_{\rm geom}$',transform=qx.transAxes,fontsize=10,color='#b45336')
+    qx.text(.97,-.145,f"Integral Q = {Q:.6f}/d",transform=qx.transAxes,ha='right',fontsize=10.3,color='#b45336')
+    qx.tick_params(axis='x',labelbottom=False)
+    mx.plot(x,mdensity,color='#7951b0',lw=1.8);mx.fill_between(x,0,mdensity,color='#7951b0',alpha=.10)
+    mx.set(xlim=(0,.1),ylim=(0,max(mdensity)*1.22),xlabel='Outward proper distance x / d',ylabel=r'$dM/dx$ [$d^{-4}$]')
+    mx.text(.035,.89,r'$M=(g^2/E)\,\langle I_{\rm EM}\rangle$',transform=mx.transAxes,fontsize=10,color='#7951b0')
+    mx.text(.97,.08,f"Integral M = +{M:.8f}/d\u00b3",transform=mx.transAxes,ha='right',fontsize=10.3,color='#7951b0')
+    for axis in (qx,mx):
+        axis.set_xticks(np.linspace(0,.1,6));axis.grid(alpha=.15);axis.spines[['top','right']].set_visible(False)
+    fig.text(.07,.207,r'Remaining source: $Q_{\rm other}=Q_{\rm geom}-(4\pi G/g^2)M$'+' \u00b7 G/g\u00b2 stays symbolic; the plotted normalizations are not added.',fontsize=11.2,fontweight='bold',color='#334155')
+    fig.text(.07,.163,'I is an affine radial-null stress integral; E is the conserved null-ray energy. The magnetic contribution is nonnegative.',fontsize=9.9,color='#475569')
+    fig.text(.07,.119,'L = 9 matching; modes through 15 tested. Higher tails, nonspherical Einstein balance, quantum support and stability remain unresolved.',fontsize=9.9,color='#475569')
+    fig.text(.07,.075,r'Next: gravitational exterior matching. If $b=r_e$, the flat near-mouth approximation is uncontrolled ($r_e^2/r_{\rm out}^2=0.64$).',fontsize=10.1,color='#475569')
+    fig.text(.07,.027,'13 Sep 2027 \u2192 12 Sep 2027 remains unproved; no physical medium or construction method is established.',fontsize=10.6,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'smooth_collar_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()
