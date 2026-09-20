@@ -1,5 +1,141 @@
 # Reproduction and coupled-model iterations
 
+## Compact response in the actual curved coefficients — increment117
+
+[Calculation and correction](../scripts/dihole_probe_residual.py),
+[results](../results/dihole_probe_residual_results.json),
+[corrected fields](../data/dihole_probe_residual_fields.npz), and
+[figure](../figures/dihole_probe_residual_progress.png).
+
+The116 interval certificate applies to the ideal saddle plane. Here its trial
+is embedded in the actual [Emparan dihole](https://arxiv.org/abs/hep-th/9906160)
+coefficients, and corrected using the resulting differential-equation residual.
+The known geometry still contains extremal horizons; this is a local resolvent
+probe near the magnetic null, not a passage through a traversable throat.
+The curved norms below are quadrature estimates, not interval certificates.
+
+### Exact local embedding and the source that stays fixed
+
+Let L=Lq, Eq=v*/L, and
+
+$$
+\rho=\rho_*+L(u+v)/\sqrt2,\qquad z=L(u-v)/\sqrt2.
+$$
+
+The canonical flat-measure map is Tphi=L^-1 phi(u,v). With w=vphysical/v*,
+M=bphysical(mu-q a)/Eq, the exact scaled local operator is
+
+$$
+H_q=T^{-1}H_{\rm physical}T/E_q
+=-iA_U(w\partial_u+w_u/2)-iA_V(w\partial_v+w_v/2)+\sigma_y M.
+$$
+
+Here w_u=L(v_rho+v_z)/(sqrt2 v*) and w_v=L(v_rho-v_z)/(sqrt2 v*).
+The existing unit-q gauge is retained: physical_coefficients returns a, so
+mu-q a is correct. Rescaling that gauge by q as well would double count it.
+
+For integer q, choose the nearest allowed half-integer
+mu=floor(q a*+Eq/b*)+1/2. Its eta_q=b*(mu-q a*)/Eq is not exactly1; that
+mismatch remains in M-(1-2uv). The trials use the116 eta1,kappa1,N128 fields.
+A C² quintic cutoff equals1 for |x|<=R1 and0 for |x|>=R2. On the transition,
+it is 1-10t³+15t⁴-6t⁵, t=(|x|-R1)/(R2-R1).
+
+The **source** is always h=chi_s f0, with product cutoff R1/R2=5/7. Its measured
+norm is reported; no exact unit normalization is imposed. Trial cutoffs are
+5/7 or7/9. All support must satisfy rho*-sqrt2 L R2>0; q=1 fails this guard.
+Quadrature panels split at the union of source and trial cutoff knots.
+
+Write Hq=iKq and H0=iK0 in the real global-spin basis. For the trial
+psi_t=i chi_t a, the full real residual is
+
+$$
+\begin{aligned}
+\rho_q=h-(H_q-i\kappa)\psi_t
+={}&\chi_t[f_0+(K_0-\kappa)a]
++\chi_t(K_q-K_0)a\\
+&-w(A_U\chi_{t,u}+A_V\chi_{t,v})a
++(\chi_s-\chi_t)f_0.
+\end{aligned}
+$$
+
+The final source-difference term must remain when the trial is widened.
+The adjoint uses +kappa with the same spatial operator. A direct independent
+action in rho,z agrees with this rotated residual decomposition.
+
+### Correct the field, then test the actual equations again
+
+Project the current compact residual onto the global Hermite basis. With
+B0=P(K0-kappa)P, apply two defect corrections:
+
+$$
+a\leftarrow a-B_0^{-1}P\rho_q,\qquad
+b\leftarrow b+B_0^{-T}P\sigma_q.
+$$
+
+The ideal saddle inverse is only a numerical preconditioner. Every new trial
+is cut off again and tested with the actual curved coefficients. No general
+contraction or convergence theorem is assumed. After correction, the saddle
+residual and curvature-mismatch terms can be individually large and cancel;
+the original116 residual certificate does not apply to the changed trial.
+
+| Case | Initial curved residual norm | After two corrections | Estimated scalar radius |
+| --- | --- | --- | --- |
+| q=8,000; trial cutoff5/7 | 0.1424952 | 0.02951628 | 0.000871211 |
+| q=512,000; trial cutoff5/7 | 0.03938446 | 0.005966798 | 0.0000356027 |
+| q=512,000; trial cutoff7/9 | 0.03977640 | 0.001668983 | 0.00000278550 |
+
+The final row is about a24-fold reduction with the same compact source.
+Its corrected imaginary scalar estimate is0.419004629656373. This is not
+presented as a certified interval. Its support has rho_min/D=0.51753665,
+Lq/D=0.01176145, Eq D=43.31793 and physical label mu=398908.5. The remaining
+cutoff-derivative norm is0.00144830, so the trial's outer transition still
+contributes substantially to the residual. q is quantized magnetic flux,
+not an amount of obtainable material.
+
+For any self-adjoint exterior realization agreeing with the local expression
+on this compact support, the exact conditional bound is
+
+$$
+|G_q-G_{\rm trial}-\langle\psi_{\rm dual},\rho_q\rangle|
+\le \|\rho_q\|\,\|\sigma_q\|/\kappa.
+$$
+
+The table evaluates its right-hand side by numerical quadrature. Establishing
+that algebraic inequality does not enclose these numerical integrals. With
+unitary-transformed physical source T h and frequency i Eq kappa, the physical
+response/radius divides by Eq. If h is normalized, both scalar values/radii
+also divide by ||h||². The implementation keeps its declared unnormalized h.
+
+### Verification and what remains
+
+Ten check groups pass, including the cutoff's exact C² endpoints, rejection
+of an axis-crossing patch, quantized labels/detuning, direct physical action,
+fixed source under widening and corrected-field quadrature refinement.
+Order96→144 changes the widest trial's residual norm by1.08e-12 and scalar
+estimate by2.60e-14. These are sensitivities, not error bounds.
+
+An independent70-digit audit at64 interior points found maximum absolute
+normalized-mass discrepancies1.61e-13,9.43e-13,2.43e-12 and1.43e-11 for
+q=8,000,64,000,512,000 and4,096,000. Speed discrepancy was below3.87e-16.
+This checks arithmetic and half-integer selection at those points; it does
+not certify the whole support or the integrals.
+
+The natural exterior domain still needs an explicit global spin/gauge
+identification; the reduced half-plane expression alone does not prove it.
+A candidate route uses the complete optical metric
+(P/N)²(dρ²+dz²)+ρ²/N⁴ dphi², regular axis and integer-q gauge transitions,
+then the Dirac-bundle result of
+[Bandara and Saratchandran, Theorem3.5](https://arxiv.org/pdf/1606.06190).
+That route has not been completed here and cannot be transferred to an
+unspecified throat replacement or artificial finite cuts.
+
+Q/D=.2 is fixed. Varying q also changes the calibration
+4piG/g_R²=(2Q/q)²; keeping physical couplings fixed requires rescaling Q and D.
+No matter-preparation recipe follows. The next work is to enclose the curved
+integrals and establish the physical operator domain before using these local
+responses in a full quantum-stress calculation. Supporting stress, gravitational
+backreaction, stability and13 September2027→12 September2027 remain unproved.
+
 ## Whole-plane Gaussian response with a continuum error enclosure — increment116
 
 [Global Hermite solver](../scripts/null_saddle_resolvent.py),

@@ -58,6 +58,66 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Compact probe corrected in the actual curved operator — increment117
+- Previous goal turn PROGRESS:116 committed/pushed83ea249865ea483528202c632eceef73ad54c1eb;
+  privateorigin and cleanworktree verified;117 started clean.
+- NEW scripts/dihole_probe_residual.py reuses116 kappa1 eta1 N128 actual primal/
+  adjoint coefficients. Maps via rho=rho*+L(u+v)/sqrt2,z=L(u-v)/sqrt2;
+  Tphi=L^-1phi is unitary in canonicalflat measure; Hq=T^-1HphysicalT/Eq.
+  Actual Kq=-AU(w∂u+w_u/2)-AV(w∂v+w_v/2)+J*b(mu-q a)/Eq; Hq=iKq.
+- Unit-q gauge physical_A_factor stays-1/(2Q); physical_coefficients returnsa,
+  notq*a. Choose mu=floor(q a*+Eq/b*)+.5. Include eta_actual−1 in mismatch.
+  q8000/64000/512000/4096000 have mu6245.5/49883.5/398908.5/3190948.5.
+- Fixed source h=chi_s f0, source cutoff5/7, UNNORMALIZED (norm reported near1).
+  Trial cutoff5/7 or7/9, compactC2 quintic, must stay rho*−sqrt2 L Rout>0.
+  q1 rejected. All source/trial cutoff knots split quadrature.
+  Wider trial retains (chi_s−chi_t)f0 in residual and source pairing; independently
+  audited after patch. No silent source change or assumed exact unit norm.
+- Baseline actual curved residuals q8000...4096000 decrease .142495/.0757021/
+  .0393845/.0208577; ideal116 error alone does not control them.
+  Twelve baseline comparisons use GLorder64/96/144 per segment.
+- Two corrections per selected case: B0=K0−kappa reused saddle inverse,
+  a-=B0^-1 P rho, b+=B0^-T P sigma. Actual curved operator reevaluated eachtime;
+  no contraction theorem asserted. Source fixed; global trial then cutoff.
+  q8000 narrow residual.142495->.050806->.0295163.
+  q512000 narrow.0393845->.00756409->.00596680.
+  q512000 wide.0397764->.00489883->.00166898277738 (~24fold).
+  Corrected wide ImG estimate.419004629656373, conditional-radius numerical
+  estimate2.78550351119e-6; cutoff derivative norm.0014483040.
+  Atwidecase rho_min.5175366485,L.01176144989,Eq43.31792890,eta.9954016437.
+- Tenchecks PASS strict full driver. Correctedfields GL96->144 max residual
+  difference1.075e-12 and max scalar difference2.593e-14. These are numerical
+  sensitivities, NOT integral enclosures/certified curved-response disks.
+  Direct unrotatedphysical vs rotatedsplit action agrees <2e-13. C2 endpoints,
+  quantization, support, detuning, fixedsource, correction/widening checks pass.
+- Independent70digit Weyl point audit at64points: max normalized mass errors
+  1.61e-13/9.43e-13/2.43e-12/1.43e-11 across4q; speed<3.87e-16.
+  Same physicalhalfint rounding. Sampledarithmetic only, no integralbound.
+- Exact conditional dual bound still applies to any self-adjoint exterior
+  realization agreeing on support. Naturalphysicaldomain NOT completed here.
+  Candidate opticalmetric(P/N)^2(dρ²+dz²)+ρ²/N^4 dφ²: P/N=Σ²/h²>=1,
+  h=dplus*dminus, near horizons P/N~Q²/epsilon²; complete with regularaxis.
+  Need explicit optical Dirac spin/gauge identification and mode decomposition
+  before applying Bandara-Saratchandran Thm3.5 https://arxiv.org/pdf/1606.06190.
+  This would concern the uncut black-hole exterior, NOT a throat replacement.
+- Physical frequency iEq*kappa, physicalG/radius divide byEq; if h normalized,
+  scalar values/radii also divide by||h||². Original116 certificate applies to
+  unchanged ideal trial; it does NOT certify corrected curvedfields/integrals.
+- Source/result/field hashes:
+  scripts/dihole_probe_residual.py: f3116cc447c66c5c95cf1327de105f93d4cbb2ec3242a01d06a79ffed7b89872
+  results/dihole_probe_residual_results.json: cfcf78102a8b0fa99e813d13c041e509bea1aaa9c456088deb256e0e322d5786
+  data/dihole_probe_residual_fields.npz: ddfab9ecbdf17313dc5f484346ac62437f7f6f5a98ce3b71d13a948a9292133c
+- PNG/PDF visually inspected. Patches are trial support, not materials/portals.
+- Verification: layout82 imports/613 links/8 historical guards/14 frozen inputs PASS;
+  diff-check PASS; all508 prior scientific files and RESEARCH/TASK history suffixes
+  byte-identical. Current source/input/field hashes verified.
+- NEXT: enclose the actual curved residual integrals and finish the physical
+  optical spin/gauge/operator-domain identification; avoid blind extra sweeps.
+  Q/D fixed while q changes requires coupling recalibration or physical length
+  rescaling. No material preparation, quantum stress, backreaction, stable throat,
+  or13Sep2027->12Sep2027. GoalACTIVE; no discovery claim. Professor already
+  notified readiness; heartbeatPAUSED; no email sent.
+
 ### Whole-plane Gaussian resolvent with certified continuum error — increment116
 - Previous goal turn PROGRESS:115 committed/pushede5057b45a4b1d6390865af3363b9b5de8b0926e5;
   privateorigin and cleanworktree verified;116 started clean.
