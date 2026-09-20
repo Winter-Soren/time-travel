@@ -1,5 +1,105 @@
 # Reproduction and coupled-model iterations
 
+## Physical-mass regulator on the connected geometry — increment135
+
+The [massive bridge](../scripts/dihole_massive_bridge.py) and
+[connected regulator driver](../scripts/dihole_pv_source.py) now carry actual
+proper Dirac masses through the same prescribed bridge and finite exterior.
+The four-mass Pauli--Villars (PV) combination cancels134's flat bulk artifact
+exactly. The [analytic derivation and primary sources](PHYSICAL_MASS_REGULATOR.md)
+state the covariant candidate and remaining renormalization requirements.
+The [saved pilot](../results/dihole_pv_source_results.json) is still a finite
+approximation, not the physical renormalized source.
+
+### New calculation and finite results
+
+Use masses $m_j^2=jM^2$ with weights $(1,-3,3,-1)$, fixed proper $MD=1$,
+$q=1$, $\mu=1/2$, four angular pairs, the existing R16 graded exterior,
+and 17 logarithmic frequencies $0.01\leq\kappa D\leq10$. Both Weyls are
+explicit, so the determinant prefactor is $-1/\pi$. Add the direct bridge
+and loop terms for each mass and combine the masses before integrating.
+The common leading-volume derivative cancels by $\sum c_j=0$; subtracting
+it inside each term is only a numerical rearrangement, not a fitted finite
+counterterm. No old scientific calculation was changed or re-certified.
+
+| Finite-window PV response, units $1/D$ | Phase 0 | Phase pi |
+| --- | ---: | ---: |
+| Direct bridge | -0.001555602711 | -0.001555602711 |
+| Connected loop | +0.002611089764 | +0.009382827940 |
+| Combined, 17 points | +0.001055487053 | +0.007827225229 |
+| Combined, 9 points | +0.001003073133 | +0.007995251698 |
+
+The grid changes are 4.97% and 2.15%, respectively. They are sensitivities,
+not error bounds; neither omitted frequency tail is bounded. The positive
+sampled totals do not provide the negative null-source support required by129.
+They also do not prove a physical no-go: finite $M$, one angular/azimuthal
+sector, numerical exterior losses and local renormalization remain.
+The numbers are not directly comparable as physical stresses to134's
+leading-power-subtracted diagnostic. The regulator changes the calculation.
+
+![Finite-M connected response](../figures/dihole_pv_source_progress.png)
+
+### Physical coupling and controls
+
+The full Hamiltonian is $H_m=\bigl(\begin{smallmatrix}H_0&mN\\mN&-H_0\end{smallmatrix}\bigr)$.
+Its square contains $m[H_0,N]$; a frequency shift would miss this term.
+The bridge uses the actual angular compression of $mP$. The exterior uses
+$\mathcal A_m=\bigl(\begin{smallmatrix}A_0+\kappa W&imP_w\\imP_w&A_0^\dagger+\kappa W\end{smallmatrix}\bigr)$,
+where $P_w=\int\rho P\phi_a\phi_b$ and $W=\int\rho(P/N)\phi_a\phi_b$.
+The mass coupling is skew-Hermitian in this Euclidean equation and cannot
+create absorption. Dual input/output ports implement the opposite Weyl
+without conjugating charge or changing the magnetic bundle or loop phase.
+
+The bridge's12 controls pass, including physical constant-mass dispersion,
+real-energy unitarity, imaginary-frequency passivity and direct variation.
+The connected driver's16 controls pass in317 seconds. Maximum linear residual
+is $6.40\times10^{-14}$; independently integrated boundary/jump/volume
+identities, including off-shell trial fields, agree within
+$8.89\times10^{-15}$. All sampled exterior returns are contractive, with
+largest singular value0.96140 and smallest unassigned-loss eigenvalue0.02500.
+The determinant derivative check differs by at most $6.51\times10^{-11}$.
+These verify finite algebra and current accounting, not continuum stress.
+
+At zero mass the exterior return is $\operatorname{diag}(R,R^\dagger)$
+within $8.53\times10^{-16}$. Before polygon projection, the bridge likewise
+has adjoint Weyl blocks. Polygon cut factors are not isometries:
+$B_R=F_i B F_o^{-1}$ while $B_L=F_oB^\dagger F_i^{-1}$ need not equal
+$B_R^\dagger$. The independent two-Weyl projected sewing agrees within
+$8.88\times10^{-12}$, but its full loop log differs from twice the old
+single-Weyl log by up to $1.02\times10^{-7}$ at $\kappa D=0.1$.
+That difference is a cut-projection sensitivity, not an ODE tolerance.
+The initial probe with a looser doubling check is preserved in
+[results](../results/dihole_pv_probe_pre_cut_diagnostic_results.json) with
+[its exact source](../provenance/dihole_pv_source_pre_cut_diagnostic.py).
+The final driver uses strict raw-adjoint and independently projected checks.
+
+The flat control gives $\sum c_j=\sum c_jj=\sum c_jj^2=0$ exactly and a
+combined residue of $-8.9\times10^{-16}$ numerically. Its exact zero follows
+from the analytic formula, not that floating-point residual. These signed
+regulator weights describe neither exotic matter nor a physical quantum state.
+
+### Remaining physical dependency and reproduction
+
+The new note derives the physical four-dimensional heat coefficients and
+large-$M$ local subtraction in a declared heat/zeta convention. Matching its
+finite terms to133's fixed Hadamard prescription and charged Ward identity
+is still unimplemented. Fixed-$M$ frequency/angular/all-$\mu$/spatial and
+physical-exterior limits must precede the regulator-removal limit. Increasing
+$M$ on this unchanged small numerical model would not resolve those limits.
+The next work is that source completion, rather than another precision
+certificate for a settled massless spectrum. No material, self-consistent
+Einstein--Maxwell source, stability, formation or chronology change follows.
+13 September 2027 to12 September 2027 remains UNPROVED.
+
+Reproduce from the repository root with OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=1:
+`.\.venv\Scripts\python.exe -B -W error -X utf8 scripts/dihole_massive_bridge.py`
+and `.\.venv\Scripts\python.exe -B -W error -X utf8 scripts/dihole_pv_source.py`.
+The latter authenticates and reuses a completed exact-source checkpoint.
+Final driver SHA256 `c391267f84a61bf4c8c65b496770cc976c747db766054d4458ed62483b9281c3`;
+result `a34360778a44034271cd2fc6a42e66424a06851999331f845017d288a1224fc5`.
+The bridge result records its own source and input hashes. Neither133's
+state prescription nor earlier source/results were edited.
+
 ## Direct bridge determinant and regulator diagnostic — increment134
 
 The [new direct-response driver](../scripts/dihole_direct_source.py),

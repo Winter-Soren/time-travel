@@ -58,6 +58,48 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Physical-mass regulator and connected pilot — increment135
+- Previous134 PROGRESS: published427e3313d93ed3df1d494f7b61af02cbf27eac3f;
+ clean/origin verified at135 start. Import COMPLETE; goal remains ACTIVE.
+- NEW dihole_massive_bridge.py implements actual mP angular coupling for
+ Hm=[[H0,mN],[mN,-H0]], both Weyls explicit. All12 checks pass,7.67sec.
+ Sourceb34d7cab9dbe895fc0b661bb866760c6abe9c4039f5a52dfbd7277534fb44b80.
+- NEW dihole_pv_source.py assembles massive exterior from A0,A0-adjoint,
+ physical weak W and two +imP blocks, dual ports. Full Dirac prefactor-1/pi.
+ m_j^2=jM^2,c=(1,-3,3,-1); proper MD1, mu.5,q1,size4,R16,17freq.01..10.
+ All16 controls PASS,317sec; no job remains. Sources frozen during run.
+- Fine PV response: direct-.0015556027109592334/D;
+ loop[.002611089763914108,.009382827940281158]/D;
+ full[.0010554870529525216,.007827225229323132]/D for phases0,pi.
+ Coarse9 full[.0010030731325932107,.007995251697986079]/D.
+ Grid sensitivity4.97%,2.15%, not error bounds; no low/high tail enclosure.
+ Positive sampled values neither support129 nor prove physical impossibility.
+- Exact flat PV residue cancellation; moments0,0,0. Auxiliary negative
+ weights are subtraction terms, NOT physical exotic material or state.
+- m0 exterior diag(R,Rdagger) error8.53e-16; raw and independently projected
+ two-Weyl bridge maps agree8.88e-12. Polygon Fi/Fo nonisometries give~1.02e-7
+ full-loop-log difference from twice old Weyl at kappa.1. Do not call ODE
+ error or assume exact doubling after finite projection. Original loose
+ probe preserved in provenance/dihole_pv_source_pre_cut_diagnostic.py and
+ results/dihole_pv_probe_pre_cut_diagnostic_results.json; final controls strict.
+- Current identities including off-shell trials <=8.89e-15; linear residual
+ <=6.40e-14; max exterior singular.96140; min remaining loss.02500.
+- NEW docs/PHYSICAL_MASS_REGULATOR.md derives PV physical4D a0/a2/a4 and
+ large-M subtraction in DECLARED heat/zeta scheme; NOT matched to133 yet.
+ Same Hilbert/core across masses; unbounded lapse prevents assuming same
+ maximal graph domains. No actual joint charged-Ward implementation.
+ Notehash9ffa2a610ee0d038485b3bae3cb9bf9fba7d5d9e2e9f6cb9dd0415a49ad923b7.
+- Driverhashc391267f84a61bf4c8c65b496770cc976c747db766054d4458ed62483b9281c3;
+ resulthasha34360778a44034271cd2fc6a42e66424a06851999331f845017d288a1224fc5.
+ Figure dihole_pv_source_progress.png/pdf inspected. Existing massless/state
+ files remain frozen. No professor email or new outreach milestone.
+- NEXT: complete physical source normalization/Hadamard finite matching and
+ fixed-M frequency/angular/all-mu/spatial/physical-exterior limits before
+ regulator removal. Do not increase M on the same truncation and claim a
+ covariant limit. Reuse settled results; no broad old-spectrum revalidation.
+ No supporting material, stability, formation, new law or backward travel.
+ 13Sep2027 ->12Sep2027 remains UNPROVED.
+
 ### Direct determinant and covariant-normalization diagnostic — increment134
 - Previous133 PROGRESS: published3a167b1f37988e99658077eedd81c889f3fb5c9c,
  origin/clean verified. Import stays COMPLETE; goal ACTIVE.

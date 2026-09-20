@@ -34,6 +34,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Physical-mass Pauli--Villars connected pilot | [bridge](scripts/dihole_massive_bridge.py), [driver](scripts/dihole_pv_source.py), [results](results/dihole_pv_source_results.json), [figure](figures/dihole_pv_source_progress.png), [physical prescription and limits](docs/PHYSICAL_MASS_REGULATOR.md) |
 | Direct bridge determinant and finite-regulator diagnosis | [driver](scripts/dihole_direct_source.py), [results](results/dihole_direct_source_results.json), [figure](figures/dihole_direct_source_progress.png), [normalization proof and limits](docs/RESEARCH.md) |
 | Sewn ground state and local renormalization responses | [state/domain](docs/SEWN_SOURCE_STATE.md), [driver](scripts/dihole_local_source.py), [results](results/dihole_local_source_results.json), [figure](figures/dihole_local_source_progress.png), [limits](docs/RESEARCH.md) |
 | Connected finite-window energy-and-pressure contribution | [driver](scripts/dihole_source_window.py), [results](results/dihole_source_window_results.json), [figure](figures/dihole_source_window_progress.png), [normalization and source comparison](docs/RESEARCH.md) |

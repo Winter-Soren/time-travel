@@ -1,0 +1,3488 @@
+{
+  "complete": true,
+  "source_sha256": "c391267f84a61bf4c8c65b496770cc976c747db766054d4458ed62483b9281c3",
+  "input_sha256": {
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_massive_bridge.py": "b34d7cab9dbe895fc0b661bb866760c6abe9c4039f5a52dfbd7277534fb44b80",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_source_window.py": "b2e60ae969e033c8df1c69a8e9c951d19949c2cb349aebb2e28f7d4526f061b3",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_direct_source.py": "f5f9832dbd067db434a16ad3b7eed34782448d16fea62ff8dbdb4f2691f270df",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_curved_exterior.py": "71c8782caa1305e31c84fee95f688d62b349df4c66ee2c4acfcc37650f112cf5",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_return_pilot.py": "e4ae4632601050afd0f612ab0cc50c1fca1414c99208365041338fa2b1b45094",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\exterior_boundary_map.py": "d243ff920957ed2bbd45cb8844c7b9f51f08b025e5d90169f5cfdf81f0a5a76d",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\two_mouth_mesh.py": "94e9e2efe207cb254e89cf366607fa315909c93afea64edd779fa064c9ace258",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "records": [
+    {
+      "grid_index": 0,
+      "kappa": 0.010000000000000004,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.9179215892159485,
+            "relative_linear_residual": 6.332746779957214e-14
+          },
+          "direct": {
+            "kappa": 0.010000000000000004,
+            "direct_logdet": 166.88066818207147,
+            "direct_dlog": -40.55708670062586,
+            "power_subtracted_dlog": -39.97846614323763,
+            "volume_factor": 57.86205573882266,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1614
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.045065373496145936,
+              "loop_logdet": 9.444333160707055,
+              "determinant_derivative_error": 1.0114270532213254e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": -0.04858115830806622,
+              "loop_logdet": 8.092911835307214,
+              "determinant_derivative_error": 1.1864752236245835e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.9549223341313273,
+            "relative_linear_residual": 1.3431017736886386e-14,
+            "minimum_unassigned_loss": 0.03718445419452018
+          },
+          "direct": {
+            "kappa": 0.010000000000000004,
+            "direct_logdet": 168.46801614829062,
+            "direct_dlog": -41.042097522866484,
+            "power_subtracted_dlog": -40.46347696547759,
+            "volume_factor": 57.862055738889616,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1590
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.014449836386874158,
+              "loop_logdet": 10.1229453043583,
+              "determinant_derivative_error": 3.719049374018013e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.00582540280370716,
+              "loop_logdet": 10.101507702593352,
+              "determinant_derivative_error": 1.2447511771318531e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.9595387446554442,
+            "relative_linear_residual": 6.207410282658041e-15,
+            "minimum_unassigned_loss": 0.038894581631619796
+          },
+          "direct": {
+            "kappa": 0.010000000000000004,
+            "direct_logdet": 169.74216351085482,
+            "direct_dlog": -41.36644140506734,
+            "power_subtracted_dlog": -40.7878208476785,
+            "volume_factor": 57.862055738883484,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1566
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.022125422480901834,
+              "loop_logdet": 10.16395500955683,
+              "determinant_derivative_error": 8.977193988179977e-14
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.0200024261718414,
+              "loop_logdet": 10.160207620796804,
+              "determinant_derivative_error": 1.4652550006655218e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.9613909846584463,
+            "relative_linear_residual": 5.294108663838374e-15,
+            "minimum_unassigned_loss": 0.04062337371528769,
+            "ledger": {
+              "input_norm": 0.9999999999999999,
+              "outgoing": {
+                "upper": 0.24017190878837036,
+                "lower": 0.29371649809752853,
+                "outer": 3.506320683163166e-25,
+                "axis": 0.0
+              },
+              "incoming_mismatch": 0.14569627053899015,
+              "interior_jump": 0.3135726562035599,
+              "attenuation": 0.006842666371552462,
+              "balance": 1.4432899320127035e-15,
+              "algebraic_residual": -1.0329081691051104e-16,
+              "identity_error": 1.5465807489232146e-15,
+              "volume_quadrature_error": 1.1102230246251565e-16
+            },
+            "off_shell_ledger": {
+              "input_norm": 1.0,
+              "outgoing": {
+                "upper": 1.4510722501630213e-07,
+                "lower": 1.8621107940011538e-07,
+                "outer": 0.01481876371782406,
+                "axis": 0.0
+              },
+              "incoming_mismatch": 1.0153317663442665,
+              "interior_jump": 1.883687201306817,
+              "attenuation": 0.002344465417524126,
+              "balance": 1.916182528104736,
+              "algebraic_residual": 1.9161825281047375,
+              "identity_error": 1.5543122344752192e-15,
+              "volume_quadrature_error": 4.0245584642661925e-16
+            }
+          },
+          "direct": {
+            "kappa": 0.010000000000000004,
+            "direct_logdet": 170.8799367786225,
+            "direct_dlog": -41.64368247014996,
+            "power_subtracted_dlog": -41.06506191275866,
+            "volume_factor": 57.862055739130135,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1578
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.024229425224771433,
+              "loop_logdet": 10.17962140552237,
+              "determinant_derivative_error": 3.0379969373495186e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.023532363855452963,
+              "loop_logdet": 10.17861529386454,
+              "determinant_derivative_error": 1.1227661161905544e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": 0.11356412291829798,
+      "pv_loop_dlog": [
+        0.043862706553457524,
+        -0.02958245205911647
+      ],
+      "pv_full_dlog": [
+        0.15742682947174558,
+        0.08398167085917407
+      ],
+      "raw_combination_difference": 3.247180302423658e-12,
+      "runtime_seconds": 14.621599600010086
+    },
+    {
+      "grid_index": 2,
+      "kappa": 0.023713737056616564,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.9079534833140305,
+            "relative_linear_residual": 5.454012418150098e-14
+          },
+          "direct": {
+            "kappa": 0.023713737056616564,
+            "direct_logdet": 167.16611124450995,
+            "direct_dlog": -40.67843992203046,
+            "power_subtracted_dlog": -39.30631434668145,
+            "volume_factor": 57.86205573896128,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1686
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.09210114907333548,
+              "loop_logdet": 9.219139337633607,
+              "determinant_derivative_error": 1.619411549302896e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": -0.0687118526626247,
+              "loop_logdet": 8.207945379487683,
+              "determinant_derivative_error": 4.6037174072921516e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.9208350862640371,
+            "relative_linear_residual": 1.4482665110590645e-14,
+            "minimum_unassigned_loss": 0.03590332702287548
+          },
+          "direct": {
+            "kappa": 0.023713737056616564,
+            "direct_logdet": 168.672926918488,
+            "direct_dlog": -41.1184491115537,
+            "power_subtracted_dlog": -39.74632353620518,
+            "volume_factor": 57.86205573894032,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1674
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.06016095585543946,
+              "loop_logdet": 9.893261726044935,
+              "determinant_derivative_error": 2.0607959783092156e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.051457558961434,
+              "loop_logdet": 9.87244142707646,
+              "determinant_derivative_error": 9.794276500940668e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.9323132605954395,
+            "relative_linear_residual": 7.265019799591614e-15,
+            "minimum_unassigned_loss": 0.03781631640771905
+          },
+          "direct": {
+            "kappa": 0.023713737056616564,
+            "direct_logdet": 169.91734687474468,
+            "direct_dlog": -41.43233053140649,
+            "power_subtracted_dlog": -40.06020495605648,
+            "volume_factor": 57.86205573900301,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1674
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.061486953696740065,
+              "loop_logdet": 9.965044168782475,
+              "determinant_derivative_error": 7.137623825315131e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.05936685547840106,
+              "loop_logdet": 9.961377475923308,
+              "determinant_derivative_error": 6.509216776695581e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.9376699463341605,
+            "relative_linear_residual": 5.243682096936224e-15,
+            "minimum_unassigned_loss": 0.03963452354544687
+          },
+          "direct": {
+            "kappa": 0.023713737056616564,
+            "direct_logdet": 171.03894038474957,
+            "direct_dlog": -41.70455611179807,
+            "power_subtracted_dlog": -40.33243053644827,
+            "volume_factor": 57.86205573899416,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1662
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.060613182307119345,
+              "loop_logdet": 9.997535873627752,
+              "determinant_derivative_error": 6.198902502418946e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.05991903246292547,
+              "loop_logdet": 9.996547864936414,
+              "determinant_derivative_error": 1.6804752034360604e-12
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": 0.08447193021292776,
+      "pv_loop_dlog": [
+        0.03546596029011796,
+        -0.10490299557464901
+      ],
+      "pv_full_dlog": [
+        0.11993789050305281,
+        -0.02043106536169148
+      ],
+      "raw_combination_difference": 3.694822225952521e-12,
+      "runtime_seconds": 15.118481499957852
+    },
+    {
+      "grid_index": 4,
+      "kappa": 0.05623413251903493,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.8847532575547075,
+            "relative_linear_residual": 4.196232354988436e-14
+          },
+          "direct": {
+            "kappa": 0.05623413251903493,
+            "direct_logdet": 167.91024325772028,
+            "direct_dlog": -41.00822515526006,
+            "power_subtracted_dlog": -37.75440264501314,
+            "volume_factor": 57.86205573893253,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1746
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.15542361977635288,
+              "loop_logdet": 8.777688537555882,
+              "determinant_derivative_error": 3.789046854052458e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": -0.03458565617434979,
+              "loop_logdet": 8.257980185508119,
+              "determinant_derivative_error": 3.9782802052634736e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.887993339740783,
+            "relative_linear_residual": 1.4734050054887895e-14,
+            "minimum_unassigned_loss": 0.03328051338655964
+          },
+          "direct": {
+            "kappa": 0.05623413251903493,
+            "direct_logdet": 169.25938288031014,
+            "direct_dlog": -41.36573958657798,
+            "power_subtracted_dlog": -38.11191707632998,
+            "volume_factor": 57.86205573895176,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1722
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.1457974513613743,
+              "loop_logdet": 9.399871903483184,
+              "determinant_derivative_error": 3.0497104841487044e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.13686746318222937,
+              "loop_logdet": 9.38203920083996,
+              "determinant_derivative_error": 2.0731583116884167e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.8894977511874034,
+            "relative_linear_residual": 6.976613838915706e-15,
+            "minimum_unassigned_loss": 0.03555647442292657
+          },
+          "direct": {
+            "kappa": 0.05623413251903493,
+            "direct_logdet": 170.43524375842279,
+            "direct_dlog": -41.653369332564935,
+            "power_subtracted_dlog": -38.399546822315365,
+            "volume_factor": 57.86205573897971,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1674
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.141262979319457,
+              "loop_logdet": 9.523108151914334,
+              "determinant_derivative_error": 2.1237983593991316e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.13917216405213956,
+              "loop_logdet": 9.519846313328344,
+              "determinant_derivative_error": 2.5410507031864427e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.890664655356236,
+            "relative_linear_residual": 5.284674324624536e-15,
+            "minimum_unassigned_loss": 0.03753654756532812
+          },
+          "direct": {
+            "kappa": 0.05623413251903493,
+            "direct_logdet": 171.51674314937958,
+            "direct_dlog": -41.91146234539302,
+            "power_subtracted_dlog": -38.657639835144074,
+            "volume_factor": 57.862055738968586,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1698
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.13676284593046809,
+              "loop_logdet": 9.586919701552905,
+              "determinant_derivative_error": 2.4295093714599147e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.13608630381669204,
+              "loop_logdet": 9.586024110298954,
+              "determinant_derivative_error": 2.684910627159809e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": 0.040347952174791146,
+      "pv_loop_dlog": [
+        0.005057357720132993,
+        -0.1637578573813112
+      ],
+      "pv_full_dlog": [
+        0.04540530989491742,
+        -0.12340990520650053
+      ],
+      "raw_combination_difference": 2.6858515411731787e-12,
+      "runtime_seconds": 16.21396670001559
+    },
+    {
+      "grid_index": 6,
+      "kappa": 0.13335214321633246,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.832167832584739,
+            "relative_linear_residual": 2.4049815887321785e-14
+          },
+          "direct": {
+            "kappa": 0.13335214321633246,
+            "direct_logdet": 170.04937244147297,
+            "direct_dlog": -42.02284304996859,
+            "power_subtracted_dlog": -34.30681390627629,
+            "volume_factor": 57.862055738953245,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1758
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.2047847690639776,
+              "loop_logdet": 8.039377888166548,
+              "determinant_derivative_error": 1.6057682961090336e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.11018878382619411,
+              "loop_logdet": 7.929093714131065,
+              "determinant_derivative_error": 1.775114777391451e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.8361557475048648,
+            "relative_linear_residual": 8.839951901157702e-15,
+            "minimum_unassigned_loss": 0.028934133588837705
+          },
+          "direct": {
+            "kappa": 0.13335214321633246,
+            "direct_logdet": 171.15607811879548,
+            "direct_dlog": -42.2721411629349,
+            "power_subtracted_dlog": -34.55611201924602,
+            "volume_factor": 57.86205573892753,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1734
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.25507210802657765,
+              "loop_logdet": 8.477542745777269,
+              "determinant_derivative_error": 4.8605119928879503e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.24774352488821844,
+              "loop_logdet": 8.469094376132261,
+              "determinant_derivative_error": 4.218098093033973e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.8384146878746858,
+            "relative_linear_residual": 5.113904874598693e-15,
+            "minimum_unassigned_loss": 0.031594049998857676
+          },
+          "direct": {
+            "kappa": 0.13335214321633246,
+            "direct_logdet": 172.19285584016728,
+            "direct_dlog": -42.50450376555403,
+            "power_subtracted_dlog": -34.7884746218669,
+            "volume_factor": 57.862055738914464,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1722
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.2632231103828695,
+              "loop_logdet": 8.635209920940301,
+              "determinant_derivative_error": 6.315081790830845e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.2615221511731423,
+              "loop_logdet": 8.633406750832675,
+              "determinant_derivative_error": 5.051642437692294e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.8403039742729089,
+            "relative_linear_residual": 4.0100688976756106e-15,
+            "minimum_unassigned_loss": 0.03374654032691671
+          },
+          "direct": {
+            "kappa": 0.13335214321633246,
+            "direct_logdet": 173.18052066122834,
+            "direct_dlog": -42.72600905399082,
+            "power_subtracted_dlog": -35.0099799103002,
+            "volume_factor": 57.86205573894058,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1770
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.2631865703254408,
+              "loop_logdet": 8.732283599998116,
+              "determinant_derivative_error": 5.183098394923036e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.262637779155265,
+              "loop_logdet": 8.731745417744406,
+              "determinant_derivative_error": 5.838307615135818e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": 0.006078196161283245,
+      "pv_loop_dlog": [
+        -0.03394879419258767,
+        -0.11111311647429911
+      ],
+      "pv_full_dlog": [
+        -0.02787059803129921,
+        -0.10503492031301676
+      ],
+      "raw_combination_difference": 3.559819106158102e-12,
+      "runtime_seconds": 17.055266699986532
+    },
+    {
+      "grid_index": 8,
+      "kappa": 0.31622776601683805,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.7222526913166263,
+            "relative_linear_residual": 9.077591400824783e-15
+          },
+          "direct": {
+            "kappa": 0.31622776601683805,
+            "direct_logdet": 177.13783928318736,
+            "direct_dlog": -45.65564201433573,
+            "power_subtracted_dlog": -27.35805339086902,
+            "volume_factor": 57.862055738939844,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1866
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.2983200409369244,
+              "loop_logdet": 6.8240685586357195,
+              "determinant_derivative_error": 1.7611745395385014e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.29263053522976123,
+              "loop_logdet": 6.821270027774685,
+              "determinant_derivative_error": 2.2652657527544307e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.7271004013108598,
+            "relative_linear_residual": 4.9858607105195296e-15,
+            "minimum_unassigned_loss": 0.025003932349024628
+          },
+          "direct": {
+            "kappa": 0.31622776601683805,
+            "direct_logdet": 177.98832905192663,
+            "direct_dlog": -45.816992154254834,
+            "power_subtracted_dlog": -27.519403530793497,
+            "volume_factor": 57.86205573892286,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1842
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.34856142373754534,
+              "loop_logdet": 7.009475090904788,
+              "determinant_derivative_error": 3.993722019757229e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.3475021656136306,
+              "loop_logdet": 7.008948076570327,
+              "determinant_derivative_error": 3.819450311581818e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.7304808256871477,
+            "relative_linear_residual": 3.727645379885074e-15,
+            "minimum_unassigned_loss": 0.02740361088570247
+          },
+          "direct": {
+            "kappa": 0.31622776601683805,
+            "direct_logdet": 178.8235599023105,
+            "direct_dlog": -45.97783440177686,
+            "power_subtracted_dlog": -27.680245778313356,
+            "volume_factor": 57.86205573892969,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1866
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.3705347936009479,
+              "loop_logdet": 7.122789314149841,
+              "determinant_derivative_error": 3.796241099252029e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.37021306461261777,
+              "loop_logdet": 7.122629813591858,
+              "determinant_derivative_error": 4.0617564867062583e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.7335230159876148,
+            "relative_linear_residual": 3.178814642820781e-15,
+            "minimum_unassigned_loss": 0.029386783590775633
+          },
+          "direct": {
+            "kappa": 0.31622776601683805,
+            "direct_logdet": 179.64509722219216,
+            "direct_dlog": -46.138072592730225,
+            "power_subtracted_dlog": -27.840483969265488,
+            "volume_factor": 57.86205573893362,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1890
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.38238992620969103,
+              "loop_logdet": 7.209839723382891,
+              "determinant_derivative_error": 5.147082760004196e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.3822688749394337,
+              "loop_logdet": 7.2097802286813515,
+              "determinant_derivative_error": 5.049910489773879e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -9.616416311430953e-05,
+      "pv_loop_dlog": [
+        -0.018149775682558822,
+        -0.02150564271271105
+      ],
+      "pv_full_dlog": [
+        -0.018245939845662917,
+        -0.021601806875821694
+      ],
+      "raw_combination_difference": 8.473222123939195e-12,
+      "runtime_seconds": 16.225890700006858
+    },
+    {
+      "grid_index": 10,
+      "kappa": 0.7498942093324561,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.5809857478423164,
+            "relative_linear_residual": 2.054338148638525e-15
+          },
+          "direct": {
+            "kappa": 0.7498942093324561,
+            "direct_logdet": 203.41332329190206,
+            "direct_dlog": -59.6796039629245,
+            "power_subtracted_dlog": -16.289183424237148,
+            "volume_factor": 57.86205573891925,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1854
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.34671398826296584,
+              "loop_logdet": 4.783054904392878,
+              "determinant_derivative_error": 5.6025184491659274e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.3467117602676372,
+              "loop_logdet": 4.783054442286701,
+              "determinant_derivative_error": 5.839717598377092e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.5831703959364004,
+            "relative_linear_residual": 2.3130828053189392e-15,
+            "minimum_unassigned_loss": 0.028505857684100563
+          },
+          "direct": {
+            "kappa": 0.7498942093324561,
+            "direct_logdet": 204.03352714041725,
+            "direct_dlog": -59.772369852546284,
+            "power_subtracted_dlog": -16.381949313859366,
+            "volume_factor": 57.86205573891866,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1902
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.3577854419695622,
+              "loop_logdet": 4.84137246974002,
+              "determinant_derivative_error": 6.059930335311492e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.35778452466718014,
+              "loop_logdet": 4.841372279245615,
+              "determinant_derivative_error": 2.2110091535409993e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.5846703899451365,
+            "relative_linear_residual": 2.2955783649334004e-15,
+            "minimum_unassigned_loss": 0.02980436489174815
+          },
+          "direct": {
+            "kappa": 0.7498942093324561,
+            "direct_logdet": 204.65073738778338,
+            "direct_dlog": -59.86552936097536,
+            "power_subtracted_dlog": -16.47510882227404,
+            "volume_factor": 57.86205573893786,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1914
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.36633019172261233,
+              "loop_logdet": 4.893675810969085,
+              "determinant_derivative_error": 5.213773857093429e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.3663297581106899,
+              "loop_logdet": 4.893675720862035,
+              "determinant_derivative_error": 3.990807684317588e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.5860447180287149,
+            "relative_linear_residual": 1.940437158188069e-15,
+            "minimum_unassigned_loss": 0.031014887266374615
+          },
+          "direct": {
+            "kappa": 0.7498942093324561,
+            "direct_logdet": 205.26501455369197,
+            "direct_dlog": -59.95905486654043,
+            "power_subtracted_dlog": -16.56863432784647,
+            "volume_factor": 57.862055738928056,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1938
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.3731802361782259,
+              "loop_logdet": 4.941938040358882,
+              "determinant_derivative_error": 1.6496082277939195e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.37318001303156245,
+              "loop_logdet": 4.94193799397608,
+              "determinant_derivative_error": 6.89703849587886e-12
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -2.7621634711039178e-05,
+      "pv_loop_dlog": [
+        -0.0008319986561097226,
+        -0.0008325524333959722
+      ],
+      "pv_full_dlog": [
+        -0.0008596202908179862,
+        -0.0008601740681015713
+      ],
+      "raw_combination_difference": 3.659295089164516e-11,
+      "runtime_seconds": 14.720013300015125
+    },
+    {
+      "grid_index": 12,
+      "kappa": 1.7782794100389232,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.3926364241163249,
+            "relative_linear_residual": 8.328118410863903e-16
+          },
+          "direct": {
+            "kappa": 1.7782794100389232,
+            "direct_logdet": 297.24476062386765,
+            "direct_dlog": -108.36104424106975,
+            "power_subtracted_dlog": -5.466141897985254,
+            "volume_factor": 57.86205573894168,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1986
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.16593977615999175,
+              "loop_logdet": 2.3355909796654175,
+              "determinant_derivative_error": 2.2387369735810125e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.1659397761599846,
+              "loop_logdet": 2.3355909796654175,
+              "determinant_derivative_error": 4.452022084322493e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.3933552610758289,
+            "relative_linear_residual": 1.2190056675061169e-15,
+            "minimum_unassigned_loss": 0.050330451283910824
+          },
+          "direct": {
+            "kappa": 1.7782794100389232,
+            "direct_logdet": 297.6328742027414,
+            "direct_dlog": -108.39484013799013,
+            "power_subtracted_dlog": -5.499937794901658,
+            "volume_factor": 57.862055738943916,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2034
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.1676328929338101,
+              "loop_logdet": 2.3561056788856423,
+              "determinant_derivative_error": 7.048889250071966e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.16763289293380518,
+              "loop_logdet": 2.356105678885642,
+              "determinant_derivative_error": 7.0439765131879994e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.39401153038981207,
+            "relative_linear_residual": 1.0839929272873528e-15,
+            "minimum_unassigned_loss": 0.050854526961161904
+          },
+          "direct": {
+            "kappa": 1.7782794100389232,
+            "direct_logdet": 298.02043706413826,
+            "direct_dlog": -108.42880779268799,
+            "power_subtracted_dlog": -5.533905449602855,
+            "volume_factor": 57.86205573894203,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2034
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.1692547169585593,
+              "loop_logdet": 2.37634435957661,
+              "determinant_derivative_error": 3.389816205512375e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.16925471695855587,
+              "loop_logdet": 2.37634435957661,
+              "determinant_derivative_error": 3.3864022697116525e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.3946546725287093,
+            "relative_linear_residual": 1.2146388893250872e-15,
+            "minimum_unassigned_loss": 0.05137471935921808
+          },
+          "direct": {
+            "kappa": 1.7782794100389232,
+            "direct_logdet": 298.40745176478947,
+            "direct_dlog": -108.46294505114487,
+            "power_subtracted_dlog": -5.568042708066585,
+            "volume_factor": 57.86205573893819,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2034
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.17080869859742387,
+              "loop_logdet": 2.396318088469557,
+              "determinant_derivative_error": 7.771006060863783e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.1708086985974214,
+              "loop_logdet": 2.396318088469556,
+              "determinant_derivative_error": 5.548089765383679e-12
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -2.154022258338273e-06,
+      "pv_loop_dlog": [
+        -3.4503631844984284e-06,
+        -3.4503631848314953e-06
+      ],
+      "pv_full_dlog": [
+        -5.604385439283988e-06,
+        -5.604385442836701e-06
+      ],
+      "raw_combination_difference": 3.865352482534945e-12,
+      "runtime_seconds": 17.115805500012357
+    },
+    {
+      "grid_index": 14,
+      "kappa": 4.216965034285823,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.2111631373009572,
+            "relative_linear_residual": 5.228043186178817e-16
+          },
+          "direct": {
+            "kappa": 4.216965034285823,
+            "direct_logdet": 580.3950458450252,
+            "direct_dlog": -244.82997696200374,
+            "power_subtracted_dlog": -0.8277110990174668,
+            "volume_factor": 57.862055738935005,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2646
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.020324959543645226,
+              "loop_logdet": 0.6788305920104075,
+              "determinant_derivative_error": 3.2376427927527374e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.020324959543645226,
+              "loop_logdet": 0.6788305920104075,
+              "determinant_derivative_error": 3.2376427927527374e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.21177458184272752,
+            "relative_linear_residual": 8.192051875362653e-16,
+            "minimum_unassigned_loss": 0.09942906645921308
+          },
+          "direct": {
+            "kappa": 4.216965034285823,
+            "direct_logdet": 580.5925253248281,
+            "direct_dlog": -244.83574187448346,
+            "power_subtracted_dlog": -0.8334760115096755,
+            "volume_factor": 57.86205573893205,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2694
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.020486513949335452,
+              "loop_logdet": 0.684583000687835,
+              "determinant_derivative_error": 2.5873504727602636e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.020486513949335452,
+              "loop_logdet": 0.684583000687835,
+              "determinant_derivative_error": 2.5873504727602636e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.2122691793595505,
+            "relative_linear_residual": 8.252646360678108e-16,
+            "minimum_unassigned_loss": 0.09959392391550094
+          },
+          "direct": {
+            "kappa": 4.216965034285823,
+            "direct_logdet": 580.7899351140157,
+            "direct_dlog": -244.84154042327174,
+            "power_subtracted_dlog": -0.8392745602920776,
+            "volume_factor": 57.86205573893344,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2670
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.020646601875169746,
+              "loop_logdet": 0.6903194736073768,
+              "determinant_derivative_error": 3.28948673855578e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.020646601875169746,
+              "loop_logdet": 0.6903194736073768,
+              "determinant_derivative_error": 3.28948673855578e-13
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.21274487229672906,
+            "relative_linear_residual": 7.777022747824571e-16,
+            "minimum_unassigned_loss": 0.0997585430050528
+          },
+          "direct": {
+            "kappa": 4.216965034285823,
+            "direct_logdet": 580.987275290477,
+            "direct_dlog": -244.84737251981545,
+            "power_subtracted_dlog": -0.8451066568246062,
+            "volume_factor": 57.86205573893609,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2658
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.02080522800296204,
+              "loop_logdet": 0.6960400868124437,
+              "determinant_derivative_error": 2.553079275768866e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.02080522800296204,
+              "loop_logdet": 0.6960400868124437,
+              "determinant_derivative_error": 2.553079275768866e-12
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -8.854006661174196e-08,
+      "pv_loop_dlog": [
+        -4.681813922657874e-09,
+        -4.681813922657874e-09
+      ],
+      "pv_full_dlog": [
+        -9.322188043725532e-08,
+        -9.322188043725532e-08
+      ],
+      "raw_combination_difference": 1.3073986337985843e-11,
+      "runtime_seconds": 22.244496700004674
+    },
+    {
+      "grid_index": 16,
+      "kappa": 10.000000000000002,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.08405004655500635,
+            "relative_linear_residual": 4.088022135571307e-16
+          },
+          "direct": {
+            "kappa": 10.000000000000002,
+            "direct_logdet": 1312.251928798545,
+            "direct_dlog": -578.6938050388393,
+            "power_subtracted_dlog": -0.07324764942879923,
+            "volume_factor": 57.86205573894103,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 4542
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.00034631825873601316,
+              "loop_logdet": 0.11799830612146639,
+              "determinant_derivative_error": 3.341531695441602e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.00034631825873601316,
+              "loop_logdet": 0.11799830612146639,
+              "determinant_derivative_error": 3.341531695441602e-13
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.08428253451454547,
+            "relative_linear_residual": 5.548379137761124e-16,
+            "minimum_unassigned_loss": 0.18564268851189078
+          },
+          "direct": {
+            "kappa": 10.000000000000002,
+            "direct_logdet": 1312.3401713716867,
+            "direct_dlog": -578.6943449847793,
+            "power_subtracted_dlog": -0.07378759537011893,
+            "volume_factor": 57.8620557389409,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 4590
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.0003492095793065998,
+              "loop_logdet": 0.11904116340254402,
+              "determinant_derivative_error": 3.050762008467711e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.0003492095793065998,
+              "loop_logdet": 0.11904116340254402,
+              "determinant_derivative_error": 3.050762008467711e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.08450840448158951,
+            "relative_linear_residual": 5.921451386639453e-16,
+            "minimum_unassigned_loss": 0.1856995734282779
+          },
+          "direct": {
+            "kappa": 10.000000000000002,
+            "direct_logdet": 1312.4284075822632,
+            "direct_dlog": -578.6948883758654,
+            "power_subtracted_dlog": -0.07433098646086482,
+            "volume_factor": 57.86205573894044,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 4590
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.00035209420711049017,
+              "loop_logdet": 0.12008337106144579,
+              "determinant_derivative_error": 7.504250042547622e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.00035209420711049017,
+              "loop_logdet": 0.12008337106144579,
+              "determinant_derivative_error": 7.504250042547622e-13
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.08473339486404692,
+            "relative_linear_residual": 5.266116509435063e-16,
+            "minimum_unassigned_loss": 0.18575644993161544,
+            "ledger": {
+              "input_norm": 0.9999999999999999,
+              "outgoing": {
+                "upper": 0.00337015373240696,
+                "lower": 0.002467648886514012,
+                "outer": 1.4134747893998586e-47,
+                "axis": 0.0
+              },
+              "incoming_mismatch": 0.3531375849169243,
+              "interior_jump": 0.07335024180453628,
+              "attenuation": 0.5676743706596171,
+              "balance": -1.2212453270876722e-15,
+              "algebraic_residual": 4.9967085206388473e-17,
+              "identity_error": 1.2712124122940607e-15,
+              "volume_quadrature_error": 1.734723475976807e-17
+            },
+            "off_shell_ledger": {
+              "input_norm": 1.0,
+              "outgoing": {
+                "upper": 1.4510722501630213e-07,
+                "lower": 1.8621107940011538e-07,
+                "outer": 0.01481876371782406,
+                "axis": 0.0
+              },
+              "incoming_mismatch": 1.0153317663442665,
+              "interior_jump": 1.883687201306817,
+              "attenuation": 2.3444654175241255,
+              "balance": 4.258303480211337,
+              "algebraic_residual": 4.258303480211346,
+              "identity_error": 8.881784197001252e-15,
+              "volume_quadrature_error": 4.0245584642661925e-16
+            }
+          },
+          "direct": {
+            "kappa": 10.000000000000002,
+            "direct_logdet": 1312.5166374317957,
+            "direct_dlog": -578.6954352103284,
+            "power_subtracted_dlog": -0.07487782092121185,
+            "volume_factor": 57.862055738940704,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 4638
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.0003549721439009192,
+              "loop_logdet": 0.12112492971291458,
+              "determinant_derivative_error": 3.4714771205215933e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.0003549721439009192,
+              "loop_logdet": 0.12112492971291458,
+              "determinant_derivative_error": 3.4714771205215933e-13
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -1.7798250234735136e-09,
+      "pv_loop_dlog": [
+        -1.7532350354496073e-12,
+        -1.7532350354496073e-12
+      ],
+      "pv_full_dlog": [
+        -1.7815783015517894e-09,
+        -1.7815783015517894e-09
+      ],
+      "raw_combination_difference": 1.0459189070388675e-11,
+      "runtime_seconds": 36.49030770000536
+    },
+    {
+      "grid_index": 1,
+      "kappa": 0.015399265260594926,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.9139838370646707,
+            "relative_linear_residual": 6.39741864371142e-14
+          },
+          "direct": {
+            "kappa": 0.015399265260594926,
+            "direct_logdet": 166.9910391398613,
+            "direct_dlog": -40.6036061304112,
+            "power_subtracted_dlog": -39.71257298556387,
+            "volume_factor": 57.862055738944555,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1626
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.0654536078273574,
+              "loop_logdet": 9.352453559159782,
+              "determinant_derivative_error": 4.143047016569312e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": -0.06110182029973562,
+              "loop_logdet": 8.148223166767412,
+              "determinant_derivative_error": 2.0771905029359772e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.9413044749819233,
+            "relative_linear_residual": 1.420779575008095e-14,
+            "minimum_unassigned_loss": 0.036666718424942256
+          },
+          "direct": {
+            "kappa": 0.015399265260594926,
+            "direct_logdet": 168.54557379718884,
+            "direct_dlog": -41.070076098003526,
+            "power_subtracted_dlog": -40.17904295315569,
+            "volume_factor": 57.86205573897734,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1590
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.03313133354588149,
+              "loop_logdet": 10.030989469008798,
+              "determinant_derivative_error": 2.0321411220436403e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.02448237934452648,
+              "loop_logdet": 10.009740346568023,
+              "determinant_derivative_error": 1.1802243210512486e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.948714825566076,
+            "relative_linear_residual": 7.423494619903138e-15,
+            "minimum_unassigned_loss": 0.03846063816115229
+          },
+          "direct": {
+            "kappa": 0.015399265260594926,
+            "direct_logdet": 169.80799803064582,
+            "direct_dlog": -41.390386988258356,
+            "power_subtracted_dlog": -40.499353843411264,
+            "volume_factor": 57.862055738928774,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1578
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.038017180045075205,
+              "loop_logdet": 10.08477598597803,
+              "determinant_derivative_error": 9.920453347689318e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.035895041212661696,
+              "loop_logdet": 10.081053116802,
+              "determinant_derivative_error": 2.266672960438143e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.951975227687284,
+            "relative_linear_residual": 5.253423511576318e-15,
+            "minimum_unassigned_loss": 0.040226278194595955
+          },
+          "direct": {
+            "kappa": 0.015399265260594926,
+            "direct_logdet": 170.93947652694493,
+            "direct_dlog": -41.66574005475107,
+            "power_subtracted_dlog": -40.7747069099045,
+            "volume_factor": 57.86205573889478,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1626
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.038846482164037834,
+              "loop_logdet": 10.107319294824618,
+              "determinant_derivative_error": 3.0744157220041757e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.03815029945755956,
+              "loop_logdet": 10.106318670250488,
+              "determinant_derivative_error": 4.188191460308133e-12
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": 0.10120125357389753,
+      "pv_loop_dlog": [
+        0.041264665160900715,
+        -0.06501413415288954
+      ],
+      "pv_full_dlog": [
+        0.14246591873479986,
+        0.03618711942101527
+      ],
+      "raw_combination_difference": 1.4708234630234074e-12,
+      "runtime_seconds": 14.731513199978508
+    },
+    {
+      "grid_index": 3,
+      "kappa": 0.03651741272548378,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.8987461128466202,
+            "relative_linear_residual": 5.1316369764777095e-14
+          },
+          "direct": {
+            "kappa": 0.03651741272548378,
+            "direct_logdet": 167.4478112351445,
+            "direct_dlog": -40.80124432692642,
+            "power_subtracted_dlog": -38.68827175636058,
+            "volume_factor": 57.862055738995544,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1686
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.12361356828950801,
+              "loop_logdet": 9.031428066840766,
+              "determinant_derivative_error": 4.295105937579535e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": -0.0632267945712906,
+              "loop_logdet": 8.255210649244427,
+              "determinant_derivative_error": 4.243166928930009e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.9017692076349068,
+            "relative_linear_residual": 1.3908783823775684e-14,
+            "minimum_unassigned_loss": 0.03480432914556045
+          },
+          "direct": {
+            "kappa": 0.03651741272548378,
+            "direct_logdet": 168.88736305987376,
+            "direct_dlog": -41.20506914072513,
+            "power_subtracted_dlog": -39.09209657016071,
+            "volume_factor": 57.86205573895632,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1686
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.09761843817907599,
+              "loop_logdet": 9.6904553615291,
+              "determinant_derivative_error": 1.9490284386414203e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.08881094725241254,
+              "loop_logdet": 9.670593059836692,
+              "determinant_derivative_error": 7.191108819526448e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.9078177986733648,
+            "relative_linear_residual": 6.792865909315073e-15,
+            "minimum_unassigned_loss": 0.03687865034286726
+          },
+          "direct": {
+            "kappa": 0.03651741272548378,
+            "direct_logdet": 170.10433556393133,
+            "direct_dlog": -41.50870964525442,
+            "power_subtracted_dlog": -39.39573707468976,
+            "volume_factor": 57.862055738963036,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1674
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.09518796968158581,
+              "loop_logdet": 9.78599696849007,
+              "determinant_derivative_error": 1.1514358910780231e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.09307406896846526,
+              "loop_logdet": 9.782457521543044,
+              "determinant_derivative_error": 7.94120325053882e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.9161290414800165,
+            "relative_linear_residual": 5.017153723294527e-15,
+            "minimum_unassigned_loss": 0.03876849136854346
+          },
+          "direct": {
+            "kappa": 0.03651741272548378,
+            "direct_logdet": 171.21034793372522,
+            "direct_dlog": -41.77567482404696,
+            "power_subtracted_dlog": -39.66270225348126,
+            "volume_factor": 57.86205573899148,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1686
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.09232011761907863,
+              "loop_logdet": 9.832258921159823,
+              "determinant_derivative_error": 6.2356508845340386e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.0916308907215622,
+              "loop_logdet": 9.831299679844488,
+              "determinant_derivative_error": 2.0149618085163468e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": 0.06350898353352363,
+      "pv_loop_dlog": [
+        0.024002045177958842,
+        -0.14206832014469462
+      ],
+      "pv_full_dlog": [
+        0.08751102871146088,
+        -0.0785593366111641
+      ],
+      "raw_combination_difference": 8.668621376273222e-13,
+      "runtime_seconds": 14.24145829997724
+    },
+    {
+      "grid_index": 5,
+      "kappa": 0.08659643233600657,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.86364284461086,
+            "relative_linear_residual": 3.36972647884352e-14
+          },
+          "direct": {
+            "kappa": 0.08659643233600657,
+            "direct_logdet": 168.68994867476425,
+            "direct_dlog": -41.3690187449498,
+            "power_subtracted_dlog": -36.35837115032918,
+            "volume_factor": 57.86205573895461,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1722
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.1817503671683723,
+              "loop_logdet": 8.450083240757246,
+              "determinant_derivative_error": 1.466995969146012e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.024292678871993788,
+              "loop_logdet": 8.168187756291223,
+              "determinant_derivative_error": 1.8708957993940345e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.8671956561013241,
+            "relative_linear_residual": 1.1610740679828642e-14,
+            "minimum_unassigned_loss": 0.03129036218961845
+          },
+          "direct": {
+            "kappa": 0.08659643233600657,
+            "direct_logdet": 169.92577735157818,
+            "direct_dlog": -41.672836037310574,
+            "power_subtracted_dlog": -36.662188442692,
+            "volume_factor": 57.86205573893095,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1722
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.20080764034983237,
+              "loop_logdet": 9.000202534036514,
+              "determinant_derivative_error": 4.159925182101176e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.19205512410413034,
+              "loop_logdet": 8.986175579886307,
+              "determinant_derivative_error": 3.7757408311023255e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.869010310629393,
+            "relative_linear_residual": 6.1419721197879845e-15,
+            "minimum_unassigned_loss": 0.03378351633636287
+          },
+          "direct": {
+            "kappa": 0.08659643233600657,
+            "direct_logdet": 171.04233541306542,
+            "direct_dlog": -41.936749902684646,
+            "power_subtracted_dlog": -36.926102308067264,
+            "volume_factor": 57.8620557389172,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1746
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.19919675307653775,
+              "loop_logdet": 9.148185888469055,
+              "determinant_derivative_error": 5.131270408575972e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.197196180315414,
+              "loop_logdet": 9.145476986406829,
+              "determinant_derivative_error": 4.7210318987467303e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.8704737579205246,
+            "relative_linear_residual": 4.179693638553597e-15,
+            "minimum_unassigned_loss": 0.0358615713565092
+          },
+          "direct": {
+            "kappa": 0.08659643233600657,
+            "direct_logdet": 172.08592351225485,
+            "direct_dlog": -42.18028658528201,
+            "power_subtracted_dlog": -37.1696389906619,
+            "volume_factor": 57.862055738948655,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1698
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.19500152869065782,
+              "loop_logdet": 9.230986143136194,
+              "determinant_derivative_error": 2.932684650680528e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.19435971977187158,
+              "loop_logdet": 9.230221162673589,
+              "determinant_derivative_error": 4.8753251435940115e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": 0.019526244206936383,
+      "pv_loop_dlog": [
+        -0.018083823342169292,
+        -0.15464387226602672
+      ],
+      "pv_full_dlog": [
+        0.0014424208647483283,
+        -0.135117628059092
+      ],
+      "raw_combination_difference": 3.069544618483633e-12,
+      "runtime_seconds": 15.356536700041033
+    },
+    {
+      "grid_index": 7,
+      "kappa": 0.20535250264571467,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.786173946893927,
+            "relative_linear_residual": 1.516459244386634e-14
+          },
+          "direct": {
+            "kappa": 0.20535250264571467,
+            "direct_logdet": 172.51133695273612,
+            "direct_dlog": -43.2554488851225,
+            "power_subtracted_dlog": -31.37333093090725,
+            "volume_factor": 57.86205573893066,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1794
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.24088710754807896,
+              "loop_logdet": 7.5165956038150705,
+              "determinant_derivative_error": 1.9565460362969134e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.20657589856986525,
+              "loop_logdet": 7.490607004240686,
+              "determinant_derivative_error": 1.71039848950727e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.7907263708380866,
+            "relative_linear_residual": 7.271775294281329e-15,
+            "minimum_unassigned_loss": 0.026588443300771432
+          },
+          "direct": {
+            "kappa": 0.20535250264571467,
+            "direct_logdet": 173.48603080547676,
+            "direct_dlog": -43.45656531010514,
+            "power_subtracted_dlog": -31.574447355888605,
+            "volume_factor": 57.862055738936945,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1830
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.30441343609165183,
+              "loop_logdet": 7.821382994413031,
+              "determinant_derivative_error": 6.018840981170115e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.3003320615354652,
+              "loop_logdet": 7.818245924554898,
+              "determinant_derivative_error": 4.473443837582636e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.7935836361172012,
+            "relative_linear_residual": 4.340394543539057e-15,
+            "minimum_unassigned_loss": 0.02925281246834332
+          },
+          "direct": {
+            "kappa": 0.20535250264571467,
+            "direct_logdet": 174.42613530077764,
+            "direct_dlog": -43.65299472871417,
+            "power_subtracted_dlog": -31.77087677449129,
+            "volume_factor": 57.86205573896783,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1794
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.3234604328933269,
+              "loop_logdet": 7.965389731027156,
+              "determinant_derivative_error": 5.6069315856888124e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.32241736588531594,
+              "loop_logdet": 7.964608963855174,
+              "determinant_derivative_error": 5.353811838304523e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.7960506149980899,
+            "relative_linear_residual": 3.526961348007987e-15,
+            "minimum_unassigned_loss": 0.03139727927665631
+          },
+          "direct": {
+            "kappa": 0.20535250264571467,
+            "direct_logdet": 175.33835510256966,
+            "direct_dlog": -43.845580259196645,
+            "power_subtracted_dlog": -31.963462304976517,
+            "volume_factor": 57.86205573895443,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1794
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.3305262036175317,
+              "loop_logdet": 8.064372358283332,
+              "determinant_derivative_error": 6.037381705681355e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.3301729210185809,
+              "loop_logdet": 8.064116548889475,
+              "determinant_derivative_error": 6.503481086994611e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": 0.0008431182612085308,
+      "pv_loop_dlog": [
+        -0.03249810566442757,
+        -0.05734110939916348
+      ],
+      "pv_full_dlog": [
+        -0.03165498740320771,
+        -0.05649799113794529
+      ],
+      "raw_combination_difference": 1.4161116723698797e-11,
+      "runtime_seconds": 14.409156699955929
+    },
+    {
+      "grid_index": 9,
+      "kappa": 0.4869675251658633,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.6572786780675675,
+            "relative_linear_residual": 4.280608377600769e-15
+          },
+          "direct": {
+            "kappa": 0.4869675251658633,
+            "direct_logdet": 186.06724638908764,
+            "direct_dlog": -50.4003591217474,
+            "power_subtracted_dlog": -22.223417037548693,
+            "volume_factor": 57.862055738935595,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1950
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.3488465470317915,
+              "loop_logdet": 5.91012487453538,
+              "determinant_derivative_error": 1.2909562308038858e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.34856367236940106,
+              "loop_logdet": 5.910034521740324,
+              "determinant_derivative_error": 1.8268442314450795e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.6595473549794609,
+            "relative_linear_residual": 3.598274139411567e-15,
+            "minimum_unassigned_loss": 0.025239950848443386
+          },
+          "direct": {
+            "kappa": 0.4869675251658633,
+            "direct_logdet": 186.80184114031107,
+            "direct_dlog": -50.52682236916742,
+            "power_subtracted_dlog": -22.34988028496648,
+            "volume_factor": 57.86205573894018,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1842
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.37577015979383194,
+              "loop_logdet": 6.013982191151816,
+              "determinant_derivative_error": 2.1215640355620735e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.37568983975952236,
+              "loop_logdet": 6.013956416478632,
+              "determinant_derivative_error": 2.0457802119011603e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.6610392320281803,
+            "relative_linear_residual": 2.8747950279965735e-15,
+            "minimum_unassigned_loss": 0.027122230927326855
+          },
+          "direct": {
+            "kappa": 0.4869675251658633,
+            "direct_logdet": 187.52978571537773,
+            "direct_dlog": -50.65363638933227,
+            "power_subtracted_dlog": -22.476694305133464,
+            "volume_factor": 57.86205573893581,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1902
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.39194776006875337,
+              "loop_logdet": 6.093635808647263,
+              "determinant_derivative_error": 2.7902513632938053e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.39191752588296896,
+              "loop_logdet": 6.093626096689916,
+              "determinant_derivative_error": 2.0759893804012108e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.6624362850096596,
+            "relative_linear_residual": 2.6773173582382685e-15,
+            "minimum_unassigned_loss": 0.028766966525151864
+          },
+          "direct": {
+            "kappa": 0.4869675251658633,
+            "direct_logdet": 188.2513859731025,
+            "direct_dlog": -50.7807219486309,
+            "power_subtracted_dlog": -22.60377986443585,
+            "volume_factor": 57.8620557389281,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1890
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.40286826608310733,
+              "loop_logdet": 6.1614028024024705,
+              "determinant_derivative_error": 2.858158154595003e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.4028550977694862,
+              "loop_logdet": 6.1613985759914005,
+              "determinant_derivative_error": 1.3552992061960367e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -7.923361378203708e-05,
+      "pv_loop_dlog": [
+        -0.005488918226551509,
+        -0.005608367029745542
+      ],
+      "pv_full_dlog": [
+        -0.005568151840321889,
+        -0.005687600643540236
+      ],
+      "raw_combination_difference": 2.7355895326763857e-12,
+      "runtime_seconds": 15.210078700038139
+    },
+    {
+      "grid_index": 11,
+      "kappa": 1.1547819846894585,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.4853698740051222,
+            "relative_linear_residual": 1.1725204789167584e-15
+          },
+          "direct": {
+            "kappa": 1.1547819846894585,
+            "direct_logdet": 236.50239676136596,
+            "direct_dlog": -77.16728127119964,
+            "power_subtracted_dlog": -10.349221706783748,
+            "volume_factor": 57.86205573893193,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1950
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.27493003487819656,
+              "loop_logdet": 3.536984198295396,
+              "determinant_derivative_error": 4.530487096587876e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.27493003381500025,
+              "loop_logdet": 3.5369841981522097,
+              "determinant_derivative_error": 1.1589174064852159e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.4873552197505943,
+            "relative_linear_residual": 1.5596810870660188e-15,
+            "minimum_unassigned_loss": 0.03625438855679941
+          },
+          "direct": {
+            "kappa": 1.1547819846894585,
+            "direct_logdet": 237.00578808294136,
+            "direct_dlog": -77.22796217394314,
+            "power_subtracted_dlog": -10.409902609510777,
+            "volume_factor": 57.8620557389462,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1938
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.27919324569887055,
+              "loop_logdet": 3.57143536238346,
+              "determinant_derivative_error": 9.723943872330665e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.27919324510821325,
+              "loop_logdet": 3.571435362303895,
+              "determinant_derivative_error": 1.1925738174767275e-11
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.48885722892254835,
+            "relative_linear_residual": 1.5265886990257564e-15,
+            "minimum_unassigned_loss": 0.0370897385194295
+          },
+          "direct": {
+            "kappa": 1.1547819846894585,
+            "direct_logdet": 237.50785010397075,
+            "direct_dlog": -77.28893227102652,
+            "power_subtracted_dlog": -10.470872706618593,
+            "volume_factor": 57.862055738925044,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1950
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.2830236344721051,
+              "loop_logdet": 3.6046388643548735,
+              "determinant_derivative_error": 1.0128786698260228e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.2830236341256666,
+              "loop_logdet": 3.604638864308198,
+              "determinant_derivative_error": 3.4185432262745508e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.490278536271341,
+            "relative_linear_residual": 1.4434139008879203e-15,
+            "minimum_unassigned_loss": 0.037904344372389855
+          },
+          "direct": {
+            "kappa": 1.1547819846894585,
+            "direct_logdet": 238.0085954284721,
+            "direct_dlog": -77.35018333334757,
+            "power_subtracted_dlog": -10.532123768928999,
+            "volume_factor": 57.86205573893426,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 1926
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.28648445590802374,
+              "loop_logdet": 3.6367699583915156,
+              "determinant_derivative_error": 1.2171375018965591e-11
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.28648445569663167,
+              "loop_logdet": 3.6367699583630317,
+              "determinant_derivative_error": 1.3942125232091485e-11
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -8.229178197538545e-06,
+      "pv_loop_dlog": [
+        -6.325471012347261e-05,
+        -6.325482927138637e-05
+      ],
+      "pv_full_dlog": [
+        -7.148388831978991e-05,
+        -7.148400747425399e-05
+      ],
+      "raw_combination_difference": 7.597122930746991e-11,
+      "runtime_seconds": 15.504463599994779
+    },
+    {
+      "grid_index": 13,
+      "kappa": 2.738419634264362,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.297500478091238,
+            "relative_linear_residual": 6.432230937281778e-16
+          },
+          "direct": {
+            "kappa": 2.738419634264362,
+            "direct_logdet": 403.4227535424732,
+            "direct_dlog": -160.7930653761136,
+            "power_subtracted_dlog": -2.342475861689332,
+            "volume_factor": 57.862055738944406,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2250
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.07161525344016971,
+              "loop_logdet": 1.350689425502542,
+              "determinant_derivative_error": 1.7337381530424523e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.07161525344016971,
+              "loop_logdet": 1.350689425502542,
+              "determinant_derivative_error": 1.7337381530424523e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.2983021716926351,
+            "relative_linear_residual": 8.7122663138246885e-16,
+            "minimum_unassigned_loss": 0.07191810728292718
+          },
+          "direct": {
+            "kappa": 2.738419634264362,
+            "direct_logdet": 403.7061381213941,
+            "direct_dlog": -160.80849988886817,
+            "power_subtracted_dlog": -2.3579103744682914,
+            "volume_factor": 57.8620557389355,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2262
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.07221874047145452,
+              "loop_logdet": 1.362142381789562,
+              "determinant_derivative_error": 1.4231116285401413e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.07221874047145452,
+              "loop_logdet": 1.362142381789562,
+              "determinant_derivative_error": 1.4231116285401413e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.298963043726338,
+            "relative_linear_residual": 9.475720320409715e-16,
+            "minimum_unassigned_loss": 0.07222775916350849
+          },
+          "direct": {
+            "kappa": 2.738419634264362,
+            "direct_logdet": 403.98931630321175,
+            "direct_dlog": -160.8240182810026,
+            "power_subtracted_dlog": -2.3734287665990808,
+            "volume_factor": 57.862055738936824,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2214
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.07281082197183318,
+              "loop_logdet": 1.3735280511270787,
+              "determinant_derivative_error": 1.307273733708314e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.07281082197183318,
+              "loop_logdet": 1.3735280511270787,
+              "determinant_derivative_error": 1.307273733708314e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.2995984818184439,
+            "relative_linear_residual": 9.025072757964478e-16,
+            "minimum_unassigned_loss": 0.07253648600822178
+          },
+          "direct": {
+            "kappa": 2.738419634264362,
+            "direct_logdet": 404.27228856220086,
+            "direct_dlog": -160.83962007242988,
+            "power_subtracted_dlog": -2.3890305580233395,
+            "volume_factor": 57.86205573893794,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 2250
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.07339167118909115,
+              "loop_logdet": 1.38484725628444,
+              "determinant_derivative_error": 2.378347518927626e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.07339167118909115,
+              "loop_logdet": 1.38484725628444,
+              "determinant_derivative_error": 2.378347518927626e-12
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -4.800583601749508e-07,
+      "pv_loop_dlog": [
+        -1.7324778547878061e-07,
+        -1.7324778547878061e-07
+      ],
+      "pv_full_dlog": [
+        -6.533061460700651e-07,
+        -6.533061460700651e-07
+      ],
+      "raw_combination_difference": 2.859223968698643e-11,
+      "runtime_seconds": 18.474451199988835
+    },
+    {
+      "grid_index": 15,
+      "kappa": 6.493816315762115,
+      "masses": [
+        {
+          "mass": 0.0,
+          "diagnostics": {
+            "maximum_singular": 0.13882102968598886,
+            "relative_linear_residual": 4.697901078608566e-16
+          },
+          "direct": {
+            "kappa": 6.493816315762115,
+            "direct_logdet": 864.8871064355839,
+            "direct_dlog": -376.0006737799954,
+            "power_subtracted_dlog": -0.2551121589313507,
+            "volume_factor": 57.86205573893977,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 3414
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.0035068633050284936,
+              "loop_logdet": 0.29924275006985535,
+              "determinant_derivative_error": 5.5857315300889e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.0035068633050284936,
+              "loop_logdet": 0.29924275006985535,
+              "determinant_derivative_error": 5.5857315300889e-13
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "diagnostics": {
+            "maximum_singular": 0.13919428066957873,
+            "relative_linear_residual": 6.613827980889985e-16,
+            "minimum_unassigned_loss": 0.1331655778417746
+          },
+          "direct": {
+            "kappa": 6.493816315762115,
+            "direct_logdet": 865.0203551036624,
+            "direct_dlog": -376.00251753201155,
+            "power_subtracted_dlog": -0.256955910942762,
+            "volume_factor": 57.86205573894051,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 3402
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.0035350355058560838,
+              "loop_logdet": 0.3018197504183115,
+              "determinant_derivative_error": 2.368090532695044e-12
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.0035350355058560838,
+              "loop_logdet": 0.3018197504183115,
+              "determinant_derivative_error": 2.368090532695044e-12
+            }
+          ]
+        },
+        {
+          "mass": 1.4142135623730951,
+          "diagnostics": {
+            "maximum_singular": 0.13952987632875125,
+            "relative_linear_residual": 7.084209091538695e-16,
+            "minimum_unassigned_loss": 0.13325598952095472
+          },
+          "direct": {
+            "kappa": 6.493816315762115,
+            "direct_logdet": 865.1535821291693,
+            "direct_dlog": -376.0043726667478,
+            "power_subtracted_dlog": -0.2588110456807286,
+            "volume_factor": 57.86205573894025,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 3426
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.0035630795693923655,
+              "loop_logdet": 0.3043933426716454,
+              "determinant_derivative_error": 3.315381823243424e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.0035630795693923655,
+              "loop_logdet": 0.3043933426716454,
+              "determinant_derivative_error": 3.315381823243424e-13
+            }
+          ]
+        },
+        {
+          "mass": 1.7320508075688772,
+          "diagnostics": {
+            "maximum_singular": 0.13985922758044939,
+            "relative_linear_residual": 7.683496259043121e-16,
+            "minimum_unassigned_loss": 0.13334636002873407
+          },
+          "direct": {
+            "kappa": 6.493816315762115,
+            "direct_logdet": 865.2867875234814,
+            "direct_dlog": -376.0062391707237,
+            "power_subtracted_dlog": -0.2606775496584353,
+            "volume_factor": 57.86205573893996,
+            "scalar_imaginary_error": 0.0,
+            "nfev": 3438
+          },
+          "phases": [
+            {
+              "phase": 0.0,
+              "loop_dlog": 0.0035909956612352792,
+              "loop_logdet": 0.3069635339656284,
+              "determinant_derivative_error": 4.2670944902512e-13
+            },
+            {
+              "phase": 3.141592653589793,
+              "loop_dlog": 0.0035909956612352792,
+              "loop_logdet": 0.3069635339656284,
+              "determinant_derivative_error": 4.2670944902512e-13
+            }
+          ]
+        }
+      ],
+      "pv_direct_dlog": -1.348681516466499e-08,
+      "pv_loop_dlog": [
+        -1.6559794074194611e-10,
+        -1.6559794074194611e-10
+      ],
+      "pv_full_dlog": [
+        -1.365241297790476e-08,
+        -1.365241297790476e-08
+      ],
+      "raw_combination_difference": 6.139089236967266e-12,
+      "runtime_seconds": 27.452218299964443
+    }
+  ],
+  "parameters": {
+    "radius": 16.0,
+    "angular_size": 4,
+    "q": 1,
+    "mu": 0.5,
+    "pv_scale": 1.0,
+    "squared_mass_multipliers": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "weights": [
+      1.0,
+      -3.0,
+      3.0,
+      -1.0
+    ],
+    "window": [
+      0.01,
+      10.0
+    ],
+    "points": 17
+  },
+  "geometry": {
+    "parameters": {
+      "Q": 0.2,
+      "D": 1.0,
+      "k": 0.5,
+      "M": 0.15311288741492748,
+      "a": 0.4759794572326244,
+      "rplus": 0.6531128874149275,
+      "B": 0.24020542767375577,
+      "q": 1,
+      "physical_A_factor": -2.5,
+      "kappa": 0.1,
+      "h": 0.028,
+      "R": 16.0,
+      "b": 0.05,
+      "mu": 0.5,
+      "quadrature_order": 4
+    },
+    "mesh": {
+      "elements": 4184,
+      "vertices": 2159,
+      "minimum_area": 0.00019167983951913693,
+      "maximum_area": 1.4110282789581254,
+      "area": 401.88955742922275,
+      "exact_area": 402.11600567785956,
+      "area_relative_error": 0.0005631415945631657,
+      "weighted_volume": 2728.356583257757,
+      "exact_weighted_volume": 2730.6665,
+      "weighted_volume_relative_error": 0.0008459168273543538,
+      "maximum_edge_length": 3.0859055134761513,
+      "maximum_far_triangle_diameter": 3.0859055134761513,
+      "outer_vertex_radius_error": 1.6910917111090384e-12,
+      "boundary_normal_closure": 3.0494552754301596e-14,
+      "boundary_divergence_area_error": 0.0,
+      "minimum_boundary_normal_margin": 0.048296291314437925
+    },
+    "mesh_grading": {
+      "base_R": 1.6,
+      "target_R": 16.0,
+      "fixed_radius": 0.65,
+      "base_h": 0.028,
+      "radial_map": "r+(Rtarget-baseR)*((r-r0)/(baseR-r0))^2 for r>r0",
+      "maximum_radial_stretch": 31.31578947368421,
+      "unchanged_inner_vertices": true,
+      "unchanged_mouth_vertices": true,
+      "unchanged_connectivity": true,
+      "moved_vertices": 1501,
+      "base_geometry": {
+        "elements": 4184,
+        "vertices": 2159,
+        "minimum_area": 0.00019167983951913693,
+        "area": 4.0114705742921375,
+        "exact_area": 4.013384614960961,
+        "area_relative_error": 0.0004769143385082719,
+        "weighted_volume": 2.7282012366427777,
+        "exact_weighted_volume": 2.7305000000000006,
+        "weighted_volume_relative_error": 0.000841883668640464
+      },
+      "scope": "Larger distant elements limit angular/axial resolution; finite outer data remain approximate."
+    },
+    "active_dof": 24906,
+    "coefficient_ranges": {
+      "N": [
+        0.1921902968405581,
+        4.728564309896782
+      ],
+      "P": [
+        1.019438186249203,
+        5.212520495182572
+      ],
+      "NP": [
+        1.0000000036382815,
+        23.22804231600752
+      ],
+      "Aphysical": [
+        3.607238891523874e-08,
+        16.492174984635415
+      ],
+      "W": [
+        1.0388452866035205,
+        27.12166316859847
+      ]
+    },
+    "angular_antihermitian_defect": 3.552713678800501e-15,
+    "mass_hermitian_defect": 4.440892098500626e-16,
+    "minimum_cell_mass_eigenvalue": 5.327431801968831e-07,
+    "norm": "Integral rho*(P/N)*|u|^2 d_rho d_z; fixed-mu azimuthal normalization.",
+    "current": "Boundary and interior-face weights remain rho*ds.",
+    "boundary": "Finite polygonal cuts; outer incoming field is specified, not transparent.",
+    "coefficient_scope": "Binary64 evaluation of linked exact Q=1/5,D=1 balanced constants.",
+    "build_seconds": 3.781391199969221
+  },
+  "controls": {
+    "flat": {
+      "mass_scale": 1.7,
+      "moment_sums": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensionless_bulk_integral": -0.5,
+      "quadrature_error": 5.551115240162146e-15,
+      "individual_residues": [
+        -0.10322580645161292,
+        -2.5690483870967737,
+        -5.034870967741934,
+        -7.500693548387094
+      ],
+      "combined_residue": -8.881784197001252e-16
+    },
+    "minimum_proper_eigenvalue": 3.1218664013386295e-07,
+    "massless_return_error": 8.526165884426007e-16,
+    "massless_diagnostics": {
+      "maximum_singular": 0.8544917351083673,
+      "relative_linear_residual": 3.21748984186885e-14,
+      "minimum_unassigned_loss": 0.03556336198960009,
+      "ledger": {
+        "input_norm": 0.9999999999999999,
+        "outgoing": {
+          "upper": 0.22128846303100197,
+          "lower": 0.25406121392764036,
+          "outer": 0.00025594495085373573,
+          "axis": 0.0
+        },
+        "incoming_mismatch": 0.14245340216116306,
+        "interior_jump": 0.30450228736527374,
+        "attenuation": 0.0774386885640666,
+        "balance": -3.3306690738754696e-16,
+        "algebraic_residual": -3.3099482848978024e-17,
+        "identity_error": 2.999674245385689e-16,
+        "volume_quadrature_error": 1.1102230246251565e-15
+      },
+      "off_shell_ledger": {
+        "input_norm": 1.0,
+        "outgoing": {
+          "upper": 1.4510722501630213e-07,
+          "lower": 1.8621107940011538e-07,
+          "outer": 0.01481876371782406,
+          "axis": 0.0
+        },
+        "incoming_mismatch": 1.0153317663442665,
+        "interior_jump": 1.883687201306817,
+        "attenuation": 0.02344465417524125,
+        "balance": 1.9372827168624531,
+        "algebraic_residual": 1.9372827168624545,
+        "identity_error": 1.3322676295501878e-15,
+        "volume_quadrature_error": 4.0245584642661925e-16
+      }
+    },
+    "massless_determinant_doubling": [
+      {
+        "phase": 0.0,
+        "log_error": 1.0192737143199793e-07,
+        "derivative_error": 3.68059777933194e-08,
+        "raw_adjoint_sewing_error": 8.874123658131339e-12,
+        "projected_two_weyl_sewing_error": 8.874151413706954e-12,
+        "projected_two_weyl_log_error": 3.1175062531474396e-12,
+        "polygon_adjoint_defect": 0.005668476380257581
+      },
+      {
+        "phase": 0.7,
+        "log_error": 1.011691637131662e-07,
+        "derivative_error": 3.9417687724974115e-08,
+        "raw_adjoint_sewing_error": 8.874117670424071e-12,
+        "projected_two_weyl_sewing_error": 8.874099789792152e-12,
+        "projected_two_weyl_log_error": 2.332356530132529e-12,
+        "polygon_adjoint_defect": 0.005668476380257581
+      },
+      {
+        "phase": 3.141592653589793,
+        "log_error": 9.411139245685263e-08,
+        "derivative_error": 6.470715477324696e-08,
+        "raw_adjoint_sewing_error": 8.874123658131339e-12,
+        "projected_two_weyl_sewing_error": 8.874151413706954e-12,
+        "projected_two_weyl_log_error": 4.980904577678302e-12,
+        "polygon_adjoint_defect": 0.005668476380257581
+      }
+    ],
+    "massive_diagnostics": {
+      "maximum_singular": 0.8581748032373232,
+      "relative_linear_residual": 1.1581420113175008e-14,
+      "minimum_unassigned_loss": 0.03053407522115775,
+      "ledger": {
+        "input_norm": 0.9999999999999999,
+        "outgoing": {
+          "upper": 0.22199551184156577,
+          "lower": 0.26354462348708796,
+          "outer": 1.920258225265168e-18,
+          "axis": 0.0
+        },
+        "incoming_mismatch": 0.14358990376477507,
+        "interior_jump": 0.30322677778260154,
+        "attenuation": 0.06764318312396755,
+        "balance": -1.9984014443252818e-15,
+        "algebraic_residual": -1.5237862150993028e-16,
+        "identity_error": 1.8460228228153513e-15,
+        "volume_quadrature_error": 6.661338147750939e-16
+      },
+      "off_shell_ledger": {
+        "input_norm": 1.0,
+        "outgoing": {
+          "upper": 1.4510722501630213e-07,
+          "lower": 1.8621107940011538e-07,
+          "outer": 0.01481876371782406,
+          "axis": 0.0
+        },
+        "incoming_mismatch": 1.0153317663442665,
+        "interior_jump": 1.883687201306817,
+        "attenuation": 0.02344465417524125,
+        "balance": 1.9372827168624531,
+        "algebraic_residual": 1.9372827168624536,
+        "identity_error": 4.440892098500626e-16,
+        "volume_quadrature_error": 4.0245584642661925e-16
+      }
+    },
+    "massive_return": {
+      "real": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0002879484712494215,
+          2.3248933428197846e-05,
+          2.73251874897403e-07,
+          -1.2923102817577794e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.002206290746481499,
+          -8.207912144531093e-05,
+          6.789897542411317e-07,
+          2.1033821178026716e-06,
+          -1.1968324437661644e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.3343681391294842e-05,
+          -2.4207677285969516e-06,
+          8.219296443560383e-08,
+          8.147772363206755e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.00011773051006168435,
+          3.794735189919962e-06,
+          -1.0264148640750222e-08,
+          -1.0986652103068961e-07,
+          6.288640150036305e-07
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          4.0638565309050116e-07,
+          7.673197945909414e-08,
+          -2.8148668115348384e-08,
+          1.0779407866304349e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.6446407263990663e-05,
+          2.056382738280743e-06,
+          -9.34643820993008e-08,
+          -2.2551849867020636e-08,
+          1.5068066693934588e-07
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.235585704635232e-06,
+          7.992997361901656e-08,
+          8.243096000409457e-09,
+          -8.620677880545544e-09,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.7592564911347342e-05,
+          -1.1696992574566619e-06,
+          4.853314746530273e-08,
+          1.5126624044467006e-08,
+          -9.851741657966638e-08
+        ],
+        [
+          -0.042442925836250284,
+          0.003043276848357635,
+          -0.00012611430410866705,
+          -3.784870485949627e-05,
+          0.00023692596846308325,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.002206290746481502,
+          0.0001177305100616859,
+          2.6446407263990118e-05,
+          -1.759256491134802e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0030391376847155424,
+          -0.00033869420839008455,
+          2.284591719318743e-05,
+          1.823904372783339e-06,
+          -1.7507429736799707e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          8.20791214453106e-05,
+          -3.79473518992003e-06,
+          -2.0563827382807226e-06,
+          1.1696992574567142e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0001271007956741353,
+          2.2923823708369712e-05,
+          -2.248220351524894e-06,
+          3.522228669959612e-08,
+          7.658022477581103e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -6.789897542409907e-07,
+          1.026414864075046e-08,
+          9.346438209929683e-08,
+          -4.853314746530199e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -3.694775837186255e-05,
+          1.7514551808386902e-06,
+          4.005561925061915e-08,
+          -4.777431333417915e-08,
+          2.032084759320585e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2.1033821178027216e-06,
+          1.0986652103068504e-07,
+          2.2551849867019256e-08,
+          -1.512662404446424e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0002393127522741581,
+          -1.770923480973424e-05,
+          7.683559698699985e-07,
+          2.1035439317634694e-07,
+          -1.338554126004325e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1968324437661312e-05,
+          -6.288640150036181e-07,
+          -1.5068066693934604e-07,
+          9.851741657966536e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0022039368094849696,
+          -0.00011665766393948671,
+          -2.3440160586831155e-05,
+          1.9362716662748865e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.04244292583625028,
+          0.0030391376847155632,
+          -0.00012710079567413582,
+          -3.6947758371869125e-05,
+          0.00023931275227415653
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -8.21026697182982e-05,
+          3.7415033860571606e-06,
+          1.8410173751064342e-06,
+          -1.306721933269863e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.003043276848357635,
+          -0.00033869420839008406,
+          2.29238237083698e-05,
+          1.7514551808390149e-06,
+          -1.7709234809734213e-05
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          6.034440173546026e-07,
+          -3.557736722542245e-09,
+          -8.412785683202268e-08,
+          5.365204421993921e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.00012611430410866238,
+          2.2845917193186867e-05,
+          -2.248220351524891e-06,
+          4.005561925061237e-08,
+          7.68355969869985e-07
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.137516862430605e-06,
+          -1.1057384541890029e-07,
+          -2.0430029274424518e-08,
+          1.709430207654223e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -3.784870485949027e-05,
+          1.8239043727831224e-06,
+          3.522228669962873e-08,
+          -4.7774313334175765e-08,
+          2.1035439317633085e-07
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.1834555865315375e-05,
+          6.165376397880081e-07,
+          1.32373128393405e-07,
+          -1.0748133700934001e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0002369259684630847,
+          -1.750742973679936e-05,
+          7.658022477581171e-07,
+          2.032084759320983e-07,
+          -1.338554126004291e-06
+        ],
+        [
+          -0.0022039368094849683,
+          8.21026697182994e-05,
+          -6.034440173549043e-07,
+          -2.137516862430785e-06,
+          1.1834555865315571e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.00028794847124942154,
+          2.334368139129498e-05,
+          4.0638565309051006e-07,
+          -1.235585704635345e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.00011665766393948384,
+          -3.7415033860571255e-06,
+          3.557736722554183e-09,
+          1.105738454189157e-07,
+          -6.165376397880212e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.3248933428197744e-05,
+          -2.4207677285969444e-06,
+          7.673197945908812e-08,
+          7.992997361901899e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          2.3440160586832954e-05,
+          -1.8410173751065752e-06,
+          8.412785683203225e-08,
+          2.04300292744296e-08,
+          -1.323731283934122e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.73251874897501e-07,
+          8.219296443559869e-08,
+          -2.8148668115348864e-08,
+          8.24309600040968e-09,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.936271666274756e-05,
+          1.3067219332698083e-06,
+          -5.365204421994308e-08,
+          -1.7094302076543963e-08,
+          1.0748133700933577e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.292310281757658e-06,
+          8.147772363205743e-08,
+          1.0779407866303351e-08,
+          -8.620677880545714e-09,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "imag": [
+        [
+          0.00234138877299419,
+          -0.83756251872835,
+          0.00742136204910764,
+          0.002392468459146191,
+          -0.005842684126407552,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.1703712674887989,
+          0.0019174786060291607,
+          -0.0007916225313185543,
+          -0.00042381492534284445,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0002889216399223098,
+          0.007328062521694984,
+          -0.7821937410569338,
+          0.009632126705312218,
+          0.009160079358186942,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0019174786060290646,
+          -0.08760066881196789,
+          0.0015218188440427375,
+          -0.00019087809428212753,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0018620135058494045,
+          -0.0009622758963745003,
+          0.01048698948882025,
+          -0.6773344183001653,
+          0.014401126207022623,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0007916225313185511,
+          0.0015218188440427258,
+          -0.053411291095430614,
+          0.000536330346070779,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.00275820185361851,
+          -0.004801504179161184,
+          0.005971804401470112,
+          0.01509075957303376,
+          -0.5549592853089985,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0004238149253427838,
+          -0.00019087809428214718,
+          0.0005363303460707864,
+          -0.03397569880177161,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.002086340824414891,
+          -0.0003085757577764997,
+          -0.001626117567204599,
+          0.0029764968407512,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.7501704220212133,
+          0.000720086915166262,
+          0.0010589586167009182,
+          -0.0010082992315711865,
+          0.004910745351125774
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.8379637158356749,
+          0.007009011331289228,
+          -0.000830277442011168,
+          -0.00449291261583841,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0007200869151661526,
+          -0.16519479877784407,
+          0.001234927649141803,
+          0.0002114018878500313,
+          -0.00015859920105451564
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.007081653189721815,
+          -0.7824064265848143,
+          0.010419123734597677,
+          0.006079978582204472,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0010589586167009668,
+          0.001234927649141758,
+          -0.08463925756669644,
+          0.0013585710222354256,
+          -0.00014200988788925194
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0023288620550632327,
+          0.00950114036594369,
+          -0.6774025412780843,
+          0.015044463667551522,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0010082992315711137,
+          0.00021140188784998272,
+          0.0013585710222354533,
+          -0.05186664218813404,
+          0.0023098455808382044
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.005777915939982559,
+          0.009188745515745313,
+          0.014353830359417008,
+          -0.5550024349759369,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.004910745351125734,
+          -0.00015859920105451217,
+          -0.00014200988788926408,
+          0.0023098455808382174,
+          -0.03449990729478168
+        ],
+        [
+          -0.7500012498474502,
+          0.0008832560959272032,
+          0.0010642452815566176,
+          -0.0010724264565953254,
+          0.0048493634868849115,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0023413887729934095,
+          0.00028892163992204345,
+          0.0018620135058493303,
+          -0.002758201853618497,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.000883256095926986,
+          -0.16516669319166746,
+          0.001159026006698989,
+          0.00014961041349664545,
+          -0.0001644681204049361,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.8375625187283503,
+          -0.007328062521695183,
+          0.0009622758963747785,
+          0.00480150417916142,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0010642452815566306,
+          0.0011590260066989475,
+          -0.08470314035259796,
+          0.00132574076637382,
+          -0.0001344001560468532,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.007421362049108593,
+          0.782193741056934,
+          -0.010486989488820202,
+          -0.005971804401470195,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.001072426456595249,
+          0.00014961041349662203,
+          0.0013257407663737958,
+          -0.05187055920491705,
+          0.0023198053248508523,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0023924684591462436,
+          -0.009632126705312362,
+          0.6773344183001655,
+          -0.01509075957303388,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.004849363486884917,
+          -0.00016446812040495432,
+          -0.00013440015604684798,
+          0.0023198053248508453,
+          -0.034498686168495926,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0058426841264082735,
+          -0.009160079358186843,
+          -0.014401126207022885,
+          0.5549592853089986,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.17045954085061876,
+          0.001810275546261595,
+          -0.0008331803357406308,
+          -0.00043160368653631133,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0020863408244149294,
+          0.8379637158356747,
+          -0.007081653189721537,
+          -0.0023288620550630523,
+          0.005777915939982881
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0018102755462616055,
+          -0.08765534300118284,
+          0.0015179351096828511,
+          -0.00016975780204318662,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0003085757577763375,
+          -0.007009011331289117,
+          0.7824064265848141,
+          -0.009501140365943794,
+          -0.009188745515745292
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0008331803357406534,
+          0.0015179351096828546,
+          -0.053383477686101743,
+          0.0005716285113572944,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0016261175672047069,
+          0.0008302774420109182,
+          -0.010419123734597802,
+          0.6774025412780843,
+          -0.01435383035941687
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0004316036865362957,
+          -0.0001697578020431901,
+          0.000571628511357284,
+          -0.033950369524752985,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0029764968407509414,
+          0.004492912615838257,
+          -0.0060799785822041735,
+          -0.0150444636675513,
+          0.5550024349759373
+        ]
+      ]
+    },
+    "massive_solve_seconds": 1.6715257000178099,
+    "maximum_ledger_identity_error": 1.8460228228153513e-15
+  },
+  "integrals": {
+    "fine": {
+      "points": 17,
+      "full": [
+        0.0010554870529525216,
+        0.007827225229323132
+      ],
+      "direct": -0.0015556027109592334,
+      "loop": [
+        0.002611089763914108,
+        0.009382827940281158
+      ]
+    },
+    "coarse": {
+      "points": 9,
+      "full": [
+        0.0010030731325932107,
+        0.007995251697986079
+      ],
+      "direct": -0.0015369112514851007,
+      "loop": [
+        0.002539984384081173,
+        0.009532162949473516
+      ]
+    }
+  },
+  "passed": true,
+  "tests": {
+    "flat_moments": true,
+    "flat_bulk_cancellation": true,
+    "flat_bulk_exact": true,
+    "positive_mass_weak_form": true,
+    "massless_adjoint_return": true,
+    "raw_massless_adjoint_sewing": true,
+    "projected_two_weyl_sewing": true,
+    "independent_current_identity": true,
+    "complete_grid": true,
+    "passive_maps": true,
+    "linear_solves": true,
+    "nonnegative_remaining_loss": true,
+    "determinant_derivatives": true,
+    "common_volume_cancellation": true,
+    "extreme_frequency_ledger": true,
+    "frozen_inputs": true
+  },
+  "runtime_seconds": 317.05475359997945,
+  "normalization": "Full Dirac: -1/pi integral PV-weighted direct+loop metric derivative d(kappa). hbar=c=D=1.",
+  "scope": [
+    "Finite M=1/D, one mu sector, four angular pairs and finite frequency window only.",
+    "Negative PV coefficients are subtraction weights, never a physical material or state.",
+    "Outer incoming-zero boundary and P1 jump loss remain; no physical exterior or spatial/angular limit.",
+    "Polygon cut factors are not isometries: exact massless doubling holds before projection; projected full and two-Weyl sewing agree, but differ slightly from twice the old one-Weyl loop.",
+    "No omitted frequency tail bound, all-mu sum, large-M counterterms, Hadamard matching or Ward validation.",
+    "No renormalized supporting stress, stability, formation or backward travel is established."
+  ]
+}
