@@ -1,5 +1,249 @@
 # Reproduction and coupled-model iterations
 
+## An invariant product reference for the interior null source — increment99
+
+An absolute source across a varying-radius collar is still unspecified.
+There is, however, a more informative interior calculation than another
+loop-phase difference. On the common exact AdS2 x S2 throat, an isometry-
+invariant reference vacuum has its AdS2 stress block proportional to the
+AdS2 metric. Both radial-null contractions therefore vanish. Comparing
+the connected state's local Green function with this reference can give
+its absolute interior null component, subject to admissible states and
+controlled angular/frequency/continuum limits. This does not determine
+the varying-radius collar source, the whole stress tensor or stability.
+
+### Why the reference is physically constrained
+
+For the massless Dirac field, local finite stress ambiguities include
+curvature-squared variations and the gauge-background stress; see
+[Zahn, section 4.2, equation 38 and its continuation](https://arxiv.org/pdf/1210.4031).
+These represent renormalized couplings, not adjustable negative-energy
+matter. Their radial-null components vanish on the exact product by
+symmetry, but generally not on a collar. For example, our Euler-derivative
+convention for the R-squared action gives
+\[
+ H_{ab}=2R R_{ab}-\tfrac12g_{ab}R^2+
+       2(g_{ab}\Box-\nabla_a\nabla_b)R,
+ \qquad H_{kk}=2R R_{kk}-2{d^2R\over d\lambda^2}.
+\]
+A matter-action term +c_R integral sqrt(-g) R^2 contributes -2c_R H_ab.
+Choosing a different subtraction without matching the gravitational
+couplings would change the theory. Phase subtraction leaves these
+state-independent terms invisible.
+
+The reference must have an invariant vacuum, not merely reflecting
+boundary conditions. Use the type-I Dirac domain of
+[Serrano Blanco, sections III.C--E](https://arxiv.org/pdf/2208.08252).
+Its dimensionless effective masses are M_n=sqrt[n(n+1)]; nonzero modes
+are in the unique normalizable boundary class. The massless channel
+requires a specified domain pairing the counterpropagating components.
+An isolated chiral Weyl zero mode cannot be reflected into itself.
+The invariant-vacuum property alone does not certify the full assembled
+four-dimensional Hadamard condition. Local ultraviolet admissibility
+and control of the complete tower remain requirements for the absolute
+stress interpretation.
+
+A conditional local admissibility argument compares the full reference
+Hamiltonian with a smooth complete static Dirac problem on a cylinder
+carrying the same magnetic bundle and agreeing near the probe. With
+uniform interior parameter-elliptic resolvent estimates, the localized
+positive-frequency projector difference is smooth, and finite-speed
+evolution preserves that property in small interior diamonds. The
+[ground-state theorem](https://arxiv.org/abs/math-ph/0002021) and
+[Dirac Hadamard characterization](https://arxiv.org/abs/math-ph/0008029)
+apply to the globally hyperbolic comparison problem. They do not directly
+certify global AdS with its timelike ends. The full direct-sum domain
+and uniform estimates remain to be established here; finite-mode
+numerical tests cannot replace them.
+
+### Reference caps on the existing finite throat
+
+Write x=ell*sigma, sigma_c=atan(rho_c), and continue the same product
+metric to sigma=+/-pi/2. The two outside reference caps have optical
+length a=ell*(pi/2-sigma_c). They replace the physical exterior only in
+the reference calculation. No physical wall is introduced at either
+finite cut. For the canonical radial Hamiltonian
+\[
+H_\sigma=-i\sigma_3\partial_\sigma+M\sec\sigma\,\sigma_1,
+\]
+the constant unitary U=(I+i sigma_1)/sqrt(2) converts it to the paper's
+equation 25. At the right end, U(1,-i)^T=(sqrt(2),0)^T; at the left,
+U(1,i)^T=(0,i*sqrt(2))^T. These are precisely its type-I endpoint
+conditions, including the massless limit.
+Let r=f_minus/f_plus on the right cap. It obeys
+\[
+ r'=iM\sec\sigma(1+r^2)-2iE\ell r,\qquad
+ r(\pi/2-\delta)=-i+{2E\ell\over2M+1}\delta+O(\delta^2).
+\]
+The normalizable solution is propagated inward to the finite cut.
+At E=i*kappa, r=-ih with h'= -M sec(sigma)(1-h^2)+2*kappa*ell*h.
+For M=0 the exact cap reflection is -i exp(2iEa). A direct independent
+control is the ground mode
+\[
+ \psi=(\cos\sigma)^M
+       (e^{i\sigma/2},e^{-i\sigma/2})^T,
+ \quad E\ell=M+\tfrac12,\quad r=e^{-i\sigma}.
+\]
+This checks the boundary branch, frequency sign and cap propagation.
+
+The full Dirac zero reference couples right and left chirality at each
+end. The product of its two reflection phases is -1. Its denominator is
+1+exp(-2*kappa*L_A), where L_A=pi*ell is the full AdS optical interval.
+The associated massless strip Casimir energy is -pi/(24*L_A), and the
+existing compact metric probe has derivative -pi*I_f/(12*L_A^2).
+The geometric conformal term cancels the state term in the invariant
+vacuum's null stress. For comparison, a two-chirality NS loop of length
+L has energy -pi/(6L) and probe derivative -pi*I_f/(3L^2). The local
+source difference vanishes at L=2*L_A; equality of the global energies
+is neither required nor implied.
+
+### Subtract environments with the core operator held identical
+
+Let B_eta be the same compactly deformed throat map in both calculations,
+S_conn the exterior return map and S_ref the reference-cap map, all in
+the same canonical boundary coordinates. Both S maps are independent
+of eta. The local probe difference is
+\[
+ Q={1\over\pi}\int_0^\infty d\kappa\,
+ \operatorname{Re}\operatorname{tr}
+ \left[\left((I-S_cB)^{-1}S_c-(I-S_rB)^{-1}S_r\right)\partial_\eta B\right].
+\]
+There is no additional B, transmission derivative or volume factor.
+In transfer coordinates the core boundary equation is U a+V b=0,
+B=-V^{-1}U, and the environmental condition a=S b gives
+det(U S+V)=det(V)det(I-SB). The common det(V) cancels before
+differentiating. The compact deformation and endpoint frames/measure
+must be identical; otherwise this cancellation does not follow.
+An independent nonsymmetric transfer example checks the identity and
+derivative while the canceled prefactor has a nonzero derivative.
+
+The separate connected and reference matrix traces are only their
+closure contributions, not complete renormalized stresses. The latter
+also contain the common local/interior terms. Thus the reference trace
+in a saved matrix calculation need not vanish even though the invariant
+reference's complete radial-null stress is zero. Only the consistently
+subtracted expression above has the stated local-source interpretation.
+
+For high frequencies the subtraction can be evaluated directly as
+\[
+ (I-S_cB)^{-1}(S_c-S_r)(I-BS_r)^{-1}.
+\]
+The former phase-comparison window cannot be assumed sufficient. The
+central and upper-side probes have optical cut clearances 0.173296 and
+0.074270 respectively. At kappa=12 the corresponding exponential scale
+indicators exp(-2*kappa*clearance) are 0.01562 and 0.16822. They are not
+tail bounds; the new reference difference needs its own frequency test.
+
+### Executable controls and the enlarged frequency window
+
+The new [source calculation](ads_reference_source.py) first reuses the
+27 saved sector/mesh/frequency cases from increment98. Its normalizable
+cap agrees with the exact ground mode to 2.84e-15, with an independent
+normalizable-column integration to 4.30e-12, and with the tighter
+Frobenius start/tolerance to 4.22e-15. The primary-paper representation
+and endpoint rotation, massless determinant and Dirac normalization
+are executable controls. None establishes the complete field state.
+
+Three fresh exterior samples expose a frequency requirement hidden by
+the old phase comparison. At kappa=12,24,48, the phase-pi upper-side
+reference-relative pressure kernels are respectively 8.71717e-4,
+6.13077e-5 and 4.66004e-7. The central values are 2.59044e-5,
+7.34433e-8 and 1.91825e-12. These are integrands, not stresses or
+tail bounds. The new integral therefore uses the panels
+[1e-6,.02,.2,1,4,12,24,48,96], with separate orders 8 and 12,
+matched order-8 spatial meshes h=.05 and .035, and selected n<=12
+comparisons. Only mu=1/2 is integrated; the other pilot sectors are
+not silently counted in that integral.
+
+The full run took 301.04 seconds and passed all 21 declared numerical
+checks. These are checks of the finite computation, not acceptance of
+a physical medium. Saved [results](ads_reference_source_results.json)
+give the following smeared reference-relative pressure responses in
+the existing model units, without division by probe volume:
+
+| Phase and probe | h=.05, order 8 | h=.05, order 12 | h=.035, order 8 |
+| --- | ---: | ---: | ---: |
+| pi, central | -0.001034899630 | -0.001034898145 | -0.001426132947 |
+| pi, upper side | +0.025160329683 | +0.025160330262 | +0.022799788697 |
+| 0, central | +0.158611450872 | +0.158610453666 | +0.158822794160 |
+| 0, upper side | +0.086704530534 | +0.086704152101 | +0.084576665614 |
+
+For phase pi, the summed absolute panel changes under quadrature
+refinement are [1.48449e-9,5.79572e-10]. The matched-order spatial
+changes are [-3.91233e-4,-2.36054e-3], about 37.8% and 9.38% of the
+coarser magnitudes. Thus the observed signs persist on these two meshes,
+while a precise continuum magnitude is unresolved. The phase-0 panel
+envelope reaches 1.00059e-6 against the declared 2e-6 target. These
+observed differences are not certified error bounds or confidence intervals.
+
+In phase pi, the frequency range [12,96] adds [5.11131e-5,0.00390501811].
+The last panel [48,96] contributes [4.53545e-12,2.36769e-6]. Neither
+the omitted [0,1e-6] interval nor [96,infinity) has a certified bound.
+Selected n<=8 to n<=12 changes in the upper-side integrand are
+1.53360e-6 at kappa=2 and 4.81287e-6 at kappa=12. They do not bound
+the integrated angular tail or omitted azimuthal sectors. In fact the
+other pilot sectors have different signs at individual frequencies;
+their complete contribution cannot be inferred from the old phase
+contrast or from a degeneracy multiplier.
+
+The maximum integrated exterior equation residual is 4.60e-15, and
+the common-core resolvent identity error is at most 1.16e-13. The
+smallest sampled sewing singular value is 0.00252042. The primary
+phase-pi shift response is [-4.24064e-11,-1.63102e-11], so both null
+diagnostics have the pressure signs at this numerical resolution.
+This does not establish a nonzero physical energy flow.
+
+The substantive result is a spatially mixed partial source. The earlier
+large negative phase contrast did not establish a broadly negative
+absolute source: here the phase-0 responses are positive, while the
+phase-pi central value is much smaller and the upper-side value remains
+positive. Before coupling this to a throat deformation, the next gate
+is the complete angular content and spatial convergence of the source,
+along with the state-admissibility and physical matching requirements.
+
+### What a nonzero result would require geometrically
+
+The exact product has G_kk=0. A nonzero complete connected-state null
+source would therefore require a deformation, rather than support the
+unchanged product. In Einstein gravity with c=1, write
+ds^2=-N(l)^2 dt^2+dl^2+r(l)^2 dOmega^2. For a spherical total source
+with zero radial energy flow, the radial-null equation is
+\[
+ \left({r'\over N}\right)'=-{4\pi G r\over N}(\rho+p_l).
+\]
+This is the proper-distance form of the spherical stress equations in
+[Visser, Kar and Dadhich, equations 3 and 6--7](https://arxiv.org/pdf/gr-qc/0301003).
+At a smooth minimum, r''=-4*pi*G*r*(rho+p_l). Negative local total
+null stress permits flare-out, but a negative compact integral alone
+does not specify its location or magnitude. The existing probe gives
+\[
+ Q_f=\int dl\,d\Omega\,Nr^2f(\rho+p_l)
+     =-{1\over G}\int dl\,N^2rf\left({r'\over N}\right)'
+\]
+for a spherical source. It is zero for an undeformed exact product.
+A controlled first semiclassical step about r=r_0 would solve
+\[
+ \left({\delta r'\over N_0}\right)'=
+ -{4\pi G r_0\over N_0}(\rho+p_l)_{\rm conn}[g_0],
+\]
+together with the other field equations and boundary conditions.
+One azimuthal sector supplies only a partial angularly integrated
+diagnostic; it cannot establish a spherical source or remove the
+anisotropic Einstein equations.
+
+For an outgoing affine radial ray of conserved energy E, integration
+over a finite collar gives
+\[
+ \int_{\rm collar}T_{ab}k^ak^b\,d\lambda
+ =-{E\over4\pi G}\left[
+ \left.{r'\over Nr}\right|_{\rm inner}^{\rm outer}
+ +\int_{\rm collar}{r'^2\over Nr^2}\,dl\right].
+\]
+The compact core probe omits these endpoint and collar terms. The
+full state, angular sum, physical matching, magnetic load and consistent
+renormalized gravitational couplings remain necessary. This comparison
+would still not establish stability or a chronology-changing spacetime.
+
 ## Geometric endpoint connection and missing angular sectors — increment98
 
 This increment tests two distinct changes: a specified geometric

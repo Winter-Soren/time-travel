@@ -58,6 +58,95 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Invariant product reference for the interior null source — increment99
+- Previous98 classified PROGRESS: committed/pushed/private/clean verified
+  d66306e81dc0638125db5a40b0e92efc4f3548f1. Root revalidated current
+  cleanHEAD before99. Goal ACTIVE; import/reproduction remainscomplete.
+- Physicalcollar absolute source remainsunspecified. Newroute: onexact
+  AdS2xS2, invariantfullDiracvacuum hasT_radialnull=0 bysymmetry.
+  Localconnected-minus-referenceGreen difference cantherefore supply
+  absoluteINTERIOR nullcomponent, conditionalonHadamardstates and
+  controlledfullangular/frequency/continuum limits. No fullcollarclaim.
+- Primaryreference: SerranoBlanco2208.08252typeI invariantvacuumdomain.
+  M_n=sqrt(n(n+1)) normalizable fornonzero; zeroM0pairsR/L atcaps.
+  Zahn1210.4031Eq38curvature/gauge ambiguities null0onproduct butnot
+  generalcollar. DonotusegloballyhyperbolicHadamardtheorem silentlyforAdS.
+- coupled_misner owns NEW ads_reference_source.py/results only.
+  Firstcap/saved98matrixpilot, no exteriorreruns forfrozenrows; n0exact
+  crosschiralityreference; n>0normalizableRiccaticaps. Rootownsdocs.
+  mass_audit readonlyreference/domain; formation_updates readonlygluing.
+  Pilot complete: 15 checks PASS, including primary-paper unitary/domain
+  control. Exact ground error 2.84e-15, cap-column error 4.30e-12.
+  Root authorized one-sector mu=.5 integral after high-frequency probes:
+  kappa=12/24/48 upper kernels 8.72e-4/6.13e-5/4.66e-7 prove the old
+  cutoff12 insufficient for this observable. No certified tail bound.
+  New panels [1e-6,.02,.2,1,4,12,24,48,96], orders8/12 h=.05,
+  matched order8 h=.035 and selected N12 samples. Save failed gates.
+  medium_picture owns appended helper and NEW figure pair; preserve178
+  existing figures. formation_updates audits saved matrices/quadrature.
+- Exactcapcontrol: Hσ=-iσ3∂σ+Msecσ σ1;
+  ψ=cos^Mσ(exp(iσ/2),exp(-iσ/2)),Eell=M+.5,r=exp(-iσ).
+  Generalcapr'=iMsecσ(1+r²)-2iEellr, boundaryr=-i+
+  2Eellδ/(2M+1)+Oδ². n0r=-i exp(2iEa),a=ell(pi/2-cut).
+- ZeroDiracrefD=1+exp(-2κpiell),Eref=-pi/(24L_A),
+  Qref=-piIf/(12L_A²). ConnectedNSDiracloopQ=-piIf/(3L²);
+  localdifference0atL=2L_A. Agentindependentnormalization agrees.
+- Gluingprefactor cancels ONLY samecoreoperator/domain/probe/endbases.
+  Q=1/pi int Re tr[((I-ScB)^-1Sc-(I-SrB)^-1Sr)dB]dκ.
+  Stablekernel=(I-ScB)^-1(Sc-Sr)(I-BSr)^-1; noadjoints/extrafactors.
+  Independenttransfercontrol determinant2.29e-16,derivative1.39e-17;
+  canceledprefactorderivative .10848nonzero. UVwindow12isNOTassumed
+  adequate: compactprobe opticalclearances .173296/.074270.
+- Usefuldeferredphysicalcollarstep fromformation: corrected83/84
+  finitecollar magneticdipole haspositive radialnull load
+  I_mag/E=(2/3)int Cperp*a'^2/(N*r²)dl forCperp=-4L_X>0,
+  equation(N Cperp a')'-2N Cparallel a/r²=-N r j1;
+  Cparallel=Cperp+2X Cperp,X. Requiresmatchedcurrent/endpointdata;
+  donotrepeatpointsource85/86 orreusebare68–72operatorunmodified.
+- Interpretation: exact product G_null=0. A nonzero source requires a
+  deformation; it does not support the unchanged product. For spherical
+  total zero-flux source, (r'/N)'=-4*pi*G*r*(rho+p_r)/N. Compact source
+  integrals do not fix the pointwise profile or missing collar endpoints.
+- Completed bounded integral: all21 numerical gates PASS,301.04s.
+  Primary mu=.5,N8,h=.05,order12,window[1e-6,96],phasepi Q_pressure
+  [-.00103489814526905,.0251603302623390]; phase0
+  [.158610453666389,.0867041521014457]. Both signs are spatially mixed
+  in phasepi; not a broadly negative absolute source. No SI material claim.
+- Matched order8 h=.035 phasepi[-.00142613294737037,.0227997886968768].
+  Mesh differences[-3.9123331785e-4,-2.36054098615e-3] dominate phasepi
+  quadrature envelopes[1.48449e-9,5.79572e-10]. Central magnitude changes
+  37.8%,upper9.38%; these are observed sensitivity,not continuum bounds.
+  Phase0 quadrature envelope1.00059e-6<declared2e-6target.
+- kappa12..96 adds[5.11131235e-5,.00390501811];final48..96
+  [4.53545e-12,2.36769e-6]. Missing low/high frequency tails not certified.
+  Selected N12 upper-integrand changes1.53360e-6(k2),4.81287e-6(k12)
+  do not bound integrated angular content. Other mu pilot signs differ.
+- Independent formation audit:27 saved pilot raw/reference maps exact,
+  observables2.78e-17; regenerated all quadrature nodes/weights exact,
+  panels1.39e-17,totals/comparisons2.78e-17,null identities3.03e-17.
+  All14 dependency hashes match. Reversed the2 documented prose-only
+  post-run edits and recovered executed source SHA exactly.
+- Source ads_reference_source.py SHA
+  229442a836e685a6f4652e456a878705f08bbfd475a1128e5e493fd78dcc0f1f;
+  results SHA bf913d5c3749e10421269a4ae080316b7fa10900010040b60d76ae87edcb890c.
+  Executed source4faefd38ab3e567513e1a9d1013e06ffacfe9a9de93ffb3b70334e3cb94174d6
+  retained in JSON,along with reversible prose patch; numeric code unchanged.
+- NEXT physical gate: complete angular content and spatial convergence
+  before interpreting source as physical or solving a deformation. Reuse
+  existing pilot/caps; do not redo the whole quadrature to improve prose.
+  Full local state admissibility and finite collar/matching remain open.
+  Stable medium and13Sep2027→12Sep2027 remain unproved. Goal ACTIVE.
+- Figure rendered and visually inspected; helper atplotter7376. Removing
+  only new helper restores old plotter bytes. All178 previous figures and
+  430 tracked files outside5 allowed edited documents/plotter unchanged;
+  old RESEARCH98-and-earlier exact. Two AST checks and289 local links PASS.
+  Plotter SHA70a1bb19cc803c15d678e95350170ddc4e6c2acef40bb3c363e23941f76c6fa9;
+  PNGf955d0d4b7708e5f7ca44c7ab458af92b774d6ca4bf668e1ad9d35584d8eba94;
+  PDF8ef32d6dc431db9bd9e021622f006effb3342c66ad2999c2a01825f62e87d349.
+- Publication pending at this saved checkpoint; private repo reverified.
+  Final tool-confirmed commit/push supersedes this marker. No compute
+  process remains active. Goal ACTIVE; no physical discovery claimed.
+
 ### Missing angular sectors and geometric endpoint identification — increment98, PROGRESS
 - Previous97 classified PROGRESS: committed/pushed/private/clean verified
   at635a42258ce7abacdc86eb40cbeb185b09f7e5fb. Root revalidated clean HEAD

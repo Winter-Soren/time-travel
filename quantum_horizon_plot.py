@@ -7373,6 +7373,93 @@ def azimuthal_source_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def ads_reference_source_progress():
+    """Contrast two environments on one compact core, without an absolute-source claim."""
+    from matplotlib.patches import Rectangle, FancyArrowPatch
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'ads_reference_source_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values())
+    integration=d['integration']; coarse,fine,mesh=(integration[k] for k in ('coarse','fine','finer_mesh'))
+    assert coarse['order']==mesh['order'] and coarse['config']['h']>mesh['config']['h']
+    for row in (coarse,fine,mesh):
+        assert row['config']['mu']==.5 and row['edges']==fine['edges']
+        for key in ('R','nmax','L','rho_c'):assert row['config'][key]==fine['config'][key]
+        nodes,weights=np.polynomial.legendre.leggauss(row['order'])
+        for panel in row['panels']:
+            lo,hi=panel['bounds'];width=hi-lo
+            assert np.allclose(panel['kappa'],lo+(nodes+1)*width/2,rtol=1e-13,atol=0)
+            assert np.allclose(panel['weights'],width/2*weights,rtol=1e-13,atol=0)
+            for phase in ('0','pi'):
+                for field in ('pressure','shift','null_plus','null_minus'):
+                    values=np.asarray(panel['integrands'][phase][field])
+                    assert values.shape==(row['order'],2)
+                    assert np.allclose(np.asarray(panel['weights'])@values,panel['responses'][phase][field],rtol=1e-12,atol=0)
+        for phase in ('0','pi'):
+            for field in ('pressure','shift','null_plus','null_minus'):
+                total=np.sum([p['responses'][phase][field] for p in row['panels']],axis=0)
+                assert np.array_equal(total,row['totals'][phase][field])
+            pressure,shift=(np.asarray(row['totals'][phase][key]) for key in ('pressure','shift'))
+            allowance=128*np.finfo(float).eps*np.max(abs(pressure))
+            assert np.max(abs(np.asarray(row['totals'][phase]['null_plus'])-(pressure-2*shift)))<=allowance
+            assert np.max(abs(np.asarray(row['totals'][phase]['null_minus'])-(pressure+2*shift)))<=allowance
+    h=np.array([coarse['config']['h'],mesh['config']['h']]);colors=['#007e87','#7951b0']
+    observed={phase:np.array([row['totals'][phase]['pressure'] for row in (coarse,mesh)]) for phase in ('0','pi')}
+    for phase in ('0','pi'):
+        difference=observed[phase][1]-observed[phase][0]
+        assert np.array_equal(difference,integration['comparisons']['matched_order_mesh_difference'][phase]['pressure'])
+    pi_change=abs(np.diff(observed['pi'],axis=0)[0]);pi_relative=pi_change/abs(observed['pi'][0])
+    pi_frequency=max(integration['comparisons']['quadrature_panel_envelope']['pi']['pressure'])
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig=plt.figure(figsize=(13.5,8.0))
+    fig.suptitle('The same compact core, compared with an AdS reference',fontsize=18,fontweight='bold',y=.965)
+    fig.text(.5,.905,'Connected minus invariant-reference environment · Both Weyl components · SINGLE retained μ = +½ sector',
+             ha='center',fontsize=10.7,color='#475569')
+    ax=fig.add_axes([.045,.355,.425,.44]);ax.set_axis_off();ax.set(xlim=(0,1),ylim=(0,1.08))
+    ax.set_title('A. Two environments — prescribed geometry',fontsize=11.9,pad=16)
+    for y in (.66,.22):
+        ax.add_patch(Rectangle((.285,y),.43,.13,facecolor='#e6f4f3',edgecolor='#007e87',lw=1.4))
+        ax.add_patch(Rectangle((.395,y),.12,.13,facecolor='#efdca9',edgecolor='none',alpha=.8))
+        ax.text(.50,y+.067,'same compact core',ha='center',va='center',fontsize=10.1,color='#244657')
+        for x in (.285,.715):ax.plot([x,x],[y-.025,y+.16],color='#64748b',lw=1,ls='--')
+    ax.add_patch(FancyArrowPatch((.285,.79),(.715,.79),connectionstyle='arc3,rad=-.50',
+                                arrowstyle='->',mutation_scale=12,lw=1.8,color='#007e87'))
+    ax.text(.5,1.035,'Computed exterior return',ha='center',fontsize=10.6,color='#007e87')
+    ax.text(.5,.565,'Connected state: phase 0 or phase π',ha='center',fontsize=10,color='#475569')
+    for x,width in ((.055,.230),(.715,.230)):
+        ax.add_patch(Rectangle((x,.22),width,.13,facecolor='#f0eaf8',edgecolor='#7951b0',lw=1.1))
+    ax.text(.50,.433,'Invariant AdS reference',ha='center',fontsize=10.6,color='#7951b0')
+    for x in (.055,.945):
+        ax.plot([x,x],[.195,.375],color='#7951b0',lw=1.2)
+        ax.text(x,.115,'AdS\nboundary',ha='center',va='top',fontsize=9.5,color='#7951b0')
+    ax.text(.168,.285,'cap',ha='center',va='center',fontsize=10,color='#7951b0')
+    ax.text(.83,.285,'cap',ha='center',va='center',fontsize=10,color='#7951b0')
+    fig.text(.257,.308,'Caps continue beyond the dashed cuts; no wall is placed there.',ha='center',fontsize=9.7,color='#475569')
+    axes=[fig.add_axes([.59,.618,.365,.172]),fig.add_axes([.59,.369,.365,.180])]
+    axes[0].set_title('B. Integrated source difference — separate scales',fontsize=11.5,pad=15)
+    for ax,phase,label in zip(axes,('0','pi'),('Phase 0','Phase π')):
+        ax.axhline(0,color='#64748b',lw=1)
+        for j,(color,name) in enumerate(zip(colors,('Central probe','Upper-side probe'))):
+            values=observed[phase][:,j];primary=fine['totals'][phase]['pressure'][j]
+            ax.plot(h,values,'o-',color=color,lw=1.6,ms=5,label=name)
+            ax.plot(h[0],primary,'D',mfc='white',mec=color,ms=6)
+            for x,value in zip(h,[primary,values[1]]):
+                ax.annotate(f'{value:.6f}',(x,value),xytext=(0,-12 if value<0 else 5),textcoords='offset points',
+                            ha='center',va='top' if value<0 else 'bottom',fontsize=8.8,color=color)
+        ax.set(xticks=h,xlim=(h[0]+.0045,h[-1]-.0045),ylabel=label)
+        ax.margins(y=.30);ax.spines[['top','right']].set_visible(False);ax.grid(alpha=.15);ax.set_axisbelow(True)
+    axes[0].tick_params(labelbottom=False);axes[0].legend(loc='lower center',ncol=2,frameon=True,facecolor='white',edgecolor='none',framealpha=1,fontsize=8.7)
+    axes[1].set_xlabel('Exterior mesh h / d (finer →)')
+    fig.text(.772,.283,'Weighted energy + radial pressure; connected minus reference.',ha='center',fontsize=9.5,color='#475569')
+    fig.text(.05,.233,f"Lines: matched order {coarse['order']}; open diamonds: primary order {fine['order']}. ℏ = c = d = 1; finite window {fine['edges'][0]:g} ≤ κd ≤ {fine['edges'][-1]:g}.",fontsize=9.9,color='#475569')
+    fig.text(.05,.183,f'Phase π mesh changes: central {pi_relative[0]:.0%}, upper {pi_relative[1]:.0%}; frequency-panel change ≤ {pi_frequency:.2g}. These are sensitivity tests, not error bounds.',fontsize=9.8,color='#475569')
+    fig.text(.05,.130,'The zero-null-stress reference requires the full invariant state. Angular completion, frequency tails and physical junction support remain unresolved.',fontsize=9.6,color='#475569')
+    fig.text(.05,.070,'A retained-sector reference difference does not establish absolute NEC violation or a stable supporting source.',fontsize=9.9,color='#475569')
+    fig.text(.05,.026,'No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',fontsize=10.5,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'ads_reference_source_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()
