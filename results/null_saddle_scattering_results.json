@@ -1,0 +1,965 @@
+{
+  "passed": true,
+  "tests": {
+    "lead_operator": true,
+    "manufactured_refinement": true,
+    "flux_identity": true,
+    "raw_zero_power_ledger": true,
+    "solve_residual": true,
+    "exact_reflection": true,
+    "equal_split": true,
+    "decreasing_DG_loss": true,
+    "outgoing_projection_positive": true
+  },
+  "lead_checks": {
+    "passed": true,
+    "cases": 24,
+    "maximum_errors": {
+      "pauli_orientation": 2.220446049250313e-16,
+      "full_line_gram": 6.661338147750939e-16,
+      "normal_eigenvectors": 2.220446049250313e-16,
+      "actual_face_mass": 0.0,
+      "transverse_finite_difference": 2.4305890633513627e-11,
+      "decaying_lead_equation": 2.9518151811736004e-11,
+      "zero_transverse_equation": 1.0187073407053049e-11
+    },
+    "finite_face_tail_estimates": [
+      {
+        "face": "u+",
+        "eta": -0.8,
+        "plus_missing_norms": [
+          6.505906924303417e-14,
+          3.8684611070038954e-12,
+          1.0610945455624687e-10,
+          1.8702338566711774e-09
+        ],
+        "minus_missing_norms": [
+          6.517009154549669e-14,
+          3.8684611070038954e-12,
+          1.061096766008518e-10
+        ]
+      },
+      {
+        "face": "u+",
+        "eta": 0.0,
+        "plus_missing_norms": [
+          -6.661338147750939e-16,
+          1.687538997430238e-13,
+          5.368816502482332e-12,
+          1.0850620402180766e-10
+        ],
+        "minus_missing_norms": [
+          -4.440892098500626e-16,
+          1.688649220454863e-13,
+          5.368816502482332e-12
+        ]
+      },
+      {
+        "face": "u+",
+        "eta": 0.8,
+        "plus_missing_norms": [
+          6.494804694057166e-14,
+          3.868128040096508e-12,
+          1.0610923251164195e-10,
+          1.87023396769348e-09
+        ],
+        "minus_missing_norms": [
+          6.52811138479592e-14,
+          3.8682390623989704e-12,
+          1.0610945455624687e-10
+        ]
+      },
+      {
+        "face": "u-",
+        "eta": -0.8,
+        "plus_missing_norms": [
+          6.505906924303417e-14,
+          3.8684611070038954e-12,
+          1.0610945455624687e-10,
+          1.8702338566711774e-09
+        ],
+        "minus_missing_norms": [
+          6.517009154549669e-14,
+          3.8684611070038954e-12,
+          1.061096766008518e-10
+        ]
+      },
+      {
+        "face": "u-",
+        "eta": 0.0,
+        "plus_missing_norms": [
+          -6.661338147750939e-16,
+          1.687538997430238e-13,
+          5.368816502482332e-12,
+          1.0850620402180766e-10
+        ],
+        "minus_missing_norms": [
+          -4.440892098500626e-16,
+          1.688649220454863e-13,
+          5.368816502482332e-12
+        ]
+      },
+      {
+        "face": "u-",
+        "eta": 0.8,
+        "plus_missing_norms": [
+          6.494804694057166e-14,
+          3.868128040096508e-12,
+          1.0610923251164195e-10,
+          1.87023396769348e-09
+        ],
+        "minus_missing_norms": [
+          6.52811138479592e-14,
+          3.8682390623989704e-12,
+          1.0610945455624687e-10
+        ]
+      },
+      {
+        "face": "v+",
+        "eta": -0.8,
+        "plus_missing_norms": [
+          6.494804694057166e-14,
+          3.868128040096508e-12,
+          1.0610923251164195e-10
+        ],
+        "minus_missing_norms": [
+          6.52811138479592e-14,
+          3.8682390623989704e-12,
+          1.0610945455624687e-10,
+          1.8702341897380848e-09
+        ]
+      },
+      {
+        "face": "v+",
+        "eta": 0.0,
+        "plus_missing_norms": [
+          -6.661338147750939e-16,
+          1.687538997430238e-13,
+          5.368816502482332e-12
+        ],
+        "minus_missing_norms": [
+          -4.440892098500626e-16,
+          1.688649220454863e-13,
+          5.368816502482332e-12,
+          1.0850631504411012e-10
+        ]
+      },
+      {
+        "face": "v+",
+        "eta": 0.8,
+        "plus_missing_norms": [
+          6.505906924303417e-14,
+          3.8684611070038954e-12,
+          1.0610945455624687e-10
+        ],
+        "minus_missing_norms": [
+          6.517009154549669e-14,
+          3.8684611070038954e-12,
+          1.061096766008518e-10,
+          1.8702340787157823e-09
+        ]
+      },
+      {
+        "face": "v-",
+        "eta": -0.8,
+        "plus_missing_norms": [
+          6.494804694057166e-14,
+          3.868128040096508e-12,
+          1.0610923251164195e-10
+        ],
+        "minus_missing_norms": [
+          6.52811138479592e-14,
+          3.8682390623989704e-12,
+          1.0610945455624687e-10,
+          1.8702341897380848e-09
+        ]
+      },
+      {
+        "face": "v-",
+        "eta": 0.0,
+        "plus_missing_norms": [
+          -6.661338147750939e-16,
+          1.687538997430238e-13,
+          5.368816502482332e-12
+        ],
+        "minus_missing_norms": [
+          -4.440892098500626e-16,
+          1.688649220454863e-13,
+          5.368816502482332e-12,
+          1.0850631504411012e-10
+        ]
+      },
+      {
+        "face": "v-",
+        "eta": 0.8,
+        "plus_missing_norms": [
+          6.505906924303417e-14,
+          3.8684611070038954e-12,
+          1.0610945455624687e-10
+        ],
+        "minus_missing_norms": [
+          6.517009154549669e-14,
+          3.8684611070038954e-12,
+          1.061096766008518e-10,
+          1.8702340787157823e-09
+        ]
+      }
+    ],
+    "scope": "Exact frozen full-line lead basis; no bilinear-tail or angular-completeness certificate."
+  },
+  "plane_wave": [
+    {
+      "spacing": 0.25,
+      "l2_error": 0.0022947938210175285,
+      "ledger": {
+        "outgoing": {
+          "u+": 1.7242110650109668,
+          "u-": 0.27579145433460406,
+          "v+": 1.271096974380465,
+          "v-": 0.7282526163380968
+        },
+        "full_incoming_norm": 4.0,
+        "jump_loss": 0.0005753122224748145,
+        "incoming_mismatch": 7.257771339027907e-05,
+        "numerical_loss": 0.0006478899358650936,
+        "balance_residual": -2.220446049250313e-15,
+        "identity_error": 4.3328616298068794e-16,
+        "linear_residual_relative": 1.6544211228108224e-15
+      }
+    },
+    {
+      "spacing": 0.125,
+      "l2_error": 0.0005837230465307126,
+      "ledger": {
+        "outgoing": {
+          "u+": 1.7242766910290503,
+          "u-": 0.27572326740935776,
+          "v+": 1.2715400828426904,
+          "v-": 0.72837610196079
+        },
+        "full_incoming_norm": 3.999999999999997,
+        "jump_loss": 7.92167448683893e-05,
+        "incoming_mismatch": 4.640013245416469e-06,
+        "numerical_loss": 8.385675811380576e-05,
+        "balance_residual": 4.884981308350689e-15,
+        "identity_error": 3.861424175359772e-15,
+        "linear_residual_relative": 2.8549551595864442e-15
+      }
+    }
+  ],
+  "cases": {
+    "coarse": {
+      "eta": 1.0,
+      "radius": 2.5,
+      "requested_spacing": 0.25,
+      "actual_spacing": 0.25,
+      "pairs": 3,
+      "energy": 0.0,
+      "elements": 800,
+      "dofs": 4800,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9836696897853152,
+            0.1488387307304333
+          ],
+          [
+            0.14883873073043338,
+            0.9836696897853168
+          ]
+        ]
+      },
+      "outgoing_zero_powers": [
+        [
+          0.9676060586023383,
+          0.02215296776544643
+        ],
+        [
+          0.022152967765446455,
+          0.9676060586023413
+        ]
+      ],
+      "zero_power_sum": [
+        0.9897590263677848,
+        0.9897590263677877
+      ],
+      "numerical_unitarity_defect": 0.010240973632215242,
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9690169599318178,
+            "u-": 0.022173905246926542,
+            "v+": 0.0013553498139589515,
+            "v-": 2.0275602474872826e-06
+          },
+          "full_incoming_norm": 1.002531955907229,
+          "jump_loss": 0.009703570435058682,
+          "incoming_mismatch": 0.00028014291921737777,
+          "numerical_loss": 0.00998371335427606,
+          "balance_residual": -1.9984014443252818e-15,
+          "identity_error": 6.512854423488657e-16,
+          "linear_residual_relative": 5.50775215173084e-15
+        },
+        {
+          "outgoing": {
+            "u+": 0.022173905246926535,
+            "u-": 0.9690169599318197,
+            "v+": 2.027560247487288e-06,
+            "v-": 0.001355349813958954
+          },
+          "full_incoming_norm": 1.0025319559072292,
+          "jump_loss": 0.009703570435058666,
+          "incoming_mismatch": 0.0002801429192173758,
+          "numerical_loss": 0.009983713354276042,
+          "balance_residual": -4.440892098500626e-16,
+          "identity_error": 2.487354723584412e-16,
+          "linear_residual_relative": 4.089493634122917e-15
+        }
+      ],
+      "omitted_outgoing_norm": [
+        0.0002572602779815636,
+        0.0002572602779806754
+      ],
+      "signed_finite_face_Gram_term": [
+        -4.3795793850237174e-14,
+        -4.400347546379266e-14
+      ],
+      "zero_power_ledger_error": [
+        1.3835395860802177e-15,
+        3.898330099298124e-16
+      ],
+      "maximum_face_Gram_deviation": 4.599947919673122e-09,
+      "feedback_condition": 1.993999949211715,
+      "seconds": 0.3391168999951333,
+      "scope": "Finite box and frozen linear-mass Hermite leads; raw amplitudes retain DG and omitted-mode losses. Not the full dihole return matrix."
+    },
+    "base": {
+      "eta": 1.0,
+      "radius": 2.5,
+      "requested_spacing": 0.125,
+      "actual_spacing": 0.125,
+      "pairs": 3,
+      "energy": 0.0,
+      "elements": 3200,
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9880762267121544,
+            0.14952382447405074
+          ],
+          [
+            0.1495238244740505,
+            0.988076226712152
+          ]
+        ]
+      },
+      "outgoing_zero_powers": [
+        [
+          0.9762946297937288,
+          0.022357374085346736
+        ],
+        [
+          0.02235737408534666,
+          0.9762946297937241
+        ]
+      ],
+      "zero_power_sum": [
+        0.9986520038790755,
+        0.9986520038790708
+      ],
+      "numerical_unitarity_defect": 0.0013479961209293607,
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.977572451400492,
+            "u-": 0.022375253072358176,
+            "v+": 0.001288160050972435,
+            "v-": 2.049641875335607e-06
+          },
+          "full_incoming_norm": 1.0025527825537253,
+          "jump_loss": 0.0012957053079908326,
+          "incoming_mismatch": 1.916308003819052e-05,
+          "numerical_loss": 0.001314868388029023,
+          "balance_residual": 1.5543122344752192e-15,
+          "identity_error": 1.2880351063826488e-15,
+          "linear_residual_relative": 6.226401625726838e-15
+        },
+        {
+          "outgoing": {
+            "u+": 0.022375253072358194,
+            "u-": 0.9775724514004883,
+            "v+": 2.0496418753356053e-06,
+            "v-": 0.0012881600509724474
+          },
+          "full_incoming_norm": 1.0025527825537248,
+          "jump_loss": 0.0012957053079908358,
+          "incoming_mismatch": 1.916308003819049e-05,
+          "numerical_loss": 0.0013148683880290263,
+          "balance_residual": -1.5543122344752192e-15,
+          "identity_error": 7.726906065715646e-16,
+          "linear_residual_relative": 7.0334531402250085e-15
+        }
+      ],
+      "omitted_outgoing_norm": [
+        3.312773289998461e-05,
+        3.312773289976256e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        -2.121528987457748e-15,
+        -1.6002572215717535e-15
+      ],
+      "zero_power_ledger_error": [
+        2.3755247835776273e-15,
+        1.9849321523696105e-15
+      ],
+      "maximum_face_Gram_deviation": 4.5999604906117785e-09,
+      "feedback_condition": 2.0020885029323168,
+      "seconds": 1.5670157999848016,
+      "scope": "Finite box and frozen linear-mass Hermite leads; raw amplitudes retain DG and omitted-mode losses. Not the full dihole return matrix."
+    },
+    "fine": {
+      "eta": 1.0,
+      "radius": 2.5,
+      "requested_spacing": 0.0625,
+      "actual_spacing": 0.0625,
+      "pairs": 3,
+      "energy": 0.0,
+      "elements": 12800,
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9886509553241938,
+            0.14961192308669105
+          ],
+          [
+            0.1496119230866912,
+            0.9886509553241923
+          ]
+        ]
+      },
+      "outgoing_zero_powers": [
+        [
+          0.977430711463441,
+          0.022383727529697958
+        ],
+        [
+          0.022383727529698,
+          0.9774307114634382
+        ]
+      ],
+      "zero_power_sum": [
+        0.9998144389931389,
+        0.9998144389931362
+      ],
+      "numerical_unitarity_defect": 0.00018556100686384602,
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9786995853795741,
+            "u-": 0.02240140000417166,
+            "v+": 0.0012844988702966388,
+            "v-": 2.0525867973203037e-06
+          },
+          "full_incoming_norm": 1.002554928453662,
+          "jump_loss": 0.00016614838332054517,
+          "incoming_mismatch": 1.2432295072055182e-06,
+          "numerical_loss": 0.00016739161282775067,
+          "balance_residual": 5.551115123125783e-15,
+          "identity_error": 5.4182219269287755e-15,
+          "linear_residual_relative": 9.515433005940675e-15
+        },
+        {
+          "outgoing": {
+            "u+": 0.02240140000417163,
+            "u-": 0.9786995853795686,
+            "v+": 2.052586797320296e-06,
+            "v-": 0.0012844988702966301
+          },
+          "full_incoming_norm": 1.0025549284536621,
+          "jump_loss": 0.00016614838332054812,
+          "incoming_mismatch": 1.2432295072054858e-06,
+          "numerical_loss": 0.0001673916128277536,
+          "balance_residual": -2.220446049250313e-16,
+          "identity_error": 1.5579243138281975e-15,
+          "linear_residual_relative": 1.24803485241379e-14
+        }
+      ],
+      "omitted_outgoing_norm": [
+        1.816939403775919e-05,
+        1.8169394035982833e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        1.1515428821335515e-15,
+        1.2893498810038448e-15
+      ],
+      "zero_power_ledger_error": [
+        5.593383657535103e-15,
+        1.1822036013079648e-15
+      ],
+      "maximum_face_Gram_deviation": 4.59996067782915e-09,
+      "feedback_condition": 2.0031862546662014,
+      "seconds": 8.572200700000394,
+      "scope": "Finite box and frozen linear-mass Hermite leads; raw amplitudes retain DG and omitted-mode losses. Not the full dihole return matrix."
+    },
+    "reflected": {
+      "eta": -1.0,
+      "radius": 2.5,
+      "requested_spacing": 0.125,
+      "actual_spacing": 0.125,
+      "pairs": 3,
+      "energy": 0.0,
+      "elements": 3200,
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.14952382447405063,
+            0.9880762267121541
+          ],
+          [
+            0.9880762267121541,
+            0.1495238244740506
+          ]
+        ]
+      },
+      "outgoing_zero_powers": [
+        [
+          0.0223573740853467,
+          0.9762946297937282
+        ],
+        [
+          0.9762946297937282,
+          0.022357374085346694
+        ]
+      ],
+      "zero_power_sum": [
+        0.9986520038790748,
+        0.9986520038790748
+      ],
+      "numerical_unitarity_defect": 0.0013479961209251791,
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.022375253072358176,
+            "u-": 0.9775724514004912,
+            "v+": 0.0012881600509724385,
+            "v-": 2.049641875335608e-06
+          },
+          "full_incoming_norm": 1.0025527825537253,
+          "jump_loss": 0.001295705307990848,
+          "incoming_mismatch": 1.9163080038190823e-05,
+          "numerical_loss": 0.0013148683880290389,
+          "balance_residual": 8.881784197001252e-16,
+          "identity_error": 1.2427185936440353e-15,
+          "linear_residual_relative": 6.144108864334615e-15
+        },
+        {
+          "outgoing": {
+            "u+": 0.9775724514004914,
+            "u-": 0.022375253072358162,
+            "v+": 2.049641875335604e-06,
+            "v-": 0.0012881600509724524
+          },
+          "full_incoming_norm": 1.0025527825537246,
+          "jump_loss": 0.0012957053079908556,
+          "incoming_mismatch": 1.9163080038190488e-05,
+          "numerical_loss": 0.001314868388029046,
+          "balance_residual": 1.7763568394002505e-15,
+          "identity_error": 2.3097550521775712e-15,
+          "linear_residual_relative": 7.883701680729439e-15
+        }
+      ],
+      "omitted_outgoing_norm": [
+        3.312773289976256e-05,
+        3.3127732899318474e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        -2.4597170312932927e-15,
+        -1.5834524265695181e-15
+      ],
+      "zero_power_ledger_error": [
+        1.1649876717602457e-15,
+        1.604318800972362e-15
+      ],
+      "maximum_face_Gram_deviation": 4.599960408145303e-09,
+      "feedback_condition": 2.0020885029323163,
+      "seconds": 2.057793000014499,
+      "scope": "Finite box and frozen linear-mass Hermite leads; raw amplitudes retain DG and omitted-mode losses. Not the full dihole return matrix."
+    },
+    "symmetric": {
+      "eta": 0.0,
+      "radius": 2.5,
+      "requested_spacing": 0.125,
+      "actual_spacing": 0.125,
+      "pairs": 3,
+      "energy": 0.0,
+      "elements": 3200,
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.7066497191240457,
+            0.7066497191240464
+          ],
+          [
+            0.706649719124045,
+            0.7066497191240454
+          ]
+        ]
+      },
+      "outgoing_zero_powers": [
+        [
+          0.4993538255380927,
+          0.49935382553809365
+        ],
+        [
+          0.4993538255380916,
+          0.49935382553809227
+        ]
+      ],
+      "zero_power_sum": [
+        0.9987076510761843,
+        0.9987076510761859
+      ],
+      "numerical_unitarity_defect": 0.0012923489238164066,
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.4995492766459638,
+            "u-": 0.49954927664596277,
+            "v+": 0.00037375438624424466,
+            "v-": 1.1700302280296444e-05
+          },
+          "full_incoming_norm": 1.000749775836002,
+          "jump_loss": 0.0012472450253462148,
+          "incoming_mismatch": 1.8522830205236348e-05,
+          "numerical_loss": 0.0012657678555514512,
+          "balance_residual": 4.440892098500626e-16,
+          "identity_error": 1.8629447310401945e-15,
+          "linear_residual_relative": 6.652662081400442e-15
+        },
+        {
+          "outgoing": {
+            "u+": 0.49954927664596466,
+            "u-": 0.4995492766459632,
+            "v+": 1.1700302280296471e-05,
+            "v-": 0.00037375438624425014
+          },
+          "full_incoming_norm": 1.0007497758360022,
+          "jump_loss": 0.001247245025346224,
+          "incoming_mismatch": 1.8522830205236185e-05,
+          "numerical_loss": 0.00126576785555146,
+          "balance_residual": 1.5543122344752192e-15,
+          "identity_error": 5.28407458557536e-16,
+          "linear_residual_relative": 8.148654904446633e-15
+        }
+      ],
+      "omitted_outgoing_norm": [
+        2.6581068265141283e-05,
+        2.6581068264808216e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        2.745845406191255e-16,
+        2.765043553482021e-16
+      ],
+      "zero_power_ledger_error": [
+        1.1777249502995506e-15,
+        2.4097805499306806e-15
+      ],
+      "maximum_face_Gram_deviation": 1.0868191106635586e-10,
+      "feedback_condition": 1.999701099648602,
+      "seconds": 2.6182840000255965,
+      "scope": "Finite box and frozen linear-mass Hermite leads; raw amplitudes retain DG and omitted-mode losses. Not the full dihole return matrix."
+    },
+    "larger_box": {
+      "eta": 1.0,
+      "radius": 3.0,
+      "requested_spacing": 0.0625,
+      "actual_spacing": 0.0625,
+      "pairs": 3,
+      "energy": 0.0,
+      "elements": 18432,
+      "dofs": 110592,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9885782122907517,
+            0.1497766955054059
+          ],
+          [
+            0.149776695505406,
+            0.9885782122907525
+          ]
+        ]
+      },
+      "outgoing_zero_powers": [
+        [
+          0.9772868818159786,
+          0.022433058516519076
+        ],
+        [
+          0.022433058516519108,
+          0.9772868818159801
+        ]
+      ],
+      "zero_power_sum": [
+        0.9997199403324977,
+        0.9997199403324992
+      ],
+      "numerical_unitarity_defect": 0.0002800596675023639,
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9778004727399504,
+            "u-": 0.022443375473896323,
+            "v+": 0.0005233396743844237,
+            "v-": 7.163887422947468e-08
+          },
+          "full_incoming_norm": 1.001042690353011,
+          "jump_loss": 0.0002737379151900534,
+          "incoming_mismatch": 1.6929107222080635e-06,
+          "numerical_loss": 0.00027543082591226144,
+          "balance_residual": 6.661338147750939e-15,
+          "identity_error": 5.6132234240160004e-15,
+          "linear_residual_relative": 1.1939374709916773e-14
+        },
+        {
+          "outgoing": {
+            "u+": 0.022443375473896313,
+            "u-": 0.9778004727399501,
+            "v+": 7.163887422947432e-08,
+            "v-": 0.0005233396743844036
+          },
+          "full_incoming_norm": 1.0010426903530094,
+          "jump_loss": 0.000273737915190058,
+          "incoming_mismatch": 1.692910722208102e-06,
+          "numerical_loss": 0.0002754308259122661,
+          "balance_residual": 7.993605777301127e-15,
+          "identity_error": 1.6159996630836292e-15,
+          "linear_residual_relative": 1.7941655162559035e-14
+        }
+      ],
+      "omitted_outgoing_norm": [
+        4.628841596687749e-06,
+        4.628841595799571e-06
+      ],
+      "signed_finite_face_Gram_term": [
+        -1.2477956969285834e-17,
+        2.355563636339494e-16
+      ],
+      "zero_power_ledger_error": [
+        6.606359465620222e-15,
+        7.52518967034024e-15
+      ],
+      "maximum_face_Gram_deviation": 1.3416488903551316e-15,
+      "feedback_condition": 2.0011491575063975,
+      "seconds": 15.287713500030804,
+      "scope": "Finite box and frozen linear-mass Hermite leads; raw amplitudes retain DG and omitted-mode losses. Not the full dihole return matrix."
+    },
+    "extra_pair": {
+      "eta": 1.0,
+      "radius": 2.5,
+      "requested_spacing": 0.0625,
+      "actual_spacing": 0.0625,
+      "pairs": 4,
+      "energy": 0.0,
+      "elements": 12800,
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9886588990085207,
+            0.14961312423008166
+          ],
+          [
+            0.1496131242300819,
+            0.9886588990085183
+          ]
+        ]
+      },
+      "outgoing_zero_powers": [
+        [
+          0.9774464185887403,
+          0.022384086941885848
+        ],
+        [
+          0.022384086941885924,
+          0.9774464185887356
+        ]
+      ],
+      "zero_power_sum": [
+        0.9998305055306261,
+        0.9998305055306215
+      ],
+      "numerical_unitarity_defect": 0.0001694944693785306,
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9787097551451993,
+            "u-": 0.022401662644997548,
+            "v+": 0.0012781016598952632,
+            "v-": 2.0504653287496196e-06
+          },
+          "full_incoming_norm": 1.0025589497171743,
+          "jump_loss": 0.00016612421728843158,
+          "incoming_mismatch": 1.2555844698026876e-06,
+          "numerical_loss": 0.00016737980175823426,
+          "balance_residual": 4.6629367034256575e-15,
+          "identity_error": 3.2066993080752815e-15,
+          "linear_residual_relative": 9.51101713578929e-15
+        },
+        {
+          "outgoing": {
+            "u+": 0.022401662644997523,
+            "u-": 0.9787097551451938,
+            "v+": 2.0504653287496107e-06,
+            "v-": 0.0012781016598952567
+          },
+          "full_incoming_norm": 1.0025589497171743,
+          "jump_loss": 0.00016612421728843063,
+          "incoming_mismatch": 1.255584469802763e-06,
+          "numerical_loss": 0.0001673798017582334,
+          "balance_residual": -8.881784197001252e-16,
+          "identity_error": 1.7273095405131336e-15,
+          "linear_residual_relative": 1.2528194920925292e-14
+        }
+      ],
+      "omitted_outgoing_norm": [
+        2.1146676119077057e-06,
+        2.114667611685661e-06
+      ],
+      "signed_finite_face_Gram_term": [
+        9.507593523502605e-15,
+        9.64545514628203e-15
+      ],
+      "zero_power_ledger_error": [
+        5.784199317698574e-15,
+        1.0362122703893217e-15
+      ],
+      "maximum_face_Gram_deviation": 5.775769452248687e-08,
+      "feedback_condition": 2.0031916785745922,
+      "seconds": 7.568245300033595,
+      "scope": "Finite box and frozen linear-mass Hermite leads; raw amplitudes retain DG and omitted-mode losses. Not the full dihole return matrix."
+    }
+  },
+  "comparisons": {
+    "reflection_amplitude_error": 2.1094237467877974e-15,
+    "equal_power_error": 1.3877787807814457e-15,
+    "maximum_flux_identity_error": 5.6132234240160004e-15,
+    "maximum_zero_power_ledger_error": 7.52518967034024e-15,
+    "maximum_linear_residual": 1.7941655162559035e-14,
+    "mesh_DG_losses": [
+      0.00998371335427606,
+      0.001314868388029023,
+      0.00016739161282775067
+    ],
+    "maximum_power_changes_from_fine": {
+      "base": 0.0011360816697141285,
+      "larger_box": 0.00014382964746240123,
+      "extra_pair": 1.5707125299302405e-05
+    }
+  },
+  "convention": {
+    "equation": "H=-i AU d_u-i AV d_v+SY(eta-2uv), E=0",
+    "incoming": [
+      "v+",
+      "v-"
+    ],
+    "outgoing": [
+      "u+",
+      "u-"
+    ],
+    "full_line_incoming_amplitude": 1
+  },
+  "limits": [
+    "Finite square with frozen linear-mass leads, not the bilinear infinite-plane scattering matrix.",
+    "Mesh, radius and pair changes are measured sensitivities, not certified error bars.",
+    "No extrapolation to q=1, global curved-mouth return, vacuum stress, backreaction or time travel."
+  ],
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "source_sha256": "63a9652c41a8d3e6dd574bdc42c9c677c0789d85a934cc4766129537f47009cf",
+  "input_sha256": {
+    "null_saddle_leads.py": "222dcb8346005de9d1e1ed382c5945b371e434deee620481d28bc203c36696e9",
+    "exterior_boundary_map.py": "d243ff920957ed2bbd45cb8844c7b9f51f08b025e5d90169f5cfdf81f0a5a76d",
+    "two_mouth_mesh.py": "94e9e2efe207cb254e89cf366607fa315909c93afea64edd779fa064c9ace258",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_null_scaling.py": "5d916e838936013852a0b3ac3c3644c96e2cb6d62a6b27f3168ff64da3561100",
+    "dihole_null_scaling_results.json": "17d5e29e123a344bcee69ee399691bd3e65364f96b18b71cd5b84daffa724b6c"
+  },
+  "field_sha256": "82818e161b84c2411074e44bb27cc29db21e68c2662ef0b6b4cc1965d6aa4df1"
+}

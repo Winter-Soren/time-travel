@@ -58,6 +58,60 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Actual local two-dimensional quantum scattering — increment113
+- Previous goal turn PROGRESS:112 committed/pushed2772cf25dcaa31848ab7af11bbd3bff08f00361e;
+  privateorigin and cleanworktree verified. This increment started with only
+  two new untracked saddle modules from the continued bounded work.
+- NEW scripts/null_saddle_leads.py: exact frozen-face Hermite basis, slopes
+  -2R(u faces)/+2R(v faces), masses2sqrt(Rj), decaying gamma=-i atE0.
+  Full-line normalization; distinct finite-face Gram transforms REQUIRED.
+  24 full-line/differential checks pass. Agent independent signs/phase audit
+  passes; helperSHA222dcb8346005de9d1e1ed382c5945b371e434deee620481d28bc203c36696e9.
+- NEW scripts/null_saddle_scattering.py: flat-measure strong-upwind P1DG,
+  H=-iAU d_u-iAV d_v+SY(eta-2uv), energy0. Reuses existing boundary lifts,
+  trace and solves; no cylindrical weight. Four frozen lead faces, complex
+  zero-mode S ordered output(u+,u-), input(v+,v-), massive feedback retained.
+  Gram correction signed; no power renormalization. 9 check groups PASS.
+- Actual seven-case bounded run: eta+/-1,0, h .25/.125/.0625, R2.5/3,
+  pairs3/4. Finest baseline eta1 R2.5 h.0625 p3 has 12800triangles76800DOF;
+  S=i[[-.988650955324194,.149611923086691],[.149611923086691,.988650955324192]].
+  Raw powers .977430711463441/.022383727529698; sum .999814438993139.
+  DG loss .000167391612828, omitted norm .000018169394038, Gram~1.15e-15.
+- Mesh DG losses .00998371335,.00131486839,.000167391613 decrease.
+  Maximum power changes: h.125->.0625 .00113608167; R2.5->3 atfineh
+  .000143829647; pairs3->4 atfineh .0000157071253. Measured sensitivities,
+  NOT certified continuum/true-bilinear-tail error bars. R also changes DG
+  path length. Do not identify frozen-lead S with actual exterior return.
+- Exact reflection Av P_u maps H_eta to H_-eta atsameE; actual phases give
+  S(-eta)=swap S(eta) diag(-1,+1). Numerics error2.11e-15. eta0 h.125
+  equal outputpowers .499353825538092, not forcibly normalized .5.
+  Manufactured constant-mass plane wave relativeL2 .00229479382->.000583723047.
+  Flux/rawzero ledgers<7.53e-15, linearresidual<1.80e-14. Independent audit
+  supplied signed Gram term and confirmed spin pairing/leaddecay/feedback.
+- Complete firstrun calculations passed but JSON serialization hit NumPybool;
+  fixed conversion and reran complete bounded check, then exit0. No physics
+  data fabricated/reused across changed recipes. Source/data hashes
+  63a9652c41a8d3e6dd574bdc42c9c677c0789d85a934cc4766129537f47009cf
+  /dba2c260524f237705c8b5e9a86c28a62fa2f5b86dda2e0e28138937f106d52a.
+  data/null_saddle_fields.npz saved with both incoming solutions and actual
+  mesh. figures/null_saddle_scattering_progress PNG/PDF visually inspected.
+- docs/PROFESSOR_BRIEF.md completed and root-reviewed: concise local result,
+  actual saved numerical data, primary-source comparison, reproducibility,
+  explicit AI-assisted checks/limitations and one methodological question.
+  This meets FIRST technical-feedback readiness, not novelty/medium proof.
+  User notified that it is reasonable to approach Professor Douglas Stanford.
+  No email authorized/sent. Existing professor-outreach-milestone heartbeat
+  updated to PAUSED after notification; tool confirmed. Do not duplicate it.
+- Verification: all484 prior sciencefiles and bothhistorical note suffixes
+  byte-identical; new source/input/NPZ hashes match. Layoutcheck74imports,
+  536links,8historicalguards,14frozeninputs PASS. Figure inspected, diff clean.
+  Ready for authorized commit/push; no live scientific process remains.
+- NEXT physics: derive true bilinear-arm continuation, then matched local-node
+  to curved exterior amplitudes/phases with finite-q and boundary errorcontrol.
+  q1 normalform remains uncontrolled. No renormalized supporting stress,
+  backreaction, dynamical stability, obtainable medium or backward passage.
+  13Sep2027->12Sep2027 remains UNPROVED. Goal ACTIVE/unbudgeted.
+
 ### Full meridional slab transmission bound and local null-ring equation — increment112
 - Previous goal turn PROGRESS:111 committed/pushed4e86f190add60b0308622309ef6bedadef3f77d5;
   privateorigin and cleanworktree verified. Currentwork started clean.

@@ -1,5 +1,159 @@
 # Reproduction and coupled-model iterations
 
+## Local two-dimensional quantum scattering — increment113
+
+[Calculation](../scripts/null_saddle_scattering.py), [analytic frozen leads](../scripts/null_saddle_leads.py),
+[saved results](../results/null_saddle_scattering_results.json),
+[computed field](../data/null_saddle_fields.npz), and [figure](../figures/null_saddle_scattering_progress.png).
+The large-q local equation from112 now has an actual two-dimensional numerical
+scattering calculation. This is a finite square with specified frozen leads;
+it is not yet the infinite-plane saddle or the curved two-mouth exterior.
+
+### Equation, arms and boundary prescription
+
+Rotate the local coordinates by u=(s+t)/sqrt(2), v=(s-t)/sqrt(2), where this v
+is a coordinate, not the earlier metric speed. Define
+
+$$
+A_u=(\sigma_x+\sigma_z)/\sqrt2,\qquad
+A_v=(\sigma_x-\sigma_z)/\sqrt2,\qquad
+H_\eta=-i A_u\partial_u-i A_v\partial_v+\sigma_y(\eta-2uv).
+$$
+
+All calculated cases have dimensionless real energy E=0. The local square is
+[-R,R]^2 with flat spinor measure du dv. There are incoming zero channels on
+v=+R and v=-R, and outgoing zero channels on u=+R and u=-R. For example,
+the v-face incoming transverse profile is proportional to
+exp[-|v|(u-eta/(2v))^2]. This is a stationary quantum field, not a particle
+trajectory, new material, or chronology-changing region.
+
+On each face choose outward normal n and counterclockwise tangent t.
+Continue the mass by freezing the normal coordinate at the face. Its
+transverse slope is a=-2R on the u faces and a=+2R on the v faces; its
+center is tau0=-eta/a. With frequency |a|=2R, use normalized full-line
+Hermite functions. The paired transverse masses are
+lambda_j=2 sqrt(R j). Choose the +1 eigenvector chi+ of A_n real, with its
+largest component positive, and chi-=i sign(a) A_t chi+. This fixes the
+transverse pair coupling to +lambda_j. On a u face the plus basis contains
+oscillator indices0 through p and minus0 through p-1; on a v face the
+roles reverse. The unpaired mode is thus outgoing or incoming respectively.
+For each massive pair the outward-decaying continuation gives
+
+$$
+b_j=\gamma_j a_j,\qquad
+\gamma_j=\frac{E-i\sqrt{\lambda_j^2-E^2}}{\lambda_j};
+\quad \gamma_j=-i\ \text{at }E=0.
+$$
+
+The zero channel is a limiting-absorption scattering state, not an L2 mode
+along the entire arm. Freezing the lead discards the true bilinear arm's
+normal variation. The calculations do not bound this approximation.
+
+### Finite-face Gram matrices and current accounting
+
+Full-line Hermite normalization is not finite-face normalization. For each
+sign form the measured face Gram Gplus/minus=Rplus/minus^dagger Rplus/minus,
+with upper triangular Cholesky R. The orthonormal face basis is B R^-1;
+therefore the analytic incoming/outgoing relation becomes
+Zfacet=Rminus Zraw Rplus^-1. A full-line incoming zero amplitude one is
+Rminus e0 in these coordinates. Separate transformations preserve both the
+analytic lead equation and the actual boundary norm.
+
+The interior uses a reflection-symmetric checkerboard triangular mesh and
+strong upwind P1 discontinuous Galerkin (DG). Exact polynomial volume
+quadrature retains the full two-dimensional bilinear mass. Reused trace and
+boundary-lift routines have flat face measure; no cylindrical weight remains.
+For the computed field, the DG identity is
+
+$$
+\|P_+\psi\|_{\partial\Omega}^2+L_{\rm jump}+L_{\rm incoming\ mismatch}
+-\|b_{\rm full}\|_{\partial\Omega}^2
+=2\operatorname{Re}(\psi^\dagger r),
+$$
+
+where r is the assembled linear residual. The full incoming trace includes
+the prescribed zero input and all retained evanescent feedback. It can have
+norm greater than one; it is not just the injected zero-mode norm.
+For raw full-line zero-output amplitudes S, the exact numerical bookkeeping is
+
+$$
+1-\sum_\alpha|S_{\alpha j}|^2=L_{\rm DG}+L_{\rm omitted}
++\sum_{\rm faces}\left[a^\dagger(G_+-I)a-b^\dagger(G_--I)b\right].
+$$
+
+The final term is signed. Omitted outgoing face modes and DG loss are retained;
+powers are never rescaled to force unitarity. This identity checks arithmetic
+and discretization bookkeeping, not the neglected exterior physics.
+
+### Exact symmetry and measured scattering
+
+Reflection Rop=A_v P_u obeys Rop H_eta Rop^-1=H_-eta at the same energy.
+With output order(u+,u-) and input(v+,v-), the actual helper phases give
+
+$$
+S(E,-\eta)=\begin{pmatrix}0&1\\1&0\end{pmatrix}
+S(E,\eta)\operatorname{diag}(-1,+1).
+$$
+
+At eta=0 each input has equal outgoing powers. Exact one-half follows only
+if scattering is complete and unitary. At the tested finite mesh h=.125,
+both powers are .499353825538092; the deficit is reported, not removed.
+
+For eta=1,R=2.5,h=.0625,p=3, the retained raw matrix is
+
+$$
+S\simeq i\begin{pmatrix}
+-0.988650955324194&0.149611923086691\\
+0.149611923086691&0.988650955324192
+\end{pmatrix}.
+$$
+
+For a unit top input its right/left powers are .977430711463441 and
+.022383727529698. Their sum is .999814438993139. DG loss is
+.000167391612828, omitted outgoing norm .000018169394038, and the signed
+Gram term is about1.15e-15. The loss is numerical/port truncation; it is
+not physical absorption proved for the actual geometry.
+
+| Comparison at eta=1 | Observed change |
+| --- | --- |
+| Mesh h=.25,.125,.0625 | DG losses .00998371335,.00131486839,.000167391613 |
+| Mesh .125 to .0625, R=2.5,p=3 | Maximum zero-power change .00113608167 |
+| R=2.5 to3, fixed h=.0625,p=3 | Maximum zero-power change .000143829647 |
+| p=3 to4, fixed R=2.5,h=.0625 | Maximum zero-power change .0000157071253 |
+
+These are sensitivities, not certified continuum error bars. Increasing R
+also changes the numerical propagation distance, so the R comparison mixes
+boundary and spatial-discretization effects. A small finite change does not
+prove convergence to the true infinite bilinear-arm scattering matrix.
+
+Nine check groups pass. A constant-mass exact plane-wave control has relative
+L2 errors .00229479382 and .000583723047 when h halves. The reflection
+amplitude discrepancy is2.11e-15; flux/zero-power ledgers close below7.53e-15;
+the largest linear residual is1.80e-14. The frozen-lead helper passes24
+independent full-line/differential cases. An independent agent checked lead
+pairing, decay signs, reflection phases and Gram conversion, and supplied the
+signed Gram correction. An initial JSON write failed on a NumPy boolean;
+that serialization defect was fixed, then the complete bounded run passed.
+The source, input and field hashes are recorded in the results.
+
+### Interpretation and next decision
+
+[Emparan's dihole](https://arxiv.org/abs/hep-th/9906160) supplies the known
+classical background. [Maldacena, Milekhin and Popov](https://arxiv.org/abs/1807.04726)
+study quantum-supported traversable wormholes with a different exterior
+construction. [Tudorovskiy and Katsnelson](https://arxiv.org/abs/1206.2244)
+study Dirac transport along zero-mass lines, including tunneling; quantum
+mixing near such lines is not a discovery claimed here. Our recorded work
+is a checked local reduction and a finite frozen-lead calculation in this
+research branch. Its novelty relative to all literature is unestablished.
+
+Next: derive bilinear-arm continuation and match the node to the actual
+curved exterior, preserving complex amplitudes, travel phases and feedback.
+Only then can a physical returning-channel source be assessed. No
+renormalized supporting stress, self-consistent throat, dynamical stability,
+material-production recipe, or backward passage follows from this result.
+The date example13 September2027 to12 September2027 remains unproved.
+
 ## A full meridional slab bound and the magnetic-null scaling — increment112
 
 The111 barrier was a statement about one transverse slice. This increment
