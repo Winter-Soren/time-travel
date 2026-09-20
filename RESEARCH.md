@@ -1,5 +1,191 @@
 # Reproduction and coupled-model iterations
 
+## A gravitating two-mouth exterior and the actual attachment data — increment109
+
+### The previous geometry does not pass the gravitational interpretation
+
+[rn_exterior_gate.py](rn_exterior_gate.py) uses the saved108 geometry without
+another field solve. Under the stated identification b=r_e=.2d, the isolated
+RN comparator has F=1-2mu/R+b^2/R^2. At R_out=.25d, its black-hole branch
+outside the horizon requires .2d <= mu < .205d. For a nondecreasing radial
+slope r' from zero to sqrt(F_out), smoothness requires
+
+\[
+ w>{R_{\rm out}-b\over\sqrt{F_{\rm out}}}\ge .25d.
+\]
+
+The saved width .1d fails this necessary condition. More generally this
+branch requires w>R_out. Radius monotonicity alone is weaker: a short collar
+could overshoot r'>.5 and then slow down, at the cost of a substantial negative
+enclosed-energy requirement. With m=r(1-r'^2)/2+b^2/(2r), such an overshoot
+forces m<.175d somewhere in b<=r<=.25d, before recovering to an outer mass
+at least .2d. This is a constraint on the required source, not a no-go theorem.
+
+Quantum-supported exteriors need not have mu>=b. In the formal below-extremal
+RN continuation, avoiding that slope overshoot at width .1d would instead
+require mu<.17375d, more than13.125% below b. A singularity in an excised RN
+continuation is not automatically a singularity of a replaced interior. The
+usual small-deficit, long-throat approximation does not justify this large
+change. These are conditional gates, not a construction of either alternative.
+
+The complete spherical Einstein-minus-monopole tensor was also reconstructed
+on the513 saved profile points. In units8*pi*G, its midpoint values are
+(rho,p_r,p_t)=(-197.65142563,-7.76728627,-124.89099081)/d^2; at the flat outer
+endpoint they are(-10.24,+10.24,-10.24)/d^2. Thus a flat metric would require
+an additional source just to cancel the monopole stress. This tensor is only
+monopole-subtracted; it is not the full angular-field remainder or a selected
+quantum source. Generic Ward/trace identities and exact RN cancellation pass.
+The11 checks and independent saved-data audit pass;75-digit arithmetic
+confirms the reported floating cancellation errors. No collar ODE was rerun.
+
+### Use an exact classical exterior instead of another prescribed interpolation
+
+[Emparan, equations8–16](https://arxiv.org/pdf/hep-th/9906160) supplies a
+static Einstein–Maxwell dihole balanced by an external magnetic field.
+Its regular-axis branch uses k=sqrt(M^2+a^2), r_plus=M+k,
+B=(k-a)/(M*r_plus), Q=M*r_plus/k and azimuthal period2*pi. It has Melvin
+asymptotics and retains two extremal black-hole horizons. Balance removes
+the axial conical defect; it does not demonstrate stability or traversability.
+The published metric and gauge potential are implemented in
+[balanced_dihole.py](balanced_dihole.py).
+
+Our calibration fixes Q=.2D and the auxiliary Weyl coordinate separation
+D=2k=1. It yields M=.1531128874149275D, a=.4759794572326244D and
+B=.24020542767375583/D. D is not a proper horizon separation: the extremal
+horizons lie at infinite proper throat depth. These parameters define a new
+classical background, not a coordinate relabeling of the old flat pair.
+
+The published potential Ahat uses the action (R-Fhat^2)/(16*pi*G).
+Our upper-flux convention therefore requires
+
+\[
+ A_{\rm phys}=-{q\over2Q}\widehat A,\qquad
+ {4\pi G\over g_R^2}=\left({2Q\over q}\right)^2.
+\]
+
+For q=1 the upper and lower fluxes are respectively+2*pi and-2*pi.
+The field rescaling must be accompanied by this coupling relation.
+Regular northern/southern patches differ by q dphi. No dimensional SI scale
+or material-generation process is selected.
+
+### Actual nonspherical cuts
+
+In Weyl coordinates rho=sqrt(Delta)sin(theta), z=(r-M)cos(theta), the metric
+can be written
+
+\[
+ ds^2=-N^2dt^2+P^2(d\rho^2+dz^2)+{\rho^2\over N^2}d\phi^2,
+ \qquad N=\Lambda,\quad P={\Lambda\Sigma^2\over H^2},
+ \quad H=\Delta+(M^2+a^2)\sin^2\theta.
+\]
+
+A candidate upper attachment surface is the auxiliary sphere
+rho=epsilon sin(psi), z=k+epsilon cos(psi), with epsilon=.05D. This is not
+a sphere of fixed physical radius. Its area density and outward mixed
+extrinsic curvatures follow directly from the metric:
+
+\[
+ {dA\over d\Omega}=\epsilon^2{P\over N},\quad
+ K^t{}_t={\partial_\epsilon\log N\over P},\quad
+ K^\psi{}_\psi={1/\epsilon+\partial_\epsilon\log P\over P},\quad
+ K^\phi{}_\phi={1/\epsilon-\partial_\epsilon\log N\over P}.
+\]
+
+The normal points away from the horizon, into the exterior; the exterior
+domain's inner normal has the opposite sign. The gauge-normal component is
+F_n,phi=P^-1 partial_epsilon A_phi. The saved cut gives:
+
+| Quantity | Computed value |
+| --- | ---: |
+| Area | .819626611916401 D^2 |
+| Area-equivalent radius | .25538953265174924 D |
+| Sampled lapse range,257 points | .195436476556 to .196255835447 |
+| Upper magnetic flux | 2*pi, numerical difference below1.5e-14 |
+| Sampled angular extrinsic shear,96 quadrature nodes | .01661726201665/D |
+
+These sampled ranges are not interval enclosures. The nonconstant lapse and
+unequal angular curvatures prohibit attaching the old spherical collar by
+one constant clock rescaling. An axisymmetric transition must match these
+actual data or explicitly supply the remaining interface stress and current.
+The original black-hole horizons have not been excised and sewn into a
+traversable throat by this calculation.
+
+Fourteen implementation checks pass. Ricci and Maxwell tensors computed
+from differentiated metric/potential expressions satisfy the five sampled
+bulk equations with relative residuals below6.95e-15 and1.55e-15. Flat and
+pure-Melvin limits independently test the curvature implementation; the
+Melvin reduction also holds symbolically. Angular48/96 checks, flux, pole
+regularity and independent normal differencing pass. An independent65-digit
+Weyl-coordinate reconstruction agrees with all sampled K components within
+1.02e-14 and the area within6.67e-16. These reproduce a known classical
+solution and evaluate its new cuts; they do not establish new physical laws.
+
+### The quantum problem now has a different exterior operator and environment
+
+For the Weyl metric above, the physical spinor norm density is P^2*rho/N.
+In a rotating cylindrical spin frame, u=P*sqrt(rho/N)*Psi has flat meridional
+measure. Defining v=N/P and using half-integer azimuthal mu, our operator is
+
+\[
+ H=-i\alpha_\rho(v\partial_\rho+v_\rho/2)
+   -i\alpha_z(v\partial_z+v_z/2)
+   +\alpha_\phi{N^2\over\rho}(\mu-A_\phi).
+\]
+
+The two meridional spin-connection terms cancel to the displayed symmetric
+ordering; an independent tetrad/rescaling check agrees. On a cut, the
+canonical trace instead uses sqrt(N*dA/dOmega)*U_normal*Psi, with its actual
+normal-frame rotation and spin/gauge transitions. The old r*sqrt(N) trace
+and flat-exterior return map cannot be silently reused.
+
+In the asymptotic pure Melvin region, N=P=Lambda=1+beta*rho^2,
+beta=B^2/4, and A_phi=q*B*rho^2/(4Q*Lambda). Let Phi=q/(Q*B). The exact
+transverse operator and superpotential are
+
+\[
+ D_\mu=-i\sigma_1\partial_\rho+\sigma_2W_\mu,\qquad
+ W_\mu={\mu\over\rho}+\beta(2\mu-\Phi)\rho
+                +\beta^2(\mu-\Phi)\rho^3.
+\]
+
+The rescaling agrees with the exact operator portion of
+[Santos and Barros, equations22–25](https://arxiv.org/pdf/1508.07307), after
+converting their sign conventions. Their later small-radius spectrum is
+not used. Our full radial expression, regular spin-frame domain and
+normalizability give one chiral zero channel for each half-integer
+mu>=1/2 with mu<Phi. Here Phi=20.8155163204, so there are21 transverse
+zero channels per Weyl in the pure asymptotic tube, not21 mouth zero modes.
+The regular-axis domain is u_+/-=O(rho^(|mu-/+1/2|+1/2)), excluding
+the logarithmic borderline branch. For positive Phi the upper zero mode is
+proportional to rho^mu exp[beta(2mu-Phi)rho^2/2+beta^2(mu-Phi)rho^4/4],
+with lower component zero. It moves in the positive axial direction for
+this right Weyl block; the other Weyl block has the opposite direction.
+The equality case is excluded: its remaining quadratic exponent grows.
+The independent operator/domain audit agrees; no massive spectrum or
+finite-interface quantum map has been calculated.
+
+Nonzero transverse eigenvalues lambda give axial dispersion E^2=p_z^2+lambda^2.
+In the fixed mass-pair basis H=p_z sigma3+lambda sigma1, the outgoing
+positive-z ratio at E=i*kappa is -i*lambda/(kappa+sqrt(kappa^2+lambda^2));
+the opposite end needs the corresponding outward orientation. Keep the
+regular-axis gauge A_phi(0)=0. Removing A_phi(infinity)=Phi without shifting
+mu changes the operator; admissible gauge changes shift both together.
+Their decaying imaginary-frequency data, along with chiral zero modes,
+provide a concrete lead construction. However, the actual dihole approaches
+Melvin only asymptotically, with a gravitational1/|z| tail. Propagate that
+tail or bound its omission before imposing pure Melvin data at finite z.
+This is a two-ended cylindrical environment, not spherical free radiation.
+
+Next, implement and verify the curved Dirac/Melvin boundary problem with
+the actual cut normalization and long-range tail. A supported connected
+throat still needs a consistent quantum state, renormalized stress and
+current, and gravitational backreaction, including fixed local couplings.
+Adding quantum matter will perturb this classical exterior. No formation,
+material, stability or backward-time passage is established;13Sep2027 to
+12Sep2027 remains unproved. Reproduction commands are
+`.venv\Scripts\python.exe -B -W error -X utf8 rn_exterior_gate.py` and
+`.venv\Scripts\python.exe -B -W error -X utf8 balanced_dihole.py`.
+
 ## Smooth collar, magnetic response and the gravitational target — increment108
 
 This step specifies one smooth geometry and uses it for both the magnetic

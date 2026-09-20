@@ -8186,6 +8186,79 @@ def smooth_collar_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def balanced_exterior_progress():
+    """Plot the known balanced dihole exterior and its saved finite-cut data."""
+    import hashlib
+    from matplotlib.patches import Circle
+    from matplotlib.lines import Line2D
+    import balanced_dihole
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'balanced_dihole_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values())
+    assert hashlib.sha256((root/'balanced_dihole.py').read_bytes()).hexdigest()==d['source_sha256']
+    p=d['parameters'];cut=d['selected_cut_profile'];mu=np.array(cut['mu'])
+    assert p['D']==1 and p['Q']==.2 and p['k']==p['D']/2
+    assert np.isclose(p['M']**2+p['a']**2,p['k']**2,rtol=1e-13,atol=0)
+    rcut=np.array(cut['r']);ccut=np.array(cut['cos_theta'])
+    zcut=(rcut-p['M'])*ccut
+    rho2=((rcut-p['M'])**2-p['k']**2)*(1-ccut**2)
+    eps=np.sqrt(np.maximum(rho2,0)+(zcut-p['k'])**2)
+    assert np.allclose(eps,.05,rtol=1e-12,atol=0)
+    field=balanced_dihole.symbolic_fields()[0]
+    reference=field(rcut,ccut,p['M'],p['a'],p['B'])
+    assert np.allclose(reference[0],cut['lapse'],rtol=1e-13,atol=0)
+    assert np.allclose(np.array(reference[2])*p['physical_A_factor'],cut['Aphysical'],rtol=1e-13,atol=0)
+    xx,zz=np.meshgrid(np.linspace(-.65,.65,361),np.linspace(-.83,.83,481))
+    rho=np.abs(xx);mask=(np.hypot(rho,zz-p['k'])<.05)|(np.hypot(rho,zz+p['k'])<.05)
+    safe_rho=np.where(mask,.4,rho);safe_z=np.where(mask,0.,zz)
+    Rplus=np.hypot(safe_rho,safe_z-p['k']);Rminus=np.hypot(safe_rho,safe_z+p['k'])
+    radial=p['M']+(Rplus+Rminus)/2;cosine=(Rminus-Rplus)/(2*p['k'])
+    values=field(radial,cosine,p['M'],p['a'],p['B'])
+    lapse=np.broadcast_to(np.asarray(values[0],float),xx.shape)
+    flux=np.broadcast_to(np.asarray(values[2],float),xx.shape)*p['physical_A_factor']
+    assert np.all(np.isfinite(lapse[~mask])) and np.all(np.isfinite(flux[~mask])) and np.all(lapse[~mask]>0)
+    Ncut=np.array(cut['lapse']);shear=p['D']*(np.array(cut['K_meridional'])-np.array(cut['K_azimuthal']))
+    assert len(mu)==len(Ncut)==len(shear) and mu[0]==-1 and mu[-1]==1
+    assert np.ptp(Ncut)>0 and np.max(np.abs(shear))>0
+    summary=next(r for r in d['cut_summaries'] if r['epsilon']==.05 and r['angular_order']==max(s['angular_order'] for s in d['cut_summaries']))
+    assert np.isclose(summary['flux'],2*np.pi*p['q'],rtol=1e-12,atol=0)
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig=plt.figure(figsize=(13.5,8.2))
+    fig.suptitle('The balanced exterior still needs throat matching',fontsize=18,fontweight='bold',y=.96)
+    fig.text(.5,.905,'Known Emparan Einstein\u2013Maxwell pair in a balancing Melvin field \u00b7 Existing black-hole horizons remain',ha='center',fontsize=10.8,color='#475569')
+    ax=fig.add_axes([.075,.30,.34,.49])
+    image=ax.imshow(np.ma.array(lapse,mask=mask),extent=(-.65,.65,-.83,.83),origin='lower',aspect='equal',cmap='viridis',vmin=0,vmax=float(np.max(lapse[~mask])),interpolation='nearest')
+    ax.contour(xx,zz,np.ma.array(flux,mask=mask),levels=np.linspace(.1,.9,9),colors='white',linewidths=.75,alpha=.85)
+    for z in (-p['k'],p['k']):
+        ax.add_patch(Circle((0,z),.05,fc='white',ec='#182b3b',lw=1.3,zorder=4))
+        ax.plot(0,z,'x',color='#182b3b',ms=5,mew=1.2,zorder=5)
+    ax.set(xlabel='Signed Weyl coordinate x / D',ylabel='Weyl coordinate z / D')
+    ax.set_title('A. Calculated lapse and magnetic flux',fontsize=11.8,pad=14)
+    ax.spines[['top','right']].set_visible(False)
+    legend=[Line2D([0],[0],marker='o',color='none',markeredgecolor='#182b3b',markerfacecolor='white',label=r'Unconnected cut: $\epsilon=0.05D$'),Line2D([0],[0],marker='x',color='#182b3b',ls='none',label='Horizon endpoint')]
+    fig.legend(handles=legend,loc='upper left',bbox_to_anchor=(.063,.865),frameon=False,ncol=2,fontsize=9,columnspacing=1.1)
+    cb=fig.colorbar(image,cax=fig.add_axes([.43,.335,.014,.42]));cb.set_label('Lapse N',fontsize=10)
+    bx=fig.add_axes([.585,.575,.35,.205]);cx=fig.add_axes([.585,.30,.35,.205])
+    bx.plot(mu,Ncut,color='#007e87',lw=2)
+    bx.set(xlim=(-1,1),ylabel='Lapse N on upper cut')
+    bx.set_title('B. Clock rate varies across the cut',fontsize=11.8,pad=12)
+    bx.ticklabel_format(axis='y',style='plain',useOffset=False);bx.tick_params(axis='x',labelbottom=False)
+    bx.text(.03,.09,f"N = {np.min(Ncut):.5f} to {np.max(Ncut):.5f}",transform=bx.transAxes,color='#007e87',fontsize=9.5)
+    cx.plot(mu,shear,color='#7951b0',lw=2);cx.axhline(0,color='#94a3b8',lw=.7)
+    cx.set(xlim=(-1,1),xlabel=r'Local Weyl cosine $\mu$ on the upper cut',ylabel=r'$D(K_{\rm mer}-K_{\rm azi})$')
+    cx.set_title('C. Angular extrinsic curvature is unequal',fontsize=11.8,pad=12)
+    for axis in (bx,cx):
+        axis.set_xticks(np.linspace(-1,1,5));axis.grid(alpha=.15);axis.spines[['top','right']].set_visible(False)
+    fig.text(.07,.224,'White contours are magnetic flux, not particle paths. Masked circles are auxiliary coordinate cuts, not entrances.',fontsize=10,color='#475569')
+    fig.text(.07,.194,'D is Weyl coordinate separation, not proper horizon separation. Killing time is normalized on the Melvin axis; infinity is not flat.',fontsize=9.9,color='#475569')
+    fig.text(.07,.146,'The cuts carry angular metric, curvature and gauge data. The earlier spherical collar and flat-exterior return map cannot be reused unchanged.',fontsize=9.8,color='#475569')
+    fig.text(.07,.098,'Next: axisymmetric throat, frame/gauge and Dirac matching. The quantum source, Melvin state and stability remain unresolved.',fontsize=10,color='#475569')
+    fig.text(.07,.035,'13 Sep 2027 \u2192 12 Sep 2027 remains unproved; no throat connection, physical medium or construction method is established.',fontsize=10.6,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'balanced_exterior_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

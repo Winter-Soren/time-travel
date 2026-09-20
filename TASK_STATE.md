@@ -58,6 +58,66 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Exact balanced exterior and finite-cut data — increment109
+- Previous goal turn classified PROGRESS:108 published at
+  77115eb4209c9c4ececaf71f8b5eaa383fb0d568, local/remote equal, private=true,
+  clean worktree revalidated. Import COMPLETE; goal remains ACTIVE unbudgeted.
+- rn_exterior_gate.py/results:11PASS (~1.3s), no ODE. Under b=re=.2d,
+  Rout.25d and black-hole RN mu>=b, exterior branch .2<=mu<.205.
+  Nondecreasing r' from0 requires w>.25d (generallyw>Rout), so savedw.1
+  fails that class. Overshooting r'>.5 remains possible with negative
+  enclosed-energy demand. Formal mu<b escape needsmu<.17375 (>13.125%
+  deficit); not an automatically naked physical geometry aftercoreexcision.
+- Saved108 Einstein-minus-monopole tensor8piG units: midpoint
+  (-197.651425630689,-7.767286267536,-124.890990810241), outer
+  (-10.24,+10.24,-10.24). This is REQUIRED extra stress, not derived quantum
+  matter or the angular Maxwell subtraction. ExactWard/trace/RNchecks pass;
+  75digit check confirms floating cancellation errors. Independent4rows and
+  all513tensorpoints agree within2.31e-14/5.69e-14; second audit1.14e-13.
+- RN source3824343569d7639dafb08abc5c059726f3294b95251b759b86b829bb8ff03f55;
+  data9c9965af56963674a4ae544ba412f181860727e488276a4d7bc54d3123eb2792.
+- NEW balanced_dihole.py/results implements published Emparan9906160 exact
+  classicalEinsteinMaxwell exterior, with Melvin external field balancing
+  the axis.14PASS (~2.46s): directmetricRicci andMaxwell, flat/Melvinlimits,
+  gaugeflux, axisbalance, actualcutdata, separatequadrature/normalcontrols.
+  Existing extremalBLACKHOLE horizonsremain; no traversablethroatconnected.
+- ParametersQ=.2,Dweyl=2k=1 =>M=.1531128874149275,a=.4759794572326244,
+  B=.24020542767375583. D is Weylcoordinate separation, not properhorizon
+  separation. Aphysical=-q*Ahat/(2Q),q1;4piG/g²=(2Q/q)² is required.
+  This newexactpair is NOT oldflatparameters under a coordinate rename.
+- ActualupperWeylcutepsilon.05: area.819626611916401, area-radius
+  .25538953265174924;257pointNrange .195436476556..196255835447;
+  flux2pi; sampledangularKshear.01661726201665. MixedK andgaugeFnphi saved.
+  Normalpointsfromhorizon intoexterior; reversefor exteriorinnernormal.
+- Bulk5point relativeEinstein<6.95e-15,Maxwell<1.55e-15. Independent65digit
+  Weylcoordinate+derivativeaudit: K<=1.02e-14,Aepsilon<=2.89e-14,
+  area6.67e-16. Fullcoordinatepullback cross-termzero<=9.12e-64.
+- Diholesource4c6f4b84fb4c44ddd0416aa6622f6ac031f0895d7188086bc2afd8b2cb306711;
+  dataf098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4.
+- CurvedDiracoperator derived/audited: in WeylN,P metric, physicalnorm
+  P²rho/N; u=P sqrt(rho/N)Psi; v=N/P; H=-i alpha_rho(v partialrho+v_rho/2)
+  -i alpha_z(v partialz+v_z/2)+alpha_phi*N²(mu-Aphi)/rho. Noextraspinterm.
+  Actualcuttrace=sqrt(N*dA/dOmega)*U_normal*Psi, withspin/gaugepatches.
+- PureMelvin N=P=Lambda=1+beta*rho²,beta=B²/4,Phi=q/(Q B)=20.8155163204.
+  Wmu=mu/rho+beta(2mu-Phi)rho+beta²(mu-Phi)rho³. Regularhalfmu>=.5,
+  mu<Phi gives21 exacttransversezerochannelsperWeyl; NOT21mouthzeromodes.
+  Exactzero wavefunction/domain andmassiveoutgoingratio inRESEARCH109;
+  operator anddomain independentlyaudited. No massive spectrum/maps solved.
+- NEXT: solve/test the1D transverseMelvin spectral problem against exact
+  zero modes, build orientedaxialleads, andpropagate/bound actualdihole
+  O(1/|z|)gravitationaltail beforefiniteinterface. Reuse curvedvariablekinetic
+  operator foractualcutresponse. Old sphericalfreeinfinity Z andstate doNOT
+  transfer. Need axisymmetricthroat/frame/gauge matching, chosen globalstate,
+  renormalizedstress/current andgravitationalbackreaction before support.
+  Classicalexteriorbalance is not quantumclosure orstability. Preserve all
+  earlier evidence; don'trestart106 residualsweep oroldheavyDiracruns.
+- balanced_exterior_progress.png/pdf renderedfromfrozendata+analyticfields,
+  inspectedbyagent androot; all198 oldfigures unchanged, onlynewplothelper.
+  PNG8ae34e7ce1f0a8430d62bdc61772c557c8e272ab2725d35d921d0d3c3d0e7e2c;
+  PDF692bf437c2e990aecf29db203ca0bee2df24629a7655fed3554ffb8af8970760.
+- No newlaw, physicalmedium, formation, stability or13Sep2027->12Sep2027
+  passageproved. No livecalculation afterthisboundedincrement.
+
 ### Smooth collar and gravitational exterior gate — increment108
 - Previous turn classified PROGRESS:107 was committed/pushed and local/remote
   HEAD3850bd72bb04374645347cd3e2ca3f1ce3e609b6 verified equal, private=true,
