@@ -58,6 +58,86 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Complete retained threshold and actual angular feedback — increment105
+- Previous goal turn classified PROGRESS:104 completed and published to
+  private main at2fbe9eb44d5abb2e73bddafe1c4a75a109cd1174. Local/remote
+  equality, private visibility and clean state were verified after push;
+  current HEAD and clean worktree revalidated before105. Import complete.
+- complete_threshold_bound.py/results.json completed in30.694544s, session
+  98557 TERMINAL exit0. All10 aggregate controls and18 sector/phase gates
+  PASS; no live solver remains. Eight fresh zero-frequency sectors plus
+  exact reuse of104 m0, N4/J9/h.05/rho32, both actual Weyls/phases.
+  Correct outer onsets[4,3,2,1,1,2,3,4,5], mouth n multiplicities[3,5,7,9],
+  paired24,49 mouth channels perWeyl/98 both. Failed-envelope metadata
+  handling corrected before launch; every failure would be saved.
+  Phase-pi IR pressure bounds[7.816585474744043e-9,1.59670305028937e-8],
+  either null[7.856521137214905e-9,1.5982390373074804e-8]. Phase0 pressure
+  [2.5119401299324704e-7,5.090539993225363e-7], either null
+  [2.527562248698883e-7,5.096548500443215e-7]. Ordinary-float finite model,
+  no infinite-angular/continuum/interval certificate or103 L40 correction.
+  Sourcecaf438d58199baf45826e29fd88cea6adb1d4b78c43603e79ec0140c29d767a0;
+  databf866d10d677fd453b46b6677ba8c28dddfe9911ba88cbe8447cffb7fcf559e8.
+  Independent all9/18 reconstruction PASS: source<=8.68e-19, aggregate
+  <=1.06e-22, inverse/Neumann<=2.28e-13; exact m0 and input hashes match.
+- feedback_residual_bound.py/results.json completed in1.44s,11 controls
+  PASS, no exterior rerun. Close low core first, T_H remains passive;
+  exact source-weighted Schur identity retains BOTH angular mixing legs.
+  Universal weighted high inverse bound2 is used. Finite N2->N4 pi bounds
+  [.000464753257806594,.000178831441243017] versus actual feedback
+  [-1.089253743e-6,-4.188772209e-7], about.577% of saved full kernels.
+  Tiny finite inverse norm.0047882 is NOT extrapolated to infinite modes.
+  Broad104 graph-only two-leg bound remains unusable[15334,5902].
+  Conforming trials must satisfy fL-BL*gL=X,fH=0, and dual BLdagger/Y
+  at-i*kappa, exact physical/gauge/interface boundaries. Then homogeneous
+  passive error obeys ||e||<=rho/kappa; chi*P_H trace gives weighted-leg
+  error<=Cres*rho with Cres380.057661368206 at collar a=.49.
+  For1% feedback-only budget, equal right/dual continuum residual targets
+  [2.2512575078163e-5,1.3951466440428e-5];10% targets
+  [2.24911988319169e-4,1.39473493289312e-4]. ASSUMES complete high trial
+  traces match finite centers or extra trace corrections are enclosed.
+  No actual conforming trial/residual has been measured. Algebraic DG/LU
+  residual is not the continuum L2 residual. Pointwise x=.4439150615 only.
+  Source184fd57316322a7f844f2ddb43536cef14e875471df12dce03b9489a682ecf6e;
+  dataa39875feb8a7d9e8e24c02ecce41d2d1675455e736910e0581a50ef81dba86ad.
+  Independent20-row reconstruction PASS, trace<=6.13e-17, bounds<=1.01e-16,
+  globalbounds<=3.09e-18; residual inequality and exact low-closure proof
+  independently audited. Full physical high trace aboveN4 still required.
+- Root owns new tail_quadrature_bound.py/results.json.8 checks PASS in.04s.
+  Derivation: f=Aphi/(1-z²)=q sum_j C_(2j)^(3/2)(z)u^(2j+1)/(2j+1),
+  u=d/(2r). Truncate atdegree108 forQ64/J9; the projected polynomial
+  integrand degree<=127 is integrated exactly. Positive tail plus exact
+  harmonic Grams gives uniform operator errors for r>=2:
+  C<=8.873081e-66,C'<=4.974954e-64,C''<=2.814293e-62.
+  Rational arithmetic/outward endpoints;110-digit series/derivative and
+  small-rule polynomial-projection checks. Independent rational/SymPy
+  derivative reconstruction PASS exactly, including outward endpoints.
+  Source89e933502120bf829f13e8f0e384f690bb14c7b5fa0e8aaa3eeb494489e11d1c;
+  data3e51d04007808eba7364cd0c3b2bf9e8fe8d131a0fdb38c1436c953459aa063c.
+  This encloses exact-GL truncation against exact finite-J Galerkin,
+  not floating nodes/harmonics, omitted J, full-source or continuum error.
+- RESEARCH105 contains all three derivations, numeric tables, prerequisites
+  and sources. README/DIRECTORY updated; independent final prose audit PASS.
+  New tail_completion_progress() at plotter:7869 rendered/inspected PNG/PDF,
+  with all9-vs1 retained IR coverage, distinct finite feedback witness and
+  explicitly unmeasured continuum residual targets. Bounds round up and
+  targets down. Figure import-call with -B -W error exited0.
+  Plotter8eca6f67e734a87ddf91e2e9846bc60e0d073947b494c32ced267ad561edbdd6;
+  PNGef816056af8d287bc8b9494cd16365f313fd987a2d39cbfc3fe63d36f6ec741c;
+  PDFe33bd19f6bf4134d4e44469e4aee4ebf7da812c5be415c1da6f66ecd2ab837b0.
+  Root verification PASS:465 historical tracked files outside five intended
+  doc/plotter edits unchanged, including190 old figures. RESEARCH/TASK104
+  suffixes byte-identical; removing only new helper restores old plotter.
+  All29 saved producer controls, source/input hashes, AST, local links and
+  git diff --check pass. Authorized private commit/push verification
+  follows this checkpoint; final tool results record publication.
+  All scientific producers terminal. Next useful step: conforming recovery
+  of source-weighted low-core-closed right/dual exterior fields, complete
+  high traces and actual continuum residual. A compactly supported trial
+  is admissible at infinity but its taper contributes to the residual.
+  Do not repeat UV proof, settled import or grow angular cutoff blindly.
+  Goal ACTIVE; no stable medium/material recipe/backward passage proved.
+ 13Sep2027->12Sep2027 remains UNPROVED.
+
 ### Buffered angular bound and frequency remainders — increment104
 - Previous goal turn classified PROGRESS:103 completed and published at
   7e03d5ede0ceaacc551f4a13d281432f72378f29. Remote equality/private/clean

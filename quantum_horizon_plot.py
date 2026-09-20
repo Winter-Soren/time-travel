@@ -7866,6 +7866,98 @@ def source_remainder_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def tail_completion_progress():
+    """Separate retained IR coverage, finite feedback and unmet continuum work."""
+    from matplotlib.patches import Rectangle, Ellipse, FancyBboxPatch
+    root=Path(__file__).resolve().parent
+    names=('complete_threshold_bound_results.json','feedback_residual_bound_results.json',
+           'tail_quadrature_bound_results.json')
+    ir,feedback,quad=[json.loads((root/name).read_text(encoding='utf-8')) for name in names]
+    for record in (ir,feedback,quad):assert record['passed'] and all(record['tests'].values())
+    assert ir['certificate_gate_passed'] and ir['parameters']['m_values']==list(range(-4,5))
+    assert [r['m'] for r in ir['sectors']]==list(range(-4,5))
+    phase_index=next(i for i,a in enumerate(ir['aggregate']) if np.isclose(a['phase'],np.pi,rtol=1e-14,atol=0))
+    aggregate=ir['aggregate'][phase_index]
+    assert aggregate['all_sector_gate_passed'] and not aggregate['failed_sectors']
+    assert all(s['phases'][phase_index]['neumann_passed'] for s in ir['sectors'])
+    key='pressure_integral_absolute_upper'
+    all_nine=np.asarray(aggregate['conditional_aggregate_bounds'][key])
+    summed=np.array([sum(s['phases'][phase_index]['conditional_source_remainder'][j][key] for s in ir['sectors']) for j in range(2)])
+    assert np.array_equal(summed,all_nine)
+    zero=next(s for s in ir['sectors'] if s['m']==0)
+    one=np.asarray([p[key] for p in zero['phases'][phase_index]['conditional_source_remainder']])
+    assert np.all(all_nine>=one) and ir['parameters']['scaled_x_interval']==[0.,1e-6]
+    rows=sorted([r for r in feedback['records'] if r['phase']=='pi'],key=lambda r:r['probe'])
+    assert [r['probe'] for r in rows]==[0,1]
+    assert feedback['parameters']['retained_N']==2 and feedback['parameters']['saved_high_N']==4
+    assert feedback['parameters']['source']=='pressure'
+    assert not feedback['conclusions']['continuum_residuals_available']
+    assert not feedback['conclusions']['continuum_source_sign_certified']
+    finite_bounds=np.asarray([r['universal_two_leg_bound'] for r in rows])
+    assert np.all(finite_bounds>=np.abs([r['signed_finite_N2_to_N4_low_feedback'] for r in rows]))
+    budgets=[next(b for b in r['continuum_residual_budgets'] if b['signal_fraction']==.01) for r in rows]
+    targets=np.asarray([b['equal_continuum_residual_norm_budget'] for b in budgets])
+    for r,b in zip(rows,budgets):
+        assert np.isclose(b['target_feedback_budget'],.01*abs(r['full_saved_N4_source']),rtol=1e-13,atol=0)
+        assert np.isclose(b['reconstructed_feedback_budget'],b['target_feedback_budget'],rtol=1e-13,atol=0)
+    assert np.all(np.isfinite(np.r_[all_nine,one,finite_bounds,targets])) and np.all(targets>0)
+    assert quad['parameters']['J']==ir['parameters']['outer_nmax']==9
+    assert quad['parameters']['Q']==ir['parameters']['angular_order']==64
+    assert quad['bounds']['maximum_integrand_degree']<=quad['bounds']['GL_exact_degree']
+    def bound_text(value):
+        power=int(np.floor(np.log10(value)));step=10.**(power-2)
+        rounded=np.ceil(value/step)*step;assert rounded>=value
+        return f'{rounded:.2e}'
+    def target_text(value):
+        power=int(np.floor(np.log10(value)));step=10.**(power-2)
+        rounded=np.floor(value/step)*step;assert 0<rounded<=value
+        return f'{rounded:.2e}'
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig=plt.figure(figsize=(13.5,8.7))
+    fig.suptitle('More infrared sectors covered; continuum work remains',fontsize=17.5,fontweight='bold',y=.967)
+    fig.text(.5,.915,'Weighted energy + radial-pressure source \u00b7 Selected phase \u03c0 \u00b7 Prescribed geometry, not a physical medium',ha='center',fontsize=10.5,color='#475569')
+    core=fig.add_axes([.35,.823,.32,.055]);core.set_axis_off();core.set(xlim=(-1.15,1.15),ylim=(-.5,.5))
+    core.add_patch(Rectangle((-1,-.24),2,.48,fc='#edf1f5',ec='#64748b',lw=1))
+    for end in (-1,1):core.add_patch(Ellipse((end,0),.075,.48,fc='#edf1f5',ec='#64748b',lw=1))
+    fig.text(.075,.85,'Assumed long throat\n\u03c1c = 32; b = 0.2d',fontsize=10,va='center',color='#475569')
+    fig.text(.735,.85,'Sharp junction source and\nphysical preparation unresolved',fontsize=10,va='center',color='#475569')
+    ax=fig.add_axes([.085,.385,.38,.31]);x=np.arange(2);width=.30
+    ax.set_title('A. IR: 1 \u2192 9 retained azimuthal sectors',fontsize=12,pad=14)
+    for values,offset,color,label in ((one,-width/2,'#94a3b8','Earlier: m = 0 only'),(all_nine,width/2,'#007e87','Now: all m = -4,\u2026,4')):
+        ax.bar(x+offset,values,width,color=color,label=label)
+        for xx,yy in zip(x+offset,values):
+            ax.annotate('\u2264 '+bound_text(yy),(xx,yy),xytext=(0,5),textcoords='offset points',ha='center',fontsize=8.9,color=color)
+    ax.set_xticks(x,['Central probe','Upper-side probe'])
+    ax.set_ylim(0,1.24*max(all_nine));ax.set_ylabel('Conditional absolute IR bound',fontsize=10)
+    ax.ticklabel_format(axis='y',style='sci',scilimits=(0,0))
+    ax.grid(axis='y',alpha=.15);ax.set_axisbelow(True);ax.spines[['top','right']].set_visible(False)
+    ax.legend(loc='upper left',frameon=False,fontsize=9)
+    fig.text(.275,.333,'0 \u2264 x=\u03ba\u2113 \u2264 10\u207b\u2076; finite N4/J9/DG, floating conditional bounds.\nMore sectors covered; this is still not the infinite angular sum.',ha='center',va='center',fontsize=9.4,color='#475569',linespacing=1.5)
+    bx=fig.add_axes([.545,.365,.40,.33]);bx.set_axis_off();bx.set(xlim=(-.025,1.025),ylim=(0,1))
+    bx.set_title('B. Finite angular-feedback benchmark',fontsize=12,pad=14)
+    for left,text,color in ((.01,'Low\nn \u2264 2','#007e87'),(.365,'High\nn = 3, 4','#7951b0'),(.72,'Low\nn \u2264 2','#007e87')):
+        bx.add_patch(FancyBboxPatch((left,.73),.26,.18,boxstyle='round,pad=.012',facecolor='white',edgecolor=color,lw=1.2))
+        bx.text(left+.13,.82,text,ha='center',va='center',fontsize=10,color=color)
+    for left,right in ((.28,.35),(.635,.705)):
+        bx.annotate('',xy=(right,.82),xytext=(left,.82),arrowprops={'arrowstyle':'->','lw':1.3,'color':'#475569'})
+    bx.text(.5,.655,'Mode coupling in saved matrices; not a travel path.',ha='center',fontsize=9.4,color='#475569')
+    for j,label in enumerate(('Central probe','Upper-side probe')):
+        bx.text(.02,.51-j*.15,label,fontsize=10.4,color='#475569')
+        bx.text(.98,.51-j*.15,'|feedback| \u2264 '+bound_text(finite_bounds[j]),ha='right',fontsize=11,fontweight='bold',color='#7951b0')
+    bx.text(.5,.16,f"At x = {feedback['parameters']['x']:.4f}; pointwise per d\u03ba.\nFinite N2\u2192N4 only; no infinite-angular or integral bound.",ha='center',fontsize=9.4,color='#475569',linespacing=1.5)
+    fig.patches.append(FancyBboxPatch((.06,.172),.88,.108,boxstyle='round,pad=.011',transform=fig.transFigure,
+                                    facecolor='#fff8e9',edgecolor='#b68526',linewidth=.8,zorder=-1))
+    fig.text(.078,.254,'Illustrative continuum requirement \u2014 not a measured residual',fontsize=11,fontweight='bold',color='#9c6b18')
+    fig.text(.078,.221,f"For a 1% sampled-kernel feedback budget: right/dual L\u00b2-Frobenius residual norms each \u2264 {target_text(targets[0])} central / {target_text(targets[1])} upper-side.",fontsize=10,color='#475569')
+    fig.text(.078,.187,'Assumes full trial high-mode traces are controlled by the finite norms. Those continuum fields and residuals are not yet available.',fontsize=9.6,color='#475569')
+    fig.text(.06,.121,'Exact angular-quadrature truncation is bounded; floating arithmetic and continuum discretization are not certified by that result.',fontsize=9.7,color='#475569')
+    fig.text(.06,.076,'No combined full-source bound, supporting geometry or stability follows from these separate checks. Units: \u210f = c = d = 1.',fontsize=9.9,color='#475569')
+    fig.text(.06,.028,'No stable medium or 13 Sep 2027 \u2192 12 Sep 2027 passage demonstrated.',fontsize=10.5,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'tail_completion_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

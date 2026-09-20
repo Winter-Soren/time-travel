@@ -1,5 +1,251 @@
 # Reproduction and coupled-model iterations
 
+## Complete retained threshold and actual angular feedback — increment105
+
+### The threshold enclosure now includes every retained angular sector
+
+The [complete threshold calculation](complete_threshold_bound.py), with
+[saved sector matrices](complete_threshold_bound_results.json), extends104
+to m=-4,...,4 at N=4, J=9, h=.05 and rho_c=32. Eight new zero-frequency
+systems were solved; the104 m=0 numerical/proof payload is reused exactly.
+Both physical Weyl responses and phases0/pi are included in each sector.
+The run completed in30.695 seconds, with all ten aggregate controls and
+all18 sector/phase Neumann gates passing. There is no frequency scan.
+
+The adapter distinguishes mouth labels n=max(1,|m|),...,4 from exterior
+labels n=|m+1/2|+1/2,...,9. Only m=0 has the unpaired zero mode. Direct
+port-label constructions check the actual reflected core maps, source
+derivatives and reference gaps. Each massive level appears2n+1 times:
+3,5,7,9 for n=1,2,3,4. Thus there are24 paired labels,49 mouth channels
+per Weyl in the sector sum, and98 for both Weyls. A single sector is not
+multiplied by an assumed angular degeneracy.
+
+The far Volterra/inward energy estimates, open-DG response estimate and
+physical facet factors are those of104 with each sector's actual nmin.
+Source slope bounds sum only its present massive modes, with the chiral
+zero contribution only in m=0. A failed inward-envelope record retains
+its core-label metadata; this failure-reporting path was corrected before
+the run so that an incomplete case could not crash final completeness
+accounting. Aggregate bounds are reported only when every sector passes.
+
+For 0<=x=kappa*ell<=1e-6, the conditional absolute integral bounds are:
+
+| State and observable | Central | Upper side |
+| --- | ---: | ---: |
+| Phase pi, energy plus radial pressure | 7.816586e-9 | 1.596704e-8 |
+| Phase pi, either radial null combination | 7.856522e-9 | 1.598240e-8 |
+| Phase0, energy plus radial pressure | 2.511941e-7 | 5.090540e-7 |
+| Phase0, either radial null combination | 2.527563e-7 | 5.096549e-7 |
+
+Numbers are rounded upward. The selected phase-pi upper pressure bound
+is less than0.00037% of the magnitude of103's finite-window upper signal.
+The largest Neumann factors remain the m=0 values .028630793 at phase0
+and .000207962 at phase pi. The omitted low-frequency contribution is
+small in this complete RETAINED model; this statement does not enclose
+the infinite angular sum.
+
+The arithmetic remains ordinary floating point with recorded residuals
+and analytic allowances, not verified interval inverses. The outer radial
+equation uses finite J=9 with64-node angular quadrature; the next section
+separately bounds its exact-arithmetic quadrature truncation. Continuum
+spatial errors and physical support remain open. The infinity-tail
+enclosure here does not correct the finite-L40 distant-boundary
+approximation used in the nonzero-frequency integration of103.
+
+### Bounding the angular quadrature of the distant magnetic field
+
+The [tail quadrature calculation](tail_quadrature_bound.py) supplies an
+analytic error bound between exact Q=64 Gauss-Legendre integration and
+the exact finite-J=9 angular Galerkin coupling. It addresses a specific
+approximation left separate in104. It does not bound floating-point nodes,
+harmonics or matrix operations, nor the omitted channels J>9. No radial
+or exterior solve is repeated.
+
+Write z=cos(theta) and u=d/(2r)<1. The actual point-pair potential obeys
+
+\[
+ f(z)={A_\phi\over1-z^2}
+ ={q\over2}\int_{-u}^{u}(1+2vz+v^2)^{-3/2}\,dv
+ =q\sum_{j\ge0}{C_{2j}^{(3/2)}(z)\over2j+1}u^{2j+1}.
+\]
+
+The endpoint values use the continuous limit. The generating function and
+uniform polynomial bound are standard: [DLMF18.12.4](https://dlmf.nist.gov/18.12.E4)
+and [DLMF18.14.4](https://dlmf.nist.gov/18.14.E4) imply
+|C_l^(3/2)(z)|<=(l+1)(l+2)/2 for -1<=z<=1. Our application to the magnetic
+projection is as follows. Truncate the sum at j=M. Its uniform remainder is
+
+\[
+ \epsilon_M=q\,u^{2M+3}
+ { (M+2)-(M+1)u^2\over(1-u^2)^2}.
+\]
+
+The projected potential is sin(theta)*f(z)*sigma_y. At fixed half-integer
+mu, sigma_y pairs spherical harmonics with consecutive integer orders
+m and m+1. Their product multiplied by sin(theta) is a polynomial in z
+of degree at most2J+1, for either sign of m. The truncated integrand thus
+has degree at most2M+2J+1. [Gaussian quadrature](https://dlmf.nist.gov/3.5.v)
+is exact through degree2Q-1, so M=Q-J-1=54 is admissible.
+
+Both exact and quadrature characteristic Grams equal the identity in
+exact arithmetic; the discrete weights are positive and sin(theta)<=1.
+Cauchy-Schwarz therefore bounds each projected remainder by epsilon_M.
+Their difference in the radial coefficient C=(D+iJmag)/r satisfies
+
+\[
+ \|C_{\rm Galerkin}-C_{\rm GL}\|\le2\epsilon_M/r.
+\]
+
+Differentiating the uniformly convergent series gives explicit positive
+tail moments for C' and C''. For q=d=1, these bounds hold uniformly on
+r>=R=2:
+
+| Angular quadrature error only | Upward-rounded bound |
+| --- | ---: |
+| C | 8.873081e-66 |
+| C' | 4.974954e-64 |
+| C'' | 2.814293e-62 |
+| Integral from2 to infinity of the C error norm | 1.703310e-67 |
+
+These values describe analytic quadrature truncation, not the total
+numerical error, which can be much larger. The saved bounds are computed
+with exact rational arithmetic and outward-rounded binary64 exports.
+Eight checks pass, including110-digit independent potential/series and
+radial-derivative comparisons, endpoint tail equality and low-order exact
+polynomial projection controls for positive and negative sectors. The
+proof establishes the uniform bound; sampled controls test implementation.
+
+### Two mixing legs give a useful finite witness and an explicit residual target
+
+The [feedback residual calculation](feedback_residual_bound.py), with
+[frozen matrix checks](feedback_residual_bound_results.json), retains both
+low-to-high and high-to-low mixing factors. Only saved102 matrices are used.
+It supplies an operator inequality and an illustrative continuum-residual
+budget; it does not supply the required conforming trial fields.
+
+Keep the incoming and outgoing port spaces distinct. The exterior map S
+goes from incoming to outgoing; the angular-diagonal core B goes back.
+Split the angular channels into low L and high H, and close the low core
+first with B0=diag(B_L,0). Define
+
+\[
+ G_L=(I-S_{LL}B_L)^{-1},\quad G_R=(I-B_LS_{LL})^{-1},\qquad
+ T_H=S_{HH}+S_{HL}B_LG_LS_{LH}.
+\]
+
+Passivity makes T_H contractive when the low closure is well posed. If
+F_B=(I-SB)^(-1)S, the exact low-block difference is
+
+\[
+ (F_B-F_{B0})_{LL}
+ =G_LS_{LH}B_H(I-T_HB_H)^{-1}S_{HL}G_R.
+\]
+
+Factor the actual low source derivative D=X Y^dagger, retaining all
+singular values. Put W_H=(I-B_H^dagger B_H)^(1/2) and
+V_H=(I-B_H B_H^dagger)^(1/2). Define the two weighted factors
+
+\[
+ A=Y^\dagger G_LS_{LH}B_HW_H^{-1},\qquad
+ C=W_H^{-1}S_{HL}G_RX.
+\]
+
+The weighted middle inverse obeys
+W_H(I-T_HB_H)^(-1)W_H=I+Phi B_H with ||Phi||<=1 by the
+[Julia contraction](https://arxiv.org/pdf/1803.09329). Thus its norm is
+at most2, giving
+
+\[
+ |\Delta Q_L|\le {2\over\pi}\|A\|_F\|C\|_F.
+\]
+
+The angular-diagonal reference has no low/high feedback term. The formula
+includes both physical Weyls and all retained sectors by direct sums,
+without another degeneracy multiplier. Nonnormal-core controls with
+independently permuted incoming/output spaces check all matrix identities.
+
+At the saved x=.4439150615, kappa=.0693278851, the finite N=2 to4 test gives:
+
+| Phase-pi pressure kernel | Central | Upper side |
+| --- | ---: | ---: |
+| Actual finite low-block feedback | -1.089254e-6 | -4.188772e-7 |
+| Two-leg bound with universal middle factor2 | 4.647533e-4 | 1.788315e-4 |
+| Full saved N=4 kernel | -0.08057044515 | -0.03098825718 |
+| Bound / magnitude of saved kernel | 0.57683% | 0.57710% |
+
+These are pointwise d_kappa kernels, not integrated errors. The actual
+finite weighted middle inverse norm is about .0047882, but that smaller
+number is not extrapolated to infinitely many modes. Conversely, using
+the broad104 angular graph bounds for both factors gives unusable bounds
+of about15334 and5902. The useful path is to enclose actual continuum
+fields and their residuals; the finite mixing values alone do not do that.
+
+For the right trial field impose the physical boundary relation
+f_L-B_L g_L=X and f_H=0 exactly; the dual trial uses B_L^dagger, sourceY
+and swapped characteristics at -i*kappa. Then the exact and trial fields
+differ by an error with homogeneous passive low feedback. For the
+Frobenius L2 norm rho of its CONTINUUM equation residual,
+||e||<=rho/kappa. This is not the residual of solving the DG linear system.
+
+Let chi=1 at the physical mouth r=b and decrease linearly to0 at a<d/2.
+Apply the isolated-monopole square identity to u=chi*P_H e. Its incoming
+high trace is zero, eliminating the inner cross term. With
+h=1/(a-b), c0=1-1/sqrt2 and the104 partner bound vstar,
+
+\[
+ \|H_0u\|\le(\kappa+v_*+h)\rho/\kappa+\rho_{\rm local},\qquad
+ \||D_H|^{1/2}e_H(b)\|^2\le {a\over\sqrt{c_0}}\|H_0u\|^2.
+\]
+
+Using rho_local<=rho and delta_n^-1<=c_delta*lambda_n gives the weighted
+high-trace error bound
+
+\[
+ \epsilon\le C_{\rm res}\rho,\qquad
+ C_{\rm res}=\sqrt{c_\delta a/\sqrt{c_0}}
+       [(\kappa+v_*+h)/\kappa+1].
+\]
+
+The left factor is controlled by the dual high trace, using defect
+intertwining and ||B_H||<=1. Closing the low core in the trial avoids
+needing a separate enclosure of the unknown true S_LL. At a=.49 the
+saved c_delta=46.5661 gives C_res=380.0577.
+
+For illustration ONLY, suppose complete continuum trial weighted trace
+norms are bounded by the saved finite values L0,R0. Extra trace components
+above N=4 must be enclosed before making that assumption. To allocate a
+budget eta to this feedback, require
+2(L0+epsilon)(R0+epsilon)/pi<=eta and rho<=epsilon/C_res on BOTH trials.
+For phase pi the resulting residual targets are:
+
+| Feedback allocation relative to the saved kernel | Central rho target | Upper rho target |
+| --- | ---: | ---: |
+| 1% | 2.25125e-5 | 1.39514e-5 |
+| 10% | 2.24911e-4 | 1.39473e-4 |
+
+Targets are rounded downward. They allocate feedback error alone; direct
+high-source, frequency, spatial and other errors are excluded. No actual
+continuum residual has been measured. A discontinuous polygonal DG field
+cannot be inserted without conforming reconstruction, physical curved
+boundary matching, correct gauge/axis conditions and a valid continuation
+to infinity. Those are the next implementation requirements, not passed
+checks. All eleven finite-matrix/budget controls pass.
+
+### Direction after105
+
+The retained low-frequency estimate is complete at N=4, and analytic
+angular quadrature truncation is small enough to separate from roundoff.
+The two-leg argument now provides an actionable continuum-residual target
+at one frequency. The next focused test is whether a conforming physical
+trial can meet it with a controlled complete high trace. A failed target
+will guide changing the numerical representation or this candidate.
+
+The all-angular source over all frequencies, numerical continuum limit,
+actual smooth supporting geometry, formation and stability remain open.
+There is no new physical law, obtainable supporting material, or demonstrated
+passage from13Sep2027 to12Sep2027. The [new diagram](tail_completion_progress.png)
+keeps the IR integral and finite pointwise feedback test separate.
+
 ## Buffered angular control and frequency-tail bounds — increment104
 
 ### The angular estimate decreases, but is too loose to certify the source

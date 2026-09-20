@@ -11,6 +11,9 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Two-leg angular feedback and continuum-residual target | [feedback_residual_bound.py](feedback_residual_bound.py), [results](feedback_residual_bound_results.json), [diagram](tail_completion_progress.png); finite mixing witness plus requirements for conforming physical trial fields |
+| Complete retained low-frequency enclosure | [complete_threshold_bound.py](complete_threshold_bound.py), [results](complete_threshold_bound_results.json); all9 retained sectors, conditional finite N4/J9/DG result |
+| Magnetic-tail angular quadrature error | [tail_quadrature_bound.py](tail_quadrature_bound.py), [results](tail_quadrature_bound_results.json); exact-GL truncation versus exact finite-J projection, separate from roundoff |
 | All-angular high-frequency source bound | [ultraviolet_source_bound.py](ultraviolet_source_bound.py), [results](ultraviolet_source_bound_results.json), [frequency ledger](source_remainder_progress.png) |
 | One-sector zero-frequency enclosure | [threshold_return_bound.py](threshold_return_bound.py), [results](threshold_return_bound_results.json); finite N4/J9/DG model and non-interval floating evaluation |
 | Buffered angular-feedback estimate | [buffered_angular_bound.py](buffered_angular_bound.py), [results](buffered_angular_bound_results.json); explicit decreasing bound, numerically too loose |

@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_rational_export": true,
+    "polynomial_degree": true,
+    "independent_potential_series": true,
+    "endpoint_tail_equality": true,
+    "radial_derivatives": true,
+    "exact_polynomial_projection": true,
+    "harmonic_gram_normalization": true,
+    "frozen_inputs_preserved": true
+  },
+  "seconds": 0.03982199996244162,
+  "parameters": {
+    "q": 1,
+    "d": 1,
+    "R": 2,
+    "J": 9,
+    "Q": 64,
+    "mu_scope": "Every retained half-odd-integer sector"
+  },
+  "bounds": {
+    "M": 54,
+    "maximum_integrand_degree": 127,
+    "GL_exact_degree": 127,
+    "f_error": {
+      "lower": 8.873080526871099e-66,
+      "upper": 8.873080526871102e-66,
+      "exact_numerator": "841",
+      "exact_denominator": "94781062501701468028126224915303389087005585860494200128879879782400"
+    },
+    "C_error": {
+      "lower": 8.873080526871099e-66,
+      "upper": 8.873080526871102e-66,
+      "exact_numerator": "841",
+      "exact_denominator": "94781062501701468028126224915303389087005585860494200128879879782400"
+    },
+    "C_prime_error": {
+      "lower": 4.974953022127902e-64,
+      "upper": 4.9749530221279034e-64,
+      "exact_numerator": "707297",
+      "exact_denominator": "1421715937525522020421893373729550836305083787907413001933198196736000"
+    },
+    "C_second_error": {
+      "lower": 2.8142925632274364e-62,
+      "upper": 2.8142925632274373e-62,
+      "exact_numerator": "400112459",
+      "exact_denominator": "14217159375255220204218933737295508363050837879074130019331981967360000"
+    },
+    "integrated_C_error": {
+      "lower": 1.7033090490892447e-67,
+      "upper": 1.7033090490892454e-67,
+      "exact_numerator": "7",
+      "exact_denominator": "41096476319097120902820355334369828861943828244198657087131510374400"
+    }
+  },
+  "series_controls": {
+    "maximum_series_error_over_bound": 1.0,
+    "maximum_endpoint_relative_error": 1.2704994994621557e-47,
+    "maximum_radial_derivative_relative_error": 0.0
+  },
+  "polynomial_projection_controls": [
+    {
+      "mu": -2.5,
+      "J": 3,
+      "Q": 8,
+      "polynomial_degree": 8,
+      "projection_difference": 6.106226635438361e-16,
+      "maximum_harmonic_gram_error": 3.9968028886505635e-15
+    },
+    {
+      "mu": -0.5,
+      "J": 3,
+      "Q": 8,
+      "polynomial_degree": 8,
+      "projection_difference": 4.440892098500626e-16,
+      "maximum_harmonic_gram_error": 7.91033905045424e-15
+    },
+    {
+      "mu": 0.5,
+      "J": 3,
+      "Q": 8,
+      "polynomial_degree": 8,
+      "projection_difference": 4.440892098500626e-16,
+      "maximum_harmonic_gram_error": 8.021029316001432e-15
+    },
+    {
+      "mu": 1.5,
+      "J": 3,
+      "Q": 8,
+      "polynomial_degree": 8,
+      "projection_difference": 6.38378239159465e-16,
+      "maximum_harmonic_gram_error": 3.6637359812630166e-15
+    },
+    {
+      "mu": 2.5,
+      "J": 3,
+      "Q": 8,
+      "polynomial_degree": 8,
+      "projection_difference": 6.106226635438361e-16,
+      "maximum_harmonic_gram_error": 3.885780586188048e-15
+    }
+  ],
+  "equations": {
+    "potential": "u=d/(2r), z=cos(theta): Aphi/(1-z\u00b2)=q/2 integral_-u^u (1+2vz+v\u00b2)^(-3/2) dv.",
+    "series": "f=q sum_j>=0 C_(2j)^(3/2)(z) u^(2j+1)/(2j+1).",
+    "remainder": "epsilon=q u^(2M+3)[(M+2)-(M+1)u\u00b2]/(1-u\u00b2)\u00b2.",
+    "degree": "sin(theta)*Phi_plus_dagger sigma_y Phi_minus is a polynomial of degree<=2J+1. 2M+2J+1<=2Q-1.",
+    "projection": "Exact and positive-weight GL projection each have operator norm<=sup|f-p|; error<=2epsilon/r for C.",
+    "derivative": "Differentiate the uniformly convergent series; radial powers yield the saved positive moment formulas."
+  },
+  "sources": [
+    "https://dlmf.nist.gov/18.12.E4",
+    "https://dlmf.nist.gov/18.14.E4",
+    "https://dlmf.nist.gov/3.5.v"
+  ],
+  "scope": [
+    "Exact-arithmetic Gauss-Legendre truncation versus exact finite-J angular Galerkin projection, uniformly for r>=2; not omitted J>9.",
+    "Rational bound values and outward float endpoints are exact; sampled controls check the implementation, not the all-z proof.",
+    "Floating nodes, weights, harmonics and radial/matrix arithmetic are not certified by this tiny truncation bound.",
+    "No completed source, supporting geometry, stability or chronology conclusion; no exterior solve is repeated."
+  ],
+  "source_sha256": "89e933502120bf829f13e8f0e384f690bb14c7b5fa0e8aaa3eeb494489e11d1c",
+  "input_sha256": {
+    "magnetic_tail_map.py": "44e69dbdb687f53ab5c13a5b00f08039b913db3fe95248e3984daeb4df1bfc9e",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "threshold_return_bound.py": "39306d3076c109ef0d76c7ffb4e06e61f2cb0d7bd03338902431d675c65b08d4",
+    "threshold_return_bound_results.json": "03bd6d63ecedb44e7d55c4612f36c2eac14dcc1639c6855ebcb6e053085a9780"
+  }
+}
