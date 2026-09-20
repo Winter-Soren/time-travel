@@ -1,5 +1,130 @@
 # Reproduction and coupled-model iterations
 
+## Optical ultraviolet subtraction and its lapse variation — increment121
+
+[Driver](../scripts/dihole_optical_heat.py), [results](../results/dihole_optical_heat_results.json),
+[figure](../figures/dihole_optical_heat_progress.png), and
+[derivation and regulator conventions](OPTICAL_HEAT_SUBTRACTION.md).
+
+The next required ingredient toward stress is now evaluated in the same exact
+balanced dihole: the local ultraviolet coefficients of the **full rank-four**
+charged Dirac heat diagonal, and their variation under the120 lapse perturbation.
+The result is a subtraction prescription component. It is not a calculation of
+the finite vacuum energy, stress tensor, or supporting matter.
+
+### Full-field coefficients, normalization and geometry
+
+For optical metric ghat=alpha^2(d_rho^2+d_z^2)+beta^2 d_phi^2, alpha=P/N,
+beta=rho/N^2, and charge-included A_phi=q*aunit with q=512000, use
+
+$$
+\operatorname{tr}_4 K(s;x,x)\sim(4\pi s)^{-3/2}
+[a_0+s a_2+s^2 a_4+\cdots],
+$$
+
+$$
+a_0=4,\qquad a_2=-R/3,\qquad
+ a_4=\frac{R^2-3|\mathrm{Ric}|^2-\Delta R}{30}+\frac23 F_{ij}F^{ij}.
+$$
+
+These follow from the standard Laplace-type coefficients and Dirac traces,
+specialized to three spatial dimensions, as derived in the companion note.
+Both chiralities are included once; there is no extra antiparticle factor.
+F includes q already; no second charge/coupling factor is inserted. Curvature is
+positive on spheres and Delta=div grad. The local Laplacian term must remain.
+These are coefficients of the full operator, not of the single-mu packet.
+
+The implementation differentiates the exact radical Weyl formulas with isolated
+60-digit mpmath contexts. A conformal two-dimensional base plus a warped circle
+gives R and Ricci; differentiating R gives the full optical Laplacian, including
+the beta-volume term. F^2=2q^2[(a_rho)^2+(a_z)^2]/(alpha^2 beta^2).
+The calculation samples13 equatorial points through the magnetic-null region,
+plus two off-equatorial points. It reuses the exact coordinate center and scale
+of119. The background is still the known uncut classical exterior.
+
+At the saved center rho*=0.667235466041523395..., z=0, in D=1 units:
+
+| Quantity | Numerical value (rounded) |
+| --- | --- |
+| Optical scalar curvature R | -0.175115427325055 |
+| Optical Ricci norm squared | 0.071760655670821 |
+| Optical Laplacian of R | 0.532084053956823 |
+| Charge-included F squared | 4.84995633746553e-24 |
+| a2 | 0.058371809108352 |
+| Curvature part of a4 | -0.023890020269402 |
+| Magnetic part of a4 | 3.23330422497702e-24 |
+
+The tiny central F is consistent with the dyadic center being extremely close
+to the exact magnetic null; it is not asserted to vanish exactly. At the nearby
+c=-2 and c=2 points, the magnetic a4 contributions are approximately1.57733e8
+and1.42994e8. All are subtraction coefficients, not renormalized energies.
+Even at the null the curvature subtraction remains nonzero. Higher coefficients
+can contain field gradients: a small local F alone does not certify a useful
+finite-proper-time expansion or bound its omitted terms.
+
+### Direct connection to the lapse response
+
+For the fixed physical spatial metric and gauge, N_e=N(1+e f) gives
+optical ghat_e=(1+e f)^-2 ghat. The local density variations are
+
+$$
+\frac{\delta(dV a_0)}{dV}=-3f a_0,\qquad
+\frac{\delta(dV a_2)}{dV}=-f a_2-\frac43\Delta f,
+$$
+
+$$
+\frac{\delta(dV a_4)}{dV}=f a_4-
+\frac{6\mathrm{Ric}^{ij}\nabla_i\nabla_jf
++3\nabla f\cdot\nabla R+4\Delta^2f}{30}.
+$$
+
+For compact f, integrating the **variation of the full coefficient density**
+cancels these derivative terms by integration by parts and the contracted
+Bianchi identity. The respective integrated weights are(-3,-1,+1):
+
+$$
+\delta\!\int a_{2j}dV=(2j-3)\int f a_{2j}dV.
+$$
+
+The left side denotes the finite integral of the local compactly supported
+variation, not a subtraction of two divergent global integrals. An additional
+independent observation window introduces derivative/window terms and must not
+be silently inserted into this identity. The proper-time finite-cutoff boundary
+term is also retained in the companion derivation.
+
+The code directly perturbs alpha and beta by(1+e f)^-1 while holding A fixed,
+then recomputes all fourth-derivative invariants. Its actual density derivative
+is compared with the formulas above at the center and(rho,z)=(.64,.03), using
+120's central Gaussian within the untapered patch. Two independent five-point
+steps1e-5 and5e-6 agree in every a0/a2/a4 component, with maximum normalized
+error below2.585e-19. Local derivative terms are large and are not dropped.
+
+### Checks and scope of the subtraction
+
+The final strict run took5.40s. Three exact geometric controls cover flat space
+with a uniform field, S^2 times a line, and a nonconstant-curvature warp. The
+last gives a4=(1-rho^4)/15, detecting the Laplacian sign. Independent direct
+Christoffel evaluation using the existing generic geometry routine agrees for
+R, Ricci norm and Riemann norm at four dihole points to below2e-16 normalized
+error. A separate agent's symbolic Christoffel calculation verified all nine
+warped Ricci components. Four60/90-digit comparisons change by less than1.4e-60
+(normalized). This numerical agreement is **not** an interval certificate.
+
+Exact Landau heat data give4sB*coth(sB). Flat subtraction alone leaves a1/s
+term in the normalized proper-time energy integrand; including the magnetic
+coefficient cancels that logarithmic divergence. The remaining integrand tends
+to zero in this exact constant-field benchmark. A separate S^2 Dirac-spectrum
+sum checks the nonzero curved a2 and a4 normalization. These controls do not
+assert a finite-time heat-kernel remainder bound for the dihole.
+
+The next substantive task is the finite, nonlocal kernel with controlled mode
+and proper-time limits, using the specified exterior state. The physical stress
+also needs a consistent covariant renormalization scheme, conformal anomaly and
+metric variation. Multiplying an optical answer by N^-4 alone is insufficient.
+No stable throat, obtainable material, new physical law, or passage from
+13 September2027 to12 September2027 has been established. Professor-feedback
+readiness remains unchanged; no message has been sent.
+
 ## Local lapse susceptibility in the exact exterior — increment120
 
 [Calculation](../scripts/dihole_lapse_susceptibility.py), [results](../results/dihole_lapse_susceptibility_results.json),

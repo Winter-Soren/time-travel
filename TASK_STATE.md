@@ -58,6 +58,44 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Optical heat subtraction and lapse counterterms — increment121
+- Previous goal turn PROGRESS:120 published6fdc2f34cc7fe6d07acbf8bdb346d4e0e010d7b0;
+  privateorigin/clean verified.121 began clean. All prior scientific files preserved.
+- NEW scripts/dihole_optical_heat.py, results/dihole_optical_heat_results.json,
+  figures/dihole_optical_heat_progress.png/.pdf, docs/OPTICAL_HEAT_SUBTRACTION.md.
+- Full rank4 optical Dirac heat diagonal, one species/bothchiralities once:
+  (4pi*s)^-3/2 [a0+s*a2+s²*a4+...]; a0=4,a2=-R/3,
+  a4=(R²-3Ric²-DeltaR)/30+(2/3)F². Delta=divgrad,spherepositiveR.
+  F²=2q²|grad aunit|²/(alpha²beta²),q512000 chargedonce.
+- Exactbalancedradicals; alpha=P/N,beta=rho/N².60digit fourthderivatives at15points;
+ 13equatorial +2offequatorial. Existing119dyadiccoordinatecenter/length reused.
+- CentralR=-.175115427325055,Ric²=.071760655670821,DeltaR=.532084053956823;
+  F²~4.84995633746553e-24; a2=.058371809108352;
+  a4gravity=-.023890020269402, a4gauge~3.23330422497702e-24.
+  c±2magneticparts~1.58e8/1.43e8. Subtractioncoefficients, notenergies.
+- Exactlocal fixedspatialmetric/gauge lapse variation: opticalg_e=(1+e*f)^-2g.
+  delta(dV*a0)/dV=-3f*a0; delta(dV*a2)/dV=-f*a2-4Deltaf/3;
+  delta(dV*a4)/dV=f*a4-(6RicHessf+3gradfgradR+4Delta²f)/30.
+  Integratedlocalcompactvariation weights(-3,-1,+1), fromBianchi+parts;
+  no assumedfiniteunperturbedglobaltrace andnoextrawindow. Cutoffboundaryterm retained.
+- Directactualmetric finiteperturbations at2points, two5pointsteps1e-5/5e-6:
+  maxnormalizeddifference<2.585e-19.3exactgeometrycontrols, exactLandauheat
+  andcurvedS²spectrumcontrols PASS. GeneralChristoffelcontrol at4actualpoints
+  <2e-16; 60/90digitcomparisons<1.4e-60. Notintervalcertification.
+- Finalstrictdriver5.40s. Independentsource/analytic/implementationaudits and
+  figureinspection. Savedexactinputs/sourcehashes. No older simulations rerun.
+- Next: finite nonlocal heat/differentiatedkernel withcontrolledmode/propertime
+  limits; consistentcovariantrenormalization andconformalanomaly towardphysical
+  stress. No omittedheatcoefficientremainderbound fromthese3coefficients.
+  SmallFatnull doesnotboundfieldgradientterms. No support/backreaction/stability,
+  material/newlaw or13Sep2027->12Sep2027 passage. GoalremainsACTIVE.
+- Professorfirstfeedbackmilestonealreadyreached/notified, heartbeatPAUSED;
+  noemailauthorized/sent.
+- Verification:89imports/680links/8historicalguards/14frozeninputs PASS;
+  all529previous scientificfiles andbothhistorysuffixes byte-identical.
+  DriverSHA409c96faf0e878b7843970101082b5f3b53da3f8118e3b7513fe63833499e8d4;
+  resultSHAd350410874f6bc17e9718b90f7e394bab7a4586e351dc8d3e758ebbefa7dbeac.
+
 ### Local lapse susceptibility and exterior state — increment120
 - Previous goal turn PROGRESS:119 published051740d891e23af21413f8c50e6e128a299388c0;
   privateorigin/clean verified.120 began clean; older scientific files preserved.

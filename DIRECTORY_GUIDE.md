@@ -34,6 +34,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Optical heat subtraction and lapse counterterms | [driver](scripts/dihole_optical_heat.py), [results](results/dihole_optical_heat_results.json), [figure](figures/dihole_optical_heat_progress.png), [derivation](docs/OPTICAL_HEAT_SUBTRACTION.md) |
 | Local lapse susceptibility and specified exterior state | [driver](scripts/dihole_lapse_susceptibility.py), [results](results/dihole_lapse_susceptibility_results.json), [figure](figures/dihole_lapse_susceptibility_progress.png), [state and stress bridge](docs/EXTERIOR_STRESS_BRIDGE.md) |
 | Complete compact-probe certificate in the exact exterior | [driver](scripts/dihole_probe_certificate.py), [interval arithmetic](scripts/dihole_interval_arithmetic.py), [validated grid](scripts/dihole_interval_quadrature.py), [results](results/dihole_probe_certificate_results.json), [figure](figures/dihole_probe_certificate_progress.png) |
 | Analytic compact-probe quadrature remainder only | [bound](scripts/dihole_quadrature_remainder.py), [interval results](results/dihole_quadrature_remainder_results.json); this historical remainder component is now combined with validated sums in the119 certificate |

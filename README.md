@@ -6,6 +6,8 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The [optical heat calculation](scripts/dihole_optical_heat.py) now evaluates the short-distance subtraction coefficients needed for a full quantum-stress calculation, including curvature, the magnetic field, and their response to a lapse change. Exact spectral benchmarks, direct metric variations and independent curvature checks pass. Near the magnetic null the curvature term remains nonzero. These coefficients do not supply the finite vacuum energy or supporting stress. See [results](results/dihole_optical_heat_results.json), [derivation](docs/OPTICAL_HEAT_SUBTRACTION.md), and [figure](figures/dihole_optical_heat_progress.png).
+
 The new [local lapse calculation](scripts/dihole_lapse_susceptibility.py) encloses how that compact quantum response changes under three smooth, localized variations of gravitational clock rate. All three derivative signs are resolved; the central derivative lies in $[-0.2841258294,-0.2776399945]$, displayed here with outward decimal rounding. The strict calculation takes about13 seconds and reuses the existing continuum certificate. See [results](results/dihole_lapse_susceptibility_results.json), [figure](figures/dihole_lapse_susceptibility_progress.png), and [state and stress bridge](docs/EXTERIOR_STRESS_BRIDGE.md). A negative response derivative is not evidence of negative energy or throat support.
 
 The [curved-probe certificate](scripts/dihole_probe_certificate.py) now encloses one imaginary-frequency response in the **exact balanced exterior**, including the trial residual, integration remainder, parameter evaluation and arithmetic rounding. Its imaginary part lies in $[0.41900184413867064,\ 0.4190074151728139]$. The full run takes about 23 seconds and includes independent geometry controls. See [results](results/dihole_probe_certificate_results.json), [figure](figures/dihole_probe_certificate_progress.png), [derivation](docs/RESEARCH.md), and the updated [professor-assessment brief](docs/PROFESSOR_BRIEF.md).
@@ -52,6 +54,7 @@ Local state-admissibility arguments are now supplied for both the full invariant
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Optical heat subtraction](scripts/dihole_optical_heat.py) · [results](results/dihole_optical_heat_results.json) | Full-rank local ultraviolet coefficients, exact spectral controls and direct lapse variations | Geometry-dependent subtraction and its variation; the finite heat kernel and physical stress remain open |
 | [Local lapse susceptibility](scripts/dihole_lapse_susceptibility.py) · [results](results/dihole_lapse_susceptibility_results.json) | Fixed-spatial-metric variation, compact smooth masks, certified overlap integrals and inherited field-error bounds | Three enclosed response derivatives; no supporting stress or medium |
 | [Curved local probe](scripts/dihole_probe_residual.py) · [results](results/dihole_probe_residual_results.json) · [field](data/dihole_probe_residual_fields.npz) | Actual curved operator, physical mode quantization, compact source, two defect corrections and quadrature comparisons | A smaller numerical residual with fixed source; no certified curved-response interval or supporting stress |
 | [Whole-plane Gaussian response](scripts/null_saddle_resolvent.py) · [interval checker](scripts/null_saddle_residual_interval.py) · [results](results/null_saddle_resolvent_results.json) · [field](data/null_saddle_resolvent_fields.npz) | Self-adjoint domain, full continuum residual, independent coordinate control and interval primal/adjoint bounds | Certified responses to one fixed probe at two frequencies in the ideal saddle; no real-axis scattering, curved-model error bound or supporting stress |
@@ -104,6 +107,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scripts/scattering_vacuum.py) · [results](results/scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Optical subtraction coefficients and exact cancellation benchmark](figures/dihole_optical_heat_progress.png)
+
+*Subtraction coefficients remove short-distance divergences; their signs are not signs of physical energy density.*
 
 ![Local lapse perturbations and bounded response derivatives](figures/dihole_lapse_susceptibility_progress.png)
 
@@ -193,6 +200,12 @@ Start with a small symbolic check that does not rewrite results:
 ```
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
+
+The local optical subtraction calculation takes about6 seconds, including geometry, spectral and metric-variation controls:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 scripts/dihole_optical_heat.py
+```
 
 The current local lapse calculation takes about13 seconds and writes its own results and figure, while checking and reusing the saved119 certificate:
 
