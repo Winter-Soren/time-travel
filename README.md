@@ -6,6 +6,8 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The [finite heat calculation](scripts/dihole_finite_heat.py) now sums769 angular sectors in the actual curved exterior at three locations. Spatial refinement is reassuring at the shortest tested heat parameter, but longer-range values and off-center angular sums still change at the percent level. This is a finite-box pilot, with no certified exterior limit or renormalized stress. See [results](results/dihole_finite_heat_results.json), [derivation and limitations](docs/RESEARCH.md), and [figure](figures/dihole_finite_heat_progress.png).
+
 The [optical heat calculation](scripts/dihole_optical_heat.py) now evaluates the short-distance subtraction coefficients needed for a full quantum-stress calculation, including curvature, the magnetic field, and their response to a lapse change. Exact spectral benchmarks, direct metric variations and independent curvature checks pass. Near the magnetic null the curvature term remains nonzero. These coefficients do not supply the finite vacuum energy or supporting stress. See [results](results/dihole_optical_heat_results.json), [derivation](docs/OPTICAL_HEAT_SUBTRACTION.md), and [figure](figures/dihole_optical_heat_progress.png).
 
 The new [local lapse calculation](scripts/dihole_lapse_susceptibility.py) encloses how that compact quantum response changes under three smooth, localized variations of gravitational clock rate. All three derivative signs are resolved; the central derivative lies in $[-0.2841258294,-0.2776399945]$, displayed here with outward decimal rounding. The strict calculation takes about13 seconds and reuses the existing continuum certificate. See [results](results/dihole_lapse_susceptibility_results.json), [figure](figures/dihole_lapse_susceptibility_progress.png), and [state and stress bridge](docs/EXTERIOR_STRESS_BRIDGE.md). A negative response derivative is not evidence of negative energy or throat support.
@@ -107,6 +109,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scripts/scattering_vacuum.py) · [results](results/scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Finite curved heat response and spatial refinement](figures/dihole_finite_heat_progress.png)
+
+*The horizontal axis is a spectral heat parameter, not elapsed travel time. The plotted response is not energy density or a portal.*
 
 ![Optical subtraction coefficients and exact cancellation benchmark](figures/dihole_optical_heat_progress.png)
 

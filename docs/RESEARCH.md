@@ -1,5 +1,115 @@
 # Reproduction and coupled-model iterations
 
+## Finite curved heat diagonal and angular sums — increment122
+
+[Driver](../scripts/dihole_finite_heat.py), [results](../results/dihole_finite_heat_results.json),
+and [figure](../figures/dihole_finite_heat_progress.png).
+
+The actual curved exterior now has a numerical **finite-box heat diagonal**,
+including769 half-integer angular sectors, both chiralities, three spatial
+points and three heat parameters. This is the first finite-kernel pilot after
+the121 local subtraction calculation. It does not yet supply an exterior
+continuum kernel, a proper-time energy integral or renormalized stress.
+The heat parameter is Schwinger's spectral parameter, with dimensions of
+length squared in natural units; it is not elapsed travel or calendar time.
+
+### Operator, projection and normalization
+
+Reuse the exact balanced geometry of [Emparan](https://arxiv.org/abs/hep-th/9906160),
+the119 dyadic center and length, and q=512000. The angular interval is
+mu=398855.5+j, j=-384,...,384, centered near q*a(rho*,0). This is different
+from the119 single-probe sector. Scaled coordinates satisfy
+rho=rho*+L(u+v)/sqrt(2), z=L(u-v)/sqrt(2), E=v*/L. Set tau=s E^2.
+For the one-chirality scaled operator Hq=iK and normalized tensor-product
+sines on [-A,A]^2, form the positive matrix
+
+$$
+M_{ij}(\mu)=\langle H_{q,\mu}\phi_i,H_{q,\mu}\phi_j\rangle.
+$$
+
+It is quadratic in j and is **not** the square of the projected first-order
+matrix. Zero-extended sines lie in the first-order graph/form domain; their
+normal-derivative jumps generally prevent membership in the square's operator
+domain. The limiting box operator is the Friedrichs square Hmin* Hmin.
+It is not a specified self-adjoint first-order Dirac wall.
+
+With optical volume density Jopt=alpha^2 beta=P^2 rho/N^4, point evaluation
+of the finite eigenvectors gives
+
+$$
+K_{\rm opt}(s;x,x)=\frac{2}{2\pi L^2 J_{\rm opt}(x)}
+\sum_\mu \operatorname{tr}_2 K_{q,\mu}(\tau;\xi,\xi).
+$$
+
+The trace already counts two spin components; the additional2 counts the
+opposite chirality once. Fourier normalization is1/(2pi). A constant optical
+cylinder recovers the full-rank leading term4/(4pi*s)^(3/2).
+Only finite sums are evaluated here. Fixed spatial/angular truncations cannot
+be taken to s=0 to recover the full ultraviolet asymptotics.
+
+### Numerical results and remaining sensitivities
+
+At (u,v)=(c,c), the widest tested box (N=22,A=5) gives the dimensionless
+quantity (4pi*s)^(3/2) Kopt below. Values are rounded numerical outputs,
+not certified enclosures. The three s values in D=1 units are approximately
+0.000266462,0.000532923 and0.001065846.
+
+| Scaled heat parameter tau | At the magnetic null | c=-1 | c=+1 |
+| --- | --- | --- | --- |
+| 0.5 | 4.148407 | 6.481614 | 6.376561 |
+| 1 | 4.944359 | 11.608429 | 11.341620 |
+| 2 | 7.846049 | 22.931226 | 22.373956 |
+
+The flat local leading value is4. Differences from it measure the finite
+heat response in this approximation, not negative energy or throat support.
+The [local coefficients](OPTICAL_HEAT_SUBTRACTION.md) remain subtraction data;
+as emphasized by [Fulling](https://arxiv.org/abs/quant-ph/0302117), they do not
+determine the finite nonlocal energy.
+
+- At fixed A=4, N=14 to18 changes the central tau=0.5 value by3.00e-6
+  (0.0000724% of the latter value). At c=-1,tau=2 the change is0.2123,
+  approximately0.9395%: that part is still sensitive to the spatial basis.
+- Comparing N=18,A=4 with N=22,A=5 changes the central values by about
+  -1.03e-6,-7.18e-5,+0.01318. The largest relative change is1.949% at
+  c=+1,tau=2. N/A changes from4.5 to4.4, so this mixes spatial resolution
+  and boundary effects; it is not a clean boundary-error measurement.
+- In the widest box, angular cutoff256 to384 adds only1.39e-5 at the
+  center,tau=0.5, but adds about1.65%-1.95% at the off-center points
+  for tau=0.5 and1. The uncomputed angular tail is therefore important.
+  These last-band contributions do not upper-bound the remaining tail.
+
+The smallest-heat-parameter spatial comparisons are encouraging, while the
+longer-range and off-center values need further work. Agreement alone does
+not prove the uncut exterior limit. These off-axis centered boxes cannot
+exhaust the full exterior without hitting the axis. Pointwise Galerkin heat
+diagonals are not claimed to be lower bounds for the exact diagonal.
+
+### Verification and next calculation
+
+All four runs use769 sectors: (N,A)=(10,4),(14,4),(18,4),(22,5).
+Gauss orders36,48,60,72 are compared with orders12 higher. The maximum
+measured matrix change, including the largest retained angular offset, is
+1.174e-10; this is a quadrature sensitivity, not a quadrature remainder bound.
+The largest omitted-eigenpair bound for the **finite numerical matrices**,
+in the displayed normalized units, is below3.12e-15. It does not include
+rounding, quadrature, spatial, boundary or omitted-angular errors.
+
+Exact free-sine controls include a noninteger gauge offset and three angular
+values; heat errors are below2.4e-15. A65-digit angular Poisson identity and
+optical-volume/spin normalization check pass. Actual coefficients agree with
+75-digit exact-geometry derivatives at four points to below5.70e-13 normalized
+error. An independent small variable-coefficient assembly agrees to4.0e-15,
+and its point heat diagonal agrees to3.1e-16. The strict driver took275.27s.
+All actual source/input hashes are saved; no older simulations were rerun.
+
+Next, separate the spatial and boundary sensitivities and control the
+omitted angular contribution before using a kernel in an energy integral.
+The full state, covariant subtraction/anomaly and metric variation are still
+needed for physical stress. No material, stable throat, new physical law or
+13 September2027 to12 September2027 passage has been established. The existing
+professor brief remains suitable for initial methodological feedback; this
+finite pilot does not turn it into a supporting-medium claim.
+
 ## Optical ultraviolet subtraction and its lapse variation — increment121
 
 [Driver](../scripts/dihole_optical_heat.py), [results](../results/dihole_optical_heat_results.json),

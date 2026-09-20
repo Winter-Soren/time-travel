@@ -58,6 +58,47 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Finite curved heat diagonal and angular sums — increment122
+- Previous goal turn PROGRESS:121 published84be3a79aba94d6c0cda7fc8392e84ffc1f274bd;
+  privateorigin/clean verified.122 began clean. Preserve all533 prior sciencefiles.
+- NEW scripts/dihole_finite_heat.py, results/dihole_finite_heat_results.json,
+  figures/dihole_finite_heat_progress.png/.pdf. Strict finalrun275.27s, session20748
+  completedexit0; no simulation remains running. Figure inspected.
+- Actualbalancedcurved Hq=iK; normalizedsines on[-A,A]^2; positiveform
+  M=<Hphi,Hphi>, NOT(PHP)^2. BoxFriedrichssquare Hmin*Hmin; zeroextensions
+  inH1graphdomain, notgenerallyD(H²). No selfadjointfirstorderwallclaim.
+- q512000, reused119dyadiccoordinates/E; mu0=398855.5 (not119probesector).
+  j=-384..384 =>769sectors for each(N,A)=(10,4),(14,4),(18,4),(22,5).
+  tau=.5,1,2; points(c,c),c=0,-1,+1. Fullrank4 opticaldensity normalized
+  Kopt=2/(2pi L²Jopt)*sum_mu tr2Kq; tau=sE²,Jopt=alpha²beta.
+- Widestbox normalizedheatrows tau=.5,1,2;columnscenter,-1,+1:
+  [4.148406610790019,6.481613941369014,6.376560817520697];
+  [4.944358568289626,11.608428757590834,11.34162014285449];
+  [7.846049259498091,22.931225928396785,22.373956496493406].
+- FixedA4,N14->18 maximumrelativechange0.9395% (c-1,tau2).
+  N18A4->N22A5 maximumchange1.949%; N/A4.5->4.4, mixedboundary/basischeck.
+  Angular256->384 addsup to1.950%offcenter; remainingtailnotbounded.
+  Center,tau.5lastbasischange3.00e-6,lastboxchange-1.03e-6.
+- GLorder+12 maxall-retained-mumatrixchange1.174e-10: sensitivity, notremainder.
+  Finitematrixomittedeigenbound<3.12e-15normalized; doesnotcoverfloating,
+  quadrature,spatial,angularorexteriorerror. No pointwiselowerboundclaimed.
+- Exactfreesineheaterror<2.4e-15; nonintegerholonomyPoisson65digits;
+  freevolumenormalizationPASS.75digitactualcoefficientcontrol<5.70e-13.
+  Independentvariablecoefficientassembly<4e-15,heat<3.1e-16. AuditsPASS.
+- Theseoffaxisboxes cannotexhaustnaturalexterior. Fixedcutoffs cannotrecoverUV
+  as tau->0. Heatparameterhaslength²units, NOTtravel/calendar/propertimeoftraveler.
+- Next: controlledomittedangularcontribution; separatebasis/boundaryeffects
+  towardnonlocalexteriorkernel, then subtractedintegral/metricvariation/anomaly.
+  No renormalizedstress,support,stability,material,newlaworbackwardpassage.
+- Professorfirstfeedbackmilestonealreadyreached/notified; heartbeatPAUSED;
+  noemailauthorized/sent. GoalACTIVE. No newtask/goal/monitor.
+- Verification:90imports/693links/8historicalguards/14frozeninputs PASS;
+  all533prior sciencefiles,bothhistorysuffixes,all122source/inputhashes unchanged.
+- Nextboundedrun: reuseA4/N18,tau.5; addonlyj=+-385..512 andreport
+  cumulative/finalshellcontributions. No needreruncompleted122sectors.
+- DriverSHAff220eb27e16db3ecc8aa46e1406fc6f5f01f00a2cdb7a6c6b17b628fad629f4;
+  resultSHA9b345db0f031f660bc46fbcc5329b513c32e93def1a0ee95298d11b366d7bf11.
+
 ### Optical heat subtraction and lapse counterterms — increment121
 - Previous goal turn PROGRESS:120 published6fdc2f34cc7fe6d07acbf8bdb346d4e0e010d7b0;
   privateorigin/clean verified.121 began clean. All prior scientific files preserved.
