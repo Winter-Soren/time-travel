@@ -1,5 +1,154 @@
 # Reproduction and coupled-model iterations
 
+## Curved exterior return and connected source diagnostic — increment131
+
+This step connects the actual130 bridge to a finite-domain return problem
+using the actual balanced-dihole metric and magnetic connection. The prior
+flat exterior's numerical components are reused, not its physical fields.
+The remote boundary and polygonal cut approximation remain explicit.
+
+### Exact transformation reusing the conservative volume/flux structure
+
+For the exterior canonical spinor f with measure drho dz, put
+v=N/P, W=P/N and b=N^2/rho. The one-Weyl-block Hamiltonian is
+
+$$
+H=-i\sigma_x(v\partial_\rho+v_\rho/2)
+  -i\sigma_z(v\partial_z+v_z/2)
+  +\sigma_y b(\mu-qa).
+$$
+
+Set u=sqrt(v/rho) f. The stationary equation is exactly
+
+$$
+\left[\sigma_x\left(\partial_\rho+\frac1{2\rho}\right)
++\sigma_z\partial_z
++i\sigma_y\frac{NP(\mu-qa)}\rho-i E W\right]u=0.
+$$
+
+The physical norm is integral rho W |u|^2 drho dz and the meridional flux
+is rho u^dagger sigma u. Thus the conservative weighted principal operator,
+characteristic projectors and regular-axis branches of the existing DG
+solver can be retained. Only two volume terms change: replace the old
+azimuthal coefficient by NP(mu-qa), and replace the energy mass by rho W.
+For E=i kappa the latter is a positive damping term. This removes no curved
+physics and assumes neither N=1 nor a round cut. All actual coefficients
+are evaluated from the same [balanced exterior](../scripts/balanced_dihole.py)
+used129, based on [Emparan's metric](https://arxiv.org/abs/hep-th/9906160).
+
+### Exact trace and spin normalization on the true spherical cuts
+
+Let U_R=exp(-i theta sigma_y/2), U_L=exp(+i theta sigma_y/2). On
+(rho,z)=(Rc sin(theta),k+Rc cos(theta)) and its lower reflection,
+
+$$
+w_{R,L}=\sqrt{R_c v}\,U_{R,L}^\dagger f,
+\qquad u_{\rm cut}=\frac{U_{R,L}w}{R_c\sqrt{\sin\theta}}.
+$$
+
+The apparent lapse cancellation in the second formula is a result of the
+flux transformation. The upper exterior outward normal becomes -sigma3,
+and the lower becomes +sigma3; the bridge's corresponding outward normals
+have the opposite signs. Their seam fluxes therefore cancel. Exterior
+inputs [b_left,a_right] equal bridge outputs; exterior outputs
+[a_left,b_right] equal bridge inputs.
+
+Relative to the saved global-angle spherical bases, both lower degree-n
+bases acquire (-1)^(n+1), including a minus on the n=0 zero mode. This
+comes from the stated spin lift and Legendre parity, not a separately
+inferred physical loop phase. Opposite outward magnetic fluxes require no
+charge conjugation; the connection itself is reflection-even. The
+additional gauge/spin sewing phase is varied separately in the calculation.
+
+### Finite connected response and its scope
+
+The finite exterior map R_ext sends incoming mouth coefficients to outgoing
+ones. The bridge map B sends them back, after the explicit spin/port ordering
+and separate incoming/outgoing facet Gram transformations. The sewn matrix
+is I-B R_ext. Holding the exterior fixed, the compact source variation130
+gives the finite algebraic diagnostic
+
+$$
+\partial_\epsilon\operatorname{Re}\log\det(I-BR_{\rm ext})
+=-\operatorname{Re}\operatorname{Tr}
+ [(I-BR_{\rm ext})^{-1}(\partial_\epsilon B)R_{\rm ext}].
+$$
+
+It is not an absolute vacuum-energy or null-stress calculation. In addition
+to its frequency and angular completion, it needs a common self-adjoint
+state/subtraction and the missing local terms. The zero-incoming remote
+boundary is a finite approximation, not a transparent Melvin infinity.
+The polygonal cuts also retain radial-displacement and cross-characteristic
+projection errors. Those errors are assessed through the actual response;
+passing a discrete flux identity alone does not remove them.
+
+### Computed connected result and the exposed remote-boundary error
+
+[Curved exterior helper](../scripts/dihole_curved_exterior.py),
+[connected driver](../scripts/dihole_return_pilot.py),
+[results and matrices](../results/dihole_return_pilot_results.json), and
+[response plot](../figures/dihole_return_pilot_progress.png).
+The retained calculation uses q=1, mu=1/2, four nonzero angular pairs,
+and kappa D=.1. The derivative is the finite diagnostic defined above.
+
+| Near mesh h/D | Outer radius R/D | Additional phase0 derivative | Additional phase pi derivative |
+| --- | --- | --- | --- |
+| .04 | 1.1 | .0831971860 | .0337979627 |
+| .028 | 1.1 | .0859328493 | .0357304156 |
+| .028 | 1.6 | .0944517454 | .0254536594 |
+| .028 | 8, graded | .0947283880 | .0251106856 |
+| .028 | 16, graded | .0946116924 | .0252485496 |
+
+The first expansion from1.1 to1.6 has a substantial effect, so the initial
+small-domain result was not treated as an exterior limit. To extend the
+actual domain cheaply, reuse the Rbase=1.6 triangulation and radially move
+vertices only beyond r0=.65 D:
+
+$$
+F(r)=r+(R_{\rm target}-R_{\rm base})
+       \left(\frac{r-r_0}{R_{\rm base}-r_0}\right)^2.
+$$
+
+All entrance vertices and the near mesh remain byte-identical; every field
+coefficient is evaluated at its new physical point, with no interpolation
+or change to the metric. Positive triangle orientation and rebuilt outward
+normals are checked rather than repaired by relabeling. Both extended
+meshes have4184 triangles. Largest distant edges are1.43 D and3.09 D;
+this explicitly limits far angular/axial resolution. The18 geometry controls
+pass; it is still a finite-boundary approximation.
+
+From R8 toR16, the phase0 diagnostic changes by about0.123% and the phase-pi
+diagnostic by about0.549%. Their difference changes by about0.366%.
+This is numerical sensitivity, not an enclosure or proof of the exterior
+limit. Near-mesh error, coarse distant cells, polygonal mouth matching and
+the omitted angular sectors remain. The monitored DG jump/mismatch loss
+is about1.44% of the normalized input atR8 and1.82% atR16; it must not be
+reported as physical escape. The projected zero-to-zero exterior return
+atR16 is -0.22746110 in the explicitly declared spin/port convention;
+its square is not an imaginary-frequency probability.
+
+The connected driver passes nine focused algebraic controls, including
+both maps' finite passivity, the actual curved absorption identity,
+physical norm integration, linear residual and determinant-derivative
+identity. The helper's nine small-model controls also pass; an off-shell
+flux check tests more than a solved matrix's zero residual. The spin/port
+sewing received one bounded independent read-only check. Five final field
+cases complete in about14 seconds after bridge preparation, without any
+old large simulation or spectrum-certification rerun.
+
+### Next direct source calculation
+
+The actual finite bridge/exterior interaction and its compact metric
+variation are now computed together. Next evaluate its frequency-window
+contribution, preserving phase conventions and separating the phase
+difference from absolute source terms. Reuse this assembly and its mass
+matrix across frequencies. Check sensitivity where it affects this source
+observable; do not replace it with unrelated spectral certification.
+A frequency-window interaction remains incomplete until its missing tails,
+angular modes, global-state/subtraction requirements, local stress terms
+and current are accounted for. These finite results do not establish a
+material, a self-consistent throat, stability, new laws or backward travel.
+
 ## Actual bridge propagation and a specified source variation — increment130
 
 The previous increment supplied a compatible prescribed geometry and its

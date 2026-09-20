@@ -34,6 +34,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Actual curved exterior return sewn to the bridge | [curved helper](scripts/dihole_curved_exterior.py), [driver](scripts/dihole_return_pilot.py), [results](results/dihole_return_pilot_results.json), [figure](figures/dihole_return_pilot_progress.png), [derivation and limits](docs/RESEARCH.md) |
 | Actual two-collar quantum response and compact source variation | [driver](scripts/dihole_bridge_scattering.py), [results](results/dihole_bridge_scattering_results.json), [figure](figures/dihole_bridge_scattering_progress.png), [derivation](docs/RESEARCH.md) |
 | Actual central-cylinder zero profile and coupled propagation | [driver](scripts/dihole_cylinder_transfer.py), [results](results/dihole_cylinder_transfer_results.json), [figure](figures/dihole_cylinder_transfer_progress.png) |
 | Smooth bridge with actual cut data and required null source | [driver](scripts/dihole_stretched_collar.py), [results](results/dihole_stretched_collar_results.json), [figure](figures/dihole_stretched_collar_progress.png), [derivation](docs/RESEARCH.md) |

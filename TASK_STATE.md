@@ -58,6 +58,47 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Connected actual-curved return and source diagnostic — increment131
+- Previous130 PROGRESS: published2da6c567903eca2c74fbd1da3d092f30db093e26;
+ origin matched and clean. Original chat/Downloads import stays COMPLETE.
+- NEW dihole_curved_exterior.py: exact u=sqrt(v/rho) f transform allows reuse
+ of conservative DG principal/face matrices with actual NP(mu-q a) and
+ rho W mass, W=P/N. Helper9 controls passed, including off-shell flux and
+ independent physical-norm quadrature. No old scientific source edited.
+- NEW dihole_return_pilot.py: actual130 bridge plus actual curved finite
+ exterior return, q1 mu.5 one Weyl block, four angular pairs, kappaD=.1.
+ Exact trace sewing w=sqrt(Rc v) U^dagger f; DG trace U w/(Rc sqrt(sin theta)).
+ Lower global-angle basis parity(-1)^(n+1), including zero minus; physical
+ additional phase kept separate. Narrow independent sewing check PASS.
+- Finite diagnostic is d_e Re logdet(I-B Rext), NOT absolute null stress.
+ h/R cases: .04/1.1 gives(.083197186,.033797963) for additional phases0/pi;
+ .028/1.1 gives(.085932849,.035730416); .028/1.6 gives(.094451745,.025453659).
+ Significant outer error triggered the SAME observable's efficient extension.
+- Graded meshes reuse Rbase1.6 and fix r<=.65 and all mouth vertices exactly;
+ F(r)=r+(Rtarget-Rbase)((r-.65)/(Rbase-.65))^2. Actual coefficients at new
+ points, no interpolation. R8/R16 both4184 triangles, maxfar edges1.43/3.09.
+ All18 geometry controls pass; far resolution is a recorded limitation.
+- .028/R8 diagnostics(.094728388,.025110686); R16(.094611692,.025248550).
+ Last-domain change0.123%/0.549%, phase-difference change0.366%: sensitivity,
+ not certified bounds. Numerical jump/mismatch loss1.44%/1.82% is not escape.
+ Driver9 algebraic controls PASS; all input/source hashes match; figure read.
+- NEXT: actual connected frequency-window source contribution, reusing this
+ assembly + mass across kappa. Track phase difference vs absolute terms and
+ physical observable sensitivities. Do not restart old box-spectrum work.
+ Finite outer incoming-zero boundary is NOT transparent Melvin infinity;
+ polygon, angular, frequency tails, full state/local renormalized stress and
+ Maxwell current remain unresolved. No material/stability/chronology result.
+- Frozen SHA256:
+ helper71c8782caa1305e31c84fee95f688d62b349df4c66ee2c4acfcc37650f112cf5;
+ driver e4ae4632601050afd0f612ab0cc50c1fca1414c99208365041338fa2b1b45094;
+ result f69937efbb07cbc16638183758a6db4d7ab41ec109834a24e658535dbe3441bc.
+- All field runs terminal (final session52479 exited0); agents terminal.
+ Earlier provisional near-domain run was rerun only after the grading/API
+ change; its three numerical responses reproduced exactly in the final run.
+ No old scientific files changed;130-and-older TASK/RESEARCH suffixes preserved.
+ Goal ACTIVE. Professor feedback already appropriate; brief/paused heartbeat
+ unchanged, no email. 13 September2027 to12 September2027 remains unproved.
+
 ### Actual bridge scattering and compact source response — increment130
 - Previous129 PROGRESS: published a4f64072015bbd1ac0c180da6504b341ade452a5;
  origin matched, private/clean verified. Original import remains complete.
