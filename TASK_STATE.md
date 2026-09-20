@@ -58,6 +58,74 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Melvin spectrum, interval gap and actual curved axial lead — increment110
+- Previous goal turn classified PROGRESS:109 published at
+  514866c6ab5f5cb36c9f6d917b238a92c66ef65a; local/remote equal,
+  private=true and clean worktree verified. Current work began from that
+  clean state. Import COMPLETE; goal remains ACTIVE and unbudgeted.
+- melvin_leads.py/results:12 PASS (~2.4s), exact regular-axis Laguerre Ritz,
+  23 sectors mu=-.5,.5,...,21.5, both partners,160/224 plus scale1.1.
+  Exact21 upperzero channels; raw numerical zeros retained. Full radial
+  residual includes3 extra coefficients. Largest refined residual5.59e-11;
+  basis/scale shifts1.86e-12/1.58e-12. No artificial radial wall.
+- Separate oscillator comparison with70-digit intervals and exactQ=1/5,
+  D=q=1 proves EVERY positive transverse lambda²>.60/D².23 base sectors
+  suffice by pointwise outer-sector monotonicity and regular-domain pairing.
+  Weakest comparison .60964539594 atmu20.5. Independent85-digit proof and
+  4x4 Laguerre-quadrature reconstruction pass (relative<=6.72e-15).
+- Smallest computed positive mass1.08614682280/D atmu15.5; this Ritz value
+  is floating, distinct from the interval lowercomparison. For real energy
+  |E|<sqrt(.60)/D only21 zerochannels perWeyl propagate at infinity.
+  Virtual massive modes still contribute to vacuum stress. No support follows.
+- Outermost zero mu20.5 is an annulus with coordinate-rho quantiles
+  (65.58358599,67.10184490,68.58715389)D; not21 mouth modes/material rings.
+- Melvin sourcef68f937b8a82ddc297af5c636426fef107a4f209bbab3b67691ab464f88e5546;
+  data11496baab2fdf1712d8292071200aaf9ccc0ae616d443c65bb627869192b85a4.
+- Dihole tail expansion independently derived from exactfields: v=1-4M/|z|,
+  transverse H=(1-2M/|z|)U_a D U_a^-1 witha=1+2M/|z|, toO(z^-2).
+  Massive outgoing ratios change by1-2M*kappa/(Omega*|z|); zero direction
+  is unchanged. Expansion is for boundedrho, not a uniformwholemode bound.
+- NEW dihole_axial_tail.py/results: actualN,P,A, exactcanonical trace
+  w=sqrt(v)u, frequencyweight1/v and Wtrace=NP(mu-A)/rho. One angularsector
+  mu=.5, kappa=.2,2/3 massivepairs plus exactupperzero, rectangularlead.
+  Actual ODE propagation toz4,8,16,32; distantstarts32/64/128 and one
+  fixedbasis firstorderstart. This is not the inner2D/mouthresponse.
+- Atz4 three-pair ||Z-ZMelvin||=.0666090, zerocolumnnorm=.0560513;
+  atz8 departure=.0371514. Imaginaryfrequency diagnostics, NOT probabilities.
+ 14 checks pass; farstart sensitivity<=1.62e-13; radial32/96->48/144
+  difference2.64e-14; tighterODE5.91e-13. LeadingL32 vs pureL128at4
+  difference2.63e-13. Leadingstart itself atz32 differs2.23e-4.
+- Independent root7-component complex linear transport fromz8 to4 matches
+  the rectangular realRiccati map within5.95e-13 (uppercondition3672);
+  canonicalcurrent dissipationidentity errors<=2.26e-17.14 producer checks
+  and this independent check pass. Finalproducer runtime5.88s.
+- Axial source81f0f1250425532c493611b085452643623ead11c85b7e7311ecfdf9ecfd7d63;
+  data61794b76c0dcafa5d66b03f9238e323e327af8e46057c48b5d95f1aefd57198d.
+  Inputguards include target>k, start>target, positivekappa and a144-node
+  radialquadrature ceiling to avoid exp(weight) overflow; no newdependencies.
+- Two->three-pair commonblock change .00067382 atz4 is measured sensitivity,
+  not a convergencecertificate. Infinite channels, radialtail and fullsource
+  remain open. Do not repeat the same farstart/refinement sweeps.
+- New melvin_channel_progress.png/pdf rendered from frozen spectrumdata,
+  inspected by agent and root. All200 historical figures preserved; only
+  a new helper is added to the existing plotter. Figure shows probabilities
+  in radialcoordinate and positivegap, not a physicalmedium or a payload.
+- Figure PNGa444ce60d62e9af109385e34ba5d06138d86b2708888a02f2030a24e6fef011e;
+  PDFf9a585d342d149d9dcb0e13999c20b67fd3105ab4d5d110bfbd30bc81167900f.
+  Plotter84d1ad0a0521a9b23ec56357988a92c2bfe0892595da162ac563210830bcde0f.
+- NEXT: connect these oriented curved axial leads to the actual nonspherical
+  throatcuts through the innermeridional geometry. Preserve the one chiral
+  zero channel in each correct end, physicalcut trace/frame/gauge, actual
+  coefficients and a specified quantumstate. Use the transversegap to guide
+  omittedmassive-mode control; a gap alone does not remove vacuumterms.
+  Need fullrenormalizedstress/current, gravitationalbackreaction, formation
+  and stability before supporting-medium claims. Do not restart old106
+  sweeps or import. No physicalmedium/newlaw/13Sep2027->12Sep2027 shown.
+
+- Final preservation check:493 old files unchanged outside the five allowed
+  documentation/plotter edits; all200 old figures and historical research/
+  task suffixes are byte-identical. No live scientific calculation remains.
+
 ### Exact balanced exterior and finite-cut data — increment109
 - Previous goal turn classified PROGRESS:108 published at
   77115eb4209c9c4ececaf71f8b5eaa383fb0d568, local/remote equal, private=true,

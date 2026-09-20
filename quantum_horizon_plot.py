@@ -8259,6 +8259,63 @@ def balanced_exterior_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def melvin_channel_progress():
+    """Plot exact zero-profile quantiles and saved positive Melvin channel masses."""
+    import hashlib
+    from decimal import Decimal
+    from matplotlib.lines import Line2D
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'melvin_leads_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values()) and d['gap_comparison']['passed']
+    assert hashlib.sha256((root/'melvin_leads.py').read_bytes()).hexdigest()==d['source_sha256']
+    p=d['parameters'];assert p['D']==1 and p['Q']==.2 and p['q']==1
+    zero=d['zero_modes'];sectors=d['sectors'];assert len(zero)==21 and len(sectors)==23
+    zm=np.array([r['mu'] for r in zero]);quant=np.array([r['radial_quantiles_05_50_95'] for r in zero])/p['D']
+    sm=np.array([r['mu'] for r in sectors]);mass=np.sqrt([r['first_three_squared_masses'][0] for r in sectors])*p['D']
+    assert quant.shape==(21,3) and np.all(np.diff(quant,axis=1)>0) and np.all(np.isfinite(quant))
+    assert np.array_equal(zm,np.array([r['mu'] for r in sectors if r['has_exact_zero']]))
+    assert zm[0]==.5 and zm[-1]==20.5 and zm[-1]<d['flux']<zm[-1]+1
+    lower=Decimal(d['gap_comparison']['uniform_squared_lower'])
+    assert lower==Decimal('.60') and all(Decimal(r['squared_gap_lower_interval'].strip('[]').split(',')[0])>lower for r in d['gap_comparison']['rows'])
+    assert np.all(mass**2>float(lower))
+    assert np.isclose(np.min(mass)/p['D'],d['smallest_computed_positive_mass'],rtol=1e-13,atol=0)
+    gap=np.sqrt(float(lower))
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig=plt.figure(figsize=(13.5,8.2))
+    fig.suptitle('Melvin exterior: 21 gapless channels per Weyl component',fontsize=18,fontweight='bold',y=.96)
+    fig.text(.5,.903,'Massless charged Dirac field in the asymptotic pure Melvin model \u00b7 Q = 0.2, D = q = 1 \u00b7 Mouth matching remains incomplete',ha='center',fontsize=10.6,color='#475569')
+    ax=fig.add_axes([.075,.31,.40,.47]);bx=fig.add_axes([.575,.31,.36,.47])
+    for row,mu in zip(quant,zm):
+        ax.hlines(mu,row[0],row[2],color='#007e87',lw=2)
+        ax.plot(row[1],mu,'o',ms=4,color='#007e87')
+    ax.axvline(1,color='#94a3b8',ls=':',lw=1)
+    ax.set(xlim=(0,73),ylim=(-.4,21.4),xlabel=r'Melvin radial coordinate $\rho/D$',ylabel=r'Azimuthal sector $\mu$')
+    ax.set_yticks([.5,4.5,8.5,12.5,16.5,20.5]);ax.set_xticks(np.arange(0,71,10))
+    ax.set_title('A. Exact zero-transverse-mass profiles',fontsize=12,pad=14)
+    ax.grid(axis='x',alpha=.16);ax.spines[['top','right']].set_visible(False)
+    ax.annotate(f"Outermost median: {quant[-1,1]:.2f}D\n95% quantile: {quant[-1,2]:.2f}D",xy=(quant[-1,1],zm[-1]),xytext=(36,15.4),fontsize=10,color='#007e87',arrowprops={'arrowstyle':'-','lw':.8,'color':'#007e87'})
+    fig.legend(handles=[Line2D([0],[0],color='#007e87',lw=2,label='5\u201395% transverse-norm interval'),Line2D([0],[0],marker='o',color='#007e87',ls='none',label='Median')],loc='upper left',bbox_to_anchor=(.064,.856),ncol=2,frameon=False,fontsize=9.1)
+    bx.scatter(sm,mass,c='#7951b0',s=29,zorder=3,label='Computed first positive mass')
+    bx.axhline(gap,color='#b97716',ls='--',lw=1.3,label=r'Analytic threshold $\sqrt{0.60}$')
+    bx.axhspan(.55,gap,color='#e5f0e8',alpha=.8)
+    bx.set_yscale('log');bx.set(xlim=(-1.4,22.4),ylim=(.55,6.5),xlabel=r'Azimuthal sector $\mu$',ylabel=r'Positive transverse mass $\times D$ (log scale)')
+    bx.set_xticks([-.5,4.5,9.5,14.5,19.5,21.5]);bx.set_yticks([.6,1,2,4,6],['0.6','1','2','4','6'])
+    bx.set_title('B. Positive transverse modes stay above a gap',fontsize=11.8,pad=14)
+    bx.grid(axis='y',alpha=.17);bx.spines[['top','right']].set_visible(False)
+    bx.legend(loc='upper left',frameon=False,fontsize=9)
+    bx.text(.035,.40,f"Smallest computed positive mass\n{np.min(mass):.6f}/D",transform=bx.transAxes,color='#7951b0',fontsize=10)
+    bx.text(.035,.067,r'Proved: $m_\perp^2D^2>0.60$',transform=bx.transAxes,fontsize=10,color='#467454')
+    bx.annotate(f'{mass[-1]:.3f}/D',(sm[-1],mass[-1]),xytext=(-8,-16),textcoords='offset points',ha='right',color='#7951b0',fontsize=9)
+    fig.text(.075,.236,'Norm intervals show radial spread, not uncertainty or hard walls. These are coordinate radii, not proper transverse distances.',fontsize=9.9,color='#475569')
+    fig.text(.075,.205,r'For $|E|D<\sqrt{0.60}$, only the exact zero channels can propagate axially in the pure Melvin model.',fontsize=11,color='#334155')
+    fig.text(.075,.156,'Numerical positive masses and the separate analytic interval bound have different roles. Zero masses are excluded from the logarithmic plot.',fontsize=9.9,color='#475569')
+    fig.text(.075,.108,'The actual curved exterior still needs finite-interface matching. Existing horizons remain; no throat, quantum supporting source or stability is established.',fontsize=9.8,color='#475569')
+    fig.text(.075,.042,'13 Sep 2027 \u2192 12 Sep 2027 remains unproved; these channels do not establish a physical medium or time-travel route.',fontsize=10.7,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'melvin_channel_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

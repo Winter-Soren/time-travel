@@ -6,6 +6,8 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The [Melvin channel calculation](melvin_leads.py) supplies the quantum modes of the gravitating exterior. It verifies 21 transverse zero channels and a separate interval bound on every positive transverse mass: lambda^2 > 0.60/D^2. The zero channels remain open along the magnetic field. A finite-channel [curved axial calculation](dihole_axial_tail.py) carries the distant boundary data inward; the full connection to the mouths and its supporting quantum stress remain unresolved. See [current derivations and limits](RESEARCH.md).
+
 The [balanced dihole exterior](balanced_dihole.py) now supplies a known exact classical geometry with both gravity and magnetic fields. Its 14 checks and independent audit pass; the actual attachment surface has a clock rate near 0.196 and angularly varying boundary data. This replaces the flat-surroundings assumption, while introducing an external Melvin magnetic field and a different quantum environment. The solution still contains black-hole horizons: no traversable throat has been attached. The [RN compatibility gate](rn_exterior_gate.py) also quantifies why the earlier short collar cannot be transferred unchanged. See [current research and next steps](RESEARCH.md).
 
 The preceding [smooth-collar calculation](smooth_magnetic_collar.py) uses one explicit smooth connection for the magnetic response and gravitational stress requirement. Its 18 checks pass; the geometry still requires negative integrated radial-null stress, and the magnetic field adds a positive contribution. This is a prescribed test background, not a supported solution. If its radius is identified with the classical magnetic radius, the exterior gravitational correction at the proposed join is not small: the next physical step is gravitationally consistent exterior matching before a precision quantum-source calculation. See the [results](smooth_magnetic_collar_results.json) and [derivation](RESEARCH.md).
@@ -26,6 +28,8 @@ Local state-admissibility arguments are now supplied for both the full invariant
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Melvin quantum channels](melvin_leads.py) · [results](melvin_leads_results.json) · [figure](melvin_channel_progress.png) | Regular-axis spectra, exact zero modes, full radial residuals and an interval lower comparison over all sectors | 21 open zero channels per Weyl and positive transverse squared gap >0.60/D^2; no quantum stress or physical throat |
+| [Curved axial tail](dihole_axial_tail.py) · [results](dihole_axial_tail_results.json) | Actual dihole coefficients, canonical current trace and finite-channel imaginary-frequency propagation | An inward boundary-response pilot; not the complete two-mouth exterior or a return probability |
 | [Exact classical dihole exterior](balanced_dihole.py) · [results](balanced_dihole_results.json) · [figure](balanced_exterior_progress.png) | Full Einstein-Maxwell checks, balanced axis, flux and nonspherical finite-cut data; independent high-precision audit | Gravitating two-hole exterior with Melvin asymptotics; horizons remain and the quantum-supported throat is unconstructed |
 | [RN compatibility gate](rn_exterior_gate.py) · [results](rn_exterior_gate_results.json) | Exact endpoint/mass/width conditions and saved-profile Einstein-minus-monopole tensor | Conditional rejection of the short nonovershooting collar; not a no-go for other sources or geometries |
 | [Smooth collar and support target](smooth_magnetic_collar.py) · [results](smooth_magnetic_collar_results.json) · [figure](smooth_collar_progress.png) | One C-infinity metric, propagated magnetic response, actual exterior matching and same-geometry null budgets | Smooth prescribed join; missing negative source quantified. Conditional magnetic-radius check rejects a controlled flat near-mouth interpretation; gravity, quantum support and infinite angular matching remain open |
@@ -66,6 +70,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scattering_vacuum.py) · [results](scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Quantum channels in the curved exterior environment](melvin_channel_progress.png)
+
+*The left panel shows radial probability intervals of the asymptotic zero modes, not material rings. The positive transverse mass bound applies to the other modes. Neither panel shows a constructed passage or a payload trajectory.*
 
 ![Gravitating exterior and actual throat-attachment data](balanced_exterior_progress.png)
 

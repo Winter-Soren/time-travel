@@ -1,5 +1,216 @@
 # Reproduction and coupled-model iterations
 
+## Quantum channels of the gravitating exterior — increment110
+
+### A full-domain transverse calculation and a useful lower bound
+
+[melvin_leads.py](melvin_leads.py) now calculates the asymptotic Melvin
+channels of the exact 109 exterior. This uses the exact operator, rather
+than the small-radius spectrum in [Santos and Barros](https://arxiv.org/pdf/1508.07307).
+The field is a massless charged Dirac field, not an abiotic payload. Lengths
+are in the auxiliary Weyl separation D; transverse masses and frequencies
+are in 1/D (energies in hbar*c/D). A dimensional apparatus scale is not fixed.
+
+Write A=beta(2mu-Phi), C=beta^2(mu-Phi). For spin s=+1 or-1,
+
+\[
+ D_\mu^2\big|_s=-\partial_\rho^2+
+ {\mu(\mu-s)\over\rho^2}+A(2\mu+s)
+ +[A^2+C(2\mu+3s)]\rho^2+2AC\rho^4+C^2\rho^6.
+\]
+
+The regular-axis Laguerre basis has nu=|mu-s/2| and radial functions
+rho^(nu+1/2) exp(-omega*rho^2/2) L_n^nu(omega*rho^2), normalized in d rho.
+The oscillator part has exact eigenvalues2*omega*(2n+nu+1). Multiplication
+by omega*rho^2 is tridiagonal; its cubic power gives the sextic remainder.
+Three padding rows before truncation preserve all excursions of that power.
+This treats the critical -1/(4*rho^2) term analytically, with the regular
+nonlogarithmic domain. No artificial outer radial wall is imposed.
+
+For every half-integer mu=-.5,.5,...,21.5, both spin partners were evaluated
+at 160 and 224 basis functions, plus a 10% oscillator-scale change at 224.
+The largest squared-level change is 1.86e-12; the full radial residual is
+below 5.59e-11 in the refined runs. That residual includes three coefficients
+outside the Ritz space, where the differential operator can still act.
+Raw numerical zero values are retained. The analytic 21 zeros, independent
+spin partners, and an exact harmonic-oscillator limit provide separate checks.
+A small residual alone does not identify the eigenvalue's index; a distant
+annular well can be missed by a basis whose scale is unsuitable.
+
+The smallest computed positive transverse mass is1.08614682280/D, at mu=15.5.
+There is also a separate analytic bound that does not rely on trusting this
+eigenvalue approximation. For any positive oscillator scale w, compare each
+spin operator with its exactly solved radial oscillator. With x=rho^2 and
+c0,c2,c4,c6 the displayed polynomial coefficients, the ground level obeys
+
+\[
+ \lambda^2\ge 2w(\nu+1)+c_0+
+ \min_{x\ge0}\{(c_2-w^2)x+c_4x^2+c_6x^3\}.
+\]
+
+The minimum is bounded using zero and the real roots of a quadratic
+derivative. Seventy-digit interval arithmetic, with exact Q=1/5,D=q=1 and
+fixed decimal comparison scales, verifies a lower bound greater than 0.60
+in all 23 required sectors. The weakest comparison, mu=20.5,w=.0049, is
+above 0.60964539594. This is an interval evaluation of the analytic comparison;
+the Ritz eigenvalues and residuals remain ordinary floating calculations.
+
+To cover every half-integer, use the lower partner for each of the 21 sectors
+with an upper zero mode. All strictly positive partner spectra coincide.
+For the remaining negative sectors put mu=-t,t>=1/2. With y=beta*rho^2
+and Lambda=1+y, the derivative of the upper potential satisfies
+
+\[
+ \partial_t V_+\ge
+ {\Lambda^4+1-2y-3y^2\over\rho^2}
+ ={2+2y+3y^2+4y^3+y^4\over\rho^2}>0.
+\]
+
+For mu>=Phi the lower potential instead satisfies
+
+\[
+ \partial_\mu V_-\ge
+ {2\Phi\Lambda^3+1-2y-3y^2\over\rho^2}>0,
+ \qquad\Phi>20.5.
+\]
+
+Thus the mu=-.5 upper and mu=21.5 lower comparison bounds cover all outer
+sectors. An independent85-digit interval calculation and4x4 Laguerre-quadrature
+operator reconstruction agree; the latter differs by at most6.72e-15
+relative. The regular quadratic-form domains embed in the required direction
+as the centrifugal exponent increases. The positive spectrum of the full
+transverse operator consequently satisfies **lambda^2>0.60/D^2**. This is
+a statement about this ideal background and coupling calibration, not a
+new universal law or a supporting stress calculation.
+
+The21 transverse zero modes still have no axial propagation threshold.
+For real |E|<sqrt(.60)/D only these channels can propagate in the asymptotic
+tube; all massive channels are evanescent. Virtual massive modes still
+contribute to vacuum stress and cannot be discarded on this basis. Per right Weyl block, the zero
+channels travel+z; the other Weyl block reverses the direction. This count
+is unrelated to the single q=1 mouth zero mode. In particular, the last
+zero channel is concentrated far away: its 5%,50%,95% radial quantiles are
+(65.5836,67.1018,68.5872)D. A small-radius or narrow-tube approximation would
+miss it. Open channels neither prove fatal leakage nor justify a closed
+Casimir loop: coupling to the mouths is the required next calculation.
+
+### The first gravitational tail term changes the outgoing data
+
+Our expansion of the actual [Emparan fields](https://arxiv.org/pdf/hep-th/9906160)
+uses s=|z|, Lambda=1+beta*rho^2 and A0=Phi*beta*rho^2/Lambda:
+
+\[
+ N=\Lambda+{2M(\beta\rho^2-1)\over s}+O(s^{-2}),\quad
+ P=\Lambda+{2M(1+3\beta\rho^2)\over s}+O(s^{-2}),
+\]
+\[
+ v=1-{4M\over s}+O(s^{-2}),\qquad
+ A_\phi=A_0+{4MA_0\over\Lambda s}+O(s^{-2}).
+\]
+
+The fields are even in z in the regular outer-axis gauge. Both ends have
+the same expansion. The transverse Hamiltonian is, to this order,
+(1-2M/s) U_a D_mu U_a^-1, where a=1+2M/s and
+(U_a f)(rho)=sqrt(a)f(a*rho). Thus gravity changes both the transverse
+profile and its effective mass. The moving-basis derivative starts at 1/s^2.
+At imaginary energy E=i*kappa, writing Omega=sqrt(kappa^2+lambda^2), the
+outward massive ratio in this dilated basis is
+
+\[
+ {b\over a}=-i{\lambda\over\kappa+\Omega}
+ \left(1-{2M\kappa\over\Omega s}\right)+O(s^{-2}).
+\]
+
+The corresponding exponential decay has the additional power
+s^[-2M(2kappa^2+lambda^2)/Omega]. Zero channels retain their direction and
+have the power s^(-4M*kappa). Consequently pure-Melvin data imposed at a
+finite plane omit a known first-order correction, not merely a harmless
+phase. The fixed-basis dilation must also be included when comparing maps.
+These expansions hold on bounded transverse intervals with s large relative
+to rho,k,M. They are not uniform over an entire unbounded transverse mode.
+Independent60-digit checks at rho=1,s=100/200/400 give coefficient remainders
+1.888e-5,4.704e-6,1.174e-6, consistent with 1/s^2 and exact two-end parity.
+
+### Propagating actual curved coefficients to finite axial planes
+
+[dihole_axial_tail.py](dihole_axial_tail.py) now propagates a small projected
+lead through the actual classical exterior. The exact stationary transform
+w=sqrt(v)*u gives
+
+\[
+ [-i\sigma_x\partial_\rho-i\sigma_z\partial_z+
+ \sigma_y NP(\mu-A_\phi)/\rho]w=(E/v)w,
+ \qquad j_z=\int w^\dagger\sigma_z w\,d\rho.
+\]
+
+The pilot uses mu=.5, E=i*.2/D, one exact upper zero mode, and two or three
+massive pairs. Lower Laguerre modes generate their upper partners through
+(partial_rho+W_Melvin)/lambda. Phases are fixed before comparing bases.
+With upper amplitudes A and lower amplitudes B in the specified paired frame,
+
+\[
+ A'=-\kappa B_+A-iCB,\qquad B'=\kappa B_-B+iC^TA,
+\]
+\[
+ B_\pm=\langle f_\pm,v^{-1}f_\pm\rangle,\qquad
+ C=\langle f_+,(\partial_\rho+NP(\mu-A_\phi)/\rho)f_-\rangle.
+\]
+
+The outgoing graph Z=B/A=-iY is rectangular: n by(n+1). Its equation is
+Y'=kappa(B_-Y+Y B_+)-C^T+YCY. There is no invented second zero channel.
+At the negative end the transposed graph has one physical incoming zero
+component and no outgoing zero channel for this Weyl block. The opposite
+Weyl reverses the directions.
+
+Actual metric/gauge coefficients are integrated over radial profiles and
+propagated from z=32,64,128 to z=4; the same solutions also supply z=8,16,32.
+The first-order starting correction uses B_pm,1=4M I and
+C1=4M< f_+,[A*rho+2C*rho^3] f_- >, where A,C here are the polynomial
+coefficients of W, not amplitude vectors. In the fixed projected basis,
+
+\[
+ (Y_1)_{ij}=
+ { [C_1^T-Y_0C_1Y_0-8M\kappa Y_0]_{ij}\over h_i+h_{{\rm right},j}},
+ \quad h_i=\sqrt{\kappa^2+\lambda_i^2},\quad
+ h_{\rm right}=(\kappa,h_1,\ldots).
+\]
+
+For three pairs, at z=4 the operator-norm departure from the pure Melvin
+graph is0.0666090 and its zero-column norm is0.0560513. These are
+imaginary-frequency matrix diagnostics, not escape or return probabilities.
+The departure falls to0.0371514 at z=8 and0.00995831 at z=32.
+
+Fourteen checks pass, including actual M=0 Melvin reduction, reflection,
+radial derivative and paired norms, the first-order Riccati identity, and
+independent numerical refinements. Far-start32/64/128 changes at z=4 are
+below1.62e-13; radial size/order32/96 to48/144 changes are2.64e-14; tighter
+ODE tolerances change the result by5.91e-13. The leading start at32 agrees
+with the pure start at128 after inward propagation within2.63e-13 at z=4.
+At z=32 itself its remaining difference is2.23e-4, so the first-order start
+is explicitly an approximation.
+
+An independent complex seven-component linear transport calculation over
+z=8 to4 reconstructs the saved three-by-four Riccati graph within5.95e-13.
+Its upper block condition number is3672. The canonical current identity
+K_dagger J+J K=-2*kappa*diag(Bplus,Bminus) holds within2.26e-17 at three
+planes. This checks the graph elimination and phases independently of the
+nonlinear Riccati implementation, within the same finite projected model.
+
+Increasing two pairs to three changes the common block by0.00067382 at z=4.
+That finite-channel sensitivity is much larger than the numerical controls.
+It is not an omitted-channel bound. Neither the whole radial asymptotic
+remainder nor the infinite-channel limit has been enclosed. No solution
+through the inner region or the actual throat cuts is supplied here.
+The next calculation must connect these axial leads to the nonspherical
+mouths, retaining the actual current/frame/gauge normalization; repeating
+far-start sweeps at this one frequency would not resolve that task.
+
+The remaining physical requirements are a connected axisymmetric geometry,
+its complete quantum state and renormalized source/current, gravitational
+backreaction, formation and stability. None is supplied by the transverse
+gap or the asymptotic expansion. Travel from 13 September 2027 to 12 September 2027
+remains unproved.
+
 ## A gravitating two-mouth exterior and the actual attachment data — increment109
 
 ### The previous geometry does not pass the gravitational interpretation

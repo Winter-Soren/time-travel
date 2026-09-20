@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Quantum channels and curved axial response | [melvin_leads.py](melvin_leads.py), [results](melvin_leads_results.json), [figure](melvin_channel_progress.png); [dihole_axial_tail.py](dihole_axial_tail.py) and [results](dihole_axial_tail_results.json) |
 | Gravitating exterior and attachment data | [balanced_dihole.py](balanced_dihole.py), [results](balanced_dihole_results.json), [figure](balanced_exterior_progress.png); [RN compatibility gate](rn_exterior_gate.py) and [results](rn_exterior_gate_results.json) |
 | Smooth collar, magnetic response and same-geometry support target | [smooth_magnetic_collar.py](smooth_magnetic_collar.py), [results](smooth_magnetic_collar_results.json), [figure](smooth_collar_progress.png); conditional RN exterior gate and coupled Dirac operator in [RESEARCH.md](RESEARCH.md) |
 | Finite magnetic matching on the actual mouth data | [magnetic_mouth_matching.py](magnetic_mouth_matching.py), [results](magnetic_mouth_matching_results.json), [figure](magnetic_matching_progress.png); source definition and the remaining smooth-collar requirements in [RESEARCH.md](RESEARCH.md) |
