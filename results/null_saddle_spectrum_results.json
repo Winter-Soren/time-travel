@@ -1,0 +1,3927 @@
+{
+  "passed": true,
+  "tests": {
+    "zero_energy_regression": true,
+    "particle_hole_symmetry": true,
+    "imaginary_axis_reality": true,
+    "manufactured_refinement": true,
+    "manufactured_absorption": true,
+    "current_absorption_identity": true,
+    "amplitude_ledger": true,
+    "linear_solve": true,
+    "nonnegative_absorption": true,
+    "real_tail_current": true
+  },
+  "helper_checks": {
+    "passed": true,
+    "maximum_errors": {
+      "generator_absorption": 0.0,
+      "cap_decay": 8.899114524108741e-16,
+      "frozen_rhs": 1.7798229048217483e-15,
+      "zero_energy_reproduction": 8.535297025063223e-16,
+      "direct_transfer": 5.3853707188645326e-15,
+      "real_current": 1.1886221399370368e-13,
+      "contraction_excess": 0.0,
+      "conjugation": 0.0,
+      "imaginary_axis_structure": 0.0
+    },
+    "scope": "Finite projected arms; real current and complex absorption are distinct controls."
+  },
+  "absorption_controls": [
+    {
+      "spacing": 0.25,
+      "l2_error": 0.0019482120427580449,
+      "exact_bulk_norm": 4.440529910938115,
+      "ledger": {
+        "outgoing": {
+          "u+": 0.8989053012173287,
+          "u-": 5.322682160038214e-06,
+          "v+": 1.1100171762089714,
+          "v-": 1.1100171762089708
+        },
+        "full_incoming_norm": 6.671346812453991,
+        "jump_loss": 0.00041309954201959235,
+        "incoming_mismatch": 9.335617322725928e-05,
+        "numerical_loss": 0.0005064557152468516,
+        "balance_residual": -1.7763568394002505e-15,
+        "identity_error": 9.89448365728484e-16,
+        "linear_residual_relative": 1.3320756733476432e-15,
+        "bulk_norm": 4.439869225526639,
+        "bulk_absorption": 3.5518953804213114
+      }
+    },
+    {
+      "spacing": 0.125,
+      "l2_error": 0.0005010867126483575,
+      "exact_bulk_norm": 4.440529910938115,
+      "ledger": {
+        "outgoing": {
+          "u+": 0.8986896984074704,
+          "u-": 4.1536702184837013e-07,
+          "v+": 1.110116063760379,
+          "v-": 1.1101160637603802
+        },
+        "full_incoming_norm": 6.671346812453989,
+        "jump_loss": 5.999437947687411e-05,
+        "incoming_mismatch": 6.323315524109562e-06,
+        "numerical_loss": 6.631769500098368e-05,
+        "balance_residual": -6.217248937900877e-15,
+        "identity_error": 5.338975891659426e-15,
+        "linear_residual_relative": 2.3638672807755244e-15,
+        "bulk_norm": 4.440447816829663,
+        "bulk_absorption": 3.552358253463731
+      }
+    }
+  ],
+  "cases": {
+    "zero": {
+      "name": "zero",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.125,
+      "pairs": 4,
+      "energy": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.9880408123016929,
+            0.1497218480721179
+          ],
+          [
+            0.1497218480721178,
+            0.988040812301691
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9794670116514645,
+            "u-": 0.022472002418663657,
+            "v+": 0.003279962903849753,
+            "v-": 2.0550578105581016e-06
+          },
+          "full_incoming_norm": 1.0065614553760451,
+          "jump_loss": 0.001321938798390734,
+          "incoming_mismatch": 1.8484545866662955e-05,
+          "numerical_loss": 0.001340423344257397,
+          "balance_residual": 6.661338147750939e-16,
+          "identity_error": 2.1423803150408565e-15,
+          "linear_residual_relative": 6.625114901862311e-15,
+          "bulk_norm": 3.74031651571316,
+          "bulk_absorption": 0.0
+        },
+        {
+          "outgoing": {
+            "u+": 0.022472002418663657,
+            "u-": 0.9794670116514628,
+            "v+": 2.0550578105581008e-06,
+            "v-": 0.0032799629038497567
+          },
+          "full_incoming_norm": 1.006561455376046,
+          "jump_loss": 0.0013219387983907191,
+          "incoming_mismatch": 1.8484545866663216e-05,
+          "numerical_loss": 0.0013404233442573825,
+          "balance_residual": -1.9984014443252818e-15,
+          "identity_error": 1.1006416015188383e-16,
+          "linear_residual_relative": 7.394876991962298e-15,
+          "bulk_norm": 3.740316515713147,
+          "bulk_absorption": 0.0
+        }
+      ],
+      "omitted_outgoing_norm": [
+        1.8298091753576884e-05,
+        1.8298091754243018e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        7.044134093917997e-14,
+        7.096184737863898e-14
+      ],
+      "feedback_condition": 2.007286577129363,
+      "maximum_face_Gram_deviation": 5.7757694162464104e-08,
+      "maximum_face_Gram_condition": 1.0000000577576975,
+      "boundary_response_error": 2.220446049250313e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 9.154536442603836e-16,
+            "massive_coisometry": 9.142608537807128e-16,
+            "outgoing_zero_norm": 0.0
+          },
+          "maximum_sampled_real_current_error": 1.9482494468946855e-14,
+          "maximum_sampled_Z_norm": 1.0000000000000009,
+          "contraction_excess": 8.881784197001252e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 9.154536442603836e-16,
+            "massive_coisometry": 9.142608537807128e-16,
+            "outgoing_zero_norm": 0.0
+          },
+          "maximum_sampled_real_current_error": 1.9482494468946855e-14,
+          "maximum_sampled_Z_norm": 1.0000000000000009,
+          "contraction_excess": 8.881784197001252e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 8.265661988142451e-16,
+            "incoming_orthogonality": 1.7884863299044812e-16,
+            "incoming_zero_norm": 7.771561172376096e-16
+          },
+          "maximum_sampled_real_current_error": 1.9461667709600515e-14,
+          "maximum_sampled_Z_norm": 1.000000000000001,
+          "contraction_excess": 1.1102230246251565e-15,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9999999999999996,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 8.265661988142451e-16,
+            "incoming_orthogonality": 1.7884863299044812e-16,
+            "incoming_zero_norm": 7.771561172376096e-16
+          },
+          "maximum_sampled_real_current_error": 1.9461667709600515e-14,
+          "maximum_sampled_Z_norm": 1.000000000000001,
+          "contraction_excess": 1.1102230246251565e-15,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9999999999999996,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.9762246467737892,
+          0.02241663179013036
+        ],
+        [
+          0.022416631790130325,
+          0.9762246467737855
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.9986412785639195,
+        0.9986412785639158
+      ],
+      "anchored_tail_current_difference": [
+        3.3306690738754696e-16,
+        -2.220446049250313e-16
+      ],
+      "amplitude_ledger_error": [
+        1.2360657481267263e-15,
+        1.8106698003260645e-15
+      ],
+      "interpretation": "Real-energy flux amplitudes referred to the near arm planes."
+    },
+    "real_half": {
+      "name": "real_half",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.125,
+      "pairs": 4,
+      "energy": {
+        "real": 0.5,
+        "imag": 0.0
+      },
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            0.9387856305355525,
+            -0.15077052867964943
+          ],
+          [
+            -0.15077052867964943,
+            -0.9387856305355502
+          ]
+        ],
+        "imag": [
+          [
+            0.30344699411003,
+            -0.04873465178128315
+          ],
+          [
+            -0.04873465178128319,
+            -0.3034469941100294
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9764470005347419,
+            "u-": 0.025174093998797147,
+            "v+": 0.003097996020180826,
+            "v-": 2.842133707696293e-06
+          },
+          "full_incoming_norm": 1.00619766366938,
+          "jump_loss": 0.0014540876010230679,
+          "incoming_mismatch": 2.16433809335154e-05,
+          "numerical_loss": 0.0014757309819565833,
+          "balance_residual": 4.218847493575595e-15,
+          "identity_error": 1.7695193874487395e-15,
+          "linear_residual_relative": 4.377345536974207e-14,
+          "bulk_norm": 3.7798946078879365,
+          "bulk_absorption": 0.0
+        },
+        {
+          "outgoing": {
+            "u+": 0.025174093998797113,
+            "u-": 0.9764470005347394,
+            "v+": 2.8421337076958776e-06,
+            "v-": 0.0030979960201808258
+          },
+          "full_incoming_norm": 1.0061976636693797,
+          "jump_loss": 0.0014540876010231286,
+          "incoming_mismatch": 2.164338093351034e-05,
+          "numerical_loss": 0.001475730981956639,
+          "balance_residual": 1.9984014443252818e-15,
+          "identity_error": 1.0720515310121453e-15,
+          "linear_residual_relative": 1.1176122701141187e-14,
+          "bulk_norm": 3.7798946078879174,
+          "bulk_absorption": 0.0
+        }
+      ],
+      "omitted_outgoing_norm": [
+        1.8912080954391897e-05,
+        1.8912080955724164e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        6.330025330733879e-14,
+        6.381637522284253e-14
+      ],
+      "feedback_condition": 1.9952065899864948,
+      "maximum_face_Gram_deviation": 5.7757694162464104e-08,
+      "maximum_face_Gram_condition": 1.0000000577576975,
+      "boundary_response_error": 1.6653345369377348e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.5,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 4.904979669264024e-15,
+            "massive_coisometry": 4.9719180462737785e-15,
+            "outgoing_zero_norm": 4.440892098500626e-16
+          },
+          "maximum_sampled_real_current_error": 1.0354449461693873e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0000000000000002,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.5,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 4.904979669264024e-15,
+            "massive_coisometry": 4.9719180462737785e-15,
+            "outgoing_zero_norm": 4.440892098500626e-16
+          },
+          "maximum_sampled_real_current_error": 1.0354449461693873e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0000000000000002,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.5,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 4.88351387835212e-15,
+            "incoming_orthogonality": 2.2630855401660687e-16,
+            "incoming_zero_norm": 2.220446049250313e-16
+          },
+          "maximum_sampled_real_current_error": 1.030132844634666e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 1.0,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.5,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 4.88351387835212e-15,
+            "incoming_orthogonality": 2.2630855401660687e-16,
+            "incoming_zero_norm": 2.220446049250313e-16
+          },
+          "maximum_sampled_real_current_error": 1.030132844634666e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 1.0,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.9733985383344476,
+          0.025106818602583916
+        ],
+        [
+          0.025106818602583916,
+          0.9733985383344427
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.9985053569370315,
+        0.9985053569370266
+      ],
+      "anchored_tail_current_difference": [
+        -1.5543122344752192e-15,
+        -1.3322676295501878e-15
+      ],
+      "amplitude_ledger_error": [
+        4.184129852566657e-15,
+        1.425310685860686e-15
+      ],
+      "interpretation": "Real-energy flux amplitudes referred to the near arm planes."
+    },
+    "real_minus_half": {
+      "name": "real_minus_half",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.125,
+      "pairs": 4,
+      "energy": {
+        "real": -0.5,
+        "imag": 0.0
+      },
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            -0.9387856305355525,
+            0.15077052867964943
+          ],
+          [
+            0.15077052867964943,
+            0.9387856305355502
+          ]
+        ],
+        "imag": [
+          [
+            0.30344699411003,
+            -0.04873465178128315
+          ],
+          [
+            -0.04873465178128319,
+            -0.3034469941100294
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9764470005347419,
+            "u-": 0.025174093998797147,
+            "v+": 0.003097996020180826,
+            "v-": 2.842133707696293e-06
+          },
+          "full_incoming_norm": 1.00619766366938,
+          "jump_loss": 0.0014540876010230679,
+          "incoming_mismatch": 2.16433809335154e-05,
+          "numerical_loss": 0.0014757309819565833,
+          "balance_residual": 4.218847493575595e-15,
+          "identity_error": 1.7695193874487395e-15,
+          "linear_residual_relative": 4.377345536974207e-14,
+          "bulk_norm": 3.7798946078879365,
+          "bulk_absorption": 0.0
+        },
+        {
+          "outgoing": {
+            "u+": 0.025174093998797113,
+            "u-": 0.9764470005347394,
+            "v+": 2.8421337076958776e-06,
+            "v-": 0.0030979960201808258
+          },
+          "full_incoming_norm": 1.0061976636693797,
+          "jump_loss": 0.0014540876010231286,
+          "incoming_mismatch": 2.164338093351034e-05,
+          "numerical_loss": 0.001475730981956639,
+          "balance_residual": 1.9984014443252818e-15,
+          "identity_error": 1.0720515310121453e-15,
+          "linear_residual_relative": 1.1176122701141187e-14,
+          "bulk_norm": 3.7798946078879174,
+          "bulk_absorption": 0.0
+        }
+      ],
+      "omitted_outgoing_norm": [
+        1.8912080954391897e-05,
+        1.8912080955724164e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        6.330025330733879e-14,
+        6.381637522284253e-14
+      ],
+      "feedback_condition": 1.9952065899864948,
+      "maximum_face_Gram_deviation": 5.7757694162464104e-08,
+      "maximum_face_Gram_condition": 1.0000000577576975,
+      "boundary_response_error": 1.6653345369377348e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": -0.5,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 4.904979669264024e-15,
+            "massive_coisometry": 4.9719180462737785e-15,
+            "outgoing_zero_norm": 4.440892098500626e-16
+          },
+          "maximum_sampled_real_current_error": 1.0354449461693873e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0000000000000002,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": -0.5,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 4.904979669264024e-15,
+            "massive_coisometry": 4.9719180462737785e-15,
+            "outgoing_zero_norm": 4.440892098500626e-16
+          },
+          "maximum_sampled_real_current_error": 1.0354449461693873e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0000000000000002,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": -0.5,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 4.88351387835212e-15,
+            "incoming_orthogonality": 2.2630855401660687e-16,
+            "incoming_zero_norm": 2.220446049250313e-16
+          },
+          "maximum_sampled_real_current_error": 1.030132844634666e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 1.0,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": -0.5,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2126,
+          "accepted_steps": 177,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 4.88351387835212e-15,
+            "incoming_orthogonality": 2.2630855401660687e-16,
+            "incoming_zero_norm": 2.220446049250313e-16
+          },
+          "maximum_sampled_real_current_error": 1.030132844634666e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 1.0,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.9733985383344476,
+          0.025106818602583916
+        ],
+        [
+          0.025106818602583916,
+          0.9733985383344427
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.9985053569370315,
+        0.9985053569370266
+      ],
+      "anchored_tail_current_difference": [
+        -1.5543122344752192e-15,
+        -1.3322676295501878e-15
+      ],
+      "amplitude_ledger_error": [
+        4.184129852566657e-15,
+        1.425310685860686e-15
+      ],
+      "interpretation": "Real-energy flux amplitudes referred to the near arm planes."
+    },
+    "real_one_coarse": {
+      "name": "real_one_coarse",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.125,
+      "pairs": 4,
+      "energy": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            -0.6086214308405733,
+            0.1195069377151098
+          ],
+          [
+            0.11950693771510987,
+            0.6086214308405715
+          ]
+        ],
+        "imag": [
+          [
+            0.7684349739252703,
+            -0.15089496026596189
+          ],
+          [
+            -0.1508949602659618,
+            -0.7684349739252684
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9634025899523236,
+            "u-": 0.03717515834123098,
+            "v+": 0.002593662709564369,
+            "v-": 8.03755426533999e-06
+          },
+          "full_incoming_norm": 1.0051949214821838,
+          "jump_loss": 0.001981757078871846,
+          "incoming_mismatch": 3.371584593123295e-05,
+          "numerical_loss": 0.0020154729248030787,
+          "balance_residual": 3.552713678800501e-15,
+          "identity_error": 1.854498938179943e-15,
+          "linear_residual_relative": 4.1827580255596964e-14,
+          "bulk_norm": 3.930613621429166,
+          "bulk_absorption": 0.0
+        },
+        {
+          "outgoing": {
+            "u+": 0.0371751583412309,
+            "u-": 0.96340258995232,
+            "v+": 8.037554265340704e-06,
+            "v-": 0.002593662709564384
+          },
+          "full_incoming_norm": 1.005194921482185,
+          "jump_loss": 0.0019817570788718407,
+          "incoming_mismatch": 3.371584593123283e-05,
+          "numerical_loss": 0.0020154729248030735,
+          "balance_residual": -1.3322676295501878e-15,
+          "identity_error": 4.783534231720935e-16,
+          "linear_residual_relative": 1.0269560850023407e-14,
+          "bulk_norm": 3.930613621429164,
+          "bulk_absorption": 0.0
+        }
+      ],
+      "omitted_outgoing_norm": [
+        2.0974649487470742e-05,
+        2.0974649487692787e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        4.687294766629219e-14,
+        4.736991702414186e-14
+      ],
+      "feedback_condition": 1.9732458264698713,
+      "maximum_face_Gram_deviation": 5.7757694162464104e-08,
+      "maximum_face_Gram_condition": 1.0000000577576975,
+      "boundary_response_error": 4.710277376051326e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2138,
+          "accepted_steps": 178,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 2.670901803551424e-14,
+            "massive_coisometry": 2.672803440751335e-14,
+            "outgoing_zero_norm": 3.3306690738754696e-16
+          },
+          "maximum_sampled_real_current_error": 3.888674985341861e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000004,
+          "contraction_excess": 4.440892098500626e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9999999999999998,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2138,
+          "accepted_steps": 178,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 2.670901803551424e-14,
+            "massive_coisometry": 2.672803440751335e-14,
+            "outgoing_zero_norm": 3.3306690738754696e-16
+          },
+          "maximum_sampled_real_current_error": 3.888674985341861e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000004,
+          "contraction_excess": 4.440892098500626e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9999999999999998,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2138,
+          "accepted_steps": 178,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 2.711944306191709e-14,
+            "incoming_orthogonality": 4.899802718512411e-16,
+            "incoming_zero_norm": 1.1102230246251565e-16
+          },
+          "maximum_sampled_real_current_error": 3.8829019924626974e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000002,
+          "contraction_excess": 2.220446049250313e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9999999999999999,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2138,
+          "accepted_steps": 178,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 2.711944306191709e-14,
+            "incoming_orthogonality": 4.899802718512411e-16,
+            "incoming_zero_norm": 1.1102230246251565e-16
+          },
+          "maximum_sampled_real_current_error": 3.8829019924626974e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000002,
+          "contraction_excess": 2.220446049250313e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9999999999999999,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.9609123552299575,
+          0.037051197195709346
+        ],
+        [
+          0.037051197195709346,
+          0.9609123552299526
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.9979635524256669,
+        0.9979635524256619
+      ],
+      "anchored_tail_current_difference": [
+        -2.220446049250313e-16,
+        1.1102230246251565e-16
+      ],
+      "amplitude_ledger_error": [
+        4.1224223243197566e-15,
+        1.7329541324086692e-16
+      ],
+      "interpretation": "Real-energy flux amplitudes referred to the near arm planes."
+    },
+    "imag_small": {
+      "name": "imag_small",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.125,
+      "pairs": 4,
+      "energy": {
+        "real": 0.0,
+        "imag": 0.2
+      },
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.4666344632275907,
+            0.07008012851339103
+          ],
+          [
+            0.07008012851339095,
+            0.4666344632275903
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.21908259382488438,
+            "u-": 0.0049333006923729305,
+            "v+": 0.0029540205543120666,
+            "v-": 7.87458052443116e-07
+          },
+          "full_incoming_norm": 1.0016674153622338,
+          "jump_loss": 0.0007192284019106886,
+          "incoming_mismatch": 1.6529802388789218e-05,
+          "numerical_loss": 0.0007357582042994778,
+          "balance_residual": 1.1102230246251565e-16,
+          "identity_error": 7.599673442889924e-17,
+          "linear_residual_relative": 4.603708368297963e-15,
+          "bulk_norm": 1.9349023865707815,
+          "bulk_absorption": 0.7739609546283126
+        },
+        {
+          "outgoing": {
+            "u+": 0.004933300692372936,
+            "u-": 0.2190825938248842,
+            "v+": 7.874580524431168e-07,
+            "v-": 0.00295402055431206
+          },
+          "full_incoming_norm": 1.0016674153622342,
+          "jump_loss": 0.0007192284019106976,
+          "incoming_mismatch": 1.652980238878964e-05,
+          "numerical_loss": 0.0007357582042994873,
+          "balance_residual": -4.440892098500626e-16,
+          "identity_error": 3.269958031399533e-17,
+          "linear_residual_relative": 5.347327713530305e-15,
+          "bulk_norm": 1.9349023865707817,
+          "bulk_absorption": 0.7739609546283127
+        }
+      ],
+      "omitted_outgoing_norm": [
+        1.0340177365897318e-05,
+        1.0340177365897318e-05
+      ],
+      "signed_finite_face_Gram_term": [
+        6.155702102549482e-13,
+        6.155142971217928e-13
+      ],
+      "feedback_condition": 1.9334295936957802,
+      "maximum_face_Gram_deviation": 5.7757694162464104e-08,
+      "maximum_face_Gram_condition": 1.0000000577576975,
+      "boundary_response_error": 1.1102230246251565e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.2
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2114,
+          "accepted_steps": 176,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.985670404512144,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9992951974560741,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.2
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2114,
+          "accepted_steps": 176,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.985670404512144,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9992951974560741,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.2
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2114,
+          "accepted_steps": 176,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.985670404512144,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.999295197456074,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.2
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2114,
+          "accepted_steps": 176,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.985670404512144,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.999295197456074,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.21774772227170172,
+          0.004911224412453403
+        ],
+        [
+          0.0049112244124533905,
+          0.2177477222717013
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.22265894668415512,
+        0.2226589466841547
+      ],
+      "anchored_tail_current_difference": [
+        0.002634000305252071,
+        0.002634000305251738
+      ],
+      "amplitude_ledger_error": [
+        7.28583859910259e-16,
+        6.5052130349130266e-18
+      ],
+      "interpretation": "Anchored analytic amplitudes at complex energy; squared moduli are NOT probabilities or physical far flux."
+    },
+    "imag_half_coarse": {
+      "name": "imag_half_coarse",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.125,
+      "pairs": 4,
+      "energy": {
+        "real": 0.0,
+        "imag": 0.5
+      },
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.15233262454684804,
+            0.02185744272808552
+          ],
+          [
+            0.02185744272808549,
+            0.1523326245468478
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.023469245419765437,
+            "u-": 0.00048129516716445705,
+            "v+": 0.0025972458798345964,
+            "v-": 1.5528084634301462e-07
+          },
+          "full_incoming_norm": 0.9977517058333636,
+          "jump_loss": 0.00045325166315068145,
+          "incoming_mismatch": 1.7085746157767368e-05,
+          "numerical_loss": 0.0004703374093084488,
+          "balance_residual": 1.9984014443252818e-15,
+          "identity_error": 1.1441602500931343e-15,
+          "linear_residual_relative": 3.325215777376696e-15,
+          "bulk_norm": 0.9707334266764464,
+          "bulk_absorption": 0.9707334266764464
+        },
+        {
+          "outgoing": {
+            "u+": 0.0004812951671644576,
+            "u-": 0.023469245419765392,
+            "v+": 1.552808463430142e-07,
+            "v-": 0.0025972458798346194
+          },
+          "full_incoming_norm": 0.997751705833364,
+          "jump_loss": 0.00045325166315068134,
+          "incoming_mismatch": 1.7085746157767568e-05,
+          "numerical_loss": 0.00047033740930844893,
+          "balance_residual": 1.1102230246251565e-16,
+          "identity_error": 8.6249530339492855e-16,
+          "linear_residual_relative": 3.523466755839816e-15,
+          "bulk_norm": 0.9707334266764449,
+          "bulk_absorption": 0.9707334266764449
+        }
+      ],
+      "omitted_outgoing_norm": [
+        7.639982784586608e-06,
+        7.639982784603955e-06
+      ],
+      "signed_finite_face_Gram_term": [
+        6.198638579635104e-13,
+        6.196593564013214e-13
+      ],
+      "feedback_condition": 1.8472270061988256,
+      "maximum_face_Gram_deviation": 5.7757694162464104e-08,
+      "maximum_face_Gram_condition": 1.0000000577576975,
+      "boundary_response_error": 5.551115123125783e-17,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2102,
+          "accepted_steps": 175,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9982557687139471,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2102,
+          "accepted_steps": 175,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9982557687139471,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2102,
+          "accepted_steps": 175,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9982557687139475,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2102,
+          "accepted_steps": 175,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9982557687139475,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.02320522850133097,
+          0.0004777478026115386
+        ],
+        [
+          0.00047774780261153723,
+          0.023205228501330895
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.023682976303942508,
+        0.023682976303942435
+      ],
+      "anchored_tail_current_difference": [
+        0.005105619626900482,
+        0.005105619626900482
+      ],
+      "amplitude_ledger_error": [
+        2.3089169465251302e-15,
+        5.681219383824043e-16
+      ],
+      "interpretation": "Anchored analytic amplitudes at complex energy; squared moduli are NOT probabilities or physical far flux."
+    },
+    "imag_one": {
+      "name": "imag_one",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.125,
+      "pairs": 4,
+      "energy": {
+        "real": 0.0,
+        "imag": 1.0
+      },
+      "dofs": 19200,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.024306850469777395,
+            0.003013413193195469
+          ],
+          [
+            0.0030134131931954656,
+            0.02430685046977738
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.0006057845952132242,
+            "u-": 9.186821466408181e-06,
+            "v+": 0.002202032246377093,
+            "v-": 6.651697273178381e-09
+          },
+          "full_incoming_norm": 0.9931089434889421,
+          "jump_loss": 0.00035682181793604854,
+          "incoming_mismatch": 2.3139498359397308e-05,
+          "numerical_loss": 0.00037996131629544584,
+          "balance_residual": 4.440892098500626e-16,
+          "identity_error": 5.213941776177107e-16,
+          "linear_residual_relative": 2.1647913494095573e-15,
+          "bulk_norm": 0.4949559859289465,
+          "bulk_absorption": 0.989911971857893
+        },
+        {
+          "outgoing": {
+            "u+": 9.186821466408186e-06,
+            "u-": 0.0006057845952132242,
+            "v+": 6.651697273178373e-09,
+            "v-": 0.00220203224637708
+          },
+          "full_incoming_norm": 0.9931089434889422,
+          "jump_loss": 0.0003568218179360474,
+          "incoming_mismatch": 2.3139498359397224e-05,
+          "numerical_loss": 0.00037996131629544465,
+          "balance_residual": 1.1102230246251565e-15,
+          "identity_error": 1.014186448939778e-15,
+          "linear_residual_relative": 2.534731970297347e-15,
+          "bulk_norm": 0.4949559859289469,
+          "bulk_absorption": 0.9899119718578938
+        }
+      ],
+      "omitted_outgoing_norm": [
+        6.2051793101873705e-06,
+        6.2051793101886715e-06
+      ],
+      "signed_finite_face_Gram_term": [
+        4.135734422852089e-13,
+        4.1335086862847276e-13
+      ],
+      "feedback_condition": 1.7231340489068572,
+      "maximum_face_Gram_deviation": 5.7757694162464104e-08,
+      "maximum_face_Gram_condition": 1.0000000577576975,
+      "boundary_response_error": 2.7755575615628914e-17,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 1.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2090,
+          "accepted_steps": 174,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9304320009776272,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9965792207604658,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 1.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2090,
+          "accepted_steps": 174,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9304320009776272,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9965792207604658,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 1.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2090,
+          "accepted_steps": 174,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9304320009776272,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.996579220760466,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 1.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2090,
+          "accepted_steps": 174,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9304320009776272,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.996579220760466,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.0005908229797601176,
+          9.080659072924514e-06
+        ],
+        [
+          9.080659072924492e-06,
+          0.000590822979760117
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.0005999036388330421,
+        0.0005999036388330415
+      ],
+      "anchored_tail_current_difference": [
+        0.009101958007255662,
+        0.009101958007255662
+      ],
+      "amplitude_ledger_error": [
+        9.315465065995454e-16,
+        1.4883927423881005e-15
+      ],
+      "interpretation": "Anchored analytic amplitudes at complex energy; squared moduli are NOT probabilities or physical far flux."
+    },
+    "real_one": {
+      "name": "real_one",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.0625,
+      "pairs": 4,
+      "energy": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            -0.6091935411316617,
+            0.11962328042877601
+          ],
+          [
+            0.1196232804287761,
+            0.6091935411316598
+          ]
+        ],
+        "imag": [
+          [
+            0.7690948366505099,
+            -0.1510231163545957
+          ],
+          [
+            -0.1510231163545961,
+            -0.7690948366505064
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9651023035177078,
+            "u-": 0.03724123806704929,
+            "v+": 0.0025926214896781,
+            "v-": 8.05057102897474e-06
+          },
+          "full_incoming_norm": 1.0052009343975596,
+          "jump_loss": 0.0002545574511339902,
+          "incoming_mismatch": 2.163300972415044e-06,
+          "numerical_loss": 0.00025672075210640525,
+          "balance_residual": 1.0658141036401503e-14,
+          "identity_error": 6.363314038753263e-15,
+          "linear_residual_relative": 1.1004625951777421e-14,
+          "bulk_norm": 3.934152083982876,
+          "bulk_absorption": 0.0
+        },
+        {
+          "outgoing": {
+            "u+": 0.03724123806704924,
+            "u-": 0.9651023035176971,
+            "v+": 8.050571028974664e-06,
+            "v-": 0.0025926214896781047
+          },
+          "full_incoming_norm": 1.0052009343975599,
+          "jump_loss": 0.0002545574511340017,
+          "incoming_mismatch": 2.1633009724154564e-06,
+          "numerical_loss": 0.0002567207521064172,
+          "balance_residual": -2.220446049250313e-16,
+          "identity_error": 6.446591663064582e-16,
+          "linear_residual_relative": 1.8394701683237754e-14,
+          "bulk_norm": 3.934152083982838,
+          "bulk_absorption": 0.0
+        }
+      ],
+      "omitted_outgoing_norm": [
+        1.9300348936823752e-06,
+        1.9300348919060184e-06
+      ],
+      "signed_finite_face_Gram_term": [
+        6.5417834993774425e-15,
+        6.694226577866062e-15
+      ],
+      "feedback_condition": 1.9816052438004486,
+      "maximum_face_Gram_deviation": 5.775769452248687e-08,
+      "maximum_face_Gram_condition": 1.0000000577576977,
+      "boundary_response_error": 4.0029660424867215e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2138,
+          "accepted_steps": 178,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 2.670901803551424e-14,
+            "massive_coisometry": 2.672803440751335e-14,
+            "outgoing_zero_norm": 3.3306690738754696e-16
+          },
+          "maximum_sampled_real_current_error": 3.888674985341861e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000004,
+          "contraction_excess": 4.440892098500626e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9999999999999998,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2138,
+          "accepted_steps": 178,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 2.670901803551424e-14,
+            "massive_coisometry": 2.672803440751335e-14,
+            "outgoing_zero_norm": 3.3306690738754696e-16
+          },
+          "maximum_sampled_real_current_error": 3.888674985341861e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000004,
+          "contraction_excess": 4.440892098500626e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9999999999999998,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2138,
+          "accepted_steps": 178,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 2.711944306191709e-14,
+            "incoming_orthogonality": 4.899802718512411e-16,
+            "incoming_zero_norm": 1.1102230246251565e-16
+          },
+          "maximum_sampled_real_current_error": 3.8829019924626974e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000002,
+          "contraction_excess": 2.220446049250313e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9999999999999999,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2138,
+          "accepted_steps": 178,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 2.711944306191709e-14,
+            "incoming_orthogonality": 4.899802718512411e-16,
+            "incoming_zero_norm": 1.1102230246251565e-16
+          },
+          "maximum_sampled_real_current_error": 3.8829019924626974e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000002,
+          "contraction_excess": 2.220446049250313e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9999999999999999,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.9626236383190081,
+          0.03711771089399535
+        ],
+        [
+          0.03711771089399549,
+          0.9626236383190002
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.9997413492130036,
+        0.9997413492129956
+      ],
+      "anchored_tail_current_difference": [
+        8.881784197001252e-16,
+        1.3322676295501878e-15
+      ],
+      "amplitude_ledger_error": [
+        1.11337049605053e-14,
+        1.972200856039945e-15
+      ],
+      "interpretation": "Real-energy flux amplitudes referred to the near arm planes."
+    },
+    "real_one_cap6": {
+      "name": "real_one_cap6",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.0625,
+      "pairs": 4,
+      "energy": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            -0.6083857382926666,
+            0.11946465638338297
+          ],
+          [
+            0.11946465638338305,
+            0.6083857382926641
+          ]
+        ],
+        "imag": [
+          [
+            0.7697340006693101,
+            -0.1511486246841624
+          ],
+          [
+            -0.15114862468416262,
+            -0.769734000669306
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9651023037047384,
+            "u-": 0.0372412380511493,
+            "v+": 0.0025926216608264246,
+            "v-": 8.050571028882925e-06
+          },
+          "full_incoming_norm": 1.0052009347398358,
+          "jump_loss": 0.0002545574511287723,
+          "incoming_mismatch": 2.1633009749587715e-06,
+          "numerical_loss": 0.00025672075210373107,
+          "balance_residual": 1.0880185641326534e-14,
+          "identity_error": 5.968309904739342e-15,
+          "linear_residual_relative": 1.0996143404490486e-14,
+          "bulk_norm": 3.93415208388473,
+          "bulk_absorption": 0.0
+        },
+        {
+          "outgoing": {
+            "u+": 0.03724123805114925,
+            "u-": 0.9651023037047277,
+            "v+": 8.050571028882847e-06,
+            "v-": 0.0025926216608264277
+          },
+          "full_incoming_norm": 1.0052009347398352,
+          "jump_loss": 0.00025455745112878367,
+          "incoming_mismatch": 2.1633009749591505e-06,
+          "numerical_loss": 0.00025672075210374283,
+          "balance_residual": 8.881784197001252e-16,
+          "identity_error": 1.937916433518858e-16,
+          "linear_residual_relative": 1.8405975570745285e-14,
+          "bulk_norm": 3.934152083884708,
+          "bulk_absorption": 0.0
+        }
+      ],
+      "omitted_outgoing_norm": [
+        1.9300348930162414e-06,
+        1.9300348925721522e-06
+      ],
+      "signed_finite_face_Gram_term": [
+        6.541783508995222e-15,
+        6.694226587302101e-15
+      ],
+      "feedback_condition": 1.9816052442865142,
+      "maximum_face_Gram_deviation": 5.775769452248687e-08,
+      "maximum_face_Gram_condition": 1.0000000577576977,
+      "boundary_response_error": 4.0029660424867215e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 6.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 794,
+          "accepted_steps": 66,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 2.5702439646137817e-14,
+            "massive_coisometry": 2.5636626596400753e-14,
+            "outgoing_zero_norm": 4.440892098500626e-16
+          },
+          "maximum_sampled_real_current_error": 1.1118091234172254e-12,
+          "maximum_sampled_Z_norm": 1.0,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0000000000000002,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 6.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 794,
+          "accepted_steps": 66,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 2.5702439646137817e-14,
+            "massive_coisometry": 2.5636626596400753e-14,
+            "outgoing_zero_norm": 4.440892098500626e-16
+          },
+          "maximum_sampled_real_current_error": 1.1118091234172254e-12,
+          "maximum_sampled_Z_norm": 1.0,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0000000000000002,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 6.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 794,
+          "accepted_steps": 66,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 2.3711476286630193e-14,
+            "incoming_orthogonality": 4.675671182357583e-16,
+            "incoming_zero_norm": 2.220446049250313e-16
+          },
+          "maximum_sampled_real_current_error": 1.1142343652654515e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000002,
+          "contraction_excess": 2.220446049250313e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 1.0,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 6.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 794,
+          "accepted_steps": 66,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 2.3711476286630193e-14,
+            "incoming_orthogonality": 4.675671182357583e-16,
+            "incoming_zero_norm": 2.220446049250313e-16
+          },
+          "maximum_sampled_real_current_error": 1.1142343652654515e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000002,
+          "contraction_excess": 2.220446049250313e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 1.0,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.9626236383442948,
+          0.037117710868713544
+        ],
+        [
+          0.03711771086871364,
+          0.962623638344285
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.9997413492130084,
+        0.9997413492129985
+      ],
+      "anchored_tail_current_difference": [
+        -5.551115123125783e-16,
+        2.220446049250313e-16
+      ],
+      "amplitude_ledger_error": [
+        1.1124055570787958e-14,
+        1.7403442308899584e-15
+      ],
+      "interpretation": "Real-energy flux amplitudes referred to the near arm planes."
+    },
+    "real_one_cap24": {
+      "name": "real_one_cap24",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.0625,
+      "pairs": 4,
+      "energy": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            -0.609354119259383,
+            0.11965481231291504
+          ],
+          [
+            0.11965481231291514,
+            0.6093541192593809
+          ]
+        ],
+        "imag": [
+          [
+            0.7689676167828086,
+            -0.15099813503602105
+          ],
+          [
+            -0.15099813503602139,
+            -0.7689676167828043
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.9651023035177072,
+            "u-": 0.03724123806704927,
+            "v+": 0.002592621489678098,
+            "v-": 8.050571028974742e-06
+          },
+          "full_incoming_norm": 1.005200934397559,
+          "jump_loss": 0.0002545574511339901,
+          "incoming_mismatch": 2.1633009724150824e-06,
+          "numerical_loss": 0.0002567207521064052,
+          "balance_residual": 1.0880185641326534e-14,
+          "identity_error": 6.155031781433346e-15,
+          "linear_residual_relative": 1.0971901136028284e-14,
+          "bulk_norm": 3.934152083982875,
+          "bulk_absorption": 0.0
+        },
+        {
+          "outgoing": {
+            "u+": 0.03724123806704923,
+            "u-": 0.9651023035176969,
+            "v+": 8.050571028974664e-06,
+            "v-": 0.0025926214896781034
+          },
+          "full_incoming_norm": 1.0052009343975592,
+          "jump_loss": 0.00025455745113400123,
+          "incoming_mismatch": 2.163300972415363e-06,
+          "numerical_loss": 0.0002567207521064166,
+          "balance_residual": 2.220446049250313e-16,
+          "identity_error": 7.026815603547093e-16,
+          "linear_residual_relative": 1.8440329319825976e-14,
+          "bulk_norm": 3.9341520839828354,
+          "bulk_absorption": 0.0
+        }
+      ],
+      "omitted_outgoing_norm": [
+        1.930034892794197e-06,
+        1.9300348923501076e-06
+      ],
+      "signed_finite_face_Gram_term": [
+        6.541783499384638e-15,
+        6.694226577875554e-15
+      ],
+      "feedback_condition": 1.981605243800456,
+      "maximum_face_Gram_deviation": 5.775769452248687e-08,
+      "maximum_face_Gram_condition": 1.0000000577576977,
+      "boundary_response_error": 4.577566798522237e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 24.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 4394,
+          "accepted_steps": 364,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 2.3970702024011914e-14,
+            "massive_coisometry": 2.3878462483450598e-14,
+            "outgoing_zero_norm": 1.3322676295501878e-15
+          },
+          "maximum_sampled_real_current_error": 6.272136870736344e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000004,
+          "contraction_excess": 4.440892098500626e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0000000000000007,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 24.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 4394,
+          "accepted_steps": 364,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": {
+            "outgoing_current": 2.3970702024011914e-14,
+            "massive_coisometry": 2.3878462483450598e-14,
+            "outgoing_zero_norm": 1.3322676295501878e-15
+          },
+          "maximum_sampled_real_current_error": 6.272136870736344e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000004,
+          "contraction_excess": 4.440892098500626e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 1.0000000000000007,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 24.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 4394,
+          "accepted_steps": 364,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 2.386551937722133e-14,
+            "incoming_orthogonality": 4.595941989279308e-16,
+            "incoming_zero_norm": 6.661338147750939e-16
+          },
+          "maximum_sampled_real_current_error": 6.20532184136363e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9999999999999997,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 24.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 4394,
+          "accepted_steps": 364,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": {
+            "massive_isometry": 2.386551937722133e-14,
+            "incoming_orthogonality": 4.595941989279308e-16,
+            "incoming_zero_norm": 6.661338147750939e-16
+          },
+          "maximum_sampled_real_current_error": 6.20532184136363e-12,
+          "maximum_sampled_Z_norm": 1.0000000000000007,
+          "contraction_excess": 6.661338147750939e-16,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9999999999999997,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.9626236383190107,
+          0.037117710893995376
+        ],
+        [
+          0.037117710893995494,
+          0.9626236383190013
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.9997413492130062,
+        0.9997413492129967
+      ],
+      "anchored_tail_current_difference": [
+        -9.991465120540166e-16,
+        -4.440892098500626e-16
+      ],
+      "amplitude_ledger_error": [
+        1.0911660355587464e-14,
+        1.7495599399295381e-15
+      ],
+      "interpretation": "Real-energy flux amplitudes referred to the near arm planes."
+    },
+    "imag_half": {
+      "name": "imag_half",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.0625,
+      "pairs": 4,
+      "energy": {
+        "real": 0.0,
+        "imag": 0.5
+      },
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.1524136323633249,
+            0.021869567243259534
+          ],
+          [
+            0.021869567243259534,
+            0.15241363236332459
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.023493795747830587,
+            "u-": 0.00048182241865275187,
+            "v+": 0.0026002898740538015,
+            "v-": 1.5554252871112907e-07
+          },
+          "full_incoming_norm": 0.9977579457701968,
+          "jump_loss": 5.9252202348887145e-05,
+          "incoming_mismatch": 1.1298422145365433e-06,
+          "numerical_loss": 6.038204456342369e-05,
+          "balance_residual": -4.440892098500626e-16,
+          "identity_error": 5.220948033295639e-16,
+          "linear_residual_relative": 4.933595658677997e-15,
+          "bulk_norm": 0.9711215001425672,
+          "bulk_absorption": 0.9711215001425672
+        },
+        {
+          "outgoing": {
+            "u+": 0.00048182241865275295,
+            "u-": 0.023493795747830476,
+            "v+": 1.5554252871112832e-07,
+            "v-": 0.002600289874053782
+          },
+          "full_incoming_norm": 0.9977579457701965,
+          "jump_loss": 5.925220234888877e-05,
+          "incoming_mismatch": 1.129842214536565e-06,
+          "numerical_loss": 6.0382044563425336e-05,
+          "balance_residual": 2.4424906541753444e-15,
+          "identity_error": 2.516893232094452e-15,
+          "linear_residual_relative": 6.879021066047186e-15,
+          "bulk_norm": 0.9711215001425698,
+          "bulk_absorption": 0.9711215001425698
+        }
+      ],
+      "omitted_outgoing_norm": [
+        6.994813400197641e-07,
+        6.994813400162947e-07
+      ],
+      "signed_finite_face_Gram_term": [
+        5.978070540738148e-13,
+        5.984582327107152e-13
+      ],
+      "feedback_condition": 1.8548359133096044,
+      "maximum_face_Gram_deviation": 5.775769452248687e-08,
+      "maximum_face_Gram_condition": 1.0000000577576977,
+      "boundary_response_error": 8.326672684688674e-17,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2102,
+          "accepted_steps": 175,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9982557687139471,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2102,
+          "accepted_steps": 175,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9982557687139471,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2102,
+          "accepted_steps": 175,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9982557687139475,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2102,
+          "accepted_steps": 175,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9982557687139475,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.023229915330182756,
+          0.0004782779714074504
+        ],
+        [
+          0.0004782779714074504,
+          0.023229915330182663
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.023708193301590207,
+        0.023708193301590113
+      ],
+      "anchored_tail_current_difference": [
+        0.005109225029340525,
+        0.005109225029340858
+      ],
+      "amplitude_ledger_error": [
+        8.76902717106276e-16,
+        2.65672900345848e-15
+      ],
+      "interpretation": "Anchored analytic amplitudes at complex energy; squared moduli are NOT probabilities or physical far flux."
+    },
+    "imag_half_cap6": {
+      "name": "imag_half_cap6",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.0625,
+      "pairs": 4,
+      "energy": {
+        "real": 0.0,
+        "imag": 0.5
+      },
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.15249387287298755,
+            0.021881080785263112
+          ],
+          [
+            0.02188108078526312,
+            0.15249387287298727
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.023506164419263408,
+            "u-": 0.0004820760808484341,
+            "v+": 0.002601658032352366,
+            "v-": 1.556244163378667e-07
+          },
+          "full_incoming_norm": 0.9982832287380057,
+          "jump_loss": 5.928339642132636e-05,
+          "incoming_mismatch": 1.1304370210229306e-06,
+          "numerical_loss": 6.0413833442349293e-05,
+          "balance_residual": 3.1086244689504383e-15,
+          "identity_error": 3.924581689072183e-15,
+          "linear_residual_relative": 4.952706752735622e-15,
+          "bulk_norm": 0.9716327607476859,
+          "bulk_absorption": 0.9716327607476859
+        },
+        {
+          "outgoing": {
+            "u+": 0.00048207608084843505,
+            "u-": 0.023506164419263308,
+            "v+": 1.5562441633786603e-07,
+            "v-": 0.0026016580323523436
+          },
+          "full_incoming_norm": 0.9982832287380052,
+          "jump_loss": 5.928339642132813e-05,
+          "incoming_mismatch": 1.130437021023002e-06,
+          "numerical_loss": 6.041383344235114e-05,
+          "balance_residual": 2.6645352591003757e-15,
+          "identity_error": 2.6290762173091505e-15,
+          "linear_residual_relative": 6.881841678981775e-15,
+          "bulk_norm": 0.9716327607476851,
+          "bulk_absorption": 0.9716327607476851
+        }
+      ],
+      "omitted_outgoing_norm": [
+        6.998495936556826e-07,
+        6.99849593659152e-07
+      ],
+      "signed_finite_face_Gram_term": [
+        5.98121777025086e-13,
+        5.987732984831661e-13
+      ],
+      "feedback_condition": 1.854835913289153,
+      "maximum_face_Gram_deviation": 5.775769452248687e-08,
+      "maximum_face_Gram_condition": 1.0000000577576977,
+      "boundary_response_error": 1.1102230246251565e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 6.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 782,
+          "accepted_steps": 65,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9502702004168434,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9985185061987653,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 6.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 782,
+          "accepted_steps": 65,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9502702004168434,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9985185061987653,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 6.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 782,
+          "accepted_steps": 65,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9502702004168434,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9985185061987649,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 6.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 782,
+          "accepted_steps": 65,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9502702004168434,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9985185061987649,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.023254381263802887,
+          0.0004787816963312106
+        ],
+        [
+          0.00047878169633121085,
+          0.023254381263802804
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.0237331629601341,
+        0.023733162960134013
+      ],
+      "anchored_tail_current_difference": [
+        0.004572962608548448,
+        0.004572962608548448
+      ],
+      "amplitude_ledger_error": [
+        2.53182891318815e-15,
+        2.4103982698697735e-15
+      ],
+      "interpretation": "Anchored analytic amplitudes at complex energy; squared moduli are NOT probabilities or physical far flux."
+    },
+    "imag_half_cap24": {
+      "name": "imag_half_cap24",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.0625,
+      "pairs": 4,
+      "energy": {
+        "real": 0.0,
+        "imag": 0.5
+      },
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.1523977159899065,
+            0.021867283430497236
+          ],
+          [
+            0.02186728343049722,
+            0.1523977159899062
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.02349134231882727,
+            "u-": 0.0004817721025135866,
+            "v+": 0.0026000183288908793,
+            "v-": 1.5552628559080542e-07
+          },
+          "full_incoming_norm": 0.9976537511007305,
+          "jump_loss": 5.924601471223126e-05,
+          "incoming_mismatch": 1.1297242264647972e-06,
+          "numerical_loss": 6.037573893869606e-05,
+          "balance_residual": -1.4432899320127035e-15,
+          "identity_error": 6.06946407059323e-16,
+          "linear_residual_relative": 4.955056511076834e-15,
+          "bulk_norm": 0.9710200870852731,
+          "bulk_absorption": 0.9710200870852731
+        },
+        {
+          "outgoing": {
+            "u+": 0.0004817721025135874,
+            "u-": 0.023491342318827168,
+            "v+": 1.555262855908046e-07,
+            "v-": 0.0026000183288908568
+          },
+          "full_incoming_norm": 0.9976537511007303,
+          "jump_loss": 5.924601471223274e-05,
+          "incoming_mismatch": 1.1297242264648167e-06,
+          "numerical_loss": 6.037573893869756e-05,
+          "balance_residual": 4.440892098500626e-15,
+          "identity_error": 4.550087585433751e-15,
+          "linear_residual_relative": 6.90874717137484e-15,
+          "bulk_norm": 0.9710200870852789,
+          "bulk_absorption": 0.9710200870852789
+        }
+      ],
+      "omitted_outgoing_norm": [
+        6.994082940303681e-07,
+        6.994082940442459e-07
+      ],
+      "signed_finite_face_Gram_term": [
+        5.977446257978254e-13,
+        5.983957364329187e-13
+      ],
+      "feedback_condition": 1.854835913309583,
+      "maximum_face_Gram_deviation": 5.775769452248687e-08,
+      "maximum_face_Gram_condition": 1.0000000577576977,
+      "boundary_response_error": 8.326672684688674e-17,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 24.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 4286,
+          "accepted_steps": 355,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9748099497146753,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9982036440248226,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 24.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 4286,
+          "accepted_steps": 355,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9748099497146753,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9982036440248226,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 24.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 4286,
+          "accepted_steps": 355,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9748099497146753,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9982036440248219,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 24.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 4286,
+          "accepted_steps": 355,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9748099497146753,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9982036440248219,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.023225063838940206,
+          0.000478178084629699
+        ],
+        [
+          0.0004781780846296982,
+          0.023225063838940112
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.023703241923569904,
+        0.02370324192356981
+      ],
+      "anchored_tail_current_difference": [
+        0.005215595843324428,
+        0.00521559584332465
+      ],
+      "amplitude_ledger_error": [
+        2.136311960665438e-15,
+        4.412269161147009e-15
+      ],
+      "interpretation": "Anchored analytic amplitudes at complex energy; squared moduli are NOT probabilities or physical far flux."
+    },
+    "larger_box": {
+      "name": "larger_box",
+      "radius": 3.0,
+      "eta": 1.0,
+      "spacing": 0.0625,
+      "pairs": 4,
+      "energy": {
+        "real": 0.0,
+        "imag": 0.5
+      },
+      "dofs": 110592,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.09243900348211684,
+            0.01326391551331324
+          ],
+          [
+            0.013263915513313232,
+            0.09243900348211664
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.008591839020106544,
+            "u-": 0.0001767826584131606,
+            "v+": 0.0013248589733673446,
+            "v-": 3.15229092949206e-09
+          },
+          "full_incoming_norm": 0.9982564593887037,
+          "jump_loss": 8.327012352574929e-05,
+          "incoming_mismatch": 1.519372425252069e-06,
+          "numerical_loss": 8.478949595100135e-05,
+          "balance_residual": 4.440892098500626e-16,
+          "identity_error": 8.087375747420715e-16,
+          "linear_residual_relative": 5.0180816082391e-15,
+          "bulk_norm": 0.9880781860885751,
+          "bulk_absorption": 0.9880781860885751
+        },
+        {
+          "outgoing": {
+            "u+": 0.00017678265841316137,
+            "u-": 0.008591839020106504,
+            "v+": 3.152290929492048e-09,
+            "v-": 0.0013248589733673352
+          },
+          "full_incoming_norm": 0.9982564593887038,
+          "jump_loss": 8.327012352574884e-05,
+          "incoming_mismatch": 1.5193724252523119e-06,
+          "numerical_loss": 8.478949595100115e-05,
+          "balance_residual": -3.552713678800501e-15,
+          "identity_error": 2.640942459668382e-15,
+          "linear_residual_relative": 8.629034755727194e-15,
+          "bulk_norm": 0.9880781860885713,
+          "bulk_absorption": 0.9880781860885713
+        }
+      ],
+      "omitted_outgoing_norm": [
+        7.616466400541672e-07,
+        7.616466400593713e-07
+      ],
+      "signed_finite_face_Gram_term": [
+        4.38468509422179e-16,
+        1.2089674239216087e-15
+      ],
+      "feedback_condition": 1.865178332982439,
+      "maximum_face_Gram_deviation": 1.3425427316665127e-15,
+      "maximum_face_Gram_condition": 1.0000000000000016,
+      "boundary_response_error": 8.326672684688674e-17,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 3.0,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 1994,
+          "accepted_steps": 166,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9988189643069614,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 3.0,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 1994,
+          "accepted_steps": 166,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9988189643069614,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 3.0,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 1994,
+          "accepted_steps": 166,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9988189643069614,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 3.0,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 4,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 1994,
+          "accepted_steps": 166,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9645664380525507,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9988189643069614,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.008544969364766808,
+          0.00017593145474431164
+        ],
+        [
+          0.0001759314547443114,
+          0.008544969364766774
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.008720900819511119,
+        0.008720900819511086
+      ],
+      "anchored_tail_current_difference": [
+        0.0031153619493228257,
+        0.0031153619493228257
+      ],
+      "amplitude_ledger_error": [
+        6.240667704826564e-16,
+        2.4858587410747646e-15
+      ],
+      "interpretation": "Anchored analytic amplitudes at complex energy; squared moduli are NOT probabilities or physical far flux."
+    },
+    "extra_pairs": {
+      "name": "extra_pairs",
+      "radius": 2.5,
+      "eta": 1.0,
+      "spacing": 0.0625,
+      "pairs": 6,
+      "energy": {
+        "real": 0.0,
+        "imag": 0.5
+      },
+      "dofs": 76800,
+      "scattering": {
+        "real": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.15241364918584283,
+            0.021869570688256165
+          ],
+          [
+            0.021869570688256162,
+            0.15241364918584263
+          ]
+        ]
+      },
+      "ledger": [
+        {
+          "outgoing": {
+            "u+": 0.02349376291264967,
+            "u-": 0.00048182255455868285,
+            "v+": 0.0026002882217690767,
+            "v-": 1.553788860184174e-07
+          },
+          "full_incoming_norm": 0.9977579725640247,
+          "jump_loss": 5.925157060258083e-05,
+          "incoming_mismatch": 1.1298589767061545e-06,
+          "numerical_loss": 6.038142957928698e-05,
+          "balance_residual": -2.1094237467877974e-15,
+          "identity_error": 1.2346151793630844e-15,
+          "linear_residual_relative": 5.041001163823958e-15,
+          "bulk_norm": 0.9711215620665798,
+          "bulk_absorption": 0.9711215620665798
+        },
+        {
+          "outgoing": {
+            "u+": 0.0004818225545586837,
+            "u-": 0.023493762912649558,
+            "v+": 1.5537888601841663e-07,
+            "v-": 0.0026002882217690533
+          },
+          "full_incoming_norm": 0.9977579725640242,
+          "jump_loss": 5.925157060258309e-05,
+          "incoming_mismatch": 1.129858976706145e-06,
+          "numerical_loss": 6.038142957928924e-05,
+          "balance_residual": 5.551115123125783e-16,
+          "identity_error": 9.706988217982396e-16,
+          "linear_residual_relative": 6.934925772678472e-15,
+          "bulk_norm": 0.9711215620665822,
+          "bulk_absorption": 0.9711215620665822
+        }
+      ],
+      "omitted_outgoing_norm": [
+        5.291069292631678e-07,
+        5.291069292284734e-07
+      ],
+      "signed_finite_face_Gram_term": [
+        6.314757848127755e-13,
+        6.321269665667185e-13
+      ],
+      "feedback_condition": 1.8790441517935228,
+      "maximum_face_Gram_deviation": 4.310151305797421e-06,
+      "maximum_face_Gram_condition": 1.0000043101698826,
+      "boundary_response_error": 1.1102230246251565e-16,
+      "tails": [
+        {
+          "face": "u+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 6,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2378,
+          "accepted_steps": 197,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9709711510791413,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9982557599350733,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "u-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 6,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2378,
+          "accepted_steps": 197,
+          "incoming_zero_index": null,
+          "outgoing_zero_index": 0,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9709711510791413,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.0,
+          "anchored_output_norm": 0.9982557599350733,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v+",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 6,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2378,
+          "accepted_steps": 197,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9709711510791413,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9982557599350732,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        },
+        {
+          "face": "v-",
+          "R": 2.5,
+          "Rfar": 12.0,
+          "eta": 1.0,
+          "pairs": 6,
+          "energy": {
+            "real": 0.0,
+            "imag": 0.5
+          },
+          "method": "DOP853",
+          "rtol": 1e-10,
+          "atol": 2e-12,
+          "function_evaluations": 2378,
+          "accepted_steps": 197,
+          "incoming_zero_index": 0,
+          "outgoing_zero_index": null,
+          "near_real_current_errors": null,
+          "maximum_sampled_real_current_error": null,
+          "maximum_sampled_Z_norm": 0.9709711510791413,
+          "contraction_excess": 0.0,
+          "current_acceptance_tolerance": 2e-08,
+          "anchored_source_norm": 0.9982557599350732,
+          "anchored_output_norm": 0.0,
+          "anchor": "Both raw cap zero amplitudes divided by exp(i*E*(Rfar-R)); anchored ODEs integrated directly.",
+          "norm": "Full transverse-line analytic basis; retain separate finite-face DG Gram transforms.",
+          "cap": "Frozen massive outgoing branch at Rfar; scalar sqrt has positive real part.",
+          "direct_zero_input_output_term": false,
+          "scope": [
+            "Finite Hermite cutoff and finite far cap; no omitted-mode or infinite-tail certificate.",
+            "Separate whole-line arms overlap near corners; not an exact decomposition of the bilinear plane.",
+            "Anchored upper-half-plane source/readout are not probabilities or flux-normalized amplitudes.",
+            "Only real subthreshold energies have the stated one-chiral-channel current identities."
+          ]
+        }
+      ],
+      "squared_amplitudes": [
+        [
+          0.02322992045814517,
+          0.00047827812208863326
+        ],
+        [
+          0.0004782781220886331,
+          0.02322992045814511
+        ]
+      ],
+      "squared_amplitude_sum": [
+        0.023708198580233802,
+        0.023708198580233743
+      ],
+      "anchored_tail_current_difference": [
+        0.005109328816043757,
+        0.005109328816043868
+      ],
+      "amplitude_ledger_error": [
+        2.579533808777512e-15,
+        4.796510411075872e-16
+      ],
+      "interpretation": "Anchored analytic amplitudes at complex energy; squared moduli are NOT probabilities or physical far flux."
+    }
+  },
+  "comparisons": {
+    "zero_energy_regression": 6.661338147750939e-16,
+    "particle_hole_symmetry": 0.0,
+    "imaginary_axis_real_part": 0.0,
+    "real_mesh": 0.0008733435757649734,
+    "imag_mesh": 8.10078164768524e-05,
+    "real_cap6": 0.0010300854671422247,
+    "real_cap24": 0.00020486637069204339,
+    "imag_cap6": 8.024050966268237e-05,
+    "imag_cap24": 1.5916373418384255e-05,
+    "imag_pairs": 1.682251804524526e-08,
+    "imag_radius_anchored": 7.481080035648402e-06
+  },
+  "convention": "Each arm zero amplitude is phase/attenuation referenced to the near plane r=R; trivial remote propagation removed.",
+  "limits": [
+    "Imaginary-frequency squared amplitudes are not probabilities, physical far flux, or a stress tensor.",
+    "Finite DG/Hermite/cap model; corner overlap and infinite-channel errors remain uncontrolled.",
+    "Changing near-plane R changes the reference: compare exp[-2iE(R2-R1)] S_R2 to S_R1.",
+    "No global curved exterior, vacuum renormalization, self-consistent throat or chronology change."
+  ],
+  "source_sha256": "f216694bd18363d1fda3b131e42d706f56862db4cb0dc2a4ab25f21c43ce000a",
+  "input_sha256": {
+    "null_saddle_frequency_tail.py": "377749820d13b4581d32cb4c74972b96d154ba2d160910921d839c6778f7a282",
+    "null_saddle_tail.py": "619a3e339701493e3927d6af1e7fe1514dbf7448dcbf1c5e1ff39322e5e5a193",
+    "null_saddle_matched.py": "3c40496158348c806b14f115cb723e655a1c2878d5d5fa295be2de073b75b649",
+    "null_saddle_matched_results.json": "89b81096ef92612e07f176a3f2d965991aada8aaa2ab474f04228e6df816eaa9",
+    "null_saddle_scattering.py": "63a9652c41a8d3e6dd574bdc42c9c677c0789d85a934cc4766129537f47009cf",
+    "null_saddle_leads.py": "222dcb8346005de9d1e1ed382c5945b371e434deee620481d28bc203c36696e9",
+    "null_saddle_corner.py": "51be24c2296bbd26c05ff62977bd615cef2f5a39a9b20625d5dca4f054100d01",
+    "null_saddle_corner_results.json": "a62ffff2475d1382892fa1de0d168a97db38638cb2f5fc9b19342a5be4659bf2",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  }
+}

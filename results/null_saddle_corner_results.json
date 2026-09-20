@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_first_order_square": true,
+    "exact_gradient_eigenvalue_norm": true,
+    "exact_unbounded_minimum_monotonicity": true,
+    "positive_interval_constants": true,
+    "all_four_compact_spinor_identities": true
+  },
+  "model": {
+    "operator": "H=-i AU d_u-i AV d_v+SY*(eta-2uv)",
+    "matrices": "AU=(sigma_x+sigma_z)/sqrt(2), AV=(sigma_x-sigma_z)/sqrt(2)",
+    "units": "Dimensionless local saddle coordinates, mass and energy.",
+    "domain": "C_c^infinity in each open corner |u|>R, |v|>R; closure in the compact-support graph norm also allowed."
+  },
+  "proof": {
+    "square": "H^2=-Delta+m^2+G, G=2i(v AU+u AV)SY, G^2=4(u^2+v^2)I.",
+    "sign": "x=|u|, y=|v|, e=eta*sign(uv); m^2=(2xy-e)^2.",
+    "scalar_comparison": "F(x,y)=(2xy-e)^2-2sqrt(x^2+y^2).",
+    "unbounded_minimum": "For R>=1, |eta|<=1, each partial derivative of F is >=4R(2R^2-e)-2>=2. Thus inf_{x,y>R}F=F(R,R). No outer box or sampled minimization is used.",
+    "squared_gap": "g_corner^2=(2R^2-e)^2-2sqrt(2)R; uniformly g^2=(2R^2-|eta|)^2-2sqrt(2)R.",
+    "positivity": "R>=6/5 guarantees g^2>0 for |eta|<=1. R>=1 suffices for the minimum formula, but g^2 must separately be positive.",
+    "quadratic_form": "||H phi||^2>=||grad phi||^2+g^2||phi||^2 for compact corner fields.",
+    "not_exact_spectrum": "g is a coercivity lower bound, not the bottom eigenvalue of a chosen self-adjoint corner boundary problem."
+  },
+  "cutoff_consequences": {
+    "commutator": "[H,chi]=-i(AU chi_u+AV chi_v), with pointwise matrix norm |grad chi|.",
+    "zero_energy": "g ||chi psi|| <= ||chi Hpsi||+|| |grad chi| psi||.",
+    "shifted_energy": "For E=xi+i*kappa, |xi|<g, set gamma_E=sqrt((g-|xi|)^2+kappa^2). Then gamma_E ||chi psi||<=||chi(H-E)psi||+|| |grad chi| psi||.",
+    "shifted_proof": "For compact phi, symmetry gives ||(H-xi-i*kappa)phi||^2=||(H-xi)phi||^2+kappa^2||phi||^2; use ||(H-xi)phi||>=(g-|xi|)||phi||.",
+    "nested_corner": "For a product linear ramp of width ell>0, and a field/residual admitting the infinity cutoff limit: ||psi||_{C_(R+ell)} <= [||r||_{C_R}+sqrt(2)/ell*||psi||_{C_R minus C_(R+ell)}]/gamma_E, r=(H-E)psi.",
+    "ramp_conditions": "The ramp has zero trace at the two inner edges, equals one in the deeper corner, and |grad chi|<=sqrt(2)/ell. Its Lipschitz/graph approximation is permitted; finite corner L2 norm and residual justify removing an outer cutoff.",
+    "missing_data": "The transition-strip norm or interface trace and a globally conforming common field with controlled residual are still needed. Independent whole-line arms do not supply them; a trace jump contributes an unaccounted distributional residual."
+  },
+  "interval_digits": 70,
+  "constants": [
+    {
+      "R": "1.2",
+      "absolute_eta": "0",
+      "uniform_gap_squared_interval": "[4.90028745030457188287594706189672461143278749909532462437596862882224143229, 4.90028745030457188287594706189672461143278749909532462437596862882224244653]",
+      "uniform_gap_interval": "[2.21365928957113268833073672572220985470707452806121387250696943453768897753, 2.21365928957113268833073672572220985470707452806121387250696943453768923109]"
+    },
+    {
+      "R": "1.2",
+      "absolute_eta": "1",
+      "uniform_gap_squared_interval": "[0.140287450304571882875947061896724611432787499095324624375968628822241680055, 0.140287450304571882875947061896724611432787499095324624375968628822242295841]",
+      "uniform_gap_interval": "[0.374549663335280389457371000680940722368703781570348836530578255153397568529, 0.374549663335280389457371000680940722368703781570348836530578255153398392596]"
+    },
+    {
+      "R": "2.5",
+      "absolute_eta": "0",
+      "uniform_gap_squared_interval": "[149.178932188134524755991556378951509607151640623115259634116601310046335292, 149.178932188134524755991556378951509607151640623115259634116601310046339928]",
+      "uniform_gap_interval": "[12.2138827646303583126317538959082626095486655265272516725563591586413782403, 12.2138827646303583126317538959082626095486655265272516725563591586413785301]"
+    },
+    {
+      "R": "2.5",
+      "absolute_eta": "1",
+      "uniform_gap_squared_interval": "[125.178932188134524755991556378951509607151640623115259634116601310046336451, 125.178932188134524755991556378951509607151640623115259634116601310046338769]",
+      "uniform_gap_interval": "[11.1883391166041496936883942554323864222025818283992757714732963703971453433, 11.1883391166041496936883942554323864222025818283992757714732963703971454882]"
+    },
+    {
+      "R": "3",
+      "absolute_eta": "0",
+      "uniform_gap_squared_interval": "[315.514718625761429707189867654741811528581968747738311560939921572055601423, 315.514718625761429707189867654741811528581968747738311560939921572055606059]",
+      "uniform_gap_interval": "[17.7627339851094271153714486413608049987653527741659916941785604686239017424, 17.7627339851094271153714486413608049987653527741659916941785604686239020322]"
+    },
+    {
+      "R": "3",
+      "absolute_eta": "1",
+      "uniform_gap_squared_interval": "[280.514718625761429707189867654741811528581968747738311560939921572055601423, 280.514718625761429707189867654741811528581968747738311560939921572055606059]",
+      "uniform_gap_interval": "[16.7485736295889217942620968841126657102188027642550258788025172151282548887, 16.7485736295889217942620968841126657102188027642550258788025172151282554682]"
+    }
+  ],
+  "symbolic": {
+    "first_order_square_residual": [
+      "0",
+      "0"
+    ],
+    "gradient_square_residual": "zero 2x2 matrix",
+    "actual_matrix_maximum_error": 1.1102230246251565e-16,
+    "exact_uniform_gap_at_R_6_over_5": "2209/625 - 12*sqrt(2)/5"
+  },
+  "compact_spinor_control": [
+    {
+      "corner_signs": [
+        1,
+        1
+      ],
+      "R": 2.5,
+      "eta": 1.0,
+      "support_absolute_coordinate_interval": [
+        2.7,
+        3.5
+      ],
+      "psi_norm_squared": 0.07441649703387979,
+      "direct_H_norm_squared": 27.74029596847415,
+      "integrated_square_form": 27.74029596847415,
+      "relative_identity_error": 0.0,
+      "rayleigh_quotient": 372.77078435773126,
+      "corner_comparison_gap_squared": 125.17893218813452
+    },
+    {
+      "corner_signs": [
+        1,
+        -1
+      ],
+      "R": 2.5,
+      "eta": 1.0,
+      "support_absolute_coordinate_interval": [
+        2.7,
+        3.5
+      ],
+      "psi_norm_squared": 0.07441649703387979,
+      "direct_H_norm_squared": 33.46143626043882,
+      "integrated_square_form": 33.46143626043883,
+      "relative_identity_error": 2.123467535074604e-16,
+      "rayleigh_quotient": 449.6507843577312,
+      "corner_comparison_gap_squared": 175.17893218813452
+    },
+    {
+      "corner_signs": [
+        -1,
+        1
+      ],
+      "R": 2.5,
+      "eta": 1.0,
+      "support_absolute_coordinate_interval": [
+        2.7,
+        3.5
+      ],
+      "psi_norm_squared": 0.07441649703387979,
+      "direct_H_norm_squared": 33.46143626043882,
+      "integrated_square_form": 33.46143626043883,
+      "relative_identity_error": 2.123467535074604e-16,
+      "rayleigh_quotient": 449.6507843577312,
+      "corner_comparison_gap_squared": 175.17893218813452
+    },
+    {
+      "corner_signs": [
+        -1,
+        -1
+      ],
+      "R": 2.5,
+      "eta": 1.0,
+      "support_absolute_coordinate_interval": [
+        2.7,
+        3.5
+      ],
+      "psi_norm_squared": 0.07441649703387979,
+      "direct_H_norm_squared": 27.74029596847415,
+      "integrated_square_form": 27.74029596847415,
+      "relative_identity_error": 0.0,
+      "rayleigh_quotient": 372.77078435773126,
+      "corner_comparison_gap_squared": 125.17893218813452
+    }
+  ],
+  "scope": [
+    "This is an all-distance estimate inside the four open corners of the stated local bilinear model.",
+    "No boundary condition has been imposed on the physical scattering field at a corner edge. Compact cutoffs introduce the explicit gradient/transition term.",
+    "Large corner mass alone gives no unconditional bound on corner amplitude, arm-overlap error or a scattering matrix. No exponential suppression or completed full-plane exterior is asserted.",
+    "The local normal form, not the full curved dihole geometry, is being checked. No supporting quantum stress, stability, formation or time-travel conclusion follows."
+  ],
+  "source_sha256": "51be24c2296bbd26c05ff62977bd615cef2f5a39a9b20625d5dca4f054100d01",
+  "input_sha256": {
+    "null_saddle_leads.py": "222dcb8346005de9d1e1ed382c5945b371e434deee620481d28bc203c36696e9",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  }
+}

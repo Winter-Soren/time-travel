@@ -1,5 +1,225 @@
 # Reproduction and coupled-model iterations
 
+## Frequency response, cap-phase sensitivity and a corner estimate — increment115
+
+[Frequency-dependent arm helper](../scripts/null_saddle_frequency_tail.py),
+[node calculation](../scripts/null_saddle_spectrum.py),
+[spectral results](../results/null_saddle_spectrum_results.json),
+[corner proof/checker](../scripts/null_saddle_corner.py),
+[corner results](../results/null_saddle_corner_results.json), and
+[combined figure](../figures/null_saddle_spectrum_progress.png).
+The114 model supplied only real zero-energy routing. This increment computes
+finite-model real and upper-half-plane responses, and supplies a local corner
+estimate with its missing interface data stated explicitly. Neither the
+quantum source nor a complete common exterior is thereby constructed.
+
+### Analytic outgoing branch and a fixed amplitude reference
+
+At E=xi+i kappa, kappa>=0, retain the same instantaneous Hermite/spin basis.
+For each massive cap channel use the outgoing branch
+
+$$
+\gamma_j(E)=\frac{\lambda_j}{E+i\sqrt{\lambda_j^2-E^2}},\qquad
+\operatorname{Re}\sqrt{\lambda_j^2-E^2}>0.
+$$
+
+This is algebraically (E-i sqrt(lambda_j^2-E^2))/lambda_j, evaluated without
+subtractive cancellation on the positive imaginary axis. Real energies are
+restricted below the first near-plane massive threshold. No above-threshold
+channel-count continuation is implemented.
+
+With the114 moving-basis matrices, the projected generator is
+
+$$
+\binom{a}{b}'=\mathcal G\binom{a}{b},\quad
+\mathcal G=\begin{pmatrix}iEI-K_+&-i\Lambda\\i\Lambda^T&-iEI-K_-\end{pmatrix},
+\quad \mathcal G^\dagger\Sigma+\Sigma\mathcal G=-2\kappa I,
+\quad\Sigma=\operatorname{diag}(I,-I).
+$$
+
+The homogeneous impedance satisfies
+
+$$
+Z'=i\Lambda^T-2iEZ-K_-Z+ZK_++iZ\Lambda Z.
+$$
+
+A cap amplitude carries the arbitrary free propagation factor exp[iE(L-R)]
+on each incoming/outgoing arm. Divide that factor out to reference the zero
+amplitudes to the near planes. The anchored source/readout equations become
+
+$$
+g'=(-K_-+iZ\Lambda)g,\qquad t'=t(K_++i\Lambda Z).
+$$
+
+They are integrated directly; no exponentially small/large factors are
+multiplied numerically. The matrix at radius R is related to remote-cap
+amplitudes by S_R=exp[-2iE(L-R)] S_remote. Consequently changing the near
+radius also requires a reference correction: compare
+exp[-2iE(R2-R1)] S_R2 with S_R1. This is an amplitude correction at imaginary
+energy as well as a phase correction on the real axis.
+
+The canonical homogeneous Z is contractive for ImE>0. Real-energy source/
+output flux identities remain valid, but their unchanged use on the imaginary
+axis would be incorrect. Anchored S(i kappa), or its squared modulus, is not
+a particle transmission probability or physical far flux.
+
+### Absorption bookkeeping and actual frequency calculations
+
+The existing complex H-E volume assembly is reused. Its current ledger must
+include 2 kappa integral|psi|^2 over the node:
+
+$$
+\|P_+\psi\|^2-\|b_{\rm full}\|^2+L_{\rm DG}
++2\kappa\|\psi\|_\Omega^2=2\operatorname{Re}(\psi^\dagger r).
+$$
+
+The source/readout and finite-face Gram transformations are unchanged in
+form. The saved anchored-tail current difference on ImE>0 is not expected to
+vanish; it includes the effects of complex-frequency continuation and the
+amplitude reference. The node absorption ledger and the algebraic amplitude
+ledger are checked separately. No artificial unit normalization is applied.
+
+For eta1,R2.5,p4,L12, the finer h=.0625 real E1 result is
+
+$$
+S(1)\simeq
+\begin{pmatrix}-.6091935411&.1196232804\\.1196232804&.6091935411\end{pmatrix}
++i\begin{pmatrix}.7690948367&-.1510231164\\-.1510231164&-.7690948367\end{pmatrix}.
+$$
+
+One input gives raw flux fractions .962623638319008 and .0371177108939955,
+summing to .999741349213004. At the same fine geometry and E=.5i,
+
+$$
+S(.5i)\simeq i\begin{pmatrix}-.152413632363325&.021869567243260\\
+.021869567243260&.152413632363325\end{pmatrix}.
+$$
+
+The latter is an anchored response, not a 2.3% physical transmission claim.
+On the common h=.125 grid, response norms at kappa0,.2,.5,1 are approximately
+.9993204,.4718675,.1538927,.0244929. These are sampled frequencies of the
+finite model, not a complete vacuum integral.
+
+Ten coupled check groups pass across15 cases. H*=−H with the actual real
+outgoing/imaginary incoming basis gives S(-E*)=-S(E)*; the saved real +/-.5
+matrices satisfy this exactly in floating arithmetic, and S(i kappa) is
+purely imaginary. E0 reproduces114 within6.67e-16. A manufactured damped
+plane wave has relative L2 error .00194821→.000501087 under mesh halving;
+its bulk norm approaches the exact4.44052991094. An independent20-case
+arm audit on all four faces and five real/complex energies reproduces
+impedance within1.12e-15 and anchored source/readout within2.23e-16;
+the integrated absorption identity agrees within2.23e-15.
+
+### A limitation hidden by zero-frequency and power-only checks
+
+Complex amplitudes reveal non-negligible distant-cap sensitivity even when
+real-energy output powers have stabilized. Relative to L12, the E1 matrices
+at L6 and L24 differ almost entirely by common phases:
+
+| Cap comparison | Common scalar ratio | Maximum non-scalar remainder |
+| --- | --- | --- |
+| S_6(1) / S_12(1) | phase -0.00104989295 radians; modulus nearly1 | 6.57e-11 |
+| S_24(1) / S_12(1) | phase +0.000208805731 radians; modulus nearly1 | 3.52e-16 |
+| S_6(.5i) / S_12(.5i) | real scalar1.00052646541 | 2.88e-11 |
+| S_24(.5i) / S_12(.5i) | real scalar0.999895571195 | 2.78e-17 |
+
+Each scalar is the Frobenius least-squares projection
+c=Tr(S12^dagger SL)/Tr(S12^dagger S12); the remainder is SL-c S12.
+All matrices needed to reproduce this table are in the saved results.
+This residual effect is not the already removed free propagation phase.
+It principally changes the remote zero-channel normalization. It must not
+be confused with an error of the homogeneous physical-cut impedance Z.
+A separate small helper calculation, without rerunning the DG solve, uses
+frequency_port(face,2.5,1.,E,pairs=4,Rfar=L,rtol=2e-12) for both u+ and v+:
+
+| Energy | Maximum entry change in Z, L6 versus12 | L24 versus12 |
+| --- | --- | --- |
+| 1 | 6.07e-9 | 1.49e-15 |
+| .5i | 4.97e-10 | 8.89e-16 |
+
+At L24 versus12, the real-energy source/readout scalar on each arm is
+approximately 0.99999999455002+0.000104402865103i; at E=.5i it is
+0.99994778423450. Their non-scalar remainder is below2.23e-16.
+Thus the tested physical-cut boundary response is stable while the remote
+normalization still changes. These are ordinary floating-point sensitivities,
+not an infinite-cap enclosure. In a consistently normalized local Green
+function or sewn operator, changing channel coordinates has compensating
+source, readout and connection transformations. A common remote phase alone
+is not a universal obstacle to a local stress calculation. At complex energy
+the normalization/Wronskian factors must also be retained.
+
+For fixed E and large L, formal adiabatic elimination gives a useful
+explanation of the slow common scalar. The zero-to-massive couplings have
+squares k_1^2=eta^2/(4r^3), k_2^2=1/(8r^2), with lambda_j^2=4rj. Therefore
+chi=sum(k_j/lambda_j)^2=eta^2/(16r^4)+1/(64r^3). The leading phase rate on
+one arm is 2E chi, yielding the two-arm missing phase
+
+$$
+\delta_0(E,L)=4E\int_L^\infty\chi(r)\,dr
+=\frac{E}{32L^2}+\frac{E\eta^2}{12L^3}.
+$$
+
+Derivative terms also change normalization; matching to the frozen cap
+introduces additional endpoint corrections. This formal leading expression
+has no proved remainder bound and is not substituted into the saved matrices.
+It explains a channel-reference effect, not a new force or a time delay
+measured by an observer. The114 zero-energy agreement does not establish
+convergence of every frequency-dependent, remotely normalized amplitude.
+
+Other maximum amplitude sensitivities are: mesh.125→.0625 gives8.73344e-4
+at E1 and8.10078e-5 at E=.5i; four→six pairs changes the latter by1.68226e-8.
+After the required reference correction, R2.5→3 changes S(.5i) by7.48109e-6.
+These are measured sensitivities, not error bounds.
+
+### All-distance local corner estimate, without imposing a boundary wall
+
+For the local mass m=eta-2uv,
+
+$$
+H^2=-\Delta+m^2+G,\quad G=2i(vA_u+uA_v)\sigma_y,
+\qquad G^2=4(u^2+v^2)I.
+$$
+
+In one corner set x=|u|, y=|v| and e=eta sign(uv). For R>=1, |eta|<=1,
+the scalar comparison F=(2xy-e)^2-2 sqrt(x^2+y^2) is increasing in both
+coordinates on x,y>=R: each derivative is at least4R(2R^2-e)-2>=2.
+Its unbounded-domain infimum is therefore F(R,R), without numerical sampling.
+Uniformly over all four corners,
+
+$$
+\|H\phi\|^2\ge\|\nabla\phi\|^2+g^2\|\phi\|^2,
+\qquad g^2=(2R^2-|\eta|)^2-2\sqrt2R,
+$$
+
+for compactly supported corner fields and their graph closure. R>=6/5 makes
+g positive uniformly for |eta|<=1. At R2.5,|eta|1, g^2=125.1789321881345
+and g=11.1883391166042 in local units. This is a coercivity comparison,
+not the exact spectrum of a selected corner boundary problem.
+
+For a cutoff chi supported in the corner and E=xi+i kappa with |xi|<g,
+
+$$
+\sqrt{(g-|\xi|)^2+\kappa^2}\,\|\chi\psi\|
+\le\|\chi(H-E)\psi\|+\||\nabla\chi|\psi\|.
+$$
+
+A width-ell product ramp bounds the last term by sqrt(2)/ell times the
+transition-strip norm, subject to the finite-norm/residual infinity limit.
+That strip norm or corresponding interface data is still needed. Separate
+arm fields have not supplied one globally conforming field; a jump produces
+an additional distributional residual. Large corner mass alone does not
+certify their overlap error. Five corner checks pass, including symbolic
+operator squaring,70-digit interval constants and direct compact-spinor
+identities on all four corners (maximum discrepancy2.13e-16).
+
+The next critical work is a common exterior field with interface/residual
+control, together with omitted-mode control and matching to the actual curved
+geometry. Remote-channel normalization must be consistent wherever it is
+used, but its common phase is not by itself a failure of the local response.
+The present sampled spectrum does not yet supply the required quantum stress.
+No supporting matter, stable throat or backwards passage is established.
+13 September2027 to12 September2027 remains unproved.
+
 ## Varying bilinear arms and physical channel amplitudes — increment114
 
 [Moving-arm helper](../scripts/null_saddle_tail.py),

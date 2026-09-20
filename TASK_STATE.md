@@ -58,6 +58,72 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Frequency response, residual cap phase and a local corner gap — increment115
+- Previous goal turn PROGRESS:114 committed/pushedeab45db5f255b3de735d960c23f81f66a9342db0;
+  privateorigin and cleanworktree verified. Current turn started clean.
+- NEW scripts/null_saddle_frequency_tail.py uses analytic outgoing massive
+  gamma=lambda/(E+i sqrt(lambda²-E²)), Re sqrt>0, ImE>=0. Real energies must
+  stay below first near-face massive threshold. Reuses moving-basis matrices.
+  General complex Riccati and source/readout anchored to near planes by removing
+  exp[iE(L-R)] on each arm, integrated directly without exp cancellation.
+  API frequency_port(...energy...) returns lead(E0 basis only),Z,g,t,metadata.
+- Full-line homogeneous Z remains contractive in upper halfplane. Real-only
+  current source/readout identities are NOT imposed at imaginary frequency.
+  Agent independent20 short-transfer cases on all4 arms at5 energies give
+  Z<1.12e-15, g/t<2.23e-16, absorption<2.23e-15, correct negative-real branch.
+  HelperSHA377749820d13b4581d32cb4c74972b96d154ba2d160910921d839c6778f7a282.
+- NEW scripts/null_saddle_spectrum.py: complex H-E reuses existingDG assembly;
+  FrequencyDG ledger adds2ImE*int|psi|². Eimag amplitudes are analytic responses,
+  NOT probabilities/physical far flux. Anchored tail-current difference need
+  not vanish. 15cases,10 coupled checkgroups PASS, strict run exit0.
+- eta1 R2.5 h.0625 p4 L12, E1 raw flux .962623638319008/.0371177108939955.
+  E=.5i S=i[[-.152413632363325,.021869567243260],
+  [.021869567243260,.152413632363325]]. Common coarseh.125 response norms at
+  kappa0/.2/.5/1: .9993204/.4718675/.1538927/.0244929; not a vacuum integral.
+  H*=−H gives S(-E*)=-S(E)* in actual input/output phases; real±.5 and pure
+  imaginary structure pass exactly numerically. E0 reproduces114 within6.67e-16.
+- NEW LIMITATION: cap-power agreement atE0 does NOT extend to complete phase
+  atnonzeroE. AtE1 S6/S12 common phase -.00104989294871353rad; S24/S12
+  +.000208805730584884rad, non-scalar remainders6.57e-11/3.52e-16.
+  AtE=.5i corresponding scalar ratios1.000526465410614/.999895571195492;
+  shape remainders2.88e-11/2.78e-17. These are after free-phase removal.
+  All raw matrices saved; scalar=vdot(base,other)/vdot(base,base).
+- IMPORTANT scope correction: helper-only R2.5 eta1 p4 rtol2e-12 check of
+  u+/v+ Z gives L6->12 max6.07e-9 atE1,4.97e-10 atE.5i; L12->24 max1.49e-15
+  and8.89e-16. Remote g/t still carry a common scalar. Local physical-cut
+  Green/consistently sewn operators retain compensating channel coordinates;
+  the remote scalar is NOT a universal blocker to local quantum stress.
+  Formal delta0=E/(32L²)+E eta²/(12L³) explains leading two-arm normalization;
+  omitted derivative/frozen-cap endpoint terms remain, no remainder bound.
+  See current RESEARCH for helper recipe and exact scope; no DG rerun needed.
+- Maximum amplitude sensitivities: mesh realE1 8.73344e-4, imagE.5i8.10078e-5;
+  pairs4->6 imaginary1.68226e-8. R2.5->3 imaginary7.48109e-6 AFTER reference
+  correction exp[-2iE(R2-R1)]. These are sensitivities, not error bars.
+  Real/imag cap changes now meaningful; no unqualified infinite-cap convergence.
+- NEW scripts/null_saddle_corner.py/results:5checks PASS, symbolic H²=-Delta+m²+G,
+  ||G||=2sqrt(u²+v²). ForR>=1, |eta|<=1, comparison minimum on all unbounded
+  corners is g²=(2R²-|eta|)²-2sqrt2 R; positive uniformly R>=6/5.
+  AtR2.5,|eta|1 g²125.1789321881345, g11.1883391166042. Compact-support
+  domain/graph closure only. Cutoff bound gammaE||chi psi||<=||chi(H-E)psi||
+  +|||gradchi|psi||, gammaE=sqrt((g-|ReE|)²+(ImE)²), |ReE|<g.
+  Transition/interface norms and one conforming common field are still needed;
+  separate-arm jumps give distributional residual. Does NOT solve corner error.
+  70digit intervals and all4compact-spinor identities error2.13e-16 verified.
+- Spectrum source/result hashes
+  f216694bd18363d1fda3b131e42d706f56862db4cb0dc2a4ab25f21c43ce000a
+  /b82b3a77b8ba1be4d00ec85a8336f36507cf08568ec7178fefadf84ed65a870a.
+  Corner source/result hashes51be24c2296bbd26c05ff62977bd615cef2f5a39a9b20625d5dca4f054100d01
+  /a62ffff2475d1382892fa1de0d168a97db38638cb2f5fc9b19342a5be4659bf2.
+  Spectrum PNG/PDF visually inspected; no physical-material blueprint implied.
+- Verification: layout79 imports/578 links/8 historical guards/14 frozen inputs PASS;
+  all495 prior scientific files and both RESEARCH/TASK history suffixes unchanged.
+  Spectrum/corner current source and recorded input hashes verified; diff-check PASS.
+- NEXT: a conforming common exterior with interface/residual and omitted-mode
+  bounds, then actual curved matching/quantum source. Keep remote channel
+  normalization consistent; its scalar phase is not the main local obstacle. No renormalized stress, supported/stable throat,
+  medium or chronology change;13Sep2027->12Sep2027 UNPROVED. Goal ACTIVE.
+  Professor readiness already notified; heartbeat PAUSED; no email sent.
+
 ### Varying-arm continuation and remote quantum scattering — increment114
 - Previous goal turn PROGRESS:113 committed/pushed8ce090da8995ea75e18e5e15b71de9bc7ec003aa;
   privateorigin and cleanworktree verified. Current turn started clean.
