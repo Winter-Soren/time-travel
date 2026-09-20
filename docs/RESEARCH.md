@@ -1,3 +1,39 @@
+## Independent bridge modes identify the next dominant error -- increment139
+
+The [coupled interior-field calculation](INDEPENDENT_BRIDGE_FIELDS.md) now
+adds independent zero-trace monopole/sine fields to138's global trace lifts.
+Both families share quadrature and all mixed matrix elements are retained.
+One maximal matrix per sector and phase supplies nested trial comparisons;
+seven connected checks pass in42.57 seconds, with frozen138 responses
+recovered to5.55e-14 relative error.
+
+Adding the interior fields reverses the sign of the finite-regulator response.
+The central-sector old-window result changes from about $+1.9\times10^{-6}$
+to $-5.6\times10^{-4}$ in $\hbar c/D$ at $MD=1$. This is a finite common-form
+result, not physical renormalized supporting stress. Independent refinements
+identify the current dominant sensitivity: radial2-to3 changes the response
+by21.8%, while the tested angular2-to3 change is about0.0018% and the later
+exterior24-to48 change is below0.016%. Radial enrichment is therefore the
+next useful computation; these differences do not bound physical tails.
+
+A new outward [frequency-tail helper](../scripts/dihole_finite_frequency_tail.py)
+certifies the omitted tails of the exact stored canonical finite matrices.
+The largest central-space numerical integral from0 to80 is about
+$-0.00061484$ and $-0.00061497$ in the two phases; each remaining matrix tail
+is below7.452e-8. The middle integral, geometry/whitening errors and physical
+continuum remainders are not certified. Canonical arrays were reloaded and
+all six tail certificates reproduced exactly.
+
+See [driver](../scripts/dihole_bridge_enrichment.py),
+[bridge helper](../scripts/dihole_enriched_bridge.py),
+[results](../results/dihole_bridge_enrichment_results.json),
+[matrix state](../data/dihole_bridge_enrichment_state.npz), and
+[figure](../figures/dihole_bridge_enrichment_progress.png).
+Next: increase radial sine order with the same exterior/angular families,
+then control omitted radial and physical exterior/axis/angular/IR modes
+before136's local subtraction and regulator removal. No new physical law,
+obtainable supporting medium, stability or backward passage follows.
+
 ## Globally sewn physical trials and basis sensitivity -- increment138
 
 The [new connected form](GLOBAL_SEWN_FORM.md) extends quantum trial fields

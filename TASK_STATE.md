@@ -58,6 +58,53 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Independent bridge modes and finite-matrix frequency tails -- increment139
+- Previous138 PROGRESS: published326b3223cd188baadd45dd581a44ca28d2bd06dd;
+ clean at start. Import COMPLETE; original full goal remains ACTIVE.
+- NEW dihole_enriched_bridge.py adds137 compact zero-trace monopole/sine
+ fields to138 exactglobaltraces on3sharedangular panels, with mixed forms.
+ Worker6checksPASS: globalblock<=5.44e-16,compactblock<=8.82e-15;
+ nestedpointwisefields exact. Sourceb5b7588b4991219329f8fca1b2132b4c369602adcdd197d6271e33750e4e74b2.
+- NEW dihole_bridge_enrichment.py assembles maximal84,90,84physical forms
+ for mu=-.5,.5,1.5 andphases0,pi. Exterior48columns,pairedangular3,radial3.
+ Batched pointwise polynomial integration; no projected-firstorder square.
+ Rawprincipal submatrices selectnestedspaces BEFORE fixed-Gwhitening.
+- All7connectedchecks PASS42.57sec. Session42860 TERMINAL exit0; first
+ 41.52secproductionrun68332 also terminal. Finalrun added exactcanonical
+ certificatearrays toNPZ and angular/radial cross-refinements; no livejob.
+- Commonform Q/dQ independentchecks3.59e-16/6.11e-16;metricFD2.33e-10;
+ globalweakskew<=3.46e-11;138frequencyresponsesrecovered<=5.55e-14.
+ Coupled higherquadrature Q3.21e-11,G3.42e-12,dQ8.38e-11;sampleF5.98e-14.
+- Interior modes reverse FINITE model sign. Central oldwindow response
+ phase0,E24only+1.90592e-6; +A1R1-.000682302; +A2R2-.000716938;
+ +A2R3-.000560801; +A3R2-.000716951; +A3R3-.000560806;
+ E48+A3R3-.000560739. Phasepi final-.000560857, units hbar*c/D,MD1.
+- Crucialnextdirection: radial2->3 sensitivity21.778%,21.782%; angular2->3
+ atfixedradial2 .00179%,.00177%; exterior24->48afterinterior .01192%,.01535%.
+ These are trialrefinements, NOT bounds on missingphysicalfields.
+- NEW dihole_finite_frequency_tail.py outwardcertifies norms/eigenvalue
+ bounds of supplied exactbinary64 canonical matrices and gives high/low
+ tails. Existingintervalarithmeticreused; scalar/dense/indefinitecontrols
+ PASS. Scope excludesgeometryassembly,whiteningerror,physicalcontinuum.
+ Source37aad394ced2841bcbe6a595f93b77067592323e785f4aa16c1e1827af91dd0a.
+- Largestcentral numerical integral0..80:phases0/pi[-.000614837285578,
+ -.000614971524909];order16->24change<=6.77e-13. Separatelyoutwardmatrix
+ tailbeyond80 <=7.452e-8 eachphase;othersectors<=6.230e-8. Middle integral
+ notenclosed;finiteCgapdoesnotestablishphysicalIRlimit. No physicalsign.
+- NEW INDEPENDENT_BRIDGE_FIELDS.md derivation/scope; matrixNPZ storesraw
+ forms and exactcanonicalarrays used bytailcertificates. Reloadedall6,
+ reproducingcoefficientbounds/tails EXACTLY. Source/input/statehashesPASS.
+ Driverc5fb3c062e40041c3f6b681903d8985f4c38aba59ca6deaeb2dd85f0b037737b;results1b141b92c30a51c52e1a756b8dafec9e1c938a52aa1e36cfcabcbad139207931;statefe48d364c62ea7fa5c6e26ff012025c4f05dd732ff8702d2008d4e817d7af795.
+ Figure dihole_bridge_enrichment_progress.png/pdf inspected;137/138frozen.
+- Integration verification PASS:116 imports,8 historical guards,14 frozen
+ pilot hashes,972 Markdown links; whitespace clean; priorhistory intact.
+- NEXT: increase RADIAL sine order beyond3 at fixed angular/exterior spaces,
+ assemblingnewmixedentries and comparingcoupledresponse; developradialtail.
+ Do notrepeatoldgeometry/domainproofs or increaseallcutoffsblindly.
+ Thenphysicalexterior/axis/angular/IRremainders,136localsubtraction,Mremoval.
+ NegativeMD1finitevalue is NOT renormalizedstress/newlaw/stability/material;
+ 13Sep2027->12Sep2027 remains UNPROVED.
+
 ### Global sewn physical form and unresolved basis sensitivity -- increment138
 - Previous137 PROGRESS: published99aa6eb18a53df225150bb3909e3bccfe7aecf5a;
  clean at start. Import COMPLETE, full goal remains ACTIVE/unachieved.

@@ -6,6 +6,8 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The [interior-field calculation](scripts/dihole_bridge_enrichment.py) now lets the bridge field vary independently of its openings. This reverses the finite-model response to negative, but radial refinement still changes it by about 22%; physical support remains unproved. Seven connected checks pass, and the omitted frequency tails of the stored finite matrices have explicit outward bounds. See [derivation and next radial test](docs/INDEPENDENT_BRIDGE_FIELDS.md), [results](results/dihole_bridge_enrichment_results.json), and [figure](figures/dihole_bridge_enrichment_progress.png).
+
 The [global sewn calculation](scripts/dihole_sewn_form.py) now extends trial fields through both exact openings into the actual exterior, with nine connected checks passing. Doubling the trial space changes the preliminary response by factors of 4.17 and 4.42: missing field patterns remain decisive. See [derivation and next enrichment](docs/GLOBAL_SEWN_FORM.md), [results](results/dihole_sewn_form_results.json), and [figure](figures/dihole_sewn_form_progress.png). No physical supporting stress is established.
 
 The [physical Euclidean operator](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md) now has an explicit common mass prescription and metric derivative. Its [actual bridge implementation](scripts/dihole_euclidean_form.py) passes ten focused checks and exposes terms lost by projecting before squaring. This is a local building block; supporting stress still requires the full sewn exterior and controlled remainders. See [results](results/dihole_euclidean_form_results.json) and [figure](figures/dihole_euclidean_form_progress.png).
