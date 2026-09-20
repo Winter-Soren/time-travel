@@ -1,5 +1,89 @@
 # Reproduction and coupled-model iterations
 
+## Physical decision audit after the spectral certificate — increment128
+
+The user's question about prolonged numerical work prompted a review of the
+next calculation before writing another spectral driver. The increment 127 certificate
+remains valid. No larger eigenvalue/heat-trace certification run was launched.
+
+### What the certificate cannot decide
+
+Even a complete heat trace in the central Dirichlet box would not determine
+the local, metric-varied quantum kernel or renormalized null stress on a
+throat. It also leaves the other angular sectors and natural exterior limit
+open. The [stress bridge](EXTERIOR_STRESS_BRIDGE.md) explicitly records these
+missing quantities. Three bounded agent assessments agree that an expanded
+box-spectrum campaign is not the next physical priority.
+
+Traversability and backward travel are separate requirements. The published
+[Maldacena–Milekhin–Popov construction](https://arxiv.org/abs/1807.04726) is a
+long traversable wormhole that preserves ambient causality. Reproducing one
+of its ingredients would not establish chronology change in our geometry.
+
+### A quantitative decision for the current support ansatz
+
+Reuse the ideal energy functional and its assumptions from increment 111. With fixed
+nonnegative exterior lengths d_i, N_c=fq closed Dirac channels, the anomaly
+of all q channels and C>0, in units hbar=c=1,
+
+$$
+E_0(\ell)=\frac C{\ell^2}+\frac q{24\ell}
+-\frac16\sum_{i=1}^{N_c}\frac1{\ell+d_i}.
+$$
+
+For f<1/4, its already derived derivative implies
+
+$$
+\ell^2 E_0'(\ell)
+\le-\frac{2C}{\ell}-\frac q6(1/4-f).
+$$
+
+Define an additional contribution delta E only on a specified common
+geometry/state family, with the same clock normalization and variation.
+If throughout its admitted range
+
+$$
+\ell^2\delta E'(\ell)\le \frac q6(1/4-f),
+$$
+
+then (E_0+delta E)' remains strictly negative and this ansatz has no
+stationary opening. Conversely a stationary point requires a correction
+exceeding this threshold, plus the positive classical and finite-length
+terms. This is a necessary support test, not a gravitational stability theorem.
+The correction includes every term omitted from that consistently defined
+energy; a real-frequency return probability alone is insufficient.
+
+Using the classical flux fraction as an explicitly UNPROVED proxy for f gives
+f=0.22098586521300168 and (1/4-f)/6 approximately 0.00483568913116639.
+For q=512000 the corresponding correction threshold is approximately 2475.87284.
+The gap is 2.9014135 percentage points, or 14855.237 ideal channel equivalents
+to reach equality. These are algebraic sensitivity numbers, not measured
+quantum channels or a rejection of the actual quantum geometry.
+
+The saved increment 112 local null-ring scale is 53.5090 angular labels at this q; the
+channel-equivalent deficit is approximately 277.62 such scales. Increment 112 does NOT
+bound all scattering or vacuum-energy corrections to an order-one transition
+band. That tempting inference is not used. Integer label counting, if the
+same unproved classical membership rule is imposed, needs 14856 extra labels
+to exceed the strict quarter threshold.
+
+Numbers were recomputed from [111 results](../results/dihole_return_geometry_results.json)
+and [112 results](../results/dihole_null_scaling_results.json), using Decimal
+arithmetic on the saved values; no old simulations were rerun. The functional
+inequality and its scope received an independent agent check. No novelty or
+external peer review is claimed.
+
+### Changed next action
+
+Prioritize deriving a physical mouth-to-mouth quantum return response and
+its contribution to the SAME energy variation, or a bound strong enough to
+exclude support. First establish the common geometry/state and what is held
+fixed; then include scattering phases, open channels and missing local terms.
+Do not launch further precision work on box eigenvalues unless an error budget
+for a named stress/support observable requires it. The proposed correction
+bound is currently unproved. A successful variational test would still leave
+full Einstein–Maxwell matching, formation, stability and chronology change open.
+
 ## Enclosed sine integrals for the central Schur certificate — increment127
 
 [Certificate driver](../scripts/dihole_sine_certificate.py),

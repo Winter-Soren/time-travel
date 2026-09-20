@@ -58,6 +58,44 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Physical decision audit and changed priority — increment128
+- Previous127 PROGRESS: published8ec9e4b1cf486380835b3b137d7e457445511000;
+ origin matched, private and clean verified.128 began clean; preserve562
+ existing scientific files. No new scientific driver or simulation launched.
+- User challenges time spent without frontier/physical time-travel progress.
+ Explained that127 certifies component mathematics, not supporting stress;
+ no evidence of a stable medium/new law/backward passage. No success deadline.
+- Three reused agents performed bounded read-only audits. More box spectrum
+ alone cannot determine local varied kernels or exterior null stress. Deferred
+ planned128 spectral certification; do not restart it automatically.
+- Derived direct conditional decision from111: for f<1/4, F0=l^2 E0'
+ <=-2C/l-q(1/4-f)/6. Uniform deltaF<=q(1/4-f)/6 excludes a stationary opening
+ in the SAME specified family. Missing-force bound itself is unproved.
+- Classical flux used only as UNPROVED proxy gives normalized budget
+ .00483568913116639 and q512000 budget2475.87284. Deficit2.9014135 percentage
+ points/14855.237 ideal channels.112 null scale53.5090 ->277.62 local scales;
+ NO global localization bound inferred. Decimal recomputation only.
+- Next: derive/bound physical mouth return contribution to the same energy
+ variation, first specifying geometry/state/held-fixed data. Include phases,
+ open-channel vacuum and local terms. Only refine numerical tools when tied
+ to a named support-observable error budget. Full field equations, stability
+ and chronology remain independent requirements.
+- Agent alternative if later needed:126 can use one anchor Lambda<gamma and
+ T=Dlo-2eM I+Cplus(Cplus+Gplus/(gamma-Lambda))^-1 Cplus to lower-bound
+ lambda_k(A) by min(Lambda,lambda_k(T)); nonorthogonal congruence/inertia
+ certificates required. Full central trace tail can use max(T,d_k) beyond a
+ certified count and K24 lattice tail. Not implemented or certified128.
+- Reopened MMP1807.04726 primary abstract/PDF: construction preserves ambient
+ causality. This does not prove every wormhole causal or disprove time travel.
+- All agents read-only; no live calculation. Goal ACTIVE. Professor feedback
+ already appropriate; brief/paused heartbeat unchanged, no email sent.
+
+- Verification:96 imports,768 links,8 historical guards,14 frozen inputs PASS.
+ All562 prior scientific blobs and127-and-older research/state suffixes preserved.
+ git diff whitespace check PASS; no scientific source or result changed.
+- Saved111 inputSHA7f39c4cd67628961a1c8622fb67638b1247e59941bbae594feae64c0496b34bc;
+ saved112 inputSHA17d5e29e123a344bcee69ee399691bd3e65364f96b18b71cd5b84daffa724b6c.
+
 ### Central continuum-box spectral certificate — increment127
 - Previous126 PROGRESS: publisheddb314cde291e92e621344f3b44385b60d6d29f74,
  originmatched/private/clean verified.127beganclean; preserve556priorsciencefiles.
