@@ -1,0 +1,457 @@
+{
+  "complete": true,
+  "source_sha256": "f5f9832dbd067db434a16ad3b7eed34782448d16fea62ff8dbdb4f2691f270df",
+  "input_sha256": {
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\results\\dihole_source_window_results.json": "0f5ba19471e71085ea043d6f79fcda8e77a27f0a3fa872985b7065f63d4d580d"
+  },
+  "controls": {
+    "scalar": [
+      {
+        "kappa": 0.1,
+        "log_error": 3.941291737419306e-14,
+        "derivative_error": 1.2403966742624561e-11,
+        "reflection_error": 5.062616992290714e-14
+      },
+      {
+        "kappa": 0.7,
+        "log_error": 2.986499936241671e-14,
+        "derivative_error": 8.671019458006413e-11,
+        "reflection_error": 8.038014698286133e-14
+      },
+      {
+        "kappa": 3.0,
+        "log_error": 4.440892098500626e-15,
+        "derivative_error": 3.679705429249225e-10,
+        "reflection_error": 3.702593787124897e-14
+      }
+    ],
+    "periodic_determinant_errors": [
+      3.930189507173054e-14,
+      3.957945082788683e-14,
+      3.952393967665557e-14,
+      2.983724378680108e-14,
+      2.986499936241671e-14,
+      2.9976021664879227e-14,
+      6.661338147750939e-15,
+      5.773159728050814e-15,
+      5.773159728050814e-15
+    ],
+    "unequal_port_chiral_errors": [
+      1.3877787807814457e-17,
+      1.6653345369377348e-16,
+      6.661338147750939e-16
+    ],
+    "actual_reflection_error": 5.3897997176477475e-12,
+    "actual_derivative_error": 2.7967615778834443e-08,
+    "uv_mass_invariance_errors": [
+      1.1368683772161603e-13,
+      0.0,
+      1.1368683772161603e-13
+    ]
+  },
+  "records": [
+    {
+      "kappa": 0.010000000000000004,
+      "direct_logdet": 83.44033409103578,
+      "direct_dlog": -20.278543350370356,
+      "power_subtracted_dlog": -19.989233071675276,
+      "volume_factor": 28.93102786950785,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1650,
+      "grid_index": 0
+    },
+    {
+      "kappa": 0.0124093776075172,
+      "direct_logdet": 83.46479870410839,
+      "direct_dlog": -20.28882172455985,
+      "power_subtracted_dlog": -19.92980567515399,
+      "volume_factor": 28.93102786947027,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1650,
+      "grid_index": 1
+    },
+    {
+      "kappa": 0.015399265260594926,
+      "direct_logdet": 83.49551956993062,
+      "direct_dlog": -20.301803065200993,
+      "power_subtracted_dlog": -19.856286492777635,
+      "volume_factor": 28.93102786945225,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1662,
+      "grid_index": 2
+    },
+    {
+      "kappa": 0.019109529749704413,
+      "direct_logdet": 83.53419923064578,
+      "direct_dlog": -20.318260699470958,
+      "power_subtracted_dlog": -19.765402361709842,
+      "volume_factor": 28.931027869467478,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1698,
+      "grid_index": 3
+    },
+    {
+      "kappa": 0.023713737056616564,
+      "direct_logdet": 83.58305562225493,
+      "direct_dlog": -20.339219961004414,
+      "power_subtracted_dlog": -19.653157173330072,
+      "volume_factor": 28.93102786947348,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1722,
+      "grid_index": 4
+    },
+    {
+      "kappa": 0.02942727176209283,
+      "direct_logdet": 83.64500282188216,
+      "direct_dlog": -20.366054120950288,
+      "power_subtracted_dlog": -19.51469290147835,
+      "volume_factor": 28.931027869482268,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1734,
+      "grid_index": 5
+    },
+    {
+      "kappa": 0.03651741272548378,
+      "direct_logdet": 83.72390561757219,
+      "direct_dlog": -20.400622163445703,
+      "power_subtracted_dlog": -19.344135878163613,
+      "volume_factor": 28.931027869474967,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1746,
+      "grid_index": 6
+    },
+    {
+      "kappa": 0.045315836376008195,
+      "direct_logdet": 83.8249416985115,
+      "direct_dlog": -20.445468272806487,
+      "power_subtracted_dlog": -19.134434547684442,
+      "volume_factor": 28.93102786945697,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1794,
+      "grid_index": 7
+    },
+    {
+      "kappa": 0.05623413251903493,
+      "direct_logdet": 83.95512162886017,
+      "direct_dlog": -20.504112577642182,
+      "power_subtracted_dlog": -18.877201322518072,
+      "volume_factor": 28.931027869477862,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1806,
+      "grid_index": 8
+    },
+    {
+      "kappa": 0.06978305848598666,
+      "direct_logdet": 84.12404097696165,
+      "direct_dlog": -20.581476870925496,
+      "power_subtracted_dlog": -18.56258126105047,
+      "volume_factor": 28.93102786947126,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1806,
+      "grid_index": 9
+    },
+    {
+      "kappa": 0.08659643233600657,
+      "direct_logdet": 84.3449743373821,
+      "direct_dlog": -20.684509372471524,
+      "power_subtracted_dlog": -18.179185575161668,
+      "volume_factor": 28.931027869472047,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1782,
+      "grid_index": 10
+    },
+    {
+      "kappa": 0.10746078283213178,
+      "direct_logdet": 84.63647155407908,
+      "direct_dlog": -20.823100852693972,
+      "power_subtracted_dlog": -17.714149949703156,
+      "volume_factor": 28.931027869463925,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1806,
+      "grid_index": 11
+    },
+    {
+      "kappa": 0.13335214321633246,
+      "direct_logdet": 85.0246862207364,
+      "direct_dlog": -21.01142152498127,
+      "power_subtracted_dlog": -17.153406953135757,
+      "volume_factor": 28.93102786947183,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1818,
+      "grid_index": 12
+    },
+    {
+      "kappa": 0.1654817099943182,
+      "direct_logdet": 85.54675710088694,
+      "direct_dlog": -21.26985209460982,
+      "power_subtracted_dlog": -16.482296130875756,
+      "volume_factor": 28.93102786947539,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1782,
+      "grid_index": 13
+    },
+    {
+      "kappa": 0.20535250264571467,
+      "direct_logdet": 86.25566847636809,
+      "direct_dlog": -21.627724442570422,
+      "power_subtracted_dlog": -15.686665465460043,
+      "volume_factor": 28.931027869478736,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1890,
+      "grid_index": 14
+    },
+    {
+      "kappa": 0.2548296747979347,
+      "direct_logdet": 87.22711290139115,
+      "direct_dlog": -22.12710619447145,
+      "power_subtracted_dlog": -14.754621770925677,
+      "volume_factor": 28.931027869465083,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1890,
+      "grid_index": 15
+    },
+    {
+      "kappa": 0.31622776601683805,
+      "direct_logdet": 88.56891964159375,
+      "direct_dlog": -22.827821007170023,
+      "power_subtracted_dlog": -13.679026695435873,
+      "volume_factor": 28.93102786947244,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1926,
+      "grid_index": 16
+    },
+    {
+      "kappa": 0.3924189758484537,
+      "direct_logdet": 90.43351881338616,
+      "direct_dlog": -23.813748272299627,
+      "power_subtracted_dlog": -12.460663945519851,
+      "volume_factor": 28.931027869468178,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1974,
+      "grid_index": 17
+    },
+    {
+      "kappa": 0.4869675251658633,
+      "direct_logdet": 93.03362319454378,
+      "direct_dlog": -25.20017956087822,
+      "power_subtracted_dlog": -11.111708518776073,
+      "volume_factor": 28.931027869473535,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1938,
+      "grid_index": 18
+    },
+    {
+      "kappa": 0.604296390238133,
+      "direct_logdet": 96.66086226921404,
+      "direct_dlog": -27.141695957287553,
+      "power_subtracted_dlog": -9.658780249888347,
+      "volume_factor": 28.931027869469442,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1950,
+      "grid_index": 19
+    },
+    {
+      "kappa": 0.7498942093324561,
+      "direct_logdet": 101.70666164595114,
+      "direct_dlog": -29.83980198147226,
+      "power_subtracted_dlog": -8.144591712121155,
+      "volume_factor": 28.931027869469528,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1950,
+      "grid_index": 20
+    },
+    {
+      "kappa": 0.9305720409296993,
+      "direct_logdet": 108.68434982136488,
+      "direct_dlog": -33.5494543631559,
+      "power_subtracted_dlog": -6.627048712469133,
+      "volume_factor": 28.931027869470068,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1938,
+      "grid_index": 21
+    },
+    {
+      "kappa": 1.1547819846894585,
+      "direct_logdet": 118.25119838068298,
+      "direct_dlog": -38.58364063559654,
+      "power_subtracted_dlog": -5.174610853390842,
+      "volume_factor": 28.93102786946402,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1998,
+      "grid_index": 22
+    },
+    {
+      "kappa": 1.4330125702369632,
+      "direct_logdet": 131.22895941376683,
+      "direct_dlog": -45.315660402963594,
+      "power_subtracted_dlog": -3.8571337961335534,
+      "volume_factor": 28.93102786947253,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 2034,
+      "grid_index": 23
+    },
+    {
+      "kappa": 1.7782794100389232,
+      "direct_logdet": 148.62238031193368,
+      "direct_dlog": -54.180522120535194,
+      "power_subtracted_dlog": -2.733070948992837,
+      "volume_factor": 28.9310278694709,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 2082,
+      "grid_index": 24
+    },
+    {
+      "kappa": 2.2067340690845905,
+      "direct_logdet": 171.63818238797805,
+      "direct_dlog": -65.6798160751454,
+      "power_subtracted_dlog": -1.8367312219554048,
+      "volume_factor": 28.93102786946763,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 2190,
+      "grid_index": 25
+    },
+    {
+      "kappa": 2.738419634264362,
+      "direct_logdet": 201.71137677123664,
+      "direct_dlog": -80.39653268805407,
+      "power_subtracted_dlog": -1.1712379308449983,
+      "volume_factor": 28.931027869471087,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 2274,
+      "grid_index": 26
+    },
+    {
+      "kappa": 3.39820832894256,
+      "direct_logdet": 240.54868019768986,
+      "direct_dlog": -99.02485996824905,
+      "power_subtracted_dlog": -0.7112000973494561,
+      "volume_factor": 28.931027869469204,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 2526,
+      "grid_index": 27
+    },
+    {
+      "kappa": 4.216965034285823,
+      "direct_logdet": 290.1975229225128,
+      "direct_dlog": -122.41498848100628,
+      "power_subtracted_dlog": -0.4138555495095152,
+      "volume_factor": 28.931027869468362,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 2754,
+      "grid_index": 28
+    },
+    {
+      "kappa": 5.232991146814948,
+      "direct_logdet": 353.14453761778293,
+      "direct_dlog": -151.6285159934981,
+      "power_subtracted_dlog": -0.23270328431560217,
+      "volume_factor": 28.931027869467986,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 3054,
+      "grid_index": 29
+    },
+    {
+      "kappa": 6.493816315762115,
+      "direct_logdet": 432.44355321779153,
+      "direct_dlog": -188.00033689000452,
+      "power_subtracted_dlog": -0.12755607946568742,
+      "volume_factor": 28.931027869470938,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 3486,
+      "grid_index": 30
+    },
+    {
+      "kappa": 8.058421877614819,
+      "direct_logdet": 531.8730264081289,
+      "direct_dlog": -233.20714811661372,
+      "power_subtracted_dlog": -0.0687201913878522,
+      "volume_factor": 28.931027869470594,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 4038,
+      "grid_index": 31
+    },
+    {
+      "kappa": 10.000000000000002,
+      "direct_logdet": 656.1259643992728,
+      "direct_dlog": -289.34690251941646,
+      "power_subtracted_dlog": -0.036623824714400025,
+      "volume_factor": 28.9310278694702,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 4698,
+      "grid_index": 32
+    }
+  ],
+  "integrals": {
+    "coarse": {
+      "points": 17,
+      "direct": 935.1652945626466,
+      "direct_power_subtracted": 11.653070976020507,
+      "full_unrenormalized": [
+        934.9518938312513,
+        934.9600077559238
+      ],
+      "full_power_subtracted": [
+        11.439670244624827,
+        11.447784169297506
+      ],
+      "loop_only": [
+        -0.21340073139568305,
+        -0.2052868067230025
+      ]
+    },
+    "fine": {
+      "points": 33,
+      "direct": 932.7295685364456,
+      "direct_power_subtracted": 11.653389391714109,
+      "full_unrenormalized": [
+        932.5161580870872,
+        932.5242705017611
+      ],
+      "full_power_subtracted": [
+        11.43997894235555,
+        11.44809135702939
+      ],
+      "loop_only": [
+        -0.2134104493585585,
+        -0.20529803468471672
+      ]
+    }
+  },
+  "passed": true,
+  "tests": {
+    "constant_scalar": true,
+    "exact_periodic_determinant": true,
+    "unequal_port_centering": true,
+    "actual_bridge_reflection": true,
+    "actual_variation": true,
+    "invariant_uv_mass_term": true,
+    "real_accumulators": true,
+    "complete_grid": true,
+    "frozen_inputs": true
+  },
+  "runtime_seconds": 44.16779179999139,
+  "sector": {
+    "q": 1,
+    "mu": 0.5,
+    "angular_pairs": 4
+  },
+  "window": [
+    0.01,
+    10.0
+  ],
+  "convention": "Symmetric first-order pencil logdet: -logdet Trl - .5 integral Tr K + logdet(I-B Rext). Conditional paired-Weyl prefactor -2/pi.",
+  "scope": [
+    "The direct factor was absent from132. R16 loop responses are reused exactly; no exterior rerun.",
+    "Leading-power subtraction removes -kappa integral f Tr W from the direct metric derivative only.",
+    "This is a fixed-angular secular determinant convention; canonical measure/contact and covariant four-dimensional Hadamard/anomaly terms are not supplied.",
+    "No physical all-mode source, current, backreaction, stability or chronology change is proved.",
+    "The finite outer/near geometry, angular/frequency tails and quadrature changes remain uncontrolled errors."
+  ]
+}

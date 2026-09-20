@@ -34,6 +34,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Direct bridge determinant and finite-regulator diagnosis | [driver](scripts/dihole_direct_source.py), [results](results/dihole_direct_source_results.json), [figure](figures/dihole_direct_source_progress.png), [normalization proof and limits](docs/RESEARCH.md) |
 | Sewn ground state and local renormalization responses | [state/domain](docs/SEWN_SOURCE_STATE.md), [driver](scripts/dihole_local_source.py), [results](results/dihole_local_source_results.json), [figure](figures/dihole_local_source_progress.png), [limits](docs/RESEARCH.md) |
 | Connected finite-window energy-and-pressure contribution | [driver](scripts/dihole_source_window.py), [results](results/dihole_source_window_results.json), [figure](figures/dihole_source_window_progress.png), [normalization and source comparison](docs/RESEARCH.md) |
 | Actual curved exterior return sewn to the bridge | [curved helper](scripts/dihole_curved_exterior.py), [driver](scripts/dihole_return_pilot.py), [results](results/dihole_return_pilot_results.json), [figure](figures/dihole_return_pilot_progress.png), [derivation and limits](docs/RESEARCH.md) |

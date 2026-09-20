@@ -58,6 +58,49 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Direct determinant and covariant-normalization diagnostic — increment134
+- Previous133 PROGRESS: published3a167b1f37988e99658077eedd81c889f3fb5c9c,
+ origin/clean verified. Import stays COMPLETE; goal ACTIVE.
+- NEW dihole_direct_source.py restores the actual bridge's missing direct
+ factor g=Re[-logdet Trl-.5 integral trK]. Stable scalar accumulator
+ g_s=ReTr(CRr)+.5ReTr(D-A); simultaneous Riccati sensitivity avoids3 solves.
+ All33 frequencies use existing132 R16 loop data with no exterior rerun.
+- Symmetric first-order pencil/canonical1D finite-part convention only.
+ Fixed endpoint weights remove finite Hilbert-map endpoint variations.
+ Raw finite pencils still require -logdet W_h; covariant4D contact/anomaly
+ conversion remains absent. Do not equate this with133 physical stress.
+- At finite angular dimension, W+Y+YW-=X; Y_e=e^(ef)Y, so X^dagger Y and
+ the 1/kappa coefficient are invariant. Removing leading derivative
+ -kappa integral f TrW gives UV-integrable direct response. Volume factor
+ 28.93102786947. No all-angular uniform estimate or actual tail enclosure.
+- .01<=kappaD<=10 q1 mu.5 N4: direct power-subtracted contribution
+ +11.6533893917/D; full phase0/pi +11.4399789424/D,+11.4480913570/D.
+ Previous loop-only values -.2134104494/D,-.2052980347/D remain intact.
+ Coarse/fine phase0 change .00270%, NOT a bound. Bare direct932.7295685/D
+ is cutoff-dependent and UV-divergent; not physical stress.
+- Nine controls PASS: scalar periodic det4e-14, unmatched-chiral centering,
+ old bridge reflection5.4e-12, actual derivativeFD2.8e-8, UVmass invariance
+ 1.14e-13, fullgrid/realaccumulators/inputhashes. Final run44s, session27208
+ exited0. Initial session44578 ended with NumPybool final serialization
+ error, not a physics-check failure. Fixed bool conversion; all33 records
+ and controls exactly reproduced. Original checkpoint+source retained as
+ dihole_direct_source_pre_serialization files in results/provenance.
+- Crucial exact flat massive check: integral of subtracted derivative is
+ -f L t²/(2w), hence apparent +f L t²/(pi w) with -2/pi. Covariant flat
+ vacuum requires rho+p_s=0. This finite residue is regulator/measure
+ mismatch, so the positive134 sign is NOT evidence against full support.
+ Stable scalar quadrature gives -.5 (exact antiderivative limit -.5).
+- NEXT: actual charged covariant subtraction/measure conversion, calibrated
+ to that flat massive null-source check and133 local geometric responses;
+ no guessed scalar correction for angular matrices, no fitting couplings.
+ Then complete state-dependent source, modes/tails/physical exterior.
+ Do not restart box spectra or interpret a partial determinant sign as stress.
+- SHA256 driverf5f9832dbd067db434a16ad3b7eed34782448d16fea62ff8dbdb4f2691f270df;
+ result15733f5d952282a54863969063f72e5e22438c78ff4c8c7fbd34c4083a76a5ff.
+-133-and-older historical suffixes preserved. Professor brief/paused
+ heartbeat unchanged; no email. No new law/material/stability/time machine.
+ 13Sep2027->12Sep2027 remains unproved.
+
 ### Sewn state and local action source coefficients — increment133
 - Previous132 PROGRESS: published6dbf3a6c48a80bba51876daf45a2eef05b6a9be2;
  private/origin/clean verified. Import stays COMPLETE; goal ACTIVE.

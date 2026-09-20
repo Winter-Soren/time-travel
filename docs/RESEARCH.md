@@ -1,5 +1,151 @@
 # Reproduction and coupled-model iterations
 
+## Direct bridge determinant and regulator diagnostic — increment134
+
+The [new direct-response driver](../scripts/dihole_direct_source.py),
+[results](../results/dihole_direct_source_results.json), and
+[plot](../figures/dihole_direct_source_progress.png) now include the bridge
+factor omitted by132's loop determinant. The finite-window sign changes
+under the specified finite-angular convention. An exact flat-space control
+also proves that this convention alone is not a physical stress prescription.
+
+### Recovering the omitted direct factor without unstable transmission inverses
+
+For $[-iJ\partial_s+T]w=E Ww$, set
+$K=iJ(EW-T)=\begin{pmatrix}A&B\\C&D\end{pmatrix}$ and let M be the transfer
+matrix. Eliminating the left negative characteristic gives
+$T_{rl}=M_{22}^{-1}$ and the secular determinant factorization into
+$\det(M_{22})\det(I-B_{\rm bridge}R_{\rm ext})$, up to fixed sewing factors.
+Here the block B in K and the full bridge scattering matrix are distinct.
+The centered real first-order determinant is
+
+$$
+F_\kappa=\Re\left[-\log\det T_{rl}
+-\frac12\int\operatorname{tr}K\,ds
++\log\det(I-B_{\rm bridge}R_{\rm ext})\right].
+$$
+
+The half-trace changes the one-sided Green diagonal to its symmetric value;
+it cannot be omitted with p=m+1. With right reflection $R_r$, the direct
+factor g can be accumulated through
+
+$$
+\partial_s g=\Re\operatorname{Tr}(C R_r)
+ +\tfrac12\Re\operatorname{Tr}(D-A).
+$$
+
+No inverse of a vanishing transmission and no growing transfer matrix is
+formed in the actual calculation. The first variation $Z=\partial_\epsilon R_r$
+is integrated simultaneously from the differentiated Riccati equation,
+using $\dot A=-2fA$, $\dot D=-2fD$, $\dot B=-fB$, $\dot C=-fC$.
+This replaces three bridge solves per frequency by one sensitivity solve.
+
+For canonical $u=W^{1/2}w$, $H=W^{-1/2}DW^{-1/2}$. Its transfer changes by
+endpoint weights, and its generator trace gains
+$\tfrac12\partial_s\log\det W$. The metric probe fixes those endpoints,
+so these give no additional finite endpoint variation. This uses the
+symmetric real spectral convention based on
+$\tfrac12\log\det(H^2+\kappa^2)$. A raw finite matrix pencil instead obeys
+$\log\det(H_h-E)=\log\det(D_h-EW_h)-\log\det W_h$; its mass-matrix
+contact term cannot silently be omitted. The symmetric continuum
+finite-part convention does not itself perform four-dimensional covariant
+renormalization. The absorbing exterior remains a numerical approximation.
+
+### The leading ultraviolet term can be removed analytically at fixed angular size
+
+At E=i kappa, let $W_+Y+YW_-=X$, where X is the transverse off-diagonal block.
+For fixed finite angular dimension, smooth coefficients and positive W,
+
+$$
+g_\kappa=\frac\kappa2\int\operatorname{tr}W\,ds
+ +\frac1\kappa\int\Re\operatorname{Tr}(X^\dagger Y)\,ds+O(\kappa^{-2}).
+$$
+
+The actual variation sends $W\mapsto e^{-2\epsilon f}W$,
+$X\mapsto e^{-\epsilon f}X$, and therefore $Y\mapsto e^{\epsilon f}Y$.
+The inverse-frequency coefficient is exactly invariant. Consequently
+$\dot g_\kappa+\kappa\int f\operatorname{tr}W\,ds$ is ultraviolet integrable
+at this fixed angular size. The initial Riccati layer contributes only the
+stated remainder; flat endpoint variation removes variable boundary terms.
+This is an asymptotic statement, not a numerical tail enclosure or an
+estimate uniform in the omitted angular modes.
+
+The code accumulates the subtracted derivative directly as
+$\Re\operatorname{Tr}[C(Z-fR_r)]$, avoiding cancellation of large numbers.
+The actual volume factor is $\int f\operatorname{tr}W\,ds=28.93102786947$.
+
+### New finite-window result and exact checks
+
+Reuse132's R16 loop responses unchanged: q=1, mu=1/2, four angular pairs,
+33 frequencies over .01<=kappa D<=10 and conditional paired-Weyl factor -2/pi.
+
+| Quantity | Phase0 | Additional phase pi |
+| --- | --- | --- |
+| Previous loop contribution | -0.2134104494/D | -0.2052980347/D |
+| Added direct contribution after leading-power subtraction | +11.6533893917/D | +11.6533893917/D |
+| Sum in this subtraction convention | +11.4399789424/D | +11.4480913570/D |
+
+The coarse/fine phase0 change is0.00270%; it is sensitivity, not an error
+bound. The unsubtracted direct integral is932.7295685/D on the fine grid
+and is divergent as the upper limit increases. Its coarse-grid change is
+larger because Simpson integration must resolve the large leading power.
+No unsubtracted value is interpreted as physical stress.
+
+All nine controls pass. Constant scalar log/scattering checks agree below
+8.1e-14 and their metric differences below3.7e-10. The exact periodic
+matrix determinant agrees below4.0e-14. For $W=wI_2,T=t\sigma_x$, it is
+$4\sinh^2[L\sqrt{(\kappa w)^2+t^2}/2]$; antiperiodic closure gives cosh.
+Appending a chiral zero channel adds
+$\kappa\tau/2+\log|1-e^{i\phi-\kappa\tau}|$, testing the unmatched-channel
+half-trace explicitly. Actual bridge reflection agrees with130 below5.4e-12;
+the actual metric-difference comparison is2.8e-8. The invariant UV coefficient
+changes by at most1.14e-13 in the selected checks. No interval bounds are claimed.
+
+The final run took44 seconds and reran no exterior solve. A final-output
+NumPy-boolean serialization error in the first run was fixed by converting
+test values to Python bool; all33 numerical records and controls reproduced
+exactly. The [original checkpoint](../results/dihole_direct_source_pre_serialization_results.json)
+and [source](../provenance/dihole_direct_source_pre_serialization.py) are retained.
+
+### Why the new positive sign still does not decide physical support
+
+There is a concrete regulator test, not merely an unspecified caution.
+For the homogeneous massive bulk, put $h=\sqrt{(\kappa w)^2+t^2}$.
+The same leading-power subtraction yields
+
+$$
+\int_0^\infty fL\left[2\kappa w-
+\frac{2\kappa^2w^2+t^2}{h}\right]d\kappa
+=-\frac{fLt^2}{2w}.
+$$
+
+With x=kappa w/t, an antiderivative is
+$x^2-x\sqrt{x^2+1}$, whose limits differ by -1/2. Independently integrating
+the stable equivalent $-1/[\sqrt{x^2+1}(\sqrt{x^2+1}+x)^2]$ gives -0.5.
+The paired-Weyl factor would turn this into $+fLt^2/(\pi w)$.
+But with $w=P/N$, $t=P m_0$, the physical flat vacuum is Lorentz invariant
+and has $\rho+p_s=0$. The extensive positive term is the finite mismatch
+between the Killing-frequency subtraction and the covariant measure/regulator,
+not a physical flat-vacuum null source. Covariant flat cosmological terms
+cannot fix it: their paired volume variation is zero.
+
+The scale origin is explicit: with $c_1=LNPm_0^2/2$,
+$\int_0^\Lambda L(h-\kappa w)d\kappa
+=c_1[\log(2\Lambda/(Nm_0))+1/2]+o(1)$.
+Holding the Killing-frequency cutoff fixed gives the residue above;
+$\Lambda_\epsilon=N_\epsilon\Lambda_{\rm proper}$ adds the compensating
+endpoint variation. This homogeneous example illustrates the required
+scale conversion; it is not a general curved-space regulator prescription.
+
+Thus neither132's negative loop term nor134's positive sum establishes the
+physical source sign. Do not subtract all positive terms or transplant a
+scalar correction into noncommuting angular matrices. NEXT: implement the
+conversion to the declared charged covariant stress prescription, calibrated
+to this flat massive check and the133 local geometric terms, then evaluate
+the remaining source with angular/frequency and exterior limits controlled.
+Current, backreaction, stability and chronology change remain unproved.
+13 September2027 to12 September2027 remains unproved.
+
 ## Sewn quantum state and local source coefficients — increment133
 
 The exact prescribed129 geometry now has an explicit
