@@ -1,5 +1,157 @@
 # Reproduction and coupled-model iterations
 
+## Continuum-box angular heat bound with enclosed geometry — increment124
+
+[Driver](../scripts/dihole_continuum_heat_tail.py),
+[results and generated evaluator](../results/dihole_continuum_heat_tail_results.json),
+and [figure](../figures/dihole_continuum_heat_tail_progress.png).
+
+The conditional123 continuum estimate is now evaluated with whole-region
+interval bounds in the exact balanced geometry. It covers **every spatial
+mode in each omitted angular sector** of the A=4 Dirichlet-box Friedrichs
+square. It does not use the finite evaluation norm or a Galerkin eigenvalue
+as a continuum lower bound.
+
+### First-derivative geometry bound
+
+The exact static electrovac equations provide an economical curvature bound.
+With h the physical spatial metric and n=log N,
+
+$$
+R[h]=2|\widehat B|_h^2,\qquad \Delta_hN=N|\widehat B|_h^2.
+$$
+
+Applying the three-dimensional conformal curvature formula to gopt=N^-2 h gives
+
+$$
+R_{\rm opt}=6\alpha^{-2}\left[
+\left(\frac{2QN}{\rho}\right)^2|\nabla a|^2-|\nabla n|^2\right].
+$$
+
+These conventions follow from the classical R-Fhat^2 action and metric/gauge
+in [Emparan, equations8-12,16 and23](https://arxiv.org/pdf/hep-th/9906160).
+The classical connection is Ahat=-2Q a, whereas the quantum Dirac connection
+is q a. Substituting q for 2Q in the curvature identity would be incorrect.
+All gradients here use physical rho,z coordinates. Dropping the nonnegative
+classical magnetic term supplies a lower curvature bound using first
+derivatives only. Thus a tilewise upper bound for the negative Lichnerowicz
+potential is
+
+$$
+C\le\sup_\Omega E^{-2}\left[
+\frac{q|\nabla a|}{\alpha\beta}
++\frac{3|\nabla\log N|^2}{2\alpha^2}\right].
+$$
+
+The existing exact optical-field expressions are differentiated with Sympy.
+Its mpmath printer emits exact integer/rational constants; every elementary
+function is mapped to a 60-digit interval context. The generated evaluator
+source and its hash are stored with the result. No approximate finite
+difference is used in the coefficient enclosure.
+
+Closed dyadic tiles cover [-4,4]^2 in scaled coordinates. Each rotated tile
+is enclosed by a physical rho,z rectangle. To avoid a large cancellation
+error in mu0-q a, intersect direct interval evaluation with
+
+$$
+a(x)\in a(x_c)+a_\rho(\Omega_c)(\rho-\rho_c)
++a_z(\Omega_c)(z-z_c).
+$$
+
+The derivative intervals cover the entire containing rectangle, so this
+mean-value form encloses all its points. Three covers with 16,32 and 64
+subdivisions per coordinate are independently valid. The finest has 4096
+closed cells; its conservative constants are shown with outward rounding:
+
+| Whole-box quantity | Bound |
+| --- | --- |
+| m=alpha^2 beta | 4.466364 <= m <= 5.101399 |
+| beta | 1.144714 <= beta <= 1.321131 |
+| D=sup abs(mu0-q a) | <=1784.375624 |
+| C | <=18.293773 |
+| Weighted Nash constant C_N | <=0.094162981 |
+| cmin=inf1/(E beta) | >=0.0174737632091969 |
+
+The direct gauge enclosure would give D<=5296.81557 at this same cover.
+Mean-value tightening reduces it without assuming any sampled maximum is
+a supremum. The minimum enclosed rho is above 0.60070265, safely off the axis.
+
+### Continuum bound and a better time split
+
+The123 weighted Nash/domain proof applies to the full Dirichlet Friedrichs
+square. The reduced angular covariant derivative contains the Hermitian matrix
+Q_mu=(mu-q a)I-(beta_rho sigma_z-beta_z sigma_x)/(2alpha); its square is
+nonnegative. The remaining Lichnerowicz endomorphism has eigenvalues
+(R/4+-|Bopt|)/E^2. This identifies the independent-of-angular-label potential
+bound without dropping a spin-connection term. The underlying identities and
+form-domination theorem are given in
+[Vassilevich, equations3.26-3.27](https://arxiv.org/pdf/hep-th/0306138) and
+[Lenz, Schmidt and Wirth, theorem3.5 and section4.2](https://arxiv.org/html/1711.07225).
+
+For any fixed smoothing time 0<t<tau, spectral splitting improves the
+rank-two canonical heat bound to
+
+$$
+\operatorname{tr}_2K_j^{\rm can}(\tau;x,x)
+\le\frac{2m(x)C_N}{t}\exp[Ct-g_j(\tau-t)],
+\qquad g_j=c_{\min}^2(|j|-D)^2.
+$$
+
+Set d0=J+1-D>0, g0=cmin^2 d0^2 and h0=cmin^2(2d0+1).
+After summing both signs and applying the optical/chirality normalization,
+
+$$
+T_{\rm opt}^{|j|>J}(s;x)\le
+\frac{4C_N}{\pi L^2t}
+\frac{\exp[Ct-(\tau-t)g_0]}{1-\exp[-(\tau-t)h_0]},
+\qquad \tau=sE^2.
+$$
+
+The code records both t=tau/2 and the inexpensive choice
+min(tau/2,1/(C+g0)). The latter is not asserted to be optimal. Its floating
+selection becomes an exact dyadic input; validity requires only 0<t<tau,
+which is checked. All subsequent operations are outward interval evaluations.
+
+The following upper bounds use the chosen split, multiplied by
+(4pi*s)^(3/2), and hold uniformly throughout the box:
+
+| Angular cutoff J | tau=0.5 | tau=1 | tau=2 |
+| --- | --- | --- | --- |
+| 2047 | 6.038e-3 | 2.135e-7 | 1.960e-16 |
+| 2559 | 5.721e-38 | 1.168e-77 | 3.419e-157 |
+| 3071 | 8.733e-108 | 1.741e-217 | below 1e-436 |
+
+At J=2047,tau=0.5 the original half-time bound was 8.1784, too loose to be
+useful. The different split reduces it to 0.00603704 without any new PDE solve.
+The very small 123 finite-matrix tail cannot simply be substituted here:
+the continuum operator contains additional spatial states. The larger
+cutoff 2559 has a negligible rigorous tail, but this calculation does not
+compute the continuum contributions in the intervening angular band.
+
+Bounds below the binary64 subnormal range are exported with the positive
+upper value 5e-324, never zero. Their separate outward logarithmic bounds
+retain the stronger information and drive the plot.
+
+### Verification and next task
+
+The strict final calculation took 11.70s. Four independent 85-digit derivative
+checks lie inside the interval point enclosures. The first-derivative curvature
+identity agrees with the independent warped-curvature calculation below 1e-70
+normalized error. A separate agent verified it at three other 75-digit points,
+with absolute discrepancies below 1.74e-76. Whole-rectangle and mean-value
+containment controls include off-center points. A Gaussian-series control
+checks the geometric tail. Independent theorem, normalization and implementation
+audits pass; no older scientific result was changed.
+
+The missing-angular continuum component is now controlled for a stated box
+and cutoff. It is not a full error bar on 122/123 heat values. Next, bound the
+omitted sine-space contribution in retained angular sectors, including its
+coupling to retained modes, and control the artificial boundary relative to
+the natural exterior. Ultraviolet completion, renormalized stress and
+self-consistent gravitational response are still required. No supporting
+material, stable medium, new law or 13 September 2027 to 12 September 2027
+passage is established.
+
 ## Infinite angular-tail certificate for the fixed spatial model — increment123
 
 [Driver](../scripts/dihole_heat_angular.py), [results](../results/dihole_heat_angular_results.json),

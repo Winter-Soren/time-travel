@@ -58,6 +58,63 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Continuum-box angular tail with interval geometry — increment124
+- Previous goal turn PROGRESS:123 published361627f1fb6b70670c366372f301a7fad8435d1d;
+  privateorigin/clean verified.124 began clean. Preserve all542 prior sciencefiles.
+- NEW scripts/dihole_continuum_heat_tail.py,results/dihole_continuum_heat_tail_results.json,
+  figures/dihole_continuum_heat_tail_progress.png/.pdf. No PDE solve or oldreruns.
+- Evaluated123conditionaltheorem for exact A4 DirichletFriedrichssquare, including
+  EVERYspatialmode withinomittedangularsectors. Notfinite-matrixevaluationnorm.
+- Exactstatic electrovacidentity: Ropt=6alpha^-2[(2QN/rho)²|grad a|²-|gradlogN|²].
+  ClassicalAhat=-2Qa, quantumA=q a; doNOTreplace2Qbyq incurvatureidentity.
+  DropnonnegativeEMterm: C<=E^-2[q|grad a|/(alpha beta)+1.5alpha^-2|gradlogN|²].
+  Independentdirectcurvature85digits<8.68e-87 normalized; separate75digitagent
+  checks<1.74e-76absolute. ExactEmparanmetric/gauge/actionR-Fhat²conventions.
+- Reusedoptical_fields withSympyRationalcontext; firstsymbolicderivatives only.
+  MpmathPrinterexactmpf rationals; intervalcontext60digits; generatedsource saved.
+  Wholecloseduvtiles16²,32²,64²; rotatedphysicalrectangles; rho_min>.60070265.
+  Directgaugeintersectmeanvaluecenter+whole-rectanglederivatives, notsamplemaxima.
+- Finest4096cells: mmin4.466364293685297,mmax5.101398785180529,
+  beta_min1.1447147726849363,beta_max1.3211309586912177;
+  Dupper1784.3756236879717 (direct5296.815568897544), C18.293772333300783,
+  CNupper.09416298045501839,cminlower.017473763209196923.
+  Duppercover16/32=2330.619916342065/1892.505994225846.
+- Chosencommon smoothingtime0<t<tau: continuumrank4opticaltail
+  <=4CN/(piL²t)*exp(Ct-(tau-t)g0)/(1-exp[-(tau-t)h0]);
+  d0=J+1-D,g0=cmin²d0²,h0=cmin²(2d0+1). Bothsigns/chiralitiesonce.
+  t=min(tau/2,1/(C+g0)) chosenfloatthenEXACTdyadic; nooptimalityclaim.
+  Arithmeticthereafteroutward; t=tau/2savedforcomparison.
+- Normalizedtailupper atJ2047,tau.5/1/2:
+  [.006037032225768285,2.13419463366005e-7,1.9592236689054609e-16].
+  AtJ2559:[5.720377880199177e-38,1.16768809292996e-77,3.418769514501636e-157].
+  J3071/4095also saved; belowbinary64rangeexport5e-324upperpluslog10bounds.
+  AtJ2047,tau.5half-timebound8.1783669; chosensplitgives.00603704.
+  Cannottransfer1231e-33finitematrixtailtocontinuum. Band2048..2559notcomputed
+  ascontinuumheat; entireheatvalues stillnotcertified. Uniformonboxonly.
+- Controls:4independent85digitderivativesinsideIVpointenclosures (miderror<2.80e-61),
+  exactcurvatureidentity,whole-rectangleandmeanvalueoffcentercontainment,
+  Gaussian-tailcontrol. Analytic/theorem/implementationauditsPASS.
+  Initialfloat(intervalmidpoint)control conversionfailedbeforecover; correctedto
+  exactmpfendpointtuples. Finalstrict11.70s,session23658exit0; nojobrunning.
+  Finalfigureinspected; source/currentinputhashesrecorded. Professorstatusunchanged.
+- NEXT: bound omitted sine-space energy uniformly in j, then retained/omitted
+  coupling (Schur/residual) and natural-exterior boundary error. Preparatory
+  agentproof: aftercanonicalphi=sqrt(m)psi, horizontalform ∫w²|gradphi+Bphi|²,
+  w=1/(ELalpha); B_u=(i/2)SY*d_vlogalpha-(d_ulogm)/2,
+  B_v=-(i/2)SY*d_ulogalpha-(d_vlogm)/2. Exactsum B_i*B_i=
+  (|grad_xi logm|²+|grad_xi logalpha|²)/4 I.
+  Young=>A_j>=kappa(-Delta_D)-V, kappa=(1-eps)wmin²,
+  V=C+(1/eps-1)wmax² Bsup². Qcomplement ofbothspinNxN sines obeys
+  QA_jQ>=kappa*pi²[(N+1)²+1]/(4A²)-V. Numericalconstantnotyetenclosed;
+  needpositivegapandcouplingcontrol, notclaimfullheat/stressfromgapalone.
+- No supportingmaterial,energyintegral,renormalizedstress,backreaction,stability,
+  newlawor13Sep2027->12Sep2027passage. GoalACTIVE; noemail/monitorchange.
+- Verification:92imports/719links/8historicalguards/14frozeninputs PASS;
+  all542prior sciencefiles,bothhistorysuffixes andall124source/generated/inputhashesPASS.
+- DriverSHA5a1ea1a80229a664dc5d1e8473f27ddae460c491b6a81ad588d50174b9ef4f09;
+  resultSHA4b3f5bb7dfcdebeabcaf8bd79336307432ebdcbfc27e9d3caed3340670bd108a;
+  generatedSHAfd6e873a20b6f03ad44df35b7b8cd6b42a92d3e28f02ab0ca2fd9f4f79580b7f.
+
 ### Complete fixed-model angular sum and certified tail — increment123
 - Previous goal turn PROGRESS:122 published5df4c0919d7a405466d513ca660dc9a3f3925aa5;
   privateorigin/clean verified.123 began clean. Preserve all537 prior sciencefiles.
