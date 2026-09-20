@@ -1,0 +1,736 @@
+{
+  "complete": true,
+  "passed": true,
+  "tests": {
+    "frozen_core_and_disjoint_probe": true,
+    "positive_sampled_forms": true,
+    "global_sewing": true,
+    "mixed_quadrature": true,
+    "chiral_split": true,
+    "pure_feedback": true,
+    "nonzero_overlap": true,
+    "frequency_control": true
+  },
+  "controls": {
+    "extension_quadrature": {
+      "norm": 1.9744271444256063e-16,
+      "q": 3.529284282263836e-16,
+      "weak": 5.454635567242804e-16
+    },
+    "probe_disjoint": true,
+    "cross_norm": 0.001882992904979999
+  },
+  "records": [
+    {
+      "phase": 0.0,
+      "dimension": 248,
+      "added_columns": 32,
+      "exactly_paired": true,
+      "gram_minimum": 9.408462604147406e-06,
+      "gram_condition": 968938.4625236088,
+      "sampled_form_minimum": 3.479081366877252,
+      "sewing_skew": 5.34548593536665e-13,
+      "frozen_old_blocks": true,
+      "full_frequency": {
+        "endpoint": 160.0,
+        "coefficient_bounds": [
+          {
+            "a": 1.9588487520195355,
+            "c0": 3.47908136686617,
+            "b": 82.79233049493737,
+            "c": 0.0,
+            "d0": 1797.2482087933404,
+            "d1": 289.1071548171686,
+            "d2": 515.650430663147,
+            "n": 124,
+            "eigenvalue_proofs": {
+              "A": {
+                "congruence_lower": 1.9588487520197597,
+                "gram_lower": 0.9999999999998874,
+                "gram_upper": 1.0000000000001144,
+                "real_dimension": 248
+              },
+              "C": {
+                "congruence_lower": 3.47908136686644,
+                "gram_lower": 0.9999999999999218,
+                "gram_upper": 1.0000000000000775,
+                "real_dimension": 248
+              }
+            },
+            "scope": "Exact supplied dyadic matrices; no assembly or whitening enclosure."
+          },
+          {
+            "a": 1.9588487520195355,
+            "c0": 3.47908136686617,
+            "b": 82.79233049493737,
+            "c": 0.0,
+            "d0": 1797.2482087933404,
+            "d1": 289.1071548171686,
+            "d2": 515.650430663147,
+            "n": 124,
+            "eigenvalue_proofs": {
+              "A": {
+                "congruence_lower": 1.9588487520197597,
+                "gram_lower": 0.9999999999998874,
+                "gram_upper": 1.0000000000001144,
+                "real_dimension": 248
+              },
+              "C": {
+                "congruence_lower": 3.47908136686644,
+                "gram_lower": 0.9999999999999218,
+                "gram_upper": 1.0000000000000775,
+                "real_dimension": 248
+              }
+            },
+            "scope": "Exact supplied dyadic matrices; no assembly or whitening enclosure."
+          }
+        ],
+        "block_tail_bounds": [
+          2.7061565395739482e-08,
+          2.7061565395739482e-08
+        ],
+        "certified_matrix_tail": 5.412313079147897e-08,
+        "middle_values": [
+          {
+            "order": 16,
+            "integral": -0.000679166738783929
+          },
+          {
+            "order": 24,
+            "integral": -0.0006791667393932304
+          }
+        ],
+        "middle_integral": -0.0006791667393932304,
+        "middle_change": 6.09301346356228e-13,
+        "zero_frequency": -0.018720764113185916,
+        "scope": "Exact saved canonical dyadic blocks only; middle integration, assembly/whitening, and continuum errors are not enclosed."
+      },
+      "baseline_integral": -0.0006792254194870482,
+      "exterior_change": 5.868009381778793e-08,
+      "last_radial_change": 4.447590161579199e-06,
+      "change_over_radial": 0.013193682800339786,
+      "difference_frequency_tail": 7.129378403260046e-08,
+      "schur": [
+        {
+          "kappa": 0.1,
+          "direct_high": -0.0,
+          "feedback": -2.430028726955397e-07,
+          "total_added": -2.430028726955397e-07,
+          "independent_full_minus_retained": -2.4300287244233276e-07,
+          "error": 2.53206947054517e-16,
+          "direct_high_shift_sum": 0.0,
+          "direct_high_shift_error": 0.0,
+          "full_response": -0.00959784377975936,
+          "retained_response": -0.009597600776886917,
+          "minimum_schur_gap": 4.299490887292582,
+          "maximum_schur_condition": 186.97729499158456,
+          "dimension": 248,
+          "retained_dimension": 216,
+          "added_dimension": 32,
+          "gram_cross_frobenius": 0.001882992904979999,
+          "shifts": [
+            {
+              "j": 0,
+              "mass_squared": 0.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -4.200967268061681e-06,
+              "schur_gap": 4.299490887292582,
+              "schur_condition": 186.97729499158456
+            },
+            {
+              "j": 1,
+              "mass_squared": 1.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -4.290632931153317e-06,
+              "schur_gap": 5.299501592092039,
+              "schur_condition": 151.8835615096597
+            },
+            {
+              "j": 2,
+              "mass_squared": 2.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -3.840468640608376e-06,
+              "schur_gap": 6.29951132351781,
+              "schur_condition": 127.93169735332569
+            },
+            {
+              "j": 3,
+              "mass_squared": 3.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -3.3364801418179365e-06,
+              "schur_gap": 7.299520156092084,
+              "schur_condition": 110.5424957991317
+            }
+          ],
+          "scope": "Numerical identity for added finite columns; delta G=0; no 1/pi, infinite-tail, assembly, or physical-error bound."
+        },
+        {
+          "kappa": 0.7,
+          "direct_high": -0.0,
+          "feedback": 2.2624566662646716e-07,
+          "total_added": 2.2624566662646716e-07,
+          "independent_full_minus_retained": 2.262456666266586e-07,
+          "error": 1.9142944607947188e-19,
+          "direct_high_shift_sum": 0.0,
+          "direct_high_shift_error": 0.0,
+          "full_response": 1.4259168578684732e-05,
+          "retained_response": 1.4032922912058073e-05,
+          "minimum_schur_gap": 13.7309610789073,
+          "maximum_schur_condition": 60.727972499759936,
+          "dimension": 248,
+          "retained_dimension": 216,
+          "added_dimension": 32,
+          "gram_cross_frobenius": 0.001882992904979999,
+          "shifts": [
+            {
+              "j": 0,
+              "mass_squared": 0.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -6.539939316993715e-05,
+              "schur_gap": 13.7309610789073,
+              "schur_condition": 60.727972499759936
+            },
+            {
+              "j": 1,
+              "mass_squared": 1.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -5.5839232693523973e-05,
+              "schur_gap": 14.74448050766525,
+              "schur_condition": 56.62142022790663
+            },
+            {
+              "j": 2,
+              "mass_squared": 2.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -4.8215933885227097e-05,
+              "schur_gap": 15.756787554307707,
+              "schur_condition": 53.04719785382157
+            },
+            {
+              "j": 3,
+              "mass_squared": 3.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -4.207700541179358e-05,
+              "schur_gap": 16.76797806629594,
+              "schur_condition": 49.90783168302318
+            }
+          ],
+          "scope": "Numerical identity for added finite columns; delta G=0; no 1/pi, infinite-tail, assembly, or physical-error bound."
+        }
+      ],
+      "quadrature_fibre_change": 1.3357370765021415e-16,
+      "split_response_error": 2.1684043449710089e-16,
+      "decision": "this_family_below_radial_change"
+    },
+    {
+      "phase": 3.141592653589793,
+      "dimension": 248,
+      "added_columns": 32,
+      "exactly_paired": true,
+      "gram_minimum": 9.408559922795793e-06,
+      "gram_condition": 968928.5400985458,
+      "sampled_form_minimum": 3.478207490237762,
+      "sewing_skew": 5.860201103504083e-13,
+      "frozen_old_blocks": true,
+      "full_frequency": {
+        "endpoint": 160.0,
+        "coefficient_bounds": [
+          {
+            "a": 1.9588487670977646,
+            "c0": 3.4782074902245235,
+            "b": 82.79233411126559,
+            "c": 0.0,
+            "d0": 1797.2480076025643,
+            "d1": 289.1071577837553,
+            "d2": 515.6504355325327,
+            "n": 124,
+            "eigenvalue_proofs": {
+              "A": {
+                "congruence_lower": 1.9588487670979984,
+                "gram_lower": 0.9999999999998831,
+                "gram_upper": 1.0000000000001192,
+                "real_dimension": 248
+              },
+              "C": {
+                "congruence_lower": 3.4782074902247624,
+                "gram_lower": 0.9999999999999318,
+                "gram_upper": 1.0000000000000686,
+                "real_dimension": 248
+              }
+            },
+            "scope": "Exact supplied dyadic matrices; no assembly or whitening enclosure."
+          },
+          {
+            "a": 1.9588487670977646,
+            "c0": 3.4782074902245235,
+            "b": 82.79233411126559,
+            "c": 0.0,
+            "d0": 1797.2480076025643,
+            "d1": 289.1071577837553,
+            "d2": 515.6504355325327,
+            "n": 124,
+            "eigenvalue_proofs": {
+              "A": {
+                "congruence_lower": 1.9588487670979984,
+                "gram_lower": 0.9999999999998831,
+                "gram_upper": 1.0000000000001192,
+                "real_dimension": 248
+              },
+              "C": {
+                "congruence_lower": 3.4782074902247624,
+                "gram_lower": 0.9999999999999318,
+                "gram_upper": 1.0000000000000686,
+                "real_dimension": 248
+              }
+            },
+            "scope": "Exact supplied dyadic matrices; no assembly or whitening enclosure."
+          }
+        ],
+        "block_tail_bounds": [
+          2.7061566216058337e-08,
+          2.7061566216058337e-08
+        ],
+        "certified_matrix_tail": 5.412313243211668e-08,
+        "middle_values": [
+          {
+            "order": 16,
+            "integral": -0.0006792283277283372
+          },
+          {
+            "order": 24,
+            "integral": -0.0006792283283365317
+          }
+        ],
+        "middle_integral": -0.0006792283283365317,
+        "middle_change": 6.081944843583376e-13,
+        "zero_frequency": -0.018725030779819008,
+        "scope": "Exact saved canonical dyadic blocks only; middle integration, assembly/whitening, and continuum errors are not enclosed."
+      },
+      "baseline_integral": -0.000679287321149305,
+      "exterior_change": 5.899281277322796e-08,
+      "last_radial_change": 4.449433867513e-06,
+      "change_over_radial": 0.013258498615735545,
+      "difference_frequency_tail": 7.129390427559843e-08,
+      "schur": [
+        {
+          "kappa": 0.1,
+          "direct_high": -0.0,
+          "feedback": -2.4710370030560696e-07,
+          "total_added": -2.4710370030560696e-07,
+          "independent_full_minus_retained": -2.4710370072691945e-07,
+          "error": 4.213124938983945e-16,
+          "direct_high_shift_sum": 0.0,
+          "direct_high_shift_error": 0.0,
+          "full_response": -0.009598651129462617,
+          "retained_response": -0.00959840402576189,
+          "minimum_schur_gap": 4.298537300015591,
+          "maximum_schur_condition": 187.01847499765177,
+          "dimension": 248,
+          "retained_dimension": 216,
+          "added_dimension": 32,
+          "gram_cross_frobenius": 0.001882992904979999,
+          "shifts": [
+            {
+              "j": 0,
+              "mass_squared": 0.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -7.09149846013654e-06,
+              "schur_gap": 4.298537300015591,
+              "schur_condition": 187.01847499765177
+            },
+            {
+              "j": 1,
+              "mass_squared": 1.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -6.3307744497864646e-06,
+              "schur_gap": 5.298553730071377,
+              "schur_condition": 151.91048946495889
+            },
+            {
+              "j": 2,
+              "mass_squared": 2.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -5.227213783742807e-06,
+              "schur_gap": 6.298568549196934,
+              "schur_condition": 127.95064216855543
+            },
+            {
+              "j": 3,
+              "mass_squared": 3.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -4.27502386261678e-06,
+              "schur_gap": 7.298581888761932,
+              "schur_condition": 110.55653042334454
+            }
+          ],
+          "scope": "Numerical identity for added finite columns; delta G=0; no 1/pi, infinite-tail, assembly, or physical-error bound."
+        },
+        {
+          "kappa": 0.7,
+          "direct_high": -0.0,
+          "feedback": 2.2643130299973807e-07,
+          "total_added": 2.2643130299973807e-07,
+          "independent_full_minus_retained": 2.2643130300046313e-07,
+          "error": 7.250602028496811e-19,
+          "direct_high_shift_sum": 0.0,
+          "direct_high_shift_error": 0.0,
+          "full_response": 1.4260156767531684e-05,
+          "retained_response": 1.4033725464531221e-05,
+          "minimum_schur_gap": 13.730314410387358,
+          "maximum_schur_condition": 60.73074369653544,
+          "dimension": 248,
+          "retained_dimension": 216,
+          "added_dimension": 32,
+          "gram_cross_frobenius": 0.001882992904979999,
+          "shifts": [
+            {
+              "j": 0,
+              "mass_squared": 0.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -6.555431064403657e-05,
+              "schur_gap": 13.730314410387358,
+              "schur_condition": 60.73074369653544
+            },
+            {
+              "j": 1,
+              "mass_squared": 1.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -5.598416926294605e-05,
+              "schur_gap": 14.743833626306392,
+              "schur_condition": 56.62382162662903
+            },
+            {
+              "j": 2,
+              "mass_squared": 2.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -4.8352591283841415e-05,
+              "schur_gap": 15.756140426345235,
+              "schur_condition": 53.04929905096849
+            },
+            {
+              "j": 3,
+              "mass_squared": 3.0,
+              "direct_trace": 0.0,
+              "feedback_trace": -4.220671410072317e-05,
+              "schur_gap": 16.76733065910307,
+              "schur_condition": 49.909685828765845
+            }
+          ],
+          "scope": "Numerical identity for added finite columns; delta G=0; no 1/pi, infinite-tail, assembly, or physical-error bound."
+        }
+      ],
+      "quadrature_fibre_change": 1.0928757898653885e-16,
+      "split_response_error": 1.5439038936193583e-16,
+      "decision": "this_family_below_radial_change"
+    }
+  ],
+  "new_columns": [
+    {
+      "new_index": 0,
+      "column": 48,
+      "component": 0,
+      "chirality": "R",
+      "support": "positive_z",
+      "rho_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "new_index": 1,
+      "column": 49,
+      "component": 0,
+      "chirality": "R",
+      "support": "positive_z",
+      "rho_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "new_index": 2,
+      "column": 50,
+      "component": 0,
+      "chirality": "R",
+      "support": "positive_z",
+      "rho_degree": 1,
+      "z_degree": 0
+    },
+    {
+      "new_index": 3,
+      "column": 51,
+      "component": 0,
+      "chirality": "R",
+      "support": "positive_z",
+      "rho_degree": 1,
+      "z_degree": 1
+    },
+    {
+      "new_index": 4,
+      "column": 52,
+      "component": 0,
+      "chirality": "R",
+      "support": "negative_z",
+      "rho_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "new_index": 5,
+      "column": 53,
+      "component": 0,
+      "chirality": "R",
+      "support": "negative_z",
+      "rho_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "new_index": 6,
+      "column": 54,
+      "component": 0,
+      "chirality": "R",
+      "support": "negative_z",
+      "rho_degree": 1,
+      "z_degree": 0
+    },
+    {
+      "new_index": 7,
+      "column": 55,
+      "component": 0,
+      "chirality": "R",
+      "support": "negative_z",
+      "rho_degree": 1,
+      "z_degree": 1
+    },
+    {
+      "new_index": 8,
+      "column": 56,
+      "component": 1,
+      "chirality": "R",
+      "support": "positive_z",
+      "rho_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "new_index": 9,
+      "column": 57,
+      "component": 1,
+      "chirality": "R",
+      "support": "positive_z",
+      "rho_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "new_index": 10,
+      "column": 58,
+      "component": 1,
+      "chirality": "R",
+      "support": "positive_z",
+      "rho_degree": 1,
+      "z_degree": 0
+    },
+    {
+      "new_index": 11,
+      "column": 59,
+      "component": 1,
+      "chirality": "R",
+      "support": "positive_z",
+      "rho_degree": 1,
+      "z_degree": 1
+    },
+    {
+      "new_index": 12,
+      "column": 60,
+      "component": 1,
+      "chirality": "R",
+      "support": "negative_z",
+      "rho_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "new_index": 13,
+      "column": 61,
+      "component": 1,
+      "chirality": "R",
+      "support": "negative_z",
+      "rho_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "new_index": 14,
+      "column": 62,
+      "component": 1,
+      "chirality": "R",
+      "support": "negative_z",
+      "rho_degree": 1,
+      "z_degree": 0
+    },
+    {
+      "new_index": 15,
+      "column": 63,
+      "component": 1,
+      "chirality": "R",
+      "support": "negative_z",
+      "rho_degree": 1,
+      "z_degree": 1
+    },
+    {
+      "new_index": 16,
+      "column": 64,
+      "component": 2,
+      "chirality": "L",
+      "support": "positive_z",
+      "rho_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "new_index": 17,
+      "column": 65,
+      "component": 2,
+      "chirality": "L",
+      "support": "positive_z",
+      "rho_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "new_index": 18,
+      "column": 66,
+      "component": 2,
+      "chirality": "L",
+      "support": "positive_z",
+      "rho_degree": 1,
+      "z_degree": 0
+    },
+    {
+      "new_index": 19,
+      "column": 67,
+      "component": 2,
+      "chirality": "L",
+      "support": "positive_z",
+      "rho_degree": 1,
+      "z_degree": 1
+    },
+    {
+      "new_index": 20,
+      "column": 68,
+      "component": 2,
+      "chirality": "L",
+      "support": "negative_z",
+      "rho_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "new_index": 21,
+      "column": 69,
+      "component": 2,
+      "chirality": "L",
+      "support": "negative_z",
+      "rho_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "new_index": 22,
+      "column": 70,
+      "component": 2,
+      "chirality": "L",
+      "support": "negative_z",
+      "rho_degree": 1,
+      "z_degree": 0
+    },
+    {
+      "new_index": 23,
+      "column": 71,
+      "component": 2,
+      "chirality": "L",
+      "support": "negative_z",
+      "rho_degree": 1,
+      "z_degree": 1
+    },
+    {
+      "new_index": 24,
+      "column": 72,
+      "component": 3,
+      "chirality": "L",
+      "support": "positive_z",
+      "rho_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "new_index": 25,
+      "column": 73,
+      "component": 3,
+      "chirality": "L",
+      "support": "positive_z",
+      "rho_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "new_index": 26,
+      "column": 74,
+      "component": 3,
+      "chirality": "L",
+      "support": "positive_z",
+      "rho_degree": 1,
+      "z_degree": 0
+    },
+    {
+      "new_index": 27,
+      "column": 75,
+      "component": 3,
+      "chirality": "L",
+      "support": "positive_z",
+      "rho_degree": 1,
+      "z_degree": 1
+    },
+    {
+      "new_index": 28,
+      "column": 76,
+      "component": 3,
+      "chirality": "L",
+      "support": "negative_z",
+      "rho_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "new_index": 29,
+      "column": 77,
+      "component": 3,
+      "chirality": "L",
+      "support": "negative_z",
+      "rho_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "new_index": 30,
+      "column": 78,
+      "component": 3,
+      "chirality": "L",
+      "support": "negative_z",
+      "rho_degree": 1,
+      "z_degree": 0
+    },
+    {
+      "new_index": 31,
+      "column": 79,
+      "component": 3,
+      "chirality": "L",
+      "support": "negative_z",
+      "rho_degree": 1,
+      "z_degree": 1
+    }
+  ],
+  "seconds": 20.231746700010262,
+  "source_sha256": "fd3a411db80418c2e35949a60135651267dcf67befddedd189469c13c9bed687",
+  "input_sha256": {
+    "dihole_exterior_extension.py": "1c03ff071f17a74c70c313c36b2c8c56c12cb45ea983d043b2c37ab3a32dcb37",
+    "dihole_radial_refinement.py": "15f7e6dd414b87365cf3d1ef3a14ef3558201cc07c851d38853e26a601f15a1c",
+    "dihole_radial_schur.py": "65a75257c6c7a584462aeac06bbaaf985e7b8e1fc9c0034524965776b08d96a4",
+    "dihole_bridge_enrichment.py": "c5fb3c062e40041c3f6b681903d8985f4c38aba59ca6deaeb2dd85f0b037737b",
+    "dihole_sewn_form.py": "ee043fdd42b7ee5efde627c1e53ce7b18f238c81fc31e354feb12662ce9a4f0f",
+    "dihole_finite_frequency_tail.py": "37aad394ced2841bcbe6a595f93b77067592323e785f4aa16c1e1827af91dd0a"
+  },
+  "baseline_sha256": "932960a70fb70ccb8ef7a863e7abff6b0a26a1e05cfd5b6e08e5bd60129bfe99",
+  "baseline_state_sha256": "e464a54f41fb9bd4cff98a2c96ecdf9fa76148b67d20d459c154bfd1143ea332",
+  "state_sha256": "b68b175fc06a958bb0fee1c13dc6fd0d5aebcd300b27d8a293bc56cf67e33bee",
+  "scope": [
+    "One axial exterior family only, fixed mu=.5, angular3, radial12, MD1; old216 block preserved.",
+    "Positive sampled pencils, quadrature differences and middle integrals are numerical controls, not interval proofs.",
+    "Frequency-tail bounds cover exact saved dyadic canonical matrices only; physical exterior/axis/angular/IR errors remain.",
+    "No regulator removal, renormalized source, supporting material, stability, new law or backward passage established."
+  ]
+}

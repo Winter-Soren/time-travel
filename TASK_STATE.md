@@ -58,6 +58,42 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Exterior-only feedback challenge -- increment141
+- Previous140 PROGRESS published6b2a591905b46db728649aba47590fb6d3ffd22e;
+  its commit/push verified and tracked tree clean. Import COMPLETE; goalACTIVE.
+- NEW dihole_exterior_extension.py supplies32new chirally/reflection-paired
+  compact exteriorfields, rho(.005,.5),z(.60,1.20) andnegative reflection.
+  Old48globals appear only to calculate cross terms. New supports avoidcuts
+  andwholeprobe, f=fp=0. Worker11checksPASS3.15sec; boundary/cut/reflection
+  residuals0, derivativeFD1.16e-12, crossnorm nonzero. Helperfrozenbeforeuse.
+- NEW dihole_exterior_feedback.py appendsnew/crossblocksto140saved216raw;
+  everyoldentrybitwisepreserved, oldcompact/newcrosszero. Bothphases248dim.
+  Directnewsource exactly0; sourcechange is entirely mass-aware Schurfeedback.
+- All8connectedchecksPASS20.23sec. Production64076TERMINAL exit0.
+  Gramminimum>9.408e-6; sampledcanonicalformminimum>3.478; weakskew<5.87e-13.
+  Chiral/fullagreement<2.17e-16, Schurfull-minus-old<4.22e-16.
+  New/crossquad24->32 matrixchanges<5.46e-16; fibrechanges<1.34e-16.
+- Numericalintegrals0..160 phase0 -.000679166739393,phasepi-.000679228328337
+  (hbar*c/D,MD1,mu.5,angular3/radial12). Changes+5.86800938e-8,+5.89928128e-8,
+  about0.0086%total and1.32%oflast radial4.45e-6. Thisfamily passeschallenge.
+  DIFFERENCEfrequencytailbudget<=7.130e-8=sumold+new, largerthantinychange:
+  positivechangesignNOTcertifiedbytails. Stillbelowradialthresholdincluding
+  thisbudget; middle/assemblynumericalcontrolsarenotintervalenclosures.
+- Newmatrixfrequencytails<=5.413e-8, middlequadchange<=6.10e-13.
+  All4savedblockcertificatesreloadedEXACTLY; recordedsource/input/baseline/
+  statehashesPASS, verification21534TERMINALexit0. Figureinspected.
+- Frozen141 SOURCE fd3a411db80418c2e35949a60135651267dcf67befddedd189469c13c9bed687
+  RESULT8c012ba980a379ffc694937533ffb0ba0d886d1f23043a40ef4988832f1ddaa1
+  STATEb68b175fc06a958bb0fee1c13dc6fd0d5aebcd300b27d8a293bc56cf67e33bee.
+- NEXT142alreadyassignedto/root/coupled_misner independently of141notes:
+  newdihole_angular_crosscheck.py; angular3/4/5atfixedradial12,mu.5,MD1,
+  exterior48,phases0/pi. Reusegenericbridge_chunks,forms,frequencyhelper;
+  compareangularcorrectionswithlast radial4.45e-6. Earlier139angularcheck
+  wasatNr2, so thisinteractionwasnotsettled. Workerowns142script/results/
+  state/figuresONLY; do notoverwriteorcommitunfinished142workwith141.
+- No complete exterior/axis/IR/angular limits, regulator removal, physical
+  support, stability, new law, or13Sep2027->12Sep2027 passage established.
+
 ### Radial enrichment and coupled-mode accounting -- increment140
 - Previous139 PROGRESS: published d3518c878f8ac6c11f66c5b53eddabe9dee45e66;
   tracked tree clean at start; three140 sources carried forward untracked.

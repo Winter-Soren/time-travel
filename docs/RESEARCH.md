@@ -1,3 +1,59 @@
+## An exterior-only coupling challenge passes -- increment141
+
+The [exterior calculation](../scripts/dihole_exterior_feedback.py) adds 32
+compact field patterns on rho/D in(.005,.5), z/D in(.60,1.20) and its
+reflection. They overlap the old exterior support, extend beyond its
+z/D=+/- .85 boundary and vanish near both mouth cuts and the bridge probe.
+Only their new/new and old/new matrices are assembled; all216 old columns
+and matrix entries are preserved bitwise. The two phases share these new
+exterior blocks. All eight checks pass in20.23 seconds.
+
+For the common proper-mass pencil, let A_j=Q_LL+jM^2G_LL,
+V_j=Q_LH+jM^2G_LH and H_j=Q_HH+jM^2G_HH. The support separation gives
+zero source derivative in every block involving new fields. With
+S_j=A_j-V_j H_j^{-1}V_j^dagger and c=(1,-3,3,-1), the exact finite identity is
+
+$$
+\Delta\mathcal F_\kappa=-\frac12\sum_{j=0}^3 c_j
+\operatorname{Tr}[(S_j^{-1}-A_j^{-1})\dot Q_{LL}].
+$$
+
+Every change comes through coupling; the direct new-field term is exactly
+zero. The code retains the mass-weighted Gram cross term. Independent
+full-minus-old responses agree with the Schur calculation within4.22e-16.
+
+| Phase | New numerical integral0..160 | Change from140 | Last radial change |
+| --- | ---: | ---: | ---: |
+| 0 | -0.000679166739393 | +5.86800938e-8 | 4.44759016e-6 |
+| pi | -0.000679228328337 | +5.89928128e-8 | 4.44943387e-6 |
+
+Units are hbar*c/D at MD=1, mu=.5, angular3/radial12. The numerical change
+is about0.0086% of the total and1.32% of the last radial correction. The
+absolute frequency-tail budget for each DIFFERENCE is the sum of its old
+and new bounds, at most7.130e-8. This exceeds the small estimated change,
+so the tail certificates alone do not certify that change's positive sign.
+Even allowing that budget, this chosen challenge remains below the last
+radial correction. Numerical middle/assembly errors are separate and are
+not interval-enclosed; there is no complete exterior or physical-source bound.
+
+Sampled canonical form gaps exceed3.478, the enlarged Gram minima exceed
+9.408e-6, weak sewing skew is below5.87e-13, and independent chiral/full
+responses agree within2.17e-16. Order24-to32 new/cross matrix changes are
+below5.46e-16 and the checked fibre changes below1.34e-16. Four saved
+canonical-block frequency certificates reproduce exactly after reloading;
+the new-model tail is below5.413e-8 and middle quadrature change below6.10e-13.
+
+See [trial helper](../scripts/dihole_exterior_extension.py),
+[results](../results/dihole_exterior_feedback_results.json),
+[state](../data/dihole_exterior_feedback_state.npz), and
+[visual](../figures/dihole_exterior_feedback_progress.png).
+Next calculation is already assigned in parallel: angular3-to4-to5 at fixed
+radial12, to test whether the earlier small angular sensitivity survives
+radial enrichment. No additional axial-extension sweep is justified by this
+single result. Physical exterior/axis/IR completion, regulator removal,
+support and stability remain open; no new physical law or13Sep2027-to12Sep2027
+passage has been established.
+
 ## Radial modes remain negative; finite feedback matters -- increment140
 
 The [radial calculation](RADIAL_REFINEMENT.md) increases the central-sector

@@ -1,5 +1,7 @@
 # Directory guide
 
+Current increment141: [exterior feedback calculation](scripts/dihole_exterior_feedback.py), [saved results](results/dihole_exterior_feedback_results.json), and [visual](figures/dihole_exterior_feedback_progress.png). The next angular cross-check is independent work in progress.
+
 Current increment140: [radial refinement report](docs/RADIAL_REFINEMENT.md), [driver](scripts/dihole_radial_refinement.py), [saved results](results/dihole_radial_refinement_results.json), and [visual progress](figures/dihole_radial_refinement_progress.png). Earlier evidence remains in place.
 
 Files are grouped by purpose. Run commands from the project root and consult
