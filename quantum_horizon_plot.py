@@ -7787,6 +7787,85 @@ def long_throat_integral_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def source_remainder_progress():
+    """Keep conditional IR/UV bounds separate from a finite-window source."""
+    from matplotlib.patches import Rectangle, Ellipse, FancyBboxPatch
+    root=Path(__file__).resolve().parent
+    names=('long_throat_integral_results.json','ultraviolet_source_bound_results.json',
+           'threshold_return_bound_results.json','buffered_angular_bound_results.json')
+    finite,uv,ir,angular=[json.loads((root/name).read_text(encoding='utf-8')) for name in names]
+    for record in (finite,uv,ir,angular):assert record['passed'] and all(record['tests'].values())
+    assert ir['certificate_gate_passed']
+    primary=finite['integration']['cutoffs']['4']['partial_sums']['fine']
+    g=finite['geometry'];assert g['rho_c']==uv['parameters']['rho_c']==ir['parameters']['rho_c']==32
+    assert g['b']==uv['parameters']['b']==ir['parameters']['b']==.2
+    assert primary['edges'][0]==ir['parameters']['scaled_x_interval'][1]==1e-6
+    assert primary['edges'][-1]==uv['parameters']['x_min']==48
+    assert ir['parameters']['m']==0 and ir['parameters']['nmax']==4
+    selected=next(p for p in ir['phases'] if np.isclose(p['phase'],np.pi,rtol=1e-14,atol=0))
+    assert selected['neumann_passed'] and selected['neumann_epsilon']<1
+    source=np.asarray(primary['totals']['pi']['pressure'])
+    ir_bound=np.asarray([r['pressure_integral_absolute_upper'] for r in selected['conditional_source_remainder']])
+    assert [r['probe'] for r in uv['records']]==['central','upper_side']
+    uv_bound=np.asarray([r['integrals']['total_pressure']['upper'] for r in uv['records']])
+    for r,signal in zip(uv['records'],source):
+        assert r['integrals']['total_pressure']['lower']<=r['integrals']['total_pressure']['upper']
+        assert np.isclose(r['primary_finite_window_pressure'],signal,rtol=1e-13,atol=0)
+    feedback=sorted([r for r in angular['records'] if r['N']==4 and r['K']==2 and r['phase']=='pi'],key=lambda r:r['probe'])
+    assert [r['probe'] for r in feedback]==[0,1] and not angular['conclusions']['source_sign_certified']
+    assert np.all(np.isfinite(np.r_[source,ir_bound,uv_bound])) and np.all(np.r_[ir_bound,uv_bound]>0)
+    def upper_label(value,digits=3):
+        power=int(np.floor(np.log10(value)))
+        step=10.**(power-digits+1);rounded=np.ceil(value/step)*step
+        assert rounded>=value
+        return f'{rounded:.{digits-1}e}'
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig=plt.figure(figsize=(13.5,8.3))
+    fig.suptitle('A conditional bound on the high-frequency tail',fontsize=18,fontweight='bold',y=.965)
+    fig.text(.5,.912,'Weighted energy + radial-pressure source on the same prescribed long throat',ha='center',fontsize=11,color='#475569')
+    core=fig.add_axes([.315,.813,.40,.065]);core.set_axis_off();core.set(xlim=(-1.16,1.16),ylim=(-.6,.6))
+    core.add_patch(Rectangle((-1,-.25),2,.5,facecolor='#edf1f5',edgecolor='#64748b',lw=1))
+    for end in (-1,1):core.add_patch(Ellipse((end,0),.065,.5,facecolor='#edf1f5',edgecolor='#64748b',lw=1))
+    half=g['proper_length']/2
+    for p,base,color in zip(g['probes'],(.025,-.21),('#b38516','#b36b2b')):
+        xx=g['b']*np.arcsinh(np.tan(p['sigma']))/half
+        core.fill_between(xx,base,base+.19*np.asarray(p['profile']),color=color,alpha=.8)
+    fig.text(.055,.846,'Assumed constant-radius core\nand two compact probes',va='center',fontsize=10,color='#475569')
+    fig.text(.75,.846,'\u03c1c = 32; b = 0.2d\nSharp joins remain unsupported',va='center',fontsize=10,color='#475569')
+    fig.text(.5,.773,'Frequency bands are schematic, not to scale. x = \u03ba\u2113; \u210f = c = d = 1.',ha='center',fontsize=10,color='#475569')
+    specs=[
+        (.045,'Infrared','0 \u2264 x < 10\u207b\u2076','m = 0 · phase π · absolute bound',ir_bound,'#fff8e9','#a56919',
+         'Finite J=9 / DG; floating enclosure.\nConditional, not interval-verified.\nOther angular sectors remain open.'),
+        (.365,'Computed window','10\u207b\u2076 \u2264 x \u2264 48','N = 4 \u00b7 selected phase \u03c0',source,'#ecf7f7','#007e87',
+         'Numerical finite-window integrals.\nMesh and angular limits remain open.'),
+        (.685,'Ultraviolet','x \u2265 48','All angular modes; both Weyls',uv_bound,'#eef3fc','#3562a2',
+         'Interval-evaluated analytic majorant.\nPrescribed core + passive return.\nPhase-independent absolute bound.')]
+    for index,(left,title,band,scope,values,bg,color,note) in enumerate(specs):
+        fig.patches.append(FancyBboxPatch((left,.357),.27,.367,boxstyle='round,pad=0.008',
+                         transform=fig.transFigure,facecolor=bg,edgecolor=color,linewidth=.8,zorder=-1))
+        center=left+.135
+        fig.text(center,.686,title,ha='center',fontsize=13,fontweight='bold',color=color)
+        fig.text(center,.643,band,ha='center',fontsize=12,color=color)
+        fig.text(center,.598,scope,ha='center',fontsize=9.6,color='#475569')
+        for j,label in enumerate(('Central','Upper-side')):
+            value=f'{values[j]:+.8f}' if index==1 else '\u2264 '+upper_label(values[j])
+            fig.text(left+.015,.537-j*.055,label,fontsize=10,color='#475569')
+            fig.text(left+.255,.537-j*.055,value,ha='right',fontsize=11.3,fontweight='bold',color=color)
+        fig.text(center,.413,note,ha='center',va='center',fontsize=9.5,color='#475569',linespacing=1.55)
+    fig.patches.append(FancyBboxPatch((.055,.196),.89,.111,boxstyle='round,pad=0.01',
+                     transform=fig.transFigure,facecolor='#f5f1fa',edgecolor='#7951b0',linewidth=.8,zorder=-1))
+    fig.text(.073,.276,'Separate finite-frequency issue: uncomputed angular modes can feed back into the computed modes.',fontsize=10.6,fontweight='bold',color='#644193')
+    vals=[r['best_feedback_bound'] for r in feedback]
+    fig.text(.073,.241,f"At x = {angular['parameters']['x']:.4f}, feedback bounds: {float(upper_label(vals[0],4)):g} central / {float(upper_label(vals[1],4)):g} upper-side (pointwise, per d\u03ba).",fontsize=10,color='#475569')
+    fig.text(.073,.206,'The present bounds are too loose to certify the source sign; they are not integrated error bounds.',fontsize=10,color='#475569')
+    fig.text(.055,.135,'Bounds and integrals have different qualifications. This ledger does not establish a combined full-source bound.',fontsize=10,color='#475569')
+    fig.text(.055,.091,'Absolute supporting stress, a physical junction and stability remain unresolved; no material recipe is established.',fontsize=10,color='#475569')
+    fig.text(.055,.041,'No stable medium or 13 Sep 2027 \u2192 12 Sep 2027 passage demonstrated.',fontsize=10.7,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'source_remainder_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

@@ -1,5 +1,333 @@
 # Reproduction and coupled-model iterations
 
+## Buffered angular control and frequency-tail bounds — increment104
+
+### The angular estimate decreases, but is too loose to certify the source
+
+The [buffered calculation](buffered_angular_bound.py) supplies an explicit
+continuum exterior-mixing inequality for q=1 and tests its constants on
+the saved102 middle-frequency matrices. Its [results](buffered_angular_bound_results.json)
+do not certify a negative total source. At rho32, x=.4439150615, buffer
+N=4 and source cutoff K=2, the best of three valid collar choices gives
+feedback bounds[118.1694,45.4502], while the actual central/upper N4
+kernels are[-.0805704,-.0309883]. These are unscaled d_kappa kernels.
+The bound is many orders too large to settle the sign. No exterior solve
+was repeated, and a desired sign or small bound is not a test gate.
+
+The useful analytic change is that angular regularity is propagated
+through the FULL exterior response with arbitrary passive far return.
+It is not inferred from the smallness of individual potential coefficients.
+Canonical current norms, a well-posed exterior problem, complete angular
+multiplets and positive kappa are required. The numerical use of finite
+facet maps remains conditional on their approximation to the true
+continuum compression; their Gram/discretization error is separate.
+
+For the isolated monopole operator H0=-i*Gamma*d_r+D/r, total rotations
+commute with H0 and Gamma. At q=1, sum J_i^2=D^2, with
+lambda_n=sqrt[n(n+1)]. This angular spectrum and rotation representation
+are standard; see [Borokhov, Kapustin and Wu, section4.1 and Appendix](https://arxiv.org/pdf/hep-th/0206054).
+The identity is specific to q=1 and is not used unchanged for the q=1e5
+smooth collar. The following cutoff and source estimates are our derivation.
+
+The partner perturbation in a regular local gauge is V=F*sigma.(e_z cross x),
+where Dp=|x+d*e_z| and F=1/[2Dp(Dp+d+z)]. With 0<b<a<d/2,
+\[
+ v_*\le {a\over4(d-a)^2},\qquad
+ C_{\rm rot}\le {\sqrt2\,a\over4(d-a)^2}
+ \left[1+{a(4d-a)\over2(d-a)^2}\right].
+\]
+Here sum_i||[J_i,V]psi||^2<=Crot^2||psi||^2. For a rotation axis u,
+put w=u cross e_z. The commutator vector, up to its factor i, is
+F(w cross x)+F_z(w.x)(e_z cross x), where F_z is the derivative at fixed
+r. J_z commutes exactly. The displayed constant uses
+|F_z/F|<=d/(d-a)^2+[d/(d-a)+1]/[2(d-a)]. An independent review corrected
+the initial arithmetic combination from3d-a to4d-a before freezing;
+sampled derivative checks alone would not have justified the smaller
+constant. Independent finite Cartesian rotations check the actual
+commutator formula to5.98e-11.
+
+For any finite-column incoming matrix X let U=||X||F, Vx=||D_L X||F,
+w=a-b, h1=h2=2/w and c0=1-1/sqrt2. Choose chi1=1 from b through
+b+w/2, then decrease linearly to0 at a. Choose chi2=1 at b, decreasing
+linearly to0 at b+w/2; its support lies where chi1=1. Lipschitz cutoffs
+suffice. Current conservation gives U0=U/sqrt(2*kappa). The radial identity
+\[
+ \|H_0u\|^2=\|u'\|^2+
+ \int r^{-2}\langle u,(D^2+i\Gamma D)u\rangle\,dr
+ -{\langle u(b),i\Gamma Du(b)\rangle\over b}
+\]
+uses D^2+i*Gamma*D>=c0*D^2, including the zero mode. Its boundary term
+is bounded by2UVx/b because i*Gamma*D exchanges characteristic subspaces
+and the full exterior is passive. Therefore put
+\[
+ E_0=(\kappa+v_*+h_1)^2U_0^2+2UV_x/b,\quad
+ U_1={a\over\sqrt{c_0}}\sqrt{E_0},\quad
+ C_X^2=V_x^2+2U_1(C_{\rm rot}U_0+h_2U_1).
+\]
+The inhomogeneous current identity for chi2*J_i*psi bounds the full
+outgoing angular graph norm by C_X. The cutoff vanishes before the far
+boundary, so no angular derivative of the outer return is needed. Using
+the established core defect bound delta_n^-1<=c_delta*lambda_n yields
+\[
+ \|W_H^{-1}S_{HL}X\|_F
+ \le\sqrt{c_\delta/\lambda_{N+1}}\,C_X.
+\]
+This decreases with N for a FIXED controlled input X. Setting its input
+cutoff K equal to N does not establish convergence.
+
+### Retained-mode redistribution is included in the source weight
+
+Let L contain n<=N, let K<=N be the source block, and set
+G_N=(I-B_L S_LL)^-1. Use the actual source-weighted matrix
+\[
+ X=G_NP_K\dot B_KW_K^{-1}
+\]
+in U,Vx above. Thus redistribution into intermediate retained modes is
+computed, rather than assuming the source remains in K. If r is an
+exact structural upper bound on the number of columns, the K-supported
+relative-source error obeys
+\[
+ E_{{\rm feedback},K}\le {\sqrt r\over\pi}
+       \sqrt{c_\delta/\lambda_{N+1}}\,C_X.
+\]
+Indeed F_B-F_B0=F_B(B-B0)F_B0, with F_B=(I-SB)^-1S and
+B0=diag(B_L,0). The unknown high-to-K part of F_B is an offdiagonal
+block of the [Julia contraction](https://arxiv.org/pdf/1803.09329), of
+norm at most1. The angular-diagonal reference has no corresponding
+feedback, so its K term cancels. Distinct incoming/output selectors and
+defect operators must be retained before using their scalar angular form.
+
+For the full unmasked source, the two direct-high traces give
+|Q-Q_N|<=E_feedback,K+2E_direct(K). Each E_direct already includes the
+relative-kernel norm, angular degeneracy and both Weyls. Likewise the
+new Frobenius estimate sums over all sectors, both mouths and both
+Weyls once, with the maximum local vstar,Crot; no extra multiplicity is
+inserted. The structural source-column count is2+4K(K+2), equal to34
+at K=2. A floating-point rank threshold is not used.
+
+All eight checks pass after the coefficient correction: physical
+rotations, the commutator bound controls, a resolvent identity with
+nonnormal returns and independently permuted input/output ports, the
+offdiagonal contraction, complete source columns, the known finite
+feedback witness, fixed-input decay and input-file preservation.
+The sampled constants remain much too weak even after including the
+actual source derivative. This supplies a controlled mathematical route,
+but further blind cutoff growth is not justified by these numbers.
+
+### The complete high-frequency tail has a useful all-angular bound
+
+The [ultraviolet calculation](ultraviolet_source_bound.py), with
+[saved interval evaluations](ultraviolet_source_bound_results.json), bounds
+the entire relative source on x=kappa*ell>=48. It includes the zero block,
+every massive n>=1, both Weyls and the physical dx/ell Jacobian. It uses
+the prescribed product core and passive canonical-flux connected/reference
+returns. It does not replace either return by a fitted high-frequency tail.
+Because the bound includes every angular block, retained-mode feedback is
+already covered in this frequency region. The finite-window angular problem
+is a separate calculation.
+
+Let c=atan(32), L=2c, lambda_*=sqrt2, x0=48 and h=1/(2x0). The positive
+mass comparison function used in103 satisfies, for all x>=x0,
+
+\[
+ Y(s)\ge {\lambda_*\tanh(x_0s)\over2(x+h)}.
+\]
+
+This follows from sqrt(x^2+lambda_*^2)<=x+lambda_*^2/(2x) and monotonicity
+of the hyperbolic tangent. The improved absorption-defect comparison is
+particularly useful here. With m<=M=lambda_n*sec(c), put
+g=delta-(2x/M)y. The radial equations give
+
+\[
+ g'=-2(my+x)g+2x(1+y^2)(1-m/M),\qquad g(0)=0.
+\]
+
+Consequently delta>=2xy/M and
+
+\[
+ \delta_n^{-1}\le c_{\rm UV}\lambda_n,\qquad
+ c_{\rm UV}={\sec(c)(1+h/x_0)\over
+                  \sqrt2\tanh(x_0L)}<22.643376.
+\]
+
+This constant is uniform for x>=48. Substituting the lower comparison
+function into the reflection/transmission exponents of103 makes every
+angular decay rate at least p/(x+h), with p>0 for each compact force bin.
+For j=2,3 the remaining moments obey
+
+\[
+ S_j(\alpha)=\sum_{n\ge1}(n+1/2)^j e^{-\alpha n}
+ \le\sum_{l=0}^j {j\choose l}(3/2)^{j-l}{l!\over\alpha^{l+1}}.
+\]
+
+On each unit cell [n-1,n], (u+3/2)^j e^{-alpha*u} bounds the nth summand
+from above; integrating gives the displayed inequality. Thus all massive
+terms are bounded by positive polynomials in x times exp(-beta*x), with
+beta>0. The 32 force bins use upper rectangles for the known nonnegative
+probe; six mass-barrier cells use monotone lower rectangles. There is no
+frequency or infinite-angular numerical quadrature. Each frequency moment
+is integrated exactly by the recurrence
+
+\[
+ I_0={e^{-\beta x_0}\over\beta},\qquad
+ I_j={e^{-\beta x_0}x_0^j+jI_{j-1}\over\beta}.
+\]
+
+The conservative full-Dirac zero-block contribution is bounded by
+8F exp(-L*x0)(x0/L+1/L^2)/[pi*ell*(1-exp(-2*x0*L))]. This also covers
+each null source without assuming energy-flow cancellation. The result is:
+
+| Compact probe | Absolute bound on x>=48, pressure and either null | Bound / magnitude of103 finite-window pressure |
+| --- | ---: | ---: |
+| Central | 2.721345398419379e-20 | 2.363e-18 |
+| Upper side | 1.978040174716914e-6 | 0.000447041 |
+
+The displayed upper bounds are rounded upward. The latter ratio is
+0.0447041%, so this tail alone cannot overturn either recorded negative
+finite-window value. This comparison does not certify the rest of the
+infinite source. It is not a bound on local absolute vacuum terms or on
+the stress required at the joins.
+
+Coefficients and positive integrals are evaluated with mpmath interval
+arithmetic at100 decimal digits; the saved binary64 endpoints are expanded
+outward by one ulp. The lower endpoints in the data enclose the value of
+the MAJORANT, not a lower bound on the physical source magnitude. Separate
+70-digit interval and120-digit point evaluations check the implementation.
+All nine checks pass, including the moment formula, incomplete-gamma
+recurrence and comparison to the earlier radial envelope. Sampled checks
+support the implementation; the inequalities above establish the scope.
+
+### One retained sector now has an explicit threshold pilot
+
+The [threshold calculation](threshold_return_bound.py), with
+[saved matrices and bounds](threshold_return_bound_results.json), addresses
+0<=x<=1e-6 for m=0 only, at N=4, outer J=9 and h=.05. Both actual Weyl
+operators and both phases are included. The magnetic tail beyond R=2 is
+included to infinity in the implemented finite-J radial equation. Its
+64-node angular potential quadrature is fixed; error relative to the exact
+angular Galerkin integral has not been enclosed. Matrix solves and enclosure
+formulas use ordinary floating-point arithmetic with recorded residuals,
+not verified interval inverses. This is a conditional finite-model result.
+
+The useful analytic identity starts with the actual decaying radial frame
+F_kappa=(a_kappa,b_kappa), normalized by a_kappa(R)=I, and Z_kappa=b_kappa(R).
+For F'_kappa=[[-kappa,C],[C^dagger,kappa]]F_kappa, let
+E_kappa=integral F_kappa^dagger F_kappa dr. If the normalized zero frame is
+square integrable and Z0 is unitary, integration of the cross-current gives
+
+\[
+ I-Z_0^\dagger Z_\kappa
+       =\kappa\int F_0^\dagger F_\kappa\,dr,
+ \qquad I-Z_\kappa^\dagger Z_\kappa=2\kappa E_\kappa,
+\]
+
+\[
+ E_0-E_\kappa=\int(F_\kappa-F_0)^\dagger(F_\kappa-F_0)\,dr
+       +{(Z_\kappa-Z_0)^\dagger(Z_\kappa-Z_0)\over\kappa}\ge0.
+\]
+
+Hence ||Z_kappa-Z0||<=kappa*||E0|| and Z'(0+)=-Z0 E0. The order of this
+product matters for nonnormal coupling C. An independent three-channel
+constant-C example checks the identities and rejects the reversed order.
+This is a threshold energy estimate, not a spectral-gap assumption for
+the massless exterior continuum.
+
+For the actual finite-J pair tail, C=(D+E(r))/r with D=diag(1,...,9)
+and ||E(r)||<=a/r for r>=Lfar=40. Here a=0.519228702. The weighted Volterra
+ball sup r||Z0+I||<=K with K=.37 maps into radius .356266 and has contraction
+constant .048176. It gives ||Z0(40)+I||<=.00925 and a radial decay exponent
+at least .9036492, so E0(40)<=99.095946 I. The nominal boundary -I is only
+the CENTER of this ball; it is not asserted to equal the magnetic map.
+
+A piecewise-linear reference curve and explicit C,C',C'' bounds propagate
+the Riccati defect and energy enclosure inward. At log-step .001 the
+conditional bounds at R=2 are ||Z0-Znominal||<=8.98052e-5 and
+||E0||<=5.107378. Coarser log-step .002 is separately saved. Requested ODE
+tolerances are not treated as error bounds. The recorded roundoff allowance
+is explicitly not an interval proof.
+
+In the finite open DG system, A0+A0^dagger is the positive boundary/jump
+Gram matrix. Put T=M^(-1/2)A0 M^(-1/2), X=A0^-1 G and Y=A0^(-dagger) C^dagger.
+Then U=M^(1/2)X and V=M^(1/2)Y give
+
+\[
+ S_{\rm open}(\kappa)-S_{\rm open}(0)
+ =-\kappa V^\dagger(I+\kappa T^{-1})^{-1}U,
+ \quad\|\Delta S_{\rm open}\|\le\kappa\|U\|\|V\|.
+\]
+
+Accretivity makes the middle factor contractive. Gershgorin bounds on
+X^dagger M X and Y^dagger M Y avoid constructing a full dense bulk inverse.
+The physical core/tail maps are then sewn with their actual facet Gram
+conversion factors. At kappa_max=1e-6/ell=1.56173762e-7 the Neumann error
+factors are .028630793 for phase0 and .000207962 for phase pi, both below1.
+Their nominal smallest sewing singular values are .0020584506 and
+1.8238465 respectively. Smallness was a reported gate, not an assumed sign.
+
+The source estimate also includes frequency dependence of the core metric
+derivative. On its physical optical length Lc=ell*L, the zero-frequency
+open Green kernel has pointwise norm<=sqrt2, conservatively yielding an
+inverse norm<=2Lc and both Poisson-map squared norms<=2Lc. For insertion
+V_kappa=V0-2kappa*f I, changing its two resolvent legs and the explicit
+frequency term gives
+
+\[
+ \|\dot B_n(\kappa)-\dot B_n(0)\|
+ \le\kappa\,[8L_c^2\sup(m_n f)+4L_c].
+\]
+
+The exact zero derivative is J_f*sech(a_n) in norm, a_n=2lambda_n*asinh(32).
+Trace-norm counting includes each massive pair and both Weyls once. The
+chiral zero contribution is handled separately. For the AdS reference,
+massive zero-frequency blocks have B0=-i*tanh(a)I+sech(a)X with Hermitian
+unitary X, while the cap return is -iI. Thus the sewing gap is
+sqrt[2(1+tanh(a))]>=sqrt2. The paired zero-cap block has the same lower
+gap; reflected parity and opposite phases preserve it. Its perturbation
+is bounded by kappa*(2Lc+2a_cap), as used in the saved reference estimate.
+
+| Selected phase-pi m=0 remainder | Central | Upper side |
+| --- | ---: | ---: |
+| Absolute pressure integral bound | 1.302711e-9 | 2.639316e-9 |
+| Absolute bound for either radial null integral | 1.310859e-9 | 2.642449e-9 |
+
+For phase0 the pressure bounds are [2.446802e-7,4.957263e-7]. All eleven
+structure/numerical controls pass. This pilot does not enclose the other
+eight retained sectors, an infinite angular sum, or continuum mesh error.
+It also does not retroactively correct the distant-boundary approximation
+used for the nonzero-frequency samples in103.
+
+### Decision after this increment
+
+The all-angular high-frequency tail is now bounded under explicit model
+assumptions. The threshold pilot supplies a credible bounded extension to
+the other retained sectors, after accounting for numerical certification.
+The current buffered angular estimate is quantitatively inadequate;
+blindly raising the cutoff is not justified by it. The next mathematical
+decision is whether actual coupling and source weights can yield a useful
+finite-window angular-feedback bound. If that fails, revise or reject this
+candidate rather than reporting more negative samples as completion.
+
+These are our derived estimates and computations, not a peer-reviewed new
+physical law. The motivating [Maldacena-Milekhin-Popov construction](https://arxiv.org/html/1807.04726v3)
+is causal. Even a certified interior relative-source sign would still
+leave absolute stress, the smooth physical joins, all gravitational field
+equations, formation and stability unresolved. No material-generation
+recipe or stable medium has been established.13Sep2027->12Sep2027 remains
+UNPROVED. The [new figure](source_remainder_progress.png) separates these
+frequency regions and the pointwise angular-feedback limitation.
+
+Reproduce only the new small checks with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 buffered_angular_bound.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 threshold_return_bound.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 ultraviolet_source_bound.py
+```
+
+The first reuses frozen matrices, the second computes only a zero-frequency
+pilot, and the third evaluates positive analytic majorants. The earlier
+finite-window integration and all earlier figures are preserved.
+
 ## Long-throat integration, angular control and a smooth-collar mode — increment103
 
 ### The negative sampled contribution survives a finite-window integral

@@ -10,7 +10,9 @@ The present direction tests whether charged fermions actually return through the
 
 The latest [long-throat integral](long_throat_integral.py) finds negative radial-null responses at both compact probes for the selected phase-pi state across the tested frequency window. The result survives the tested angular and spatial refinements. The phase-zero state gives positive responses on the same geometry, so the state matters. This is a complete finite N=4 sum over a finite frequency window; it does not establish a full supporting source or repair the prescribed joins.
 
-A new [infinite-angular direct-trace bound](radial_angular_envelope.py) controls one part of the omitted modes. Their feedback into retained modes and the full low-frequency limit still need control. A separate [smooth-collar calculation](smooth_collar_mode.py) proves that the first massive multiplet's response to two specified circle holonomies is far too small to supply the same collar's flare budget. It does not determine the absolute stress or physical exterior return.
+The latest [high-frequency bound](ultraviolet_source_bound.py) controls the entire source above x=48, including every angular mode, under the prescribed-core and passive-return assumptions. Its upper-side bound is less than 0.045% of the computed finite-window signal. A [zero-frequency pilot](threshold_return_bound.py) also gives small conditional remainder estimates for one retained sector. The [buffered angular bound](buffered_angular_bound.py) decreases for fixed input but is much too loose to certify the finite-window source. The complete low-frequency and angular limits remain open.
+
+A separate [smooth-collar calculation](smooth_collar_mode.py) proves that the first massive multiplet's response to two specified circle holonomies is far too small to supply the same collar's flare budget. It does not determine the absolute stress or physical exterior return.
 
 A connected **q=1** model supplies a spectral determinant on a prescribed throat and exterior. Compact metric variations probe energy plus radial pressure and energy flow inside it, compared with an invariant AdS reference vacuum. Both the earlier shorter core (rho_c=2) and the latest longer core (rho_c=32) include every angular orientation through finite mouth cutoffs N=2 and N=4, with an independently fixed outer cutoff. The shorter core's tested sums were positive; the longer core's selected state gives negative sums. Verified Gram-weighted reuse avoids duplicate exterior solves while retaining separate source calculations at each cutoff.
 
@@ -18,6 +20,9 @@ Local state-admissibility arguments are now supplied for both the full invariant
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [All-angular high-frequency bound](ultraviolet_source_bound.py) · [results](ultraviolet_source_bound_results.json) · [figure](source_remainder_progress.png) | Positive analytic frequency majorants, every angular mode, interval evaluation and independent integral controls | Absolute bounds [2.722e-20,1.979e-6] above x=48; this frequency tail alone cannot reverse the computed signal. Other errors and geometry remain open |
+| [One-sector threshold enclosure](threshold_return_bound.py) · [results](threshold_return_bound_results.json) | Actual finite-J magnetic tail to infinity, zero-frequency energy identity, open-matrix response and sewing-gap checks | Small conditional phase-pi low-frequency bounds in m=0; ordinary floating arithmetic, finite discretization and the other sectors remain separate limitations |
+| [Buffered angular feedback](buffered_angular_bound.py) · [results](buffered_angular_bound_results.json) | Physical rotation commutators, full passive exterior graph bound and source-weighted redistribution | An explicit fixed-input decreasing estimate, but its sampled constants are much too large to settle the source sign |
 | [Long-throat finite-window integral](long_throat_integral.py) · [results](long_throat_integral_results.json) · [figure](long_throat_integral_progress.png) | 1,812 fresh paired-Weyl responses, complete N=2/N=4 sums, separate quadrature/spatial controls and selected outer-cutoff/endpoints | Negative phase-pi responses at both probes on both meshes; phase-zero responses are positive. Full angular/frequency bounds and a supporting junction remain open |
 | [Infinite-angular direct-trace envelope](radial_angular_envelope.py) · [results](radial_angular_envelope_results.json) | Analytic omitted-mode majorant, independent geometric sums and saved finite-feedback decomposition | Small direct bound in the long throat; retained feedback and the massive low-frequency remainder are not certified |
 | [First massive smooth-collar mode](smooth_collar_mode.py) · [results](smooth_collar_mode_results.json) | Actual large-flux angular gap, stable logarithmic scattering, whole-frequency contrast bound, independent transfer and same-probe geometry checks | The specified two-holonomy contrast is negligible compared with the flare requirement; absolute stress and arbitrary physical exterior matching remain open |
@@ -47,6 +52,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scattering_vacuum.py) · [results](scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Prescribed core and separate frequency-remainder checks](source_remainder_progress.png)
+
+*The high-frequency bound includes all angular modes. The low-frequency pilot includes only retained m=0 at N=4/J=9 and uses floating-point enclosure formulas. The finite window still lacks a useful complete angular-feedback bound. These three entries cannot yet be combined into a full-source certificate. All are relative interior responses on a prescribed geometry.*
 
 ![Long prescribed throat and finite-window source integrals](long_throat_integral_progress.png)
 
@@ -79,7 +88,17 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The latest long-throat integration took about 20 minutes 41 seconds in the recorded environment:
+The latest three remainder checks each take a few seconds and write separate result files:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 buffered_angular_bound.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 threshold_return_bound.py
+.\.venv\Scripts\python.exe -B -W error -X utf8 ultraviolet_source_bound.py
+```
+
+The angular helper reuses saved matrices; the threshold helper solves only the zero-frequency m=0 pilot; the high-frequency helper evaluates analytic interval majorants. The derivations and their distinct scopes are recorded at the start of [RESEARCH.md](RESEARCH.md).
+
+The preceding long-throat integration took about 20 minutes 41 seconds in the recorded environment:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 long_throat_integral.py

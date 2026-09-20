@@ -11,6 +11,9 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| All-angular high-frequency source bound | [ultraviolet_source_bound.py](ultraviolet_source_bound.py), [results](ultraviolet_source_bound_results.json), [frequency ledger](source_remainder_progress.png) |
+| One-sector zero-frequency enclosure | [threshold_return_bound.py](threshold_return_bound.py), [results](threshold_return_bound_results.json); finite N4/J9/DG model and non-interval floating evaluation |
+| Buffered angular-feedback estimate | [buffered_angular_bound.py](buffered_angular_bound.py), [results](buffered_angular_bound_results.json); explicit decreasing bound, numerically too loose |
 | Long-throat finite-window integral | [long_throat_integral.py](long_throat_integral.py), [results](long_throat_integral_results.json), [figure](long_throat_integral_progress.png) |
 | Infinite-angular direct-trace bound | [radial_angular_envelope.py](radial_angular_envelope.py), [results](radial_angular_envelope_results.json); conditional collar-feedback and threshold arguments in [RESEARCH.md](RESEARCH.md) |
 | First massive mode on the saved smooth collar | [smooth_collar_mode.py](smooth_collar_mode.py), [results](smooth_collar_mode_results.json); reuses [dirac_return_closure.py](dirac_return_closure.py) through an optional profile argument |

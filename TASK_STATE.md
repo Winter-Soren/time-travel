@@ -58,6 +58,99 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Buffered angular bound and frequency remainders — increment104
+- Previous goal turn classified PROGRESS:103 completed and published at
+  7e03d5ede0ceaacc551f4a13d281432f72378f29. Remote equality/private/clean
+  were verified after publication; local HEAD and clean state revalidated
+  before104. The103 pending-publication wording below is historical.
+- Root owns new buffered_angular_bound.py/results.json. First run1.6s,
+  all8 checks PASS. Uses saved102 rho32 middle matrices only; no exterior
+  calculation repeated. Exact physical rotational-difference controls,
+  distinct-port resolvent identity, Julia offdiagonal contraction and
+  complete structural source counts are checked.
+- Two radial cutoffs give explicit q1 full-exterior angular graph bounds
+  using actual smooth partner-field rotation commutators. For fixed low
+  source K and bufferN: E_feedback,K<=sqrt(r*c_delta/lambda_(N+1))*C_X/pi,
+  X=(I-B_L S_LL)^-1 P_K dotB_K W_K^-1. Frobenius norms of X,D_LX include
+  retained-core redistribution. Rank r is structural, not numerical.
+  Both mouths/Weyls share the max local constants; no extra multiplicity.
+  Independent connected_domain/formation algebra review passes.
+- Independent review caught an arithmetic coefficient3d-a that must be
+  4d-a in the explicit rotation bound. Corrected and reran the1.5s helper;
+  all8 checks and independent24-record/72-bound reconstruction now PASS.
+  Source997afa570c8f18411163039730f80a9dc94d38851cee9fb3752f8ca639f0d3e4;
+  datad1a10ef9694db7a39a30caf20970414b79d4a176a33da3148b4b9fcad1b836f7.
+- Conditional sampled N4,K2 bounds at a=.49: feedback[118.1694,45.4502]
+  versus actual middle kernels[-.0805704,-.0309883]. This proves the
+  current estimate is much too loose for a sign certificate. It requires
+  true continuum compression; finite-facet inputs illustrate constants.
+  No infinite-angular, threshold, frequency-integral or medium proof.
+- threshold_return_bound.py/results.json completed in3.2810889s with
+  -B -W error; all11 controls and both Neumann gates PASS. No live solver
+  remains. Bounded m0 zero-frequency pilot only, both actual Weyls/phases,
+  N4/J9/h.05 and rho32. No global monkeypatch or historical-source edits.
+  Includes actual finite-J/64-node-quadrature tail R2..infinity, far
+  Volterra ball, inward Riccati-defect/energy enclosure and facet factors.
+  Source39306d3076c109ef0d76c7ffb4e06e61f2cb0d7bd03338902431d675c65b08d4;
+  data03bd6d63ecedb44e7d55c4612f36c2eac14dcc1639c6855ebcb6e053085a9780.
+- Threshold analytic route: actual normalized L2 zero frame F0 gives
+  E0=int F0daggerF0, ||Z(kappa)-Z0||<=kappa||E0|| and Z'(0+)=-Z0E0.
+  Strong energy identity independently reviewed; nonnormalC control1.33e-15.
+  Far ball at40: radius.00925, energy<=99.095946. Inward fine logstep.001
+  gives tail-error<=8.98052e-5, energy<=5.107378 atR2. Open DG Gram identity
+  gives response Lipschitz1.786717104. All-port nominal gaps phase0/pi
+  [.00205845062,1.82384652]; Neumann factors[.028630793,.000207962].
+  Phase-pi m0 pressure IR bounds[1.302711e-9,2.639316e-9], either null
+  [1.310859e-9,2.642449e-9]. Phase0 pressure[2.446802e-7,4.957263e-7].
+  Conditional finite-model formulas use float solves/roundoff allowances;
+  not interval-certified arithmetic, exact angular-Galerkin quadrature,
+  other8 retained sectors, infinite angular sum or continuum mesh bound.
+  Does not retrofit103's distant-boundary approximation at nonzero x.
+  Formation reconstructed source bounds<=3.39e-21 and norms<=2.28e-13;
+  residual-between-nodes, source slope and reference-gap derivations PASS.
+- ultraviolet_source_bound.py/results.json completed in~1.35s,9 controls
+  PASS. Entire all-angular full-Dirac relative pressure/either-null source
+  integral x>=48 bounded by[2.7213453984193783e-20,1.9780401747169132e-6].
+  Upper bound is.0447041% of |103 upper finite-window pressure|. Uniform
+  defect cUV<22.643376 plus positive-cell angular sums gives polynomial
+  times exponential integrals, evaluated by positive exact recurrence.
+  All coefficients/integrals use100-digit mpmath intervals; exported
+  endpoints expanded one binary64 ulp.70/120-digit checks PASS.
+  Source5cb1085d096d5e347d1b02d9c1620fc1bf909c609778fc08666dcd58e696018c;
+  dataa11e60fe0fc4eee07fc89c694b3cdf2f72e6e3d24b523b6cf9ff38f602acacf4.
+  Independent100-digit direct-gamma reconstruction encloses every saved
+  component;258 polynomial terms agree to1.53e-16. No exterior rerun.
+  Assumes prescribed continuum core/well-posed passive canonical returns;
+  covers all angular feedback ONLY in this high-frequency region.
+- New source_remainder_progress PNG/PDF rendered and visually checked.
+  Helper source_remainder_progress() at quantum_horizon_plot.py:7790.
+  It separates conditional m0 IR, computed finite window, all-angular UV
+  and pointwise angular feedback; no combined-source assertion.
+  Plotter74c26533bac1d44cfca9c39b02fd5c6d6bf65164f6f6a23c1a5d79ca1d5e2ec8;
+  PNG93ccf302eb5ea50c1f45d2051a049bf0b9b1815127dec568fe5f0acd6cc08998;
+  PDFc68321ead9333a31f125b08f1cd23ff8f0dedbaf4c6abfeb41e779efb02daabc.
+  Agent verified188 previous figures byte-identical and removing new
+  helper restores103 plotter3f17370d...; root also visually inspected PNG.
+- User asked whether direction remains proper despite uncertain outcome.
+  Answer: defensible conditional research, unknown physical feasibility;
+  next calculations must support continuing, changing or rejecting candidate.
+  No new physical law, material recipe or discovery of a working medium.
+- Final verification PASS:457 previous tracked files outside the five
+  designated documentation/plotter edits remain byte-identical, including
+  all188 old PNG/PDF. RESEARCH/TASK historical103 suffixes and old plotter
+  bytes preserved exactly. All three producers' source/data/input hashes
+  match, all28 saved controls pass, AST parsing and local documentation
+  links pass, git diff --check clean. Independent104 prose audit PASS.
+  All104 scientific producers terminal; no solver running. Local increment
+  complete; authorized private commit/push and remote verification follow
+  this checkpoint and are recorded in the task's final tool results.
+  Next decision: extend the successful finite-model threshold method to
+  other retained sectors with real error controls; seek a USEFUL bound
+  from actual angular coupling/source weights instead of blind N growth.
+  Full source, smooth physical joins, gravitational solution, formation
+  and stability remain open. The MMP motivating construction is causal.
+  Goal ACTIVE, import complete.13Sep2027->12Sep2027 remains UNPROVED.
+
 ### Long-throat integral and smooth-collar mode — increment103
 - Increment102 was published to private main at
   d5d21ecb2deac51fe51cea3931c0ca63c215b686; local/remote equality, private
