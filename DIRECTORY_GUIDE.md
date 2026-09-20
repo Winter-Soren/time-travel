@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Actual conforming field and failed residual target | [conforming_exterior_trial.py](conforming_exterior_trial.py), [saved field/results](conforming_exterior_trial_results.json), [figure](conforming_trial_progress.png); [round-domain quadrature](physical_exterior_quadrature.py) and [controls](physical_exterior_quadrature_results.json) |
 | Two-leg angular feedback and continuum-residual target | [feedback_residual_bound.py](feedback_residual_bound.py), [results](feedback_residual_bound_results.json), [diagram](tail_completion_progress.png); finite mixing witness plus requirements for conforming physical trial fields |
 | Complete retained low-frequency enclosure | [complete_threshold_bound.py](complete_threshold_bound.py), [results](complete_threshold_bound_results.json); all9 retained sectors, conditional finite N4/J9/DG result |
 | Magnetic-tail angular quadrature error | [tail_quadrature_bound.py](tail_quadrature_bound.py), [results](tail_quadrature_bound_results.json); exact-GL truncation versus exact finite-J projection, separate from roundoff |

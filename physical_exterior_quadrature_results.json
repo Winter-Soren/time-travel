@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "tests": {
+    "physical_volume_moments": true,
+    "positive_weights": true,
+    "actual_round_holes": true,
+    "original_triangle_ownership": true
+  },
+  "geometry": {
+    "b": 0.2,
+    "d": 1.0,
+    "R": 2.0,
+    "h": 0.12
+  },
+  "exact_physical_moments": [
+    5.255807765818118,
+    -5.551115123125783e-17,
+    4.175066839820194
+  ],
+  "controls": [
+    {
+      "order": 3,
+      "points": 4230,
+      "moments": [
+        5.255807765818119,
+        6.245004513516506e-16,
+        4.175066839820197
+      ],
+      "maximum_moment_error": 2.6645352591003757e-15,
+      "minimum_weight": 0.0,
+      "minimum_mouth_radius": 0.2000000000000014,
+      "minimum_barycentric": -1.9206858326015208e-14
+    },
+    {
+      "order": 6,
+      "points": 16920,
+      "moments": [
+        5.255807765818118,
+        5.967448757360216e-16,
+        4.175066839820196
+      ],
+      "maximum_moment_error": 1.7763568394002505e-15,
+      "minimum_weight": 0.0,
+      "minimum_mouth_radius": 0.20000000000000034,
+      "minimum_barycentric": -2.3747317651382496e-14
+    }
+  ],
+  "scope": "Numerical quadrature on the round-hole exterior inside the outer polygon. No interval bound or certification of a field residual.",
+  "source_sha256": "46ec54f9839143cd95aec6b023858b1f09fc2f389d9a1d9a40d51cca6e7949fd",
+  "input_sha256": {
+    "two_mouth_mesh.py": "94e9e2efe207cb254e89cf366607fa315909c93afea64edd779fa064c9ace258"
+  }
+}

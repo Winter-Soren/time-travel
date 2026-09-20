@@ -1,5 +1,139 @@
 # Reproduction and coupled-model iterations
 
+## Conforming field pilot rejects the current residual strategy — increment106
+
+The [actual field trial](conforming_exterior_trial.py) now supplies a continuous,
+compactly supported physical spinor and measures its differential-equation
+residual on the round-hole exterior. Its [saved field and results](conforming_exterior_trial_results.json)
+pass fourteen construction/implementation checks, but **fail the illustrative
+accuracy target by a factor of 24,366**. This is a failed approximation, not a
+no-go theorem for a physical wormhole or time travel.
+
+### What was constructed
+
+This bounded pilot uses only the right Weyl field in m=0, phase pi, the upper
+pressure probe, rho_c=32, x=.44391506147705256 and kappa=.06932788510988314.
+It reuses the saved core/source/tail matrices and performs one matching
+N=4/J=9/h=.05 exterior solve, with five source-weighted columns. The saved
+response is reproduced within 8.62e-16. No all-sector or frequency scan follows.
+
+Area-weighted recovery gives one continuous P1 value per original mesh vertex;
+forbidden axis components remain zero. The physical exterior lies outside the
+round mouths, hence inside the original mesh with inscribed polygonal holes.
+Within each disjoint collar b=.2<r<a=.3, the field is
+
+\[
+ u=(1-\chi)u_{\rm CG}+\chi\,{b\over r}\,v_b(\theta).
+\]
+
+Here chi is a quintic cutoff with value 1 at b and 0 at a. The finite spherical
+trace v_b uses canonical outgoing coefficients g and incoming coefficients
+f_L=X+B_L g_L, f_H=0. Thus the specified low-core boundary relation holds by
+construction; angular trace modes above N=4 vanish analytically. The trace is
+checked independently through n=8. Full collar derivatives are included.
+A second quintic cutoff tapers the field from global radius 1.5 to 1.9, before
+the smallest outer-facet apothem 1.9975909, allowing zero extension to infinity.
+These are dimensionless model coordinates, not an apparatus blueprint.
+
+The actual pair potential is used in Q u=(D+kappa)u. All derivatives of the
+recovery, mouth blends and outer cutoff enter the residual. For m=0 its
+component form is
+
+\[
+ (Qu)_1=\partial_\rho u_2+\partial_z u_1+(1-A_\phi)u_2/\rho+\kappa u_1,
+ \qquad
+ (Qu)_2=\partial_\rho u_1-\partial_z u_2+A_\phi u_1/\rho+\kappa u_2.
+\]
+
+The norm sums source columns and integrates rho*d_rho*d_z. Shared-edge value
+jumps are absent; piecewise gradient jumps create no delta term for this
+first-order operator. Correct vanishing components at the axis give the
+required covariant H1 regularity. The [round-domain quadrature](physical_exterior_quadrature.py)
+splits horizontal triangle slices at vertices, circle extrema and edge/circle
+intersections, then integrates between the actual curved limits. It does not
+accept or reject quadrature nodes with a hole mask. Four independent geometry
+controls pass, with physical volume moments agreeing within 2.67e-15.
+Those polynomial moment checks do not certify a nonpolynomial field residual.
+
+### Measured failure and its location
+
+| Quantity | Numerical result |
+| --- | ---: |
+| Actual L2-Frobenius residual, quadrature order 6 | 0.339947079670 |
+| Actual L2-Frobenius residual, quadrature order 10 | 0.339946334557 |
+| Relative change of the total residual | 2.191855e-6 |
+| Collar-region residual norm, order 10 | 0.0709286245053 |
+| Interior-region residual norm, order 10 | 0.0798426511648 |
+| Outer-taper-region residual norm, order 10 | 0.322734862789 |
+| Prior illustrative 1% feedback-only residual budget | 1.39514664404e-5 |
+| Measured single-piece residual / that budget | 24,366.35 |
+| Complete trial weighted high-trace norm | 0.0118445970727 |
+
+Regional norms combine in quadrature, not by adding norms; the squared-sum
+check agrees within 2.78e-17. Regional masks make their own quadrature changes
+larger than the change of the total norm. This remains floating numerical
+integration, not an upper/lower interval enclosure. The prior budget is for
+the aggregate right or dual field over both Weyls and all retained sectors.
+An individual component exceeding it cannot satisfy that allocation; an
+individual component below it would not certify the missing fields.
+
+The algebraic matrix-equation residual is 1.09e-14, whereas the physical field
+residual is about .34. Treating those two residuals as interchangeable would
+have given a false conclusion. The conditional coefficient C_res=380.0577
+would multiply this measured norm to 129.1992, much larger than the trial
+high-trace norm; this is not a usable error certificate. Even keeping only
+the collar and interior contributions leaves about .1068. Removing or moving
+the outer taper alone cannot repair this particular trial's accuracy gap.
+
+The calculation took 2.612 seconds after implementation, using 883 vertices
+and 1672 triangles. Analytic field derivatives agree with an independent
+Cartesian finite-difference check within 3.09e-10; round-boundary closure and
+shared-edge continuity checks are below 3e-15. Original field coefficients
+are saved so this trial can be reconstructed without another exterior solve.
+
+An independent audit reconstructs the saved field without another PDE solve:
+values agree within8.88e-16, a separately assembled Cartesian operator within
+2.77e-10, and the raw low boundary relation within1.08e-19. The weighted
+high-trace norm agrees within1.73e-18; all input hashes and norm accounting
+match. These checks support the implementation and the reported numerical
+failure; they do not turn quadrature estimates into rigorous enclosures.
+
+### Direction decision
+
+Cap the current certificate branch at this failed pilot; do not launch an
+all-sector, dual or mesh sweep merely to produce more samples. A targeted
+replacement would first need evidence that it reduces both the interior and
+boundary errors by the required orders of magnitude. This result does not
+invalidate the earlier finite negative response; it leaves its continuum
+interpretation uncertified.
+
+The next physical gate is one specified smooth collar's absolute,
+renormalized, conserved stress/current versus that same collar's Einstein
+requirement. For ds^2=-N(l)^2 dt^2+dl^2+r(l)^2 dOmega^2,
+
+\[
+ \rho+p_r=-{N\over4\pi G r}\left({r'\over N}\right)'.
+\]
+
+The constant-radius core has zero geometric radial-null contraction, so a
+nonzero quantum response requires gravitational deformation; its sign does
+not prove support of the unchanged metric. Existing q=1 determinant
+subtraction is valid in the common product core, not an absolute collar
+reference. The saved smooth-collar source calculation uses large magnetic
+flux and a two-holonomy contrast; it cannot be relabeled as the missing q=1
+absolute source. Establish that reference and magnetic matching before any
+new collar solver. If they cannot be controlled, return to the controlled
+large-flux model rather than continue sharpening a prescribed sharp join.
+
+This branch is a source-feasibility investigation inspired by the causal
+[Maldacena–Milekhin–Popov construction](https://arxiv.org/html/1807.04726v3).
+No supported geometry, formation process, stability proof, new physical law,
+obtainable material or 13 Sep 2027 -> 12 Sep 2027 passage has been demonstrated.
+
+Reproduce only this pilot with `.venv\Scripts\python.exe -B -W error -X utf8 conforming_exterior_trial.py`.
+The independent geometry checks use the same command with
+`physical_exterior_quadrature.py`. Older scientific outputs are preserved.
+
 ## Complete retained threshold and actual angular feedback — increment105
 
 ### The threshold enclosure now includes every retained angular sector

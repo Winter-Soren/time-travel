@@ -7958,6 +7958,81 @@ def tail_completion_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def conforming_trial_progress():
+    """Show an actual conforming trial and its failed numerical residual test."""
+    from matplotlib.patches import Circle, Wedge, Rectangle, Ellipse
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'conforming_exterior_trial_results.json').read_text(encoding='utf-8'))
+    f=json.loads((root/'feedback_residual_bound_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values()) and f['passed'] and all(f['tests'].values())
+    p=d['parameters'];assert p['m']==0 and p['weyl']=='right' and p['phase']=='pi' and p['source_columns']==5
+    assert p['probe']=='upper_pressure' and p['retained_N']==2 and p['trace_N']==4
+    assert d['conclusions']['actual_conforming_trial_constructed'] and not d['conclusions']['continuum_residual_certified']
+    assert not d['comparison']['necessary_single_piece_target_met']
+    rows=d['quadratures'];assert [r['order'] for r in rows]==[6,10]
+    regions=('collars','interior','outer_taper')
+    norms=np.array([[r['residual_l2']]+[r['regional_residual_l2'][k] for k in regions] for r in rows])
+    for r in rows:
+        regional=np.array([r['regional_residual_l2'][k] for k in regions])
+        assert np.isclose(regional@regional,r['residual_l2']**2,rtol=1e-12,atol=0)
+        assert np.isclose(np.linalg.norm(r['residual_columns']),r['residual_l2'],rtol=1e-12,atol=0)
+    budget_row=next(r for r in f['records'] if r['phase']=='pi' and r['probe']==1)
+    budgets=np.array([next(b['equal_continuum_residual_norm_budget'] for b in budget_row['continuum_residual_budgets'] if b['signal_fraction']==v) for v in (.01,.1)])
+    assert np.isclose(budgets[0],d['comparison']['previous_all_sector_two_weyl_residual_budget'],rtol=1e-13,atol=0)
+    assert np.isclose(norms[-1,0]/budgets[0],d['comparison']['actual_single_piece_residual_over_that_budget'],rtol=1e-13,atol=0)
+    assert np.all(np.isfinite(norms)) and np.all(norms>0) and np.all(norms[-1,0]>budgets)
+    b,a=p['b'],p['collar_a'];t0,t1=p['taper_start'],p['taper_end'];separation=f['parameters']['d']
+    assert b==.2 and a==.3 and t0==1.5 and t1==1.9 and separation==1
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig=plt.figure(figsize=(13.5,8.2))
+    fig.suptitle('Current continuum trial misses the residual targets',fontsize=18,fontweight='bold',y=.967)
+    fig.text(.5,.91,f"One right-Weyl m=0, five-column trial at x = {p['x']:.4f} \u00b7 Numerical residual estimates, not a physical traveler",ha='center',fontsize=10.7,color='#475569')
+    ax=fig.add_axes([.07,.29,.40,.49]);ax.set_aspect('equal');ax.set(xlim=(-2.1,2.1),ylim=(-2.1,2.1))
+    ax.set_title('A. Prescribed exterior domain',fontsize=12,pad=14)
+    ax.add_patch(Circle((0,0),t1,fc='#f4f8fa',ec='#94a3b8',lw=1))
+    ax.add_patch(Wedge((0,0),t1,0,360,width=t1-t0,fc='#dce3e9',ec='none',alpha=.9))
+    ax.add_patch(Circle((0,0),t0,fc='none',ec='#94a3b8',lw=.8,ls='--'))
+    for z in (-separation/2,separation/2):
+        ax.add_patch(Circle((0,z),a,fc='#e9def6',ec='#7951b0',lw=1))
+        ax.add_patch(Circle((0,z),b,fc='white',ec='#007e87',lw=1.4))
+    ax.annotate('Mouth cuts\nb = 0.2d',xy=(b,.5),xytext=(.7,.9),fontsize=9.1,color='#007e87',
+                arrowprops={'arrowstyle':'-','lw':.8,'color':'#007e87'})
+    ax.annotate('Trial collars\na = 0.3d',xy=(-a,-.5),xytext=(-1.7,-.45),fontsize=9.1,color='#7951b0',
+                arrowprops={'arrowstyle':'-','lw':.8,'color':'#7951b0'})
+    ax.annotate('Outer taper\nr/d: 1.5 \u2192 1.9',xy=(1.23,1.23),xytext=(.55,1.84),fontsize=9.1,color='#475569',
+                arrowprops={'arrowstyle':'-','lw':.8,'color':'#475569'})
+    ax.scatter([.68],[.1],s=16,c='#64748b',zorder=5)
+    ax.annotate('Illustrative tracer;\nno motion computed',xy=(.68,.1),xytext=(.66,-.5),fontsize=8.5,color='#64748b',
+                arrowprops={'arrowstyle':'-','lw':.6,'color':'#64748b'})
+    ax.add_patch(Rectangle((-1.94,-1.88),1.14,.12,fc='#edf1f5',ec='#64748b',lw=.8))
+    for xx in (-1.94,-.8):ax.add_patch(Ellipse((xx,-1.82),.07,.12,fc='white',ec='#64748b',lw=.8))
+    ax.text(-1.99,-1.6,'Assumed throat\n(schematic only)',fontsize=8.5,color='#475569')
+    ax.set_xlabel('Signed meridional x / d');ax.set_ylabel('z / d')
+    ax.spines[['top','right']].set_visible(False)
+    bx=fig.add_axes([.575,.29,.36,.49]);y=np.arange(4)
+    bx.set_title('B. Residual estimates versus requirements',fontsize=12,pad=14)
+    for i,(color,marker,offset) in enumerate((('#94a3b8','s',-.075),('#007e87','o',.075))):
+        bx.plot(norms[i],y+offset,marker,ls='none',color=color,ms=6,label=f"Volume quadrature order {rows[i]['order']}")
+    for yy,value in zip(y+.075,norms[-1]):
+        bx.annotate(f'{value:.5f}',(value,yy),xytext=(8,0),textcoords='offset points',va='center',fontsize=9.3,color='#007e87')
+    for value,color,label in zip(budgets,('#b97716','#7951b0'),('Illustrative 1% feedback budget','Illustrative 10% feedback budget')):
+        bx.axvline(value,color=color,ls='--',lw=1.1,label=label)
+    bx.set_xscale('log');bx.set_xlim(5e-6,1.3);bx.set_ylim(3.6,-.6)
+    bx.set_yticks(y,['Total','Both collars','Interior','Outer taper'])
+    bx.set_xlabel('L\u00b2-Frobenius differential-residual norm (log scale)',fontsize=9.7)
+    bx.spines[['top','right']].set_visible(False);bx.grid(axis='x',alpha=.15)
+    bx.legend(loc='upper left',bbox_to_anchor=(.575,.882),bbox_transform=fig.transFigure,frameon=False,fontsize=8.9,ncol=2,columnspacing=1.1)
+    subtotal=np.linalg.norm(norms[-1,1:3]);ratio=norms[-1,0]/budgets[0]
+    fig.text(.07,.19,f"Estimated total residual {norms[-1,0]:.6f}: about {ratio:,.0f}\u00d7 the illustrative 1% requirement.",fontsize=11,fontweight='bold',color='#a24b2e')
+    fig.text(.07,.151,f"Collars + interior alone give {subtotal:.6f}; region norms combine by sums of squares. Targets are conditional, not a total-source error test.",fontsize=9.7,color='#475569')
+    fig.text(.07,.106,'The trial obeys the stated round-boundary construction; sampled volume quadrature does not certify its residual or the missing dual/Weyl/sectors.',fontsize=9.7,color='#475569')
+    fig.text(.07,.064,'Prescribed sharp joins and the full supporting source remain unresolved. No stability or physical transport has been demonstrated.',fontsize=9.9,color='#475569')
+    fig.text(.07,.023,'13 Sep 2027 \u2192 12 Sep 2027 remains unproved; no stable material or machine design is established.',fontsize=10.4,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'conforming_trial_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()
