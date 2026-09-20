@@ -58,6 +58,45 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Sewn state and local action source coefficients — increment133
+- Previous132 PROGRESS: published6dbf3a6c48a80bba51876daf45a2eef05b6a9be2;
+ private/origin/clean verified. Import stays COMPLETE; goal ACTIVE.
+- NEW docs/SEWN_SOURCE_STATE.md constructs exact129 smooth handle, regular
+ bundle/spin sewing and independent flat holonomy, complete optical metric,
+ self-adjoint Dirac domain and empty-zero-mode Hadamard ground state.
+ This continuum state is not the finite absorbing DG model. Static geometry
+ has a global time function; no chronology change. State exists; its
+ renormalized source has not yet been computed.
+- Compact smeared stress is primary. Energy-derivative identification also
+ needs infrared/differentiability control; do not assume zero-mode crossings
+ or an infinite-volume energy allow that interchange.
+- NEW scripts/dihole_local_source.py computes local action variations under
+ the actual130 paired mask; reuses exact field/profile and old curvature
+ checker. Lorentzian energy sign E=-S/T. Seven final controls PASS.
+- Final energy-response coefficients R²/Ricci²/charge-included F²:
+ +636.844680426/D,+289.350803036/D,-4.53719674642e-6/D.
+ Classical F² has a different normalization/scaling: -7.25951479427e-7 D;
+ EH unprefactored derivative +.342029978447 D. No actual local coupling
+ inferred. Scheme changes require compensating coupling changes and
+ cannot manufacture support. The same local terms apply to both phases.
+- Final grids64/96/128, EH identity1.85e-14, normalized96->128 change4.41e-14,
+ fine real-difference comparison4.61e-8. Numerical sensitivity, not bounds.
+ Initial32-point integration failed EH tolerance and Maxwell identity check
+ had factor8 instead of4. Both corrected without weakening assertions;
+ failed result + exact source retained as dihole_local_source_pilot files
+ in results/ and provenance/. Final render run exited0; no live process.
+- NEXT: full compact differentiated kernel, local charged Hadamard
+ subtraction/charged Ward correction on the specified sewn state. Baseline
+ scale ell*=D0 stays fixed in epsilon; remaining finite local additions
+ chosen zero at that scale as a model convention, not measured couplings.
+ Missing one-pass/reference, all mu/frequency tails and continuum limit
+ still need actual calculation. Do not return to old box certification.
+- SHA256 driver6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174;
+ resultcc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6.
+- Figure read; source/result provenance and132 historical suffixes checked.
+ Professor brief/paused heartbeat unchanged; no email. No new physical law,
+ material, source solution or stability.13Sep2027->12Sep2027 unproved.
+
 ### Connected finite-window source calculation — increment132
 - Previous131 published9bee657643044f77cd35ca0a4cdbb3cd7424c10d, clean/origin
  matched. Original import COMPLETE; goal ACTIVE. No old spectrum reruns.

@@ -1,5 +1,121 @@
 # Reproduction and coupled-model iterations
 
+## Sewn quantum state and local source coefficients — increment133
+
+The exact prescribed129 geometry now has an explicit
+[sewn operator and ground-state construction](SEWN_SOURCE_STATE.md).
+The new [local-source calculation](../scripts/dihole_local_source.py),
+[results](../results/dihole_local_source_results.json), and
+[response plot](../figures/dihole_local_source_progress.png) quantify local
+terms omitted by132. These are new calculations for this prescribed model,
+not a supporting material or a new law.
+
+### The state is defined; its source is still to be evaluated
+
+Replace both excised horizon balls by the smooth compact bridge with the
+exact cut jets. Optical infinity is unchanged, and the compact bridge has a
+smooth positive optical metric. Thus the entire sewn optical manifold is
+complete. Choose the regular integer-charge magnetic bundle, the stated
+spin lifts, and an independent flat loop holonomy. The massless Dirac
+operator has its natural self-adjoint graph domain and an empty-zero-mode
+Hadamard ground state. The linked note checks these hypotheses and cites
+the relevant primary theorems. The finite absorbing DG boundary is still
+an approximation to this continuum problem, not its operator domain.
+
+Use the compactly smeared, locally subtracted stress as the primary source,
+$\mathcal Q_\phi[f]=\int fN\sqrt h(\langle T_{00}\rangle+\langle T_{ss}\rangle)$,
+with orthonormal components. An identification with a ground-state energy
+derivative additionally needs infrared/differentiability control. In
+particular, state existence alone does not justify taking derivatives
+through a zero-energy crossing or tracing an infinite-volume energy.
+
+For the next calculation the note declares a fixed subtraction length
+$\ell_*=D_0$, held fixed during the metric variation, and zero remaining
+finite local additions at that scale. Charged current/stress Ward
+normalization must be implemented together. This is a chosen mathematical
+model, not a determination of nature's gravitational or gauge couplings.
+
+### Local response coefficients for the actual source direction
+
+In four dimensions the familiar finite local curvature freedom includes
+$R^2$ and $R_{ab}R^{ab}$; a gauge-background stress term is also allowed.
+See [Zahn, equation38 and the following discussion](https://arxiv.org/pdf/1210.4031)
+and the broader [heat-kernel treatment](https://arxiv.org/pdf/hep-th/0306138).
+We now evaluate their actual compact variations on this bridge rather than
+assigning unspecified coefficients a favorable sign.
+
+For an added Lorentzian action $S_i=c_i\int\sqrt{-g}\,I_i\,d^4x$, define
+
+$$
+K_i=-\left.\partial_\epsilon\int N_\epsilon\sqrt{h_\epsilon}
+ I_i[g_\epsilon,A],d^3x\right|_0,
+\qquad \Delta E'=\sum_i c_i K_i.
+$$
+
+The minus sign follows from static $E=-S/T$. The130 paired variation keeps
+$N\sqrt h$ invariant. Its smooth mask is supported on the two collars;
+the unchanged central segment and exterior make no local contribution.
+The extra flat holonomy has zero field strength, so these local coefficients
+are identical for both phases.
+
+| Local invariant | Compact energy-response coefficient |
+| --- | --- |
+| $R^2$ | $+636.844680426/D$ |
+| $R_{ab}R^{ab}$ | $+289.350803036/D$ |
+| Charge-included $F_{ab}F^{ab}$, q=1 | $-4.53719674642\times10^{-6}/D$ |
+
+The script also retains the Einstein-Hilbert and classical-potential
+Maxwell invariants as normalization controls. Their energy derivatives
+before action prefactors are $+0.342029978447D$ and
+$-7.25951479427\times10^{-7}D$. The charge-included potential is
+$A=-qA_{\rm classical}/(2Q)$, so its square has an additional factor
+$q^2/(4Q^2)$ and a different length scaling. They must not be interchanged.
+
+For example, changing a physical $R^2$ coefficient by0.001 changes this
+probe by0.636845/D, which exceeds the magnitude of the132 finite-window
+contribution. This is sensitivity to a coefficient, not a proposed value.
+A pure renormalization-scheme shift changes quantum and gravitational/gauge
+bookkeeping with compensating signs; the total support equation is
+unchanged. These coefficients cannot be fitted after the calculation to
+manufacture exotic matter or a successful throat.
+
+### Checks, failure retained, and the next physical calculation
+
+The actual published field functions and smooth radius profile are reused.
+Analytic first derivatives plus complex-step second derivatives generate
+metric jets. The tensor contraction is batched from the existing diagonal
+curvature calculation and checked against that original scalar routine.
+A complex-step epsilon derivative is compared with two real finite
+variations. The independent integrated identities are
+
+$$
+\partial_\epsilon\int\sqrt{-g}R/T
+ =2\int fN\sqrt h\,G_{kk},\qquad
+\partial_\epsilon\int\sqrt{-g}F_{\rm classical}^2/T
+ =4\int fN\sqrt h\,g^{ss}g^{\varphi\varphi}F_{s\varphi}^2.
+$$
+
+All seven final checks pass at64/96/128 quadrature points in each direction.
+The final Einstein-Hilbert identity discrepancy is1.85e-14; the largest
+monitored 96-to128 change is4.41e-14 under the script's normalization.
+The fine real-difference comparison is below4.61e-8. These are numerical
+checks, not certified errors. The first32-point grid underresolved the
+integrated Einstein-Hilbert identity, and its Maxwell check had an extra
+factor2. The corrected control and higher grid orders resolve both without
+changing the computed invariant formulas. The [failed pilot output](../results/dihole_local_source_pilot_results.json)
+and its [exact source](../provenance/dihole_local_source_pilot.py) are retained.
+
+NEXT: evaluate the compactly smeared differentiated two-point kernel of the
+specified sewn ground state, with the local charged subtraction and joint
+Ward normalization. The omitted one-pass reference contribution, all mu
+sectors, frequency tails and continuum limit have not been supplied by this
+local coefficient calculation. Keep the known coefficients in the source
+budget and compute the missing state-dependent remainder; do not replace
+it by a selectable local constant or another unrelated spectral exercise.
+A physical current, Einstein--Maxwell backreaction and stability remain
+necessary. The present static geometry has a global time function and no
+backward-time path;13 September2027 to12 September2027 remains unproved.
+
 ## Connected frequency-window source contribution — increment132
 
 [Driver](../scripts/dihole_source_window.py), [saved results](../results/dihole_source_window_results.json),

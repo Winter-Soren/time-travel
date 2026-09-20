@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "tests": {
+    "independent_ricci": true,
+    "paired_EH_variation": true,
+    "paired_Maxwell_variation": true,
+    "quadrature_sensitivity": true,
+    "derivative_difference": true,
+    "finite_coefficients": true,
+    "input_hashes": true
+  },
+  "records": [
+    {
+      "order": 64,
+      "action_per_time": [
+        -0.21340362182149386,
+        39.602155176079314,
+        76.97311048300902,
+        1.8252593637264978
+      ],
+      "action_derivative": [
+        -0.3420299790416571,
+        -636.8446804353765,
+        -289.35080302704756,
+        7.259514794280545e-07
+      ],
+      "energy_derivative": [
+        0.3420299790416571,
+        636.8446804353765,
+        289.35080302704756,
+        -7.259514794280545e-07
+      ],
+      "charge_included_F2_energy_derivative": -4.537196746425341e-06,
+      "einstein_hilbert_identity_error": 5.943039393940808e-10,
+      "maxwell_identity_error": 0.0
+    },
+    {
+      "order": 96,
+      "action_per_time": [
+        -0.21340362182149852,
+        39.602155176079236,
+        76.97311048300902,
+        1.8252593637264964
+      ],
+      "action_derivative": [
+        -0.34202997844737654,
+        -636.8446804260416,
+        -289.3508030359867,
+        7.25951479427709e-07
+      ],
+      "energy_derivative": [
+        0.34202997844737654,
+        636.8446804260416,
+        289.3508030359867,
+        -7.25951479427709e-07
+      ],
+      "charge_included_F2_energy_derivative": -4.537196746423181e-06,
+      "einstein_hilbert_identity_error": 2.3037127760971998e-14,
+      "maxwell_identity_error": 0.0
+    },
+    {
+      "order": 128,
+      "action_per_time": [
+        -0.2134036218214863,
+        39.60215517607942,
+        76.9731104830087,
+        1.8252593637264958
+      ],
+      "action_derivative": [
+        -0.34202997844733246,
+        -636.8446804260368,
+        -289.35080303598477,
+        7.259514794273844e-07
+      ],
+      "energy_derivative": [
+        0.34202997844733246,
+        636.8446804260368,
+        289.35080303598477,
+        -7.259514794273844e-07
+      ],
+      "charge_included_F2_energy_derivative": -4.537196746421153e-06,
+      "einstein_hilbert_identity_error": 1.84297022087776e-14,
+      "maxwell_identity_error": 0.0
+    }
+  ],
+  "invariant_order": [
+    "R",
+    "R_squared",
+    "Ricci_ab_Ricci_up_ab",
+    "F_classical_squared"
+  ],
+  "convention": "Lorentzian action S=sum c_i integral sqrt(-g) I_i; static energy E=-S/T; the paired volume measure is invariant.",
+  "units": [
+    "R action derivative: D",
+    "quadratic-curvature action derivatives: D^-1",
+    "classical F_squared derivative: D; charge-included F_squared derivative: D^-1"
+  ],
+  "independent_ricci_errors": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "finite_difference_controls": [
+    {
+      "epsilon": 0.0001,
+      "relative_error": [
+        1.7835076748795586e-09,
+        1.6139704305732454e-07,
+        1.8401308716194266e-07,
+        2.178755231052662e-12
+      ]
+    },
+    {
+      "epsilon": 5e-05,
+      "relative_error": [
+        4.481869320116516e-10,
+        4.03496628265421e-08,
+        4.600217740791507e-08,
+        1.1519138428228078e-12
+      ]
+    }
+  ],
+  "relative_quadrature_changes": [
+    4.4075854077618715e-14,
+    7.497663607888807e-15,
+    6.679353300523301e-15,
+    3.246253770352106e-19
+  ],
+  "required_extra_source": -0.006804484661784576,
+  "scope": [
+    "Actual compact paired variation on both129 collars; unvaried bridge/exterior contribute zero to these local derivatives.",
+    "These are response coefficients of local action terms, not their measured couplings or the finite Dirac vacuum stress.",
+    "A common scheme shift changes quantum and gravitational/gauge bookkeeping together; it cannot create physical support.",
+    "Couplings and subtraction scale must be specified before an absolute source prediction.",
+    "Floating quadrature, complex-step and finite-difference checks are diagnostics, not interval enclosures.",
+    "No supporting current, stable material, formation mechanism or chronology change."
+  ],
+  "source_sha256": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+  "input_sha256": {
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "sources": [
+    "https://arxiv.org/abs/1210.4031",
+    "https://arxiv.org/abs/hep-th/0306138"
+  ],
+  "runtime_seconds": 3.4301985999918543
+}
