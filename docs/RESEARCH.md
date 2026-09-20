@@ -1,5 +1,209 @@
 # Reproduction and coupled-model iterations
 
+## A full meridional slab bound and the magnetic-null scaling — increment112
+
+The111 barrier was a statement about one transverse slice. This increment
+obtains a genuine two-dimensional **intrinsic slab transmission bound** in
+the fixed q=1, μ=1/2 sector, and identifies the two-dimensional local
+operator needed near the magnetic-null ring at large q. Neither result is
+the dressed upper-mouth to lower-mouth scattering matrix.
+
+### An all-radius, finite-width positive barrier
+
+[Slab certificate and algebra checks](../scripts/dihole_slab_bound.py),
+[saved results](../results/dihole_slab_bound_results.json). In the exact
+Q/D=1/5 exterior, define U=N²(Aφ−1/2)/ρ. The new interval calculation proves
+
+$$
+U(\rho,z)>\frac{0.18}{D}\quad
+\text{for every }\rho>0,\quad |z|\le D/4.
+$$
+
+This is not inferred from sampled minima. Set y=sin²θ and use the exact
+relations Δ=ρ²/y, r=M+√(k²+Δ), z²=(k²+Δ)(1−y). Since |z|≤D/4 and k=D/2,
+y≥3/4. On .05≤ρ/D≤8, adaptive40-digit interval arithmetic accepts2224
+rectangles with lower bound above.18;151 rectangles are rigorously outside
+the slab. The smallest accepted interval lower endpoint exceeds.18000698.
+The partition is reproducible and hashed; shared subdivision endpoints
+cover the initial rectangle without gaps.
+
+For 0<ρ≤.05D, partition3/4≤y≤1 into32 intervals and bound the nonsingular
+quantity Uρ, then divide by.05D. Every resulting lower bound exceeds2.347/D.
+For ρ≥8D, put R=8D, w0=(1−a²/R²)² and y0=3/4. With J=NΣ and
+K=J(Aφ−1/2),
+
+$$
+J\ge j_0r^4,\quad K\ge k_0r^4,\quad
+j_0=\frac{B^2y_0w_0}{4},\quad
+k_0=\frac{y_0B(2-BQ)w_0}{8Q}-\frac1{2R^2}-\frac{a^2}{2R^4}>0.
+$$
+
+Here r≥ρ≥R, Σ≤r² and ρ≤r, so U=JK/(Σ²ρ)≥j0k0R³>1.157/D.
+The positive Mra(1/Q−B) term was dropped conservatively in the K bound.
+These inner and outer estimates complete the unbounded radial domain.
+Also v=N/P=h²/Σ²<1, because Σ−h=2Mr−M²(1−cos²θ)>0.
+
+### Intrinsic quantum transmission without decoupling radial modes
+
+Let w=√v u be the canonical current trace, V=U/v and E=ξ+iκ, κ≥0.
+The exact equation in the slab is
+
+$$
+\partial_z w=-i\sigma_y\partial_\rho w+\sigma_x Vw
++\frac{i\xi-\kappa}{v}\sigma_z w.
+$$
+
+Define n=||w||², j=⟨w,σz w⟩ and s=⟨w,σx w⟩ in L²(dρ).
+Integration by parts on the regular inner-axis and radial graph domain gives
+
+$$
+j'=-2\kappa\int\frac{|w|^2}{v}\,d\rho,\qquad
+s'=2\int\left[V|w|^2+\frac\xi v w^\dagger\sigma_yw\right]d\rho
+\ge2m_\xi(z)n,
+\quad m_\xi=\inf_\rho\frac{U-|\xi|}{v}.
+$$
+
+The radial boundary terms −[w†σxw] and +[w†σzw] vanish by regularity
+and cutoff closure. The Pauli matrices also give n²≥j²+s². No radial
+eigenbasis, derivative-of-U estimate, or channel truncation enters.
+
+For incidence from the left slab plane with **zero incoming data at the
+right plane**, let I,R,T denote incoming, reflected and transmitted squared
+norms. At the right plane s=0 and j=T; throughout the slab j≥T. Integrating
+(asinh(s/T))'≥2mξ gives −sleft≥T sinh(2S), S=∫mξ dz. At the left plane
+|sleft|≤2√(IR) and R≤I−T. Consequently, with t=T/I,
+
+$$
+t^2\sinh^2(2S)\le4(1-t),\qquad
+\|T_{\rm slab}(E)\|\le\operatorname{sech}S.
+$$
+
+For reverse incidence, sleft=0, j≤−T and sright≥T sinh(2S), yielding
+the same bound. Zero transmission is the trivial limiting case. The
+all-radius certificate and v<1 imply, for |ξ|D<.18,
+
+$$
+\|T_{\rm slab}(\xi+i\kappa)\|
+\le\operatorname{sech}\!\left[\tfrac12(.18-|\xi|D)\right].
+$$
+
+On the imaginary-frequency axis this gives amplitude norm≤.99596362387252,
+squared norm≤.99194354007728. At imaginary frequency the latter is **not
+a probability**. The bound is weak and does not show that the barrier is
+opaque. A constant scalar barrier at zero real energy saturates the sech
+inequality; five noncommuting finite-channel controls check the Stokes
+identities and matrix transmission bounds independently. These controls
+are algebra tests, not simulated dihole scattering.
+
+Exterior reflection can inject incoming data at both slab faces and change
+the loaded transmission, including resonances. Thus this result cannot be
+substituted for the mouth-to-mouth return amplitude in a vacuum-energy
+formula. It covers only q=1, μ=1/2, not every azimuthal sector.
+This is an a priori estimate for regular solutions with the stated traces;
+it does not construct or prove existence of the full infinite-channel map.
+
+A separate estimate applies to a regular **raw exterior** solution at E=iκ,
+with only upper-mouth incoming data and genuine passive/decaying infinity.
+For f supported in the certified slab, the Γ=−σy identity implies
+||(H−iκ)f||≥δ||f||, δ=√(m²+κ²), m=.18/D. A cutoff χ vanishing at
+z=±a and equal to1 on |z|≤a−h, with |χ'|≤1/h, combined with weight
+exp[α(a−|z|)], gives
+
+$$
+\|u\|_{|z|\le d}\le
+\frac{v_*e^{-\alpha(a-d-h)}}{h(\delta-\alpha v_*)}\|u\|,
+\qquad d,h>0,\ d+h<a,\ 0<\alpha v_*<\delta.
+$$
+
+Here a=D/4 and v*=1 is a speed upper bound (not the null-ring value
+used below). The passive Green identity bounds ||u|| by the incoming norm
+divided by√(2κ). A second cutoff changing from1 below−d to0 above+d
+creates a source of norm at most v*||u||strip/(2d); applying the forced
+Green identity bounds its outgoing trace by that source norm divided by
+√(2κ). Consequently,
+
+$$
+\|S_{\rm lower,upper}(i\kappa)\|\le
+\min\!\left\{1,
+\frac{v_*^2e^{-\alpha(a-d-h)}}{4\kappa d h(\delta-\alpha v_*)}\right\}.
+$$
+
+The cutoffs avoid the mouths and preserve the global regular/passive
+domain; an arbitrary finite-box nonlocal boundary map is not enough.
+This still excludes additional sewn-throat feedback. At κD=.2 every
+admissible cutoff candidate exceeds exp(−δa)/(κa²δ)=277.9755, so the
+estimate gives only1. At κD=64, d=h=.025D and α=48/D give2.64562e−5;
+setting m=0 barely changes that number. The improvement is almost entirely
+imaginary-frequency absorption. This failure to obtain a useful low-frequency
+return bound is recorded, rather than interpreted as evidence of opacity.
+
+### The null ring has a two-dimensional mixing region
+
+[Local scaling calculation](../scripts/dihole_null_scaling.py),
+[results](../results/dihole_null_scaling_results.json), and
+[figure](../figures/dihole_null_scaling_progress.png). Write a=Aφ/q and
+expand at (ρ*,z=0), where a*=.7790141347869983. Define
+a2=aρρ/2>0, v*=N*/P* and b*=N*²/ρ*. The exact source-free Maxwell
+equation is ∂ρ[(N²/ρ)aρ]+∂z[(N²/ρ)az]=0. Since both first derivatives
+vanish at the null ring, azz=−aρρ there. Therefore
+
+$$
+a=a_*+a_2[(\rho-\rho_*)^2-z^2]+O(|\rho-\rho_*|+|z|)^3.
+$$
+
+The independently differentiated full field gives a2=.75550178545449/D²,
+v*=.50948165013929 and b*=.80954408282602/D. Balancing both kinetic
+derivatives with the quadratic angular term defines
+
+$$
+L_q=\left(\frac{v_*}{qb_*a_2}\right)^{1/3}
+=.94091599135825Dq^{-1/3},\qquad
+E_q=\frac{v_*}{L_q}=.54147411120501q^{1/3}/D,\qquad
+M_q=E_q/b_*=.66886303376438q^{1/3}.
+$$
+
+With s=(ρ−ρ*)/Lq, t=z/Lq and η=(μ−qa*)/Mq, the physical operator obeys
+the local expansion
+
+$$
+H/E_q=-i\sigma_x\partial_s-i\sigma_z\partial_t
++\sigma_y(\eta-s^2+t^2)+O(q^{-1/3}).
+$$
+
+The remainder describes coefficient convergence on bounded local boxes
+(or compactly supported H1 tests); it is not a global scattering-error
+bound. The axial derivative has the same leading order as the radial one:
+freezing z cannot resolve the scattering at this saddle. Kinetic connection
+terms from derivatives of v are retained in the actual comparison.
+
+Eleven focused checks pass. At q=1000,8000,64000, using actual nearest
+half-integer labels, sampled leading angular-mass errors are.167678,
+.0778952,.0371849. Including the first-order Taylor terms reduces these
+to.0188018,.00448759,.00108618. The81×81 and161×161 local grids are
+compared separately; neither establishes a continuum supremum. Independent
+70-digit differentiation checks the null Hessian and weighted Maxwell
+equation; finite differences check the kinetic connection coefficients.
+
+The mixing width is O(q^(1/3)) in μ and O(q^(−2/3)) in μ/q. This is a
+shrinking fraction of large-q labels, not a rigorously bounded correction
+to total return. The local scattering problem still needs its incoming and
+outgoing arms matched to the exterior. At q=1, Lq is comparable toD, so the
+large-q normal form is not a controlled replacement for the exact problem.
+At fixed G and gauge coupling, changing q also requires rescaling the
+physical charge radius; dimensionless fixed-Q/D comparisons are not a
+material-production prescription.
+
+Tunneling between Dirac zero-mass lines and failure to follow a single
+line are already studied in [Tudorovskiy and Katsnelson](https://arxiv.org/abs/1206.2244).
+That supports the relevance of mixing, not the numerical scattering matrix
+for this curved saddle. We do not claim discovery of that general mechanism.
+
+The next concrete missing object is the two-dimensional local scattering
+matrix and its connection to the actual exterior response. The slab bound
+provides a check for that calculation, not a substitute. Self-consistent
+vacuum stress, throat sewing and stability remain open; backward travel
+from13 September2027 to12 September2027 remains unproved.
+
 ## Actual return paths and a conditional support threshold — increment111
 
 [Calculation](../scripts/dihole_return_geometry.py), [saved checks](../results/dihole_return_geometry_results.json),

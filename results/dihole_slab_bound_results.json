@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "parameters": {
+    "Q_over_D": "1/5",
+    "D": 1,
+    "q": 1,
+    "mu": "1/2",
+    "slab_half_width_over_D": "1/4"
+  },
+  "certificate": {
+    "passed": true,
+    "interval_digits": 40,
+    "slab_half_width": ".25 D",
+    "certified_U_lower": ".18/D",
+    "compact_rho": [
+      ".05",
+      "8"
+    ],
+    "compact_boxes": 2224,
+    "outside_slab_boxes": 151,
+    "maximum_subdivision_depth": 20,
+    "compact_minimum_lower_interval": "[0.18000698782341175784859964769946887911915447, 0.18000698782341175784859964769946887911915447]",
+    "inner_minimum_lower": 2.3470175653472967,
+    "outer_lower_interval": "[1.1571283528394714330781400009236162808659098, 1.15712835283947143307814000092361628086671336]",
+    "accepted_partition_sha256": "2d494042a14264fb89cf0b4f3ce2c3151f24ab5abd9985e1db3f04575dc5e9be",
+    "coordinate_coverage": "rho>0, |z|<=.25; y=sin\u00b2theta>=3/4; exact Delta=rho\u00b2/y",
+    "speed_bound": "v=h\u00b2/Sigma\u00b2<1 since Sigma-h=2Mr-M\u00b2(1-cos\u00b2theta)>0"
+  },
+  "finite_channel_controls": [
+    {
+      "real_energy": 0.0,
+      "imaginary_energy": 0.0,
+      "transmission_norm": 0.9566046222448936,
+      "rigorous_intrinsic_bound": 0.9959636238725199,
+      "identity_error": 0.0
+    },
+    {
+      "real_energy": 0.0,
+      "imaginary_energy": 0.2,
+      "transmission_norm": 0.8170035478561615,
+      "rigorous_intrinsic_bound": 0.9959636238725199,
+      "identity_error": 0.0
+    },
+    {
+      "real_energy": 0.12,
+      "imaginary_energy": 0.0,
+      "transmission_norm": 0.9568002168018133,
+      "rigorous_intrinsic_bound": 0.9995501686882601,
+      "identity_error": 0.0
+    },
+    {
+      "real_energy": 0.12,
+      "imaginary_energy": 0.2,
+      "transmission_norm": 0.8171019577963486,
+      "rigorous_intrinsic_bound": 0.9995501686882601,
+      "identity_error": 0.0
+    },
+    {
+      "real_energy": 0.0,
+      "imaginary_energy": 2.0,
+      "transmission_norm": 0.3417366535788415,
+      "rigorous_intrinsic_bound": 0.9959636238725199,
+      "identity_error": 0.0
+    }
+  ],
+  "intrinsic_imaginary_frequency_amplitude_bound": 0.9959636238725199,
+  "intrinsic_imaginary_frequency_squared_norm_bound": 0.9919435400772824,
+  "raw_exterior_cutoff_diagnostics": {
+    "low_kappa": 0.2,
+    "lower_bound_on_every_cutoff_candidate": 277.97550665004803,
+    "resulting_low_kappa_norm_bound": 1.0,
+    "high_kappa": 64.0,
+    "high_cutoffs": {
+      "d": 0.025,
+      "h": 0.025,
+      "alpha": 48.0
+    },
+    "high_kappa_norm_bound": 2.6456119148494967e-05,
+    "zero_magnetic_gap_comparator": 2.645653769173975e-05,
+    "interpretation": "Low-frequency bound is vacuous; high-frequency suppression is almost entirely imaginary-frequency absorption."
+  },
+  "theorem": "In the q=1, mu=1/2 sector, for E=xi+i*kappa, kappa>=0 and |xi|<.18/D, ||T_slab||<=sech[.5*(.18-|xi|D)].",
+  "boundary_condition": "Only one slab face has prescribed incoming data; the other face has zero incoming characteristic data. Canonical current trace w=sqrt(v)u.",
+  "scope": [
+    "The all-radius slab gap and intrinsic norm estimate use the full two-dimensional meridional operator at fixed q=1, mu=1/2; no radial-mode decoupling is assumed. Other azimuthal sectors are not covered.",
+    "Transmission estimates are a priori for regular solutions with the stated boundary data; this calculation does not construct or prove existence of the full infinite-channel scattering map.",
+    "Finite-channel matrices check algebra; they are not the dihole scattering simulation.",
+    "Exterior reflections can feed both slab faces. This is not an upper-mouth to lower-mouth return bound after feedback.",
+    "The bound is weak: squared norm below about .992 does not show an opaque barrier or determine the actual return amplitude.",
+    "No vacuum stress, supported throat, stability or chronology-changing medium has been obtained."
+  ],
+  "source_sha256": "0c47e37bcaf49859663b7668d35a60bdbe9844d4dec34c8f5b2d00e35b25f947",
+  "input_sha256": {
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "sources": [
+    "https://arxiv.org/abs/hep-th/9906160"
+  ]
+}

@@ -58,6 +58,72 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Full meridional slab transmission bound and local null-ring equation — increment112
+- Previous goal turn PROGRESS:111 committed/pushed4e86f190add60b0308622309ef6bedadef3f77d5;
+  privateorigin and cleanworktree verified. Currentwork started clean.
+- NEW scripts/dihole_slab_bound.py/results proves U=N²(A-.5)/rho>.18/D
+  for allrho>0, |z|<=.25D, fixedQ/D=.2,q1,mu.5.40digit intervals:
+  2224acceptedcompact(rho,y)boxes,151outside-slabdiscarded,maxdepth20;
+  compactminimumlower>.18000698. Inner rho<=.05 bound>2.347/D;
+  outerrho>=8 analyticbound>1.157/D. v=h²/Sigma²<1 exact.
+- Actual2D Stokes proof, no radialchanneldecoupling: w=sqrt(v)u,
+  w_z=-i sigma_y w_rho+sigma_x(U/v)w+(i xi-kappa)sigma_z w/v.
+  j'=-2kappa int|w|²/v; s'>=2m_xi||w||²; ||w||^4>=j²+s².
+  One-sided incoming characteristicplanedata yield ||T_slab||<=sech(S),
+  S=int inf_rho[(U-|xi|)/v]dz. Atxi0, upperamplitude .9959636238725199,
+  squarednorm .9919435400772824. Imaginarysquarednorm is NOTprobability.
+  Reverseincidence samebound. Details/domainclosure in docs/RESEARCH.md.
+- A priori estimates assume a regular solution; infinitechannel existence is
+  notproved. Separate rawexterior cutoff/Green bound is vacuous at kappaD=.2:
+  EVERY admissiblecutoffcandidate>277.9755 so normbound1 only. AtkappaD64,
+  explicitd=h=.025D,alpha48/D gives2.64562e-5; m0 comparatorisalmostsame,
+  showing imaginaryfrequencyabsorption dominates. Formula/proof saved.
+- This is intrinsicfinite-slab map at ONE azimuthal sector. Exteriorfeedback
+  can inject bothfaces andresonate; no dressedmouthreturn bound follows.
+  Theboundisweak, not anopaque-barrierresult. Five noncommutingfinitechannel
+  algebra controls pass(identityerrors0), constantbarrier saturatessech.
+  Thesecontrolsarenot actualdiholescatteringsimulation.
+- Independent85digit audit confirmsouter1.15712835283947143307814 and
+  exactK/J expansion, rectanglecoverage, speed/Stokes signs andsech proof.
+  Clarifiedq1mu.5 metadata afteraudit; no remainingdefect.
+- NEW scripts/dihole_null_scaling.py/results:11PASS(~4.3s), independent
+  70digitfull-field derivatives verifyMaxwell and Hessian a_rr+a_zz=0.
+  a2=.75550178545449/D², v*=.50948165013929, b*=.80954408282602/D.
+  Lq=.94091599135825D q^-1/3, Eq=.54147411120501q^1/3/D,
+  Mq=.66886303376438q^1/3. Rescale s=(rho-rho*)/Lq,t=z/Lq,
+  eta=(mu-q a*)/Mq. LeadingH/Eq=-iSX d_s-iSZ d_t+SY(eta-s²+t²).
+  Bothderivatives enteratleadingorder; a1Dradialcalculation missesmixing.
+- Forq1000,8000,64000 actualnearesthalfintegermu779.5,6232.5,49856.5,
+  leadingmasserrors .167678,.0778952,.0371849; firstordercorrectionerrors
+  .0188018,.00448759,.00108618.81/161localgridcomparison2.244e-6.
+  Kinetic/connectionterms separatelychecked. Sampledlocalcoefficients,
+  NOT continuum suprema, globalspectrum orscattering-errorcertificate.
+  Atq1 layer~D andlargeqnormalform uncontrolled. FixedG/g requires
+  physicalgeometricrescaling asqchanges; not materialgeneration.
+- Source/data hashes slab0c47e37bcaf49859663b7668d35a60bdbe9844d4dec34c8f5b2d00e35b25f947
+  /39ee4935344fd3a52f0b700aa5bad7ffa23cecd32db3c76a531748a5d7933fa8;
+  null5d916e838936013852a0b3ac3c3644c96e2cb6d62a6b27f3168ff64da3561100
+  /17d5e29e123a344bcee69ee399691bd3e65364f96b18b71cd5b84daffa724b6c.
+  NewPNG/PDF figures/dihole_null_scaling_progress visuallyinspected.
+  Captionclarifiedmass-onlyplot; speed/connectionerrorsareseparate.
+- Layoutcheck72imports,511links,8historicalguards,14frozeninputs PASS.
+  All478prior sciencefiles and bothnotehistorysuffixes byte-identical;
+  allnewsource/inputhashesverified. A slowper-fileGit audit was interrupted
+  (no scientificprocess); replacedbyone ls-tree pluslocalblobhashes, PASS.
+  Preferbatchmetadata/localhashes forfuturepreservationchecks.
+  GoalACTIVE/unbudgeted; noquantumsource/backreaction/stability/medium;
+  13Sep2027->12Sep2027 remainsUNPROVED. Professorreadinessheartbeatactive;
+  noemailauthorized/sent andconcisenotestilltobeprepared.
+- NEXT: solve the2D local saddle scattering and match toactualexterior,
+  retainingradialinfinity/cut/feedback errors. Usefulcoordinates
+  u=(s+t)/sqrt2,vlocal=(s-t)/sqrt2 give mass eta-2u*vlocal.
+  Thefourasymptoticarms have narrowGaussiantransversemodes: twoincoming
+  onvlocal±, twooutgoingonu± (deriveprecisespin/phases beforeimplementation).
+  Ateta0 a unitaryreflectionu->-u withspin alpha_v symmetry shouldexchange
+  outputs forsinglevinput; withunitarity/completescattering thissuggests
+  equalpartition. Thisis an UNCHECKED next symmetrycontrol, notsavedresult.
+  Do notuse a scalar1Dbarrier orclassicalflux as the quantumreturnmap.
+
 ### Return topology, physical slice barrier and conditional quarter rule — increment111
 - Previous goal turn: VERIFIED WAIT on active migration task
   01a0bb2b-2d01-7201-b42c-5a1797a32bcf. The task explicitly released the
