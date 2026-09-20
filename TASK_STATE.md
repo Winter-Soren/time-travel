@@ -58,6 +58,75 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Missing-sector reference source and complete angular bases — increment100
+- Previous99 classified PROGRESS. Private publication verified at
+  fa45e78381f65e38474d1786735c5b29d0f12316; cleanHEAD revalidated before100.
+  Import complete; goal ACTIVE. No stable medium or backward travel proved.
+- coupled_misner owns NEW angular_reference_sum.py/results.json only.
+  Reuses exact99 mu=.5 coarse/fine/finer_mesh integrations; computes
+  mu=-.5,+1.5 with same panels1e-6..96,orders8/12 h=.05 andorder8 h=.035.
+  Process session34177 finished successfully; checkpoints retained during run.
+  This is three actual sectors, not the complete higher multiplet sum.
+- mass_audit owns NEW complete_angular_modes.py only: arbitrary integer
+  m=mu-.5,absolute n=max(1,abs(m))..N. Existing m0,+/-1 delegate exactly;
+  normalized pole-safe Jacobi partners for other m. One runnable basis
+  check, no exterior reruns. Root owns docs; figure work not yet assigned.
+- formation_updates read-only map: old raw B/P/Q selects rows[ns,N+ns],
+  cols[ns-1,N+ns] for m!=0; referenceS selects opposite [cols,rows].
+  Separate outer cutoff J>=N+1 prevents empty extreme-sector ports.
+  Existing DG/free outer/tail/opposite-Weyl APIs already support generalmu.
+  Fixed tail angular_order64 limits J<=63 unless explicitly increased.
+  P1 mesh only approximates high polar powers; retain Gram/mesh checks.
+- Full paired angular count=sum_n(2n+1)=N(N+2), one m0 zero.
+  No simple degeneracy multiplier applies to an exterior mixing n.
+- Completed local untruncated reference argument in RESEARCH100: full
+  selfadjoint radial direct sum contains C_c-infinity by Parseval and agrees
+  with geometric Dirac H; all graph powers give local smooth evolution.
+  Local Cauchy uniqueness before boundary returns fixes CAR kernel;
+  spectral sign+stationarity+bisolution give disjoint temporal WF cones,
+  so CAR fixes local Hadamard singularities. Independent audit agrees with
+  stated local conclusion. Not a theorem for finite matrices/connected state
+  or global reflected singularities. Recent source2511.10225 checked;
+  do not claim its fullAdS theorem directly certifies monopole product.
+- Reference exact positive mode count for integer Eell=L:
+  Nplus=2L^3/3+L^2-2L/3. Leading2/3 matches optical S3 Weyl coefficient;
+  this is a normalization/completeness check, not itself Hadamard proof.
+- Basis helper PASS: m=-8..8,N12; legacy3sector bitwise equality,
+  Gram1.43e-13,angularaction7.14e-12,independentLegendre4.22e-14.
+  Independent exact Rodrigues checks give unit norms/zero partner residual,
+  array agreement1.22e-15. No exterior integration uses new helper yet.
+  SHA d69178edd246b76b43a60d187d0c2be7b63fbada7d0fd14b68e0b126db6e7e55.
+- Actual3sector run474.44s,10 aggregate gates and7 controls per sector PASS.
+  Phasepi primary Q_pressure[+.0113707984954329,+.0799459900718742];
+  finer mesh[+.0105086624807472,+.0734687096959610]. Both null
+  combinations positive at both probes on both meshes. Earlier single
+  central negative does NOT survive even this partial enlarged sum.
+- Added mu=-.5[+.00678703084239877,+.028042378191879932];
+  mu=1.5[+.005618665798303169,+.02674328161765525]. Matched-order
+  mesh difference[-.0008621345556,-.0064772797972] (~7.6%,8.1%).
+  Phasepi sum of individual quadrature envelopes[1.51082e-9,5.87907e-10].
+  Missing angular/frequency tails and continuum error remain unbounded.
+- Independent integration audit: GL nodes/weights exact, panels1.39e-17,
+  totals2.78e-17,nulls5.16e-17,comparisons2.95e-17. Exact99reuse;
+  all16 input hashes match. Source and results frozen without post-run edits.
+  Source cecd6b2eeed1a856809441bbc464d719211859e261c9d21fe38d8d74c64b8867;
+  JSON6983995e8fffa3fa82161569a91f6b89bba3c5fc933ebc2dfaf5f2ed9e8f60b9.
+- Figure helper atplotter7463 rendered/inspected. All180 old figures and
+  434 other old tracked files unchanged; RESEARCH99-and-earlier exact.
+  Three AST checks and298 local links PASS. Removing only newhelper
+  restores prior plotter source. Plotter SHA
+  ddcee39f24be291ffe3560aaea7018f7245b39a8d17391e927045c347bedfa4f;
+  PNGe42c44520beea6f3c592ff9fa1c8685ccf44bef4454ef4dfd3fde1b4c02aa429;
+  PDF0254fbf624cf472dfd8ccd5e6befb356ebf974881bb465912984f34715f8b0ac.
+- NEXT: complete finite angular multiplets using new bases, explicit raw
+  B/S selectors above and independent outer cutoff J; validate old-sector
+  agreement at equal cutoffs before a bounded full-m source calculation.
+  Do not rerun99/100 matrices solely for plots/prose. The full-source sign,
+  connected continuum state, collar, Einstein response and stability remain
+  open. No new physics/material recipe or13Sep2027→12Sep2027 passage proved.
+- Publication pending at this saved checkpoint; final verified tool commit
+  supersedes it. No process remains active. Goal ACTIVE, not complete.
+
 ### Invariant product reference for the interior null source — increment99
 - Previous98 classified PROGRESS: committed/pushed/private/clean verified
   d66306e81dc0638125db5a40b0e92efc4f3548f1. Root revalidated current

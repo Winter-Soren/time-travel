@@ -7460,6 +7460,73 @@ def ads_reference_source_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def angular_reference_sum_progress():
+    """Show the cumulative, incomplete angular sum and its observed sensitivity."""
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'angular_reference_sum_results.json').read_text(encoding='utf-8'))
+    prior=json.loads((root/'ads_reference_source_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values())
+    sectors=d['sectors'];by_mu={r['mu']:r for r in sectors}
+    assert sorted(by_mu)==[-.5,.5,1.5] and all(r['controls']['passed'] for r in sectors)
+    recipes=('coarse','fine','finer_mesh');phase='pi'
+    assert not by_mu[.5]['computed_here'] and all(by_mu[m]['computed_here'] for m in (-.5,1.5))
+    for key in recipes:
+        assert by_mu[.5][key]==prior['integration'][key]
+        total=d['partial_sums'][key];pieces=[r[key] for r in sectors]
+        for row in pieces:
+            assert row['order']==total['order'] and row['edges']==total['edges']
+            for name in ('h','R','nmax','L','rho_c'):assert row['config'][name]==total['config'][name]
+            for panel in row['panels']:
+                weighted=np.asarray(panel['weights'])@np.asarray(panel['integrands'][phase]['pressure'])
+                assert np.allclose(weighted,panel['responses'][phase]['pressure'],rtol=1e-11,atol=0)
+        for field in ('pressure','shift','null_plus','null_minus'):
+            expected=np.sum([r['totals'][phase][field] for r in pieces],axis=0)
+            assert np.array_equal(expected,total['totals'][phase][field])
+    order=[.5,-.5,1.5]
+    cumulative={key:np.cumsum([by_mu[m][key]['totals'][phase]['pressure'] for m in order],axis=0) for key in recipes}
+    for key in recipes:
+        assert np.allclose(cumulative[key][-1],d['partial_sums'][key]['totals'][phase]['pressure'],rtol=8*np.finfo(float).eps,atol=0)
+    primary,refined=cumulative['fine'],cumulative['finer_mesh'];assert np.all(np.isfinite(np.r_[primary,refined]))
+    fine=d['partial_sums']['fine'];mesh=d['partial_sums']['finer_mesh'];coarse=d['partial_sums']['coarse']
+    assert coarse['order']==mesh['order']
+    matched=np.asarray(mesh['totals'][phase]['pressure'])-coarse['totals'][phase]['pressure']
+    assert np.array_equal(matched,d['comparisons']['matched_order_mesh_difference'][phase]['pressure'])
+    frequency=np.max(d['diagnostics']['sum_of_individual_quadrature_envelopes'][phase]['pressure'])
+    flipped=primary[0,0]<0 and refined[0,0]<0 and np.all(primary[1:,0]>0) and np.all(refined[1:,0]>0)
+    title='The central reference difference changes sign in the partial sum' if flipped else 'Source estimates as angular sectors are added'
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig,axes=plt.subplots(1,2,figsize=(13.5,7.5))
+    fig.subplots_adjust(left=.075,right=.965,bottom=.36,top=.76,wspace=.27)
+    fig.suptitle(title,fontsize=17.5,fontweight='bold',y=.965)
+    fig.text(.5,.908,'Phase π · Connected minus invariant AdS reference · Same prescribed core and endpoint connection',ha='center',fontsize=10.7,color='#475569')
+    x=np.arange(3);colors=['#007e87','#7951b0']
+    for j,(ax,name) in enumerate(zip(axes,('A. Central probe','B. Upper-side probe'))):
+        ax.axhline(0,color='#64748b',lw=1.2)
+        ax.plot(x,primary[:,j],'o-',lw=1.8,ms=6,color=colors[0],label=f"Primary: h/d={fine['config']['h']:g}, order {fine['order']}")
+        ax.plot(x,refined[:,j],'s--',lw=1.5,ms=5,color=colors[1],label=f"Finer mesh: h/d={mesh['config']['h']:g}, order {mesh['order']}")
+        for values,dy,color in ((primary[:,j],7,colors[0]),(refined[:,j],-15,colors[1])):
+            for xx,yy in zip(x,values):
+                offset=18 if dy>0 and yy<0 else dy
+                ax.annotate(f'{yy:+.6f}',(xx,yy),xytext=(0,offset),textcoords='offset points',ha='center',
+                            va='bottom' if dy>0 else 'top',color=color,fontsize=9.1)
+        ax.set_title(name,fontsize=12,pad=14)
+        ax.set_xticks(x,['μ = +½ only','add μ = −½','add μ = +3/2\n(three sectors)'])
+        ax.set_xlim(-.30,2.30);ax.margins(y=.32)
+        ax.set_ylabel('Weighted energy + radial-pressure difference',fontsize=9.6)
+        ax.spines[['top','right']].set_visible(False);ax.grid(axis='y',alpha=.15);ax.set_axisbelow(True)
+    handles,labels=axes[0].get_legend_handles_labels()
+    fig.legend(handles,labels,loc='upper center',bbox_to_anchor=(.52,.856),ncol=2,frameon=False,fontsize=10)
+    fig.text(.5,.275,'Each point adds an explicitly computed sector; no angular degeneracy multiplier is used.',ha='center',fontsize=10.3,color='#475569')
+    fig.text(.05,.220,f"ℏ = c = d = 1; finite window {fine['edges'][0]:g} ≤ κd ≤ {fine['edges'][-1]:g}. Both Weyl components are retained.",fontsize=10,color='#475569')
+    fig.text(.05,.170,f'Final sum: matched-order mesh changes {abs(matched[0]):.3g} (central), {abs(matched[1]):.3g} (upper); frequency-panel sensitivity {frequency:.2g}.',fontsize=9.8,color='#475569')
+    fig.text(.05,.119,'These are numerical sensitivities, not certified error bounds. Three sectors do not complete the angular source or its supporting geometry.',fontsize=9.8,color='#475569')
+    fig.text(.05,.068,'A reference-relative partial sum does not establish absolute NEC violation, a physical junction or stability.',fontsize=9.9,color='#475569')
+    fig.text(.05,.024,'No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',fontsize=10.5,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'angular_reference_sum_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

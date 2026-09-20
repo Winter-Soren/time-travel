@@ -8,10 +8,11 @@ A computational research workbench for testing proposed chronology-changing geom
 
 The present direction tests whether charged fermions actually return through the magnetic exterior used in an idealized traversable-wormhole construction. A field-line picture alone cannot determine the spinor's return amplitude, phase, or quantum stress.
 
-A connected **q=1** model supplies a spectral determinant on a prescribed throat and exterior. Compact metric variations probe energy plus radial pressure and energy flow inside it. The current calculation compares the connected state with an invariant AdS reference vacuum, whose complete radial-null stress vanishes by symmetry. This supplies a route beyond phase contrasts, but its absolute-stress interpretation requires admissible full field states and controlled angular, frequency and spatial limits. The finite calculation remains a reference-relative diagnostic. Physical junctions, a self-consistent supporting geometry and stability are missing. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
+A connected **q=1** model supplies a spectral determinant on a prescribed throat and exterior. Compact metric variations probe energy plus radial pressure and energy flow inside it, compared with an invariant AdS reference vacuum. The current calculation sums three actual azimuthal sectors and tests whether the earlier single-sector negative response survives. A new angular basis covers the remaining orientations needed for complete finite multiplets; those additional exterior/source responses have not yet been computed. A local admissibility argument is supplied for the full invariant reference. The connected state, complete angular/frequency limits, physical junctions, self-consistent geometry and stability remain unresolved. The earlier smooth, large-flux source and collar remain a separate approximation whose assumed exterior must be completed.
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Three-sector reference sum](angular_reference_sum.py) · [results](angular_reference_sum_results.json) · [complete angular bases](complete_angular_modes.py) | Explicit added-sector integrals, exact reuse of the original sector, matched quadrature/spatial comparisons, and independently checked general angular bases | Tests the sign after adding field content; the complete bases are ready, but the full coupled angular sum and physical supporting geometry remain open |
 | [Invariant interior reference](ads_reference_source.py) · [results](ads_reference_source_results.json) | Normalizable AdS caps, the paired massless Dirac domain, exact ground modes, common-core determinant subtraction and independent numerical refinements | A reference-relative interior source diagnostic; the complete angular sum, local state admissibility, physical collar and gravitational response remain open |
 | [Angular-sector extension](azimuthal_source.py) · [local modes](azimuthal_modes.py) · [results](azimuthal_source_results.json) | Angular eigenmodes and pole conditions, a specified reflected spin/gauge connection, actual sector and chirality sums, separate mesh/frequency controls | The change caused by a geometric endpoint choice and two added sectors; higher angular multiplets, absolute stress and physical throat support remain open |
 | [Opposite-chirality matching](dirac_sewing_audit.py) · [results](dirac_sewing_audit_results.json) | Independently reversed bulk transport, swapped physical boundary bases, actual left response versus a separate adjoint control, and mesh/frequency refinements | A computed two-chirality phase contrast in the retained angular sector; no complete Dirac stress, absolute supporting source or stability proof |
@@ -35,9 +36,9 @@ A connected **q=1** model supplies a spectral determinant on a prescribed throat
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
 
-![Invariant reference and computed partial interior source](ads_reference_source_progress.png)
+![Central sign reversal after adding field sectors](angular_reference_sum_progress.png)
 
-*The retained phase-pi sector gives a slightly negative central probe and a positive upper-side probe. Both signs persist on the two meshes tested; the central magnitude changes by about 38%. All 21 numerical checks pass, but the missing angular content and continuum limit prevent a full supporting-source conclusion. Earlier [geometric endpoint connection](azimuthal_source_progress.png), [chirality pairing](dirac_sewing_progress.png), [throat probes](throat_null_progress.png), and [junction-support requirement](curved_junction_progress.png) remain available.*
+*Adding the two computed sectors changes the central phase-pi response from negative to positive. The central and upper-side three-sector sums remain positive on both meshes, with observed mesh changes about 7.6% and 8.1%. This invalidates using the earlier single-sector value as a net opening source. The complete field sum and continuum limit remain unresolved. Earlier [invariant-reference comparison](ads_reference_source_progress.png), [geometric endpoint connection](azimuthal_source_progress.png), and [junction-support requirement](curved_junction_progress.png) remain available.*
 
 ## Quickstart
 
@@ -62,7 +63,15 @@ Start with a small symbolic check that does not rewrite results:
 
 Expected output: `['0', '0']`. The function also asserts that both operator residuals vanish.
 
-The current interior-reference calculation can be reproduced with:
+The current three-sector reference sum can be reproduced with:
+
+```powershell
+.\.venv\Scripts\python.exe -B -W error -X utf8 angular_reference_sum.py
+```
+
+It reuses the saved mu=1/2 quadratures exactly and computes the two added sectors with matching geometry, nodes and mesh recipes. It saves per-sector checkpoints and observed uncertainty separately from acceptance checks. The independent general angular basis check is `complete_angular_modes.py`; passing it does not complete the exterior/source sum.
+
+The preceding interior-reference calculation can be reproduced with:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -W error -X utf8 ads_reference_source.py

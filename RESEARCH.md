@@ -1,5 +1,176 @@
 # Reproduction and coupled-model iterations
 
+## Angular completion and the reference-state domain — increment100
+
+The small negative central response in increment99 came from one
+azimuthal sector. It cannot be assigned to the full field. This increment
+integrates the two other already-checked sectors with the same reference,
+frequency panels and spatial meshes, while reusing the saved mu=1/2
+integrals exactly. A separate analytic extension supplies the angular
+bases needed for complete finite multiplets. The three-sector integral
+and the complete-multiplet basis are distinct deliverables; the latter
+has not yet been substituted into a full exterior/source calculation.
+
+### The added sectors reverse the central sign
+
+The [three-sector run](angular_reference_sum.py) completed in 474.44s.
+All ten aggregate gates and seven controls for each sector pass. It
+reuses all three saved mu=1/2 quadrature records exactly; no original
+sector solve was repeated. The two new sectors use h=.05 at orders
+8/12 and h=.035 at order8, with the same eight panels over
+kappa=[1e-6,96]. The [saved evidence](angular_reference_sum_results.json)
+records per-sector panels, totals, diagnostics and the actual sums.
+
+| Phase-pi contribution | Central, primary | Upper, primary | Central, finer mesh | Upper, finer mesh |
+| --- | ---: | ---: | ---: | ---: |
+| mu=+1/2, reused | -0.0010348981 | +0.0251603303 | -0.0014261329 | +0.0227997887 |
+| mu=-1/2, new | +0.0067870308 | +0.0280423782 | +0.0065459504 | +0.0260109353 |
+| mu=+3/2, new | +0.0056186658 | +0.0267432816 | +0.0053888450 | +0.0246579857 |
+| Actual three-sector sum | +0.0113707985 | +0.0799459901 | +0.0105086625 | +0.0734687097 |
+
+These are smeared connected-minus-reference pressure responses in the
+existing hbar=c=d=1 model units, without volume division. Primary means
+h=.05/order12. The matched order8 mesh change in the sum is
+[-0.0008621346,-0.0064772798], about 7.6% and 8.1% of the coarser
+magnitudes. The phase-pi sum of individual quadrature panel envelopes
+is [1.51082e-9,5.87907e-10]. Thus spatial sensitivity dominates that
+frequency-integration comparison; no continuum error bound is claimed.
+
+The primary summed shift is [-4.30483e-11,-1.65571e-11], so both null
+combinations are positive at both probes on each tested mesh as well.
+Phase0 has primary pressure [+0.1737746616,+0.1427215348], with
+finer-mesh values [+0.1735355577,+0.1364859350]. Its conservative
+quadrature envelope reaches 1.00061e-6, still below the separately
+declared acceptance target. The last [48,96] panel contributes
+[1.32627e-11,6.92375e-6] to phase pi. Omitted low/high frequency tails,
+the missing angular sectors and continuum error remain unbounded.
+
+The sign reversal is the substantive result: the original central
+negative value does not represent even this enlarged partial field
+sum. It cannot be used as the net source for an opening throat. The
+three sectors complete n=1 but only three orientations of higher n;
+this result therefore does not establish the full field's NEC sign
+or exclude every state or geometry. Complete angular multiplets and
+their spatial refinement are the next source test. The physical collar,
+connected continuum state and gravitational response are still required.
+
+### General angular bases, with absolute channel labels
+
+For q=1 let m=mu-1/2, s=abs(m), n=max(1,s),...,N, and lambda_n=
+sqrt[n(n+1)]. The [monopole spectrum](https://arxiv.org/pdf/hep-th/0206054)
+has 2n+1 angular orientations at each nonzero n and one chiral zero
+mode. The explicit normalized partners below extend our existing gauge
+and phase convention. For s>=1, j=n-s and c=cos(theta), define
+\[
+ C_{ns}^2={ (2n+1)(n-s)!(n+s)!\over 2^{2s+1}(n!)^2},\qquad
+ f_{ns}=C_{ns}\sin^s\theta\,P_j^{(s,s)}(c),
+\]
+\[
+ g_{+s}={nC_{ns}\over\lambda_n}\sin^{s-1}\theta(1-c)
+              P_j^{(s+1,s-1)}(c),\qquad
+ g_{-s}=-{nC_{ns}\over\lambda_n}\sin^{s-1}\theta(1+c)
+              P_j^{(s-1,s+1)}(c).
+\]
+Both scalar partners have unit norm in sin(theta)dtheta. They obey
+g_m=-(f'-m*csc(theta)*f)/lambda_n. Use 1-c=2sin^2(theta/2) and
+1+c=2cos^2(theta/2) to avoid pole cancellation. The lower mouth uses
+g_-m, with the existing radial characteristic vectors and phases.
+For s>=2 both scalar partners vanish exactly at both poles. The
+reflected-frame cross-transmission parity remains (-1)^(n+s).
+
+The new [basis helper](complete_angular_modes.py) delegates m=0,+/-1
+to the existing functions bit for bit. Its focused check covers m=-8..8
+through n=12: independent associated-Legendre agreement 4.22e-14,
+weighted Gram error 1.43e-13, angular-action error 7.14e-12, reflection
+error 2.63e-14 and pole-limit error 2.49e-14. These are angular checks,
+not a physical junction or full-source test.
+
+A complete mouth cutoff uses every m=-N,...,N, with a total of
+sum_n(2n+1)=N(N+2) paired labels and the single m=0 zero. The free
+outer onset is instead abs(mu)+1/2; a common outer cutoff J>=N+1
+keeps an outgoing channel even at m=N. Reusing J=N would leave the
+extreme-sector port empty; current helpers reject that choice.
+J>=N+1 is a channel-coverage
+condition, not evidence of outer-cutoff convergence.
+
+For m!=0, obtain the retained throat map from the existing full raw
+matrix by rows [n,N+n] and columns [n-1,N+n], applying the phase,
+shift and parity before slicing. The reference/environment map has
+the opposite direction and therefore uses the reversed selectors.
+The existing bulk, tail and opposite-Weyl equations need no change.
+The current fixed tail quadrature has angular_order=64, so J must stay
+below 64 unless that quadrature is increased. High polar powers also
+need spatial refinement; piecewise-linear elements do not encode them
+exactly.
+
+### Local admissibility of the full invariant reference
+
+The missing reference-domain argument can be made local. The following
+is our application of standard spectral and microlocal reasoning to the
+specified untruncated product reference, not a claim that a published
+theorem already covers this model. Use the universal cover with t in R,
+the fixed smooth monopole bundle on the interior S2, and type-I radial
+domains. [Serrano Blanco](https://arxiv.org/pdf/2208.08252) supplies the
+self-adjoint radial problems and invariant positive-frequency splitting.
+
+In the complete angular decomposition the canonical Hamiltonian is the
+direct sum of these radial operators, with graph domain
+\[
+ D(H_{\rm ref})=\{(u_a):u_a\in D(H_a),\quad
+          \sum_a(\|u_a\|^2+\|H_a u_a\|^2)<\infty\}.
+\]
+Here a includes every angular orientation and both radial Dirac copies
+for n>0; the massless full-Dirac channel is included once. The direct
+sum is self-adjoint. For any smooth spinor compactly supported in the
+interior, all radial coefficients vanish near the endpoints and satisfy
+the endpoint domains. Unitary angular completeness and Parseval give
+sum_a||H_a u_a||^2=||H_geometric u||^2<infinity. Thus this domain contains
+C_c^infinity and agrees there with the geometric Dirac differential
+operator. Interior elliptic regularity applies to graph-domain vectors.
+
+Its dimensionless frequencies are +/-[sqrt(n(n+1))+1/2+j], j>=0.
+Positive-frequency multiplicities are 1 at n=0 and 2(2n+1) at n>0.
+For integer L>=1 the exact count below or at E*ell=L is
+\[
+ \mathcal N_+(L)=L+2\sum_{n=1}^{L-1}(2n+1)(L-n)
+ ={2\over3}L^3+L^2-{2\over3}L.
+\]
+The leading coefficient agrees with two positive Dirac polarizations
+on the optical spatial volume 2*pi^2*ell^3. This checks completeness
+and normalization; it does not itself prove a Hadamard condition.
+
+The local argument uses four additional facts. First, compact-interior
+elliptic estimates bound derivatives of normalized eigenfunctions by
+powers of their frequency. Together with the polynomial count, the
+positive and negative spectral sums define distributional bisolutions.
+Second, time-translation invariance fixes tau_x+tau_y=0 for their
+wavefront covectors. The Dirac characteristic equation then excludes
+zero temporal covectors: a nonzero purely spatial covector cannot be
+null in the static interior. Third, spectral positivity restricts the
+two sums to opposite temporal wavefront cones.
+
+Fourth, compact smooth initial data lie in all powers of the graph
+domain. Their unitary evolution is smooth locally and solves the same
+Dirac equation as a smooth boundary-free extension. A local energy
+estimate and Cauchy uniqueness identify the two evolutions in a causal
+diamond before a signal can return from an endpoint. The local CAR
+kernel is consequently the ordinary causal Dirac kernel. Its known
+Hadamard wavefront set splits between the two disjoint temporal cones;
+singularities of the two spectral sums cannot cancel across those
+cones. This fixes the local Hadamard wavefront set of each sum.
+
+The conclusion is local admissibility of the full type-I invariant
+reference on compact interior diamonds. It is not global control of
+reflected singularities, nor a proof for the finite numerical matrices
+or the connected state. The spectral/microlocal framework is discussed
+by [Sahlmann and Verch](https://arxiv.org/pdf/math-ph/0002021), whose
+global-hyperbolicity hypotheses must not be silently applied to AdS.
+Recent [Dappiaggi and Parpinel](https://arxiv.org/pdf/2511.10225),
+published in June2026, likewise distinguish local state questions from
+global boundary propagation. Their full-AdS models do not directly
+certify our monopole product. The argument above supplies the explicit
+interior operator and local-uniqueness steps instead.
+
 ## An invariant product reference for the interior null source — increment99
 
 An absolute source across a varying-radius collar is still unspecified.

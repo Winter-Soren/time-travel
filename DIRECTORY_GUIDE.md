@@ -11,6 +11,7 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Three-sector reference sum and complete angular bases | [angular_reference_sum.py](angular_reference_sum.py), [saved results](angular_reference_sum_results.json), [complete_angular_modes.py](complete_angular_modes.py), [figure](angular_reference_sum_progress.png) |
 | Invariant AdS reference and interior source | [ads_reference_source.py](ads_reference_source.py), [saved results](ads_reference_source_results.json), [figure](ads_reference_source_progress.png) |
 | Geometric angular connection and missing sectors | [azimuthal_modes.py](azimuthal_modes.py), [connected source calculation](azimuthal_source.py), [saved results](azimuthal_source_results.json), [figure](azimuthal_source_progress.png) |
 | Opposite-chirality boundary matching and combined response | [dirac_sewing_audit.py](dirac_sewing_audit.py), [saved physical and adjoint controls](dirac_sewing_audit_results.json), [figure](dirac_sewing_progress.png) |
