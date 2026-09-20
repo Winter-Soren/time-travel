@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "controls": {
+    "passed": true,
+    "nonnormal_pointwise_cases": 48,
+    "maximum_upper_bound_violation": 0.0,
+    "nilpotent_actual": -0.0,
+    "nilpotent_upper": 0.040330383469070016,
+    "delayed_derivative_error": 2.8638896809596304e-13,
+    "scalar_force_integral_error": 1.3877787807814457e-17
+  },
+  "classical_fraction_used_only_as_unproved_proxy": 0.22098586521300168,
+  "ideal_all_channel_anomaly_threshold_per_q": 0.041666666666666664,
+  "critical_optimally_phased_residual_amplitude": 0.030867512865701576,
+  "corresponding_constant_vertex_probability": 0.0009528033505142523,
+  "examples": [
+    {
+      "residual_amplitude": 0.0,
+      "phase": 0.0,
+      "constant_vertex_return_probability": 0.0,
+      "scaled_return_force_per_q": 0.03683097753550028,
+      "force_margin_per_q": -0.004835689131166387,
+      "optimistic_stationary_length_for_C_over_q_1": null
+    },
+    {
+      "residual_amplitude": 0.01,
+      "phase": 0.0,
+      "constant_vertex_return_probability": 0.0001,
+      "scaled_return_force_per_q": 0.038405661130109084,
+      "force_margin_per_q": -0.0032610055365575805,
+      "optimistic_stationary_length_for_C_over_q_1": null
+    },
+    {
+      "residual_amplitude": 0.03,
+      "phase": 0.0,
+      "constant_vertex_return_probability": 0.0009,
+      "scaled_return_force_per_q": 0.041531762545141154,
+      "force_margin_per_q": -0.00013490412152551007,
+      "optimistic_stationary_length_for_C_over_q_1": null
+    },
+    {
+      "residual_amplitude": 0.04,
+      "phase": 0.0,
+      "constant_vertex_return_probability": 0.0016,
+      "scaled_return_force_per_q": 0.04308338170535787,
+      "force_margin_per_q": 0.001416715038691209,
+      "optimistic_stationary_length_for_C_over_q_1": 1411.7165028809477
+    },
+    {
+      "residual_amplitude": 0.04,
+      "phase": 3.141592653589793,
+      "constant_vertex_return_probability": 0.0016,
+      "scaled_return_force_per_q": 0.030452233799345044,
+      "force_margin_per_q": -0.01121443286732162,
+      "optimistic_stationary_length_for_C_over_q_1": null
+    }
+  ],
+  "matrix_bound": "-Re Tr[U(I-U)^-1] <= sum sigma_j(U)/(1+sigma_j(U)), ||U||<1; nonnormal matrices allowed.",
+  "force": "l^2 E_return_prime = -(2/pi^2) integral_0^infinity x Re Tr[U(I-U)^-1] dx, U=exp(-x) R(i x/(pi*l)), with R fixed under l variation.",
+  "varying_exterior_term": "If R=R_l, add (2*l^2/pi) integral exp(-pi*l*kappa) Re Tr[(I-U)^-1 partial_l R] d kappa. Contractivity alone does not bound this term.",
+  "envelope": "If sigma_j(R(i*kappa))<=r_j exp(-kappa*L_j), then l^2 E_return_prime<=sum_j g(r_j)*(pi*l/(pi*l+L_j))^2; g(r)=-2 Li2(-r)/pi^2.",
+  "rejection": "Within the separately justified E=C/l^2+q/(24*l)+E_return family, an all-l upper bound <=q/24 excludes stationarity for C>0. All other l-dependent energy terms must be included.",
+  "normalization": "Each dimension represents one Dirac channel: two conjugate complex chiral symmetric-sea contributions. The matrix includes spin/Wilson holonomy.",
+  "assumptions": [
+    "A valid relative determinant and contour rotation for a specified common self-adjoint system/state/subtraction.",
+    "Canonical Euclidean return contraction, fixed exterior and channel identification under the length variation, and enough integrability to differentiate.",
+    "For infinite channel systems: trace-class or appropriate regulated relative determinant plus uniform summable bounds. Finite matrix checks do not establish this.",
+    "The q/(24*l) anomaly and C/l^2 classical term require their own common-geometry derivation; a fixed-boundary cylinder does not automatically supply them."
+  ],
+  "limitations": [
+    "No actual balanced-dihole quantum return operator or uniform singular-value envelope has been calculated.",
+    "The critical amplitude uses an optimistic zero-delay, perfectly aligned phase model and an unproved classical-flux channel proxy.",
+    "The displayed probability is only r^2 for that specified constant vertex. General real-axis probabilities do not determine imaginary-axis return or vacuum force.",
+    "Exceeding the upper bound threshold does not prove a minimum; an illustrative minimum is confined to its one-coordinate toy energy.",
+    "No absolute four-dimensional stress, common throat/exterior solution, gravitational stability, material recipe, or backward passage follows."
+  ],
+  "sources": [
+    "https://doi.org/10.1073/pnas.35.7.408",
+    "https://arxiv.org/abs/1606.07834",
+    "https://arxiv.org/abs/0711.2395",
+    "https://arxiv.org/abs/1807.04726"
+  ],
+  "source_sha256": "5d52da9e7a1c1b24c286e0bf4052708edef22ff61d058e46614d4b30e9b75719",
+  "input_sha256": {
+    "scattering_vacuum.py": "9ca7696e9cd64bf2da1b72d826807940135a28c5f49742111e6bc6f57a3d2aef",
+    "dihole_return_geometry_results.json": "7f39c4cd67628961a1c8622fb67638b1247e59941bbae594feae64c0496b34bc",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "runtime_seconds": 0.04226300003938377
+}

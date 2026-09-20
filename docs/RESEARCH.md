@@ -1,5 +1,280 @@
 # Reproduction and coupled-model iterations
 
+## Phase-sensitive return bound and a common support geometry — increment129
+
+[Return-force calculation](../scripts/quantum_return_support.py),
+[results](../results/quantum_return_support_results.json), and
+[figure](../figures/quantum_return_support_progress.png).
+This calculation reuses the existing loop/reservoir normalization. It does
+not repeat the box-spectrum program. The result is an analytic upper bound
+on a specified return contribution, plus a concrete correction to the
+geometry assumptions needed to use any support test.
+
+### Return force with phases retained
+
+Suppose a common self-adjoint system, state and relative subtraction justify
+
+$$
+E_{\rm ret}(\ell)=-\frac2\pi\int_0^\infty
+\operatorname{Re}\log\det[I-e^{-\pi\ell\kappa}R(i\kappa)]\,d\kappa.
+$$
+
+Each matrix dimension counts one Dirac channel, including its two conjugate
+chiral contributions. The spin/Wilson phase is inside R; an ideal
+antiperiodic return is R=-I. Assume a fixed exterior under this length
+variation, a canonical Euclidean contraction, and integrability sufficient
+to differentiate. With U=e^{-pi ell kappa}R,
+
+$$
+\mathcal F_{\rm ret}=\ell^2E'_{\rm ret}
+=-2\ell^2\int_0^\infty\kappa\operatorname{Re}
+\operatorname{Tr}[U(I-U)^{-1}]\,d\kappa.
+$$
+
+This is a relative interaction force; the expression alone is not the
+absolute four-dimensional stress. The earlier normalization checks and
+[Dirac graph determinant foundation](https://arxiv.org/abs/1606.07834)
+are reused. [Scattering determinants](https://arxiv.org/abs/0711.2395)
+supply the general framework, not a theorem validating our dihole operator.
+
+For any finite matrix with norm below one, including a nonnormal matrix,
+
+$$
+-\operatorname{Re}\operatorname{Tr}[U(I-U)^{-1}]
+\le\sum_j\frac{\sigma_j(U)}{1+\sigma_j(U)}.
+$$
+
+For a scalar z of modulus a<1, the difference between the right side and
+-Re[z/(1-z)] equals
+
+$$
+\frac{a(1-a)(1+\cos\arg z)}{(1+a)|1-z|^2}\ge0.
+$$
+
+The trace of this analytic matrix function is the sum over eigenvalues.
+Eigenvalue moduli are log-majorized by singular values: the partial-product
+inequalities follow by applying spectral radius <= operator norm to exterior
+powers, with equality of full products from the determinant. Applying the
+increasing convex function h(t)=e^t/(1+e^t), t<0, yields the stated bound.
+Zero values follow by continuity. This uses the classical
+[Weyl inequality](https://pmc.ncbi.nlm.nih.gov/articles/PMC1063049/), not a new
+matrix law or a new physical principle.
+
+If ordered singular values obey uniform envelopes
+sigma_j(R(i kappa)) <= r_j exp(-kappa L_j), with 0<=r_j<=1 and L_j>=0, then
+
+$$
+\mathcal F_{\rm ret}(\ell)\le
+\sum_j g(r_j)\left(\frac{\pi\ell}{\pi\ell+L_j}\right)^2,
+\qquad g(r)=-\frac2{\pi^2}\operatorname{Li}_2(-r).
+$$
+
+Here g(1)=1/6. Plain contractivity for q channels gives only q/6, so it
+cannot by itself exclude support at the ideal q/24 anomaly threshold.
+A uniform rank bound r would give r/6, but open channels
+need not have exactly zero return. Neither classical flux nor real-axis
+return probabilities supplies the required Euclidean envelopes.
+Infinite-channel use additionally needs trace-class/relative-determinant
+control and uniformly summable bounds.
+
+When the exterior changes with ell, an additional term is mandatory:
+
+$$
+\Delta\mathcal F=\frac{2\ell^2}{\pi}\int_0^\infty
+ e^{-\pi\ell\kappa}\operatorname{Re}\operatorname{Tr}
+ [(I-U)^{-1}\partial_\ell R]\,d\kappa.
+$$
+
+Its absolute value is bounded by replacing the trace with
+||partial_ell R||_1/(1-e^{-pi ell kappa}||R||), when that integral exists.
+Contractivity at each ell does not bound its ell derivative.
+
+### A decision-relevant sensitivity, not a physical return measurement
+
+Retain the unproved classical-flux proxy f=0.22098586521300168 solely to
+compare with128. Give that fraction perfect antiperiodic returns and let
+all nominally open channels have the same optimally phased amplitude r,
+zero delay. The return-force coefficient is f/6+(1-f)g(r).
+It crosses1/24 at r=0.030867512865701576, approximately3.087% amplitude.
+The associated probability0.00095280335 belongs only to this specified
+constant-vertex benchmark. General probabilities cannot be substituted.
+
+At r=.04, the coefficient is0.04308338 with the favorable phase, but
+0.03045223 with opposite residual-channel phase; the threshold is1/24.
+Thus the channel deficit from128 cannot exclude support by itself. The
+actual phase-dependent return matrix, its frequency dependence and delay
+are decisive. Crossing this optimistic threshold does not establish the
+actual source, a stable minimum, or a physical throat.
+
+The strict driver passes48 nonnormal pointwise controls, a nilpotent
+counterexample to interpreting singular values as actual force, and a
+length-derivative check against the reused loop energy. Independent agent
+checks cover480 additional nonnormal cases and a high-precision determinant
+integral. Numerical diagnostics are not interval certificates. No actual
+dihole scattering calculation is claimed.
+
+### The support functional must use the same geometry
+
+The saved round AdS2 x S2 throat cannot be directly attached to the current
+finite dihole cut. At epsilon=.05, its actual inner and outer pole lapses are
+0.19543647655576774 and0.19603355872976698. Their positive difference has the
+exact form
+
+$$
+N_+-N_-=
+\frac{M\epsilon^3(2+M\epsilon/k^2)}{\Sigma_+\Sigma_-},\quad
+\Sigma_+=(M+k+\epsilon)^2-a_g^2,\quad
+\Sigma_-=(M+k)^2-a_g^2(1-\epsilon/k)^2.
+$$
+
+A constant clock rescaling cannot remove this angular variation. Moreover,
+[MMP sections5.2–5.3](https://arxiv.org/pdf/1807.04726) derive C/ell^2 from
+a near-extremal mass family and q/(24ell) from the AdS2 anomaly. These are
+not automatically the gravitational and anomaly energies of a fixed-exterior
+cylinder stretch. Consequently the quarter threshold remains conditional;
+it is not the complete support equation for our balanced dihole.
+
+### Required null source on a bridge preserving the actual cuts
+
+[Matched-germ geometry calculation](../scripts/dihole_stretched_collar.py),
+[results](../results/dihole_stretched_collar_results.json), and
+[profile and required source](../figures/dihole_stretched_collar_progress.png).
+
+Keep the exact upper-mouth fields in local coordinates
+rho=R sin(theta), z=k+R cos(theta), and use their reflected lower-mouth germ.
+A smooth bridge metric and magnetic connection are prescribed by
+
+$$
+ds^2=-N(R,\theta)^2dt^2+P(R,\theta)^2
+[ds^2+R(s)^2d\theta^2]
++\frac{R(s)^2\sin^2\theta}{N(R,\theta)^2}d\varphi^2,
+\qquad A=A_\varphi(R(s),\theta)d\varphi.
+$$
+
+The two exterior cut neighborhoods remain fixed. Each outward collar joins
+R0=.025 to Rc=.05 through a coordinate width delta=.05. Define the usual
+flat smooth step S(t)=e^(-1/t)/(e^(-1/t)+e^(-1/(1-t))) for0<t<1, extended
+by0 and1. Set R(u)=R0+delta integral_0^(u/delta) S(t)dt. Then R'=S,
+R''=S'/delta, all derivatives vanish at the cylindrical end, and at u=delta
+R=Rc, R'=1, with all higher derivatives zero. Reflection supplies the other
+collar. Any nonnegative central coordinate length can be inserted. Balance
+NP=1 at the poles preserves axis regularity; magnetic gauge patches and
+opposite outward mouth orientations must be retained.
+
+Put chi=R', L=log(N/P), and k=e_hat_t+e_hat_s. Subtract the Maxwell radial
+null source of the pulled-back field from the Einstein radial null source.
+The exact result is
+
+$$
+Q_{kk}=8\pi G T_{{\rm extra},kk}
+=\frac{(1-\chi^2)\Delta_{S^2}L/R^2
+-R''(2/R-\partial_RL)}{P^2}.
+$$
+
+This follows from the static lapse and spatial radial-curvature identities;
+an independent warped-product derivation gives the same expression. The
+Maxwell null term scales by chi^2 because F_sphi=chi F_Rphi. The unchanged
+exterior germ therefore has Qkk=0. In the flat spherical limit the expression
+reduces to -2R''/R. These are checks of the actual residual algebra.
+
+Since N sqrt(h)=P^2 R^2 sin(theta), the angular divergence integrates out:
+
+$$
+\mathcal J(s):=\int N\sqrt h\,Q_{kk}\,d\theta d\varphi
+=-4\pi R''[2R-R^2\langle\partial_RL\rangle_{S^2}].
+$$
+
+This gives a same-geometry target for the compact paired variation
+ delta N=N f, delta h_ss=-2 f h_ss, whose energy derivative is
+ integral N sqrt(h) f(rho+p_s). It is the two-null-direction average if a
+state carries flux. The prescribed geometry is static and its required
+geometric source has zero radial energy flux. To convert the geometric
+integral to the required matter variation, divide by8pi G.
+
+For D=1, Q=1/5 and the displayed collars, the numerical target is
+
+$$
+\int_{\rm both\ collars} N\sqrt h\,Q_{kk}\,d^3x
+=-0.21438936305420647\,D.
+$$
+
+The coarse/fine quadrature change is 1.44e-15 D; this is sensitivity, not
+an interval enclosure. Ten focused controls pass, including actual cut
+values, smooth endpoint data, axis balance, independently differentiated
+N/P and the angular divergence identity. The negative weighted total
+requires negative extra energy-plus-longitudinal-pressure somewhere in the
+collars. It is a necessary source target, not a total energy, a complete
+null-geodesic ANEC integral, or a proof that a quantum state can supply it.
+Both collars' target is independent of the inserted central coordinate
+length; the pointwise central equations remain additional requirements.
+
+The angularly integrated target vanishes on the central constant-R segment,
+but its pointwise angular source need not vanish there. Its lapse and P
+remain angle dependent. The inserted coordinate length is neither proper
+distance nor a single optical length, and scalar propagation exp(-pi ell
+kappa) is not supplied by this construction. A full Dirac bridge propagation
+operator must replace that illustrative factor when calculating the actual
+quantum return.
+
+Maxwell consistency is also explicit. In either regular gauge patch, with
+a=A_phi, the generally nonzero required current is proportional to
+
+$$
+\nabla_\mu F^{\mu\varphi}=
+\frac{(\chi^2-1)\partial_R(N^2a_R)+R''N^2a_R}
+ {P^2R^2\sin^2\theta}.
+$$
+
+No current or supporting matter has been supplied. A quantum calculation
+must specify the spin/Wilson holonomy, global state and renormalization,
+then compare its full null stress AND induced current on this geometry.
+The relative return determinant alone omits local renormalized contributions.
+The former uncut-exterior state cannot simply be reused as the new bridge state.
+
+This is a prescribed regular static support target, with a global time
+coordinate, not a self-consistent solution or a chronology-changing medium.
+Stability, formation and13 September2027 to12 September2027 passage remain
+unproved.
+
+### Physical cylinder propagation, without a scalar optical-length assumption
+
+For fixed R=R0 and a north gauge A_phi=q a(theta), choose longitudinal
+Pauli matrix sigma3, meridional sigma1 and azimuthal sigma2. The spatial
+half-density spinor u=P R0 sqrt(sin(theta)/N) Psi uses measure ds dtheta
+in a fixed azimuthal sector mu. Its Hamiltonian is
+
+$$
+H_\mu=-i\sigma_3v\partial_s
+-\frac{i\sigma_1}{R_0}(v\partial_\theta+v_\theta/2)
++\frac{\sigma_2 N^2(\mu-qa)}{R_0\sin\theta},\qquad v=N/P.
+$$
+
+The flux-normalized spinor w=sqrt(v)u instead obeys
+
+$$
+[-i\sigma_3\partial_s+T_\mu]w=E Ww,\qquad W=P/N,
+\quad T_\mu=-\frac{i\sigma_1}{R_0}\partial_\theta
++\frac{\sigma_2 NP(\mu-qa)}{R_0\sin\theta}.
+$$
+
+Thus the exact constant-cylinder transfer generator is
+K(E)=i sigma3(EW-T_mu). Smooth spinor/gauge-patch regularity at the poles
+fixes its angular domain; arbitrary Dirichlet endpoint data would change
+this problem. On that domain T_mu is symmetric and anticommutes with
+sigma3. The identity K^dagger sigma3+sigma3 K=-2 Im(E) W checks both
+real-energy flux conservation and the imaginary-frequency sign. For a
+round cylinder with constant N and P this reduces to the ordinary separated
+Dirac channels with propagation rate kappa P/N in a transverse zero mode.
+
+For the actual angularly varying W, let P0 project onto ker(T_mu), and
+Q0=I-P0. At E=i kappa the zero-mode leakage is
+Q0 K P0=-kappa sigma3 Q0 W P0. Hence exact zero-mode separation generally
+fails away from zero frequency. For a normalized single zero profile f,
+its squared leakage norm is kappa^2[<W^2>_f-<W>_f^2]. This is a concrete
+next calculation on the actual geometry, not an assumed scalar return.
+A nonzero variance establishes coupling, not its importance for the
+renormalized stress or a useful bound on the full determinant.
+
 ## Physical decision audit after the spectral certificate — increment128
 
 The user's question about prolonged numerical work prompted a review of the

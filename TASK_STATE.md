@@ -58,6 +58,44 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Phase-sensitive force and compatible bridge source — increment129
+- Previous128 published b6cb5512028819ba30a9de3389706b54ae8f6a1b;
+ origin matched/private/clean. No old scientific driver or result modified.
+- User requests faster physical progress: reuse settled results, no further
+ box-spectrum campaign without a specific source-observable dependency.
+- NEW quantum_return_support.py proves a finite-matrix phase-sensitive
+ upper bound on relative return force under fixed-exterior contraction and
+ determinant assumptions. Nonnormal, derivative and normalization checks PASS;
+ independent bounded agent audit PASS. No actual dihole return computed.
+- The classical22.1% flux proxy cannot reject support: in an explicitly
+ optimistic zero-delay benchmark, residual aligned amplitude .0308675129
+ erases the ideal quarter-threshold deficit. This is not measured return.
+- The old constant-lapse AdS cut fails to match the actual angular lapse;
+ old MMP mass/anomaly terms are conditional, not this family's source equation.
+- NEW dihole_stretched_collar.py constructs a smooth prescribed bridge with
+ actual cut germs held fixed and derives its exact required extra null source.
+ Both collars: integral N sqrt(h) Qkk = -.21438936305420647 D,
+ Qkk=8piG T_extra,kk. Ten focused controls PASS; quadrature sensitivity1.44e-15 D,
+ not a certified enclosure. Figures inspected. Required Maxwell current,
+ supporting matter/state, stability and chronology remain unconstructed.
+- The central segment has angle-dependent N/P; coordinate length is not a
+ single optical length. A scalar propagation factor cannot be imported.
+ Next physical task: its flux-normalized Dirac propagation and actual return,
+ then the same-geometry renormalized null response AND required current.
+ Independent transfer derivation recorded: K(E)=i sigma3(EW-T), W=P/N.
+ Zero-mode leakage at imaginary frequency is -kappa sigma3 Q0 W P0;
+ the single-mode squared norm is kappa^2 Var_f(W). Next calculate this
+ same-geometry coupling before using a scalar propagation approximation.
+ Main129 drivers are terminal/frozen. No large job or new review council.
+- Frozen source/result SHA256:
+ return source 5d52da9e7a1c1b24c286e0bf4052708edef22ff61d058e46614d4b30e9b75719;
+ return result e0bade44fa1868c0edc89bdbec923722403ffd5ad17c87334990dd2150570600;
+ bridge source c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639;
+ bridge result 4e1f8094626fc899cfbf35b00c6159304cebe4a6647afba1d48b0e1e755ab017.
+- Goal ACTIVE. No new physics law or physical medium established;
+ 13 September2027 to12 September2027 remains unproved. Professor initial
+ feedback milestone already reported; heartbeat paused; no email sent.
+
 ### Physical decision audit and changed priority — increment128
 - Previous127 PROGRESS: published8ec9e4b1cf486380835b3b137d7e457445511000;
  origin matched, private and clean verified.128 began clean; preserve562
