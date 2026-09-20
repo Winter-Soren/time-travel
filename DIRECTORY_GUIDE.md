@@ -1,6 +1,10 @@
 # Directory guide
 
-Current increment141: [exterior feedback calculation](scripts/dihole_exterior_feedback.py), [saved results](results/dihole_exterior_feedback_results.json), and [visual](figures/dihole_exterior_feedback_progress.png). The next angular cross-check is independent work in progress.
+Current increment143: [localized-field hypothesis and gravitational rejection](docs/LOCALIZED_FIELD_HYPOTHESIS.md), [calculation](scripts/localized_field_hypothesis.py), [results](results/localized_field_hypothesis_results.json), and [visual](figures/localized_field_hypothesis_progress.png). The completed test rejects the minimal static completion; a changed-background hypothesis is assessed separately.
+
+Current increment142: [angular cross-check](scripts/dihole_angular_crosscheck.py), [results](results/dihole_angular_crosscheck_results.json), [saved matrices](data/dihole_angular_crosscheck_state.npz), and [visual](figures/dihole_angular_crosscheck_progress.png). Thirteen checks pass at radial resolution12.
+
+Increment141: [exterior feedback calculation](scripts/dihole_exterior_feedback.py), [saved results](results/dihole_exterior_feedback_results.json), and [visual](figures/dihole_exterior_feedback_progress.png). The angular cross-check above is now complete.
 
 Current increment140: [radial refinement report](docs/RADIAL_REFINEMENT.md), [driver](scripts/dihole_radial_refinement.py), [saved results](results/dihole_radial_refinement_results.json), and [visual progress](figures/dihole_radial_refinement_progress.png). Earlier evidence remains in place.
 

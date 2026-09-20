@@ -361,3 +361,66 @@ The assembly evaluates multiplication by $P^{-1}$ pointwise, retains the
 $f'$ term, and compares the direct massive form with $Q+m^2G$. These are
 finite form/variation checks. The trials vanish at the mouth cuts, and
 neither this calculation nor its refinement contains the sewn exterior.
+
+## Local infrared target: a gap is not needed for source existence
+
+Under the declared smooth geometry, natural self-adjoint Hamiltonian and
+Hadamard state, the compact collar stress integral is finite. The local
+two-point function minus its Hadamard parametrix is smooth, so its stress
+differential coincidence limit is smooth. See
+[Zahn, Proposition 3.6](https://arxiv.org/pdf/1210.4031) and the
+[Sahlmann–Verch ground-state result](https://arxiv.org/pdf/math-ph/0002021).
+This settles local observable existence under those hypotheses; it does not
+prove the stronger absolute common-P trace estimate or every limit exchange
+used by the numerical prescription.
+
+There is also a gap-free localized Hamiltonian remainder lemma. Let
+$E_0=\mathbf1_{[-E_*,E_*]}(H)$ and
+
+$$g_\epsilon(\lambda)=\frac2\pi\operatorname{sgn}(\lambda)
+\arctan\frac{\epsilon}{|\lambda|},\qquad g_\epsilon(0)=0.$$
+
+For compactly supported differential operators $L_i$, local elliptic
+estimates and bounded spectral support imply $A_i=L_iE_0$ is Hilbert–Schmidt:
+factor through a sufficiently high compact Sobolev embedding. Since
+$g_\epsilon(H)$ is bounded uniformly and tends strongly to zero,
+
+$$L_1g_\epsilon(H)E_0L_2^*=A_1g_\epsilon(H)A_2^*\longrightarrow0
+\quad\text{in trace norm}.$$
+
+For any $\delta>0$, one explicit estimate is
+
+$$
+\|A_1g_\epsilon(H)A_2^*\|_1\le\|A_1\|_2
+\left[\|\mathbf1_{\{0<|H|\le\delta\}}A_2^*\|_2
++\frac{2\epsilon}{\pi\delta}\|A_2\|_2\right].
+$$
+
+First take $\delta$ small, then $\epsilon$ small. The local spectral weight
+vanishes as $\delta\downarrow0$ with exact zeros excluded; no inverse-energy
+moment is needed. Applying the argument to arbitrary derivatives gives
+localized kernel convergence in every finite Sobolev order and hence every
+finite $C^r$ norm, allowing the differentiated diagonal on this low-Hamiltonian-
+energy part. A computable rate still requires a bound on that spectral weight;
+the high-energy part requires the separate existing UV subtraction.
+
+The empty-zero covariance is $(I-\operatorname{sgn}H-P_0)/2$. For this
+full-Dirac massless metric probe $V=\delta H_0$, the fixed identification gives
+$\beta H_0\beta=-H_0$, $\beta V\beta=-V$, and $[\beta,P_0]=0$.
+The localized compression $P_0VP_0$ is trace class by the same smoothing
+argument, and its trace equals its own negative under conjugation by
+$\beta$. Thus its zero-occupation correction vanishes for this probe.
+This is not a claim for every observable, each Weyl block, or ground-energy
+differentiability: $H_\epsilon=\epsilon\sigma_z$, $\beta=\sigma_x$ already
+has vacuum energy $-|\epsilon|$.
+
+The unresolved representation step is specific. The actual numerical
+infrared cutoff concerns proper Euclidean $P$, not low $|H|$. The lapse is
+unbounded at Melvin infinity, so the formal inverse associated with
+$\widehat{\mathcal D}_\kappa=\beta N^{-1/2}(H+i\kappa)N^{-1/2}$ must be
+justified as a compactly localized Green-kernel identity, not assumed to be
+a bounded global inverse. One must then identify its stress-differentiated
+common-P limit with the covariance above, retaining the correct lapse factors,
+UV subtraction and ordered limits. The lemma removes an unnecessarily strong
+absolute-IR premise on the Hamiltonian target; it does not automatically
+authorize the present proper-P trace and limit interchanges.

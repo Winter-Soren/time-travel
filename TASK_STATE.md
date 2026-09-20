@@ -1,3 +1,71 @@
+# Authoritative checkpoint143/142 — hypothesis branch tested
+
+This prefix supersedes earlier next-action statements; all prior bytes below
+are preserved as history. Import COMPLETE. Goal ACTIVE, unachieved. No stable
+material, new law, self-consistent bridge, or backward date passage proved.
+Previous published checkpoint141: b6b7818b8c1d002c587cf00eacc9d9927d568125.
+
+## Completed independent work
+- 143 speculative matter branch is now concrete: localized_field_hypothesis.py,
+  its results/figures, and docs/LOCALIZED_FIELD_HYPOTHESIS.md. All13 checks PASS.
+  Exact slab threshold including transverse modes; separate 3D sufficient
+  Hardy bound permits zero exterior gradient coefficient. Coefficients are
+  prescribed, not an obtainable material. A negative auxiliary eigenvalue
+  is a form-sign test, not a physical growth rate.
+- The displayed covariant completion FAILS strict all-space linear stability:
+  gravity produces a Jeans band 0<k<Lambda^2/MbarPl in its infinite exterior.
+  Independently derived ADM elimination agrees; rejection is saved evidence.
+  Source621305bdf8e2977fcbe1e951f6d2e3ae619d4ed8c6e1ab6d398c0d23b40d8e44.
+  Results c907677351e540e6518deccf32aae92ef644586adf7aca2ba4ccee645603d2d1.
+- Additional analytic results in the report (separate from executable13):
+  regular invertible static constraint mixing leaves negative leading k^2
+  when D,K0>0; this is a defined-class obstruction, not a universal no-go.
+  A redshifting-mode toy has 1+r^2/3 <= z(infinity) <= exp(r^2/3), r=gamma*/H.
+  Bare action nevertheless forbids constant-H>0, constant-X>0 flat FRW:
+  (3 MbarPl^2+9 alpha Lambda^2 X)H^2=-Lambda^4 P, with P>=0.
+  Independent symbolic lapse/current/scale-factor checks agree. Thus toy
+  damping does NOT rescue that action. Explicit positive vacuum energy is
+  a changed action; its required value and clock shift are in the report.
+- 142 angular3->4->5 cross-check at radial12 and original exterior48 COMPLETE:
+  all13 checks PASS155.23sec; worker production97123 TERMINAL exit0.
+  Largest angular increment3.4262e-9; with frequency-tail budget<=7.2690e-8,
+  below tail-adjusted radial lower comparison4.4184e-6. Tiny signs unresolved.
+  Quad64->80/24->32 fibrechange4.260e-13; no continuum/angular-tail proof.
+  Source6ffde17e3d191ac7b1cd7968205bf958018a0af1f6f6e1851dc39a1f2b7e204b.
+  Result40bbb98215ecb6450f0be9158204648ee0e1b5c13520ec757410ff62717e399b.
+  State e98bf9d543dcbe61ac535fbead63447f67cceec2a666142d3e27bc34b8fab740.
+- Root reload74700 TERMINAL exit0: exact source/input/baseline/state hashes,
+  all8 new block certificates reproduced exactly, and143 source/checks pass.
+  A prior thread1 exact-equality attempt failed: production used no override;
+  default20-thread OpenBLAS reproduces, thread1 changes numerical eigenvector
+  trial bases and hence tiny outward endpoints. Agent reproduced the cause.
+  Both independently enclosed bounds remain valid; no evidence was rewritten
+  to force equality. Future validation must use certified inequalities, not
+  assume eigensolver trial bases invariant across thread/runtime settings.
+- docs/PHYSICAL_EUCLIDEAN_OPERATOR.md now proves a localized Hamiltonian IR
+  remainder vanishes without a gap or inverse-energy moment. Local Hadamard
+  stress exists; full-Dirac massless metric zero-occupation trace vanishes.
+  This does NOT identify the actual proper-P prescription with that target.
+- Both current figures inspected. No scientific process is live. Agents have
+  completed their bounded work. No professor email sent or monitoring rearmed.
+- Layout check PASS:123 imports,1033 Markdown links, migration/provenance
+  guards and operator identity. Diff whitespace check PASS. Both historical
+  document suffixes compared directly with HEAD and remain byte-identical.
+
+## Next decision-relevant work
+1. New matter candidate: account explicitly for added constant potential and
+   derive its full coupled expanding-background perturbations from the action.
+   Do not import static coefficients into the damping toy. Then assess a
+   localized NEC region and its boundary/source; no material recipe exists.
+2. Existing Dirac route: establish compact stress-differentiated proper-P/H
+   Green representation with lapse weights/ordered limits. No repeated import,
+   scheme matching or blanket massless-gap hunt. Do not call finite basis
+   signs physical supporting stress or convert local counterterms into support.
+3. Current finite numerical sensitivity is predominantly radial, not the tested
+   angular/exterior additions. Further sweeps must resolve a physical decision.
+
+--- Preserved checkpoint141 and earlier history ---
+
 # Time-travel model research — active
 
 ## Objective and user preferences

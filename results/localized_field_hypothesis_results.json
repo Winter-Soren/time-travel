@@ -1,0 +1,352 @@
+{
+  "complete": true,
+  "passed": true,
+  "checks": {
+    "exact_symmetric_threshold": true,
+    "zero_at_critical": true,
+    "stable_side": true,
+    "unstable_side": true,
+    "decreasing_auxiliary_ground_level": true,
+    "all_transverse_identity": true,
+    "smooth_blob_comparison_margin": true,
+    "three_dimensional_hardy_control": true,
+    "zero_exterior_compact_window": true,
+    "gravity_constraint_elimination": true,
+    "gravity_dispersion_identity": true,
+    "gravity_jeans_band": true,
+    "gravity_growth_rate": true
+  },
+  "example": {
+    "sigma": 0.0001,
+    "p_out": 1.0,
+    "alpha": 1.0,
+    "K": 1.0,
+    "X": 1.0,
+    "critical_L_times_cutoff": 156.07966601082316,
+    "outer_L_times_cutoff": 100.0,
+    "core_L_times_cutoff": 80.0,
+    "smoothing_length_times_cutoff": 20.0,
+    "auxiliary_energy": 0.0001418784014771957,
+    "conditional_NEC_magnitude_over_cutoff4": 0.0002,
+    "homogeneous_fastest_growth_over_cutoff": 5e-05,
+    "homogeneous_fastest_wavenumber_over_cutoff": 0.007071067811865475
+  },
+  "critical_controls": {
+    "at": 2.6258475506426648e-18,
+    "below": 2.0172841865428585e-06,
+    "above": -1.9580359618591756e-06
+  },
+  "transverse_controls": [
+    {
+      "q": 0.0,
+      "full": 2.071806083877715,
+      "decomposed": 2.071806083877715,
+      "error": 0.0
+    },
+    {
+      "q": 0.3,
+      "full": 2.2391434909244374,
+      "decomposed": 2.2391434909244374,
+      "error": 0.0
+    },
+    {
+      "q": 1.2,
+      "full": 8.194854882785595,
+      "decomposed": 8.194854882785595,
+      "error": 0.0
+    }
+  ],
+  "width_scan": [
+    {
+      "width_over_critical": 0.5,
+      "auxiliary_energy_over_sigma": 2.949549416596322
+    },
+    {
+      "width_over_critical": 0.525,
+      "auxiliary_energy_over_sigma": 2.5866787610636015
+    },
+    {
+      "width_over_critical": 0.55,
+      "auxiliary_energy_over_sigma": 2.271612875205739
+    },
+    {
+      "width_over_critical": 0.575,
+      "auxiliary_energy_over_sigma": 1.9963090853218608
+    },
+    {
+      "width_over_critical": 0.6,
+      "auxiliary_energy_over_sigma": 1.7543476023799207
+    },
+    {
+      "width_over_critical": 0.625,
+      "auxiliary_energy_over_sigma": 1.540553846363006
+    },
+    {
+      "width_over_critical": 0.65,
+      "auxiliary_energy_over_sigma": 1.3507194712742032
+    },
+    {
+      "width_over_critical": 0.675,
+      "auxiliary_energy_over_sigma": 1.1813936758244319
+    },
+    {
+      "width_over_critical": 0.7,
+      "auxiliary_energy_over_sigma": 1.0297252672000217
+    },
+    {
+      "width_over_critical": 0.725,
+      "auxiliary_energy_over_sigma": 0.8933418464276989
+    },
+    {
+      "width_over_critical": 0.75,
+      "auxiliary_energy_over_sigma": 0.7702564685643364
+    },
+    {
+      "width_over_critical": 0.775,
+      "auxiliary_energy_over_sigma": 0.6587948622468678
+    },
+    {
+      "width_over_critical": 0.8,
+      "auxiliary_energy_over_sigma": 0.5575381914729083
+    },
+    {
+      "width_over_critical": 0.825,
+      "auxiliary_energy_over_sigma": 0.4652776789918295
+    },
+    {
+      "width_over_critical": 0.8500000000000001,
+      "auxiliary_energy_over_sigma": 0.380978363003635
+    },
+    {
+      "width_over_critical": 0.875,
+      "auxiliary_energy_over_sigma": 0.30374994506983893
+    },
+    {
+      "width_over_critical": 0.9,
+      "auxiliary_energy_over_sigma": 0.2328231868049047
+    },
+    {
+      "width_over_critical": 0.925,
+      "auxiliary_energy_over_sigma": 0.16753068034109278
+    },
+    {
+      "width_over_critical": 0.95,
+      "auxiliary_energy_over_sigma": 0.10729109024724814
+    },
+    {
+      "width_over_critical": 0.9750000000000001,
+      "auxiliary_energy_over_sigma": 0.05159616872591972
+    },
+    {
+      "width_over_critical": 1.0,
+      "auxiliary_energy_over_sigma": 2.6258475506426648e-14
+    },
+    {
+      "width_over_critical": 1.025,
+      "auxiliary_energy_over_sigma": -0.04788995299216978
+    },
+    {
+      "width_over_critical": 1.05,
+      "auxiliary_energy_over_sigma": -0.09242033666460348
+    },
+    {
+      "width_over_critical": 1.0750000000000002,
+      "auxiliary_energy_over_sigma": -0.13389819738788983
+    },
+    {
+      "width_over_critical": 1.1,
+      "auxiliary_energy_over_sigma": -0.1725962885837607
+    },
+    {
+      "width_over_critical": 1.125,
+      "auxiliary_energy_over_sigma": -0.20875756619781521
+    },
+    {
+      "width_over_critical": 1.15,
+      "auxiliary_energy_over_sigma": -0.24259901136667017
+    },
+    {
+      "width_over_critical": 1.175,
+      "auxiliary_energy_over_sigma": -0.2743148929453508
+    },
+    {
+      "width_over_critical": 1.2000000000000002,
+      "auxiliary_energy_over_sigma": -0.3040795617716961
+    },
+    {
+      "width_over_critical": 1.225,
+      "auxiliary_energy_over_sigma": -0.33204985193190933
+    },
+    {
+      "width_over_critical": 1.25,
+      "auxiliary_energy_over_sigma": -0.3583671509504677
+    },
+    {
+      "width_over_critical": 1.275,
+      "auxiliary_energy_over_sigma": -0.38315919006335447
+    },
+    {
+      "width_over_critical": 1.3,
+      "auxiliary_energy_over_sigma": -0.4065415970089407
+    },
+    {
+      "width_over_critical": 1.3250000000000002,
+      "auxiliary_energy_over_sigma": -0.4286192466686418
+    },
+    {
+      "width_over_critical": 1.35,
+      "auxiliary_energy_over_sigma": -0.44948743908388755
+    },
+    {
+      "width_over_critical": 1.375,
+      "auxiliary_energy_over_sigma": -0.46923292961126484
+    },
+    {
+      "width_over_critical": 1.4,
+      "auxiliary_energy_over_sigma": -0.4879348320522372
+    },
+    {
+      "width_over_critical": 1.425,
+      "auxiliary_energy_over_sigma": -0.5056654123478611
+    },
+    {
+      "width_over_critical": 1.4500000000000002,
+      "auxiliary_energy_over_sigma": -0.5224907877352036
+    },
+    {
+      "width_over_critical": 1.475,
+      "auxiliary_energy_over_sigma": -0.5384715440191201
+    },
+    {
+      "width_over_critical": 1.5,
+      "auxiliary_energy_over_sigma": -0.5536632817390859
+    },
+    {
+      "width_over_critical": 1.5250000000000001,
+      "auxiliary_energy_over_sigma": -0.5681171004401777
+    },
+    {
+      "width_over_critical": 1.55,
+      "auxiliary_energy_over_sigma": -0.5818800289369096
+    },
+    {
+      "width_over_critical": 1.575,
+      "auxiliary_energy_over_sigma": -0.5949954083452859
+    },
+    {
+      "width_over_critical": 1.6,
+      "auxiliary_energy_over_sigma": -0.6075032337169731
+    },
+    {
+      "width_over_critical": 1.625,
+      "auxiliary_energy_over_sigma": -0.6194404593111847
+    },
+    {
+      "width_over_critical": 1.6500000000000001,
+      "auxiliary_energy_over_sigma": -0.6308412718611109
+    },
+    {
+      "width_over_critical": 1.675,
+      "auxiliary_energy_over_sigma": -0.6417373356131283
+    },
+    {
+      "width_over_critical": 1.7000000000000002,
+      "auxiliary_energy_over_sigma": -0.6521580124225562
+    },
+    {
+      "width_over_critical": 1.725,
+      "auxiliary_energy_over_sigma": -0.6621305597661303
+    },
+    {
+      "width_over_critical": 1.75,
+      "auxiliary_energy_over_sigma": -0.6716803091676248
+    },
+    {
+      "width_over_critical": 1.7750000000000001,
+      "auxiliary_energy_over_sigma": -0.6808308272199949
+    },
+    {
+      "width_over_critical": 1.8,
+      "auxiliary_energy_over_sigma": -0.6896040611173688
+    },
+    {
+      "width_over_critical": 1.8250000000000002,
+      "auxiliary_energy_over_sigma": -0.6980204703767917
+    },
+    {
+      "width_over_critical": 1.85,
+      "auxiliary_energy_over_sigma": -0.7060991462274043
+    },
+    {
+      "width_over_critical": 1.875,
+      "auxiliary_energy_over_sigma": -0.7138579199692184
+    },
+    {
+      "width_over_critical": 1.9000000000000001,
+      "auxiliary_energy_over_sigma": -0.7213134614509906
+    },
+    {
+      "width_over_critical": 1.925,
+      "auxiliary_energy_over_sigma": -0.72848136868366
+    },
+    {
+      "width_over_critical": 1.9500000000000002,
+      "auxiliary_energy_over_sigma": -0.7353762494896814
+    },
+    {
+      "width_over_critical": 1.975,
+      "auxiliary_energy_over_sigma": -0.7420117959869957
+    },
+    {
+      "width_over_critical": 2.0,
+      "auxiliary_energy_over_sigma": -0.7484008526173784
+    }
+  ],
+  "zero_exterior_blob": {
+    "sigma": 0.0001,
+    "alpha": 1.0,
+    "K": 1.0,
+    "outside_gradient_coefficient": 0.0,
+    "sufficient_radius_times_cutoff": 50.0,
+    "example_radius_times_cutoff": 40.0,
+    "core_radius_times_cutoff": 30.0,
+    "smoothing_length_times_cutoff": 10.0,
+    "retained_bending_margin": 0.36,
+    "scope": "Three-dimensional compact blob: sufficient Hardy comparison, not a necessary radius limit or a gravitational stability result."
+  },
+  "hardy_control": {
+    "inside": 1.2600148785466578,
+    "weighted": 5.568327996831709,
+    "hessian": 20.881229988118907,
+    "laplacian": 20.881229988118907,
+    "satisfies_chain": true,
+    "hessian_laplacian_error": 0.0
+  },
+  "gravity_completion": {
+    "constraint_identity": true,
+    "dispersion_identity": true,
+    "unstable_band_checked": true,
+    "outside_band_positive": true,
+    "growth_identity_error": 0.0,
+    "illustrative_cutoff_over_reduced_planck": 0.01,
+    "jeans_wavenumber_over_cutoff": 0.01,
+    "fastest_growth_over_cutoff": 4.999250168707824e-05,
+    "decision": "Reject this minimal action with an infinite static ghost-vacuum exterior as a globally linearly stable medium.",
+    "scope": "Exact quadratic ADM result for the displayed truncated action; not a general exclusion of other theories or a prediction of immediate collapse."
+  },
+  "conditional_cutoff_over_reduced_planck_for_B_alpha_X_1": 0.4501581580785531,
+  "source_sha256": "621305bdf8e2977fcbe1e951f6d2e3ae619d4ed8c6e1ab6d398c0d23b40d8e44",
+  "sources": [
+    "https://arxiv.org/abs/hep-th/0312099",
+    "https://arxiv.org/abs/hep-th/0606090"
+  ],
+  "scope": [
+    "Analytic criterion for a prescribed decoupled quadratic action; no claim of a new physical law or novelty.",
+    "The auxiliary T eigenvalue tests the quadratic form sign; it is not a physical fluctuation frequency or growth rate.",
+    "Smooth compact blobs inherit nonnegativity only when their p is pointwise above the comparison slab and K,a remain positive with the stated values.",
+    "The separate zero-exterior 3D Hardy criterion is sufficient only; it does not prove instability above that radius.",
+    "The NEC and Planck comparison require an actual P(X) background, negligible omitted background stress, and a specified geometric source coefficient B.",
+    "The displayed minimal covariant completion is rejected for strict global linear stability because its infinite static exterior has a Jeans band.",
+    "No covariant completion, nonlinear/gravitational stability, causal UV completion, material generation, or backward passage established."
+  ]
+}

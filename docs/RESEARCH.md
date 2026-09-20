@@ -1,3 +1,74 @@
+## Hypothesis testing starts now; first completion rejected — increment143
+
+The separate [matter hypothesis](LOCALIZED_FIELD_HYPOTHESIS.md) has an explicit
+quadratic action and an executable [13-check calculation](../scripts/localized_field_hypothesis.py).
+A prescribed negative-gradient slab has an exact width criterion including
+all transverse modes. A different three-dimensional Hardy comparison gives
+a sufficient compact-blob window even with zero exterior gradient coefficient.
+These are conditional linear-form results, not a generated matter background.
+
+The tested covariant completion has a decisive failure. Eliminating its lapse
+and shift gives an exterior dispersion proportional to
+$k^2(k^2-\Lambda^4/\bar M_{\rm Pl}^2)$ with a positive prefactor.
+Every finite positive cutoff/Planck ratio therefore leaves long unstable
+wavelengths. A smaller localized core cannot remove this distant instability.
+The [saved result](../results/localized_field_hypothesis_results.json) and
+[figure](../figures/localized_field_hypothesis_progress.png) retain the failure.
+No new law or novelty claim follows; the Jeans mechanism is already present
+in [ghost-condensate literature](https://arxiv.org/abs/hep-th/0312099).
+
+A further algebraic test covers a specified regular static constraint class:
+with positive kinetic coefficient and the retained wrong-sign leading spatial
+term, finite higher-derivative changes do not remove its infrared instability.
+This excludes neither singular constraints nor other fields/backgrounds.
+The report therefore tests a changed assumption immediately. In a prescribed
+expanding-mode toy, the total amplification is between $1+r^2/3$ and
+$e^{r^2/3}$, where $r$ is peak static growth divided by expansion rate.
+Yet the original bare action cannot generate that constant-clock, constant-H
+expansion at all: its homogeneous background equations require a positive
+quantity to equal $-\Lambda^4\mathcal P$, while $\mathcal P\ge0$.
+Independent symbolic variations confirm this second obstruction. The report
+states the extra positive vacuum-energy density a changed action would need.
+Its actual coupled perturbations and localized source are the next test;
+the redshifting toy must not be presented as a completed physical medium.
+These are analytic extensions, separate from the saved executable's13 checks.
+
+## Angular sensitivity is smaller than radial sensitivity — increment142
+
+The [angular cross-check](../scripts/dihole_angular_crosscheck.py) increases
+angular order3 to4 to5 at radial order12, retaining the original48 exterior
+columns and two phases. All13 connected checks pass in155.23 seconds. Exact
+frozen140 arrays are used for the baseline, with freshly recovered arrays
+stored separately. Maximum dimension312; no missing modes are assumed zero.
+The largest numerical angular change is $3.43\times10^{-9}$. Adding both
+finite-matrix frequency-tail bounds gives at most $7.27\times10^{-8}$,
+well below the tail-adjusted last radial change $4.42\times10^{-6}$.
+These budgets do not enclose assembly, middle quadrature or the infinite
+field space, and do not certify the signs of the tiny angular changes.
+The coupled quadrature test changes sampled fibres by at most $4.26\times10^{-13}$.
+See [results](../results/dihole_angular_crosscheck_results.json) and
+[figure](../figures/dihole_angular_crosscheck_progress.png).
+
+Root independently reloaded all eight new saved block certificates exactly
+with the production thread environment and checked all recorded hashes.
+An earlier exact-equality attempt at one OpenBLAS thread differed in the
+numerical trial eigenvectors: for phase0/order4/block0 its tail was
+1.383676868343866e-8 versus the stored1.3836768683438273e-8.
+The agent reproduced this thread-dependent cause; default20 threads reproduce
+the stored certificate. Interval congruence and Gram tests validate each trial
+basis independently. This is not state drift or a failed scientific bound;
+bitwise trial-basis reproducibility across runtimes is not promised. The
+production artifacts remain unchanged. Future rechecks should certify their
+own inequalities rather than weaken provenance or force endpoint equality.
+
+A parallel [localized infrared lemma](PHYSICAL_EUCLIDEAN_OPERATOR.md#local-infrared-target-a-gap-is-not-needed-for-source-existence)
+removes a spectral-gap premise for the compact Hamiltonian source target.
+The proper Euclidean prescription still needs its localized Green-kernel
+representation, including lapse factors and ordered limits. Physical source,
+backreaction, stable material and backward date passage remain unproved.
+
+--- Preserved increment141 and earlier research ---
+
 ## An exterior-only coupling challenge passes -- increment141
 
 The [exterior calculation](../scripts/dihole_exterior_feedback.py) adds 32
