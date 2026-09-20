@@ -58,6 +58,72 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Return topology, physical slice barrier and conditional quarter rule — increment111
+- Previous goal turn: VERIFIED WAIT on active migration task
+  01a0bb2b-2d01-7201-b42c-5a1797a32bcf. The task explicitly released the
+  checkout after completion. Current turn is PROGRESS, not a blocked turn.
+- User-requested physical organization committed46454c3 and pushed by the
+  organization task. Follow AGENTS.md: scripts/results/data/figures/docs.
+  Root independently ran maintenance/verify_layout.py --snapshot:480 moves,
+  69 imports,8 historical guards,14 frozen inputs,478 links, operator PASS.
+  The405 prior JSON/NPZ/figure artifacts remain byte-identical. Historical
+  source hashes are preserved with exact authenticated migration mappings;
+  new results record actual current source hashes. Ori checks remain strict.
+- NEW scripts/dihole_return_geometry.py and results:9 PASS (~5s). Reuses
+  actual balanced fields; no earlier scientific results were regenerated.
+  Exact equatorial critical-point/topology argument gives returning classical
+  flux .2209858652130017 atQ/D=.2. Null-ringrho=.6672354660415234D,
+  A*/q=.7790141347869983. BetweenA* andq, inner returning and outer bypass
+  contours share a label but are disconnected. Flux is not quantum probability.
+- Six actual cut-launched field lines: .2,.5,.75 reachz4; .8,.9,.98 reach
+  the lowercut. Maximum flux drift4.49e-12, gradientFDerror1.36e-11;
+  two tighter runs change optical times<=2.25e-10D. Return optical lengths
+  5.7196879677,5.1704558184,4.9143407153D are finite-cut field-curve lengths,
+  NOT quantum transmission times. Infinite classification uses analytic topology.
+- Physical frozensliceH=sqrt(v)Dtrace sqrt(v), v=N/P. Forq1,mu.5 atz0,
+  Gamma=-sigma_y gives ||Hpsi||>=infU||psi||, U=N²(A-.5)/rho.
+  The regular limit-point domain and logcutoff justify graph closure without
+  assuming Gamma preservesDomH.70digit interval/Descartes certificate proves
+  infUD>.2138 (minimum~.2138190523643544). This is NOT a full2D transmission
+  bound. Central plane20upperzero modes versus21 in asymptotic Melvin.
+- Conditional energy theorem independently checked by agents: fixed finite
+  exteriorlengths, Nc=fq closed NS Diracchannels, transparentopenopticalvacua,
+  allq-channel anomaly, and C>0 give E=C/ell²+q/(24ell)-sum1/[6(ell+di)].
+  ell²E' is strictlyincreasing from-infinity to(4Nc-q)/24. Thusf>1/4 iff
+  unique finite energy minimum; f<=1/4 hasnone. This single-coordinate
+  minimum is NOT fullphysicalstability. Baselinefluxsubstitutionfails,
+  but that substitution needs largeq/nonadiabatic errorcontrol nearnullring.
+- Weakinteractionfluxlimit .1800592; floatinggeometriccrossing nearQ/D
+  .38939345112936. Not a uniquenessproof; ratio is notparametricallysmall,
+  so crossingdoesnotrescuecontrolled well-separated geometry. ChangingQ/D
+  changesquantumspectrum; no transferof110unchanged. MMPorbitingnotrejected.
+- Independent read-only audit PASS:65digitflux agrees4.9e-17, gap polynomial
+  anddomainconsistent, fieldorientation/PoverNcorrect, energyrootresidual
+  8.9e-16, allsource/inputhashesmatch. No extra historicalsimulationsrun.
+- Newsource b5a4c06c74f4ccc775f3061c5040d95b7bcf0bb8968df653587ca08136a40b68;
+  results7f39c4cd67628961a1c8622fb67638b1247e59941bbae594feae64c0496b34bc.
+  figures/dihole_return_progress.png and.pdf rendered and visually inspected.
+- Final layout check passes70imports,492links and allhistoricalguards;
+  separatebytecheck confirms405oldartifacts and bothhistoricalnotesuffixes
+  unchanged. An initial mixed-newline audit comparison failed; comparing
+  actualbyte suffixes resolves the audit error without changing files.
+- Next scientific decision: obtain actual quantumreturn response or control
+  the null-neighborhood nonadiabatic correction before assigning closed-loop
+  vacuum energy. Do not launch a parameter sweep merely to exceed25% flux.
+  Full2D curved assembly can reuse DG derivative/flux terms, but exact cut
+  integration and radial-infinity boundary control remain unimplemented.
+  No source/stress/backreaction/stability/medium or backwardtravel established.
+- User asks us to flag when ready to email a Stanford professor. ACTIVE
+  heartbeat professor-outreach-milestone checks this task every6hours and is
+  quiet until actionable. Readiness: concise note with one precise result,
+  independent derivation/checks, reproducible errors, closest-literature
+  comparison, explicit limits, and one focused expert question. Novelty and
+  external review are NOT prerequisites for requesting technical assessment.
+  No email is authorized or sent. Current long researchlog is not yet the
+  concise review note; extract one after the quantum-return scope is settled.
+  The heartbeat must notifyonce then disable itself; it must not duplicate
+  the research or change the active goal. Goal remains ACTIVE/unbudgeted.
+
 ### Melvin spectrum, interval gap and actual curved axial lead — increment110
 - Previous goal turn classified PROGRESS:109 published at
   514866c6ab5f5cb36c9f6d917b238a92c66ef65a; local/remote equal,

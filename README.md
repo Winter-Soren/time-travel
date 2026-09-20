@@ -6,6 +6,8 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The [return-path calculation](scripts/dihole_return_geometry.py) finds that **22.1% of the classical mouth flux connects to the other mouth** in the current geometry. A separate interval proof establishes a central transverse quantum barrier. In an explicitly idealized channel-energy model, a finite minimum requires more than 25% returning channels. Classical flux is not automatically a quantum channel count, so this is a conditional obstruction. [Results](results/dihole_return_geometry_results.json) and [derivation with assumptions](docs/RESEARCH.md) record nine passing checks and the remaining quantum-return problem.
+
 The [Melvin channel calculation](scripts/melvin_leads.py) supplies the quantum modes of the gravitating exterior. It verifies 21 transverse zero channels and a separate interval bound on every positive transverse mass:
 
 $$
@@ -34,6 +36,7 @@ Local state-admissibility arguments are now supplied for both the full invariant
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Return paths and support threshold](scripts/dihole_return_geometry.py) · [results](results/dihole_return_geometry_results.json) · [figure](figures/dihole_return_progress.png) | Exact flux topology, actual field curves, interval central-slice gap and a conditional variational theorem | 22.1% connecting classical flux; the ideal channel ansatz requires more than 25%. Full quantum transport, vacuum stress and stability remain open |
 | [Melvin quantum channels](scripts/melvin_leads.py) · [results](results/melvin_leads_results.json) · [figure](figures/melvin_channel_progress.png) | Regular-axis spectra, exact zero modes, full radial residuals and an interval lower comparison over all sectors | 21 open zero channels per Weyl and positive transverse squared gap $> 0.60/D^2$; no quantum stress or physical throat |
 | [Curved axial tail](scripts/dihole_axial_tail.py) · [results](results/dihole_axial_tail_results.json) | Actual dihole coefficients, canonical current trace and finite-channel imaginary-frequency propagation | An inward boundary-response pilot; not the complete two-mouth exterior or a return probability |
 | [Exact classical dihole exterior](scripts/balanced_dihole.py) · [results](results/balanced_dihole_results.json) · [figure](figures/balanced_exterior_progress.png) | Full Einstein-Maxwell checks, balanced axis, flux and nonspherical finite-cut data; independent high-precision audit | Gravitating two-hole exterior with Melvin asymptotics; horizons remain and the quantum-supported throat is unconstructed |
@@ -76,6 +79,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scripts/scattering_vacuum.py) · [results](results/scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Classical return paths, central quantum barrier and conditional channel threshold](figures/dihole_return_progress.png)
+
+*Green curves connect the two auxiliary cuts in the classical exterior. They are not a sewn throat or payload trajectories. The magnetic-null ring breaks the local guiding approximation. The 25% rule applies to the specified channel-energy ansatz; changing geometry until a classical fraction exceeds it does not establish quantum support.*
 
 ![Quantum channels in the curved exterior environment](figures/melvin_channel_progress.png)
 

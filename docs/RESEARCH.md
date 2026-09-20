@@ -1,5 +1,171 @@
 # Reproduction and coupled-model iterations
 
+## Actual return paths and a conditional support threshold — increment111
+
+[Calculation](../scripts/dihole_return_geometry.py), [saved checks](../results/dihole_return_geometry_results.json),
+and [figure](../figures/dihole_return_progress.png). This increment separates
+three statements: an exact classical flux calculation, a physical transverse
+operator bound on one slice, and a conditional channel-energy theorem. None
+is a constructed throat, a material recipe, or a backward-time trajectory.
+
+### Only part of the classical mouth flux returns
+
+Use the same balanced [Emparan exterior](https://arxiv.org/abs/hep-th/9906160)
+and conventions as109–110: D=2k=1, Q=1/5, q=1, r+=M+k,
+Q=M r+/k, a²=k²−M², B=M/[(k+a)r+]. On the equator,
+
+$$
+r=M+\sqrt{\rho^2+k^2},\quad L=r^3-a^2r-2Ma^2,\quad
+D_0=r-2M+2BMa+\frac{B^2L}{4},\qquad
+\frac{A_\phi}{q}=\frac{2Ma+BL/2}{2QD_0}.
+$$
+
+Its derivative has the sign of
+
+$$
+F(r)=r^3-3hr^2+(M+h)a^2-\frac{2Ma}{B},\qquad h=M(1-Ba/2).
+$$
+
+For this balanced branch F(r+)<0 and F'(r)=3r(r−2h)>0 for r≥r+.
+There is exactly one equatorial minimum. Off the equator put y=sin²θ,
+Δ=r²−2Mr−a², U=2Mra+B(r²−a²)²/2, V=BΔa²/2,
+d=a²+2BMra+B²(r²−a²)²/4 and e=B²Δa²/4. Then
+Aφ=(q/2Q)(Uy+Vy²)/(Δ+dy+ey²). The numerator of its y derivative is
+UΔ+2VΔy+V(a²+BMra)y²>0 in the exterior. Thus the equatorial critical
+circle is the only off-axis stationary set; it is a magnetic null ring
+and a saddle of the full flux function.
+
+Numerically r*=0.986901330093074D, ρ*=0.667235466041523D and
+A*/q=0.7790141347869983. The connecting flux fraction is therefore
+
+$$
+f_{\rm flux}=1-A_*/q=0.2209858652130017.
+$$
+
+Below A*, a mouth's field lines escape to its own Melvin end. Between A*
+and q there are **two disconnected components with the same flux value**:
+an inner upper-to-lower connection and an outer infinity-to-infinity bypass.
+Above q only the bypass remains. This is a flux fraction, not a quantum
+return probability, transmitted payload fraction, or finite-q channel count.
+
+Six actual field-line integrations start on the ε=.05D upper cut. Levels
+A/q=.2,.5,.75 reach z=4D; levels .8,.9,.98 reach the lower cut, as predicted.
+The latter have finite-cut optical lengths ∫(P/N)ds of 5.7196879677,
+5.1704558184 and 4.9143407153D. These are lengths along prescribed magnetic
+curves, not calculated quantum travel times. Maximum flux drift is4.49e−12;
+two tighter integrations change optical time by at most2.25e−10D. Independent
+fourth-order differences check the Weyl gradient to1.36e−11. The extension
+from the finite plane to infinity uses the analytic topology, not the event
+termination alone. Guiding along field lines fails at the null ring itself.
+
+### The physical central-slice operator has a barrier
+
+At z=0, write v=N/P=[√(ρ²+k²)/(M+√(ρ²+k²))]^4. The canonical trace
+operator from110 is Dtr=−iσx∂ρ+σy NP(μ−Aφ)/ρ; the physical transverse
+Hamiltonian in L²(dρ) is **H=√v Dtr√v**. Using Dtr alone would omit the
+frequency weight and give the wrong energy bound.
+
+For q=1, μ=1/2, Aφ>A*>1/2 everywhere on this slice. Define
+
+$$
+U(\rho)=\frac{N^2(A_\phi-1/2)}{\rho}>0,\qquad \Gamma=-\sigma_y.
+$$
+
+On the compact smooth core, Re⟨Γψ,Hψ⟩=∫U|ψ|²dρ, hence
+||Hψ||≥inf(U)||ψ||. At the axis μ−q=−1/2 is the limit-point endpoint:
+the admissible component is O(√ρ). A logarithmic cutoff over ε²<ρ<ε
+has commutator norm squared O(1/|log ε|), which tends to zero; the
+confining infinite endpoint is also limit-point. The inequality extends by
+graph closure. It does **not** require Γ to preserve the operator domain.
+
+An interval certificate uses x=r−r+, Δ=x(x+2k) and
+T=D0[(2Ma+BL/2)/(2Q)−D0/2]. Then U=T/(r²√Δ). Its stationary polynomial
+is 2rΔT'−(4Δ+rΔ')T. At70 digits the nine ascending coefficient signs
+are −−−++++++, so Descartes' rule gives exactly one positive root.
+Endpoint divergence makes it the global minimum. The root is enclosed by
+x/D∈[.4502557132414467,.4502557132414469], giving
+
+$$
+\inf(UD)\in[0.2138190523643542961,\;0.2138190523643545757],
+\qquad |E_\perp|>0.2138\,\hbar c/D.
+$$
+
+This is a frozen-slice spectral gap, **not a full two-dimensional transmission
+or tunneling bound**. The slice has20 upper zero modes (μ=1.5,…,20.5),
+versus21 asymptotically. The μ=.5 upper zero behaves asρ^−1/2 at the
+inner axis and is excluded. A smaller classical returning fraction alone
+does not determine how that quantum channel scatters.
+
+### A precise theorem for the ideal channel energy
+
+Motivated by [MMP, §§5.2–5.5 and AppendixF](https://arxiv.org/html/1807.04726v3),
+**assume** q core Dirac channels, Nc=fq closed antiperiodic ground-state
+channels with fixed finite exterior optical lengths Li≥0, transparent open
+channels in their infinite-line optical vacuum, and classical coefficient
+C=r_e³/G>0. Both Weyl directions are already included in each Dirac term.
+All q channels retain the anomaly contribution. The specified ansatz is
+
+$$
+E(\ell)=\frac C{\ell^2}+\frac q{24\ell}
+-\frac\pi6\sum_{i=1}^{N_c}\frac1{\pi\ell+L_i}.
+$$
+
+Let di=Li/π and c=(4Nc−q)/24. Then
+
+$$
+\mathcal F(\ell)=\ell^2E'(\ell)
+=-\frac{2C}{\ell}-\frac q{24}
++\frac16\sum_i\left(\frac\ell{\ell+d_i}\right)^2,
+\quad
+\mathcal F'(\ell)=\frac{2C}{\ell^2}
++\frac13\sum_i\frac{\ell d_i}{(\ell+d_i)^3}>0.
+$$
+
+Its limits are −∞ and c. Therefore **f>1/4 is necessary and sufficient
+for exactly one finite global minimum of this energy ansatz**. If f≤1/4,
+E'<0 throughout and no finite stationary opening exists. If f>1/4,
+
+$$
+\frac{2C}{c}\le\ell_*\le\frac{2C+\sum_i d_i/3}{c},\qquad
+E(\ell_*)=-\frac C{\ell_*^2}-\frac16\sum_i\frac{d_i}{(\ell_*+d_i)^2}<0.
+$$
+
+For a continuous threshold family with finite limiting exterior lengths,
+ℓ*∼(2C+Σdi/3)/c diverges as f↓1/4. A minimum in this one variational
+coordinate does not establish stability against other perturbations.
+The script checks finite integer-channel examples q=100, Nc=22,25,30;
+the last has ℓ*=12.74845293755 for the explicitly illustrative length set.
+
+Using fflux as f would give (1−4f)/24=.00483568913>0 for the current
+geometry, excluding a minimum **under those additional assumptions**.
+That substitution needs a controlled large-q adiabatic limit and treatment
+of the magnetic-null neighborhood. It is not established at q=1.
+Actual Melvin vacuum energy, reflection, channel mixing, massive virtual
+modes and consistent geometric/clock matching are still absent from this
+functional. Fixed Li and fixed channel membership during variation are
+essential; do not suppress the open-channel anomaly or count Weyls twice.
+
+The classical weak-interaction limit is also unfavorable: with
+u=√(1+(2ρ/D)²), Aφ/q→1/u+(u²−1)/8. Its minimum at u³=4 gives
+fflux→(9−3·4^(2/3))/8≈.1800592. Floating evaluation of the exact geometric
+family crosses1/4 near Q/D=.38939345112936. This is not a proof of a unique
+crossing, and that ratio is not parametrically small: it does not rescue a
+controlled well-separated-mouth approximation. Changing Q/D also changes
+the quantum spectrum;110 cannot be transferred unchanged. MMP's orbiting
+exterior is a different construction and is not rejected by this calculation.
+
+### Outcome and next decision
+
+Nine construction/error checks pass (~5s), including the independent
+interval gap certificate. The new picture was inspected. The useful result
+is a conditional rejection of the simplest closed-line support assumption
+in the chosen geometry, plus a central quantum barrier. Next, determine
+the actual quantum return response or bound the nonadiabatic correction
+before applying a loop Casimir formula. Merely increasing Q/D until a flux
+threshold passes is not a physical solution. Quantum support, sewing,
+backreaction, all-mode errors, formation and stability remain open.
+13 September2027→12 September2027 remains unproved.
+
 ## Quantum channels of the gravitating exterior — increment110
 
 ### A full-domain transverse calculation and a useful lower bound

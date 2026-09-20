@@ -33,6 +33,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
+| Return topology, central quantum barrier and conditional support threshold | [scripts/dihole_return_geometry.py](scripts/dihole_return_geometry.py), [results](results/dihole_return_geometry_results.json), [figure](figures/dihole_return_progress.png); exact assumptions in [research notes](docs/RESEARCH.md) |
 | Quantum channels and curved axial response | [scripts/melvin_leads.py](scripts/melvin_leads.py), [results](results/melvin_leads_results.json), [figure](figures/melvin_channel_progress.png); [scripts/dihole_axial_tail.py](scripts/dihole_axial_tail.py) and [results](results/dihole_axial_tail_results.json) |
 | Gravitating exterior and attachment data | [scripts/balanced_dihole.py](scripts/balanced_dihole.py), [results](results/balanced_dihole_results.json), [figure](figures/balanced_exterior_progress.png); [RN compatibility gate](scripts/rn_exterior_gate.py) and [results](results/rn_exterior_gate_results.json) |
 | Smooth collar, magnetic response and same-geometry support target | [scripts/smooth_magnetic_collar.py](scripts/smooth_magnetic_collar.py), [results](results/smooth_magnetic_collar_results.json), [figure](figures/smooth_collar_progress.png); conditional RN exterior gate and coupled Dirac operator in [docs/RESEARCH.md](docs/RESEARCH.md) |
