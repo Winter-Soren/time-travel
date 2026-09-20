@@ -1,0 +1,407 @@
+{
+  "passed": true,
+  "controls": {
+    "passed": true,
+    "independent_derivative_errors": [
+      3.2487695156764506e-61,
+      2.5281734284336266e-61,
+      2.8674977773276654e-61
+    ],
+    "nonconstant_K_squared_errors": [
+      4.440892098500626e-16,
+      5.551115123125783e-16,
+      3.552713678800501e-15
+    ]
+  },
+  "covers": [
+    {
+      "divisions": 16,
+      "cells": 256,
+      "radius": 4,
+      "w_squared_lower": 0.8295712145859778,
+      "w_squared_upper": 1.1832934378003963,
+      "connection_squared_upper": 0.00027585375101209166
+    },
+    {
+      "divisions": 32,
+      "cells": 1024,
+      "radius": 4,
+      "w_squared_lower": 0.873918142124032,
+      "w_squared_upper": 1.1298437109319297,
+      "connection_squared_upper": 0.00010039004648640009
+    },
+    {
+      "divisions": 64,
+      "cells": 4096,
+      "radius": 4,
+      "w_squared_lower": 0.8970347966321452,
+      "w_squared_upper": 1.104105871391272,
+      "connection_squared_upper": 4.810075381956858e-05
+    }
+  ],
+  "endomorphism_lower": -18.293772333300783,
+  "gaps": [
+    {
+      "count": 10,
+      "epsilon": 0.0017739315380187568,
+      "X": {
+        "lower": 16.876752911969557,
+        "upper": 16.876752911969565,
+        "lower_hex": "0x1.0e072e0fb94ffp+4",
+        "upper_hex": "0x1.0e072e0fb9501p+4"
+      },
+      "Y": {
+        "lower": 5.3108324710531806e-05,
+        "upper": 5.310832471053182e-05,
+        "lower_hex": "0x1.bd81424684fa9p-15",
+        "upper_hex": "0x1.bd81424684fabp-15"
+      },
+      "gap": {
+        "lower": -1.4768427215062947,
+        "upper": -1.4768427215062943,
+        "lower_hex": "-0x1.7a125d5634862p+0",
+        "upper_hex": "-0x1.7a125d5634860p+0"
+      }
+    },
+    {
+      "count": 14,
+      "epsilon": 0.0013033544848739351,
+      "X": {
+        "lower": 31.263493099222302,
+        "upper": 31.26349309922231,
+        "lower_hex": "0x1.f437448a3e1a8p+4",
+        "upper_hex": "0x1.f437448a3e1aap+4"
+      },
+      "Y": {
+        "lower": 5.3108324710531806e-05,
+        "upper": 5.310832471053182e-05,
+        "lower_hex": "0x1.bd81424684fa9p-15",
+        "upper_hex": "0x1.bd81424684fabp-15"
+      },
+      "gap": {
+        "lower": 12.888279046358837,
+        "upper": 12.888279046358841,
+        "lower_hex": "0x1.9c6cc82dbaaa3p+3",
+        "upper_hex": "0x1.9c6cc82dbaaa5p+3"
+      }
+    },
+    {
+      "count": 18,
+      "epsilon": 0.0010298227578988389,
+      "X": {
+        "lower": 50.0769225748605,
+        "upper": 50.07692257486051,
+        "lower_hex": "0x1.909d89953accbp+5",
+        "upper_hex": "0x1.909d89953accdp+5"
+      },
+      "Y": {
+        "lower": 5.3108324710531806e-05,
+        "upper": 5.310832471053182e-05,
+        "lower_hex": "0x1.bd81424684fa9p-15",
+        "upper_hex": "0x1.bd81424684fabp-15"
+      },
+      "gap": {
+        "lower": 31.68006264085817,
+        "upper": 31.68006264085818,
+        "lower_hex": "0x1.fae1895d1b79dp+4",
+        "upper_hex": "0x1.fae1895d1b79fp+4"
+      }
+    },
+    {
+      "count": 22,
+      "epsilon": 0.0008510965605954963,
+      "X": {
+        "lower": 73.31704133888415,
+        "upper": 73.31704133888418,
+        "lower_hex": "0x1.2544a67c17f33p+6",
+        "upper_hex": "0x1.2544a67c17f35p+6"
+      },
+      "Y": {
+        "lower": 5.3108324710531806e-05,
+        "upper": 5.310832471053182e-05,
+        "lower_hex": "0x1.bd81424684fa9p-15",
+        "upper_hex": "0x1.bd81424684fabp-15"
+      },
+      "gap": {
+        "lower": 54.89852235047496,
+        "upper": 54.89852235047498,
+        "lower_hex": "0x1.b7302c7c701ecp+5",
+        "upper_hex": "0x1.b7302c7c701eep+5"
+      }
+    }
+  ],
+  "pilots": [
+    {
+      "count": 14,
+      "offset": -128,
+      "order": 48,
+      "refined_order": 60,
+      "ritz_values": [
+        0.27738989205498427,
+        0.27742809001914165,
+        1.0900070454953361,
+        1.0902300111296728,
+        2.394127172544678,
+        2.3950214748317804,
+        4.142732903334723,
+        4.146658227798476
+      ],
+      "residual_norms": [
+        1.3037266212965624,
+        1.3027180488974,
+        2.295630679513461,
+        2.293415198259306,
+        2.7825118037806824,
+        2.7786648643890848,
+        2.886077020112618,
+        2.8780394583335682
+      ],
+      "refined_residual_norms": [
+        1.3037266212963905,
+        1.302718048897235,
+        2.295630679513236,
+        2.2934151982590922,
+        2.7825118037805416,
+        2.778664864388951,
+        2.8860770201125945,
+        2.8780394583335736
+      ],
+      "quadrature_change": 2.2515322939398175e-13,
+      "form_action_max_difference": 4.880007509200368e-11,
+      "complement_gap_lower": 12.888279046358837
+    },
+    {
+      "count": 14,
+      "offset": 0,
+      "order": 48,
+      "refined_order": 60,
+      "ritz_values": [
+        0.20262789974984224,
+        0.20414739166174622,
+        0.791231661608137,
+        0.8002120813116553,
+        1.7130485509986821,
+        1.7400559270230014,
+        2.8748020971964863,
+        2.926689441152911
+      ],
+      "residual_norms": [
+        1.2184591529446365,
+        0.9942723685916558,
+        2.2171203456820274,
+        1.8025590474023971,
+        2.8359017238807778,
+        2.2937451799699327,
+        3.0230240294598905,
+        2.43021189189711
+      ],
+      "refined_residual_norms": [
+        1.2184591529447233,
+        0.9942723685915879,
+        2.2171203456821695,
+        1.8025590474023065,
+        2.8359017238808306,
+        2.293745179969785,
+        3.0230240294598736,
+        2.4302118918969815
+      ],
+      "quadrature_change": 1.474376176702208e-13,
+      "form_action_max_difference": 4.841965717261587e-11,
+      "complement_gap_lower": 12.888279046358837
+    },
+    {
+      "count": 14,
+      "offset": 128,
+      "order": 48,
+      "refined_order": 60,
+      "ritz_values": [
+        0.2772558065467718,
+        0.28031191818446316,
+        1.0835173699147633,
+        1.1061736079173006,
+        2.364812365067671,
+        2.4409028798639563,
+        4.077237262010948,
+        4.234745469282775
+      ],
+      "residual_norms": [
+        1.5428978720888982,
+        1.0588324571321275,
+        2.729843442721943,
+        1.8584998287859134,
+        3.335010176175456,
+        2.237671156432548,
+        3.4848164769193692,
+        2.296530880226402
+      ],
+      "refined_residual_norms": [
+        1.5428978720890723,
+        1.0588324571322267,
+        2.729843442722213,
+        1.858499828785874,
+        3.3350101761756568,
+        2.2376711564323997,
+        3.4848164769194505,
+        2.2965308802262894
+      ],
+      "quadrature_change": 2.7000623958883807e-13,
+      "form_action_max_difference": 4.8046899792097975e-11,
+      "complement_gap_lower": 12.888279046358837
+    },
+    {
+      "count": 18,
+      "offset": -128,
+      "order": 60,
+      "refined_order": 72,
+      "ritz_values": [
+        0.26426602383722386,
+        0.2643186414289307,
+        1.0511124116437403,
+        1.0513824933426088,
+        2.340804218743311,
+        2.3417798202125866,
+        4.087890692653681,
+        4.091973805938775
+      ],
+      "residual_norms": [
+        0.33048665165237623,
+        0.3299846926851974,
+        0.613534766500802,
+        0.6124276646648943,
+        0.8094858783135411,
+        0.8073592900068988,
+        0.9037232999666268,
+        0.8990686144305498
+      ],
+      "refined_residual_norms": [
+        0.33048665165219865,
+        0.32998469268501995,
+        0.6135347665005219,
+        0.6124276646646145,
+        0.8094858783132329,
+        0.807359290006584,
+        0.9037232999663134,
+        0.8990686144302341
+      ],
+      "quadrature_change": 3.15636405900932e-13,
+      "form_action_max_difference": 4.7915449385982356e-11,
+      "complement_gap_lower": 31.68006264085817
+    },
+    {
+      "count": 18,
+      "offset": 0,
+      "order": 60,
+      "refined_order": 72,
+      "ritz_values": [
+        0.18973992869552414,
+        0.19557051891736676,
+        0.7500658583164668,
+        0.7728325364624768,
+        1.6491112270527741,
+        1.6975473602396025,
+        2.8055269329630903,
+        2.880778719523362
+      ],
+      "residual_norms": [
+        0.3215943710450556,
+        0.22790161424006522,
+        0.5976927028646541,
+        0.4239912736953511,
+        0.7928731066680962,
+        0.5632639698152493,
+        0.8816099870345157,
+        0.6265204655330645
+      ],
+      "refined_residual_norms": [
+        0.32159437104510064,
+        0.22790161424004746,
+        0.5976927028647548,
+        0.42399127369533224,
+        0.7928731066682723,
+        0.5632639698152331,
+        0.881609987034733,
+        0.6265204655330305
+      ],
+      "quadrature_change": 2.1738166822160565e-13,
+      "form_action_max_difference": 4.7642223499622105e-11,
+      "complement_gap_lower": 31.68006264085817,
+      "full_coupling_norm_estimate": 245.52579327281904,
+      "zero_shift_schur_norm_upper_estimate": 1902.8660342514424
+    },
+    {
+      "count": 18,
+      "offset": 128,
+      "order": 60,
+      "refined_order": 72,
+      "ritz_values": [
+        0.2578692766356073,
+        0.2718486708508391,
+        1.0258107988102394,
+        1.0811471610069339,
+        2.285345226189987,
+        2.4070085371886325,
+        3.9960212750377844,
+        4.200493071538267
+      ],
+      "residual_norms": [
+        0.427091800927443,
+        0.23400561385328927,
+        0.7958278628126128,
+        0.43632022877449045,
+        1.057520692278028,
+        0.5774127073968001,
+        1.1918962689354937,
+        0.6422883613542112
+      ],
+      "refined_residual_norms": [
+        0.4270918009273208,
+        0.23400561385355328,
+        0.7958278628124296,
+        0.43632022877485066,
+        1.0575206922778249,
+        0.5774127073971103,
+        1.1918962689352561,
+        0.6422883613544715
+      ],
+      "quadrature_change": 3.6021186033963204e-13,
+      "form_action_max_difference": 4.7492676458205096e-11,
+      "complement_gap_lower": 31.68006264085817
+    }
+  ],
+  "target": "Exact A=4 Dirichlet form square H_min*H_min, q=512000, angular center398855.5.",
+  "certified": "Whole-box interval geometry and the stated Young/Poincare form inequality certify the complementary-space gaps, uniformly in angular offset.",
+  "numerical_only": "Ritz values, continuum differential residual integrals and coupling norms use floating quadrature/eigensolves. Refinement changes are not certified errors.",
+  "limitations": [
+    "The complementary subspace is not invariant; its gap alone cannot bound omitted heat.",
+    "The Schur formula needs coupling bounds; individual residuals do not control the whole coupling operator.",
+    "No pointwise heat certificate, natural-exterior boundary bound, renormalized stress, stable medium or backward passage."
+  ],
+  "formulas": {
+    "gap": "(1-epsilon)*wmin^2*pi^2*((N+1)^2+1)/64-C-(1/epsilon-1)*wmax^2*Bmax^2",
+    "connection": "Bmax^2 >= L^2/4 sup(|grad log(alpha^2 beta)|^2+|grad log alpha|^2)",
+    "schur": "For real z<gamma: 0 <= R*(A_Q-z)^-1 R <= R*R/(gamma-z).",
+    "residual": "For normalized v in D(A): dist(lambda,spectrum(A)) <= ||(A-lambda)v||; this does not identify or count eigenvalues."
+  },
+  "generated_evaluators": {
+    "interval": "def _lambdifygenerated(rho, z):\n    x0 = sqrt(65)\n    x1 = (mpf(1)/mpf(20))*x0\n    x2 = rho**2\n    x3 = z + mpf(-1)/mpf(2)\n    x4 = x2 + x3**2\n    x5 = sqrt(x4)\n    x6 = z + mpf(1)/mpf(2)\n    x7 = x2 + x6**2\n    x8 = sqrt(x7)\n    x9 = x1 + (mpf(1)/mpf(2))*x5 + (mpf(1)/mpf(2))*x8 + mpf(-1)/mpf(4)\n    x10 = x9**2\n    x11 = ((mpf(1)/mpf(20))*x0 + mpf(-1)/mpf(4))**2\n    x12 = mpf(1)/mpf(4) - x11\n    x13 = x5 + x8\n    x14 = x13**(-2)\n    x15 = z**2\n    x16 = 4*x15\n    x17 = x14*x16\n    x18 = x10 - x12*x17\n    x19 = x18**2\n    x20 = 1/x7\n    x21 = 1/x4\n    x22 = x20*x21\n    x23 = x19*x20/x4**2\n    x24 = 2*rho\n    x25 = x19*x21/x7**2\n    x26 = 1/x5\n    x27 = rho*x26\n    x28 = 1/x8\n    x29 = rho*x28\n    x30 = x27 + x29\n    x31 = 2*x30*x9\n    x32 = 8*x12*x15\n    x33 = x13**(-3)\n    x34 = x33*(-2*x27 - 2*x29)\n    x35 = -x31 + x32*x34\n    x36 = -x35\n    x37 = 1/x19\n    x38 = x37*x4*x7\n    x39 = 2*z\n    x40 = x14*z\n    x41 = x26*x3\n    x42 = x28*x6\n    x43 = x41 + x42\n    x44 = 2*x43*x9\n    x45 = x33*(-2*x41 - 2*x42)\n    x46 = -16*x12*x40 - x32*x45 + x44\n    x47 = 1 - x17\n    x48 = x12*x47\n    x49 = x10 + x11 + mpf(-1)/mpf(4)\n    x50 = (mpf(1)/mpf(10))*x0 + mpf(-1)/mpf(2)\n    x51 = x49 - x50*x9\n    x52 = x48*x51 + x49**2\n    x53 = sqrt(x12)\n    x54 = x53 + mpf(1)/mpf(2)\n    x55 = x54**(-2)\n    x56 = x1 + mpf(1)/mpf(4)\n    x57 = x56**(-2)\n    x58 = x11*x47\n    x59 = x55*x57*x58\n    x60 = 1/x54\n    x61 = 1/x56\n    x62 = x53*x58*x60*x61\n    x63 = x48 + x51 + (mpf(1)/mpf(4))*x52*x59 + 2*x62*x9\n    x64 = x63**2\n    x65 = 1/x64\n    x66 = rho*x18*x65\n    x67 = (mpf(1)/mpf(2))*x27 + (mpf(1)/mpf(2))*x29\n    x68 = x50*x67\n    x69 = (mpf(1)/mpf(2))*x59\n    x70 = 4*x62\n    x71 = x52*x55*x57\n    x72 = x11*x15*x34\n    x73 = x53*x60*x61*x9\n    x74 = rho*x19/x63**3\n    x75 = x37*x64/rho\n    x76 = (mpf(1)/mpf(2))*x41 + (mpf(1)/mpf(2))*x42\n    x77 = -x16*x45 - 8*x40\n    x78 = x12*x77\n    x79 = x11*x77\n    return [x19*x22, x38*(x18*x20*x21*x36 - x23*x24 - x24*x25), x38*(x18*x22*x46 + x23*(1 - x39) + x25*(-x39 - 1)), x75*(x19*x65 + x36*x66 + x74*(x35 - x67*x70 + 2*x68 - x69*(-x12*x16*x34*x51 + x31*x49 + x48*(x30*x9 - x68)) + 2*x71*x72 + 16*x72*x73)), x75*(x46*x66 + x74*(-x44 + 2*x50*x76 - x69*(x44*x49 + x48*(x43*x9 - x50*x76) + x51*x78) - x70*x76 - mpf(1)/mpf(2)*x71*x79 - 4*x73*x79 - 2*x78))]\n",
+    "floating": "def _lambdifygenerated(rho, z):\n    x0 = rho**2\n    x1 = z + 1/2\n    x2 = x0 + x1**2\n    x3 = sqrt(65)\n    x4 = (1/20)*x3\n    x5 = z - 1/2\n    x6 = x0 + x5**2\n    x7 = sqrt(x6)\n    x8 = sqrt(x2)\n    x9 = x4 + (1/2)*x7 + (1/2)*x8 - 1/4\n    x10 = x9**2\n    x11 = (1/20)*x3 - 1/4\n    x12 = x11**2\n    x13 = 1/4 - x12\n    x14 = x7 + x8\n    x15 = x14**(-2.0)\n    x16 = x13*x15\n    x17 = z**2\n    x18 = 4*x17\n    x19 = x10 - x16*x18\n    x20 = x19**2\n    x21 = x20**(-1.0)\n    x22 = x21*x6\n    x23 = x2*x22\n    x24 = x6**(-2.0)\n    x25 = x2**(-1.0)\n    x26 = x20*x25\n    x27 = x24*x26\n    x28 = 2*x27\n    x29 = x2**(-2.0)\n    x30 = x6**(-1.0)\n    x31 = x20*x30\n    x32 = x29*x31\n    x33 = 2*x32\n    x34 = x7**(-1.0)\n    x35 = rho*x34\n    x36 = x8**(-1.0)\n    x37 = rho*x36\n    x38 = x35 + x37\n    x39 = x38*x9\n    x40 = 2*x39\n    x41 = x14**(-3.0)\n    x42 = -2*x35 - 2*x37\n    x43 = x41*x42\n    x44 = 8*x13*x17\n    x45 = -x40 + x43*x44\n    x46 = -x45\n    x47 = -rho*x28 - rho*x33 + x19*x25*x30*x46\n    x48 = 2*z\n    x49 = x48 - 1\n    x50 = -x49\n    x51 = x48 + 1\n    x52 = -x51\n    x53 = 16*x16\n    x54 = x34*x5\n    x55 = x1*x36\n    x56 = x54 + x55\n    x57 = x56*x9\n    x58 = 2*x57\n    x59 = -2*x54 - 2*x55\n    x60 = x41*x59\n    x61 = x44*x60 + x53*z - x58\n    x62 = -x61\n    x63 = x25*x30\n    x64 = x19*x63\n    x65 = x27*x50 + x32*x52 + x62*x64\n    x66 = 2*rho*x47\n    x67 = x2*x21\n    x68 = x2*x6/x19**3\n    x69 = (1/2)*x35 + (1/2)*x37\n    x70 = x6**(-3/2)\n    x71 = x0*x70\n    x72 = x2**(-3/2)\n    x73 = x0*x72\n    x74 = x44/x14**4\n    x75 = 2*x34\n    x76 = 2*x36\n    x77 = x41*x44\n    x78 = -x38*x9\n    x79 = x13*x43\n    x80 = x18*x79\n    x81 = 8*x0\n    x82 = x26/x6**3\n    x83 = x31/x2**3\n    x84 = x20*x24*x29\n    x85 = x24*x25\n    x86 = x19*x46\n    x87 = 4*rho*x86\n    x88 = x29*x30\n    x89 = -x28 - x33\n    x90 = (1/2)*x54 + (1/2)*x55\n    x91 = -x5**2*x70\n    x92 = -x1**2*x72\n    x93 = 8*z\n    x94 = -x56*x9\n    x95 = x18*x60\n    x96 = 4*z\n    x97 = x19*x62\n    x98 = 2*x97\n    x99 = -x15*x18 + 1\n    x100 = x13*x99\n    x101 = x12*x99\n    x102 = x10 + x12 - 1/4\n    x103 = (1/10)*x3 - 1/2\n    x104 = x103*x9\n    x105 = x102 - x104\n    x106 = x100*x105 + x102**2\n    x107 = sqrt(x13)\n    x108 = x107 + 1/2\n    x109 = x4 + 1/4\n    x110 = 1/(x108**2*x109**2)\n    x111 = x106*x110\n    x112 = x101*x111\n    x113 = 1/(x108*x109)\n    x114 = x107*x113\n    x115 = x101*x114\n    x116 = x100 + x105 + (1/4)*x112 + 2*x115*x9\n    x117 = x116**2\n    x118 = x117*x21/rho\n    x119 = x117**(-1.0)\n    x120 = rho*x119\n    x121 = x103*x69\n    x122 = x100*(-x121 - x78) + x102*x40 - x105*x80\n    x123 = x101*x110\n    x124 = (1/2)*x123\n    x125 = 4*x115\n    x126 = x111*x17*x43\n    x127 = x114*x9\n    x128 = x12*x127*x17*x43\n    x129 = rho*x20/x116**3\n    x130 = -x15*x93 - x95\n    x131 = x13*x130\n    x132 = x12*x130\n    x133 = x127*x132\n    x134 = (1/2)*x106\n    x135 = x103*x90\n    x136 = x100*(-x135 - x94) + x102*x58 + x105*x131\n    x137 = x11*x113\n    x138 = x104*x107 + x134*x137\n    x139 = (2/5)*x12\n    x140 = (4/5)*x115\n    x141 = (2/5)*x10 + (2/5)*x100 - 2/5*x104 + (1/10)*x112 + x139 + x140*x9 - 1/10\n    x142 = x141**(-1.0)\n    x143 = x142*x99\n    x144 = x138*x142\n    x145 = (1/2)*x137\n    x146 = (1/10)*x123\n    x147 = x138*x99/x141**2\n    return [x23, x23*x47, x23*x65, x22*x51*x65 + x22*x66 + x23*(x46*x63*(-x78 - x80) + x64*(2*x38*x69 - x42*x74*(-3*x35 - 3*x37) - x77*(2*x71 + 2*x73 - x75 - x76) + 2*x9*(x34 + x36 - x71 - x73)) + x81*x82 + x81*x83 + x81*x84 - x85*x87 - x87*x88 + x89) + x23*(2*x50*x52*x84 + x50*x82*(2 - x96) + x50*x85*x98 + x52*x83*(-x96 - 2) + x52*x88*x98 + x62*x63*(-x13*x95 - x16*x93 - x94) + x64*(-32*x13*x60*z - x53 + 2*x56*x90 - x59*x74*(-3*x54 - 3*x55) - x77*(-x75 - x76 - 2*x91 - 2*x92) + 2*x9*(x34 + x36 + x91 + x92)) + x89) + x45*x47*x68 + x49*x65*x67 + x61*x65*x68 + x66*x67, x118, x118*(x119*x20 + x120*x86 + x129*(2*x12*x126 + 2*x121 - x122*x124 - x125*x69 + 16*x128 + x45)), x118*(x120*x97 + x129*(2*x103*x90 - x110*x132*x134 - x124*x136 - x125*x90 - 2*x131 - 4*x133 - x58)), x138*x143, x143*(x107*x121 + x122*x145) - x144*x18*x43 + x147*((2/5)*x121 - x122*x146 + x126*x139 + (16/5)*x128 - x140*x69 + (8/5)*x17*x79 - 2/5*x39), x130*x144 + x143*(x107*x135 + x136*x145) + x147*((2/5)*x103*x90 - 1/10*x111*x132 - 2/5*x131 - 4/5*x133 - x136*x146 - x140*x90 - 2/5*x57)]\n"
+  },
+  "generated_sha256": {
+    "interval": "7ffbc5c92606b9bb4c4ff90eb9d42456f9c7af96d4528dae2b3a83d8e5d2a994",
+    "floating": "f2df6435fee6ea19cf8f6902cb200ee54682fc5b8a4a513693e8829fe60db051"
+  },
+  "source_sha256": "5786274191af3468b82ed11f7bd3eb88a1e907f3fe4d3b0e12444580a044e639",
+  "state_sha256": "c921086538e3678f839e0d1d576b9b2261a1e8aa2cf52bed7dd4b27bd2d651fd",
+  "input_sha256": {
+    "dihole_continuum_heat_tail.py": "5a1ea1a80229a664dc5d1e8473f27ddae460c491b6a81ad588d50174b9ef4f09",
+    "dihole_continuum_heat_tail_results.json": "4b3f5bb7dfcdebeabcaf8bd79336307432ebdcbfc27e9d3caed3340670bd108a",
+    "dihole_finite_heat.py": "ff220eb27e16db3ecc8aa46e1406fc6f5f01f00a2cdb7a6c6b17b628fad629f4",
+    "dihole_heat_angular_state.npz": "218545a22a2f1d9d757f7d7535c5534c82a2233e1cdac0b938dd885ceed01bdd",
+    "dihole_optical_heat.py": "409c96faf0e878b7843970101082b5f3b53da3f8118e3b7513fe63833499e8d4",
+    "dihole_probe_certificate_results.json": "d3c3e55a125c539baa8e9b5c41f97429e2759850a419c23280b70522e26f2843",
+    "dihole_quadrature_remainder.py": "4f55a06e5a346bc40b2e51ce739f5561ad8658f03ed33cd906ebb8151eb1ef9d",
+    "null_saddle_leads.py": "222dcb8346005de9d1e1ed382c5945b371e434deee620481d28bc203c36696e9",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "runtime_seconds": 11.711546100035775
+}

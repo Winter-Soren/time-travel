@@ -1,5 +1,169 @@
 # Reproduction and coupled-model iterations
 
+## Spatial-complement gap and strong residual test — increment125
+
+[Driver](../scripts/dihole_spatial_complement.py),
+[results](../results/dihole_spatial_complement_results.json),
+[saved Ritz vectors](../data/dihole_spatial_complement_state.npz),
+and [figure](../figures/dihole_spatial_complement_progress.png).
+
+This increment proves a continuum lower bound on the omitted sine subspace
+of the exact A=4 Dirichlet square, uniformly in angular sector. A separate
+floating calculation measures the actual strong differential residuals and
+retained/omitted coupling. The latter remains too large for the simplest
+uniform Schur estimate. This is a useful restriction on the numerical method,
+not a heat-kernel certificate or a physical stability result.
+
+### Domain and complementary-space bound
+
+Let $A_j=H_{j,\min}^*H_{j,\min}$ be the operator associated with the closed
+form $\|H_j\phi\|^2$ on $H_0^1((-4,4)^2;\mathbb C^2)$, in canonical flat
+measure. This is the Friedrichs square; it is not the square of a separately
+chosen self-adjoint first-order boundary condition. Let $P_N$ retain both
+spin components of the normalized tensor sines with both indices at most N,
+and $Q_N=1-P_N$. Both projections preserve the form domain.
+
+Write $m=\alpha^2\beta$ and $w=(EL\alpha)^{-1}$. After the optical-to-canonical
+map $\phi=\sqrt m\,\psi$, the horizontal part of the Lichnerowicz form is
+
+$$
+\int w^2\sum_{i=u,v}|\partial_i\phi+B_i\phi|^2\,du\,dv,
+\quad
+B_u=\frac{i\sigma_y}{2}\partial_v\log\alpha-\frac12\partial_u\log m,
+\quad
+B_v=-\frac{i\sigma_y}{2}\partial_u\log\alpha-\frac12\partial_v\log m.
+$$
+
+There is no meridional gauge component in this frame. The scalar half-density
+terms have zero cross term with the anti-Hermitian spin connections, so
+
+$$
+\sum_i B_i^\dagger B_i=
+\tfrac14(|\nabla_\xi\log m|^2+|\nabla_\xi\log\alpha|^2)I.
+$$
+
+The angular covariant square is nonnegative. The endomorphism bound from124
+is $-C$, with $C=18.293772333300783$. Young's inequality gives, for any
+$0<\epsilon<1$,
+
+$$
+A_j\ge (1-\epsilon)w_{\min}^2(-\Delta_D)
+-\{C+(\epsilon^{-1}-1)w_{\max}^2B_*^2\}I.
+$$
+
+On the omitted subspace, the first excluded Dirichlet Laplacian value is
+$\Lambda_N=\pi^2[(N+1)^2+1]/64$. The restricted form therefore satisfies
+
+$$
+A_{j,Q}\ge\gamma_N I,\qquad
+\gamma_N=(1-\epsilon)w_{\min}^2\Lambda_N-C
+-(\epsilon^{-1}-1)w_{\max}^2B_*^2.
+$$
+
+Calling this a form restriction avoids assuming an unbounded operator product
+has a particular domain. Its gap is not the gap of the entire operator.
+The continuous optimum, when $0<Y<X$, is $(\sqrt X-\sqrt Y)^2-C$,
+where $X=w_{\min}^2\Lambda_N$ and $Y=w_{\max}^2B_*^2$.
+The implementation instead chooses a nearby exact dyadic epsilon and verifies
+that explicit inequality by outward interval arithmetic.
+
+The exact balanced geometry and dyadic coordinates are unchanged. Closed
+16x16,32x32,64x64 interval covers enclose first derivatives on containing
+physical rectangles. The physical-to-scaled gradient conversion contributes
+$L^2$ to $B_*^2$. The finest cover supplies
+
+- $w_{\min}^2\ge0.8970347966321452$;
+- $w_{\max}^2\le1.104105871391272$;
+- $B_*^2\le4.810075381956858\times10^{-5}$.
+
+| Retained modes per coordinate | Enclosed lower bound on $\gamma_N$ |
+| --- | ---: |
+| 10 | -1.4768427215062947 |
+| 14 | 12.888279046358837 |
+| 18 | 31.68006264085817 |
+| 22 | 54.89852235047496 |
+
+The negative N=10 estimate only means this inequality does not improve the
+known nonnegativity of $A_j$ there. It does not imply negative energy.
+
+### Actual coupling, rather than an invariant-subspace assumption
+
+Set $J=\operatorname{Im}\sigma_y$, $D_i=w\partial_i+w_i/2$, and denote the
+angular mass by U to distinguish it from the volume density. Directly
+expanding $A_j=-K_j^2$ gives
+
+$$
+\begin{aligned}
+A_j\phi={}&-w^2\Delta\phi-2w(w_u\partial_u+w_v\partial_v)\phi
++Jw(w_u\partial_v-w_v\partial_u)\phi\\
+&+\left[U^2-\tfrac w2\Delta w-\tfrac14|\nabla w|^2\right]\phi
++w(A_U U_v-A_V U_u)\phi.
+\end{aligned}
+$$
+
+Each finite sine trial is in the operator domain on the Dirichlet box.
+Its zero extension generally is not in the natural exterior square domain:
+a second application of the first-order operator can introduce boundary
+distributions. Consequently the following residuals concern the box only.
+
+For the exact Galerkin matrix $M_{ik}=\langle H\phi_i,H\phi_k\rangle$,
+$R=Q_NA_jP_N$ has columns $A_j\phi_k-\sum_i\phi_iM_{ik}$. A Ritz vector c
+with value nu obeys $r=(A_j-\nu)\phi_c=Rc$. The spectral theorem implies
+$\operatorname{dist}(\nu,\sigma(A_j))\le\|r\|$ for normalized trials.
+It does not identify an eigenvalue index, establish isolation, or give a
+pointwise heat error. With $A_{j,Q}\ge\gamma_N$ and real $z<\gamma_N$,
+
+$$
+0\le R^*(A_{j,Q}-z)^{-1}R\le\frac{R^*R}{\gamma_N-z}.
+$$
+
+The pilot evaluates full strong residuals directly, avoiding subtraction of
+large Gram matrices. It checks offsets -128,0,+128 and the lowest eight Ritz
+states at N=14 and18. At N=18 it reuses the frozen123 matrices exactly.
+Second-order integration agrees with the independently assembled first-order
+form matrix to within $4.89\times10^{-11}$ per entry. Increasing quadrature
+orders48/60 to60/72 changes residual norms by less than $3.61\times10^{-13}$;
+this observed change does not bound the integration or rounding error.
+
+At offset zero, the first Ritz value changes from0.20262789974984224 at N=14
+to0.18973992869552414 at N=18; its full residual decreases from1.2184591529447233
+to0.32159437104510064. This residual is still larger than the eigenvalue and
+cannot supply a tight spectral enclosure by the basic residual inequality.
+The numerical full coupling norm at N=18 is about245.526, giving the coarse
+zero-shift Schur norm estimate $\|R\|^2/\gamma_N\approx1902.87$.
+That uniform estimate is unhelpful for these low eigenvalues. Reporting only
+the positive omitted-space gap would conceal this problem.
+
+A more targeted future route is a residual correction or an energy-weighted
+coupling estimate. For example, for an exact retained source h, $z>0$ and
+$x=(M+z)^{-1}h$, Galerkin orthogonality gives the useful identity
+
+$$
+0\le\langle h,(A_j+z)^{-1}h\rangle-\langle h,(M+z)^{-1}h\rangle
+=\langle r,(A_j+z)^{-1}r\rangle\le\|r\|^2/z,
+\quad r=(A_j+z)x-h.
+$$
+
+This is a possible bound for a smeared response, not an already evaluated
+heat-kernel or stress certificate. Quadrature defects must be included when
+replacing the exact M by the stored matrix.
+
+### Checks, interpretation and next calculation
+
+Independent85-digit differentiation lies within the interval evaluator's
+point enclosures. A nonconstant polynomial test checks the full square action
+against successive first-order applications; a separate agent verifies the
+identity and Green's formula exactly with symbolic polynomial integration.
+The gap proof and Schur/residual implications received independent analytic
+checks. These are internal checks, not external peer review.
+
+Next: improve selected trial residuals and enclose their integrals, or find
+an effective energy-weighted coupling bound. Pointwise heat reconstruction
+and natural-exterior boundary comparison remain separate requirements.
+No supporting stress, material production, self-consistent throat, physical
+stability, new physical law or13Sep2027->12Sep2027 passage follows. The
+first-feedback professor milestone remains reached; no email has been sent.
+
 ## Continuum-box angular heat bound with enclosed geometry — increment124
 
 [Driver](../scripts/dihole_continuum_heat_tail.py),

@@ -58,6 +58,58 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Enclosed spatial-complement gap and coupling pilot — increment125
+- Previous124 published5bedede7fa962c9033197ffe6be51eae620bdcd0, private/clean.
+ 125 began clean; preserve all546 prior scientific files. Goal remains ACTIVE.
+- NEW dihole_spatial_complement driver/results/state/PNG/PDF. Reused124 exact
+ geometry/coordinate machinery and certified C=18.293772333300783; reused123
+ N18 M0/M1/M2 byte-for-byte, no old scientific reruns or rewrites.
+- Exact Dirichlet Friedrichs square A_j=H_min*H_min, form domain H0^1 onA4;
+ bothspin NxN canonical sines. Horizontal connection bound B_*²=L²/4 sup
+ (|grad log(alpha² beta)|²+|grad logalpha|²). Wholeclosed16²/32²/64² covers,
+ symbolic exact rational interval evaluator60digits, no sample extrema.
+- Finest wmin²=.8970347966321452,wmax²=1.104105871391272,
+ B_*²=4.810075381956858e-5. Choose exactdyadic eps near sqrt(Y/X),
+ X=wmin²*pi²*((N+1)²+1)/64,Y=wmax²B_*².
+ gamma=(1-eps)X-C-(1/eps-1)Y. Lowerbounds N10/14/18/22:
+ [-1.4768427215062947,12.888279046358837,31.68006264085817,54.89852235047496].
+ This is a restricted-form complementary-space gap, uniform j, not wholegap.
+ N10negative bound does not imply negative energy; A_j>=0 alreadyknown.
+- Exact real differential square Aphi=-w²Delta phi-2w gradw.gradphi
+ +Jw(wu*dv-wv*du)phi+[U²-w*Delta w/2-|gradw|²/4]phi
+ +w(AU*Uv-AV*Uu)phi. Canonical massU, J=imag(SY), AUAV=-J.
+ Direct residuals include every omitted spatial mode within Dirichlet box;
+ sine zeroextensions generally NOT in natural-exterior square domain.
+- Floatingpilot N14/18, offsets-128,0,+128, lowest8 states. Green/formmatrix
+ mismatch<4.89e-11; refined quadrature residualnormchange<3.61e-13 (notbounds).
+ Central lowest Ritz .20262789974984224 -> .18973992869552414,
+ residual1.2184591529447233 -> .32159437104510064. Residualstilllarge.
+ WholeRnorm~245.52579327281904; norm²/gamma~1902.8660342514424: simple
+ uniform Schur bound is unhelpful forlowstates. Gapalone doesnotboundheat.
+- Spectral theorem dist(nu,specA)<=||r|| fornormalizedtrial; noindex/isolation.
+ Schur 0<=R*(A_Q-z)^-1R<=R*R/(gamma-z) forrealz<gamma.
+ Retainedsource x=(M+z)^-1h, z>0 gives exact scalarerror
+ <r,(A+z)^-1r><=||r||²/z byGalerkinorthogonality. Notyetevaluated/certified.
+- Controls:85digitindependent derivatives inside IV, nonconstantK² action
+ errors<3.56e-15; separateagent exactpolynomial K²/Greenidentity. Full strict
+ run11.71155s,session42858exit0; final figureinspected. No simulationrunning.
+- NEXT: targeted residualcorrection/enclosed integrals orenergyweightedcoupling;
+ avoid treating smallquadraturechanges as continuumerror. Stillneedpointwise
+ heat/exteriorboundary bounds, renormalizedstress, backreaction/stability.
+- Professorfirstfeedbackmilestonealreadyreached; latestuserrequestanswered:
+ recommend first methodological feedback now using docs/PROFESSOR_BRIEF.md.
+ ExistingheartbeatPAUSED; noemailauthorized/sent ormonitorchange.
+- No material, stablemedium, newlaw or13Sep2027->12Sep2027passage.
+- Independent implementation audit PASS: all gap enclosures reproduced at80digits;
+ retained Ritz matrix defects<3.86e-13, norms within4.69e-15. Numerical spatial
+ error is genuine, not weakmatrix/eigensolver residual. No material defects.
+- Verification PASS:93 imports,733 links,8 historical guards,14 frozen inputs;
+ all546 prior science files and both historical suffixes byte-identical;
+ all125 source/state/generated/input hashes match.
+- SourceSHA5786274191af3468b82ed11f7bd3eb88a1e907f3fe4d3b0e12444580a044e639;
+  resultSHA4f3694b383a435607b88056cf131f30d010f7e096ac4cb886f0881a790781c34;
+  stateSHAc921086538e3678f839e0d1d576b9b2261a1e8aa2cf52bed7dd4b27bd2d651fd.
+
 ### Continuum-box angular tail with interval geometry — increment124
 - Previous goal turn PROGRESS:123 published361627f1fb6b70670c366372f301a7fad8435d1d;
   privateorigin/clean verified.124 began clean. Preserve all542 prior sciencefiles.
