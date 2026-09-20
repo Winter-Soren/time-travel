@@ -58,6 +58,87 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Long-throat integral and smooth-collar mode — increment103
+- Increment102 was published to private main at
+  d5d21ecb2deac51fe51cea3931c0ca63c215b686; local/remote equality, private
+  visibility and clean state were verified. Import remains complete; goal ACTIVE.
+- long_throat_integral.py completed in1240.724609s; agent-owned60955
+  exited0. No live solver remains. All13 final gates and112 sector/cut
+  checks PASS; no sign gate. All9 N4 and5 N2 sectors are complete.
+  Source frozen at7196643d8ce2542797e0f81e77ed9d958d42ae8afa4a542c2952fbcbd01d2a37;
+  data b66d8b6f194f149e7ee8a962aac214ca89a70a77bfcb2b2525f4c30471d7cc4f.
+  rho32, q1, b=.2, d1, ell6.4031242374328485, J9, complete N4/reprojected
+  N2, both actual Weyls, h=.05 orders8/12 and h=.035 order8. Scaled
+  window x in[1e-6,48], with correct d_kappa=dx/ell; endpoint and J11
+  samples are controls, not certified tails.1764 main+36 endpoint+12 J
+  evaluations; no extra N2 exterior solves. All19 input hashes preserved.
+- Primary phase-pi N4 central/upper pressure[-.01151672187723,-.00442474272160];
+  N2[-.01151656673367,-.00442468374760]; finer N4[-.01153738982898,-.00443303767703].
+  Both nulls negative; shift~1e-12. Phase0 is positive[.03753799016428,.01444250998466].
+  Matched-order mesh difference[-2.066944636e-5,-8.295528944e-6] (~.18-.19%);
+  N4-minus-N2[-1.551435615e-7,-5.897400104e-8]. Phase-pi summed observed
+  quadrature envelope[1.517936829e-9,5.800356816e-10]. These are sensitivities.
+  Last panel[9.51e-19,1.94e-10] and x96 kernel[2.62e-56,1.83e-27]
+  are small but do NOT bound omitted frequency intervals.
+- Independent frozen-data audit PASS:42 records,294 panels,2744 saved
+  rows including reuse. Quadrature/Jacobian<=6.94e-18; null<=1.39e-17;
+  sums/cutoff/spatial/endpoint/J comparisons and source/input hashes match.
+- New radial_angular_envelope.py/results.json are frozen; all5 checks
+  and independent48-record/36-decomposition audit PASS. Analytic infinite
+  direct-angular bound excludes retained feedback and frequency tails.
+  At rho32, x=.443915 after N4: central/upper scaled direct-null bounds
+  [1.60183e-8,7.82246e-8]. Actual saved N2-to-N4 change is dominated by
+  retained-channel feedback. Low-frequency ZERO-block bound is finite;
+  massive threshold bound is still insufficient.
+  Source f05ded740faccb712406e772cc3ecdfbd528d2bd4d9e6d3a625d004bdb3fc033;
+  data4dc876664bcf983fafa840ead90fe3fd923633e22c185753d4d6ad4a10abff17.
+- New smooth_collar_mode.py/results.json: all12 checks PASS in23.70s;
+  the physical outcome is recorded separately from test acceptance.
+  Same saved84 geometry, q1e5, n1, fixed w; no root rescan. Analytic
+  all-frequency periodic/antiperiodic contrast for this first multiplet
+  <=3.62103e-7632, while same-probe geometric flare is -1845.0749184.
+  This excludes that specified holonomy correction as a useful flare
+  budget; it does not bound arbitrary exterior states or absolute stress.
+  Formation independently audited bound, source/geometry and quadratures.
+  Source9e3127c19f574a55171d4a0d6865a1f0776ca07b31c644257f01277d995067b3;
+  data9409e212d0c86831af0de186433ddee2c99cf7e5f6844f5b061bc6f30a2000c1.
+- dirac_return_closure.py has the coordinated optional return_profile API;
+  default84 record is exact and undoing those3 changes restores old bytes.
+  This is the only authorized historical Python edit besides append-only
+  quantum_horizon_plot.py. Original84 results are unchanged.
+  API source b77bc49de35c5dc324035ee55c8c5c9f12d5362fecb58c7bbf58cc14e69bfaae.
+- Conditional finite-collar feedback proof is in RESEARCH103, independently
+  reviewed. M_H=2A_H+vstar/sqrt(2kappa)[C_H+sqrt(2/kappa)A_H] at kappa>0,
+  C_H<=sqrt(a*c_delta), vstar<=q*a/[4(d-a)^2]. Canonical current ports,
+  common passive return/existence and bounded Hermitian perturbation required.
+  Its crude partner term does not decay with cutoff. Exact kappa0 unitary
+  return counterexample swaps zero/massive channels despite tiny tunnelling;
+  passivity alone cannot yield a uniform threshold bound. Root symbolic
+  verification of absorption identity, unitarity and swap is exact.
+- Next analytical target: quantitative angular regularity of actual partner
+  coupling and threshold control; no further blind cutoff/mesh scan.
+  Next physical target: same-geometry absolute source and smooth exterior
+  completion. A supporting state must also solve geometry/stability; current
+  negative finite source is only one necessary diagnostic. No medium,
+  material recipe, formation, new physical law or chronology change proved.
+  13Sep2027->12Sep2027 remains UNPROVED. Goal stays ACTIVE.
+- New long_throat_integral_progress.png/.pdf generated and inspected.
+  Append-only helper at quantum_horizon_plot.py:7702.
+  Plotter3f17370d6856288560b6fac38d571c4dc95d80079b465c43e5204b2a2dc85669;
+  PNGb3aa9c037edd8c547339dbdfb41b1f62119857083f223d5b4cd67ed274a53a3f;
+  PDFcbe264a5b93ae9bfbe13f805b2c37d74d0a3a6881010bd80f2bbc1300e298d15.
+- All three producer/auditor tasks and the figure task finished their
+  bounded assignments. No running solver; do not claim unattended computation.
+- Final root checks PASS:448 historical files outside the six permitted
+  edits are byte-identical;186 old figures preserved. Research/task history
+  and old plotter bytes are exact;178 README/guide local links, five AST
+  checks, three producer result/source/input manifests and git diff checks
+  pass. Patch-context normalization changed two historical heading line
+  endings; original bytes were restored and preservation rechecked.
+  Private expected origin was verified. Ready to publish this14-file
+  increment from d5d21ecb2deac51fe51cea3931c0ca63c215b686; verify actual Git
+  HEAD/remote/clean state on resume before repeating any publication.
+
 ### Longer-throat pilot and defect-weighted remainder — increment102
 - Previous continuation classified PROGRESS: increment101 completed and
   published to private main at d9e442a3cbaafa70faf2fe07f448beb750bde413.

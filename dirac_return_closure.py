@@ -25,7 +25,7 @@ def central_radius(alpha, w, epsilon, delta):
         return float(u)
 
 
-def collar(w, alpha=1e-9, epsilon=None, delta=None, refinement=1, outer=100.):
+def collar(w, alpha=1e-9, epsilon=None, delta=None, refinement=1, outer=100., *, return_profile=False):
     if epsilon is None: epsilon=100000*alpha/6
     if delta is None: delta=float(3*mp.zeta(3)/mp.pi**2)*alpha
     if not (alpha>0 and 0<=epsilon<.1 and w>0 and outer>1):
@@ -87,7 +87,7 @@ def collar(w, alpha=1e-9, epsilon=None, delta=None, refinement=1, outer=100.):
     einstein=np.array([(1-b*b-2*R*bp)/R**2,(-1+b*b+2*R*b*a)/R**2,
                       ap+a*a+(a*b+bp)/R])
     curvature=-2*(R*Bd+B*B)
-    return {'clock':clock,'cuts':cuts,'central_radius_offset':offset,
+    record={'clock':clock,'cuts':cuts,'central_radius_offset':offset,
             'central_flare_over_alpha':center[4]/(r0*alpha),
             'central_lapse_curvature':center[3], 'mass_anchor':mass,
             'max_constraint':float(np.max(abs(C))),
@@ -98,6 +98,9 @@ def collar(w, alpha=1e-9, epsilon=None, delta=None, refinement=1, outer=100.):
             'curvature_squared_logq_over_q':float(np.max(curvature**2)*math.log(100000)/100000),
             'proper_half_length':float(sol.t[-1]),'integration_evaluations':sol.nfev,
             'parameters':dict(alpha=alpha,epsilon=epsilon,delta=delta,w=w)}
+    if return_profile:
+        return record, {'solution':sol,'central_radius_offset':offset,'alpha':alpha}
+    return record
 
 
 def closure_checks():

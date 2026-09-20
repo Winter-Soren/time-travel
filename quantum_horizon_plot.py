@@ -7699,6 +7699,94 @@ def long_throat_source_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def long_throat_integral_progress():
+    """Compare finite-window sources on the same prescribed long throat."""
+    from matplotlib.patches import Rectangle, Ellipse
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'long_throat_integral_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values())
+    g=d['geometry'];assert g['rho_c']==32 and g['b']==.2 and g==d['witness']['geometry']
+    assert np.isclose(g['proper_length'],2*g['b']*np.arcsinh(g['rho_c']),rtol=1e-13,atol=0)
+    integration=d['integration'];numbers=[2,4];cuts=[integration['cutoffs'][str(n)] for n in numbers]
+    recipes=('coarse','fine','finer_mesh');phase='pi'
+    for N,cut in zip(numbers,cuts):
+        assert [s['m'] for s in cut['sectors']]==list(range(-N,N+1))
+        assert all(s['mu']==s['m']+.5 and s['controls']['passed'] for s in cut['sectors'])
+        for key in recipes:
+            summed=cut['partial_sums'][key]
+            assert summed['config']['nmax']==N and summed['m_values']==list(range(-N,N+1))
+            assert summed['ell']==g['ell'] and summed['frequency_coordinate']=='x=kappa*ell'
+            for row in cut['sectors']:
+                part=row[key];assert part['edges']==summed['edges'] and part['order']==summed['order']
+                for name in ('h','R','nmax','outer_nmax','L','rho_c'):
+                    assert part['config'][name]==summed['config'][name]
+                for panel in part['panels']:
+                    weighted=np.asarray(panel['weights'])@np.asarray(panel['integrands'][phase]['pressure'])
+                    alternate=np.asarray(panel['kappa_weights'])@np.asarray(panel['raw_kappa_integrands'][phase]['pressure'])
+                    assert np.allclose(weighted,panel['responses'][phase]['pressure'],rtol=1e-11,atol=0)
+                    assert np.allclose(weighted,alternate,rtol=1e-11,atol=0)
+                    assert np.allclose(panel['x'],g['ell']*np.asarray(panel['kappa']),rtol=1e-13,atol=0)
+            for field in ('pressure','shift','null_plus','null_minus'):
+                expected=np.sum([s[key]['totals'][phase][field] for s in cut['sectors']],axis=0)
+                assert np.array_equal(expected,summed['totals'][phase][field])
+    values={key:np.array([c['partial_sums'][key]['totals'][phase]['pressure'] for c in cuts]) for key in recipes}
+    for key in recipes:
+        assert np.array_equal(values[key][1]-values[key][0],integration['N4_minus_N2'][key][phase]['pressure'])
+    fine=cuts[-1]['partial_sums']['fine'];coarse=cuts[-1]['partial_sums']['coarse'];mesh=cuts[-1]['partial_sums']['finer_mesh']
+    assert coarse['order']==mesh['order'] and coarse['config']['h']>mesh['config']['h']
+    assert all(c['partial_sums'][k]['edges']==fine['edges'] for c in cuts for k in recipes)
+    angular=values['fine'][1]-values['fine'][0];mesh_change=values['finer_mesh'][1]-values['coarse'][1]
+    assert np.array_equal(mesh_change,cuts[-1]['comparisons']['matched_order_mesh_difference'][phase]['pressure'])
+    frequency=max(cuts[-1]['sum_of_sector_quadrature_envelopes'][phase]['pressure'])
+    assert np.all(np.asarray(fine['totals']['0']['pressure'])>0)
+    assert np.all(np.isfinite(np.r_[values['fine'],values['finer_mesh']]))
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig,axes=plt.subplots(1,2,figsize=(13.5,8.4))
+    fig.subplots_adjust(left=.075,right=.965,bottom=.35,top=.66,wspace=.28)
+    fig.suptitle('Long-throat source: finite-window integrals',fontsize=18,fontweight='bold',y=.967)
+    fig.text(.5,.918,'Phase \u03c0 \u00b7 Connected minus invariant AdS reference \u00b7 Same prescribed geometry for both angular cuts',ha='center',fontsize=10.7,color='#475569')
+    fig.text(.5,.869,f"\u03c1c = {g['rho_c']:g}; b = {g['b']:g}d   |   Proper length = {g['proper_length']:.4f}d   |   Optical length = {g['optical_length']:.4f}d   |   Center lapse = {g['center_lapse']:.5f}",ha='center',fontsize=10,color='#475569')
+    probes=g['probes'];assert [p['name'] for p in probes]==['central','upper_side']
+    core=fig.add_axes([.29,.755,.44,.078]);core.set_axis_off();core.set(xlim=(-1.16,1.16),ylim=(-.80,.80))
+    core.add_patch(Rectangle((-1,-.27),2,.54,facecolor='#edf1f5',edgecolor='#64748b',lw=1))
+    for end in (-1,1):core.add_patch(Ellipse((end,0),.065,.54,facecolor='#edf1f5',edgecolor='#64748b',lw=1))
+    half=g['proper_length']/2
+    for probe,base,text_y,name,color in zip(probes,(.035,-.225),(.63,-.63),('Central probe','Upper-side probe'),('#b38516','#b36b2b')):
+        xx=g['b']*np.arcsinh(np.tan(probe['sigma']))/half;weight=np.asarray(probe['profile'])
+        assert len(xx)==len(weight) and np.min(weight)>=0 and max(abs(v) for v in probe['proper_support'])<half
+        core.fill_between(xx,base,base+.18*weight,color=color,alpha=.72)
+        center=probe['proper_center']/half
+        core.annotate(name,xy=(center,base+.18),xytext=(center,text_y),ha='center',va='center',fontsize=9.2,color=color,
+                      arrowprops={'arrowstyle':'-','lw':.8,'color':color})
+    fig.text(.055,.794,'Prescribed constant-radius core\nProfiles versus proper distance',fontsize=9.7,va='center',color='#475569')
+    fig.text(.76,.794,'Assumed geometry;\nsharp joins remain unsupported',fontsize=9.7,va='center',color='#475569')
+    colors=['#007e87','#7951b0'];x=np.array(numbers)
+    labels=[f"Primary: h/d={fine['config']['h']:g}, order {fine['order']}",f"Finer mesh: h/d={mesh['config']['h']:g}, order {mesh['order']}"]
+    for j,(ax,title) in enumerate(zip(axes,('A. Central compact probe','B. Upper-side compact probe'))):
+        ax.axhline(0,color='#64748b',lw=1.1)
+        for key,color,style,label,dy in zip(('fine','finer_mesh'),colors,('o-','s--'),labels,(8,-15)):
+            series=values[key][:,j];ax.plot(x,series,style,lw=1.7,ms=6,color=color,label=label)
+            for xx,yy in zip(x,series):
+                ax.annotate(f'{yy:+.8f}',(xx,yy),xytext=(0,dy),textcoords='offset points',ha='center',
+                            va='bottom' if dy>0 else 'top',color=color,fontsize=9.1)
+        ax.set_title(title,fontsize=12,pad=14)
+        ax.set_xticks(x,[f'N = {n}\n{2*n+1} azimuthal sectors' for n in numbers])
+        ax.set_xlim(1.5,4.5);ax.margins(y=.38)
+        ax.set_ylabel('Weighted energy + radial-pressure difference',fontsize=9.6)
+        ax.spines[['top','right']].set_visible(False);ax.grid(axis='y',alpha=.15);ax.set_axisbelow(True)
+    handles,legend=axes[0].get_legend_handles_labels()
+    fig.legend(handles,legend,loc='upper center',bbox_to_anchor=(.52,.729),ncol=2,frameon=False,fontsize=10)
+    fig.text(.5,.282,f"All m = \u2212N,\u2026,N at each finite mouth cutoff; outer J = {fine['config']['outer_nmax']} fixed. Both Weyl components; \u210f = c = d = 1.",ha='center',fontsize=10,color='#475569')
+    fig.text(.05,.227,f"Finite window {fine['edges'][0]:g} \u2264 x = \u03ba\u2113 \u2264 {fine['edges'][-1]:g}; integrands Q\u03ba/\u2113 use dx weights. This is not the infinite-frequency source.",fontsize=10,color='#475569')
+    fig.text(.05,.177,f'N=2 \u2192 4 changes: {angular[0]:+.3g} central, {angular[1]:+.3g} upper. N=4 matched-order mesh changes: {mesh_change[0]:+.3g}, {mesh_change[1]:+.3g}.',fontsize=9.8,color='#475569')
+    fig.text(.05,.128,f'N=4 frequency-panel sensitivity: {frequency:.2g}. These observed changes are not error bars or certified continuum/tail bounds.',fontsize=9.8,color='#475569')
+    fig.text(.05,.078,'Phase 0 has positive N=4 primary values. Full angular/frequency limits, physical support, junctions and stability remain open.',fontsize=10,color='#475569')
+    fig.text(.05,.027,'No stable medium or 13 Sep 2027 \u2192 12 Sep 2027 passage demonstrated.',fontsize=10.5,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'long_throat_integral_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

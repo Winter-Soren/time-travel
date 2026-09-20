@@ -1,5 +1,340 @@
 # Reproduction and coupled-model iterations
 
+## Long-throat integration, angular control and a smooth-collar mode — increment103
+
+### The negative sampled contribution survives a finite-window integral
+
+The [new integration](long_throat_integral.py), with [frozen data](long_throat_integral_results.json),
+completes all azimuthal sectors m=-4,...,4 for N=4 and m=-2,...,2 for
+N=2. It uses rho_c=32, q=1, b=.2, d=1 and ell=6.4031242374328485 in
+hbar=c=d=1 units. Both actual Weyl exterior operators are computed.
+The retained geometrical connection and phase choices are those of102;
+the existing sharp joins are still unsupported.
+
+Integration uses x=kappa*ell with panel edges
+[1e-6,.02,.2,1,4,12,24,48], corresponding to
+kappa in[1.56173762e-7,7.49634057]. Each panel has order8 and12 rules
+on h=.05; a separate h=.035 mesh uses order8. The dx/ell Jacobian is
+retained explicitly. Complete N=2 maps are Gram-reprojected from the
+same N=4 exterior solves, then their own nonlinear source is recomputed.
+There are1764 main plus36 endpoint and12 outer-cutoff paired-Weyl
+frequency evaluations; N=2 requires no duplicate exterior solves.
+
+| Cutoff, mesh, quadrature | Phase-pi central | Phase-pi upper |
+| --- | ---: | ---: |
+| N=2, h=.05, order12 | -0.01151656673 | -0.004424683748 |
+| N=4, h=.05, order12 | -0.01151672188 | -0.004424742722 |
+| N=2, h=.035, order8 | -0.01153723088 | -0.004432976723 |
+| N=4, h=.035, order8 | -0.01153738983 | -0.004433037677 |
+
+These are smeared connected-minus-invariant-AdS-reference rho+p_r
+diagnostics in the common core. At primary N=4, the shift contributions
+are[2.62287e-12,1.00880e-12], so both actual radial-null combinations
+are also negative. Phase zero instead gives[+0.03753799016,+0.01444250998]
+on the primary mesh, and stays positive on the finer mesh. Geometry
+alone therefore does not fix the source sign; phase/state preparation
+has not been supplied by this calculation.
+
+For phase pi, distinguish the numerical sensitivities:
+
+- N=4 minus N=2 at order12: [-1.55144e-7,-5.89740e-8], about0.00135%.
+- Matched-order8 mesh change: [-2.06694e-5,-8.29553e-6], about0.1795%
+  and0.1875%. Comparing the table's different-order rows alone is not
+  this matched-order diagnostic.
+- Sum of sector/panel absolute quadrature differences:
+  [1.51794e-9,5.80036e-10]. This is observed agreement, not a rigorous
+  integration-error bound. The largest envelope over both phases and
+  both nulls is4.67819e-7.
+
+Selected J=9 versus11 comparisons use the same h and x=.4,4 in sectors
+m=-4,0,4. They are selected outer-cutoff controls, not an infinite-J
+certificate. Actual endpoint samples at x=1e-7,1e-6,48,96 are saved.
+For phase pi, the last x=24..48 panel contributes[9.51e-19,1.94e-10];
+the scaled kernel at x=96 is[2.62e-56,1.83e-27]. Neither these small
+values nor a two-sample low-frequency rectangle is a bound on the
+uncomputed intervals. Full low/high-frequency and angular-remainder
+bounds remain explicitly absent from the saved diagnostics.
+
+All13 final gates and112 sector/cut checks pass; sign was never an
+acceptance gate. Runtime was1240.724609s (20m41s). All19 prior input
+hashes and the executed source are preserved. Independent reconstruction
+of42 recipe records,294 panels and2744 saved rows, including N=2 reuse,
+reproduces quadrature/Jacobians within6.94e-18 and null identities within
+1.39e-17; sector sums and all saved comparisons agree. No expensive
+exterior calculations were repeated for that audit.
+
+The [figure](long_throat_integral_progress.png) shows the prescribed core,
+actual compact-probe locations and finite integrals. This increment
+advances from three sampled contributions to a reproducible finite-window
+negative-source result. It does not establish the full quantum source,
+its gravitational response, formation, stability or chronology change.
+
+### A computable infinite-angular bound for the direct trace
+
+The [new envelope calculation](radial_angular_envelope.py) evaluates an
+analytic sum over every omitted n>N. Its [saved results](radial_angular_envelope_results.json)
+bound the DIRECT omitted source trace under physical-flux passivity. They
+do not bound omitted channels' feedback into retained modes, numerical
+errors, or the full frequency integral. These distinctions matter: the
+finite long-throat sample below is dominated by feedback.
+
+This is our further application of102's defect-weighted contraction
+identity, based on the standard
+[Julia/Halmos dilation](https://arxiv.org/pdf/1803.09329). It uses the actual
+secant-mass barrier instead of replacing that mass everywhere by its
+minimum. Let c=atan(rho_c), L=2c, s=sigma+c, k=kappa*ell, n0=N+1 and
+lambda0=sqrt[n0(n0+1)]. Define
+\[
+ Y(s)=\frac{\lambda_0\tanh(\sqrt{k^2+\lambda_0^2}s)}
+ {\sqrt{k^2+\lambda_0^2}+k\tanh(\sqrt{k^2+\lambda_0^2}s)}.
+\]
+Riccati comparison gives y_n(s)>=Y(s) for all n>=n0. Exact barrier
+integrals use J(s)=asinh[tan(s-c)], whose derivative is sec(s-c).
+For one nonnegative probe piece with support [a,b] and integral at most F,
+put C=max_[a,b] sec(s-c) and
+\[
+ a_r=2Y(a)[J(L)-J(b)],\quad a_l=2Y(L-b)[J(a)-J(0)],
+\]
+\[
+ A_0=2k(1+1/Y(a)),\qquad A_1=C(1+1/[2Y(a)]).
+\]
+For a partition0=s0<...<sM=L, set
+\(A=\sum_jY(s_j)[J(s_{j+1})-J(s_j)]>0\).
+Monotonicity supplies the transmission bound
+\(t_n\le e^{-kL-\lambda_n A}\). The compact Riccati forcing has magnitude
+at most f(4k+m). Integrating its damped equation gives the right reflection
+bound F(4k+lambda_n C)exp[-2k(L-b)-lambda_n a_r], and the analogous left
+bound. Integrating the logarithmic transmission variation gives
+\(|\delta\log t_n|\le F(A_0+A_1\lambda_n)\).
+
+The positive absorption estimate from102 gives
+\[
+ \delta_n^{-1}\le c_\delta\lambda_n,\qquad
+ c_\delta=\frac{\sec c}{2kY(L/2)^2[1-e^{-\lambda_0\sec(c)L}]}.
+\]
+Use lambda_n<=n+1/2 in positive polynomial factors and lambda_n>=n in
+exponentials. Define \(S_j(z)=\sum_{n=n0}^{\infty}(n+1/2)^j e^{-zn}\).
+They are closed geometric moments; the implementation uses expm1 to avoid
+loss of accuracy in1-exp(-z). Including the relative-kernel norm2, angular
+degeneracy2n+1, and BOTH Weyls exactly once, either null direct-high trace
+is bounded by
+\[
+ {8c_\delta F\over\pi}\left\{
+ e^{-2ka}[4kS_2(a_l)+CS_3(a_l)]
+ +e^{-2k(L-b)}[4kS_2(a_r)+CS_3(a_r)]
+ +2e^{-kL}[(A_0+2k)S_2(A)+A_1S_3(A)]\right\}.
+\]
+For pressure alone remove the extra2k in the last term. The implementation
+splits each bump into32 pieces and uses width*maximum(bump) for each F,
+so no unproved quadrature-error sign enters that upper envelope. Six
+fixed mass intervals provide a lower barrier A. The formula is a
+pointwise d_kappa kernel bound; divide by ell for the plotted d_k kernel.
+
+At k=0.4439150615, after N=4, the resulting full-Dirac direct-null bounds
+on the SCALED kernel are:
+
+| rho_c | Central direct-high bound | Upper direct-high bound |
+| --- | ---: | ---: |
+| 2 | 0.353527 | 12.5592 |
+| 8 | 2.86221e-5 | 0.00367698 |
+| 32 | 1.60183e-8 | 7.82246e-8 |
+
+These are evaluations of the analytic majorant in floating point, not
+outward-rounded interval certificates. The five runnable checks pass:
+closed geometric sums, domination of finite exact-lambda sums, nested
+probe-bin refinement, the monotone mass barrier, and the saved finite
+feedback decomposition. Independent direct finite-series evaluation of
+all48 envelopes agrees within1.60e-14 relative; source/input hashes match.
+
+### The observed cutoff change is now predominantly feedback
+
+Using the full stored102 middle-frequency matrices, split the known
+N=2-to-N=4 difference as direct-high trace, retained-mode feedback and
+finite output-Gram correction. No exterior solve is repeated. For rho32,
+phase pi, the UNSCALED kernel contributions are:
+
+| Contribution | Central | Upper |
+| --- | ---: | ---: |
+| Direct n=3,4 trace | +5.80439e-13 | +5.62833e-11 |
+| Feedback into retained channels | -1.08925e-6 | -4.18877e-7 |
+| Finite Gram projection term | -1.59967e-9 | -6.16222e-10 |
+
+Their sum reproduces the saved actual cutoff difference. Independent
+reconstruction across both long geometries and both phases checked36
+sector decompositions; the largest complete-cut identity error is6.42e-17.
+The tiny direct trace does not justify dropping feedback. In particular,
+the analytic n>4 bound above covers a different omitted range from this
+finite n=3,4 decomposition; neither is substituted for the other.
+
+### One rigorous low-frequency component, with a remaining threshold gap
+
+The zero-block compression of the FULL defect-weighted relative kernel
+also obeys norm<=2, even when the exterior mixes zero and massive modes.
+Its core amplitude is exp(-kappa Lopt), with defect1-exp(-2kappa Lopt).
+For pressure and either null derivative, the full-Dirac zero-block trace
+norm is4*kappa*If*exp(-kappa Lopt). Therefore
+\[
+ |\mathcal Q_0(\kappa)|\le
+ {4\kappa I_f\over\pi\sinh(\kappa L_{\rm opt})}
+ \le {4I_f\over\pi L_{\rm opt}}.
+\]
+The omitted zero-block integral over[0,epsilon] is at most
+4*If*epsilon/(pi*Lopt). At rho32 and epsilon=1e-6/ell, the central/upper
+bounds are[7.79961e-8,2.99985e-8]. This does not require a decoupled
+zero-mode return. The massive pressure estimate still behaves as1/kappa
+near zero and does NOT certify the entire omitted low-frequency integral.
+Further threshold information is required. These results support a more
+focused error analysis; they do not establish complete negative stress,
+a physical medium or backward travel.
+
+### What a finite exterior collar can and cannot bound
+
+An independently reviewed extension makes the missing weighted mixing
+estimate more explicit. It is conditional on canonical spherical current
+ports, a common passive outer return, existence of the composed boundary
+problems, and a bounded Hermitian partner perturbation confined to disjoint
+flat annuli b<r<a<d/2. It is not automatically an estimate for finite-facet
+matrices: those require their actual Gram and distinct defect operators.
+
+For the isolated-monopole comparison collar write
+C0=[[Rb,T],[T,Ra]], with diagonal r_b,n=-i*y_b,n, r_a,n=-i*y_a,n and
+t_n>=0 after fixed port phases. Let W_n=sqrt(delta_core,n), and define
+\[
+ A_H=\sup_{n>N}{t_n\over
+ \sqrt{\delta_{{\rm core},n}}\sqrt{1-|r_{a,n}|^2}},\qquad
+ C_H=\sup_{n>N}\sqrt{{1-|r_{b,n}|^2-t_n^2\over
+                         2\kappa\delta_{{\rm core},n}}}.
+\]
+The Julia estimate gives both isolated-collar weighted mixing norms at
+most2*A_H. With the same outer return R, the partner potential obeys
+vstar=||V||infinity<=q*a/[4(d-a)^2], as in the existing collar calculation.
+The current identity gives ||P_V||<=(2*kappa)^(-1/2) for its collar Poisson
+map and ||P0 W_H^-1||<=C_H+sqrt(2/kappa)*A_H. Green's identity between the
+actual solution and the comparison dual at -i*kappa cancels the common
+outer boundary term:
+\[
+ S_V-S_0=-iP_{0,{\rm dual}}^\dagger V P_V.
+\]
+Reversing comparison labels controls the other orientation. Consequently
+\[
+ \|W_H^{-1}(S_V)_{HL}\|,\quad
+ \|(S_V)_{LH}B_HW_H^{-1}\|
+ \le M_H:=2A_H+{v_*\over\sqrt{2\kappa}}
+                 [C_H+\sqrt{2/\kappa}A_H].
+\]
+No smallness assumption vstar/kappa<1 is used. These are operator norms;
+there is no extra mouth, angular-degeneracy or Weyl multiplier.
+
+For radial m=lambda/r, the scalar identity for
+g=delta-(2*kappa/mu)*y is
+g'=-2(my+kappa)g+2*kappa(1+y^2)(1-m/mu). Taking mu=lambda/a gives
+delta_collar<=2*kappa*a/lambda and therefore C_H<=sqrt(a*c_delta).
+For w=a-b and omega_minus/plus=sqrt[kappa^2+(lambda/a_or_b)^2],
+\[
+ t_\lambda\le[\cosh(\omega_-w)
+             +(\kappa/\omega_-)\sinh(\omega_-w)]^{-1},\qquad
+ 1-|r_{a,\lambda}|^2\ge{2\kappa\over\kappa+\omega_+}.
+\]
+These provide a scalar bound for A_H that decays with cutoff at each
+fixed positive kappa. The perturbation term using C_H, however, does not
+vanish with N. This estimate identifies the next needed improvement:
+use quantitative angular regularity of the partner coupling, rather
+than only its maximum amplitude. No numerical remainder certificate is
+claimed from this conditional inequality.
+
+There is an exact obstruction to making the isolated-collar result uniform
+down to kappa=0 using passivity alone. With one balanced zero channel and
+one massive channel, set y=tanh[lambda*log(a/b)], t=sech[lambda*log(a/b)],
+Rb=Ra=diag(0,-i*y), T=diag(1,t), and choose the passive unitary return
+\[
+ R=\begin{pmatrix}iy&t\\t&iy\end{pmatrix}.
+ \quad\Rightarrow\quad
+ R_b+TR(I-R_aR)^{-1}T=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+Thus a resonance can undo arbitrarily small tunnelling for an allowed
+return. The actual two-mouth exterior is not asserted to realize this
+return. Independent symbolic checks give exact zeros for the scalar
+identity, Rdagger*R-I and the displayed scattering identity. The result
+explains why actual exterior/threshold information is necessary; passive
+feedback alone cannot close the remaining bound.
+
+### A massive mode on the existing smooth collar
+
+The [smooth-collar calculation](smooth_collar_mode.py) reuses the fixed84
+background at q=100000, alpha=1e-9 and w=1.6194435263649365. An optional
+`return_profile=True` exposes the original dense solution; the default
+record is exactly unchanged. No opening-root search is repeated. The
+genuine first massive angular eigenvalue is lambda=sqrt(q+1), with q+2
+orientations and two Weyl copies. This is a separate large-flux geometry,
+not the q=1 connected answer multiplied by its degeneracy.
+
+The even-reflected collar has areal radius R(l), lapse N(l), outer areal
+radius100 and central clock N(0)=1. Its two endpoints are identified with
+periodic or antiperiodic radial holonomy in the same spin frame. Both
+domains conserve boundary current. This auxiliary circle has Lipschitz
+metric coefficients and a derivative jump at its seam, outside the compact
+probe. It is not the physical two-mouth exterior or a solved junction.
+The comparison cancels same-geometry local counterterms; it does not
+import the invariant-product reference's zero null stress to this collar.
+
+With r_e=hbar=c=1, the actual radial potential is lambda*N/R in optical
+distance, or m=lambda/R and k=kappa/N in proper distance. We retain
+log transmission to resolve a mass barrier far beyond floating-point
+exponent range. For transfer matrix M, put X=Tr(M)/2 and a=1/X. The
+periodic/antiperiodic determinant contrast is 2*atanh(a). Positivity of
+the transfer evolution in two fixed bases gives
+\[
+ X\ge\max(\cosh\Lambda,\cosh\kappa L),\quad
+ |\delta\log X|\le2\kappa I+J,
+\]
+where L=int dl/N, Lambda=int lambda dl/R, I=int f dl/N and
+J=int lambda*f dl/R. The proper-distance bump is nonnegative with support
+|l|<1. Thus a<=min(sech Lambda,2 exp(-kappa L)). Split the frequency
+integral at K=[Lambda+log(1+exp(-2Lambda))]/L. Including the actual
+multiplicity d=2(q+2), the entire first-multiplet contrast obeys
+\[
+ |\Delta Q_1|\le {2d\over\pi}
+ {\operatorname{sech}\Lambda\over\tanh^2\Lambda}
+ [IK^2+JK+2IK/L+2I/L^2+J/L].
+\]
+This bound is our derivation for these two specified domains, motivated
+by the angular gap in [Maldacena, Milekhin and Popov, sections2.3 and5.2](https://arxiv.org/html/1807.04726v3).
+It is not a bound over arbitrary exterior scattering operators.
+
+The [saved results](smooth_collar_mode_results.json) give
+L=3.141645065660619, Lambda=17601.927237125787 and
+|Delta Q1|<=3.62103e-7632. The SAME compact probe of the geometric flare
+requires Qgeom=-1845.0749184093; the ratio is below10^(-7634.707).
+The geometric expression is
+\[
+ Q_{\rm geom}=-{1\over G}\int N^2R f(R'/N)'\,dl,
+ \qquad G=4\pi\alpha/q.
+\]
+Integration by parts avoids differentiating noisy numerical data. Its
+value matches the retained83-action source on this84 background; that
+agreement checks consistent use of the existing approximation, not its
+completion by an actual exterior quantum state.
+
+All12 verification gates pass in23.70s, separately from the physical
+conclusion. They include exact default/profile preservation, independent
+background integrals, massive zero-frequency and massless controls,
+radial/background refinement, a finite metric variation, independent
+linear transfer and the positive-transfer inequalities. The finite
+8/12-point quadrature changes by4.45e-6 relative; the independent transfer
+and finest-step finite-variation relative errors are1.39e-9 and3.16e-10,
+respectively. That finite quadrature
+does not supply the infinite-frequency bound: the displayed analytic
+inequality does. Background integration and rounding are checked by
+refinement, not outward-rounded interval arithmetic. An independent
+90-digit reconstruction reproduces the bound; independent Einstein and
+action probe integrals agree mutually to2.28e-13 and with the saved
+values within4.3e-12 relative.
+
+The conclusion is narrow and useful: this first massive multiplet's
+response to these two holonomies cannot supply a meaningful flare budget
+here. Absolute varying-radius stress, the physical zero-mode return,
+other channels, formation and stability are still unresolved.
+
 ## Longer-throat pilot and a defect-weighted remainder — increment 102
 
 ### A remainder estimate without an unweighted high-block inverse

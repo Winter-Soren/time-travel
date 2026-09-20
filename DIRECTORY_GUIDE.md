@@ -11,6 +11,9 @@ project root; consult the reports before starting potentially expensive runs.
 | --- | --- |
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [RESEARCH.md](RESEARCH.md) |
+| Long-throat finite-window integral | [long_throat_integral.py](long_throat_integral.py), [results](long_throat_integral_results.json), [figure](long_throat_integral_progress.png) |
+| Infinite-angular direct-trace bound | [radial_angular_envelope.py](radial_angular_envelope.py), [results](radial_angular_envelope_results.json); conditional collar-feedback and threshold arguments in [RESEARCH.md](RESEARCH.md) |
+| First massive mode on the saved smooth collar | [smooth_collar_mode.py](smooth_collar_mode.py), [results](smooth_collar_mode_results.json); reuses [dirac_return_closure.py](dirac_return_closure.py) through an optional profile argument |
 | Longer-throat sampled source | [long_throat_source.py](long_throat_source.py), [results](long_throat_source_results.json), [figure](long_throat_source_progress.png) |
 | Defect-weighted angular remainder | [angular_defect_bound.py](angular_defect_bound.py), [results](angular_defect_bound_results.json); proof and assumptions in [RESEARCH.md](RESEARCH.md) |
 | Complete finite angular-source calculation | [complete_angular_source.py](complete_angular_source.py), [pilot and integration evidence](complete_angular_source_results.json), [figure](complete_angular_source_progress.png); continuum-state and angular-cutoff arguments in [RESEARCH.md](RESEARCH.md) |
