@@ -1,5 +1,153 @@
 # Reproduction and coupled-model iterations
 
+## Varying bilinear arms and physical channel amplitudes — increment114
+
+[Moving-arm helper](../scripts/null_saddle_tail.py),
+[matched calculation](../scripts/null_saddle_matched.py),
+[results](../results/null_saddle_matched_results.json), and
+[comparison figure](../figures/null_saddle_matched_progress.png).
+The113 square used translation-invariant leads at its faces. This increment
+propagates the actual bilinear mass along each arm, including the changing
+channel widths and centers. It also transports the remote incoming source
+and outgoing measurement. The remaining far endpoint is capped by a frozen
+lead; every arm still has a finite Hermite expansion on a full transverse line.
+
+### Exact moving-basis connection
+
+Use outward coordinate r and counterclockwise transverse coordinate tau on
+each arm. The mass is eta+2 epsilon r tau, with epsilon=-1 on u arms and+1
+on v arms. The normalized Hermite basis has frequency omega=2r and center
+c=-eta/(2 epsilon r). Let K_ij=<phi_i,partial_r phi_j>. Differentiating both
+the width and center gives the exact full-line connection
+
+$$
+K_{ij}=\frac{\sqrt{j(j-1)}\delta_{i,j-2}-\sqrt{(j+1)(j+2)}\delta_{i,j+2}}{4r}
+-\frac{\eta}{2\epsilon r^{3/2}}
+\left[\sqrt j\delta_{i,j-1}-\sqrt{j+1}\delta_{i,j+1}\right].
+$$
+
+The delta-n=2 terms change width; delta-n=1 terms translate the center.
+Selected finite blocks Kplus and Kminus remain skew-symmetric. Using the
+existing characteristic Hermite ordering and the positive pair coupling
+Lambda_j=2 sqrt(r j), the exact finite projected E=0 equations are
+
+$$
+a'=-K_+a-i\Lambda b,\qquad b'=i\Lambda^Ta-K_-b.
+$$
+
+Their generator preserves the indefinite current |a|^2-|b|^2. They contain
+all projected moving-basis terms; omitted Hermite modes remain a separate
+error. The finite projection is not an invariant subspace of the full PDE.
+
+### Stable inward evolution, including source and detector
+
+Write the homogeneous outgoing graph b=Za=-iYa. At a v arm include a
+prescribed remote incoming zero amplitude A_in: b=-iYa+g A_in. At a u arm,
+the remote outgoing zero amplitude is t a(r), where t is a row. The inward
+ODEs from the frozen cap r=Rfar are
+
+$$
+Y'=-\Lambda^T-K_-Y+YK_++Y\Lambda Y,\qquad
+ g'=(-K_-+Y\Lambda)g,\qquad
+ t'=t(K_++\Lambda Y).
+$$
+
+At the cap Y has paired identity entries, g=e0 on v arms, and t=e0^T on
+u arms. The irrelevant g/t is zero. At real zero energy, current conservation
+implies the exact finite-channel relations
+
+$$
+Z_v^\dagger Z_v=I,\quad Z_v^\dagger g=0,\quad g^\dagger g=1,
+\qquad I-Z_u^\dagger Z_u=t^\dagger t.
+$$
+
+Thus changing only Z while retaining a bare e0 source or simply reading the
+near-face zero coefficient would be incorrect. With the113 Cholesky Gram
+factors, the actual DG drive is Rminus g, the response map is
+Rminus Z Rplus^-1, and the remote detector is t Rplus^-1. No same-arm
+zero input-to-output term exists for the chiral orientation used here.
+At eta1,R2.5,p4,Rfar12 the analytic-coordinate Frobenius change in Z is
+.0490974 and the outgoing functional changes by.0432926 in Euclidean norm.
+These are boundary-map changes, not probabilities or uniform error bounds.
+
+The root driver reuses one node factorization for all distant-cap and ODE
+comparisons at fixed geometry/basis. Powers refer to channels at the remote
+caps. Let e_tail be summed near raw current minus remote output-minus-input
+current. The retained numerical ledger is
+
+$$
+1-P_{\rm out}=L_{\rm DG}+L_{\rm omitted}+\Delta_{\rm Gram}+e_{\rm tail}.
+$$
+
+All four terms are saved; the last two can be signed. Current conservation
+within this model does not prove its exterior-domain approximation.
+
+### Calculated transport and controls
+
+For eta1,R2.5,h=.0625,p4,Rfar12, the matched remote matrix is
+
+$$
+S\simeq i\begin{pmatrix}
+-.988627098960722&.149811830170466\\
+ .149811830170466&.988627098960719
+\end{pmatrix}.
+$$
+
+One top input gives raw powers .977383540799492 and .0224435844590245,
+summing to .999827125258517. The DG loss is .000170690358638;
+omitted outgoing face norm is .000002184382840. The signed Gram correction
+is about1.07e-14 and tail-current error about-7.77e-16. No renormalization
+or physical absorption claim is made. At identical fine mesh and four pairs,
+the113 frozen powers are .977446418588740 and .0223840869418859.
+
+| Single changed feature | Maximum power change from matched baseline |
+| --- | --- |
+| Frozen near-face leads instead of propagated arms | 6.28778e-5 |
+| Mesh h=.125 instead of.0625 | .00115889403 |
+| Remote cap Rfar6 instead of12 | 6.58906e-12 |
+| Remote cap Rfar24 instead of12 | 1.33227e-15 |
+| ODE relative tolerance1e-12 instead of1e-10 | 2.44249e-15 |
+| Node radius R3 instead of2.5 at fixed fine h | .000104829691 |
+| Six massive pairs instead of four | .00000101636351 |
+
+These measurements are sensitivities, not rigorous error bars. The cap24
+and tighter-ODE differences are at rounding level. Mesh loss dominates the
+current deficit, and the larger-node comparison also changes numerical
+propagation distance. The dominant routing survives the tested replacement;
+its quoted decimal digits are not certified physical precision.
+
+Ten coupled check groups pass. The frozen regression reproduces113's saved
+matrix within1.12e-16 and the eta reflection within2.00e-15. Helper
+finite-difference Hermite-connection/reconstruction checks are below2.26e-12.
+A separate agent assembled its own complex coefficient generator and
+integrated a short R2.5-to2.7 transfer matrix on all four arms. Independent
+block elimination agrees with Z,g,t to3.56e-16,3.33e-16,1.11e-16 respectively;
+transfer-current discrepancy is4.66e-15. No historical DG calculation or
+source was rewritten. Source/input hashes are included in the new result.
+
+### Domain limitation and literature comparison
+
+A full-line u arm includes points also covered by a full-line v arm in the
+outer corners. Attaching four independent arms to finite square faces is
+therefore not yet an exact decomposition of the plane. Small finite-face
+Gram corrections and convergence over tested p/Rfar values do not bound
+corner coupling or the infinite Hermite remainder. This is an improved
+finite exterior model, not a certified infinite-plane scattering matrix.
+The local normal form also still needs matching to the actual curved dihole.
+
+A closer primary comparison is [Anglin and Schulz, *Analytical solutions of
+the two-dimensional Dirac equation for a topological channel intersection*](https://arxiv.org/abs/1612.05126),
+Phys. Rev. B95,045430(2017). Their checkerboard step-mass model has an
+analytic coherent equal splitter. That is a different mass profile from
+eta-2uv, but confirms that channel splitting itself is established physics.
+No novelty claim is made for our routing observation.
+
+Next: control the shared corner/domain approximation or construct one
+consistent exterior, and obtain the frequency-dependent response needed for
+matching and vacuum stress. Real E=0 routing alone cannot supply the Casimir
+source. No supported throat, stability, material recipe or backward passage
+is established;13 September2027 to12 September2027 remains unproved.
+
 ## Local two-dimensional quantum scattering — increment113
 
 [Calculation](../scripts/null_saddle_scattering.py), [analytic frozen leads](../scripts/null_saddle_leads.py),

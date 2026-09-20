@@ -58,6 +58,55 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Varying-arm continuation and remote quantum scattering — increment114
+- Previous goal turn PROGRESS:113 committed/pushed8ce090da8995ea75e18e5e15b71de9bc7ec003aa;
+  privateorigin and cleanworktree verified. Current turn started clean.
+- NEW scripts/null_saddle_tail.py derives exact moving-Hermite connection
+  (width delta-n2, center delta-n1), finite projected generator and inward
+  E0 Riccati Y with Z=-iY. Also propagates incoming source g on v arms and
+  outgoing functional t on u arms. Near-face source is Rminus g; remote
+  output is t Rplus^-1 a_normalized. Bare zero coefficients are insufficient.
+  API tail_port returns lead,Z,source,output,metadata. RealE0 only.
+- Helper checks pass; independent short full-transfer audit on all4 arms,
+  R2.5->2.7,eta.7,p3 agrees in Z/g/t to3.56e-16/3.33e-16/1.11e-16.
+  SourceSHA619a3e339701493e3927d6af1e7fe1514dbf7448dcbf1c5e1ff39322e5e5a193.
+- NEW scripts/null_saddle_matched.py reuses DG assembly and one LU across
+  remote-cap/ODE variations. 9 cases,10 check groups PASS. First bounded
+  pilot also reproduced113 frozen amplitude to3.34e-16. Final finer frozen
+  regression1.12e-16, eta± reflection2.00e-15. No power renormalization.
+- eta1,R2.5,h.0625,p4,Rfar12: S=i[[-.988627098960722,.149811830170466],
+  [.149811830170466,.988627098960719]], raw powers .977383540799492/
+  .0224435844590245, sum .999827125258517. DG loss .000170690358638,
+  omitted norm .000002184382840, signed Gram~1.07e-14/tailcurrent~-7.77e-16.
+- Max power sensitivities: near-frozen vs varying6.28778e-5; h.125->.0625
+  .00115889403; Rfar6vs12 6.58906e-12;24vs12 1.33227e-15; tighterODE
+  2.44249e-15; nodeR3vs2.5 .000104829691; pairs6vs4 .00000101636351.
+  These are measured changes, not certified error bars. NodeR changes also
+  mix in DG propagation loss. Scalar port-current identities are not proof
+  of omitted Hermite completeness or the true whole-plane boundary problem.
+- Four full-transverse-line arms overlap in outer corners. Their separate
+  attachment is still an approximation. Future work MUST retain this caveat,
+  not label remote-cap convergence as a complete infinite-plane certificate.
+  At nonzero realE, remote zero-channel phase anchoring also needs care.
+- New source/resultSHA3c40496158348c806b14f115cb723e655a1c2878d5d5fa295be2de073b75b649
+  /89b81096ef92612e07f176a3f2d965991aada8aaa2ab474f04228e6df816eaa9.
+  PNG/PDF figures/null_saddle_matched_progress inspected. Left is a basis
+  envelope, not a full-field reconstruction; middle uses actual saved powers.
+- Newly checked primary comparison Anglin/Schulz arXiv1612.05126, PRB95,045430:
+  analytical checkerboard step-mass channel splitter. Its mass differs from
+  eta-2uv; splitting itself is established physics, no novelty claimed.
+- Verification: all490 prior science files and both historical note suffixes
+  byte-identical. New source/input hashes match; layout76imports,554links,
+  8historicalguards,14frozeninputs PASS. Flux/power ledgers below7.40e-15.
+  Figure inspected, diff clean; all bounded calculations and agent audits
+  finished. Ready for authorized private commit/push; no live job remains.
+- Professor-readiness notification already delivered in113; heartbeat remains
+  PAUSED. No email sent/authorized. Do not duplicate task or readiness notice.
+- NEXT: control shared corners/one consistent exterior and frequency-dependent
+  node response for actual curved-dihole matching and quantum vacuum stress.
+  RealE0 routing cannot supply Casimir source. No medium/backreaction/full
+  stability or chronology change;13Sep2027->12Sep2027 UNPROVED. Goal ACTIVE.
+
 ### Actual local two-dimensional quantum scattering — increment113
 - Previous goal turn PROGRESS:112 committed/pushed2772cf25dcaa31848ab7af11bbd3bff08f00361e;
   privateorigin and cleanworktree verified. This increment started with only

@@ -26,6 +26,11 @@ connection motivates the present calculation. Tunnelling between Dirac
 zero-mass lines is established subject matter; see
 [Tudorovskiy and Katsnelson](https://arxiv.org/abs/1206.2244).
 
+[Anglin and Schulz](https://arxiv.org/abs/1612.05126) analytically solve a
+right-angle channel splitter for a checkerboard step mass. Its mass profile
+differs from the smooth saddle below; the splitting mechanism itself is
+established physics.
+
 In natural units, for one chirality, quantized flux $q>0$ and half-integer
 azimuthal label $\mu$, write the metric as
 $ds^2=-N^2dt^2+P^2(d\rho^2+dz^2)+\rho^2N^{-2}d\phi^2$ and set
@@ -150,3 +155,12 @@ in [the research record](RESEARCH.md), with the
 The saved results include source, input and field hashes. The outstanding
 readiness gaps are a controlled lead-to-exterior matching procedure and
 continuum error estimates, before any physical return or support claim.
+
+A [subsequent finite-arm calculation](../results/null_saddle_matched_results.json)
+propagates the changing Hermite widths/centers and the source/detector maps.
+At the same fine mesh with four pairs it gives powers 0.977383541 and
+0.022443584. Ten coupled checks pass; a separate short-transfer audit also
+agrees. Tested remote-cap sensitivity is small; mesh error is larger. The
+four full-line arm domains overlap at corners, so this improvement still
+does not certify the complete plane or curved exterior. See the
+[updated derivation](RESEARCH.md) for assumptions and quantitative comparisons.

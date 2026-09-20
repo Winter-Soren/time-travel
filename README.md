@@ -6,6 +6,8 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The [varying-arm calculation](scripts/null_saddle_matched.py) now follows the changing magnetic channels beyond the central square, carrying both the incoming state and outgoing measurement. The dominant routing survives this replacement; ten coupled checks pass, with separate mesh, channel and remote-endpoint comparisons. The arms still overlap at their corners, and their connection to the curved exterior remains unresolved. [Results](results/null_saddle_matched_results.json) and [derivation](docs/RESEARCH.md) record these limits.
+
 The [local two-dimensional scattering calculation](scripts/null_saddle_scattering.py) now resolves quantum mixing near the magnetic null. For one tested channel offset, its finest baseline gives about 97.74% and 2.24% in the two outgoing zero modes, with numerical and omitted-mode losses recorded separately. Nine checks pass, including symmetry, current accounting, and a manufactured solution; mesh, box-size and lead-pair comparisons are saved. This uses a finite square with frozen leads, so global curved-exterior matching and supporting quantum stress remain open. See [results](results/null_saddle_scattering_results.json), [derivation](docs/RESEARCH.md), and the [concise technical-assessment brief](docs/PROFESSOR_BRIEF.md).
 
 The [two-dimensional slab bound](scripts/dihole_slab_bound.py) now covers every radial distance in a finite central strip, for the first azimuthal sector. It gives a rigorous but weak intrinsic transmission limit; exterior reflections are still missing. A separate [magnetic-null calculation](scripts/dihole_null_scaling.py) shows that quantum mixing near the null ring requires both spatial directions at leading order. These results define checks and scales for the next return calculation; they do not supply a supporting vacuum stress. See [derivations and limits](docs/RESEARCH.md).
@@ -40,6 +42,7 @@ Local state-admissibility arguments are now supplied for both the full invariant
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Varying magnetic arms](scripts/null_saddle_tail.py) · [matched node](scripts/null_saddle_matched.py) · [results](results/null_saddle_matched_results.json) · [figure](figures/null_saddle_matched_progress.png) | Exact projected moving-basis terms, transported input/output maps, independent transfer checks and matched DG controls | Local routing with finite varying arms; overlapping corners, infinite-mode errors and curved-exterior matching remain open |
 | [Local quantum scattering](scripts/null_saddle_scattering.py) · [leads](scripts/null_saddle_leads.py) · [results](results/null_saddle_scattering_results.json) · [figure](figures/null_saddle_scattering_progress.png) | Actual two-dimensional field, analytic Hermite leads, finite-face Gram transforms, exact symmetry and numerical controls | Complex two-input/two-output amplitudes in a finite frozen-lead model; infinite arms and the curved exterior remain uncompleted |
 | [Intrinsic slab transmission](scripts/dihole_slab_bound.py) · [results](results/dihole_slab_bound_results.json) | All-radius interval barrier, exact two-dimensional current identities, noncommuting algebra controls | A weak transmission-norm bound for one azimuthal sector with incoming data on one slab face; exterior feedback remains missing |
 | [Magnetic-null quantum scaling](scripts/dihole_null_scaling.py) · [results](results/dihole_null_scaling_results.json) · [figure](figures/dihole_null_scaling_progress.png) | Independent Maxwell/Hessian identities and local coefficient/connection comparisons | A two-dimensional local Dirac equation and shrinking mixing scales at large magnetic charge; finite frozen-lead scattering is calculated above; global matching remains open |
@@ -86,6 +89,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scripts/scattering_vacuum.py) · [results](results/scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Varying magnetic-arm basis and matched routing](figures/null_saddle_matched_progress.png)
+
+*The Gaussian basis contracts and moves along the arm; its source and detector must evolve too. Routing remains similar in the tested calculations. The separate cap, mesh, node-size and mode comparisons are measured sensitivities, not error bounds or a complete exterior solution.*
 
 ![Computed local quantum field and outgoing powers](figures/null_saddle_scattering_progress.png)
 

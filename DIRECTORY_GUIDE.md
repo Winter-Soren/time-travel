@@ -34,6 +34,7 @@ Run `python -B maintenance/verify_layout.py` for the lightweight layout check.
 | Current work and continuity | [TASK_STATE.md](TASK_STATE.md) |
 | Research results and reproduction notes | [docs/RESEARCH.md](docs/RESEARCH.md) |
 | Concise professor-assessment note | [docs/PROFESSOR_BRIEF.md](docs/PROFESSOR_BRIEF.md) |
+| Varying bilinear arms and matched local node | [scripts/null_saddle_tail.py](scripts/null_saddle_tail.py), [driver](scripts/null_saddle_matched.py), [results](results/null_saddle_matched_results.json), [figure](figures/null_saddle_matched_progress.png) |
 | Local quantum scattering and computed field | [scripts/null_saddle_scattering.py](scripts/null_saddle_scattering.py), [analytic leads](scripts/null_saddle_leads.py), [results](results/null_saddle_scattering_results.json), [field](data/null_saddle_fields.npz), [figure](figures/null_saddle_scattering_progress.png) |
 | Full meridional slab bound and local quantum mixing | [scripts/dihole_slab_bound.py](scripts/dihole_slab_bound.py), [results](results/dihole_slab_bound_results.json); [scripts/dihole_null_scaling.py](scripts/dihole_null_scaling.py), [results](results/dihole_null_scaling_results.json), [figure](figures/dihole_null_scaling_progress.png) |
 | Return topology, central quantum barrier and conditional support threshold | [scripts/dihole_return_geometry.py](scripts/dihole_return_geometry.py), [results](results/dihole_return_geometry_results.json), [figure](figures/dihole_return_progress.png); exact assumptions in [research notes](docs/RESEARCH.md) |
