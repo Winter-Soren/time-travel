@@ -8033,6 +8033,87 @@ def conforming_trial_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def magnetic_matching_progress():
+    """Plot the saved finite-mode magnetic matching calculation only."""
+    from matplotlib.patches import Circle, Rectangle, Ellipse
+    from matplotlib.lines import Line2D
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'magnetic_mouth_matching_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values())
+    p=d['parameters'];assert p['induced_cutoffs']==[3,6,9]
+    assert p['q']==1 and p['b']==.2 and p['d']==1 and p['rho_c']==32
+    assert d['conclusions']['finite_retained_magnetic_matching_solved']
+    assert not d['conclusions']['all_angular_matching_certified']
+    assert not d['conclusions']['smooth_Einstein_quantum_geometry_solved']
+    rows=[next(r for r in d['records'] if r['induced_cutoff']==L and r['quadrature_order']==max(p['quadrature_orders'])) for L in p['induced_cutoffs']]
+    bare=[];retained=[];higher=[]
+    for r in rows:
+        L,M=r['induced_cutoff'],r['monitor_degree']
+        assert M==L+p['monitor_extra_degrees']
+        c=np.array(r['repaired_derivative_mismatch_coefficients']).reshape(2,M)
+        degrees=np.arange(1,M+1);weights=2*degrees*(degrees+1)/(2*degrees+1)
+        rn=np.sqrt(np.sum(c[:,:L]**2*weights[:L]))
+        hn=np.sqrt(np.sum(c[:,L:]**2*weights[L:]))
+        assert np.isclose(hn,r['higher_mismatch_weighted_norm'],rtol=1e-12,atol=0)
+        assert np.isclose(np.hypot(rn,hn),r['monitored_total_mismatch_weighted_norm'],rtol=1e-12,atol=0)
+        bare.append(r['bare_mismatch_weighted_norm']);retained.append(rn);higher.append(hn)
+    assert np.all(np.array(retained)>0) and np.all(np.diff(higher)<0)
+    selected=rows[-1];b=p['b'];separation=p['d']
+    xx,zz=np.meshgrid(np.linspace(-.8,.8,501),np.linspace(-.94,.94,601))
+    rup=np.hypot(xx,zz-separation/2);rlo=np.hypot(xx,zz+separation/2)
+    mask=(rup<b)|(rlo<b)
+    ru=np.maximum(rup,b);rl=np.maximum(rlo,b)
+    original=p['q']/2*((zz+separation/2)/rl-(zz-separation/2)/ru)
+    repaired=original.copy()
+    for center,beta in ((separation/2,selected['beta_upper']),(-separation/2,selected['beta_lower'])):
+        radius=np.maximum(np.hypot(xx,zz-center),b);mu=(zz-center)/radius
+        for degree,coefficient in enumerate(beta,1):
+            derivative=np.polynomial.legendre.Legendre.basis(degree).deriv()(mu)
+            repaired+=coefficient*(b/radius)**degree*(1-mu**2)*derivative
+    assert np.all(np.isfinite(repaired[~mask]))
+    assert np.max(np.abs(repaired[~mask]-original[~mask]))>0
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig=plt.figure(figsize=(13.5,7.8))
+    fig.suptitle('Magnetic matching improves; the supporting geometry remains unresolved',fontsize=17,fontweight='bold',y=.96)
+    fig.text(.5,.904,'Prescribed product core + flat two-mouth exterior \u00b7 q = 1, mouth radius b = 0.2d \u00b7 Source-free Maxwell test',ha='center',fontsize=10.5,color='#475569')
+    ax=fig.add_axes([.07,.30,.38,.49]);ax.set_aspect('equal')
+    levels=np.array([.10,.20,.35,.50,.65,.80,.90,.96])
+    ax.contour(xx,zz,np.ma.array(original,mask=mask),levels=levels,colors='#94a3b8',linewidths=1.25,linestyles='--')
+    ax.contour(xx,zz,np.ma.array(repaired,mask=mask),levels=levels,colors='#007e87',linewidths=.85)
+    for center in (-separation/2,separation/2):
+        ax.add_patch(Circle((0,center),b,fc='white',ec='#152b3b',lw=1.4,zorder=4))
+    ax.text(0,.5,'Upper\ncut',ha='center',va='center',fontsize=8.6,color='#152b3b',zorder=5)
+    ax.text(0,-.5,'Lower\ncut',ha='center',va='center',fontsize=8.6,color='#152b3b',zorder=5)
+    ax.set(xlim=(-.8,.8),ylim=(-.94,.94),xlabel='Signed meridional x / d',ylabel='z / d')
+    ax.set_title('A. Magnetic flux contours, actual scale',fontsize=12,pad=14)
+    ax.spines[['top','right']].set_visible(False)
+    ax.legend(handles=[Line2D([0],[0],color='#94a3b8',ls='--',label='Original point pair'),Line2D([0],[0],color='#007e87',label='Matched L = 9')],loc='upper left',bbox_to_anchor=(.08,.864),bbox_transform=fig.transFigure,ncol=2,frameon=False,fontsize=9)
+    bx=fig.add_axes([.56,.31,.385,.47]);cuts=np.array(p['induced_cutoffs'])
+    bx.plot(cuts,bare,'s--',color='#94a3b8',ms=6,label='Original: all tested modes')
+    bx.plot(cuts,higher,'o-',color='#7951b0',ms=6,label='Matched: modes L+1 through L+6')
+    bx.plot(cuts,retained,'D-',color='#007e87',ms=5,label='Matched: retained modes 1 through L')
+    bx.set_yscale('log');bx.set_ylim(1e-19,.8);bx.set_xlim(2.5,9.8);bx.set_xticks(cuts)
+    bx.set_xlabel('Highest matched angular degree, L')
+    bx.set_ylabel('Weighted derivative mismatch (d = 1 units)',fontsize=10)
+    bx.set_title('B. Finite angular matching and remaining residual',fontsize=12,pad=14)
+    bx.grid(axis='y',alpha=.18);bx.spines[['top','right']].set_visible(False)
+    bx.legend(loc='center left',bbox_to_anchor=(0,.47),frameon=False,fontsize=9)
+    bx.annotate(f'{higher[-1]:.2e}',(9,higher[-1]),xytext=(-8,12),textcoords='offset points',ha='right',color='#7951b0',fontsize=10)
+    bx.text(.98,.19,'Retained equations: near floating-point precision',transform=bx.transAxes,ha='right',fontsize=9,color='#007e87')
+    schematic=fig.add_axes([.08,.205,.34,.05]);schematic.set_xlim(0,1);schematic.set_ylim(0,1);schematic.axis('off')
+    schematic.add_patch(Rectangle((.04,.25),.30,.35,fc='#edf1f5',ec='#64748b',lw=1))
+    for x in (.04,.34):schematic.add_patch(Ellipse((x,.425),.055,.35,fc='white',ec='#64748b',lw=1))
+    schematic.text(.4,.43,'Assumed throat\n(schematic only)',va='center',fontsize=9,color='#475569')
+    fig.text(.56,.225,'Contours nearly coincide at true scale. They are fields, not particle paths.',fontsize=9.6,color='#475569')
+    fig.text(.07,.155,'Only finite angular matching is solved; the untested tail is not bounded. Quadrature and cutoff checks are numerical consistency tests.',fontsize=10,color='#475569')
+    fig.text(.07,.111,'The sharp metric join and its stress remain. The quantum source must be reconsidered in the corrected magnetic field.',fontsize=10.1,color='#475569')
+    fig.text(.07,.067,'No material, formation or stability result follows from this field-matching calculation.',fontsize=10.2,color='#475569')
+    fig.text(.07,.025,'13 Sep 2027 \u2192 12 Sep 2027 remains unproved; this is not a physical medium or construction blueprint.',fontsize=10.6,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'magnetic_matching_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

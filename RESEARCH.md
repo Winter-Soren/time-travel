@@ -1,5 +1,222 @@
 # Reproduction and coupled-model iterations
 
+## Magnetic matching and a defined collar-source calculation — increment107
+
+### A known exact reference vacuum is not required
+
+The previous increment correctly required a common renormalization scheme,
+but its reference-based stopping criterion was too strong. An exact collar
+vacuum is not a prerequisite for defining the absolute quantum source.
+Hadamard subtraction removes the universal local singularity; calculating
+the remaining state-dependent part is the unfinished task.
+
+Our admissible formulation starts from one smooth static spin/gauge geometry
+\(g=-N^2dt^2+h\), with positive lapse, complete optical spatial metric
+\(N^{-2}h\), and a smooth magnetic bundle with flux integer q=1. Fix the
+spin structure, Wilson-loop holonomy and any zero-mode occupation. For a
+massless field, \(\Psi=N^{-3/2}\widetilde\Psi\) transports the state problem
+to the ultrastatic optical metric. The self-adjoint full Dirac Hamiltonian
+then supplies a spectral ground state; the stationary microlocal results of
+[Sahlmann and Verch](https://arxiv.org/pdf/math-ph/0002021) justify Hadamard
+regularity under their hypotheses. This specifies a possible framework;
+the present sharp metric/gauge joins are not silently treated as smooth.
+
+Use the local, spin-and-gauge covariant construction of
+[Zahn, sections 3–4](https://arxiv.org/pdf/1210.4031):
+
+\[
+ \langle T_{ab}\rangle_{\rm ren}
+ =\lim_{x'\to x}{\cal D}_{ab}(W_\omega-H_{\ell_{\rm ren}})+C_{ab},
+ \qquad
+ \langle j^a\rangle_{\rm ren}
+ =\lim_{x'\to x}{\cal J}^a(W_\omega-H_{\ell_{\rm ren}})+C^a.
+\]
+
+The local terms and finite couplings must be fixed once, including the
+subtraction scale, Newton/cosmological parameters, curvature-squared terms
+and Maxwell coupling. Their collar contributions cannot be adjusted after
+seeing whether a candidate opens. With the project's action convention
+\(j^a=(\sqrt{-g})^{-1}\delta\Gamma_D/\delta A_a\), diffeomorphism and gauge
+invariance require
+
+\[
+ \nabla_a j^a=0,\qquad \nabla_a T^a{}_b=F_{ba}j^a,\qquad
+ \nabla_a F^{ab}=-g_R^2j^b.
+\]
+
+Matter and electromagnetic stress exchange momentum. Zahn's explicit
+separately conserved free-stress calculation assumes vanishing gauge
+curvature; that specialization does not remove the force term here.
+A full Dirac determinant must also not receive the earlier approximate
+magnetic-log action a second time.
+
+Thus the next source test needs a smooth global operator and a renormalized
+Green function, not a guessed reference stress. This framework remains
+causal and does not establish a chronology-changing state or a preparation
+method. It provides a way to pose the support question consistently.
+
+### Magnetic compatibility before calculating that source
+
+For a prescribed spherical region
+\(ds^2=-N(l)^2dt^2+dl^2+r(l)^2d\Omega^2\) and
+\(A=a(l,\theta)d\phi\), the Maxwell equation reduces to
+
+\[
+ j^\phi=-{a_{ll}+(N'/N)a_l+(a_{\theta\theta}-\cot\theta\,a_\theta)/r^2
+              \over g_R^2r^2\sin^2\theta}.
+\]
+
+The orthonormal radial-null stress of this static magnetic field is
+\[
+ T^{\rm EM}_{\hat k\hat k}={a_l^2\over g_R^2r^2\sin^2\theta}\ge0,
+ \qquad \hat k=(1,\pm1,0,0).
+\]
+
+These are our reductions of the action convention used in
+[Maldacena–Milekhin–Popov, equation 2.1](https://arxiv.org/html/1807.04726v3).
+A smooth interpolation preserves monopole flux if its perturbation is
+O(sin^2 theta) at each axis and the two pole constants stay fixed separately.
+Flux preservation alone does not make its current vanish.
+
+For \(Y_L(\mu)=(1-\mu^2)P'_L(\mu)\), a source-free magnetic distortion
+\(a_L(l)Y_L\) satisfies
+\[
+ (Na_L')'-{NL(L+1)\over r^2}a_L=0.
+\]
+
+If both its value and derivative vanish at an inner cut, uniqueness forces
+it to vanish throughout the connected spherical region. A strictly pure
+monopole interior therefore cannot develop the partner mouth's angular
+field while remaining source-free. Allow the distortion to enter the throat,
+or derive the current that would prevent it. The following finite-mouth
+calculation tests the first option on the existing prescribed background;
+the gravitational junction and quantum current remain separate.
+
+### Actual two-mouth data determine a finite magnetic repair
+
+[magnetic_mouth_matching.py](magnetic_mouth_matching.py) applies the existing
+static throat response to the actual point-pair field, with
+[saved amplitudes and checks](magnetic_mouth_matching_results.json). The
+prescribed test geometry remains a sharp AdS2 x S2 core joined to a flat
+exterior: q=1, b=.2, d=1, rho_c=32, and ell=b*sqrt(1+rho_c^2)=6.4031242374.
+The lapse equals 1 at both mouth cuts. This calculation repairs the magnetic
+interface conditions in retained modes; it does not remove the metric layer.
+
+At the upper sphere, the partner's regular flux perturbation is
+\[
+ \delta A_\phi={q\over2}\left[{d+b\mu\over
+ \sqrt{d^2+2db\mu+b^2}}-1\right]
+ =\sum_{j\ge1}c_jY_j(\mu),\qquad
+ c_j={q\over2}{(-1)^j\over j+1}(b/d)^{j+1}.
+\]
+Its outward radial derivative has coefficients (j+1)c_j/b. The lower
+mouth uses the reflected angular frame: both values and normal derivatives
+acquire parity (-1)^(j+1). This matches the monopole gauge patches and keeps
+the fluxes +2*pi*q and -2*pi*q. Total flux alone would not fix the response.
+
+Reuse the verified throat equation in chi=atan(rho),
+\[
+ a_j''-j(j+1)\sec^2\chi\,a_j=0.
+\]
+The unit-center even/odd solutions e,o have Wronskian 1. Their two-mouth
+outward response has diagonal (e'/e+o'/o)/2 and off-diagonal -1/(2eo).
+At the physical cut dl/dchi=ell, so divide the entire matrix by ell before
+matching to exterior normal derivatives. The lower-frame parity conjugates
+this matrix. The exact saved j=1,2,3 bases independently check the new
+short ODE integrations through j=15; no old coupled calculation is rerun.
+
+Allow induced exterior modes
+\[
+ A_\phi=A_{\rm pair}+\sum_{s\in\{+,-\}}\sum_{j=1}^{L}
+ \beta_{sj}(b/r_s)^jY_j(\mu_s).
+\]
+They decay at infinity and add no monopole flux. Project their values and
+radial derivatives on both mouth spheres, using the exact angular weight
+\(G_j=2j(j+1)/(2j+1)\). If E_v,E_n are the projected induced maps and D is
+the physical throat response, solve
+\[
+ (E_n-DE_v)\beta=Df_{\rm incident}-g_{\rm incident}
+\]
+in the retained modes. The companion field also produces higher harmonics.
+The core is understood as the full Dirichlet extension of the actual
+exterior trace, not an artificial truncation of that trace. We monitor its
+remaining derivative mismatch through L+6; the tail beyond that is unbounded.
+
+### Numerical result and independent verification
+
+The original pair field alone has weighted derivative mismatch
+0.082949993498 in the monitored modes. After solving the finite matching
+problem, using 64 angular quadrature nodes:
+
+| Induced cutoff L | Highest monitored degree | Largest retained derivative mismatch | Weighted higher-mode mismatch |
+| ---: | ---: | ---: | ---: |
+| 3 | 9 | 1.39e-17 | 4.90571980229e-4 |
+| 6 | 12 | 3.47e-18 | 3.20523454550e-6 |
+| 9 | 15 | 1.39e-17 | 2.22731958990e-8 |
+
+These are floating numerical results, not an enclosure of all modes. The
+weighted norm is sqrt(sum_mouth,j G_j*jump_j^2). Its product with sqrt(2*pi)
+is g^2 times the surface-current L2 norm on both spheres, for the monitored
+modes. At L=9 this is 5.5830622607e-8. Passing a finite matching system does
+not establish a current-free continuum junction.
+
+The leading induced upper coefficient is -0.005017378435459654. Its change
+from L=6 to 9 is 8.72e-14; changing quadrature 32 to 64 changes any upper
+coefficient by at most 1.31e-17. The matched dipole reaches the core center:
+its coefficient is -0.000299591210611, with zero center derivative by the
+reflection symmetry. The retained extra Maxwell core energy is
+\(g^2\Delta E_{\rm core}=0.00994665497736\), computed from the positive
+boundary quadratic forms \(\pi G_j A_j^TDA_j\). It is a magnetic energy
+cost on this background, not a negative supporting energy.
+
+The far-field A_phi dipole coefficient changes by
+b*(beta_upper,1+beta_lower,1)=-0.00200695137418, compared with the bare pair's
+q*d/2=.5: a -0.4013903% change within this finite calculation. Both charges
+stay fixed. Small exterior changes therefore do not justify reusing the old
+Dirac operator or quantum-source values unchanged.
+
+Fourteen controls pass, including clock/normal/reflection normalization,
+charge preservation, derivative checks, exact incident projections, positive
+core energy and separate angular/quadrature sensitivities. An independent
+reconstruction of all six L/order systems agrees within 1.73e-18 for
+coefficients/values, 1.39e-17 for derivatives, 5.15e-17 for jumps and 1.73e-18
+for energies. The analytic j=1 physical DtN differs by 1.81e-12 from the
+floating ODE result; this error is retained in the numerical interpretation.
+The final strict run took about 2.1 seconds. A subsequent q=2 projection
+control checks parameter propagation; it does not extend the physical study
+beyond the specified q=1 model.
+
+The continuous fixed-flux uniqueness argument follows from positive Maxwell
+energy: core outward DtN is positive, whereas the decaying exterior response
+with normals pointing from core into exterior is negative. Their difference
+has no nonzero homogeneous solution after fixing the gauge and flux. The
+truncated exterior multipole system is not automatically an exact Galerkin
+compression of that operator; this argument does not replace its omitted
+harmonic or numerical error estimates.
+
+### What this changes, and the next physical gate
+
+There is now a computed response to the actual finite-mouth magnetic data,
+rather than an arbitrary angular boundary pattern. The original field's
+interface mismatch is quantified and a retained-mode repair is reproducible.
+The full angular remainder, the sharp geometry's required Israel stress,
+the quantum current, a smooth collar and gravitational response remain open.
+The initial source-free magnetic solution is a background; the final
+semiclassical Maxwell equation must include the current from the same
+renormalized Dirac calculation as the stress.
+
+Next, replace the sharp metric join with one explicit smooth collar and use
+its actual N(l),r(l) in the magnetic response. That same smooth geometry must
+supply the Dirac operator, local subtraction terms and geometric stress
+requirement. Do not resume the failed 106 recovery/taper sweep or transfer the
+older quantum signal to this changed field. A missing exact reference vacuum
+is not itself a reason to abandon the q=1 approach.
+
+No new physical law, stable medium, creation process or 13 Sep 2027 -> 12 Sep 2027
+passage follows. This is a magnetic compatibility improvement in a causal
+prescribed-background model. Reproduce with
+`.venv\Scripts\python.exe -B -W error -X utf8 magnetic_mouth_matching.py`.
+
 ## Conforming field pilot rejects the current residual strategy — increment106
 
 The [actual field trial](conforming_exterior_trial.py) now supplies a continuous,

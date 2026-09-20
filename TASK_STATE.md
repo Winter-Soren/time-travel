@@ -58,6 +58,61 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Actual magnetic mouth matching and source definition — increment107
+- Previous goal turn classified PROGRESS:106's actual continuum trial missed
+  its target and changed the next action. Published/verified private main at
+  8430104decd9086330aa39dcf982d04fe123a5c7; local HEAD/clean state revalidated
+  before107. Import COMPLETE;106 certificate sweep remains capped.
+- Corrected the overly strong reference-vacuum stopping criterion. A smooth
+  static complete-optical spin/U1 geometry, fixed spin/holonomy/zero-mode
+  occupation and full self-adjoint Dirac Hamiltonian define a Hadamard ground
+  state under published hypotheses (Sahlmann-Verch; Zahn1210.4031). Local
+  covariant Hadamard subtraction needs no known exact collar vacuum. Still
+  missing: actual smooth global background and renormalized Green function.
+  Fix subtraction scale and finite curvature/Maxwell couplings before fitting
+  support. Ward identities use Lorentz force, not separately conserved
+  magnetic matter stress; no double-count of the old magnetic-log action.
+- Maxwell prerequisite derived/audited: for Aphi=a(l,theta), jphi is minus
+  [a_ll+(N'/N)a_l+(a_thetatheta-cot(theta)a_theta)/r²]/(g²r²sin²theta).
+  Radial-null EM stress=a_l²/(g²r²sin²theta)>=0. Pure monopole plus zero
+  perturbation derivative cannot develop companion anisotropy source-free.
+  Allow angular distortions into the core or derive the supporting current.
+- NEW magnetic_mouth_matching.py/results.json applies saved exact throat
+  bases to actual q1/b.2/d1/rhoc32 mouth data, physical Dchi/ell, lower-frame
+  parity(-1)^(j+1). Solve induced decaying multipoles atL3/6/9, quad32/64.
+  Piecewise source-free TEST Maxwell on sharp product-core/flat exterior;
+  no smooth collar, Einstein equation, quantum-current or Dirac solve.
+- All14 controls PASS; final strict run about2.1s, no live solver. Barepair
+  weighted derivative mismatch.08294999349796. Retainedmax<=1.39e-17;
+  higher-mode norms throughL+6 [.000490571980229,3.20523454550e-6,
+  2.22731958990e-8]. Tail beyond15 NOT bounded. Core is the full Dirichlet
+  extension of actual exterior trace; saved profiles/mismatches are monitored
+  finite pieces, not a falsely truncated continuous trace.
+- L9 beta_upper,1=-.005017378435459654; L6->9 change8.72e-14;
+  quadrature32->64 maximumbeta change1.31e-17. Centerdipole coefficient
+  -.000299591210611, centerderivativezero; extra retained g²E=.00994665497736.
+  Inducedfar-dipole coefficient−.00200695137418 versusbare.5, relative
+  −.4013903%. Fluxes unchanged. Earlier quantumsource NOT transferred.
+  Sourcec8c2daaac6b2f76ed2c9caac9949a77cd21de37cfb927c50da6706348c5786bc;
+  datae5996d3d4fa3a84e67f08f756063e5e22d2aeb71f544897f3c1116d792c6e4bb.
+- Independentall6systems auditPASS: beta/value<=1.73e-18,
+  derivative<=1.39e-17,jump<=5.15e-17,currentnorm<=1.51e-16,
+  energy<=1.73e-18. Exactl1DtN vsODE1.81e-12. FinalqAPIpropagationfix
+  independently verified to leave q1payload unchanged exceptsourcehash;
+  q2projectioncontrol2.22e-16. No duplicateODE/Dirac/exteriorrun.
+- magnetic_matching_progress.png/pdf generated/inspected from frozen data.
+  PNGcaeeac65a3924e6aae743d0bb07a41450ee6d1795d7b67a1dd84456ad5e0b0ca;
+  PDF5b2dae4c2e6f0af13c42d08df927689d69c9d3f15df438cf3accd12ea99742de.
+  New helper only; prior194 PNG/PDF and old plotter bytes preserved.
+- NEXT: replace sharp metric join with one explicit smooth collar, use its
+  actual N(l),r(l) for magnetic matching and for the full quantum operator,
+  subtraction terms and Einstein stress requirement. Define global state/
+  renormalization data consistently. Do not restart106 accuracy sweep or
+  abandonq1solely because an exact collar referencevacuum is unknown.
+- Fixed-background causal investigation only. No newphysical law, stable
+  medium, preparation, stability or13Sep2027->12Sep2027 passage proved.
+  Goal remains ACTIVE, unbudgeted.
+
 ### Conforming exterior trial fails the residual target — increment106
 - Previous105 increment published and verified at89e1bedf4d55a11fe979c9209288a3e3e92e949c;
   local HEAD/clean state revalidated before106. Import remains COMPLETE.
