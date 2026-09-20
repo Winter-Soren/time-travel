@@ -1,5 +1,374 @@
 # Reproduction and coupled-model iterations
 
+## Complete finite angular source and the connected continuum — increment101
+
+The general angular bases now enter an actual two-chirality exterior
+calculation. A finite cutoff N includes every m=-N,...,N and absolute
+paired label n=max(1,abs(m)),...,N, plus the single m=0 zero mode. This
+completes the retained multiplets, not the infinite field. The outer cutoff
+J is independent and held at 9 when comparing N=2 with N=4.
+
+### Adapter pilot and exact reuse across mouth cutoffs
+
+The [new adapter](complete_angular_source.py) reuses the frozen DG bulk,
+opposite-Weyl assembly, magnetic tail, radial metric variations and AdS
+reference. Its [45-sample pilot](complete_angular_source_results.json)
+took 50.11s and passed all 18 declared gates. All three N=J=8 legacy
+witnesses reproduce the saved increment99 matrices and kernels exactly.
+New checks include every sector at N=2 and N=4, with selected extreme-m
+spatial refinements. The maximum equation residual is 5.81e-15; the
+minimum sampled sewing singular value is 0.03772. These are algebraic
+and sampled numerical controls, not convergence of the physical source.
+
+The selected-frequency phase-pi pressure kernels are:
+
+| kappa | N=2 central | N=4 central | N=2 upper | N=4 upper |
+| --- | ---: | ---: | ---: | ---: |
+| 2 | -0.00079674755 | -0.00073914947 | +0.0041391243 | +0.0047427699 |
+| 12 | +0.000080491505 | +0.00010686947 | +0.0022585818 | +0.0037719905 |
+
+They have not been integrated in this pilot. The large upper-probe
+cutoff change at kappa=12 is a reason to measure angular dependence,
+not to declare the field complete. At m=-4 and kappa=2, refining h=.05
+to .035 changes the small sector contribution by approximately
+[-4.16e-7,-8.17e-6], roughly halving it. High polar powers remain a
+spatial-resolution issue even when the linear solve is accurate.
+
+Lower mouth cutoffs can reuse the same exterior solve without treating a
+raw submatrix as the lower response. Write W=F_out^dagger F_out for the
+physical output Gram matrix. If P_out and P_in select the smaller basis,
+the same mesh, bulk and outer map give
+\[
+ S_{\rm low}=W_{\rm low}^{-1}P_{\rm out}W_{\rm high}
+                  S_{\rm high}P_{\rm in}^{T},\qquad
+ W_{\rm low}=P_{\rm out}W_{\rm high}P_{\rm out}^{T}.
+\]
+This follows by restricting the unnormalized boundary source and test
+functions before the outgoing Gram solve. All five common m sectors at
+kappa=2 reproduce the independently solved N=2 maps within 2.22e-16 and
+the source kernels within 6.94e-18. A naive raw submatrix differs by up
+to 2.73e-7. Each lower-cut throat/reference sewing still needs its own
+nonlinear resolvent; a finished high-cut observable cannot be sliced.
+
+### Integrated complete finite sums
+
+The final run completed in 1631.63s (27.19min), in addition to the retained
+50.11s pilot. It performed 2,022 fresh exterior-frequency evaluations:
+2,016 for nine N=4 sectors across the three integration recipes, plus six
+outer-cutoff controls. The validated lower-cut reuse avoided 1,120 extra
+exterior evaluations for N=2. All nine aggregate integration gates pass,
+as do the 18 pilot gates and all seven controls on each of the 14 saved
+finite-cut sector records. The original pilot execution source is retained
+inside the JSON with its own hash; the final integration source has a
+separate verified hash. No pilot or historical integral was rerun.
+
+Independent read-only reconstruction checked all 42 recipe records,
+336 panels and 3,136 saved node rows, including the reused N=2 rows.
+Nodes, weights, panel/sector sums, conditioning summaries and refinement
+comparisons match. Null-identity rounding is at most 2.78e-17. All input
+hashes, the full retained pilot payload and final execution hashes match.
+The [comparison figure](complete_angular_source_progress.png) also shows
+the prescribed core and the two compact probes; it is not a construction
+blueprint. Existing source, data and figure artifacts were preserved.
+
+The recipes use the same eight panels over kappa=[1e-6,96], h=.05 at
+Gauss orders8/12, and h=.035 at order8. Every node, weight, sector
+integrand and panel integral is saved. The phase-pi pressure results are:
+
+| Complete finite mouth cutoff | Central, primary | Upper, primary | Central, finer mesh | Upper, finer mesh |
+| --- | ---: | ---: | ---: | ---: |
+| N=2, all five m sectors | +0.0122631884 | +0.0770537324 | +0.0113999468 | +0.0736402258 |
+| N=4, all nine m sectors | +0.0131830281 | +0.1030925817 | +0.0121181504 | +0.0944974493 |
+
+These are weighted connected-minus-reference sources in hbar=c=d=1
+units, without volume division. Primary means h=.05/order12; spatial
+changes are separately compared at matched order8. The N=4-minus-N=2
+primary change is [+0.0009198397,+0.0260388493], approximately +7.5%
+and +33.8% of the smaller-cut values. The matched-order N=4 mesh change
+is [-0.0010648762,-0.0085951318], approximately -8.1% and -8.3%.
+These are substantial numerical sensitivities, not certified error bars.
+
+Both radial-null combinations are positive at both probes on every
+tested recipe. The N=4 primary summed shift is
+[9.74626e-12,3.74856e-12]. Its conservative sum of individual phase-pi
+quadrature envelopes is [1.51190e-9,5.91667e-10]; across both phases
+the largest envelope is 1.000981e-6. Phase0's N=4 primary pressure is
+[+0.1755976246,+0.1658730074], also positive. The last [48,96] panel
+adds [1.53301e-11,5.57744e-6] to phase pi; a small final panel is not
+a bound on the omitted frequency range.
+
+The selected J=11 versus J=9 controls at m=-4,0,+4 and kappa=2,12
+change phase-pi pressure by at most 2.19e-13. They test outer-cutoff
+sensitivity at those samples; they are not an integrated outer-error
+certificate. In particular, they do not remove the observed high-m
+spatial sensitivity or the appreciable N=2-to-N=4 change.
+
+The negative central single-sector value therefore does not survive
+either of these complete finite multiplet sums. This is evidence against
+using it as the net opening source for this prescribed state and join.
+It is not a full-field sign theorem: higher angular modes, the frequency
+tails, continuum convergence and the physical junction are still open.
+The remaining sections distinguish the continuum quantum-state argument
+from those unresolved numerical and material questions.
+
+### Local state admissibility for the declared connected continuum
+
+This is our application of operator-domain and local spectral reasoning,
+independently reviewed against the model's geometric identification. It
+concerns the full reflected continuum model, not its finite matrices.
+Let g=-N^2 dt^2+h and use the physical-spinor L2 space with measure dV_h.
+With outward normals on each separate piece, the interface Green form is
+\[
+ \langle\psi,H\phi\rangle-\langle H\psi,\phi\rangle
+ =-i\sum_{\rm pieces}\int_{\partial\Sigma}
+       N\psi^\dagger\alpha(n)\phi\,dA.
+\]
+The geometric transmission psi_core=U psi_ext, including angular
+pullback, cancels it when U^dagger alpha(n_core)U=-alpha(n_ext).
+The cut lapse is 1 and the common area form is b^2 dOmega. The reflected
+spin lift supplies this normal reversal and the tangential Clifford
+identification. Its full angular representation gives (-1)^(n+abs(m));
+arbitrary separate modal phases would not supply the same argument.
+The sphere-orientation reversal and normal reversal together preserve
+the three-dimensional orientation. The matching trace graph is maximal
+isotropic: arbitrary matching test traces force adjoint-domain traces
+to obey that same transmission relation.
+
+Self-adjointness needs more than cancellation of the Green form.
+The massless conformal map tilde_psi=N^(3/2) psi is unitary onto the
+optical Hilbert space with tilde_h=N^(-2)h. In the finite product core,
+\[
+ \widetilde h=\ell^2(d\sigma^2+\cos^2\sigma\,d\Omega^2),
+ \qquad 1/\sqrt5\le N\le1.
+\]
+In Gaussian normal coordinates at each glued cut the metric is
+continuous and piecewise smooth, hence Lipschitz. The resulting smooth
+spin manifold has a complete optical length metric: a compact neck
+modifies a Euclidean exterior, with no finite-distance boundary left.
+[Bandara and Saratchandran, theorem 1.1 and section 3.1](https://arxiv.org/pdf/1606.06190)
+give essential self-adjointness of the Dirac operator for this complete
+Lipschitz geometry, including the compatible Dirac-bundle formulation.
+The prescribed connection can be compared with a smooth connection on
+the same flux bundle. Their difference is supported near the compact
+interfaces and is a bounded one-form, so its Hermitian zeroth-order
+Dirac perturbation preserves self-adjointness. The maximal distributional
+domain has local H1 regularity and the matching traces; infinity requires
+no additional boundary condition.
+
+For this self-adjoint H, take complementary positive/negative spectral
+covariances. Their unitary evolution defines distributional kernels.
+Spectral positivity confines them to opposite temporal wavefront cones;
+stationarity and the local Dirac characteristic equation exclude zero
+temporal covectors. Smooth spinors supported strictly inside the core
+belong to every power of the self-adjoint H: repeated differential
+application keeps their support in the smooth interior. This does not
+assert essential self-adjointness of all differential powers across a
+Lipschitz join. Evolution preserves the graph-power domains, and local
+elliptic regularity is used only in the smooth core.
+
+Local Cauchy uniqueness then identifies the CAR kernel with the ordinary
+smooth causal Dirac kernel in sufficiently small core diamonds before
+interface-return signals arrive. Its two temporal wavefront cones are
+disjoint, so singularities cannot cancel between the complementary
+covariances. Each has the corresponding local Hadamard wavefront set.
+The relevant spectral/CAR framework is in
+[Sahlmann and Verch](https://arxiv.org/pdf/math-ph/0002021) and their
+[Dirac characterization](https://arxiv.org/pdf/math-ph/0008029). We have
+supplied the local-domain steps rather than applying a smooth global
+spacetime theorem across the nonsmooth joins.
+
+This establishes local state admissibility for the specified external-
+geometry field problem. It leaves convergence of the DG, angular and
+tail approximations to this operator unproved. A discontinuous connection
+also has distributional gauge curvature; no finite interface Maxwell
+stress or self-consistent Einstein--Maxwell junction follows from this
+first-order Dirac construction. The earlier same-label modal connection
+is not automatically covered by the reflected geometric proof.
+
+### Why radial suppression alone cannot certify the angular tail
+
+There are two effects of omitted channels: their own compact source trace
+and their feedback into retained channels through the exterior. At fixed
+kappa>0 split the complete angular space into L={n<=N} and H={n>N}.
+The product-core map B and its compact metric derivative D are block
+diagonal in that split. The exterior map S need not be. Eliminating H
+gives the exact retained return map
+\[
+ S_{\rm eff}=S_{LL}+S_{LH}B_H
+                    (I-S_{HH}B_H)^{-1}S_{HL}.
+\]
+Thus small D_H does not justify replacing S_eff by S_LL. In particular,
+large angular mass suppresses transmission and the compact derivative,
+but makes the core's same-end reflection approach a unit-modulus value;
+B_H itself does not become a small matrix.
+
+Our pointwise estimate makes the missing inputs explicit. Use canonical
+spherical flux norms, with ||.||_1 the trace norm, and put
+\[
+ b_L=\|B_L\|<1,\quad g_L=(1-b_L)^{-1},\quad
+ u=\|S_{LH}\|,\quad v=\|S_{HL}\|,\quad
+ d_{L,H}=\|D_{L,H}\|_1,
+\]
+\[
+ g_H=\max\{\|(I-S_{HH}B_H)^{-1}\|,
+                 \|(I-B_HS_{HH})^{-1}\|\}.
+\]
+Assume contractive exterior/core maps and finite g_H. For the exact
+compressed source kernel Q_N, the block resolvent identity gives
+\[
+ |\mathcal Q-\mathcal Q_N|\le {g_L^2uvg_Hd_L+
+       (g_H+g_H^2uvb_Lg_L+1)d_H\over\pi}.
+\]
+The first term bounds retained-channel feedback; the second bounds the
+omitted trace.
+For this AdS reference, the last +1 follows from each massive cap/core
+denominator: in a unitary channel ordering B_n=-iy I+t H_phi and
+S_ref,n=-ic_n I, with H_phi Hermitian/unitary and 0<=c_n,y<=1. Its least
+singular value is sqrt[(1+c_n y)^2+c_n^2 t^2]>=1, so the reference
+response norm is at most one. The zero mode is already retained.
+
+The actual [radial variation equations](throat_null_response.py) also
+give a summable envelope for d_H, without a WKB approximation. Set
+c=atan(2), L=2c, k=kappa*ell, lambda=sqrt[n(n+1)],
+omega=sqrt(lambda^2+k^2), m_star=lambda*sec(c), C=4k+m_star,
+A=2k+m_star. For the nonnegative compact bump, let F=int f d_sigma,
+I_f=ell*F and delta_L,delta_R be its positive endpoint clearances. Then
+\[
+ P_n=4CF(e^{-2\omega\delta_L}+e^{-2\omega\delta_R})
+       +4F\left(A+{2m_*C\over\omega}\right)e^{-\omega L},
+ \qquad Z_n=4\kappa I_f e^{-\omega L}
+\]
+bound the trace norms of the paired pressure and shift derivatives.
+Consequently a full-Dirac null derivative at magnetic charge one obeys
+\[
+ d_H\le2\sum_{n>N}(2n+1)(P_n+2Z_n).
+\]
+To obtain these constants write the imaginary-frequency reflection as
+-iy: y'=m(1-y^2)-2ky and its tangent z=delta_y obeys
+z'=-2(k+my)z+f[4ky-m(1-y^2)]. The logarithmic transmission tangent has
+derivative f(2k+my)-mz. Comparison with constant m=lambda bounds the
+tangent integrating factor by 4exp[-2omega(s-u)] and transmission by
+2exp[-omega L]. Integrating the compact forcing yields the envelopes.
+These identities and constants were independently checked within the
+project against the implemented equations. They are conditional bounds,
+not an evaluated angular-error certificate: u,v,g_H are still unbounded
+for the actual omitted exterior space.
+
+A two-channel algebraic counterexample makes the missing assumption
+explicit. Take S=t[[0,1],[1,0]], 0<t<1, with one retained and one omitted
+channel. It is strictly contractive, but S_LL=S_HH=0 and the feedback
+term is t^2 B_H. For B_H approaching -i the correction approaches -i t^2,
+even if D_H approaches zero exponentially. This abstract map is not a
+claim about the actual exterior's mixing. It shows that passivity and
+radial suppression alone cannot certify the angular truncation.
+
+The saved kappa=2, phase-pi, h=.05/J=9 pilot matrices let us separate
+these mechanisms without another exterior solve. Define
+R=F(S_connected)-F(S_reference), F(S)=(I-SB)^(-1)S. For each common m,
+use the separate retained input/output selectors I_L,O_L:
+the retained trace is ReTr[R[O_L,I_L] D[I_L,O_L]]/pi. Subtract the source
+computed from the directly compressed environment to isolate feedback.
+Its difference from the independently computed N=2 source is the finite
+output-Gram projection term. The rest of the N=4 trace is the direct
+high-mode term; m=+/-3,+/-4 contribute wholly to it.
+
+| Contribution to N=4 minus N=2 at this frequency | Central | Upper |
+| --- | ---: | ---: |
+| Direct high-mode trace | +5.75666720525e-5 | +6.03377773763e-4 |
+| Retained-mode feedback | +3.57076811551e-8 | +2.70488834558e-7 |
+| Finite output-Gram projection | -4.29856092136e-9 | -2.63544453539e-9 |
+| Sum | +5.75980811727e-5 | +6.03645627153e-4 |
+
+The derivative's retained/high cross blocks vanish exactly. Independent
+reconstruction agrees with the saved cutoff difference within 1.54e-17.
+The direct term dominates this sample. This diagnoses a finite-cut
+change at one frequency; it neither bounds the infinite angular tail nor
+establishes the same balance at every integration node. All inputs are
+the retained pilot matrices in complete_angular_source_results.json;
+`port_labels` in complete_angular_source.py supplies their ordering.
+
+As a finite-matrix sanity check, the conditional norm estimate above was
+also evaluated on these nine saved sectors against the exact raw N=2
+compression. At this sample max||S||=0.872462, max||B||=0.905945 and
+max(g_H)=0.577562 satisfy its hypotheses. Summed bounds are
+[0.00615192484,0.05010750772], while the summed absolute raw-compression
+differences are [5.76023797e-5,0.000603648263]. The inequalities pass,
+but the bounds are loose even for these known finite matrices. The
+separate output-Gram term above is needed when comparing with the actual
+N=2 calculation. This does not establish uniform angular/frequency or
+continuum control.
+
+A rigorous remainder therefore needs a quantitative exterior angular-
+mixing estimate and control of the omitted-block inverse, in addition to
+the radial derivative bounds. An integrated certificate also needs an
+integrable frequency bound. Finite sampled singular values and a small
+N=4-minus-N=2 difference do not provide these by themselves. Numerical
+DG and outer-tail errors would remain separate terms.
+
+### What determines the next physical direction
+
+For the same nonnegative compact probe f, compare
+\[
+ Q_{\rm field}=\int dl\,d\Omega\,Nr^2 f(\rho+p_l),\qquad
+ Q_{\rm geom}=-{1\over G}\int N^2rf
+                    \left({r'\over N}\right)'dl.
+\]
+A proposed flare with (r'/N)'>0 on the support needs a negative geometric
+probe. If a complete, controlled field calculation instead gives a
+positive value, that state cannot supply this flare alone. Positive
+finite partial sums do not yet establish that conclusion, and two
+positive smears are not a pointwise NEC theorem.
+
+A physically motivated alternative is a matched large-flux geometry.
+The monopole levels have zero multiplicity q, angular masses
+sqrt[n(n+q)]/b and nonzero multiplicities q+2n. Larger q increases the
+gap; it does not make zero modes outnumber every massive multiplet.
+The [Maldacena--Milekhin--Popov construction, sections 2.3 and 5.1](https://arxiv.org/html/1807.04726v3)
+uses that gap and an overlap hierarchy ell/r_e>>1, absent from our
+present ell/b=sqrt(5) geometry.
+
+For the already-checked ideal transparent antiperiodic zero-channel
+loops, with periods L_j and I_f=int f dx, the reference-relative source is
+\[
+ Q_0=\pi I_f\left[{q\over12(\pi\ell)^2}
+                   -{1\over3}\sum_{j=1}^{q}{1\over L_j^2}\right].
+\]
+Its sign is negative exactly when the mean of (2*pi*ell/L_j)^2 exceeds
+one. Increasing q alone cannot reverse it. The actual scattering exterior
+cannot be assigned such periods without controlling the transport
+approximation.
+
+A related matrix bound clarifies that premise without assuming diagonal
+loops. In a closed zero-channel model take N_chi=2q canonical chiral
+channels, B=exp(-kappa*L_core)U with U unitary, and the pressure derivative
+delta_B=+2*kappa*I_f*B. If the entire return operator is a causal L2
+contraction with a proven onset delay D, so that
+||R(i*kappa)||<=exp(-kappa*D) for every kappa>0, then
+\[
+ Q_{\mathrm{conn},0}\ge
+ -{\pi N_\chi I_f\over6(L_{\rm core}+D)^2}.
+\]
+This bounds the zero-channel loop-closure contribution. For Z=RB and
+a=exp[-kappa*(L_core+D)], the Hermitian real part of Z(I-Z)^(-1) is
+bounded below by -a/(1+a) times the identity. Taking its trace in the
+source kernel and using int_0^infinity x/(exp(x)+1) dx=pi^2/12 gives the
+inequality. The ideal NS Dirac loops saturate it for N_chi=2q; including
+the same reference term recovers the optical-length sign gate above.
+
+This does not bound an arbitrarily selected far-field excursion. Field-
+line length is not a proven Dirac propagation delay; prompt reflections
+and coupling to other channels can create shorter effective returns.
+The uncontrolled far-return subset in increments85/86 is not a verified
+invariant passive channel space. Its failed flux screen therefore does
+not supply the N_chi and D required here. This is an analytic comparison,
+not a new certified contribution from that unresolved subset.
+
+Increment84 already tested a conditional opening branch;
+the useful new work would be its connection to the complete-field source
+with controlled massive and return-region corrections, not repetition of
+that earlier loop calculation. No throat-formation process, stable
+material, new physical law or travel to 12 September 2027 is established.
+
 ## Angular completion and the reference-state domain — increment100
 
 The small negative central response in increment99 came from one

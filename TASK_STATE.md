@@ -58,6 +58,99 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Complete finite angular source — increment101
+- Previous goal continuation classified PROGRESS: general-m adapter/pilot,
+  exact cross-cutoff reuse, continuum-state argument and conditional source
+  bounds supplied new executable evidence/derivations. This turn finished
+  the live calculation; import remains complete and goal remains ACTIVE.
+- New complete_angular_source.py/results.json owned by coupled_misner are
+  FROZEN. Pilot45samples passed18gates in50.11285s, with all3saved99 legacy
+  matrix/source witnesses exact. Original executed pilot source text/SHA
+  279bc13975c00296fd9828d770431aca474dc1a81b9a8336dca5f6b601575a87
+  retained inside the JSON; no historical solver or pilot rerun.
+- Agent-owned session25808 finished exit0. Integration1631.631957s
+  (27.19min),2022fresh exterior-frequency samples including6J11 controls.
+  All9aggregate gates and7controls on each of14sector recordsPASS.
+  No live solver remains. Final source SHA
+  da541c26d88a92ce7b525f4283a01b47e07ebafc618ce0339f3c32edaeafce5c;
+  results SHA692a93352f1c0b841d501926c416d2ebf906157cd7eff199f8c8475d7dd16583.
+- N4/J9 solves every m=-4..4 with actual paired Weyl operators, h=.05 at
+  orders8/12 andh=.035 atorder8 over8panels[1e-6,.02,.2,1,4,12,24,48,96].
+  N2 reuses only exterior solves via exact output-Gram reprojection;
+  independent lower-cut throat/reference resolvents retain allm=-2..2.
+  Saved-map witness error2.22e-16; naive raw submatrix differs2.73e-7.
+  This avoids1120duplicate exterior evaluations, without a degeneracy factor.
+- Phase-pi primary central/upper weighted pressure:
+  N2 [0.0122631883694455,0.0770537324060748];
+  N4 [0.0131830280571434,0.1030925817008621].
+  Finer mesh: N2 [0.0113999468098147,0.0736402257713993];
+  N4 [0.0121181503715792,0.0944974493033699]. Both null combinations
+  positive on all recipes. N4 primary shift[9.74626e-12,3.74856e-12].
+- Matched-order N4 mesh change[-.00106487622545,-.00859513181533]
+  (~8.1%,8.3%). Primary N4-minus-N2[.000919839687698,.0260388492948]
+  (~7.5%,33.8% relative toN2). These sensitivities remain material.
+  N4 phase-pi summed quadrature envelopes[1.51190e-9,5.91667e-10];
+  all-phase maximum1.000981e-6, below declared per-sector2e-6 and sum
+  targetsN2=1e-5/N4=1.8e-5. Sign was never an acceptance gate.
+  Final[48,96]panel[1.53301e-11,5.57744e-6] is not a tail bound.
+  Six selected J9->J11 controls: maxpi-pressurechange2.19e-13,
+  maximum across phases/fields2.76e-13; not an integrated outer-error bound.
+- formation_updates independently reconstructed42recipes,336panels,
+  3136saved node rows (including reusedN2), sector/total/null identities,
+  singular/condition summaries, quadrature/mesh/angular/outer comparisons.
+  All exact except roundoff; maxnullerror2.78e-17. All15final input hashes,
+  final source/data hashes and entire pilot payload preserved. Pilot canonical
+  payload SHAd9f5710b260fd2d6cbc934a31f3ee5888c9e2aa47ed91b2cae8746ed476661fe.
+- Connected continuum proof internally audited: full geometric reflected
+  spin/gauge gluing on complete Lipschitz optical manifold gives a
+  self-adjoint Dirac operator; core-local graph-power/CAR reasoning gives
+  local Hadamard behavior. Primary Bandara--Saratchandran1606.06190 and
+  Sahlmann--Verch0002021/0008029 opened. Does NOT prove DG convergence,
+  global seam smoothness or finite Maxwell/Einstein junction stress.
+- Exact Schur formula and conditional source-error/Riccati envelopes
+  derived and independently checked; RESEARCH101 records assumptions.
+  Missing uniform exterior angular mixing u/v, high-block inverse g_H,
+  frequency majorant and DG-compression control prevent a certified tail.
+  Contractive swap-map counterexample shows small high-mode probe
+  derivatives alone cannot control low->high->low feedback.
+- Root saved-matrix k2/pi decomposition independently confirmed:
+  direct higher-mode trace[5.75666720525e-5,6.03377773763e-4], retained
+  feedback[3.57076811551e-8,2.70488834558e-7], output-Gram term
+  [-4.29856092136e-9,-2.63544453539e-9]. Sum matches actualcutdifference
+  within1.54e-17. Same-sample finite conditional norm bound passes but is
+  loose: [.00615192484,.05010750772] vs actual raw-cut absolute sum
+  [5.76023797e-5,.000603648263]. Not an infinite-tail certificate.
+- Additional conditional zero-channel delay bound independently derived:
+  Qconn0>=-pi*Nchi*If/[6(Lcore+D)^2] for an entire passive causal return
+  with proven minimum delayD. IdealNS loops saturate atNchi=2q. Field-line
+  lengths/unknown far-return subsets do not meet that premise automatically;
+  this does not close84--86. Do not rerun the old ideal-loop model as progress.
+- Physical decision: compare a controlled complete source with the identical
+  geometric flare probe. Current finite positive sums invalidate using the
+  earlier isolated negative sector as a net opening source. They do not
+  establish the full-field NEC or rule out other states/geometries. A later
+  large-q pivot must use a matched geometry and actual return control;
+  multiplying the present q1 result byq does not fix the optical sign.
+- New complete_angular_source_progress.png/.pdf generated from frozen
+  results, with prescribed-core/probe schematic; agent and root inspected.
+  No prior figures regenerated. README/RESEARCH/DIRECTORY_GUIDE updated.
+  Root checks:439historical files and182oldPNG/PDF unchanged; RESEARCH100
+  and earlier byte-exact; plotter append-only; newsource/plotterAST pass.
+  All303local Markdown links,5frozen artifact hashes and final diff checks
+  pass. TASK100andearlier history also restored byte-exact after a newline
+  normalization was caught during diff review. Publication is the next step.
+  Plotter SHA57f68f8ac042e2831a47b5ec8c79c0f6f68f862d4fb563a0258ed910551558f3;
+  PNG b3c7ab982be47a55606e90893e11b63c5ddb6884129c5afcda82a1a64e0526c3;
+  PDF fd3a63df08f5772dc480745efc4c411a94da16c11e429878786fffca69f91ca1.
+- GitHub preflight confirms Winter-Soren/time-travel is PRIVATE. Previous
+  published HEAD385076349804da14078326133a1a1234f5abbd2e. Publish101 only
+  after final artifact/hash checks; no PR or new goal/thread required.
+- NEXT scientific gate: quantify actual exterior high-angular mixing and
+  high-block inverse control, and assess the matched large-flux regime
+  against the completed finite-cut evidence. Do not infer a material or
+  creation mechanism from the assumed throat. Formation, physical collar,
+  gravitational response/stability and13Sep2027->12Sep2027 remain unproved.
+
 ### Missing-sector reference source and complete angular bases — increment100
 - Previous99 classified PROGRESS. Private publication verified at
   fa45e78381f65e38474d1786735c5b29d0f12316; cleanHEAD revalidated before100.

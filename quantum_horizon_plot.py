@@ -7527,6 +7527,91 @@ def angular_reference_sum_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def complete_angular_source_progress():
+    """Compare complete finite multiplets, leaving the infinite angular limit open."""
+    from matplotlib.patches import Rectangle, Ellipse
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'complete_angular_source_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values())
+    integration=d['integration'];numbers=[2,4];cuts=[integration['cutoffs'][str(n)] for n in numbers]
+    phase='pi';recipes=('coarse','fine','finer_mesh')
+    for N,cut in zip(numbers,cuts):
+        assert [s['m'] for s in cut['sectors']]==list(range(-N,N+1))
+        assert all(s['mu']==s['m']+.5 and s['controls']['passed'] for s in cut['sectors'])
+        for key in recipes:
+            summed=cut['partial_sums'][key]
+            assert summed['complete_mouth_nmax']==N and summed['m_values']==list(range(-N,N+1))
+            for row in cut['sectors']:
+                piece=row[key];assert piece['edges']==summed['edges'] and piece['order']==summed['order']
+                for name in ('h','R','nmax','outer_nmax','L','rho_c'):
+                    assert piece['config'][name]==summed['config'][name]
+                for panel in piece['panels']:
+                    weighted=np.asarray(panel['weights'])@np.asarray(panel['integrands'][phase]['pressure'])
+                    assert np.allclose(weighted,panel['responses'][phase]['pressure'],rtol=1e-11,atol=0)
+            for field in ('pressure','shift','null_plus','null_minus'):
+                expected=np.sum([s[key]['totals'][phase][field] for s in cut['sectors']],axis=0)
+                assert np.array_equal(expected,summed['totals'][phase][field])
+    values={key:np.array([c['partial_sums'][key]['totals'][phase]['pressure'] for c in cuts]) for key in recipes}
+    for key in recipes:
+        assert np.array_equal(values[key][1]-values[key][0],integration['N4_minus_N2'][key][phase]['pressure'])
+    fine=cuts[-1]['partial_sums']['fine'];coarse=cuts[-1]['partial_sums']['coarse'];mesh=cuts[-1]['partial_sums']['finer_mesh']
+    assert coarse['order']==mesh['order'] and coarse['config']['h']>mesh['config']['h']
+    for cut in cuts:
+        for key in recipes:
+            record=cut['partial_sums'][key];reference=cuts[-1]['partial_sums'][key]
+            assert record['edges']==reference['edges'] and record['order']==reference['order']
+            for name in ('h','R','outer_nmax','L','rho_c'):assert record['config'][name]==reference['config'][name]
+    angular=values['fine'][1]-values['fine'][0];mesh_change=values['finer_mesh'][1]-values['coarse'][1]
+    assert np.array_equal(mesh_change,cuts[-1]['comparisons']['matched_order_mesh_difference'][phase]['pressure'])
+    frequency=max(cuts[-1]['sum_of_sector_quadrature_envelopes'][phase]['pressure'])
+    assert np.all(np.isfinite(np.r_[values['fine'],values['finer_mesh']]))
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig,axes=plt.subplots(1,2,figsize=(13.5,8.4))
+    fig.subplots_adjust(left=.075,right=.965,bottom=.35,top=.68,wspace=.28)
+    fig.suptitle('Comparing complete finite angular sums',fontsize=18,fontweight='bold',y=.965)
+    fig.text(.5,.908,'Phase π · Connected minus invariant AdS reference · Same prescribed core and endpoint connection',ha='center',fontsize=10.7,color='#475569')
+    probes=d['probes'];assert [p['name'] for p in probes]==['central','upper_side']
+    core=fig.add_axes([.28,.802,.46,.082]);core.set_axis_off();core.set(xlim=(-1.16,1.16),ylim=(-.80,.80))
+    core.add_patch(Rectangle((-1,-.27),2,.54,facecolor='#edf1f5',edgecolor='#64748b',lw=1))
+    for end in (-1,1):core.add_patch(Ellipse((end,0),.065,.54,facecolor='#edf1f5',edgecolor='#64748b',lw=1))
+    cut=np.arctan(fine['config']['rho_c'])
+    for probe,base,text_y,name,color in zip(probes,(.035,-.225),(.63,-.63),('Central probe','Upper-side probe'),('#b38516','#b36b2b')):
+        xx=np.asarray(probe['sigma'])/cut;weight=np.asarray(probe['profile'])
+        assert len(xx)==len(weight) and np.min(weight)>=0 and max(abs(v) for v in probe['support'])<cut
+        core.fill_between(xx,base,base+.18*weight,color=color,alpha=.72)
+        center=probe['center']/cut
+        core.annotate(name,xy=(center,base+.18),xytext=(center,text_y),ha='center',va='center',fontsize=9.3,color=color,
+                      arrowprops={'arrowstyle':'-','lw':.8,'color':color})
+    fig.text(.06,.843,'Prescribed core\nand compact probes',fontsize=10.5,fontweight='bold',va='center',color='#475569')
+    fig.text(.775,.843,'Assumed geometry;\nnot a constructed medium',fontsize=9.6,va='center',color='#475569')
+    colors=['#007e87','#7951b0'];x=np.array(numbers)
+    labels=[f"Primary: h/d={fine['config']['h']:g}, order {fine['order']}",f"Finer mesh: h/d={mesh['config']['h']:g}, order {mesh['order']}"]
+    for j,(ax,title) in enumerate(zip(axes,('A. Central probe','B. Upper-side probe'))):
+        ax.axhline(0,color='#64748b',lw=1.1)
+        for key,color,style,label,dy in zip(('fine','finer_mesh'),colors,('o-','s--'),labels,(7,-15)):
+            series=values[key][:,j];ax.plot(x,series,style,lw=1.7,ms=6,color=color,label=label)
+            for xx,yy in zip(x,series):
+                offset=18 if dy>0 and yy<0 else dy
+                ax.annotate(f'{yy:+.6f}',(xx,yy),xytext=(0,offset),textcoords='offset points',ha='center',
+                            va='bottom' if dy>0 else 'top',color=color,fontsize=9.1)
+        ax.set_title(title,fontsize=12,pad=14)
+        ax.set_xticks(x,[f'N = {n}\n{2*n+1} azimuthal sectors' for n in numbers])
+        ax.set_xlim(1.5,4.5);ax.margins(y=.33)
+        ax.set_ylabel('Weighted energy + radial-pressure difference',fontsize=9.6)
+        ax.spines[['top','right']].set_visible(False);ax.grid(axis='y',alpha=.15);ax.set_axisbelow(True)
+    handles,legend=axes[0].get_legend_handles_labels()
+    fig.legend(handles,legend,loc='upper center',bbox_to_anchor=(.52,.765),ncol=2,frameon=False,fontsize=10)
+    fig.text(.5,.282,f"All m = −N,…,N at each finite mouth cutoff; outer angular cutoff J = {fine['config']['outer_nmax']} is held fixed.",ha='center',fontsize=10.3,color='#475569')
+    fig.text(.05,.227,f"Both Weyl components; ℏ = c = d = 1; finite frequency window {fine['edges'][0]:g} ≤ κd ≤ {fine['edges'][-1]:g}.",fontsize=10,color='#475569')
+    fig.text(.05,.177,f'N=2 → 4 changes: {angular[0]:+.3g} central, {angular[1]:+.3g} upper. N=4 matched-order mesh changes: {mesh_change[0]:+.3g}, {mesh_change[1]:+.3g}.',fontsize=9.8,color='#475569')
+    fig.text(.05,.128,f'N=4 frequency-panel sensitivity: {frequency:.2g}. Cutoff and mesh changes are diagnostics; omitted angular/frequency tails have no certified bound.',fontsize=9.7,color='#475569')
+    fig.text(.05,.078,'Complete finite multiplets do not establish the infinite angular sum, absolute supporting stress, a physical junction or stability.',fontsize=9.9,color='#475569')
+    fig.text(.05,.027,'No stable medium or 13 Sep 2027 → 12 Sep 2027 passage demonstrated.',fontsize=10.5,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'complete_angular_source_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()
