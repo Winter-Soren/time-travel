@@ -58,6 +58,61 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Whole-plane Gaussian resolvent with certified continuum error — increment116
+- Previous goal turn PROGRESS:115 committed/pushede5057b45a4b1d6390865af3363b9b5de8b0926e5;
+  privateorigin and cleanworktree verified;116 started clean.
+- NEW scripts/null_saddle_resolvent.py uses global tensor Hermites for the SAME
+  ideal H=-iAU*d_u-iAV*d_v+SY*(eta-2uv) extended to allR². Removes artificial
+  square/arm joins FOR THIS RESOLVENT problem; not the exact curved dihole.
+  Fixed source f=pi^-1/2 exp[-(u²+v²)/2]*(1,0), eta1,width1; no source tail.
+  Width changes would change this physical probe, so no width convergence claim.
+- H=iK, K real skew. Original (K-kappa)a=-f, adjoint (K+kappa)b=-f;
+  psi=i a,chi=i b. Reuses sparseLU and existing Pauli/plot Hermite helpers.
+  Full rho=f+Ka-kappa*a, sigma=f+Kb+kappa*b on (N+1)^2, including raised
+  (N,N) corner, retained solve errors and every omitted continuum coefficient.
+- Whole-plane self-adjointness follows Nenciu-Nenciu Theorem2.1(i),
+  https://arxiv.org/pdf/1803.08106, and independent deficiency-cutoff proof.
+  Smooth Hermitian mass commutes with cutoff; bounded principal velocity;
+  domain is maximal distributional L² graph domain, no unproved globalH1 claim.
+  Entrywise conjugation Hbar=-H is distinct from the self-adjoint Hilbert adjoint.
+- Exact ||psi-psiN||<=||rho||/kappa. Scalar G=<f,psi> satisfies
+  |G-GN-<chiN,rho>|<=||rho||||sigma||/kappa; correction retained.
+  ImG>=0 is a resolvent identity, NOT energy sign/throat stability.
+- NEW independent scripts/null_saddle_residual_interval.py, isolated35-digit
+  MPIntervalContext, exact dyadic numeric trial fields, exact square roots/
+  Pauli coefficients, outward binary64 endpoints. Certifies full residual,
+  dual correction and ImG intervals. Does not import the root solver.
+- Seven solves,10 checkgroups PASS; strict driver completes in~25s.
+  Atkappa1,N128: full-fieldL2 error<=.000207757153941664;
+  ImG in[.4170839653477964,.41708405167386653], scalar radius<=4.316303501395e-8.
+  Atkappa.5,N256: full-fieldL2 error<=.002858334630574;
+  ImG in[.4714852014520444,.47149337152890486], radius<=4.085038430168e-6.
+  Bounds include rounding and every omitted Hermite mode for this ideal model.
+- Atkappa.25,N128 residual1.97986676, numerical scalar radius15.6794896:
+  NOT useful precision; no kappa->0 or real-axis claim. Atkappa.5,N256 retained
+  residual5.4e-15 versus omitted shell.00142917 shows why projected residual
+  alone is misleading. No source, support, quantum stress or medium inferred.
+- Independent coordinate polynomial action/quadrature errors4.45e-15/6.10e-15;
+  manufactured Schwartz recovery3.47e-16. Separate arbitrary-trial complex
+  audit confirms adjoint/dual correction identity2.23e-16. Small exact interval,
+  explicit Pauli/shift, raised-corner, zero-trial checks pass.
+- Source/result/field hashes:
+  scripts/null_saddle_resolvent.py: 9d26baf5a4ee7a08d781df8b9bb1704ed471919197a0afde0b9d97d9bcc9ac28
+  scripts/null_saddle_residual_interval.py: 9a565bc9c58413064a77234c5eebf6be65aaf66e2296edaadc71612dbd07b732
+  results/null_saddle_resolvent_results.json: 68c8c3d46467f1cb6186b23f633220302828b69e93d73b4dfcdd5c033a8866d3
+  data/null_saddle_resolvent_fields.npz: cd74de89fc0b171c692f9d4ebb9e65d816109ed675d59cd5483f63336cd5da86
+- PNG/PDF visually inspected; diagram is actual probe response, not a material
+  or portal blueprint. Existing historical science remains unchanged.
+- Verification: layout81 imports/597 links/8 historical guards/14 frozen inputs PASS;
+  diff-check PASS; all502 previous scientific files and RESEARCH/TASK history
+  suffixes byte-identical. Current source/input/field hashes verified.
+- NEXT: control the low-frequency response where needed and match localized
+  resolvent data to the actual curved operator with a local-model error bound.
+  The ideal full-plane response is now controlled at the two selected probes;
+  physical curved matching, renormalized stress, supported/stable throat and
+  13Sep2027->12Sep2027 remain unproved. Goal ACTIVE; no discovery claim.
+  Professor readiness already notified; heartbeat PAUSED; no email sent.
+
 ### Frequency response, residual cap phase and a local corner gap — increment115
 - Previous goal turn PROGRESS:114 committed/pushedeab45db5f255b3de735d960c23f81f66a9342db0;
   privateorigin and cleanworktree verified. Current turn started clean.

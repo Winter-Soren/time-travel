@@ -1,5 +1,128 @@
 # Reproduction and coupled-model iterations
 
+## Whole-plane Gaussian response with a continuum error enclosure — increment116
+
+[Global Hermite solver](../scripts/null_saddle_resolvent.py),
+[independent interval residual](../scripts/null_saddle_residual_interval.py),
+[results](../results/null_saddle_resolvent_results.json),
+[actual trial coefficients](../data/null_saddle_resolvent_fields.npz), and
+[figure](../figures/null_saddle_resolvent_progress.png).
+
+This removes the overlapping-arm construction for a specified imaginary-frequency
+problem in the ideal saddle plane. One globally smooth field replaces the square
+and separate exterior arms. It changes the observable: a fixed Gaussian probe's
+resolvent response, not the earlier incoming-channel scattering matrix. It does
+not extend the local Taylor approximation's validity to the physical exterior.
+
+### Operator, domain and fixed probe
+
+Use the same dimensionless differential expression on all of R²:
+
+$$
+H=-iA_U\partial_u-iA_V\partial_v+\sigma_y(\eta-2uv),\quad
+\psi=(H-i\kappa)^{-1}f,\qquad \kappa>0,
+$$
+
+with eta=1 and the fixed, normalized width-one source
+
+$$
+f(u,v)=\pi^{-1/2}e^{-(u^2+v^2)/2}\binom10,
+\qquad G(\kappa)=\langle f,(H-i\kappa)^{-1}f\rangle.
+$$
+
+Starting on compact smooth spinors, H is essentially self-adjoint. This fits
+[Nenciu and Nenciu, Theorem 2.1(i)](https://arxiv.org/pdf/1803.08106): E=I,
+constant principal matrices AU,AV, velocity matrix M=2I (choose comparison
+matrix 3I), a complete constant metric, and a smooth Hermitian potential.
+The closure has the maximal distributional domain {psi in L²:Hpsi in L²};
+a separate global H¹ intersection characterization is not assumed.
+
+A direct check specific to this operator is also available. A deficiency
+vector H*psi=±iκ psi has local H¹ regularity. For smooth cutoffs chi_R tending
+to1 with |grad chi_R|<=C/R, the mass commutes with the cutoff and
+[H,chi_R]=-i(AU chi_u+AV chi_v). Symmetry gives
+κ||chi_R psi||<=||(H∓iκ)chi_R psi||<=C||psi||/R. The limit removes both
+deficiency spaces. Finite tensor Hermite fields are Schwartz and admissible.
+Here H* denotes the Hilbert-space adjoint. Separately, **entrywise complex
+conjugation** sends H to -H; these two operations must not be confused.
+
+### Full residual and a stronger scalar bound
+
+Let psi_N=i a and chi_N=i b be the primal and adjoint trial fields. Define
+
+$$
+\rho=f-(H-i\kappa)\psi_N,\qquad
+\sigma=f-(H+i\kappa)\chi_N.
+$$
+
+Self-adjointness implies ||(H±iκ)^-1||<=1/κ, hence
+
+$$
+\|\psi-\psi_N\|\le\frac{\|\rho\|}{\kappa}.
+$$
+
+For the scalar response, apply the same bound to the adjoint solution:
+
+$$
+\left|G-G_N-\langle\chi_N,\rho\rangle\right|
+\le\frac{\|\rho\|\,\|\sigma\|}{\kappa},\qquad
+G_N=\langle f,\psi_N\rangle.
+$$
+
+The correction retains floating solve defects rather than assuming an exactly
+orthogonal residual. With the present real source, uniqueness and conjugation
+make psi and G purely imaginary. The corrected imaginary center is
+$a_{000}-\sum b\rho$. Also ImG=κ||psi||²>=0. This positivity concerns a
+resolvent response, not positive energy density or throat stability.
+
+For indices0,...,N-1 per coordinate, multiplication by u or v and one
+derivative shift each corresponding Hermite index by at most one. Thus
+(H-iκ)psi_N-f has support only through indexN in each coordinate. Padding
+into (N+1)² captures **every** continuum residual coefficient, including the
+raised corner (N,N). There is no unknown residual tail. The fixed source is
+the exact ground Gaussian in every basis, so there is no source projection
+tail either. Changing the basis width would change this source and is not
+used as a convergence test.
+
+The independent checker constructs these coefficients with35-digit mpmath
+interval arithmetic from exact dyadic trial coefficients, exact integer
+square roots and exact Pauli factors. It encloses retained and omitted norms,
+the dual correction, and the final interval; endpoint conversion to binary64
+is outward. The certificate relies on those interval operations and the
+self-adjointness argument, not on the sparse solver being exact.
+
+### Verified numerical outcome
+
+| Imaginary frequency κ | Functions per coordinate N | Whole-field L² error upper bound | Certified ImG interval (rounded outwards here) |
+| --- | --- | --- | --- |
+| 1 | 128 | 0.000207758 | [0.41708396534779, 0.41708405167387] |
+| 0.5 | 256 | 0.002858335 | [0.47148520145204, 0.47149337152891] |
+
+The corresponding scalar error radii are below4.317e-8 and4.086e-6. These
+bounds cover the infinite-dimensional saddle response to this probe. They
+do not cover replacing the true curved operator by its saddle approximation.
+
+Seven solves include N32/64/128 atκ1, N64/128/256 atκ.5, and a deliberately
+exposed lower-frequency limitation atκ.25,N128. In that last case the numerical
+residual is1.97987 and the scalar radius15.6795: it does not give useful
+precision. No uniform κ→0 result is claimed. Atκ.5,N256 the retained solve
+residual is about5.4e-15 but the omitted shell is0.00142917. Reporting only the
+sparse solve residual would grossly overstate the accuracy.
+
+Ten check groups pass. Independent direct Hermite-polynomial differentiation
+and Gaussian quadrature match the full coefficient action to4.45e-15 and
+6.10e-15, respectively. A manufactured Schwartz field is recovered to3.47e-16.
+A separate arbitrary-trial complex-matrix audit checks the nonzero dual
+correction identity to2.23e-16. The interval helper checks exact small radical
+cases, explicit Pauli/shift action, the raised corner and a zero trial.
+
+This is a mathematical/numerical milestone within the ideal model. It supplies
+neither a pointwise Green kernel nor the renormalized stress tensor. The next
+work is to control low-frequency response where needed and connect localized
+resolvent data to the actual curved operator, including the local-model error.
+Full stress, gravitational support, stability, an obtainable medium and
+13 September2027→12 September2027 remain unproved.
+
 ## Frequency response, cap-phase sensitivity and a corner estimate — increment115
 
 [Frequency-dependent arm helper](../scripts/null_saddle_frequency_tail.py),

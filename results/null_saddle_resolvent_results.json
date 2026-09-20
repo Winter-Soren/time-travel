@@ -1,0 +1,443 @@
+{
+  "passed": true,
+  "tests": {
+    "independent_coordinate_operator": true,
+    "independent_Gaussian_quadrature": true,
+    "manufactured_solution": true,
+    "real_generator_skew": true,
+    "absorption_sign": true,
+    "full_residual_split": true,
+    "field_refinement_inside_residual_bounds": true,
+    "interval_helper": true,
+    "kappa_one_certified_G_radius": true,
+    "kappa_half_certified_G_radius": true
+  },
+  "control": {
+    "coordinate_operator_maximum_error": 4.440892098500626e-15,
+    "Gaussian_quadrature_relative_error": 6.093523729408682e-15,
+    "manufactured_relative_error": 3.4600886040804687e-16,
+    "raised_corner_norm": 2.17374738180199
+  },
+  "interval_control": {
+    "passed": true,
+    "fixed_N1": {
+      "N": 1,
+      "kappa": 0.5,
+      "eta": 1.0,
+      "width": 1.0,
+      "digits": 35,
+      "residual_norm_upper": 0.9621752698962909,
+      "adjoint_residual_norm_upper": 0.9762812094883319,
+      "solution_error_upper": 1.9243505397925817,
+      "G_disk_radius_upper": 1.8787072724682259,
+      "corrected_imaginary_G_interval": [
+        0.35937499999999994,
+        0.35937500000000006
+      ],
+      "imaginary_G_interval": [
+        -1.5193322724682259,
+        2.238082272468226
+      ],
+      "residual_norm_interval": [
+        0.9621752698962907,
+        0.9621752698962909
+      ],
+      "adjoint_residual_norm_interval": [
+        0.9762812094883316,
+        0.9762812094883319
+      ],
+      "residual_retained_norm_interval": [
+        0.9457966219013471,
+        0.9457966219013473
+      ],
+      "residual_shell_norm_interval": [
+        0.17677669529663684,
+        0.1767766952966369
+      ],
+      "adjoint_retained_norm_interval": [
+        0.9100137361600646,
+        0.9100137361600649
+      ],
+      "adjoint_shell_norm_interval": [
+        0.3535533905932737,
+        0.3535533905932738
+      ],
+      "dual_correction_interval": [
+        -0.23437500000000003,
+        -0.23437499999999997
+      ],
+      "corrected_ImG_interval": [
+        0.35937499999999994,
+        0.35937500000000006
+      ],
+      "dual_disk_radius_upper": 1.8787072724682259,
+      "dual_disk_radius_interval": [
+        1.8787072724682254,
+        1.8787072724682259
+      ],
+      "ImG_interval": [
+        -1.5193322724682259,
+        2.238082272468226
+      ],
+      "input_interpretation": "Finite binary64 trial arrays/parameters are exact dyadic numbers.",
+      "residual_definition": "rho=f+Ka-kappa*a; sigma=f+Kb+kappa*b; H=iK; f000=1.",
+      "backend": "Isolated mpmath.ctx_iv.MPIntervalContext; outward binary64 export.",
+      "scope": "Full continuum Hermite action on fixed Schwartz trials; disk bound uses whole-plane self-adjointness.",
+      "seconds": 0.0011218999861739576
+    },
+    "direct_action_errors": {
+      "primal_norm": 2.220446049250313e-16,
+      "adjoint_norm": 0.0,
+      "corrected_center": 3.469446951953614e-18,
+      "corner": 0.0
+    },
+    "zero_trial_control": true,
+    "timings": [],
+    "note": "No Galerkin solve; benchmarks use fixed dyadic vectors."
+  },
+  "cases": {
+    "k1_n32": {
+      "count": 32,
+      "kappa": 1.0,
+      "eta": 1.0,
+      "width": 1.0,
+      "real_degrees_of_freedom": 2048,
+      "seconds": 0.014117999991867691,
+      "source": "f=phi_0(u; width)*phi_0(v; width)*(1,0), normalized on R^2",
+      "solution": "psi=i*a; adjoint solution chi=i*b; fixed global spin coordinates",
+      "generator_skew_error": 0.0,
+      "solution_norm": 0.6458205693552624,
+      "imaginary_G": 0.4170842078023556,
+      "imaginary_G_dual_correction": -8.962685644285919e-17,
+      "corrected_imaginary_G": 0.4170842078023555,
+      "retained_residual_norm": 1.643349379163738e-15,
+      "omitted_shell_residual_norm": 0.0956455764201994,
+      "full_residual_norm": 0.0956455764201994,
+      "adjoint_residual_norm": 0.09564557642019925,
+      "numerical_solution_error_bound": 0.0956455764201994,
+      "numerical_G_disk_radius": 0.009148076288752189,
+      "absorption_identity_error": 2.7755575615628914e-16,
+      "residual_split_error": 1.734723475976807e-18
+    },
+    "k1_n64": {
+      "count": 64,
+      "kappa": 1.0,
+      "eta": 1.0,
+      "width": 1.0,
+      "real_degrees_of_freedom": 8192,
+      "seconds": 0.07404540001880378,
+      "source": "f=phi_0(u; width)*phi_0(v; width)*(1,0), normalized on R^2",
+      "solution": "psi=i*a; adjoint solution chi=i*b; fixed global spin coordinates",
+      "generator_skew_error": 0.0,
+      "solution_norm": 0.6458204150627722,
+      "imaginary_G": 0.4170840085118514,
+      "imaginary_G_dual_correction": -8.100507359004898e-17,
+      "corrected_imaginary_G": 0.41708400851185135,
+      "retained_residual_norm": 1.571824846100381e-15,
+      "omitted_shell_residual_norm": 0.009130584966032291,
+      "full_residual_norm": 0.009130584966032291,
+      "adjoint_residual_norm": 0.009130584966032302,
+      "numerical_solution_error_bound": 0.009130584966032291,
+      "numerical_G_disk_radius": 8.3367581821935e-05,
+      "absorption_identity_error": 0.0,
+      "residual_split_error": 1.3552527156068805e-20
+    },
+    "k1_n128": {
+      "count": 128,
+      "kappa": 1.0,
+      "eta": 1.0,
+      "width": 1.0,
+      "real_degrees_of_freedom": 32768,
+      "seconds": 0.4475537000107579,
+      "source": "f=phi_0(u; width)*phi_0(v; width)*(1,0), normalized on R^2",
+      "solution": "psi=i*a; adjoint solution chi=i*b; fixed global spin coordinates",
+      "generator_skew_error": 0.0,
+      "solution_norm": 0.6458204150619808,
+      "imaginary_G": 0.4170840085108315,
+      "imaginary_G_dual_correction": -2.0316741191806985e-18,
+      "corrected_imaginary_G": 0.4170840085108315,
+      "retained_residual_norm": 1.1622109962995283e-15,
+      "omitted_shell_residual_norm": 0.00020775715394166382,
+      "full_residual_norm": 0.00020775715394166382,
+      "adjoint_residual_norm": 0.000207757153941663,
+      "numerical_solution_error_bound": 0.00020775715394166382,
+      "numerical_G_disk_radius": 4.316303501394003e-08,
+      "absorption_identity_error": 2.275957200481571e-15,
+      "residual_split_error": 0.0,
+      "interval_certificate": {
+        "N": 128,
+        "kappa": 1.0,
+        "eta": 1.0,
+        "width": 1.0,
+        "digits": 35,
+        "residual_norm_upper": 0.00020775715394166384,
+        "adjoint_residual_norm_upper": 0.00020775715394166303,
+        "solution_error_upper": 0.00020775715394166384,
+        "G_disk_radius_upper": 4.3163035013940033e-08,
+        "corrected_imaginary_G_interval": [
+          0.4170840085108314,
+          0.4170840085108315
+        ],
+        "imaginary_G_interval": [
+          0.4170839653477964,
+          0.41708405167386653
+        ],
+        "residual_norm_interval": [
+          0.0002077571539416638,
+          0.00020775715394166384
+        ],
+        "adjoint_residual_norm_interval": [
+          0.00020775715394166298,
+          0.00020775715394166303
+        ],
+        "residual_retained_norm_interval": [
+          1.1642149486105208e-15,
+          1.1642149486105212e-15
+        ],
+        "residual_shell_norm_interval": [
+          0.0002077571539416638,
+          0.00020775715394166384
+        ],
+        "adjoint_retained_norm_interval": [
+          1.2533380427165988e-15,
+          1.2533380427165992e-15
+        ],
+        "adjoint_shell_norm_interval": [
+          0.00020775715394166298,
+          0.00020775715394166303
+        ],
+        "dual_correction_interval": [
+          2.0032387882267164e-17,
+          2.003238788226717e-17
+        ],
+        "corrected_ImG_interval": [
+          0.4170840085108314,
+          0.4170840085108315
+        ],
+        "dual_disk_radius_upper": 4.3163035013940033e-08,
+        "dual_disk_radius_interval": [
+          4.316303501394002e-08,
+          4.3163035013940033e-08
+        ],
+        "ImG_interval": [
+          0.4170839653477964,
+          0.41708405167386653
+        ],
+        "input_interpretation": "Finite binary64 trial arrays/parameters are exact dyadic numbers.",
+        "residual_definition": "rho=f+Ka-kappa*a; sigma=f+Kb+kappa*b; H=iK; f000=1.",
+        "backend": "Isolated mpmath.ctx_iv.MPIntervalContext; outward binary64 export.",
+        "scope": "Full continuum Hermite action on fixed Schwartz trials; disk bound uses whole-plane self-adjointness.",
+        "seconds": 3.10380989999976
+      }
+    },
+    "k05_n64": {
+      "count": 64,
+      "kappa": 0.5,
+      "eta": 1.0,
+      "width": 1.0,
+      "real_degrees_of_freedom": 8192,
+      "seconds": 0.08032529999036342,
+      "source": "f=phi_0(u; width)*phi_0(v; width)*(1,0), normalized on R^2",
+      "solution": "psi=i*a; adjoint solution chi=i*b; fixed global spin coordinates",
+      "generator_skew_error": 0.0,
+      "solution_norm": 0.9710673936492827,
+      "imaginary_G": 0.4714859415044057,
+      "imaginary_G_dual_correction": 2.4538220919317215e-16,
+      "corrected_imaginary_G": 0.4714859415044059,
+      "retained_residual_norm": 5.795739835706081e-15,
+      "omitted_shell_residual_norm": 0.4825462539981462,
+      "full_residual_norm": 0.4825462539981462,
+      "adjoint_residual_norm": 0.48254625399814444,
+      "numerical_solution_error_bound": 0.9650925079962924,
+      "numerical_G_disk_radius": 0.46570177449528516,
+      "absorption_identity_error": 1.6653345369377348e-16,
+      "residual_split_error": 0.0
+    },
+    "k05_n128": {
+      "count": 128,
+      "kappa": 0.5,
+      "eta": 1.0,
+      "width": 1.0,
+      "real_degrees_of_freedom": 32768,
+      "seconds": 0.4475938000250608,
+      "source": "f=phi_0(u; width)*phi_0(v; width)*(1,0), normalized on R^2",
+      "solution": "psi=i*a; adjoint solution chi=i*b; fixed global spin coordinates",
+      "generator_skew_error": 0.0,
+      "solution_norm": 0.9710708325161519,
+      "imaginary_G": 0.47148928088180575,
+      "imaginary_G_dual_correction": -1.756616183607412e-16,
+      "corrected_imaginary_G": 0.4714892808818056,
+      "retained_residual_norm": 5.110540287285813e-15,
+      "omitted_shell_residual_norm": 0.053106614861078316,
+      "full_residual_norm": 0.05310661486107831,
+      "adjoint_residual_norm": 0.053106614861077456,
+      "numerical_solution_error_bound": 0.10621322972215662,
+      "numerical_G_disk_radius": 0.005640625084005716,
+      "absorption_identity_error": 3.885780586188048e-16,
+      "residual_split_error": 8.673617379884035e-19
+    },
+    "k05_n256": {
+      "count": 256,
+      "kappa": 0.5,
+      "eta": 1.0,
+      "width": 1.0,
+      "real_degrees_of_freedom": 131072,
+      "seconds": 2.939028400054667,
+      "source": "f=phi_0(u; width)*phi_0(v; width)*(1,0), normalized on R^2",
+      "solution": "psi=i*a; adjoint solution chi=i*b; fixed global spin coordinates",
+      "generator_skew_error": 0.0,
+      "solution_norm": 0.9710708382918992,
+      "imaginary_G": 0.4714892864904744,
+      "imaginary_G_dual_correction": 3.3960561790585844e-16,
+      "corrected_imaginary_G": 0.4714892864904747,
+      "retained_residual_norm": 5.3891522984887e-15,
+      "omitted_shell_residual_norm": 0.0014291673152867176,
+      "full_residual_norm": 0.0014291673152867178,
+      "adjoint_residual_norm": 0.0014291673152867323,
+      "numerical_solution_error_bound": 0.0028583346305734356,
+      "numerical_G_disk_radius": 4.085038430167731e-06,
+      "absorption_identity_error": 8.43769498715119e-15,
+      "residual_split_error": 4.235164736271502e-22,
+      "interval_certificate": {
+        "N": 256,
+        "kappa": 0.5,
+        "eta": 1.0,
+        "width": 1.0,
+        "digits": 35,
+        "residual_norm_upper": 0.0014291673152867178,
+        "adjoint_residual_norm_upper": 0.0014291673152867323,
+        "solution_error_upper": 0.0028583346305734356,
+        "G_disk_radius_upper": 4.08503843016773e-06,
+        "corrected_imaginary_G_interval": [
+          0.47148928649047456,
+          0.47148928649047467
+        ],
+        "imaginary_G_interval": [
+          0.4714852014520444,
+          0.47149337152890486
+        ],
+        "residual_norm_interval": [
+          0.0014291673152867174,
+          0.0014291673152867178
+        ],
+        "adjoint_residual_norm_interval": [
+          0.001429167315286732,
+          0.0014291673152867323
+        ],
+        "residual_retained_norm_interval": [
+          5.404391417152044e-15,
+          5.404391417152046e-15
+        ],
+        "residual_shell_norm_interval": [
+          0.0014291673152867174,
+          0.0014291673152867178
+        ],
+        "adjoint_retained_norm_interval": [
+          2.0853515908055162e-14,
+          2.0853515908055168e-14
+        ],
+        "adjoint_shell_norm_interval": [
+          0.001429167315286732,
+          0.0014291673152867323
+        ],
+        "dual_correction_interval": [
+          -2.6360655423442887e-16,
+          -2.6360655423442877e-16
+        ],
+        "corrected_ImG_interval": [
+          0.47148928649047456,
+          0.47148928649047467
+        ],
+        "dual_disk_radius_upper": 4.08503843016773e-06,
+        "dual_disk_radius_interval": [
+          4.085038430167728e-06,
+          4.08503843016773e-06
+        ],
+        "ImG_interval": [
+          0.4714852014520444,
+          0.47149337152890486
+        ],
+        "input_interpretation": "Finite binary64 trial arrays/parameters are exact dyadic numbers.",
+        "residual_definition": "rho=f+Ka-kappa*a; sigma=f+Kb+kappa*b; H=iK; f000=1.",
+        "backend": "Isolated mpmath.ctx_iv.MPIntervalContext; outward binary64 export.",
+        "scope": "Full continuum Hermite action on fixed Schwartz trials; disk bound uses whole-plane self-adjointness.",
+        "seconds": 12.991313999984413
+      }
+    },
+    "k025_n128": {
+      "count": 128,
+      "kappa": 0.25,
+      "eta": 1.0,
+      "width": 1.0,
+      "real_degrees_of_freedom": 32768,
+      "seconds": 0.540524399955757,
+      "source": "f=phi_0(u; width)*phi_0(v; width)*(1,0), normalized on R^2",
+      "solution": "psi=i*a; adjoint solution chi=i*b; fixed global spin coordinates",
+      "generator_skew_error": 0.0,
+      "solution_norm": 1.4231361698683296,
+      "imaginary_G": 0.5063291394968749,
+      "imaginary_G_dual_correction": 5.4837476312425897e-17,
+      "corrected_imaginary_G": 0.5063291394968749,
+      "retained_residual_norm": 2.5969885718012715e-14,
+      "omitted_shell_residual_norm": 1.979866763317776,
+      "full_residual_norm": 1.9798667633177758,
+      "adjoint_residual_norm": 1.9798667633177842,
+      "numerical_solution_error_bound": 7.919467053271103,
+      "numerical_G_disk_radius": 15.67948960196169,
+      "absorption_identity_error": 1.1102230246251565e-16,
+      "residual_split_error": 8.881784197001252e-16
+    }
+  },
+  "comparisons": [
+    {
+      "first": "k1_n32",
+      "second": "k1_n64",
+      "field_L2_difference": 0.004307152021108137,
+      "imaginary_G_difference": 1.9929050421030325e-07,
+      "summed_numerical_solution_error_bounds": 0.10477616138623169
+    },
+    {
+      "first": "k1_n64",
+      "second": "k1_n128",
+      "field_L2_difference": 0.0002396801649321369,
+      "imaginary_G_difference": 1.0199063815719e-12,
+      "summed_numerical_solution_error_bounds": 0.009338342119973956
+    },
+    {
+      "first": "k05_n64",
+      "second": "k05_n128",
+      "field_L2_difference": 0.013667063794437091,
+      "imaginary_G_difference": 3.33937740004675e-06,
+      "summed_numerical_solution_error_bounds": 1.071305737718449
+    },
+    {
+      "first": "k05_n128",
+      "second": "k05_n256",
+      "field_L2_difference": 0.0010045026254854388,
+      "imaginary_G_difference": 5.608668640633141e-09,
+      "summed_numerical_solution_error_bounds": 0.10907156435273005
+    }
+  ],
+  "model": "Whole-plane H=-i AU d_u-i AV d_v+SY*(eta-2uv), eta=1, one fixed width-1 Gaussian spin-up source.",
+  "proof": {
+    "domain": "Unique self-adjoint closure on R^2; smooth Hermitian mass, complete constant propagation metric.",
+    "reference": "https://arxiv.org/abs/1803.08106, Theorem 2.1(i)",
+    "full_residual": "rho=f-(H-i*kappa)psi_N, sigma=f-(H+i*kappa)chi_N; both evaluated on the entire plane.",
+    "solution_bound": "||psi-psi_N||<=||rho||/kappa.",
+    "dual_bound": "|G-G_N-<chi_N,rho>|<=||rho||||sigma||/kappa; no assumed exact Galerkin solve.",
+    "real_symmetry": "Entrywise complex conjugation sends H to -H; for real f uniqueness makes psi and G purely imaginary. H is self-adjoint."
+  },
+  "source_sha256": "9d26baf5a4ee7a08d781df8b9bb1704ed471919197a0afde0b9d97d9bcc9ac28",
+  "input_sha256": {
+    "null_saddle_leads.py": "222dcb8346005de9d1e1ed382c5945b371e434deee620481d28bc203c36696e9",
+    "null_saddle_residual_interval.py": "9a565bc9c58413064a77234c5eebf6be65aaf66e2296edaadc71612dbd07b732",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "limits": [
+    "Local saddle extended to its entire plane, not the exact curved dihole exterior.",
+    "Fixed Gaussian probe; no channel probability, pointwise Green kernel or vacuum stress.",
+    "Kappa is strictly positive. This supplies no uniform real-axis or low-frequency limit.",
+    "Kappa=.25, N128 has a very large residual bound; the low-frequency calculation is unresolved."
+  ],
+  "field_sha256": "cd74de89fc0b171c692f9d4ebb9e65d816109ed675d59cd5483f63336cd5da86"
+}

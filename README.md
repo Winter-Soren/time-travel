@@ -6,6 +6,8 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+The [whole-plane calculation](scripts/null_saddle_resolvent.py) now replaces separate overlapping regions with one smooth field for a fixed Gaussian probe. An [independent interval calculation](scripts/null_saddle_residual_interval.py) bounds its full continuum error, including every omitted Hermite mode and rounding. Two imaginary-frequency responses have certified scalar error radii below $4.317\times10^{-8}$ and $4.086\times10^{-6}$. A lower-frequency probe remains poorly resolved. This is a controlled result for the ideal local saddle, with curved-geometry matching and quantum stress still open. See [results](results/null_saddle_resolvent_results.json) and [proof and limits](docs/RESEARCH.md).
+
 The [frequency-dependent calculation](scripts/null_saddle_spectrum.py) now supplies real and imaginary-frequency responses with the correct phase reference and absorption accounting. Ten coupled checks pass. It also separates a distant-channel phase shift from the local boundary response: the latter agrees to about 1.5e-15 in the tested cap extension. This is numerical sensitivity, not an error bound; common-domain and omitted-mode control remain open. A separate [corner estimate](scripts/null_saddle_corner.py) proves a local gap for confined fields, while retaining the unknown interface terms. See [spectral results](results/null_saddle_spectrum_results.json), [corner results](results/null_saddle_corner_results.json), and [the exact limits](docs/RESEARCH.md).
 
 The [varying-arm calculation](scripts/null_saddle_matched.py) now follows the changing magnetic channels beyond the central square, carrying both the incoming state and outgoing measurement. The dominant routing survives this replacement; ten coupled checks pass, with separate mesh, channel and remote-endpoint comparisons. The arms still overlap at their corners, and their connection to the curved exterior remains unresolved. [Results](results/null_saddle_matched_results.json) and [derivation](docs/RESEARCH.md) record these limits.
@@ -44,6 +46,7 @@ Local state-admissibility arguments are now supplied for both the full invariant
 
 | Component | What is checked | What it supplies |
 | --- | --- | --- |
+| [Whole-plane Gaussian response](scripts/null_saddle_resolvent.py) · [interval checker](scripts/null_saddle_residual_interval.py) · [results](results/null_saddle_resolvent_results.json) · [field](data/null_saddle_resolvent_fields.npz) | Self-adjoint domain, full continuum residual, independent coordinate control and interval primal/adjoint bounds | Certified responses to one fixed probe at two frequencies in the ideal saddle; no real-axis scattering, curved-model error bound or supporting stress |
 | [Frequency response](scripts/null_saddle_spectrum.py) · [analytic arms](scripts/null_saddle_frequency_tail.py) · [results](results/null_saddle_spectrum_results.json) · [figure](figures/null_saddle_spectrum_progress.png) | Real/complex branch, near-plane phase reference, absorption ledger and independent transfer checks | Selected finite-model responses; nonzero-frequency outer-cap phase remains unresolved, with no stress or support claim |
 | [Local corner estimate](scripts/null_saddle_corner.py) · [results](results/null_saddle_corner_results.json) | Exact unbounded scalar minimum, operator square, interval constants and compact-spinor controls | A local gap and cutoff-residual inequality; unknown common-field/interface data prevent an arm-overlap error certificate |
 | [Varying magnetic arms](scripts/null_saddle_tail.py) · [matched node](scripts/null_saddle_matched.py) · [results](results/null_saddle_matched_results.json) · [figure](figures/null_saddle_matched_progress.png) | Exact projected moving-basis terms, transported input/output maps, independent transfer checks and matched DG controls | Local routing with finite varying arms; overlapping corners, infinite-mode errors and curved-exterior matching remain open |
@@ -93,6 +96,10 @@ Local state-admissibility arguments are now supplied for both the full invariant
 | [Scattering-to-vacuum bridge](scripts/scattering_vacuum.py) · [results](results/scattering_vacuum_results.json) | A specified unitary loop/reservoir model, complex phases, causal delay, reference-subtracted energy and local stress | An exact conditional benchmark: equal return probabilities can produce opposite stress signs; the physical exterior return map remains unknown |
 
 These components do not yet form a complete physical solution. The decision gate is a complete radial-null source budget and its gravitational response across a specified smooth collar. The invariant product reference helps with the interior; it does not determine the collar. A wrong sign or insufficient source rejects that state/collar candidate; passing this necessary condition would still leave the other Einstein equations and stability unresolved. The published wormhole construction motivating this branch is causal; success here would not by itself establish backward travel. See [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3).
+
+![Whole-plane field and certified response](figures/null_saddle_resolvent_progress.png)
+
+*The field image is a computed quantum response to a smooth mathematical probe. It is not a physical-material blueprint or a portal.*
 
 ![Frequency response and local corner comparison](figures/null_saddle_spectrum_progress.png)
 
