@@ -1,0 +1,962 @@
+{
+  "passed": true,
+  "tests": {
+    "complete_sectors": true,
+    "saved_kernel_reconstruction": true,
+    "julia_contractions": true,
+    "weighted_relative_bound": true,
+    "weighted_inverse_bound": true,
+    "effective_passivity": true,
+    "block_structure": true,
+    "source_bounds": true,
+    "positive_absorption_and_lower_bound": true,
+    "independent_scattering_absorption": true
+  },
+  "self_check": {
+    "max_julia_norm": 0.9999934735472849,
+    "max_relative_norm": 1.098985681393097,
+    "max_weighted_inverse_norm": 1.1176280853282676,
+    "nonnormal_cases": 9
+  },
+  "absorption_checks": [
+    {
+      "n": 3,
+      "kappa": 0.0001,
+      "defect_positive_ode": 1.3161521730912713e-05,
+      "explicit_lower_bound": 1.1525187470281067e-05,
+      "scattering_defect_error": 8.115001522862077e-14,
+      "subtraction_error": 2.312630338965893e-15
+    },
+    {
+      "n": 3,
+      "kappa": 0.4,
+      "defect_positive_ode": 0.05127594760554733,
+      "explicit_lower_bound": 0.04158463661561379,
+      "scattering_defect_error": 2.2042437319846897e-12,
+      "subtraction_error": 3.8163916471489756e-16
+    },
+    {
+      "n": 3,
+      "kappa": 2.0,
+      "defect_positive_ode": 0.2305718285797941,
+      "explicit_lower_bound": 0.13840334672879986,
+      "scattering_defect_error": 2.402800181044995e-13,
+      "subtraction_error": 9.43689570931383e-16
+    },
+    {
+      "n": 3,
+      "kappa": 12.0,
+      "defect_positive_ode": 0.7562464940231051,
+      "explicit_lower_bound": 0.12035275325112615,
+      "scattering_defect_error": 1.432187701766452e-14,
+      "subtraction_error": 3.1086244689504383e-15
+    },
+    {
+      "n": 3,
+      "kappa": 96.0,
+      "defect_positive_ode": 0.9923326119652128,
+      "explicit_lower_bound": 0.017983702059766245,
+      "scattering_defect_error": 5.329070518200751e-15,
+      "subtraction_error": 5.218048215738236e-15
+    },
+    {
+      "n": 8,
+      "kappa": 0.0001,
+      "defect_positive_ode": 4.971997175411009e-06,
+      "explicit_lower_bound": 4.713995387301319e-06,
+      "scattering_defect_error": 3.977999756720396e-13,
+      "subtraction_error": 7.842203720177104e-16
+    },
+    {
+      "n": 8,
+      "kappa": 0.4,
+      "defect_positive_ode": 0.019691198184342767,
+      "explicit_lower_bound": 0.01807771834394175,
+      "scattering_defect_error": 3.711624757540832e-12,
+      "subtraction_error": 5.169475958410885e-16
+    },
+    {
+      "n": 8,
+      "kappa": 2.0,
+      "defect_positive_ode": 0.09461220689864085,
+      "explicit_lower_bound": 0.07638975576577606,
+      "scattering_defect_error": 4.0205339058019263e-13,
+      "subtraction_error": 2.636779683484747e-16
+    },
+    {
+      "n": 8,
+      "kappa": 12.0,
+      "defect_positive_ode": 0.4438537190266536,
+      "explicit_lower_bound": 0.1715933452689616,
+      "scattering_defect_error": 6.650235917504688e-14,
+      "subtraction_error": 2.220446049250313e-16
+    },
+    {
+      "n": 8,
+      "kappa": 96.0,
+      "defect_positive_ode": 0.957085298441256,
+      "explicit_lower_bound": 0.04335151994389713,
+      "scattering_defect_error": 3.4416913763379853e-15,
+      "subtraction_error": 0.0
+    },
+    {
+      "n": 16,
+      "kappa": 0.0001,
+      "defect_positive_ode": 2.492440400557025e-06,
+      "explicit_lower_bound": 2.4253430970579517e-06,
+      "scattering_defect_error": 1.7456462470465898e-12,
+      "subtraction_error": 1.2638307555438294e-15
+    },
+    {
+      "n": 16,
+      "kappa": 0.4,
+      "defect_positive_ode": 0.009920197467128768,
+      "explicit_lower_bound": 0.009493241853732078,
+      "scattering_defect_error": 1.6177857664612105e-12,
+      "subtraction_error": 3.0184188481996443e-16
+    },
+    {
+      "n": 16,
+      "kappa": 2.0,
+      "defect_positive_ode": 0.04862147585566962,
+      "explicit_lower_bound": 0.04352339304044709,
+      "scattering_defect_error": 3.784264568373885e-13,
+      "subtraction_error": 1.5959455978986625e-16
+    },
+    {
+      "n": 16,
+      "kappa": 12.0,
+      "defect_positive_ode": 0.25762097225259745,
+      "explicit_lower_bound": 0.15349198035399766,
+      "scattering_defect_error": 1.4671597270421444e-13,
+      "subtraction_error": 5.551115123125783e-17
+    },
+    {
+      "n": 16,
+      "kappa": 96.0,
+      "defect_positive_ode": 0.8662976875953211,
+      "explicit_lower_bound": 0.08009023445612518,
+      "scattering_defect_error": 1.021405182655144e-14,
+      "subtraction_error": 1.1102230246251565e-16
+    }
+  ],
+  "parameters": {
+    "kappa": 2.0,
+    "high_nmax": 4,
+    "low_nmax": 2,
+    "outer_nmax": 9,
+    "h": 0.05,
+    "rho_c": 2.0
+  },
+  "input_sha256": {
+    "complete_angular_source_results.json": "692a93352f1c0b841d501926c416d2ebf906157cd7eff199f8c8475d7dd16583",
+    "complete_angular_source.py": "da541c26d88a92ce7b525f4283a01b47e07ebafc618ce0339f3c32edaeafce5c",
+    "complete_angular_modes.py": "d69178edd246b76b43a60d187d0c2be7b63fbada7d0fd14b68e0b126db6e7e55",
+    "azimuthal_modes.py": "d774a67c9eb8754d6ee6641240ab83269a62495e4314251fa4dad9836040027d",
+    "curved_throat_modes.py": "3a2c1a47d8ea358aa2604f0eab84f715957e3dd1f72a8096f3f08b3916ac70f4"
+  },
+  "source_sha256": "e2a96628a8f8910494445d621f93c7ed8f895f584f9d92ed4ea0a9c202be5420",
+  "records": [
+    {
+      "m": -4,
+      "mu": -3.5,
+      "phase": "0",
+      "saved_kernel_error": 1.0164395367051604e-20,
+      "connected_norm": 0.8683556638339941,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9930699165486373,
+      "reference_julia_norm": 0.9960078981552076,
+      "weighted_relative_norm": 0.002987135754967375,
+      "high_weighted_inverse_norm": 0.10037817035905697,
+      "high_unweighted_inverse_norm": 0.5599450506914077,
+      "effective_return_norm": 0.0,
+      "u_weighted": 0.0,
+      "v_weighted": 0.0,
+      "g_low": 0.0,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 8.737864354293608e-07,
+          "raw_compressed": 0.0,
+          "direct_high": 8.737864354293608e-07,
+          "low_feedback": 0.0,
+          "error": 8.737864354293608e-07,
+          "direct_bound": 0.000634184051937344,
+          "feedback_bound": 0.0,
+          "total_bound": 0.000634184051937344
+        },
+        {
+          "full": 1.7466263206322333e-05,
+          "raw_compressed": 0.0,
+          "direct_high": 1.7466263206322333e-05,
+          "low_feedback": 0.0,
+          "error": 1.7466263206322333e-05,
+          "direct_bound": 0.01189046894282089,
+          "feedback_bound": 0.0,
+          "total_bound": 0.01189046894282089
+        }
+      ]
+    },
+    {
+      "m": -4,
+      "mu": -3.5,
+      "phase": "pi",
+      "saved_kernel_error": 6.776263578034403e-21,
+      "connected_norm": 0.8683556638339941,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9930699165486493,
+      "reference_julia_norm": 0.9960078981552076,
+      "weighted_relative_norm": 0.0029871357549646873,
+      "high_weighted_inverse_norm": 0.10037817035896769,
+      "high_unweighted_inverse_norm": 0.5599450506909094,
+      "effective_return_norm": 0.0,
+      "u_weighted": 0.0,
+      "v_weighted": 0.0,
+      "g_low": 0.0,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 8.737815945066416e-07,
+          "raw_compressed": 0.0,
+          "direct_high": 8.737815945066416e-07,
+          "low_feedback": 0.0,
+          "error": 8.737815945066416e-07,
+          "direct_bound": 0.000634184051937344,
+          "feedback_bound": 0.0,
+          "total_bound": 0.000634184051937344
+        },
+        {
+          "full": 1.7466260949212463e-05,
+          "raw_compressed": 0.0,
+          "direct_high": 1.7466260949212463e-05,
+          "low_feedback": 0.0,
+          "error": 1.7466260949212463e-05,
+          "direct_bound": 0.01189046894282089,
+          "feedback_bound": 0.0,
+          "total_bound": 0.01189046894282089
+        }
+      ]
+    },
+    {
+      "m": -3,
+      "mu": -2.5,
+      "phase": "0",
+      "saved_kernel_error": 8.131516293641283e-20,
+      "connected_norm": 0.867063201975413,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9929964799665572,
+      "reference_julia_norm": 0.9960078981552076,
+      "weighted_relative_norm": 0.003941536964789691,
+      "high_weighted_inverse_norm": 0.13210400860670707,
+      "high_unweighted_inverse_norm": 0.5729481325952995,
+      "effective_return_norm": 0.0,
+      "u_weighted": 0.0,
+      "v_weighted": 0.0,
+      "g_low": 0.0,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 7.087254848885691e-06,
+          "raw_compressed": 0.0,
+          "direct_high": 7.087254848885691e-06,
+          "low_feedback": 0.0,
+          "error": 7.087254848885691e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.0,
+          "total_bound": 0.004654327900839114
+        },
+        {
+          "full": 7.075854932341883e-05,
+          "raw_compressed": 0.0,
+          "direct_high": 7.075854932341883e-05,
+          "low_feedback": 0.0,
+          "error": 7.075854932341883e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0,
+          "total_bound": 0.039324344879961816
+        }
+      ]
+    },
+    {
+      "m": -3,
+      "mu": -2.5,
+      "phase": "pi",
+      "saved_kernel_error": 1.3552527156068805e-20,
+      "connected_norm": 0.867063201975413,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842093,
+      "connected_julia_norm": 0.9929964799666392,
+      "reference_julia_norm": 0.9960078981552078,
+      "weighted_relative_norm": 0.0039415369633893395,
+      "high_weighted_inverse_norm": 0.1321040085573744,
+      "high_unweighted_inverse_norm": 0.5729481323845597,
+      "effective_return_norm": 0.0,
+      "u_weighted": 0.0,
+      "v_weighted": 0.0,
+      "g_low": 0.0,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 7.085580720957792e-06,
+          "raw_compressed": 0.0,
+          "direct_high": 7.085580720957792e-06,
+          "low_feedback": 0.0,
+          "error": 7.085580720957792e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.0,
+          "total_bound": 0.004654327900839114
+        },
+        {
+          "full": 7.075777625445807e-05,
+          "raw_compressed": 0.0,
+          "direct_high": 7.075777625445807e-05,
+          "low_feedback": 0.0,
+          "error": 7.075777625445807e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0,
+          "total_bound": 0.039324344879961816
+        }
+      ]
+    },
+    {
+      "m": -2,
+      "mu": -1.5,
+      "phase": "0",
+      "saved_kernel_error": 2.710505431213761e-19,
+      "connected_norm": 0.8605058256584056,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.992413322125904,
+      "reference_julia_norm": 0.9960078981552074,
+      "weighted_relative_norm": 0.007878553079458374,
+      "high_weighted_inverse_norm": 0.13237500814936143,
+      "high_unweighted_inverse_norm": 0.5747245047776266,
+      "effective_return_norm": 0.8031560540468098,
+      "u_weighted": 0.012915777564357977,
+      "v_weighted": 0.01425784724920346,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 7.395613105284423e-05,
+          "raw_compressed": 6.622560838210824e-05,
+          "direct_high": 7.71603283782372e-06,
+          "low_feedback": 1.4489832912272264e-08,
+          "error": 7.730522670735992e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 5.305930084253597e-05,
+          "total_bound": 0.00470738720168165
+        },
+        {
+          "full": 0.00030701362300004415,
+          "raw_compressed": 0.00022870313066354755,
+          "direct_high": 7.825313675669025e-05,
+          "low_feedback": 5.7355579806352055e-08,
+          "error": 7.83104923364966e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.00011416533784995189,
+          "total_bound": 0.039438510217811765
+        }
+      ]
+    },
+    {
+      "m": -2,
+      "mu": -1.5,
+      "phase": "pi",
+      "saved_kernel_error": 2.710505431213761e-19,
+      "connected_norm": 0.8605058256584056,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9924133221499046,
+      "reference_julia_norm": 0.9960078981552082,
+      "weighted_relative_norm": 0.007878551955187534,
+      "high_weighted_inverse_norm": 0.13237500777447736,
+      "high_unweighted_inverse_norm": 0.5747245034526299,
+      "effective_return_norm": 0.8031560540128241,
+      "u_weighted": 0.01291577756435798,
+      "v_weighted": 0.01425784724920346,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 7.345693615333509e-05,
+          "raw_compressed": 6.573821751311804e-05,
+          "direct_high": 7.703411388675462e-06,
+          "low_feedback": 1.5307251541584214e-08,
+          "error": 7.718718640217046e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 5.305930084253598e-05,
+          "total_bound": 0.00470738720168165
+        },
+        {
+          "full": 0.0003067877982768774,
+          "raw_compressed": 0.00022848276373524013,
+          "direct_high": 7.824730936209994e-05,
+          "low_feedback": 5.772517953735374e-08,
+          "error": 7.83050345416373e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.00011416533784995191,
+          "total_bound": 0.039438510217811765
+        }
+      ]
+    },
+    {
+      "m": -1,
+      "mu": -0.5,
+      "phase": "0",
+      "saved_kernel_error": 4.336808689942018e-18,
+      "connected_norm": 0.8501856141522672,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9917932120863915,
+      "reference_julia_norm": 0.9960078981552076,
+      "weighted_relative_norm": 0.033031765289490575,
+      "high_weighted_inverse_norm": 0.13283523155220772,
+      "high_unweighted_inverse_norm": 0.576469844756338,
+      "effective_return_norm": 0.8001783121713315,
+      "u_weighted": 0.016740883017458515,
+      "v_weighted": 0.018866041071527426,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 0.0014550581211888352,
+          "raw_compressed": 0.0014462283077010382,
+          "direct_high": 8.812774026121378e-06,
+          "low_feedback": 1.703946167562302e-08,
+          "error": 8.829813487797001e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.0009643776565199211,
+          "total_bound": 0.0056187055573590355
+        },
+        {
+          "full": 0.0020380451599124054,
+          "raw_compressed": 0.0019477185103139092,
+          "direct_high": 9.023457094384777e-05,
+          "low_feedback": 9.207865464848017e-08,
+          "error": 9.032664959849625e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.000831249445620697,
+          "total_bound": 0.040155594325582515
+        }
+      ]
+    },
+    {
+      "m": -1,
+      "mu": -0.5,
+      "phase": "pi",
+      "saved_kernel_error": 4.7704895589362195e-18,
+      "connected_norm": 0.8501856141522672,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842093,
+      "connected_julia_norm": 0.991793212300745,
+      "reference_julia_norm": 0.9960078981552078,
+      "weighted_relative_norm": 0.03303012996737789,
+      "high_weighted_inverse_norm": 0.13283523031913227,
+      "high_unweighted_inverse_norm": 0.5764698405365757,
+      "effective_return_norm": 0.8001783113246967,
+      "u_weighted": 0.016740883017458522,
+      "v_weighted": 0.018866041071527426,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 0.0013352941488963459,
+          "raw_compressed": 0.001326450339551913,
+          "direct_high": 8.772172166345406e-06,
+          "low_feedback": 7.163717808756145e-08,
+          "error": 8.843809344432968e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.0009643776565199214,
+          "total_bound": 0.0056187055573590355
+        },
+        {
+          "full": 0.0019864798254403317,
+          "raw_compressed": 0.001896148246867308,
+          "direct_high": 9.021586484365116e-05,
+          "low_feedback": 1.1571372937266289e-07,
+          "error": 9.033157857302383e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0008312494456206973,
+          "total_bound": 0.040155594325582515
+        }
+      ]
+    },
+    {
+      "m": 0,
+      "mu": 0.5,
+      "phase": "0",
+      "saved_kernel_error": 2.6020852139652106e-18,
+      "connected_norm": 0.8410164414601433,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842093,
+      "connected_julia_norm": 0.9913683216935493,
+      "reference_julia_norm": 0.9960078981552077,
+      "weighted_relative_norm": 0.4353825363868908,
+      "high_weighted_inverse_norm": 0.13313892229652005,
+      "high_unweighted_inverse_norm": 0.577561230107312,
+      "effective_return_norm": 0.7983465694227542,
+      "u_weighted": 0.011946869673840165,
+      "v_weighted": 0.013645029140886972,
+      "g_low": 5.67000347602061,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 0.01333353067872086,
+          "raw_compressed": 0.013323908414664373,
+          "direct_high": 9.476932289866416e-06,
+          "low_feedback": 1.4533176662112623e-07,
+          "error": 9.622264056487542e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.001928423774973867,
+          "total_bound": 0.0065827516758129815
+        },
+        {
+          "full": 0.006619748307686652,
+          "raw_compressed": 0.006522604557507739,
+          "direct_high": 9.708261164011883e-05,
+          "low_feedback": 6.113853879413655e-08,
+          "error": 9.714375017891297e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0009792998002050308,
+          "total_bound": 0.040303644680166846
+        }
+      ]
+    },
+    {
+      "m": 0,
+      "mu": 0.5,
+      "phase": "pi",
+      "saved_kernel_error": 4.553649124439119e-18,
+      "connected_norm": 0.8410164414601433,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.991368321641904,
+      "reference_julia_norm": 0.9960078981552075,
+      "weighted_relative_norm": 0.42834517897662533,
+      "high_weighted_inverse_norm": 0.13313892014376502,
+      "high_unweighted_inverse_norm": 0.5775612215849573,
+      "effective_return_norm": 0.7983465687747763,
+      "u_weighted": 0.011946869673840165,
+      "v_weighted": 0.013645029140886972,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": -0.0032777480976418994,
+          "raw_compressed": -0.00328701265291664,
+          "direct_high": 9.406390862895866e-06,
+          "low_feedback": -1.4183558815503497e-07,
+          "error": 9.264555274740831e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.0019284237749738616,
+          "total_bound": 0.006582751675812975
+        },
+        {
+          "full": 0.0002066625923784499,
+          "raw_compressed": 0.00010965893073144456,
+          "direct_high": 9.704979828431929e-05,
+          "low_feedback": -4.613663731395032e-08,
+          "error": 9.700366164700534e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.000979299800205028,
+          "total_bound": 0.040303644680166846
+        }
+      ]
+    },
+    {
+      "m": 1,
+      "mu": 1.5,
+      "phase": "0",
+      "saved_kernel_error": 6.5052130349130266e-18,
+      "connected_norm": 0.8441377410909566,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9916385837896183,
+      "reference_julia_norm": 0.9960078981552076,
+      "weighted_relative_norm": 0.032130380414279014,
+      "high_weighted_inverse_norm": 0.1329179118013314,
+      "high_unweighted_inverse_norm": 0.5765274963529203,
+      "effective_return_norm": 0.8023287481698306,
+      "u_weighted": 0.009507031719919835,
+      "v_weighted": 0.010564091796111886,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 0.0015599360938272347,
+          "raw_compressed": 0.0015510322883376415,
+          "direct_high": 8.938044609672945e-06,
+          "low_feedback": -3.4239120079741434e-08,
+          "error": 8.903805489593204e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.0003066656351348504,
+          "total_bound": 0.004960993535973964
+        },
+        {
+          "full": 0.0020009041234233783,
+          "raw_compressed": 0.0019099747939431357,
+          "direct_high": 9.092105326918712e-05,
+          "low_feedback": 8.276211055455868e-09,
+          "error": 9.092932948024258e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0002643317557943624,
+          "total_bound": 0.03958867663575618
+        }
+      ]
+    },
+    {
+      "m": 1,
+      "mu": 1.5,
+      "phase": "pi",
+      "saved_kernel_error": 4.7704895589362195e-18,
+      "connected_norm": 0.8441377410909566,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842093,
+      "connected_julia_norm": 0.9916385836955945,
+      "reference_julia_norm": 0.9960078981552078,
+      "weighted_relative_norm": 0.03212317989226963,
+      "high_weighted_inverse_norm": 0.13291790968199593,
+      "high_unweighted_inverse_norm": 0.5765274874231757,
+      "effective_return_norm": 0.8023287482411424,
+      "u_weighted": 0.009507031719919836,
+      "v_weighted": 0.010564091796111886,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 0.001045707790030241,
+          "raw_compressed": 0.0010367751904113876,
+          "direct_high": 8.868475528405698e-06,
+          "low_feedback": 6.412409044769321e-08,
+          "error": 8.932599618853392e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.00030666563513485044,
+          "total_bound": 0.004960993535973964
+        },
+        {
+          "full": 0.0017796660322002488,
+          "raw_compressed": 0.001688726350735565,
+          "direct_high": 9.088903392480115e-05,
+          "low_feedback": 5.06475398827453e-08,
+          "error": 9.09396814646839e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0002643317557943625,
+          "total_bound": 0.03958867663575618
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "mu": 2.5,
+      "phase": "0",
+      "saved_kernel_error": 6.776263578034403e-20,
+      "connected_norm": 0.8575991518601799,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9924048881824498,
+      "reference_julia_norm": 0.9960078981552074,
+      "weighted_relative_norm": 0.007479495113511213,
+      "high_weighted_inverse_norm": 0.13214790828478543,
+      "high_unweighted_inverse_norm": 0.5732042672623083,
+      "effective_return_norm": 0.8067826123963844,
+      "u_weighted": 0.01765349257149265,
+      "v_weighted": 0.019661989609897228,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 7.060196166976419e-05,
+          "raw_compressed": 6.324205445144142e-05,
+          "direct_high": 7.338688352291769e-06,
+          "low_feedback": 2.121886603100346e-08,
+          "error": 7.359907218322772e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.00010001038746800294,
+          "total_bound": 0.004754338288307117
+        },
+        {
+          "full": 0.0002916626810308926,
+          "raw_compressed": 0.0002169847244341259,
+          "direct_high": 7.458779404782202e-05,
+          "low_feedback": 9.016254894466248e-08,
+          "error": 7.467795659676669e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.00021518790282731967,
+          "total_bound": 0.039539532782789134
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "mu": 2.5,
+      "phase": "pi",
+      "saved_kernel_error": 2.168404344971009e-19,
+      "connected_norm": 0.8575991518601799,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9924048882540284,
+      "reference_julia_norm": 0.9960078981552082,
+      "weighted_relative_norm": 0.007479490024796604,
+      "high_weighted_inverse_norm": 0.13214790725838388,
+      "high_unweighted_inverse_norm": 0.5732042629326431,
+      "effective_return_norm": 0.8067826127869622,
+      "u_weighted": 0.017653492571492655,
+      "v_weighted": 0.019661989609897228,
+      "g_low": 5.670003476020603,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 6.862813922529773e-05,
+          "raw_compressed": 6.129705975673986e-05,
+          "direct_high": 7.30460471932462e-06,
+          "low_feedback": 2.647474923325537e-08,
+          "error": 7.331079468557875e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.00010001038746800297,
+          "total_bound": 0.004754338288307117
+        },
+        {
+          "full": 0.0002907699333470377,
+          "raw_compressed": 0.00021610533459665845,
+          "direct_high": 7.457205972730038e-05,
+          "low_feedback": 9.25390230788691e-08,
+          "error": 7.466459875037925e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0002151879028273197,
+          "total_bound": 0.039539532782789134
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "mu": 3.5,
+      "phase": "0",
+      "saved_kernel_error": 1.6263032587282567e-19,
+      "connected_norm": 0.8724616519825603,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9932640472599512,
+      "reference_julia_norm": 0.9960078981552076,
+      "weighted_relative_norm": 0.0038360042284439,
+      "high_weighted_inverse_norm": 0.13191838915343784,
+      "high_unweighted_inverse_norm": 0.5722899860367526,
+      "effective_return_norm": 0.0,
+      "u_weighted": 0.0,
+      "v_weighted": 0.0,
+      "g_low": 0.0,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 6.711047834021835e-06,
+          "raw_compressed": 0.0,
+          "direct_high": 6.711047834021835e-06,
+          "low_feedback": 0.0,
+          "error": 6.711047834021835e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.0,
+          "total_bound": 0.004654327900839114
+        },
+        {
+          "full": 6.713026426361177e-05,
+          "raw_compressed": 0.0,
+          "direct_high": 6.713026426361177e-05,
+          "low_feedback": 0.0,
+          "error": 6.713026426361177e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0,
+          "total_bound": 0.039324344879961816
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "mu": 3.5,
+      "phase": "pi",
+      "saved_kernel_error": 2.710505431213761e-20,
+      "connected_norm": 0.8724616519825603,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842093,
+      "connected_julia_norm": 0.9932640472615039,
+      "reference_julia_norm": 0.9960078981552078,
+      "weighted_relative_norm": 0.003836004222573479,
+      "high_weighted_inverse_norm": 0.13191838895822613,
+      "high_unweighted_inverse_norm": 0.5722899851216936,
+      "effective_return_norm": 0.0,
+      "u_weighted": 0.0,
+      "v_weighted": 0.0,
+      "g_low": 0.0,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 6.704582313591566e-06,
+          "raw_compressed": 0.0,
+          "direct_high": 6.704582313591566e-06,
+          "low_feedback": 0.0,
+          "error": 6.704582313591566e-06,
+          "direct_bound": 0.004654327900839114,
+          "feedback_bound": 0.0,
+          "total_bound": 0.004654327900839114
+        },
+        {
+          "full": 6.712727885497456e-05,
+          "raw_compressed": 0.0,
+          "direct_high": 6.712727885497456e-05,
+          "low_feedback": 0.0,
+          "error": 6.712727885497456e-05,
+          "direct_bound": 0.039324344879961816,
+          "feedback_bound": 0.0,
+          "total_bound": 0.039324344879961816
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "mu": 4.5,
+      "phase": "0",
+      "saved_kernel_error": 3.3881317890172014e-20,
+      "connected_norm": 0.8695961231583359,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9931395324928107,
+      "reference_julia_norm": 0.9960078981552076,
+      "weighted_relative_norm": 0.0028797553801260295,
+      "high_weighted_inverse_norm": 0.10028088968402404,
+      "high_unweighted_inverse_norm": 0.5594023845687063,
+      "effective_return_norm": 0.0,
+      "u_weighted": 0.0,
+      "v_weighted": 0.0,
+      "g_low": 0.0,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 8.476915631144418e-07,
+          "raw_compressed": 0.0,
+          "direct_high": 8.476915631144418e-07,
+          "low_feedback": 0.0,
+          "error": 8.476915631144418e-07,
+          "direct_bound": 0.000634184051937344,
+          "feedback_bound": 0.0,
+          "total_bound": 0.000634184051937344
+        },
+        {
+          "full": 1.7052400329908308e-05,
+          "raw_compressed": 0.0,
+          "direct_high": 1.7052400329908308e-05,
+          "low_feedback": 0.0,
+          "error": 1.7052400329908308e-05,
+          "direct_bound": 0.01189046894282089,
+          "feedback_bound": 0.0,
+          "total_bound": 0.01189046894282089
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "mu": 4.5,
+      "phase": "pi",
+      "saved_kernel_error": 1.0164395367051604e-20,
+      "connected_norm": 0.8695961231583359,
+      "reference_norm": 0.922099211610101,
+      "core_norm": 0.9059446324842095,
+      "connected_julia_norm": 0.9931395324928582,
+      "reference_julia_norm": 0.9960078981552076,
+      "weighted_relative_norm": 0.0028797553801160774,
+      "high_weighted_inverse_norm": 0.10028088968367754,
+      "high_unweighted_inverse_norm": 0.5594023845667734,
+      "effective_return_norm": 0.0,
+      "u_weighted": 0.0,
+      "v_weighted": 0.0,
+      "g_low": 0.0,
+      "reference_cross_norm": 0.0,
+      "core_cross_norm": 0.0,
+      "probes": [
+        {
+          "full": 8.476727577564596e-07,
+          "raw_compressed": 0.0,
+          "direct_high": 8.476727577564596e-07,
+          "low_feedback": 0.0,
+          "error": 8.476727577564596e-07,
+          "direct_bound": 0.000634184051937344,
+          "feedback_bound": 0.0,
+          "total_bound": 0.000634184051937344
+        },
+        {
+          "full": 1.7052391561797748e-05,
+          "raw_compressed": 0.0,
+          "direct_high": 1.7052391561797748e-05,
+          "low_feedback": 0.0,
+          "error": 1.7052391561797748e-05,
+          "direct_bound": 0.01189046894282089,
+          "feedback_bound": 0.0,
+          "total_bound": 0.01189046894282089
+        }
+      ]
+    }
+  ],
+  "sums_of_sector_absolute_errors_and_bounds": {
+    "0": {
+      "error": [
+        5.796609360438784e-05,
+        0.0006037956553141764
+      ],
+      "total_bound": [
+        0.03720120016468766,
+        0.30145558628767183
+      ],
+      "direct_bound": [
+        0.033848663409748486,
+        0.2990513520453745
+      ],
+      "feedback_bound": [
+        0.0033525367549391773,
+        0.0024042342422973617
+      ]
+    },
+    "pi": {
+      "error": [
+        5.760237973361457e-05,
+        0.0006036482625971724
+      ],
+      "total_bound": [
+        0.037201200164687656,
+        0.30145558628767183
+      ],
+      "direct_bound": [
+        0.033848663409748486,
+        0.2990513520453745
+      ],
+      "feedback_bound": [
+        0.0033525367549391725,
+        0.0024042342422973596
+      ]
+    }
+  },
+  "scope": "Finite saved-matrix checks against exact raw compression; actual N2 Gram correction is separate.",
+  "unresolved": [
+    "Infinite defect-weighted exterior mixing",
+    "Low-frequency integrability",
+    "Continuum and exterior-tail numerical errors",
+    "Physical geometry and supporting source"
+  ]
+}

@@ -1,5 +1,231 @@
 # Reproduction and coupled-model iterations
 
+## Longer-throat pilot and a defect-weighted remainder — increment 102
+
+### A remainder estimate without an unweighted high-block inverse
+
+This is our application of a standard contraction identity to the declared
+Dirac source model. It is a mathematical estimate, not a new physical law
+or a certified error bar on the infinite quantum source. The
+[executable check](angular_defect_bound.py) uses frozen increment 101 matrices; its
+[results](angular_defect_bound_results.json) require no new exterior solves.
+
+Use the actual physical flux Hilbert norms and define
+\[
+ W_B=(I-B^\dagger B)^{1/2},\quad V_B=(I-BB^\dagger)^{1/2},\qquad
+ F(S)=(I-SB)^{-1}S.
+\]
+For passive maps S and B, with the finite feedback inverse defined, the
+unitary dilation
+\[
+ U_B=\begin{pmatrix}B&V_B\\W_B&-B^\dagger\end{pmatrix}
+\]
+is the standard operator construction in
+[Robinson, Theorems0–2](https://arxiv.org/pdf/1803.09329).
+Connect its first output y=Bx+V_B h to its input x=S y. Unitarity says
+\(\|y\|^2+\|W_Bx-B^\dagger h\|^2=\|x\|^2+\|h\|^2\).
+Passivity gives \(\|x\|\le\|y\|\), hence
+\[
+ \Phi_S=W_BF(S)V_B-B^\dagger,\qquad \|\Phi_S\|\le1.
+\]
+For two passive environments sharing B, their relative kernel K therefore
+obeys \(\|W_B K V_B\|\le2\). The defect intertwining identity
+\(V_BB=BW_B\) also gives
+\[
+ W_B(I-SB)^{-1}W_B=I+\Phi_SB,\qquad
+ \|W_B(I-SB)^{-1}W_B\|\le2.
+\]
+These identities do not require B to be normal. Distinct input and output
+coordinates must retain distinct W_B and V_B.
+
+Split retained L and omitted H angular channels. The product-core map B,
+its compact metric derivative \(\dot B\), and the reference environment
+preserve this split. Let
+\[
+ u_w=\|S_{LH}B_HW_H^{-1}\|,\quad
+ v_w=\|W_H^{-1}S_{HL}\|,\quad
+ g_L=(1-\|B_L\|)^{-1}.
+\]
+The exact feedback correction from increment 101 satisfies
+\(\|\Delta S\|\le2u_wv_w\).
+The effective retained return remains passive: high-port flux conservation
+with contractive high feedback leaves no extra retained-port flux. Thus
+both retained resolvents are bounded by g_L. Taking the trace against the
+compact metric derivative gives
+\[
+ |\mathcal Q-\mathcal Q_N|\le\frac2\pi\left[
+ g_L^2u_wv_w\|\dot B_L\|_1+
+ \|V_H^{-1}\dot B_H W_H^{-1}\|_1\right].
+\]
+Unlikeincrement 101's estimate, this needs no unweighted high-block inverse g_H.
+It still needs defect-weighted exterior mixing u_w,v_w. The estimate
+compares an exact angular compression; the finite output-Gram correction
+and numerical approximation errors are separate.
+
+In canonical paired-mode coordinates of the symmetric core,
+\(B_n=-iy_nI+t_nH\), with real y_n,t_n and Hermitian unitary H.
+Both defects are \(\sqrt{\delta_n}I\), where
+\(\delta_n=1-y_n^2-t_n^2>0\) at positive imaginary frequency. Consequently
+\[
+ \|V_H^{-1}\dot B_H W_H^{-1}\|_1
+ =\sum_{n>N,m,\chi}\frac{\|\dot B_{nm\chi}\|_1}{\delta_n}.
+\]
+The sum includes both Weyl components once. Usingincrement 101's radial envelopes
+for either null derivative bounds this by
+\(2\sum_{n>N}(2n+1)(P_n+2Z_n)/\delta_n\).
+
+A positive ODE avoids subtracting almost equal numbers to evaluate delta.
+Write c=atan(rho_c), L=2c, k=kappa*ell, lambda=sqrt[n(n+1)],
+m(s)=lambda*sec(s-c), and m_star=lambda*sec(c). The Riccati equations imply
+\[
+ \delta'=-2my\delta+2k(2y^2+t^2),\qquad \delta(0)=0,
+\]
+\[
+ \delta(L)=2k\int_0^L(2y(s)^2+t(s)^2)
+                  e^{-2\int_s^L m(u)y(u)\,du}\,ds.
+\]
+For n>0, comparison with constant mass lambda gives y(s)>=y_0(s), where
+\[
+ y_0(s)=\frac{\lambda\tanh(\omega s)}{\omega+k\tanh(\omega s)},
+ \qquad\omega=\sqrt{\lambda^2+k^2}.
+\]
+Since my<=m_star, retaining only 2y^2 on the last half-interval proves
+\[
+ \delta_n\ge\frac{2k}{m_*}y_0(L/2)^2(1-e^{-m_*L})>0.
+\]
+At fixed positive kappa the reciprocal grows at most linearly in n;
+increment 101's exponentially decreasing derivative envelopes remain angularly
+summable after this weighting. This does not control the low-frequency
+integral: the displayed lower bound vanishes as kappa approaches zero.
+Nor does it bound the weighted exterior mixing.
+
+Independent algebra review confirmed the defect order and feedback proof.
+The executable uses full matrix square roots, not the ideal scalar delta,
+and checks raw Euclidean passivity explicitly. All 10 gates pass across
+18 saved N=4-to-raw-N=2 sector/phase records at kappa=2. Saved source
+kernels agree within 6.51e-18. Nine nonnormal complex contraction controls
+check the identity away from the special radial basis. Fifteen additional
+positive-defect ODE cases (n=3,8,16; kappa=1e-4,.4,2,12,96) agree with the
+independent complex scattering solver within 3.72e-12 and satisfy the
+analytic lower bound. No historical integration was repeated.
+
+| Phase-pi finite sample | Central | Upper |
+| --- | ---: | ---: |
+| Sum of absolute raw-compression errors | 0.00005760238 | 0.0006036483 |
+| New conditional bound | 0.03720120 | 0.3014556 |
+
+This bound is looser thanincrement 101's sampled bound. Its advance is removing an
+unproved inverse hypothesis, not tighter numerical error bars. Passing
+these checks does not certify an infinite sum. In the continuum the
+weighted maps and physical feedback limit must exist; finite passive
+regularization gives the uniform form inequalities. A facet Gram norm
+cannot silently be replaced by the continuum spherical norm: whitening,
+when used, must transform both core and exterior maps consistently.
+
+### Actual longer-throat source samples
+
+The [new pilot](long_throat_source.py) completed 63 new exterior-frequency
+responses in 98.19s; all 20 acceptance gates pass. The
+[saved evidence](long_throat_source_results.json) contains both actual
+Weyl components, all nine m sectors at N=4, and N=2 fromincrement 101's exact
+Gram-weighted restriction. The rho_c=2 baseline reuses exact101 kernels.
+The new rho_c=8,32 samples have the same x=kappa*ell but different physical
+kappa, so their exterior responses were genuinely recomputed.
+
+At fixed b=.2,d=1,q=1 and endpoint lapse one,
+\[
+ \ell=b\sqrt{1+\rho_c^2},\quad N(0)=(1+\rho_c^2)^{-1/2},\quad
+ L_{\rm proper}=2b\,\operatorname{asinh}\rho_c,\quad
+ L_{\rm optical}=2\ell\arctan\rho_c.
+\]
+The exterior clock stays fixed. This changes geometry and redshift, not
+just coordinates. The compact probes retain their fractional sigma
+profiles; their proper supports and geometric weights consequently
+change. The JSON records those supports explicitly. These are comparisons
+of defined smeared responses, not the same pointwise stress measurement.
+
+| rho_c | Proper length | Optical length | Center lapse |
+| --- | ---: | ---: | ---: |
+| 2 | 0.577454 | 0.990264 | 0.447214 |
+| 8 | 1.110589 | 4.664633 | 0.124035 |
+| 32 | 1.663651 | 19.715943 | 0.031235 |
+
+Lengths use d=1. The three common x values are 0.0441529480,
+0.4439150615 and 4.6283350602. An eventual frequency integral is
+\(Q=\int K(x/\ell;\rho_c)\,dx/\ell\), so the comparable plotted
+integrand includes the Jacobian 1/ell. At the middle x, phase pi gives:
+
+| rho_c | N=4 central K/ell | N=4 upper K/ell |
+| --- | ---: | ---: |
+| 2 | -0.00393667021 | +0.00220551308 |
+| 8 | -0.02869280899 | -0.01101376783 |
+| 32 | -0.01258298952 | -0.00483955270 |
+
+For rho=32 at this frequency, refining h=.05 to .035 changes these by
+[-2.23191523e-5,-8.60785359e-6], about 0.178% in each case. The matched
+N=4-minus-N=2 change is[-1.70362590e-7,-6.55050791e-8]. These are finite
+sensitivities at one frequency, not continuum/angular error bounds.
+At the highest x, rho=32's central value is -1.77124e-7 while its upper
+value remains +6.53475e-7. THREE SAMPLES DO NOT DETERMINE THE INTEGRAL.
+Neither negative sampled contributions nor a small cutoff change prove
+absolute full-field NEC violation or an opening solution.
+
+The largest exterior equation residual is 5.41e-15. Independent cap
+Frobenius and exact-state checks reach 3.89e-15; tightening the radial
+source solve changes kernels by at most 5.29e-11. All 17 input hashes and
+the executed source are preserved. Sign is not an acceptance criterion.
+The baseline nodes contain no matrices; that absence is explicit rather
+than filled by matrices at a different frequency. New middle-frequency
+rows and the matched finer-mesh rows do retain full matrices.
+
+The [figure](long_throat_source_progress.png) distinguishes proper length,
+optical delay and the sampled source. This pilot makes a longer prescribed
+core worth integrating; it does not repair the sharp interface. The next
+numerical gate is a controlled rho=32 frequency integral with separate
+angular, mesh and tail evidence, using the defect-weighted argument where
+its actual assumptions can be bounded. A physical candidate must then
+supply a consistent smooth collar and gravitational response.
+
+Independent read-only reconstruction checked all 90 high-cut rows,
+27 stored matrices and 15 weighted low-cut matrix reconstructions.
+Baseline reuse, sector sums, scaled kernels and saved differences agree
+exactly; independently evaluated matrix observables agree within
+8.33e-17. Geometry and independent probe quadrature agree within
+2.22e-15 and 1.78e-15. Both null combinations at the rho=32 middle
+sample are negative on both meshes. This is still a sampled statement.
+The middle-sample magnitude is larger at rho=8 than at rho=32; no
+monotone improvement or integrated-strength claim follows. The new figure
+was visually inspected, and all 184 earlier PNG/PDF artifacts were kept.
+
+### Physical direction after the pilot
+
+The q=1 sharp join is still a prescribed field problem. A larger rho_c
+changes optical delay and redshift, but does not supply the missing
+junction stress or the large-flux hierarchy. The published long-throat
+construction instead matches a gradually opening geometry to its exterior;
+its optical length is not its proper length.
+[Maldacena, Milekhin and Popov, §§4–5.1](https://arxiv.org/html/1807.04726v3).
+
+The next distinct smooth-geometry calculation identified in this review
+uses the saved increment 84 collar profile R(l),N(l),x(l), at its already determined
+state parameter; no repeated opening-root search is needed. Its first
+massive channel has exact radial potential sqrt[n(n+q)]*N/R. In proper
+distance, y'=(lambda/R)(1-y^2)-2*kappa*y/N and
+(log t)'=-kappa/N-lambda*y/R. Retaining log transmission avoids overflow
+and underflow in the large-q barrier. A periodic versus antiperiodic
+self-adjoint completion on the SAME auxiliary finite collar can test the
+nonlocal massive state response against its geometric flare budget.
+These completions are specified test environments, not the actual
+nonradial two-mouth exterior. A small first-mode difference alone would
+not control every mode or every physical completion.
+
+For that state difference local renormalization terms cancel because the
+local geometry is identical. Importing the invariant product reference's
+zero null stress onto a varying-radius collar would be invalid. The
+actual zero-mode return and absolute Einstein–matter solution still need
+to be supplied. Neither this estimate nor the pilot establishes a stable
+medium or 13 September 2027 -> 12 September 2027 passage.
+
 ## Complete finite angular source and the connected continuum — increment101
 
 The general angular bases now enter an actual two-chirality exterior

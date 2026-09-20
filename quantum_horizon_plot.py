@@ -7612,6 +7612,93 @@ def complete_angular_source_progress():
     plt.close(fig);print(outputs[0]);return outputs
 
 
+def long_throat_source_progress():
+    """Display three sampled kernels on distinct prescribed product throats."""
+    from matplotlib.patches import Rectangle, Ellipse
+    from matplotlib.lines import Line2D
+    root=Path(__file__).resolve().parent
+    d=json.loads((root/'long_throat_source_results.json').read_text(encoding='utf-8'))
+    assert d['passed'] and all(d['tests'].values())
+    assert not d['diagnostics']['frequency_integral_computed']
+    groups=d['geometries'];assert [g['geometry']['rho_c'] for g in groups]==[2.,8.,32.]
+    x=np.asarray([n['x'] for n in d['parameters']['common_scaled_nodes']])
+    assert len(x)==3 and np.all(np.diff(x)>0)
+    colors=('#007e87','#7951b0','#bc6a22');values={}
+    for group in groups:
+        g=group['geometry'];ell=g['ell'];rho=g['rho_c']
+        assert g['b']==d['parameters']['b']==.2 and group['h']==.05 and group['outer_nmax']==9
+        assert np.isclose(g['proper_length'],2*g['b']*np.arcsinh(rho),rtol=1e-13,atol=0)
+        assert np.isclose(g['optical_length'],2*ell*g['sigma_cut'],rtol=1e-13,atol=0)
+        assert np.isclose(g['center_lapse'],g['b']/ell,rtol=1e-13,atol=0)
+        assert np.isclose(g['endpoint_lapse'],1,rtol=1e-13,atol=0)
+        assert [s['m'] for s in group['sectors']]==list(range(-4,5))
+        for n in (2,4):
+            rows=group['sums'][str(n)]
+            assert len(rows)==3 and np.array_equal([r['x'] for r in rows],x)
+            assert all(r['m_values']==list(range(-n,n+1)) for r in rows)
+            arr=np.asarray([r['scaled_kernels']['pi']['pressure'] for r in rows])
+            raw=np.asarray([r['kernels']['pi']['pressure'] for r in rows])
+            assert arr.shape==(3,2) and np.all(np.isfinite(arr))
+            assert np.allclose(arr,raw/ell,rtol=1e-12,atol=0)
+            sectors=[s for s in group['sectors'] if abs(s['m'])<=n]
+            for k,row in enumerate(rows):
+                chosen=[s['samples'][k] if n==4 else s['samples'][k]['lower_cut_response'] for s in sectors]
+                assert np.array_equal(np.sum([r['scaled_kernels']['pi']['pressure'] for r in chosen],axis=0),arr[k])
+                assert np.isclose(row['kappa']*ell,x[k],rtol=1e-13,atol=0)
+            values[(rho,n)]=arr
+        assert [p['name'] for p in g['probes']]==['central','upper_side']
+        for p in g['probes']:
+            assert np.allclose(p['proper_support'],g['b']*np.arcsinh(np.tan(p['support'])),rtol=1e-13,atol=0)
+    mesh=d['mesh_control'];assert mesh['h']==.035 and mesh['geometry']['rho_c']==32
+    mesh_change=np.asarray(mesh['sums']['4'][0]['scaled_kernels']['pi']['pressure'])-values[(32.,4)][1]
+    assert np.array_equal(mesh_change,mesh['finer_minus_primary']['4'][0]['scaled_kernels']['pi']['pressure'])
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig,axes=plt.subplots(1,2,figsize=(13.5,8.5))
+    fig.subplots_adjust(left=.08,right=.97,bottom=.285,top=.635,wspace=.29)
+    fig.suptitle('Longer prescribed throats: a sampled source comparison',fontsize=17.5,fontweight='bold',y=.97)
+    fig.text(.5,.918,'Phase \u03c0 \u00b7 Connected minus invariant AdS reference \u00b7 b = 0.2d \u00b7 \u210f = c = d = 1',ha='center',fontsize=10.6,color='#475569')
+    geom=fig.add_axes([.06,.71,.88,.18]);geom.set_axis_off();geom.set(xlim=(0,10),ylim=(-.5,3.6))
+    for col,label in ((.1,'Prescribed core'),(5.2,'Proper length / d'),(7.05,'Optical length / d'),(8.9,'Center lapse')):
+        geom.text(col,3.25,label,ha='left' if col<1 else 'center',fontsize=9.6,fontweight='bold',color='#475569')
+    longest=max(g['geometry']['proper_length'] for g in groups)
+    for j,(group,color) in enumerate(zip(groups,colors)):
+        g=group['geometry'];y=2.6-j;length=2.6*g['proper_length']/longest
+        geom.text(.1,y,f"\u03c1c = {g['rho_c']:g}",va='center',fontsize=10,color=color)
+        geom.add_patch(Rectangle((1.15,y-.15),length,.30,fc=color,ec=color,alpha=.14))
+        for xx in (1.15,1.15+length):
+            geom.add_patch(Ellipse((xx,y),.075,.30,fc='white',ec=color,lw=1))
+        for xx,key,fmt in ((5.2,'proper_length','.4f'),(7.05,'optical_length','.4f'),(8.9,'center_lapse','.5f')):
+            geom.text(xx,y,format(g[key],fmt),ha='center',va='center',fontsize=10,color=color)
+    geom.text(1.15,-.05,'Length scaled by proper distance; width schematic. Endpoint lapse = 1.',fontsize=8.7,color='#475569')
+    for j,(ax,title) in enumerate(zip(axes,('A. Central compact probe','B. Upper-side compact probe'))):
+        ax.axhline(0,color='#64748b',lw=.9)
+        for group,color in zip(groups,colors):
+            rho=group['geometry']['rho_c']
+            for n,style in ((2,'s--'),(4,'o-')):
+                ax.plot(x,values[(rho,n)][:,j],style,color=color,lw=1.5,ms=5.5,mfc='white' if n==2 else color)
+        ax.set_xscale('log');ax.set_yscale('symlog',linthresh=1e-7,linscale=.45)
+        ax.set_title(title+' (symmetric log scale)',fontsize=11.4,pad=11)
+        ax.set_xticks(x,[f'{v:.3g}' for v in x]);ax.minorticks_off()
+        ax.set_xlabel('Shared scaled frequency x = \u03ba\u2113')
+        ax.set_ylabel('Source kernel / \u2113\n(weighted energy + radial-pressure difference)',fontsize=9.4)
+        ax.grid(axis='y',alpha=.16);ax.spines[['top','right']].set_visible(False)
+        ax.margins(x=.10)
+        limit=2*max(float(np.max(np.abs(arr))) for arr in values.values())
+        ax.set_ylim(-limit,limit);ax.set_yticks([-1e-2,-1e-4,-1e-6,0,1e-6,1e-4,1e-2])
+    handles=[Line2D([0],[0],color=c,lw=2,label=f"\u03c1c = {g['geometry']['rho_c']:g}") for g,c in zip(groups,colors)]
+    handles += [Line2D([0],[0],color='#475569',marker=m,ls=ls,mfc=fc,label=label) for m,ls,fc,label in
+                (('s','--','white','N = 2'),('o','-','#475569','N = 4'))]
+    fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.52,.698),ncol=5,frameon=False,fontsize=9.8)
+    fig.text(.05,.214,'Three sampled integrands only; connecting lines are guides. No frequency integral or supporting-stress verdict.',fontsize=10,color='#475569')
+    fig.text(.05,.165,'Both Weyl components; complete finite N = 2 / 4 multiplets; q = 1, outer J = 9, h/d = 0.05. Infinite angular sum remains open.',fontsize=9.5,color='#475569')
+    fig.text(.05,.116,f"At \u03c1c=32, middle x only: h/d 0.05 \u2192 0.035 changes N=4 values by {mesh_change[0]:+.3g}, {mesh_change[1]:+.3g}; not error bounds.",fontsize=9.5,color='#475569')
+    fig.text(.05,.068,'Probe proper supports change with \u03c1c. Optical length is endpoint-clock light travel time; sharp junction support remains unresolved.',fontsize=9.5,color='#475569')
+    fig.text(.05,.022,'Assumed geometry, not a physical medium. 13 Sep 2027 \u2192 12 Sep 2027 remains unproved.',fontsize=10.4,fontweight='bold',color='#007e87')
+    outputs=tuple(root/f'long_throat_source_progress.{suffix}' for suffix in ('png','pdf'))
+    for path in outputs:fig.savefig(path,dpi=180,facecolor='white')
+    plt.close(fig);print(outputs[0]);return outputs
+
+
 if __name__ == '__main__':
     main()
     source_progress()

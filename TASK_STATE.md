@@ -58,6 +58,99 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Longer-throat pilot and defect-weighted remainder — increment102
+- Previous continuation classified PROGRESS: increment101 completed and
+  published to private main at d9e442a3cbaafa70faf2fe07f448beb750bde413.
+  Clean HEAD was revalidated before this increment. The older101 entry's
+  pending-publication text is historical. Import remains complete; goal ACTIVE.
+- New long_throat_source.py/results.json: all20 gates PASS,63 new actual
+  paired-Weyl exterior responses,98.1919703s. Agent-owned session36160
+  ended exit0; no live solver remains. Source is frozen at
+  ba2f8a3252683b6ad07a87fa7c724a9513244e6047c176568b77160165d3144f;
+  results SHA9aa56b9d42543f259b8cd24b15d9b77451a8b00522937aa8fca99be41ad097e7.
+- Fixed b=.2,d=1,q=1,J9; complete N4 and exactly reprojected N2. rho_c
+  2/8/32 changes ell=b*sqrt(1+rho_c^2), proper/optical length and redshift
+  with cut lapse1. Exterior is independent of rho at fixed physical kappa;
+  matched x=kappa*ell requires different new kappa for rho8/32.
+- Three x nodes [.044152948044253765,.44391506147705256,4.628335060152456].
+  rho2 kernels reused EXACTLY from101 fine nodes nearest kappa=.1,1,10.
+  Those baseline nodes have no matrices; no other-frequency substitute.
+  New middle nodes and rho32 middle finer mesh retain full matrices.
+- N4 phase-pi middle-x K/ell central/upper:
+  rho2 [-.003936670207,+.002205513081];
+  rho8 [-.028692808991,-.011013767828];
+  rho32[-.012582989516,-.004839552699].
+  rho32 h=.035 minus .05 [-2.23191523e-5,-8.60785359e-6] (~.178%).
+  N4-minus-N2 [-1.70362590e-7,-6.55050791e-8]. These are sampled
+  sensitivities, not error bounds. Highest-x rho32 central negative but
+  upper positive. No integral, full-field NEC or support conclusion.
+- The probes preserve fractional sigma profiles, so proper supports and
+  weights change with rho; explicit proper centers/supports are saved.
+  K/ell includes d_kappa=dx/ell. No volume/degen/q multiplier applied.
+  Max exterior residual5.41e-15, cap control3.89e-15 and tightened radial
+  source change5.29e-11. All17 input hashes preserved; sign never a gate.
+- New angular_defect_bound.py/results.json, root-owned and frozen.
+  Source SHAe2a96628a8f8910494445d621f93c7ed8f895f584f9d92ed4ea0a9c202be5420;
+  data SHA7657c1f8a7c4866c629cbcc2a4d6fff62bfa61d8f2a1be0754380f8b8572f249.
+  All10 gates PASS in1.97s:18 saved101 sector/phase matrix checks,
+  9 nonnormal complex contraction controls and15 positive defect ODE cases.
+  Old exterior/integration calculations were not rerun.
+- Main analytic improvement: for passive S,B, W=(I-Bdagger B)^.5,
+  V=(I-B Bdagger)^.5 and F=(I-SB)^-1 S, the Julia-unitary feedback gives
+  ||W F V-Bdagger||<=1. Hence ||W Krelative V||<=2 and
+  ||W(I-SB)^-1 W||<=2. Distinct W,V/port orders are retained.
+  Source error <=(2/pi)[gL^2*u_w*v_w*||dB_L||1
+                         +||V_H^-1 dB_H W_H^-1||1],
+  u_w=||SLH B_H W_H^-1||, v_w=||W_H^-1 SHL||, gL=1/(1-||B_L||).
+  Reference block-diagonal and exact continuum compression assumed.
+  This removes an unweighted g_H requirement, not weighted mixing/tails.
+- For paired normal core blocks, delta_n=1-y^2-t^2 has positive ODE
+  delta'=-2my delta+2k(2y^2+t^2). Derived explicit lower bound
+  (2k/mstar)*y0(L/2)^2*(1-exp(-mstar L)); see RESEARCH102 for definitions.
+  Its reciprocal grows at most linearly with n at fixed positive kappa.
+  Low-frequency integration and infinite weighted exterior mixing remain open.
+- Independent formation_updates SVD reconstruction of18 records agrees
+  norms6.66e-16, trace5.64e-18, bounds2.08e-17; sums/hashes exact.
+  Independent analytic review confirms stronger delta lower bound.
+  Source kernels reproduce101 within6.51e-18; positive-delta versus
+  independent complex scattering differs<=3.72e-12 over15 cases.
+  Phase-pi sampled new bounds [.0372012002,.3014555863] are LARGER than
+  the old conditional bound; actual raw-cut errors[5.76024e-5,.0006036483].
+  Claim fewer assumptions, not a tighter numerical certificate/new physics.
+- Next numerical gate: controlled rho32 frequency integral, separating
+  angular/mesh/tail effects. Do not treat3 samples as an integral. Use the
+  new weighted bound only where actual operator inputs can be controlled.
+- Physical direction: smooth matching remains mandatory. The rho family
+  retains93's unsupported sharp join; lengthening does not repair its source.
+  Later use fixed84 smooth collar, no opening-root rescan, for first massive
+  n1,q1e5 same-geometry periodic/antiperiodic state-sensitivity test against
+  its geometric flare budget. Exact potential=lambda*N/R, proper-distance
+  Riccati and log transmission. Auxiliary holonomy completions are not the
+  actual exterior. Product-reference zero NEC cannot be imported to the
+  varying-radius collar; only same-geometry local counterterms cancel.
+- No stable medium, material recipe, formation or chronology change. The
+  13Sep2027->12Sep2027 example remains UNPROVED. No new goal/thread needed.
+- Final pilot audit PASS:90 high rows,27 stored matrices,15 independent
+  weighted low-cut reconstructions; sector sums/baseline/differences exact.
+  Independent observables8.33e-17, traces1.11e-16, low-cut5.55e-17;
+  independent geometry/probe quadrature2.22e-15/1.78e-15. All hashes match.
+- New long_throat_source_progress.png/.pdf and append-only plot helper
+  were generated and visually inspected. No historical figures rerun.
+  Plotter SHAdb83cea50376b71e4cc7efa1a5a7deb1a319fb74560567ac204d647a4a98e2ba;
+  PNG0f96e5a2aab1fc867276d6d7b71d8644fc759909b92a579b453fd206843be3ad;
+  PDFab07d97d6edee715634d68d837e2300f9ce3721a23d85e124f18b44bd842b2c0.
+- Final root checks PASS:443 historical files outside the five permitted
+  documents/plotter are byte-identical;184 old PNG/PDF preserved. All101
+  and earlier RESEARCH/TASK history is byte-identical; plotter append-only.
+  Three AST checks, both result/source/input manifests,328 local file or
+  directory references, and git diff whitespace checks pass. A broad link
+  regex initially mistook historical math for links; explicit file/directory
+  reference validation passes without modifying that old mathematics.
+- Private GitHub repository and expected origin verified. Ready to publish
+  this11-file increment from base d9e442a3cbaafa70faf2fe07f448beb750bde413.
+  Confirm actual final local/remote main equality after push. All research
+  tasks/solver jobs are terminal; scientific next steps above remain open.
+
 ### Complete finite angular source — increment101
 - Previous goal continuation classified PROGRESS: general-m adapter/pilot,
   exact cross-cutoff reuse, continuum-state argument and conditional source
