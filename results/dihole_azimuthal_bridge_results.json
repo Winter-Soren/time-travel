@@ -1,0 +1,1029 @@
+{
+  "complete": true,
+  "passed": true,
+  "tests": {
+    "correct_channel_counts": true,
+    "angular_normalization": true,
+    "independent_associated_legendre": true,
+    "reference_differential_modes": true,
+    "regular_pole_limits": true,
+    "regular_pole_powers": true,
+    "legacy_mu_half_profiles": true,
+    "actual_legacy_coefficients": true,
+    "physical_full_dirac_permutation": true,
+    "hermitian_transverse": true,
+    "positive_clock_and_mass": true,
+    "paired_variation": true,
+    "massless_two_weyl_scattering": true,
+    "real_energy_unitarity": true,
+    "imaginary_passivity": true,
+    "constant_proper_mass_dispersion": true,
+    "direct_metric_derivative": true,
+    "invalid_input_rejection": true,
+    "historical_inputs_preserved": true
+  },
+  "angular_controls": [
+    {
+      "mu": -2.5,
+      "a": -3,
+      "plus_labels": [
+        3,
+        4,
+        5
+      ],
+      "minus_labels": [
+        3,
+        4,
+        5
+      ],
+      "p": 3,
+      "m": 3,
+      "gram_error": 2.6645352591003757e-15,
+      "associated_legendre_error": 1.3322676295501878e-15,
+      "reference_partner_error": 1.3606005211386218e-11,
+      "pole_limit_error": 0.0,
+      "pole_power_relative_error": 1.5625017388831708e-06
+    },
+    {
+      "mu": -1.5,
+      "a": -2,
+      "plus_labels": [
+        2,
+        3,
+        4
+      ],
+      "minus_labels": [
+        2,
+        3,
+        4
+      ],
+      "p": 3,
+      "m": 3,
+      "gram_error": 1.7763568394002505e-15,
+      "associated_legendre_error": 1.0269562977782698e-15,
+      "reference_partner_error": 1.1259437826538488e-11,
+      "pole_limit_error": 0.0,
+      "pole_power_relative_error": 1.6250020871133586e-06
+    },
+    {
+      "mu": -0.5,
+      "a": -1,
+      "plus_labels": [
+        1,
+        2,
+        3
+      ],
+      "minus_labels": [
+        1,
+        2,
+        3
+      ],
+      "p": 3,
+      "m": 3,
+      "gram_error": 3.8449182791717604e-15,
+      "associated_legendre_error": 3.226585665316861e-15,
+      "reference_partner_error": 1.3435474954803794e-11,
+      "pole_limit_error": 3.968309176204584e-16,
+      "pole_power_relative_error": 2.0625039922617106e-06
+    },
+    {
+      "mu": 0.5,
+      "a": 0,
+      "plus_labels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minus_labels": [
+        1,
+        2,
+        3
+      ],
+      "p": 4,
+      "m": 3,
+      "gram_error": 6.994405055138486e-15,
+      "associated_legendre_error": 5.773159728050814e-15,
+      "reference_partner_error": 1.5430767774660126e-11,
+      "pole_limit_error": 3.968309176204584e-16,
+      "pole_power_relative_error": 2.250004759174473e-06
+    },
+    {
+      "mu": 1.5,
+      "a": 1,
+      "plus_labels": [
+        1,
+        2,
+        3
+      ],
+      "minus_labels": [
+        1,
+        2,
+        3
+      ],
+      "p": 3,
+      "m": 3,
+      "gram_error": 3.8522740440247335e-15,
+      "associated_legendre_error": 2.976785484776201e-15,
+      "reference_partner_error": 1.8235413179468196e-11,
+      "pole_limit_error": 4.440892098500626e-16,
+      "pole_power_relative_error": 2.0625039911514875e-06
+    },
+    {
+      "mu": 2.5,
+      "a": 2,
+      "plus_labels": [
+        2,
+        3,
+        4
+      ],
+      "minus_labels": [
+        2,
+        3,
+        4
+      ],
+      "p": 3,
+      "m": 3,
+      "gram_error": 1.7763568394002505e-15,
+      "associated_legendre_error": 1.3322676295501878e-15,
+      "reference_partner_error": 1.7910117833253025e-11,
+      "pole_limit_error": 0.0,
+      "pole_power_relative_error": 1.6250026546593688e-06
+    },
+    {
+      "mu": 3.5,
+      "a": 3,
+      "plus_labels": [
+        3,
+        4,
+        5
+      ],
+      "minus_labels": [
+        3,
+        4,
+        5
+      ],
+      "p": 3,
+      "m": 3,
+      "gram_error": 2.6645352591003757e-15,
+      "associated_legendre_error": 1.6653345369377348e-15,
+      "reference_partner_error": 1.8457235739788302e-11,
+      "pole_limit_error": 0.0,
+      "pole_power_relative_error": 1.5625028717547451e-06
+    }
+  ],
+  "legacy_mu_half_errors": {
+    "profiles": 0.0,
+    "coefficients": 0.0
+  },
+  "physical_block_controls": [
+    {
+      "mu": -0.5,
+      "rows": [
+        {
+          "radius": 0.025,
+          "physical_mass_block_error": 8.38305119765792e-16,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 82.88859959767767,
+          "mass_factor_minimum": 9.107734649616706
+        },
+        {
+          "radius": 0.037,
+          "physical_mass_block_error": 1.3704315460216776e-16,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 42.36481287560713,
+          "mass_factor_minimum": 6.512429372089393
+        },
+        {
+          "radius": 0.05,
+          "physical_mass_block_error": 7.129713486264677e-16,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 26.035115225216032,
+          "mass_factor_minimum": 5.1062603599591645
+        }
+      ],
+      "variation_scaling_error": 0.0
+    },
+    {
+      "mu": 0.5,
+      "rows": [
+        {
+          "radius": 0.025,
+          "physical_mass_block_error": 2.7929047963226594e-16,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 82.88755315431351,
+          "mass_factor_minimum": 9.107378265133493
+        },
+        {
+          "radius": 0.037,
+          "physical_mass_block_error": 7.216449660063518e-16,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 42.36373055974605,
+          "mass_factor_minimum": 6.512051196123726
+        },
+        {
+          "radius": 0.05,
+          "physical_mass_block_error": 2.975050761300224e-16,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 26.033996564938896,
+          "mass_factor_minimum": 5.105850874526189
+        }
+      ],
+      "variation_scaling_error": 0.0
+    },
+    {
+      "mu": 1.5,
+      "rows": [
+        {
+          "radius": 0.025,
+          "physical_mass_block_error": 8.38305119765792e-16,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 82.90602043949282,
+          "mass_factor_minimum": 9.111569877650135
+        },
+        {
+          "radius": 0.037,
+          "physical_mass_block_error": 6.808789643208968e-17,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 42.382929799819784,
+          "mass_factor_minimum": 6.516935513607827
+        },
+        {
+          "radius": 0.05,
+          "physical_mass_block_error": 2.888314587501384e-16,
+          "clock_block_error": 0.0,
+          "current_block_error": 0.0,
+          "hermiticity_error": 0.0,
+          "clock_minimum": 26.0539522815323,
+          "mass_factor_minimum": 5.11144334974295
+        }
+      ],
+      "variation_scaling_error": 0.0
+    }
+  ],
+  "scattering_controls": [
+    {
+      "mu": -0.5,
+      "p": 2,
+      "m": 2,
+      "massless_permutation_error": 5.029310301551959e-12,
+      "real_energy": {
+        "energy": {
+          "real": 0.2,
+          "imag": 0.0
+        },
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "nfev": 798,
+        "accepted_steps": 59,
+        "runtime_seconds": 0.24111740000080317,
+        "unitarity_error": 2.2407631306009534e-12,
+        "minimum_passivity_defect": -1.686920536468382e-13,
+        "maximum_singular_value": 1.000000000000083
+      },
+      "imaginary_energy": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.1
+        },
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "nfev": 810,
+        "accepted_steps": 58,
+        "runtime_seconds": 0.2537006000056863,
+        "unitarity_error": 0.19451906853255307,
+        "minimum_passivity_defect": 0.1122483815316329,
+        "maximum_singular_value": 0.9422057198236312
+      },
+      "imaginary_scattering": {
+        "real": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            4.2367128231794435e-05,
+            5.0700668111998856e-09,
+            -1.902832458665214e-08,
+            -4.203108367535204e-09
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            5.070066811609427e-09,
+            2.668632448480934e-08,
+            -4.632833830060536e-10,
+            -1.5635632416808177e-12
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.9028324593655238e-08,
+            -4.6328338296888113e-10,
+            4.233081123502015e-05,
+            3.937291452404884e-08
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -4.203108367367263e-09,
+            -1.5635632413342323e-12,
+            3.937291452353695e-08,
+            2.6715840723071364e-08
+          ],
+          [
+            4.233081123502019e-05,
+            3.937291452353686e-08,
+            1.902832458665731e-08,
+            4.632833830060937e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            3.937291452404826e-08,
+            2.6715840723071374e-08,
+            4.2031083675362284e-09,
+            1.5635632416892317e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.9028324593662385e-08,
+            4.203108367367065e-09,
+            4.2367128231794354e-05,
+            5.070066811609506e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            4.632833829684141e-10,
+            1.5635632413364068e-12,
+            5.07006681120019e-09,
+            2.6686324484809196e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.8759849350358336,
+            -0.000779387103050358,
+            -0.19527086351051065,
+            7.53813189759259e-05,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0007076077680762028,
+            -0.9342392871157358,
+            7.538131897592278e-05,
+            -0.12225562486633805,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.1952721338961008,
+            8.189710966100697e-06,
+            0.8759849350358332,
+            -0.0007076077680762082,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            8.189710966102513e-06,
+            -0.12225366697436116,
+            0.0007793871030503633,
+            0.9342392871157355,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.8759849350359326,
+            0.0007076077681034785,
+            -0.19527213389683287,
+            8.189710970135548e-06
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0007793871030808963,
+            -0.9342392871173617,
+            8.189710970151264e-06,
+            -0.12225366697570585
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.1952708635112425,
+            7.538131898220128e-05,
+            0.8759849350359327,
+            0.0007793871030809011
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            7.538131898218629e-05,
+            -0.12225562486768271,
+            -0.0007076077681034844,
+            0.9342392871173619
+          ]
+        ]
+      }
+    },
+    {
+      "mu": 0.5,
+      "p": 3,
+      "m": 2,
+      "massless_permutation_error": 3.121713998410769e-11,
+      "real_energy": {
+        "energy": {
+          "real": 0.2,
+          "imag": 0.0
+        },
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "nfev": 762,
+        "accepted_steps": 56,
+        "runtime_seconds": 0.22487110004294664,
+        "unitarity_error": 2.945754751237928e-12,
+        "minimum_passivity_defect": -1.4366475742461688e-13,
+        "maximum_singular_value": 1.0000000000000722
+      },
+      "imaginary_energy": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.1
+        },
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "nfev": 786,
+        "accepted_steps": 57,
+        "runtime_seconds": 0.21328800002811477,
+        "unitarity_error": 0.6820383964151653,
+        "minimum_passivity_defect": 0.11234524965775568,
+        "maximum_singular_value": 0.9421543134445886
+      },
+      "imaginary_scattering": {
+        "real": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            4.280579518628946e-05,
+            2.097618413680995e-09,
+            6.9176359858199635e-06,
+            2.1354825617844078e-08,
+            -2.0088594313601515e-09
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.097618413486314e-09,
+            2.7154708035622907e-08,
+            5.1781815263946885e-06,
+            3.1660802305160592e-09,
+            -3.7239375157268174e-10
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            6.91763598563265e-06,
+            5.178181526276166e-06,
+            0.09540627821050537,
+            2.645801006199702e-05,
+            -6.9195765040250824e-06
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.135482569928452e-08,
+            3.166080230189321e-09,
+            2.6458010062599954e-05,
+            4.281647344522424e-05,
+            4.112009363854098e-09
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.008859431780133e-09,
+            -3.723937514758787e-10,
+            -6.9195765039275966e-06,
+            4.112009364506972e-09,
+            2.7376344684450843e-08
+          ],
+          [
+            0.0954062782105054,
+            2.6458010062600828e-05,
+            -6.919576503927306e-06,
+            -6.917635985818881e-06,
+            -5.178181526394254e-06,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            2.6458010061996707e-05,
+            4.2816473445224185e-05,
+            4.112009364507126e-09,
+            -2.135482561784856e-08,
+            -3.1660802305163293e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -6.919576504024546e-06,
+            4.112009363853479e-09,
+            2.7376344684450747e-08,
+            2.00885943135961e-09,
+            3.723937515726386e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -6.917635985632876e-06,
+            -2.135482569928406e-08,
+            2.0088594317798224e-09,
+            4.2805795186289314e-05,
+            2.0976184134864354e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -5.17818152627718e-06,
+            -3.166080230189422e-09,
+            3.723937514759377e-10,
+            2.0976184136808534e-09,
+            2.7154708035622834e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            1.6111760265857463e-05,
+            -0.875706298583161,
+            -0.00015561558522588978,
+            -0.19554717823261894,
+            6.52395714956445e-05,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -9.196375991375956e-05,
+            -4.355422292652812e-07,
+            -0.9341790402861381,
+            6.523957149562944e-05,
+            -0.12232267642447879,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.5557510483401558,
+            -3.699292126726497e-05,
+            8.380751722991254e-05,
+            -1.6111760265854495e-05,
+            9.19637599137604e-05,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -3.699292126727152e-05,
+            -0.19553040594609394,
+            5.798954370010861e-05,
+            0.875706298583161,
+            4.355422292705985e-07,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            8.380751722991079e-05,
+            5.7989543700125046e-05,
+            -0.1223211740295299,
+            0.0001556155852258859,
+            0.9341790402861377,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.611176026167974e-05,
+            -9.196375991486674e-05,
+            -0.5557510483417138,
+            -3.6992921268167054e-05,
+            8.380751722888828e-05
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.8757062985833133,
+            -4.3554223738215777e-07,
+            -3.699292126816667e-05,
+            -0.19553040594460144,
+            5.798954368429199e-05
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.00015561558519778783,
+            -0.9341790402856665,
+            8.380751722887333e-05,
+            5.798954368429329e-05,
+            -0.12232117402646879
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.1955471782311252,
+            6.523957147850115e-05,
+            -1.611176026168134e-05,
+            0.875706298583313,
+            0.00015561558519780423
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            6.523957147850641e-05,
+            -0.12232267642141763,
+            9.196375991487586e-05,
+            4.3554223736530727e-07,
+            0.9341790402856665
+          ]
+        ]
+      }
+    },
+    {
+      "mu": 1.5,
+      "p": 2,
+      "m": 2,
+      "massless_permutation_error": 4.56622517575056e-11,
+      "real_energy": {
+        "energy": {
+          "real": 0.2,
+          "imag": 0.0
+        },
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "nfev": 798,
+        "accepted_steps": 59,
+        "runtime_seconds": 0.226842200034298,
+        "unitarity_error": 2.241318242113266e-12,
+        "minimum_passivity_defect": -1.682700419303664e-13,
+        "maximum_singular_value": 1.0000000000000826
+      },
+      "imaginary_energy": {
+        "energy": {
+          "real": 0.0,
+          "imag": 0.1
+        },
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "nfev": 810,
+        "accepted_steps": 58,
+        "runtime_seconds": 0.2134006000123918,
+        "unitarity_error": 0.19472688435114027,
+        "minimum_passivity_defect": 0.11230252983717598,
+        "maximum_singular_value": 0.9421769845219231
+      },
+      "imaginary_scattering": {
+        "real": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            4.2376686579108774e-05,
+            2.532741358399097e-10,
+            -2.0456912435020618e-10,
+            1.8401148567365919e-09
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.532741353720667e-10,
+            2.6703808942693692e-08,
+            3.6032407436383995e-09,
+            1.2772177781853708e-12
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.045691342027677e-10,
+            3.60324074383406e-09,
+            4.240919368034803e-05,
+            -2.727196650387909e-08
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.8401148568115789e-09,
+            1.2772177728209236e-12,
+            -2.7271966503740493e-08,
+            2.672812663854399e-08
+          ],
+          [
+            4.240919368034819e-05,
+            -2.727196650374018e-08,
+            2.0456912434951796e-10,
+            -3.6032407436385053e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -2.7271966503879317e-08,
+            2.672812663854398e-08,
+            -1.8401148567357798e-09,
+            -1.277217778190085e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            2.0456913421007997e-10,
+            -1.8401148568117664e-09,
+            4.237668657910867e-05,
+            2.5327413537191365e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -3.603240743834959e-09,
+            -1.2772177728222096e-12,
+            2.5327413584014926e-10,
+            2.6703808942693755e-08,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            -0.8758415393629239,
+            0.0005264385431881238,
+            -0.19538278746601495,
+            3.168487423670107e-05,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0007156042110768705,
+            -0.9342065778232325,
+            3.16848742366939e-05,
+            -0.12228825719488955,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.19539825170362737,
+            8.825881700442896e-05,
+            0.8758415393629233,
+            0.0007156042110768768,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            8.825881700443834e-05,
+            -0.12228875756318754,
+            -0.0005264385431881295,
+            0.9342065778232324,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.8758415393628861,
+            -0.0007156042111034023,
+            -0.1953982517043914,
+            8.825881701071014e-05
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.000526438543203647,
+            -0.9342065778247716,
+            8.825881701070834e-05,
+            -0.12228875756466605
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.19538278746677892,
+            3.1684874241230045e-05,
+            0.8758415393628863,
+            -0.0005264385432036498
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.168487424122906e-05,
+            -0.12228825719636831,
+            0.0007156042111034053,
+            0.9342065778247719
+          ]
+        ]
+      }
+    }
+  ],
+  "proper_mass_controls": [
+    {
+      "mu": -0.5,
+      "lapse": 0.7,
+      "meridian": 2.3,
+      "mass": 1.3,
+      "maximum_error": 8.881784197001252e-16
+    },
+    {
+      "mu": 0.5,
+      "lapse": 0.7,
+      "meridian": 2.3,
+      "mass": 1.3,
+      "maximum_error": 4.440892098500626e-16
+    },
+    {
+      "mu": 1.5,
+      "lapse": 0.7,
+      "meridian": 2.3,
+      "mass": 1.3,
+      "maximum_error": 8.881784197001252e-16
+    }
+  ],
+  "direct_control": {
+    "mu": -0.5,
+    "kappa": 0.1,
+    "result": {
+      "kappa": 0.1,
+      "direct_logdet": 55.01766723474588,
+      "direct_dlog": -13.741228580725096,
+      "power_subtracted_dlog": -11.170115988046494,
+      "volume_factor": 25.71112592678603,
+      "scalar_imaginary_error": 0.0,
+      "nfev": 1722
+    },
+    "metric_derivative_fd_error": 1.83128285868861e-08
+  },
+  "interface": {
+    "class_name": "AzimuthalBridgeMatrices",
+    "constructor": "(function, parameters, size, order, mu=.5, mass=0.)",
+    "profiles": "profiles(theta) -> f[point,p],g[point,m]; normalization measure dcos(theta)",
+    "labels": "plus_labels includes l=0 only for mu=.5; minus_labels has the paired absolute l labels",
+    "coefficients": "full Dirac: plus=[R_up,L_down], minus=[R_down,L_up], each size n=p+m",
+    "weyl_coefficients": "right Weyl: plus dimension p, minus dimension m"
+  },
+  "scope": [
+    "Actual prescribed q1 bridge at finite angular size for each half-odd-integer mu; tested a=-3 through 3.",
+    "size counts paired labels; a common size across sectors is not a complete fixed-l multiplet cutoff.",
+    "Both physical Weyls are explicit. No extra Weyl factor belongs in a full determinant prefactor.",
+    "Angular endpoint sewing is external: use the stated profiles and frame map, not an assumed parity.",
+    "ODE and quadrature checks are numerical diagnostics, not continuum or roundoff enclosures.",
+    "No exterior return, regulator sum, renormalized stress, self-consistent bridge, or chronology claim."
+  ],
+  "source_sha256": "4382f13b42fd66f94b9a180dd6937508767e26561d8897118b33e0eb1e78a5c1",
+  "input_sha256": {
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_direct_source.py": "f5f9832dbd067db434a16ad3b7eed34782448d16fea62ff8dbdb4f2691f270df",
+    "dihole_massive_bridge.py": "b34d7cab9dbe895fc0b661bb866760c6abe9c4039f5a52dfbd7277534fb44b80",
+    "complete_angular_modes.py": "d69178edd246b76b43a60d187d0c2be7b63fbada7d0fd14b68e0b126db6e7e55",
+    "azimuthal_modes.py": "d774a67c9eb8754d6ee6641240ab83269a62495e4314251fa4dad9836040027d",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "runtime_seconds": 6.060687899996992
+}

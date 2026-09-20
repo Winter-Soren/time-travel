@@ -1,0 +1,93 @@
+{
+  "complete": true,
+  "passed": true,
+  "tests": {
+    "auxiliary_scale_matching": true,
+    "rational_PV_identity": true,
+    "scale_response_sign": true,
+    "finite_counterterms": true
+  },
+  "mu_H_times_D0": 0.7940236163832829,
+  "beta1": 0.8630462173553424,
+  "coefficients": {
+    "a0_variation": 0.0,
+    "a2_action_derivative": 0.11400999281577749,
+    "a4_action_derivative": 7.706927314195081,
+    "quadratic_mass_response_coefficient": 0.00031154963588733757,
+    "logarithmic_response_coefficient": 0.0244023436787409,
+    "scale_only_response": -0.011256414343386234
+  },
+  "flat_control": {
+    "mass": 0.7,
+    "radius": 1e-12,
+    "ell": 1.3,
+    "hadamard_finite_part": -0.0022568991766867977,
+    "zeta_finite_part": -0.0022568991766867977,
+    "finite_radius_error": 1.1157688188510716e-26
+  },
+  "scale_response_identity_error": 2.2551405187698492e-17,
+  "counterterm_rows": [
+    {
+      "mass_D0": 1.0,
+      "quadratic": 0.00031154963588733757,
+      "logarithmic": -0.012678118178768624,
+      "response_to_subtract": -0.012366568542881286
+    },
+    {
+      "mass_D0": 2.0,
+      "quadratic": 0.0012461985435493503,
+      "logarithmic": 0.021150713261179493,
+      "response_to_subtract": 0.022396911804728845
+    },
+    {
+      "mass_D0": 4.0,
+      "quadratic": 0.004984794174197401,
+      "logarithmic": 0.05497954470112761,
+      "response_to_subtract": 0.05996433887532501
+    },
+    {
+      "mass_D0": 8.0,
+      "quadratic": 0.019939176696789605,
+      "logarithmic": 0.08880837614107571,
+      "response_to_subtract": 0.10874755283786532
+    },
+    {
+      "mass_D0": 16.0,
+      "quadratic": 0.07975670678715842,
+      "logarithmic": 0.12263720758102384,
+      "response_to_subtract": 0.20239391436818227
+    },
+    {
+      "mass_D0": 32.0,
+      "quadratic": 0.3190268271486337,
+      "logarithmic": 0.15646603902097195,
+      "response_to_subtract": 0.4754928661696056
+    },
+    {
+      "mass_D0": 64.0,
+      "quadratic": 1.2761073085945347,
+      "logarithmic": 0.19029487046092006,
+      "response_to_subtract": 1.4664021790554547
+    },
+    {
+      "mass_D0": 128.0,
+      "quadratic": 5.104429234378139,
+      "logarithmic": 0.2241237019008682,
+      "response_to_subtract": 5.328552936279007
+    }
+  ],
+  "prescription": "Q_HK=lim_M [Q_PV(M)-Q_local(M;mu_H)] after physical fixed-M limits; no extra finite R2/Ric2/F2 terms.",
+  "units": "D0=1 in numerical values; all responses are in hbar*c/D0.",
+  "source_sha256": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+  "input_sha256": {
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\results\\dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6"
+  },
+  "scope": [
+    "Paired variation preserves N*sqrt(h) exactly; a0 contribution vanishes.",
+    "Physical4D a2=-R/3 and compact variation of a4=R2/30-Ric2/10+(2/3)F2 reused from133.",
+    "Large-M local asymptotic subtraction, not an approximation of the full response at MD0=1.",
+    "No finite-M pilot result is modified. Gravitational/gauge couplings remain fixed in the declared scheme.",
+    "Chosen action reference is explicit; equivalence to133 charged point-split reference is not claimed.",
+    "No physical-exterior, angular, frequency, infrared or regulator-removal limit computed."
+  ]
+}

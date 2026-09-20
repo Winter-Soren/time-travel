@@ -1,5 +1,152 @@
 # Reproduction and coupled-model iterations
 
+## Complete finite angular multiplets and explicit action reference — increment136
+
+The [azimuthal bridge helper](../scripts/dihole_azimuthal_bridge.py) and
+[new connected driver](../scripts/dihole_pv_sectors.py) now include **all nine
+azimuthal sectors at reference angular cutoff $l\leq4$**. This expands the
+bridge from18 to98 full-Dirac angular components. The $\mu=1/2$ result is
+reused from135; eight additional sectors are computed on the same R16
+geometry,17 frequencies $0.01\leq\kappa D\leq10$ and proper regulator $MD=1$.
+Here $M$ denotes regulator mass, not the classical dihole parameter.
+
+### What the completed finite calculation says
+
+| Response in $1/D$ | Phase 0 | Phase pi |
+| --- | ---: | ---: |
+| Previous single sector,17 points | +0.001055487053 | +0.007827225229 |
+| Complete $l\leq4$ basis,17 points | +0.001059729733 | +0.007831471276 |
+| Complete $l\leq4$ basis,9 points | +0.001008401504 | +0.008000583354 |
+
+The eight added sectors change the17-point totals by about0.402% and0.0542%.
+The9/17-point frequency-grid changes are4.84% and2.16%, respectively, and
+are sensitivities rather than certified errors. The sampled totals remain
+positive; they do not supply the negative null stress required by129.
+Neither this sign nor the small added-sector response is a physical no-go
+or a bound on modes beyond $l=4$.
+
+![Completed finite angular multiplets](../figures/dihole_pv_sectors_progress.png)
+
+The [saved results](../results/dihole_pv_sectors_results.json) contain136 new
+sector-frequency points and544 massive/massless response records. All12
+connected checks pass; runtime1044 seconds. The new bridge's19 checks pass,
+as do four local-subtraction checks described below. Maximum new exterior
+linear residual is $2.64\times10^{-15}$; independent on/off-shell current
+identities agree within $1.51\times10^{-14}$. Every sampled new return is
+contractive, with largest singular value0.94215 and minimum remaining-loss
+eigenvalue0.06455. These verify the finite equations and accounting.
+They do not validate the physical absorbing-boundary replacement.
+
+### Actual angular coefficients and faster differentiation
+
+Write $a=\mu-1/2\in\mathbb Z$. The existing regular monopole profiles supply
+normalized associated-Legendre $f_l$ and
+$g_l=-(\partial_\theta-a\csc\theta)f_l/\sqrt{l(l+1)}$, with the physical
+lower phase $ig_l$. Their isolated reference eigenvalues and multiplicities
+are standard; see [Borokhov--Kapustin--Wu, section4.1](https://arxiv.org/pdf/hep-th/0206054).
+Our coefficient compression and endpoint phases are the explicit model
+construction, not a result quoted from that paper.
+
+Retain $l=\max(1,|a|),\ldots,4$ for $a=-4,\ldots,4$, plus the sole upper
+$l=0$ mode when $a=0$. The actual field correction is
+
+$$
+\Delta V=\frac{NP(\mu-A)-(a+\tfrac12\cos\theta)}{R\sin\theta}.
+$$
+
+The helper compresses this correction, $W=P/N$, and physical mass $mP$
+in the same basis. It reuses existing pole-safe profiles; no spectrum is
+substituted for the actual angular fields. The basis counts are upper
+$(1,3,5,7,9)$ and lower$(0,3,5,7,9)$ for $l=0,\ldots,4$.
+Equal numbers of paired modes in every sector would not produce this cutoff.
+Actual angular coefficients mix $l$, so this is a complete *coordinate*
+basis at one cutoff, not a spectral projector of the curved Hamiltonian.
+
+At the lower cut, evaluate the scalar profiles at $\pi-\theta_L$ and the
+fixed spin lift directly. This reproduces the old $\mu=1/2$ cut within
+$8.53\times10^{-14}$ without guessing a parity for other sectors.
+The generalized helper matches the old $\mu=1/2$ profiles and coefficients
+exactly. Additional root checks cover the actual endpoint sectors$a=\pm4$:
+Gram error$3.56\times10^{-15}$, differential partner error below
+$6.69\times10^{-12}$, and exact endpoint limits.
+
+The new driver differentiates all four Riccati scattering blocks in the
+same ODE, alongside the direct determinant and its derivative. Sewing is
+linear, and the loop derivative is
+$-\Re\operatorname{Tr}[(I-BR)^{-1}B'R]$. This replaces three separate
+scattering solves plus the direct solve. Small comparison cases take
+0.60--0.61 seconds versus1.26--1.29 seconds for the old path; this is about
+2.1x in that benchmark, not a claimed whole-run speedup. Tightening the ODE
+tolerances changes the tested derivatives by at most$3.64\times10^{-13}$.
+
+### A definite renormalization reference, not an extra support term
+
+The [scheme analysis](DIRAC_SCHEME_MATCHING.md) identifies a real omission
+in133's written normalization: its charged, Ward-corrected point-split
+reference was not given explicitly. Consequently its full finite conversion
+cannot be inferred simply by declaring later local additions zero.
+The universal auxiliary-kernel scale matching *is* determined:
+
+$$
+\mu_H=\sqrt2e^{-\gamma_E}/D_0.
+$$
+
+For subsequent work, adopt the explicitly defined **physical four-dimensional
+heat/zeta effective-action reference** in that note, with the same spectral
+state, fixed renormalized couplings and no further finite invariant additions.
+This is a declared research model; it is not a claim of equivalence to133
+or a measurement of higher-curvature couplings. Its variational gauge and
+diffeomorphism identities follow from the covariant vectorlike action when
+the relative action and its derivatives exist, not from the absorbing pilot.
+
+The [local subtraction calculator](../scripts/dihole_pv_counterterms.py)
+reuses133's invariant variations. Its [results](../results/dihole_pv_counterterms_results.json)
+give, in units$D_0=1$,
+
+$$
+\mathcal Q_{\rm loc}(M)=0.00031154963588733757M^2+
+0.0244023436787409[\log M^2+2\gamma_E+\log(3/16)].
+$$
+
+The paired volume is unchanged, so the quartic$a_0$ variation is zero.
+The desired response is the physical fixed-$M$ response minus this local
+large-mass term, followed by regulator removal. **This subtraction was not
+applied to the finite-$M$, finite-basis, absorbing data above.** The separate
+scale-only shift$-0.01125641434/D_0$ is convention bookkeeping, not physical
+negative energy to add to the model. A high-precision auxiliary Green-kernel
+check agrees with the scale conversion to finite-radius error$1.12\times10^{-26}$;
+it does not prove a charged point-split stress identity.
+
+### Next physical calculation and provenance
+
+The scheme note also gives the exact common-operator PV resolvent identity.
+Its metric variation has ultraviolet order-6 in four dimensions, supplying
+a cancellation mechanism. It does not give numerical angular-tail constants,
+remove the massless infrared problem, or identify the current four absorbing
+first-order determinants with one physical Euclidean realization.
+
+The next step is that common physical realization and control of the
+localized response's exterior, spectral/angular and frequency remainders.
+Use the explicit136 action reference; do not repeatedly reopen133's missing
+contact definition as a prerequisite. Merely increasing regulator mass on
+the current truncation, applying the local polynomial to it, or fitting a
+coupling cannot establish supporting stress. Stability, source current,
+formation and any chronology-changing extension remain unresolved.
+13 September 2027 to12 September 2027 remains UNPROVED.
+
+All scientific sources stayed frozen while session17456 ran; it exited0.
+The original135 source/results and133 state are unchanged. Reproduce with
+OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=1 and the repository Python:
+`python -B -W error -X utf8 scripts/dihole_pv_sectors.py` (completed exact
+source checkpoints are reused), plus the two new helper scripts for their
+small checks. Sector driver SHA256
+`1215bdaca3fa6c3ef888ea97c463382bf662b8d84d457475ac80e340d6f6fbb4`;
+result`6bc2d1b2d2a6c54d56a04baf2abf11eba4cdf0ac4fb858f66549c425b5e2f2c8`.
+Counterterm source`97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0`;
+result`c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e`.
+The helper certificate additionally authenticates the transitive
+complete_angular_modes and azimuthal_modes sources; both remain unchanged.
+
 ## Physical-mass regulator on the connected geometry — increment135
 
 The [massive bridge](../scripts/dihole_massive_bridge.py) and

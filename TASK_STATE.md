@@ -58,6 +58,61 @@ fallback. Give honest confidence in checks, never promise physical success.
 
 ## Latest verified update — authoritative; entries below this block are history
 
+### Complete finite angular multiplets and explicit action reference — increment136
+- Previous135 PROGRESS: published36e4605e590d89be9cd0742389dd8c04286cca95;
+ clean/origin verified at136 start. Import COMPLETE; goal remains ACTIVE.
+- NEW dihole_azimuthal_bridge.py supports arbitrary half-odd mu on actual
+ q1 bridge, reusing existing complete_angular_modes/azimuthal_modes.
+ 19 checks PASS6.06sec; mu.5 coefficients/profiles exactly recover135.
+ Source4382f13b42fd66f94b9a180dd6937508767e26561d8897118b33e0eb1e78a5c1.
+ Extra root endpoint-a=+-4 controls: Gram3.56e-15, partner<6.69e-12.
+- NEW dihole_pv_sectors.py completes all9 mu sectors at reference l<=4,
+ all17 frequencies. Eight new sectors136points/544mass responses; mu.5
+ reused135. Full Dirac bridge angular components98 versus previous18.
+ Multiplicities upper[1,3,5,7,9],lower[0,3,5,7,9], allchecked.
+- All12 sector controls PASS,1044sec; session17456 TERMINAL exit0; no live
+ computation. Analytic scattering/direct variation replaces3perturbed
+ scattering solves+direct, ~2.1x faster in small controls. Max tighter-ODE
+ derivative change3.64e-13. No whole-run speedup or tail bound claimed.
+- Complete l4 fine full[.0010597297326150165,.007831471275982478]/D
+ phases0,pi; direct-.0015564870123223496/D;
+ loop[.002616216744936136,.009387958288299218]/D.
+ Coarse9 full[.001008401503728582,.008000583354228399]/D.
+ Added sectors change old result.402%,.0542%; grid sensitivity4.84%,2.16%.
+ All sampled totals positive; no physical support/no-go or l>4 bound.
+ New linear residual<=2.64e-15,current identity<=1.51e-14,
+ max exterior singular.94215,minremainingloss.06455.
+- NEW DIRAC_SCHEME_MATCHING.md:133's charged corrected point-split reference
+ was not explicitly defined. Do NOT infer its finite conversion constants.
+ ADOPT explicit136 covariant physical4D heat/zeta ACTION reference at
+ mu_H=sqrt2 exp(-EulerGamma)/D0, same state, fixed couplings/no extra finite
+ invariant additions. No equivalence to133 or measured coupling asserted.
+ This removes the UV-definition ambiguity; noncompact/IR derivatives and
+ actual physical source computation remain. Do not reopen133 matching as
+ a prerequisite unless comparison itself becomes necessary.
+- NEW dihole_pv_counterterms.py/results:4checks PASS; a0 variation0,
+ a2'=.11400999281577749D,a4'=7.706927314195081/D. Local subtraction
+ .00031154963588733757(MD)^2 + .0244023436787409*
+ [log((MD)^2)+2EulerGamma+log(3/16)], in1/D. It is NOT applied to the
+ current finite absorbing/angular pilot. Scale-only-.01125641434/D is
+ bookkeeping, not extra support. Auxiliary kernel checkerror1.12e-26.
+- Exact common-P resolvent PV identity in scheme note gives UVorder-6,
+ but no numerical angular remainder or IR control. Cannot simply apply
+ it to the four current absorbing first-order determinants.
+- Sector source1215bdaca3fa6c3ef888ea97c463382bf662b8d84d457475ac80e340d6f6fbb4;
+ result6bc2d1b2d2a6c54d56a04baf2abf11eba4cdf0ac4fb858f66549c425b5e2f2c8.
+ Counterterm source97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0;
+ resultc62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e.
+ Scheme note92ab3be5b57bad6b308a6c56f5060b9a8f7f5433f960fa01323d7ba6ad8a0bcb.
+ Figure dihole_pv_sectors_progress.png/pdf inspected; old source/results
+ unchanged. Combined helper/driver provenance covers azimuthal_modes too.
+- NEXT: common PHYSICAL Euclidean realization for fixed-M localized response,
+ with exterior and spectral/angular/frequency/IR remainder control. Then
+ apply the explicit local subtraction and remove M. Do not increase M on
+ fixed truncation and call it covariant, or fit a sign via finite couplings.
+ No medium/current/stability/formation/new law/backward travel demonstrated.
+ 13Sep2027->12Sep2027 UNPROVED. No email; professor heartbeat stays paused.
+
 ### Physical-mass regulator and connected pilot — increment135
 - Previous134 PROGRESS: published427e3313d93ed3df1d494f7b61af02cbf27eac3f;
  clean/origin verified at135 start. Import COMPLETE; goal remains ACTIVE.
