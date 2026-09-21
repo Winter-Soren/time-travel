@@ -1,0 +1,84 @@
+{
+  "complete": true,
+  "passed": true,
+  "checks": {
+    "initial_transform": true,
+    "initial_metric_check": true,
+    "independent_null_projection": true,
+    "regular_center": true,
+    "density_constraint": true,
+    "angular_Einstein_equation": true,
+    "flux_corrected_mass": true,
+    "positive_compensation": true,
+    "resolution": true,
+    "negative_center": true,
+    "small_metric": true,
+    "no_spatial_neck_bound": true
+  },
+  "controls": {
+    "initial_gaussian_error": 1.3010426069826053e-18,
+    "initial_compactness_error": 1.6830544661942948e-18,
+    "full_reduced_null_relative_error": 5.852918333703796e-13,
+    "center_projection_relative_error": 3.4743670907056073e-13,
+    "density_identity_relative_error": 2.0125681447707101e-13,
+    "angular_Einstein_equation_max": 3.706803120003255e-23,
+    "center_flux_max": 0.0,
+    "integrated_mass_relative_error": 5.82818955742318e-13,
+    "initial_density_compensation_fraction": 4.709280902681695e-14
+  },
+  "resolution_changes": {
+    "zeta": 1.2793585635328949e-14,
+    "lapse": 6.418624164149355e-12,
+    "null_plus": 3.5130363281244458e-12,
+    "null_minus": 3.894912894743982e-12,
+    "density": 3.5101075794554025e-12,
+    "flux": 3.5597435378132175e-15,
+    "compactness_excess": 4.872923009526997e-12
+  },
+  "summary": {
+    "initial_central_null": -1.6799273740732657e-05,
+    "final_central_null": -1.3205903481177034e-09,
+    "initial_central_density": -1.7985965511593017e-05,
+    "largest_absolute_compactness": 2.6699428750194456e-06,
+    "largest_absolute_lapse": 5.114958626016943e-06,
+    "largest_absolute_zeta": 0.0010000000000000005,
+    "largest_sampled_radial_derivative": 0.0007356735001844936,
+    "all_time_mode_bound": 14.1825465210692,
+    "all_time_radial_derivative_bound": 0.0283650930421384,
+    "initial_width_times_cutoff": 70.70008025824305,
+    "width_growth_factor": 54.598150033144236,
+    "initial_width_over_background_horizon": 0.2885452795276418,
+    "width_reaches_background_horizon_at_Ht": 1.242903257246303
+  },
+  "parameters": {
+    "epsilon": 0.001,
+    "cutoff_over_planck": 0.01,
+    "H_over_cutoff": 0.004081258160863258,
+    "spectral_window": [
+      8.0,
+      10.0
+    ],
+    "time_range_Ht": [
+      0.0,
+      4.0
+    ],
+    "quadrature_orders": [
+      96,
+      128
+    ]
+  },
+  "source_sha256": "3a51fcb12596971685ec86e6a0ac7036a8585e4c8d7c41e4b300d9090149c3e7",
+  "input_sha256": {
+    "expanding_field_completion.py": "9031efdfb575046c6e3935d9e444dd505cbb2cdfa64686605c2e553b5ff27a97",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "baseline_sha256": "611eafd4a4fdf1446f39510d85648e650e5bc9f01a58fd22d28087054055eb29",
+  "state_sha256": "cf5d858043e95d6104eb126d0453ad573619b0518b62ccb116b2a83f1b59805f",
+  "scope": [
+    "Smooth band-limited spherical perturbation of the derived homogeneous expanding background, at first order only.",
+    "Total stress and flux follow from full linear Einstein projections; nonlinear stress and backreaction are not enclosed.",
+    "Compensated energy and weak excess compactness do not create a spatial throat. The analytic derivative bound excludes a neck within this linear packet ansatz.",
+    "The packet has rapidly decaying tails, not compact spatial support or physical walls. Its physical width expands; a cosmological horizon is not a wormhole mouth.",
+    "Material production, actual cutoff, nonlinear stability, bridge support and chronology change remain unproved."
+  ]
+}

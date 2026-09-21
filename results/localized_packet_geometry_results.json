@@ -1,0 +1,66 @@
+{
+  "complete": true,
+  "passed": true,
+  "checks": {
+    "quadratic_remainder_scaling": true,
+    "initial_amplitude_rejected": true,
+    "weak_amplitude_geometric_control": true,
+    "no_reconstructed_spatial_throat": true
+  },
+  "amplitudes": [
+    {
+      "amplitude": 0.001,
+      "maximum_linear_compactness": 2.6699428750194456e-06,
+      "maximum_geometric_remainder": 3.323765844024522e-06,
+      "remainder_to_maximum_linear": 1.2448827557781792,
+      "initial_remainder_to_maximum_initial_linear": 1.7210513727824537,
+      "peak_time_Ht": 0.0,
+      "peak_comoving_radius_over_width": 1.05,
+      "minimum_areal_radius_derivative_factor": 1.0,
+      "scope": "Exact geometric expression evaluated on reconstructed linear fields; not a nonlinear on-shell result."
+    },
+    {
+      "amplitude": 0.0001,
+      "maximum_linear_compactness": 2.6699428750194455e-07,
+      "maximum_geometric_remainder": 3.3233877146548024e-08,
+      "remainder_to_maximum_linear": 0.12447411312613188,
+      "initial_remainder_to_maximum_initial_linear": 0.17208555767783473,
+      "peak_time_Ht": 0.0,
+      "peak_comoving_radius_over_width": 1.05,
+      "minimum_areal_radius_derivative_factor": 1.0,
+      "scope": "Exact geometric expression evaluated on reconstructed linear fields; not a nonlinear on-shell result."
+    },
+    {
+      "amplitude": 1e-05,
+      "maximum_linear_compactness": 2.6699428750194457e-08,
+      "maximum_geometric_remainder": 3.3233497655225877e-10,
+      "remainder_to_maximum_linear": 0.01244726917799087,
+      "initial_remainder_to_maximum_initial_linear": 0.017208359266558178,
+      "peak_time_Ht": 0.0,
+      "peak_comoving_radius_over_width": 1.05,
+      "minimum_areal_radius_derivative_factor": 1.0,
+      "scope": "Exact geometric expression evaluated on reconstructed linear fields; not a nonlinear on-shell result."
+    },
+    {
+      "amplitude": 1e-06,
+      "maximum_linear_compactness": 2.669942875019446e-09,
+      "maximum_geometric_remainder": 3.3233459691825596e-12,
+      "remainder_to_maximum_linear": 0.0012447254959184679,
+      "initial_remainder_to_maximum_initial_linear": 0.001720833960904762,
+      "peak_time_Ht": 0.0,
+      "peak_comoving_radius_over_width": 1.05,
+      "minimum_areal_radius_derivative_factor": 1.0,
+      "scope": "Exact geometric expression evaluated on reconstructed linear fields; not a nonlinear on-shell result."
+    }
+  ],
+  "remainder_reduction_factors": [
+    100.01137782895604,
+    100.00114189401936,
+    100.00011423246521
+  ],
+  "decision": "Reject epsilon=.001 as a quantitatively controlled linear compactness prediction. Lower amplitude suppresses this geometric remainder but is not a nonlinear solution or stronger source.",
+  "source_sha256": "be453b41dee0d639c8f00e36a9071e3d362a4e8394efefc950eb2ff8baf5c23d",
+  "baseline_sha256": "1036c5c272c86ada27c69d5ff92b173f13892ce7cd2021bd882a53940d3ace63",
+  "state_sha256": "cf5d858043e95d6104eb126d0453ad573619b0518b62ccb116b2a83f1b59805f",
+  "scope": "No bound on missing second-order matter/gravity fields is supplied; geometric convergence alone cannot validate their omission."
+}

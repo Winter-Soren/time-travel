@@ -1,3 +1,35 @@
+## A localized packet exposes a nonlinear limitation — increment145
+
+The [spherical packet](LOCALIZED_EXPANDING_PACKET.md) replaces the extended
+Fourier disturbance with a smooth, finite-energy three-dimensional profile.
+It uses the actual144 scalar equation and regular radial shift. Twelve linear
+checks pass, including independent full radial curvature projections,
+flux-corrected mass accounting and spectral/time refinement. See
+[source](../scripts/localized_expanding_packet.py),
+[results](../results/localized_expanding_packet_results.json),
+[fields](../data/localized_expanding_packet_state.npz) and
+[figure](../figures/localized_expanding_packet_progress.png).
+
+The initial central total null stress is about-1.680e-5 Lambda^4 and both
+null directions are negative. Positive surrounding energy compensates the
+initial density integral. The physical packet expands and its central stress
+dilutes; it is not a stationary medium. An analytic all-time derivative bound
+excludes a spatial neck for this linear packet ansatz.
+
+The decisive additional [geometry test](../scripts/localized_packet_geometry.py)
+rejects a quantitatively controlled compactness prediction at amplitude0.001.
+Its reconstructed geometric quadratic remainder is1.245 times the largest
+linear signal, already failing in the initial subhorizon core. The four
+companion checks confirm this rejection and expected quadratic scaling;
+[results](../results/localized_packet_geometry_results.json) preserve it.
+Reducing amplitude suppresses this remainder but weakens the source and does
+not control missing second-order physical fields. Full nonlinear constraints
+are now derived in the report, including the correct positive lapse branch
+and regular-center conditions; solving them is the next physical calculation.
+No stable source, bridge, new law or backward date passage has been established.
+
+--- Preserved increment144 and earlier research ---
+
 ## The expanding action supplies coupled mode bounds — increment144
 
 The [expanding completion](EXPANDING_FIELD_COMPLETION.md) includes its required

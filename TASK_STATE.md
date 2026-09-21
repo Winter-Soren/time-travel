@@ -1,3 +1,58 @@
+# Authoritative checkpoint145 — localized packet and geometric rejection
+
+Previous turn: PROGRESS, coupled action144 published
+ e872bb375602dddee900451c2d7588d03390919b. Current goal remains ACTIVE,
+unachieved. Import complete; no new law/material/time passage proved.
+
+- NEW localized_expanding_packet.py: genuinely3D radial Hankel packet,
+  Gaussian-shaped positive spectrum, C-infinity taper q8..10, no walls.
+  epsilon.001, initialR=1/kJ=70.70008026/Lambda, fixed144 background.
+  Propagates all packet modes with actual coupled scalar equation, then
+  reconstructs regular lapse/shift, total radial nullstress/flux/density,
+  and same-areal-radius deSitter-subtracted Misner-Sharp compactness.
+- All12 linearchecksPASS: initialGaussian/metric controls, full-vs-reduced
+  radial Ricci projections, center, density/angularEinstein, flux-corrected
+  mass integral, positive compensation, mode/quadrature refinement, small
+  metric and all-time no-neck bound. Final production TERMINALexit0.
+  Source3a51fcb12596971685ec86e6a0ac7036a8585e4c8d7c41e4b300d9090149c3e7.
+  Result1036c5c272c86ada27c69d5ff92b173f13892ce7cd2021bd882a53940d3ace63.
+  State cf5d858043e95d6104eb126d0453ad573619b0518b62ccb116b2a83f1b59805f.
+- InitialcentralTnull/Lambda4=-1.6799273741e-5; atHt4=-1.3205903481e-9.
+  Positive density shell compensates initial integral to4.8e-14 relative.
+  Largest refinementchange6.5e-12; no interval/nonlinear error enclosure.
+  All-time |r*zeta_r|<.0284 excludes a spatial neck within this linearpacket
+  ansatz. Actualsampledmax.000736. Width expands54.60x; its nominal radius
+  reaches background cosmological horizon atHt1.243, not a wormhole mouth.
+- IMPORTANT PHYSICAL REJECTION: companion localized_packet_geometry.py
+  evaluates exact compactness on reconstructed linear fields. At epsilon.001,
+  geometric remainder3.3238e-6 > linearmax2.6699e-6, ratio1.2449 (initial
+  ratio1.7211). Peakfailure alreadyHt0,r/R1.05 inside background horizon.
+  Four checks verify rejection and quadratic amplitude scaling. At epsilon
+  1e-6 this geometricratio.0012447, but source also1000xweaker and missing
+  second-order on-shell fields remain unbounded. Do NOT call reconstruction
+  a nonlinear solution or the small metric sufficient for accuracy.
+  Companion sourcebe453b41dee0d639c8f00e36a9071e3d362a4e8394efefc950eb2ff8baf5c23d.
+  Result60fd1082f291df13c215167e68293ceadbbf1ee7ee6570966333898f0ace71ab.
+- Agents independently verified full spherical Ricci/frame projections and
+  supplied exact NONLINEAR spherical lapse/momentum constraints in report
+  docs/LOCALIZED_EXPANDING_PACKET.md. Lapse is quadratic inN^-2; choose root
+  continuous toN=1. Regularbeta=b1*r+O(r3), NOT beta_r(0)=0. Homogeneous
+  deSitter and linear144 limits pass. No nonlinear solver has run yet.
+- Final figure inspected after fixing cropped title; final rerender preserves
+  statehash and scientific values. No process or delegated analysis is live.
+- Layout PASS:126 imports,1075 links, original migration/provenance guards
+  and operator identity. Source/state/input/companion hashes and16 saved
+  checks verified. Diff whitespace and historical suffix byte checks PASS.
+
+NEXT: solve nonlinear lapse and radial momentum constraints for localized
+initialdata using those equations, then assess branch regularity, actual
+stress/compactness and evolution. Need independent residual/center/domain
+checks, not just exponentiation of linear fields. Preserve145failure evidence.
+Do not spend another sweep on linear modes or lower amplitude and call it
+stronger bridge support. The existing Dirac source route is still incomplete.
+
+--- Preserved checkpoint144 and earlier history ---
+
 # Authoritative checkpoint144 — coupled expanding completion
 
 Previous goal turn made progress by deriving a candidate action; this turn
