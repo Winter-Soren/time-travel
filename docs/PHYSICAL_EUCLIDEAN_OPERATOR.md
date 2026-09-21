@@ -2878,3 +2878,168 @@ budgets. A small residual for a single trial state alone would not bound
 the full trace. This targets the missing reduction error instead of
 refining an already negligible ideal term or restarting broad basis growth.
 No atom transit, stable medium or chronology change is established.
+
+
+## Exact slice channels and their radial coupling
+
+The [slice-channel calculation](../scripts/dihole_slice_channel.py) tests the
+actual prescribed collar operator at integer fluxes $q=5,25,105,1005,10005$,
+with one regular azimuthal sector $\mu/q=0.9$ at each flux. It constructs the
+exact transverse zero profile, normalizes it in the Hamiltonian measure,
+and evaluates the radial coupling and its actual metric variation. All
+**14 checks pass**; [results](../results/dihole_slice_channel_results.json)
+and a [figure](../figures/dihole_slice_channel_progress.png) are saved.
+This is a supporting-field calculation, not propagation of a hydrogen atom.
+
+### Exact transverse profile and projection
+
+Write $a=A_\phi/q$, $W=P/N$ and
+
+$$
+H=W^{-1/2}\left[-i\sigma_3\partial_s+K_\mu/R\right]W^{-1/2},\qquad
+K_\mu=-i\sigma_1\partial_\theta+\sigma_2 V,\qquad
+V=NP\frac{\mu-qa}{\sin\theta}.
+$$
+
+For positive integer $q$, the upper transverse component obeys
+$f_\theta=Vf$. Its regular polar powers are $\theta^\mu$ and
+$(\pi-\theta)^{q-\mu}$ for $\mu=1/2,3/2,\ldots,q-1/2$; the opposite
+component has no regular zero mode. These are $q$ states on each slice,
+not an assertion of $q$ independent channels of the full operator.
+The familiar spherical counting is discussed in
+[Maldacena--Milekhin--Popov, appendix C](https://arxiv.org/pdf/1807.04726);
+here the actual angle-dependent collar fields are retained.
+
+Normalize $\int_0^\pi Wf^2d\theta=1$ and define
+$\chi=\sqrt W f\,(1,0)^T$, $U\psi=\chi\psi$,
+$v=\int f^2d\theta$. Direct projection gives
+
+$$
+h=U^*HU=-i(v\partial_s+v_s/2),\qquad
+(HU-Uh)\psi=-i(r_1\psi_s+r_0\psi),
+$$
+
+$$
+r_1=\chi(1/W-v),\qquad
+r_0=\chi\left(\frac{f_s}{Wf}-\frac{v_s}{2}\right).
+$$
+
+Thus even an exact slice zero mode is not automatically an invariant
+travelling channel. Its packet center and normalization change with $s$.
+The diagonal Berry phase of this real positive profile vanishes, but the
+orthogonal residual need not vanish. Axial symmetry separates different
+$\mu$ values, while excited transverse states of the same $\mu$ can still mix.
+The scalar resolvent shift cancels identically from
+$(H+i\zeta)U-U(h+i\zeta)$, leaving the same residual.
+
+The known polar powers are integrated analytically in the logarithm;
+Gauss quadrature evaluates only their regular correction and the final
+normalization integrals. No Gaussian replaces the profile in these data.
+The512/1024 angular and48/80 inner-order comparison changes the reported
+norms by at most $1.56\times10^{-10}$ relatively. This is numerical
+sensitivity, not a rigorous enclosure. The original central $q=1$ cylinder
+speed is recovered to $2.23\times10^{-16}$ relatively.
+
+### Differentiate the actual geometry as well
+
+Let $F(s)$ denote the existing compact mask. Under
+$N_\epsilon=e^{\epsilon F}N$ and radial $P_\epsilon=e^{-\epsilon F}P$,
+with angular metric and charge one-form fixed, $W_\epsilon=e^{-2\epsilon F}W$.
+The normalized flux profile is $f_\epsilon=e^{\epsilon F}f$ and the common
+canonical vector $\chi$ is unchanged. The full common-space Hamiltonian is
+$H_\epsilon=e^{\epsilon F}H_{\rm rad}e^{\epsilon F}
++e^{\epsilon F}H_{\rm ang}$, so
+
+$$
+\dot r_1=2F r_1,\qquad \dot r_0=2F r_0+F_s r_1.
+$$
+
+The connection coefficient here is $F_s$, not the $F_s/2$ of the different
+proper Euclidean representation used earlier. The direct complex metric
+variation agrees within $2.95\times10^{-16}$ in the saved control. The
+incorrect half factor leaves a discrepancy $3.68\times10^{-5}$; testing only
+the collar midpoint would miss it because $F_s$ vanishes there. Independent
+radial finite differences converge by a factor of four when their step is
+halved, with final relative errors below $2.44\times10^{-7}$.
+
+### Large flux does not remove the frozen-profile tilt
+
+For an interior label $\nu=\mu/q$, let $a(s,\theta_0)=\nu$. The previously
+proved collar field sign gives a nondegenerate localization maximum. Set
+
+$$
+\theta_{0,s}=-a_s/a_\theta,\qquad
+\kappa=NP\frac{a_\theta}{\sin\theta_0}>0.
+$$
+
+Local Laplace expansion then gives
+
+$$
+\frac{\|r_0\|}{\sqrt q}\longrightarrow
+\frac{|\theta_{0,s}|\sqrt{\kappa/2}}{W_0},\qquad
+\Delta_\perp\sim\frac{\sqrt{2q\kappa}}{RW_0},\qquad
+\frac{\|r_0\|}{\Delta_\perp}\longrightarrow\frac{|R\theta_{0,s}|}{2}.
+$$
+
+$\Delta_\perp$ is the local oscillator gap approximation; no finite-flux
+gap enclosure or uniform remainder is claimed. The limiting ratios are
+small but nonzero for these three slices:
+
+| Collar $s/D$ | $D\|r_0\|$ at $q=10005$ | Local limiting leakage/gap ratio |
+| --- | ---: | ---: |
+| 0.0125 | 0.0007605402 | 0.00001569874 |
+| 0.0250 | 0.007246336 | 0.0001364941 |
+| 0.0375 | 0.02184742 | 0.0003391590 |
+
+The sampled $D\|r_0\|/\sqrt q$ differs from its limit by at most0.0189%
+at $q=10005$. That does not supply an error bound at the nominal atomic
+flux $4.64\times10^{24}$ or over all flux labels and the exterior.
+These norms use $D=1$. In the fixed-coupling physical family, $D\propto q$;
+the physical $r_0$ then decreases as $q^{-1/2}$ while its ratio to the local
+gap stays nonzero. The plot does not claim an increasing physical force
+while enlarging the opening.
+
+### A concrete correction, with its remaining test
+
+Put $t=R\theta_{0,s}$, $\beta=\arctan t$,
+$G=\kappa/\sqrt{1+t^2}$ and
+$\eta=(\cos(\beta/2),\sin(\beta/2))^T$. A Gaussian with exponent
+$-qG(\theta-\theta_0)^2/2$ satisfies the leading local identity
+
+$$
+\left[iG(\sigma_1-t\sigma_3)-\kappa\sigma_2\right]\eta=0.
+$$
+
+Both the spin rotation and changed width are needed. Under the paired
+variation, $t_\epsilon=e^{\epsilon F}t$,
+$\dot\beta=Ft/(1+t^2)$ and
+$\dot G=-F\kappa t^2/(1+t^2)^{3/2}$.
+Independent algebra and the saved signed-tilt matrix controls confirm the
+cancellation and its derivative. **This cancels only the leading local
+term; a normalized finite-flux aligned trial has not been evaluated.**
+Width/spin derivatives, nonlinear potential terms, polar behavior and
+metric connections must all remain in that calculation. Merely changing
+to a coordinate that follows $a$ does not remove the operator residual.
+
+A tempting uncut extension, raising the exact slice profile to
+$\lambda=1/\sqrt{1+t^2}$ and rotating its spin everywhere, has a specific
+domain failure: at $q=5$, $\nu=.9$, its south-pole power is
+$\alpha=\lambda/2<1/2$ for nonzero tilt. The noncancelled angular action
+behaves as $(\pi-\theta)^{\alpha-1}$ and is not square integrable.
+Finite quadrature could hide this divergence. Use a smooth polar cutoff
+or return the profile and spin to their regular forms near the poles,
+retaining the cutoff derivative in the residual. This failed proposed
+extension was rejected algebraically before simulation; it does not affect
+the exact unmodified profiles used in the saved results.
+
+For a scalar cutoff $C(s,\theta)$ the added term is exactly
+$[H,C]\chi=-iW^{-1}(\sigma_3C_s+\sigma_1C_\theta/R)\chi$.
+Renormalize after applying it; shrinking the cutoff at $q=5$ does not
+justify dropping this term.
+
+The next bounded calculation is that regular field-aligned trial and its
+full metric-dependent residual. It must eventually be uniform over a
+regular flux band and matched to the separate exterior-null and open-channel
+contributions before it can control a stress trace. A small one-state
+residual is insufficient. No source bound, supported opening, stability,
+atom survival, new law, or backward/future clock advantage follows here.

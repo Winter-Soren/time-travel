@@ -127,3 +127,15 @@ The comparison distinguishes the fixed physical reference length from
 the size of the new opening. Changing the subtraction convention without
 matching the physical couplings would give a spurious improvement. No
 atom trajectory, survival probability or clock advantage has been computed.
+
+
+## Channel reduction update
+
+The [exact slice-channel test](PHYSICAL_EUCLIDEAN_OPERATOR.md#exact-slice-channels-and-their-radial-coupling)
+finds a small radial coupling of the proposed supporting-field states that
+more flux alone does not remove relative to the local gap estimate. A
+field-following correction cancels its leading term algebraically; its full
+finite-flux residual remains untested. All14 controls pass. These are quantum
+states of the proposed support field, not the hydrogen payload. The next
+source calculation must retain their coupling and metric variation. Atom
+survival, passage and exterior-clock difference are still uncomputed.

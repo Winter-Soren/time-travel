@@ -1,3 +1,64 @@
+# Authoritative checkpoint163 - exact slice channels and radial coupling
+
+Previous checkpoint162 published 8a01f1ea1f24b1043e8933b5799c1d2fd435b036.
+Previous turn classified PROGRESS: atomic local response and geometry checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One hydrogen atom remains the payload; nominal1nm areal diameter is a trial,
+not a feasible minimum. Human transport deferred. No discovery deadline.
+
+- Exact upper slice-zero profiles in the actual collar, mu/q=.9, q=5,25,105,
+  1005,10005 at u/D=.0125,.025,.0375. Hamiltonian normalization integral Wf²=1.
+  Angular powers integrated analytically; no Gaussian approximation in data.
+- H=W^-1/2[-i sigma3 d_s+K/R]W^-1/2; chi=sqrt(W)f e_plus.
+  Projected h=-i(v d_s+v_s/2), v=integral f². Residual(HU-Uh)psi
+  =-i(r1 psi_s+r0 psi), r1=chi(1/W-v), r0=chi[(f_s/f)/W-v_s/2].
+  Zero diagonal Berry phase does not imply zero leakage. Different mu sectors
+  separate but transverse excited states in the same mu can mix.
+- ACTUAL common-H metric derivative: dotr1=2F r1; dotr0=2F r0+F_s r1.
+  Common canonical chi unchanged. Hamiltonian connection is F_s, not the
+  earlier proper-Euclidean F_s/2. Offmidpoint check detects wronghalf3.68e-5;
+  direct complex variation agrees below2.95e-16. Profile radial FD2.34e-7.
+- Angular/inner512/48 vs1024/80 sensitivity at most1.56e-10. Existing q1
+  cylinder speed recovered2.23e-16. All14 controls PASS. Figure inspected.
+- Local large-q coefficients: a(theta0)=nu; theta0_s=-a_s/a_theta;
+  kappa=NP a_theta/sin(theta0). r0/sqrt(q)->|theta0_s|sqrt(kappa/2)/W0;
+  local gap~sqrt(2qkappa)/(RW0). Ratio->|R theta0_s|/2, here1.57e-5,
+  1.36e-4,3.39e-4. Small but not suppressed by more flux alone. These are
+  local asymptotic coefficients, not finite-q or atomic-flux error bounds.
+- IMPORTANT units: plotted D*r0 grows sqrt(q), but fixed physical coupling
+  implies D proportionalq, so physical r0 decreases q^-1/2; gap ratio stays.
+- Leading correction: t=Rtheta0_s, beta=atan(t), width G=kappa/sqrt(1+t²),
+  eta=(cos(beta/2),sin(beta/2)); [iG(sigma1-t sigma3)-kappa sigma2]eta=0.
+  t_dot=Ft, beta_dot=Ft/(1+t²), G_dot=-Fkappa t²/(1+t²)^1.5.
+  Independent algebra and matrix controls verify leading cancellation only.
+- DOMAIN WARNING for NEXT trial: uncut f^lambda rotated everywhere atq5,
+  nu=.9 has southpowerlambda/2<.5; Htrial notL2 for nonzero tilt. Do not
+  trust quadrature hiding that pole divergence. Smoothly cut off or restore
+  regular profile/spin near poles and retain all cutoff derivatives.
+- NEXT: evaluate normalized regular field-aligned trial with actual full
+  finite-q residual AND metric variation; include spin/width derivatives,
+  nonlinear potential, normalization and cutoff errors. Then uniform regular
+  band, nullband, open/bypass and state/subtraction errors for full trace.
+  No further ideal length refinement or broad q1 basis expansion now.
+- No full source bound or finite-q gap enclosure; no atomic flux simulated.
+  Supporting-field states are not hydrogen payload states. Stability, atom
+  survival, actual propagation and exterior-clock comparison remain undone.
+  Present static metric excludes backward causal passage.13Sep2027->12Sep2027
+  remains unproved. No new physical law or obtainable medium established.
+- Initial JSON serialization needed NumPy bool->Python bool conversion;
+  no scientific check failed and no failed result was written.
+
+Source SHA256 6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0
+Results SHA256 57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b
+
+Verification PASS:14 saved controls, exact current source/input hashes,
+independent metric-norm reconstruction,158 imports,1387 Markdown links,
+8 historical guards,14 frozen hashes and operator identity. Figure inspected;
+six historical document byte sequences retained. Read-only algebra audit PASS.
+No live worker, simulation or background job remains.
+
+--- Preserved checkpoint162 and earlier history ---
+
 # Authoritative checkpoint162 - atomic strong-field response and reduction error
 
 Previous checkpoint161 published 49fc5db04a9f6601e75b417de75daabcc38c4732.
