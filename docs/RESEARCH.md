@@ -1,3 +1,69 @@
+# Authoritative checkpoint168 - metric-inserted finite collar trace
+
+Previous checkpoint167 published 794bb0da5618e34c1ea0d55c877522250b7f53a6.
+Previous goal turn classified PROGRESS: full radial comparison, 12 checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom, trial 1 nm areal diameter; humans deferred.
+No new law, supporting medium, stable opening, atom transit or clock advantage.
+
+- Implemented scripts/dihole_metric_resolvent.py; all 13 controls PASS.
+  Reuses exact165/166/167 inputs; no prior solves rerun. Graph unindexed.
+- Full radial graph: H=W^-1/2(P+B)W^-1/2, {P,B}=-i sigma3 B_s.
+  B_s=-(R_s/R)B+sigma2 V_s/R. Completing the square gives
+  ||P phi||² <= ||(P+B)phi||² + Cg||phi||², Cg<=400+31q.
+  Pole-safe coefficient from saved interval data <30.727337; no clipping a.
+- Original compact mask gives exact dotH psi=FH psi+W^-1/2 P(FW^-1/2 psi).
+  No enlarged cutoff, extra F_s omission, or assumed full spectral gap.
+  Evaluated square-root CH bounds ||dotH(H-iy)^-1||.
+- New graph estimate REQUIRES axial-symmetry-preserving global realization
+  reducing each declared mu sector.167's broader exterior-mixing class
+  is not covered. Both collars use same direct-sum bound, no factor2.
+- Normalized profile variation M from166 improves dotR1 <=2F R1+2M R1+2M/wmin.
+  |dotv/v|<=alpha=2F+2M R1/vmin. Full transported dot(v_s) covariance
+  formula retains 2F_s v and derivative of g; independent audit PASS.
+  At atomic reference: M<.147678, dotR1<.016775315, alpha<8.015179,
+  D|dot(v_s)|<24909.031 (loose bound). Old dotR0 retained unchanged.
+- Ch=sqrt(alpha²+(beta/y)²), beta=(dotVs+alpha Vs)/2.
+  CT bounds dotT Gh with moving spin/profile and outer cutoff derivative.
+  ||dotE||<=(CH+Ch)e+CT/y. Frequency and Gaussian scale fixed when varied.
+- Fixed baseline X=eta Gaussian and parallel phase J*dotJ=0 give exact
+  Q=Tr X*[J*GH dotH GHJ-Gh doth Gh]X=Tr X*[-J*dotE+E_-*dotJ]X.
+  Q and fixed-X derivative of prior trace have SAME error upper bound,
+  HS²[(M+CH+Ch)e+CT/y], but Q != minus that derivative in general.
+  Effective doth includes moving trial; no vacuum-stress equivalence.
+- Varying effective Gaussian: ||dotX||HS <=sqrt(11)/2 alpha ||X||HS.
+  Complete-line velocity variation frozen outside collar (global alpha).
+  Add sqrt(11) alpha e HS²; two derivative terms not a 2Re pair at iy.
+- At q=4642875905017627791065088, yD=LambdaD=sqrt(q):
+  CH<11.459086, Ch<8.015179, CT<1.438857, y||dotE||<2.439625.
+  Per-sector finite insertion error/D<1.184237; moving filter<1.845309.
+  Band insertion error/D<5.498264e23. Not relative errors/probabilities
+  or energy; no direct comparison to required source is valid.
+- At q1000 fixed-filter bound>6.08e10D; uninformative case retained.
+  Atomic entries evaluate bounding formulas only, not huge-flux states.
+- Actual profile identities: dotr1 error<5.8e-18, mixed velocity<8.9e-16.
+  Noncommuting matrix derivative errors<6.46e-11, insertion<8.24e-16.
+  Gaussian moment coefficients11/4 and3/4 independently integrated.
+- Concrete next obstruction: fixed q,Lambda error envelope has positive
+  1/y tail (coefficient/HS²<2.444458 at atomic reference), so its absolute
+  frequency integral diverges. NOT proof actual renormalized response diverges.
+  NEXT: preserve paired-frequency/subtraction cancellations before absolute
+  bounds; then filter removal, omitted angular sectors, null/open channels.
+  Total supporting source and sign unknown. Survival/stability/time shift unproved.
+  Static geometry excludes13Sep2027->12Sep2027; no future clock gain calculated.
+
+Source SHA256 b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc
+Results SHA256 f15f1402458e8ee43b222d3ea40b665f2bc33315230436eda7887be941e9ce97
+
+Verification PASS: all13 saved controls; exact source/result and34 input hashes;
+independent math/code audits and80-digit graph/trace arithmetic checks.
+Figure inspected; all six prior document byte sequences preserved.
+Layout PASS:163 imports,1444 Markdown links,8 historical guards,
+14 frozen hashes and operator identity. Git diff check passes.
+Publication follows. No simulation is running.
+
+--- Preserved checkpoint167 and earlier history ---
+
 # Research increment167 - full radial resolvent and finite trace error
 
 Previous checkpoint166 published fa73f953c6b93e05b56c99ba62007aa3124d2ff9.

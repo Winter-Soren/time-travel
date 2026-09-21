@@ -193,3 +193,8 @@ normalizes to a universal inverse-operator scale; it is not an atom's
 transmission error or a percentage of supporting stress. The metric-weighted
 source and omitted modes remain unresolved. One neutral hydrogen atom is
 still the transport target, with no established opening, survival or time shift.
+
+
+## Metric-response control
+
+The [metric-insertion result](PHYSICAL_EUCLIDEAN_OPERATOR.md#metric-response-of-the-full-collar-resolvent) bounds a finite supporting-field observable with the actual geometry variation included. All 13 controls pass. This controls an error in the source reduction; it does not provide the total supporting stress or an atom trajectory. Its current frequency-error envelope is not integrable to infinity, so cancellations and the omitted sectors must be addressed next. One hydrogen atom and the trial 1 nm opening remain the target; stability, survival and clock advantage are unproved.

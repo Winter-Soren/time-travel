@@ -1,0 +1,562 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_inputs": true,
+    "pole_safe_magnetic_enclosure": true,
+    "actual_momentum_derivative_identity": true,
+    "actual_velocity_mixed_identity": true,
+    "actual_metric_quantities_enclosed": true,
+    "parallel_phase": true,
+    "finite_matrix_resolvent_derivative": true,
+    "metric_insertion_identity": true,
+    "fixed_trace_derivative": true,
+    "moving_trace_derivative": true,
+    "finite_matrix_trace_bounds": true,
+    "gaussian_derivative_coefficients": true,
+    "finite_exported_bounds": true
+  },
+  "records": [
+    {
+      "q": 1000,
+      "band": {
+        "first_n": 850,
+        "last_n": 949,
+        "count": 100,
+        "mu_equals": "n+1/2"
+      },
+      "profile_metric_norm_upper": 5.360665347745305,
+      "dot_r1_upper": 0.456819170269474,
+      "relative_velocity_derivative_upper": 9.389735686494946,
+      "velocity_mixed_derivative_upper_D": 1268541918.57543,
+      "reduced_graph_zero_upper_D": 634281755.2599747,
+      "defect_graph_h_upper": 39.1819392895652,
+      "defect_graph_zero_upper_D": 15010512890.472322,
+      "magnetic_radial_coefficient_upper": 30.727336428535324,
+      "fixed_filter_error_envelope_tail_coefficient_per_HS_squared": 42.57239311575888,
+      "frequency_rows": [
+        {
+          "y_D": 3.1622776601683795,
+          "filter_Lambda_D": 31.622776601683793,
+          "full_metric_graph_upper": 28.28596186956485,
+          "reduced_metric_graph_upper": 200577502.49110076,
+          "defect_metric_graph_upper": 4746740958.121011,
+          "resolvent_derivative_upper_over_D": 3964214384987.7866,
+          "scaled_resolvent_derivative_upper": 12535946589765.01,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 60662990389221.31,
+          "moving_filter_derivative_error_upper_over_D": 60662999804360.74,
+          "band_insertion_error_upper_over_D": 6066299038922131.0
+        },
+        {
+          "y_D": 31.622776601683793,
+          "filter_Lambda_D": 31.622776601683793,
+          "full_metric_graph_upper": 12.967378797865962,
+          "reduced_metric_graph_upper": 20057750.249112252,
+          "defect_metric_graph_upper": 474674095.81210274,
+          "resolvent_derivative_upper_over_D": 3977725850.504313,
+          "scaled_resolvent_derivative_upper": 125786735953.24055,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 60869766215.04011,
+          "moving_filter_derivative_error_upper_over_D": 60869860366.43444,
+          "band_insertion_error_upper_over_D": 6086976621504.011
+        },
+        {
+          "y_D": 316.2277660168379,
+          "filter_Lambda_D": 31.622776601683793,
+          "full_metric_graph_upper": 11.557983467770304,
+          "reduced_metric_graph_upper": 2005775.024932984,
+          "defect_metric_graph_upper": 47467409.58122629,
+          "resolvent_derivative_upper_over_D": 4112840.823648255,
+          "scaled_resolvent_derivative_upper": 1300594465.6451392,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 62937529.33914824,
+          "moving_filter_derivative_error_upper_over_D": 62938470.853111595,
+          "band_insertion_error_upper_over_D": 6293752933.9148245
+        }
+      ]
+    },
+    {
+      "q": 1005,
+      "band": {
+        "first_n": 854,
+        "last_n": 954,
+        "count": 101,
+        "mu_equals": "n+1/2"
+      },
+      "profile_metric_norm_upper": 5.360665347745305,
+      "dot_r1_upper": 0.4567597893342376,
+      "relative_velocity_derivative_upper": 9.386818927020954,
+      "velocity_mixed_derivative_upper_D": 1265382469.0628552,
+      "reduced_graph_zero_upper_D": 632702000.3094683,
+      "defect_graph_h_upper": 39.17684611407955,
+      "defect_graph_zero_upper_D": 15010512772.594242,
+      "magnetic_radial_coefficient_upper": 30.727336428535324,
+      "fixed_filter_error_envelope_tail_coefficient_per_HS_squared": 42.55980681230661,
+      "frequency_rows": [
+        {
+          "y_D": 3.170173496829472,
+          "filter_Lambda_D": 31.701734968294716,
+          "full_metric_graph_upper": 28.250748503294552,
+          "reduced_metric_graph_upper": 199579613.2111513,
+          "defect_metric_graph_upper": 4734918384.62672,
+          "resolvent_derivative_upper_over_D": 3924861635344.519,
+          "scaled_resolvent_derivative_upper": 12442492335091.975,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 60210753742257.29,
+          "moving_filter_derivative_error_upper_over_D": 60210763130996.97,
+          "band_insertion_error_upper_over_D": 6081286127967986.0
+        },
+        {
+          "y_D": 31.701734968294716,
+          "filter_Lambda_D": 31.701734968294716,
+          "full_metric_graph_upper": 12.9636171892205,
+          "reduced_metric_graph_upper": 19957961.32111732,
+          "defect_metric_graph_upper": 473491838.46267366,
+          "resolvent_derivative_upper_over_D": 3938305879.4763703,
+          "scaled_resolvent_derivative_upper": 124851129215.23672,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 60417014556.43901,
+          "moving_filter_derivative_error_upper_over_D": 60417108443.83578,
+          "band_insertion_error_upper_over_D": 6102118470200.34
+        },
+        {
+          "y_D": 317.01734968294716,
+          "filter_Lambda_D": 31.701734968294716,
+          "full_metric_graph_upper": 11.557605692757543,
+          "reduced_metric_graph_upper": 1995796.1321335854,
+          "defect_metric_graph_upper": 47349183.84628341,
+          "resolvent_derivative_upper_over_D": 4072748.6373432507,
+          "scaled_resolvent_derivative_upper": 1291131978.935392,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 62479627.55438375,
+          "moving_filter_derivative_error_upper_over_D": 62480566.42837146,
+          "band_insertion_error_upper_over_D": 6310442382.992759
+        }
+      ]
+    },
+    {
+      "q": 10005,
+      "band": {
+        "first_n": 8504,
+        "last_n": 9504,
+        "count": 1001,
+        "mu_equals": "n+1/2"
+      },
+      "profile_metric_norm_upper": 5.360665347745305,
+      "dot_r1_upper": 0.442427622716595,
+      "relative_velocity_derivative_upper": 8.68283064191895,
+      "velocity_mixed_derivative_upper_D": 401064961.616398,
+      "reduced_graph_zero_upper_D": 200535647.18077525,
+      "defect_graph_h_upper": 37.94755864357094,
+      "defect_graph_zero_upper_D": 15010481678.878498,
+      "magnetic_radial_coefficient_upper": 30.727336428535324,
+      "fixed_filter_error_envelope_tail_coefficient_per_HS_squared": 39.56839706405605,
+      "frequency_rows": [
+        {
+          "y_D": 10.002499687578101,
+          "filter_Lambda_D": 100.024996875781,
+          "full_metric_graph_upper": 19.106410866964467,
+          "reduced_metric_graph_upper": 20048553.206138577,
+          "defect_metric_graph_upper": 1500673046.510535,
+          "resolvent_derivative_upper_over_D": 39714019890.209045,
+          "scaled_resolvent_derivative_upper": 397239471544.2865,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 1922291216476.1235,
+          "moving_filter_derivative_error_upper_over_D": 1922293967215.9963,
+          "band_insertion_error_upper_over_D": 1924213507692599.8
+        },
+        {
+          "y_D": 100.024996875781,
+          "filter_Lambda_D": 100.024996875781,
+          "full_metric_graph_upper": 11.935443134425139,
+          "reduced_metric_graph_upper": 2004855.3206324724,
+          "defect_metric_graph_upper": 150067304.65105826,
+          "resolvent_derivative_upper_over_D": 41064485.95808662,
+          "scaled_resolvent_derivative_upper": 4107475079.6631665,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 1987662876.041444,
+          "moving_filter_derivative_error_upper_over_D": 1987690383.440186,
+          "band_insertion_error_upper_over_D": 1989650538917.4856
+        },
+        {
+          "y_D": 1000.2499687578099,
+          "filter_Lambda_D": 100.024996875781,
+          "full_metric_graph_upper": 11.454262516816694,
+          "reduced_metric_graph_upper": 200485.53224938945,
+          "defect_metric_graph_upper": 15006730.465153327,
+          "resolvent_derivative_upper_over_D": 54569.1950608978,
+          "scaled_resolvent_derivative_upper": 54582835.65480186,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 2641381.815581725,
+          "moving_filter_derivative_error_upper_over_D": 2641656.889583319,
+          "band_insertion_error_upper_over_D": 2644023197.3973064
+        }
+      ]
+    },
+    {
+      "q": 100000000,
+      "band": {
+        "first_n": 85000000,
+        "last_n": 94999999,
+        "count": 10000000,
+        "mu_equals": "n+1/2"
+      },
+      "profile_metric_norm_upper": 0.14767770824428592,
+      "dot_r1_upper": 0.0167754482123232,
+      "relative_velocity_derivative_upper": 8.015178504286776,
+      "velocity_mixed_derivative_upper_D": 4036312.012268561,
+      "reduced_graph_zero_upper_D": 2018198.8691160437,
+      "defect_graph_h_upper": 1.438850722973731,
+      "defect_graph_zero_upper_D": 15010467681.527819,
+      "magnetic_radial_coefficient_upper": 30.727336428535324,
+      "fixed_filter_error_envelope_tail_coefficient_per_HS_squared": 2.444495432282239,
+      "frequency_rows": [
+        {
+          "y_D": 1000.0,
+          "filter_Lambda_D": 10000.0,
+          "full_metric_graph_upper": 15.610223707422412,
+          "reduced_metric_graph_upper": 2018.214784998795,
+          "defect_metric_graph_upper": 15010467.681527887,
+          "resolvent_derivative_upper_over_D": 15411.978117639177,
+          "scaled_resolvent_derivative_upper": 15411978.117639177,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 74580600.4616951,
+          "moving_filter_derivative_error_upper_over_D": 74605996.11950138,
+          "band_insertion_error_upper_over_D": 745806004616951.0
+        },
+        {
+          "y_D": 10000.0,
+          "filter_Lambda_D": 10000.0,
+          "full_metric_graph_upper": 11.46384723855009,
+          "reduced_metric_graph_upper": 201.97898365787555,
+          "defect_metric_graph_upper": 1501046.7681534714,
+          "resolvent_derivative_upper_over_D": 150.52604940746224,
+          "scaled_resolvent_derivative_upper": 1505260.4940746224,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 728415.4941903661,
+          "moving_filter_derivative_error_upper_over_D": 728669.4516202835,
+          "band_insertion_error_upper_over_D": 7284154941903.661
+        },
+        {
+          "y_D": 100000.0,
+          "filter_Lambda_D": 10000.0,
+          "full_metric_graph_upper": 11.406793462021358,
+          "reduced_metric_graph_upper": 21.715334535431605,
+          "defect_metric_graph_upper": 150104.67682217434,
+          "resolvent_derivative_upper_over_D": 1.501700874879864,
+          "scaled_resolvent_derivative_upper": 150170.0874879864,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 7266.929511149624,
+          "moving_filter_derivative_error_upper_over_D": 7269.469937159208,
+          "band_insertion_error_upper_over_D": 72669295111.49625
+        }
+      ]
+    },
+    {
+      "q": 1000000000000,
+      "band": {
+        "first_n": 850000000000,
+        "last_n": 949999999999,
+        "count": 100000000000,
+        "mu_equals": "n+1/2"
+      },
+      "profile_metric_norm_upper": 0.14767770824428592,
+      "dot_r1_upper": 0.016775314968446826,
+      "relative_velocity_derivative_upper": 8.01517809737636,
+      "velocity_mixed_derivative_upper_D": 65023.04138944951,
+      "reduced_graph_zero_upper_D": 32525.576038584546,
+      "defect_graph_h_upper": 1.4388392944833905,
+      "defect_graph_zero_upper_D": 15010467676.356373,
+      "magnetic_radial_coefficient_upper": 30.727336428535324,
+      "fixed_filter_error_envelope_tail_coefficient_per_HS_squared": 2.4444570232215823,
+      "frequency_rows": [
+        {
+          "y_D": 100000.0,
+          "filter_Lambda_D": 1000000.0,
+          "full_metric_graph_upper": 15.579796007031298,
+          "reduced_metric_graph_upper": 8.021774818724712,
+          "defect_metric_graph_upper": 150104.6767704598,
+          "resolvent_derivative_upper_over_D": 1.5015128588297164,
+          "scaled_resolvent_derivative_upper": 150151.28588297166,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 726601.9678324049,
+          "moving_filter_derivative_error_upper_over_D": 726856.0101783271,
+          "band_insertion_error_upper_over_D": 7.26601967832405e+16
+        },
+        {
+          "y_D": 1000000.0,
+          "filter_Lambda_D": 1000000.0,
+          "full_metric_graph_upper": 11.45913276772051,
+          "reduced_metric_graph_upper": 8.015244091464611,
+          "defect_metric_graph_upper": 15010.467745316866,
+          "resolvent_derivative_upper_over_D": 0.015014440423717013,
+          "scaled_resolvent_derivative_upper": 15014.440423717013,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 7265.687132383444,
+          "moving_filter_derivative_error_upper_over_D": 7268.311326931255,
+          "band_insertion_error_upper_over_D": 726568713238344.4
+        },
+        {
+          "y_D": 10000000.0,
+          "filter_Lambda_D": 1000000.0,
+          "full_metric_graph_upper": 11.406318658623999,
+          "reduced_metric_graph_upper": 8.015178757319932,
+          "defect_metric_graph_upper": 1501.0474572404135,
+          "resolvent_derivative_upper_over_D": 0.0001502116625766316,
+          "scaled_resolvent_derivative_upper": 1502.1166257663162,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 72.68966609080148,
+          "moving_filter_derivative_error_upper_over_D": 72.76048343633502,
+          "band_insertion_error_upper_over_D": 7268966609080.147
+        }
+      ]
+    },
+    {
+      "q": 10000000000000000,
+      "band": {
+        "first_n": 8500000000000000,
+        "last_n": 9499999999999999,
+        "count": 1000000000000000,
+        "mu_equals": "n+1/2"
+      },
+      "profile_metric_norm_upper": 0.14767770824428592,
+      "dot_r1_upper": 0.01677531495512226,
+      "relative_velocity_derivative_upper": 8.015178097335669,
+      "velocity_mixed_derivative_upper_D": 25310.151680658397,
+      "reduced_graph_zero_upper_D": 12668.84310783165,
+      "defect_graph_h_upper": 1.438839293340526,
+      "defect_graph_zero_upper_D": 15010467676.304659,
+      "magnetic_radial_coefficient_upper": 30.727336428535324,
+      "fixed_filter_error_envelope_tail_coefficient_per_HS_squared": 2.4444570193806245,
+      "frequency_rows": [
+        {
+          "y_D": 10000000.0,
+          "filter_Lambda_D": 100000000.0,
+          "full_metric_graph_upper": 15.579492313935773,
+          "reduced_metric_graph_upper": 8.015178197457951,
+          "defect_metric_graph_upper": 1501.047457235241,
+          "resolvent_derivative_upper_over_D": 0.00015023463621785762,
+          "scaled_resolvent_derivative_upper": 1502.346362178576,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 7270.078331860323,
+          "moving_filter_derivative_error_upper_over_D": 7277.1600663885765,
+          "band_insertion_error_upper_over_D": 7.270078331860323e+18
+        },
+        {
+          "y_D": 100000000.0,
+          "filter_Lambda_D": 100000000.0,
+          "full_metric_graph_upper": 11.459085623297277,
+          "reduced_metric_graph_upper": 8.015178098336891,
+          "defect_metric_graph_upper": 150.1115726539788,
+          "resolvent_derivative_upper_over_D": 1.5111307890783215e-06,
+          "scaled_resolvent_derivative_upper": 151.11307890783215,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 73.12915428345129,
+          "moving_filter_derivative_error_upper_over_D": 73.79071362822906,
+          "band_insertion_error_upper_over_D": 7.31291542834513e+16
+        },
+        {
+          "y_D": 1000000000.0,
+          "filter_Lambda_D": 100000000.0,
+          "full_metric_graph_upper": 11.40631391059073,
+          "reduced_metric_graph_upper": 8.01517809734568,
+          "defect_metric_graph_upper": 15.079270485452792,
+          "resolvent_derivative_upper_over_D": 1.607733402109022e-08,
+          "scaled_resolvent_derivative_upper": 16.077334021090223,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 0.7783692311814522,
+          "moving_filter_derivative_error_upper_over_D": 0.8444768917009833,
+          "band_insertion_error_upper_over_D": 778369231181452.2
+        }
+      ]
+    },
+    {
+      "q": 4642875905017627791065088,
+      "band": {
+        "first_n": 3946444519264983622405325,
+        "last_n": 4410732109766746401511833,
+        "count": 464287590501762779106509,
+        "mu_equals": "n+1/2"
+      },
+      "profile_metric_norm_upper": 0.14767770824428592,
+      "dot_r1_upper": 0.016775314955120926,
+      "relative_velocity_derivative_upper": 8.015178097335665,
+      "velocity_mixed_derivative_upper_D": 24909.029997272028,
+      "reduced_graph_zero_upper_D": 12468.279356411314,
+      "defect_graph_h_upper": 1.4388392933404117,
+      "defect_graph_zero_upper_D": 15010467676.304138,
+      "magnetic_radial_coefficient_upper": 30.727336428535324,
+      "fixed_filter_error_envelope_tail_coefficient_per_HS_squared": 2.4444570193802404,
+      "frequency_rows": [
+        {
+          "y_D": 215473337214.08847,
+          "filter_Lambda_D": 2154733372140.8845,
+          "full_metric_graph_upper": 15.579489246530253,
+          "reduced_metric_graph_upper": 8.015178097335665,
+          "defect_metric_graph_upper": 1.4405247003730444,
+          "resolvent_derivative_upper_over_D": 1.2312601239305504e-11,
+          "scaled_resolvent_derivative_upper": 2.653037278819479,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 12.875098331506361,
+          "moving_filter_derivative_error_upper_over_D": 19.48581560495073,
+          "band_insertion_error_upper_over_D": 5.977748381808355e+24
+        },
+        {
+          "y_D": 2154733372140.8845,
+          "filter_Lambda_D": 2154733372140.8845,
+          "full_metric_graph_upper": 11.459085147113111,
+          "reduced_metric_graph_upper": 8.015178097335665,
+          "defect_metric_graph_upper": 1.4388561571830525,
+          "resolvent_derivative_upper_over_D": 1.1322162801337564e-12,
+          "scaled_resolvent_derivative_upper": 2.4396242032854176,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 1.1842366187064532,
+          "moving_filter_derivative_error_upper_over_D": 1.845308345946877,
+          "band_insertion_error_upper_over_D": 5.498263662831739e+23
+        },
+        {
+          "y_D": 21547333721408.844,
+          "filter_Lambda_D": 2154733372140.8845,
+          "full_metric_graph_upper": 11.406313862633024,
+          "reduced_metric_graph_upper": 8.015178097335665,
+          "defect_metric_graph_upper": 1.4388394619798166,
+          "resolvent_derivative_upper_over_D": 1.130949964456124e-13,
+          "scaled_resolvent_derivative_upper": 2.4368956306351577,
+          "fixed_filter_derivative_and_insertion_error_upper_over_D": 0.11829162288112638,
+          "moving_filter_derivative_error_upper_over_D": 0.18439879560506478,
+          "band_insertion_error_upper_over_D": 5.4921332564021356e+22
+        }
+      ]
+    }
+  ],
+  "field_controls": [
+    {
+      "q": 1005,
+      "u": 0.0125,
+      "mu": 854.5,
+      "dot_r1": 6.6510418174845e-07,
+      "relative_velocity_derivative": 1.0799675762642578,
+      "velocity_mixed_derivative": 2.3023866217086364,
+      "dot_r1_identity_error": 2.7910005332310435e-18,
+      "velocity_transport_derivative_error": 4.440892098500626e-16,
+      "bounds_enclose": true
+    },
+    {
+      "q": 1005,
+      "u": 0.025,
+      "mu": 904.5,
+      "dot_r1": 1.2380162949010916e-05,
+      "relative_velocity_derivative": 1.99999992547752,
+      "velocity_mixed_derivative": 0.9152886494769295,
+      "dot_r1_identity_error": 4.172747970358299e-18,
+      "velocity_transport_derivative_error": 1.1102230246251565e-16,
+      "bounds_enclose": true
+    },
+    {
+      "q": 1005,
+      "u": 0.0375,
+      "mu": 954.5,
+      "dot_r1": 2.438653124514409e-05,
+      "relative_velocity_derivative": 1.0799673682406594,
+      "velocity_mixed_derivative": -3.3901410586551064,
+      "dot_r1_identity_error": 1.981885517545717e-18,
+      "velocity_transport_derivative_error": 8.881784197001252e-16,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.0125,
+      "mu": 8504.5,
+      "dot_r1": 5.910206521284296e-07,
+      "relative_velocity_derivative": 1.0799675762647898,
+      "velocity_mixed_derivative": 2.302386357322762,
+      "dot_r1_identity_error": 2.022058544024767e-18,
+      "velocity_transport_derivative_error": 0.0,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.025,
+      "mu": 9004.5,
+      "dot_r1": 1.2356102201182916e-05,
+      "relative_velocity_derivative": 1.9999999254774499,
+      "velocity_mixed_derivative": 0.9152868350514046,
+      "dot_r1_identity_error": 5.769575518958182e-18,
+      "velocity_transport_derivative_error": 1.1102230246251565e-16,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.0375,
+      "mu": 9504.5,
+      "dot_r1": 2.4342225416461195e-05,
+      "relative_velocity_derivative": 1.0799673687333404,
+      "velocity_mixed_derivative": -3.39013444092979,
+      "dot_r1_identity_error": 1.5365676180654918e-18,
+      "velocity_transport_derivative_error": 8.881784197001252e-16,
+      "bounds_enclose": true
+    }
+  ],
+  "matrix_controls": [
+    {
+      "y": 0.3,
+      "parallel_phase_error": 1.293805888740797e-16,
+      "resolvent_derivative_error": 6.458437697572504e-11,
+      "insertion_identity_error": 8.23640032866517e-16,
+      "fixed_trace_derivative_error": 7.692373659529907e-12,
+      "moving_trace_derivative_error": 3.06438140944169e-11,
+      "insertion_bound_holds": true
+    },
+    {
+      "y": 1.0,
+      "parallel_phase_error": 1.293805888740797e-16,
+      "resolvent_derivative_error": 2.069205400842647e-11,
+      "insertion_identity_error": 1.9562126126612393e-16,
+      "fixed_trace_derivative_error": 1.5623981811046216e-12,
+      "moving_trace_derivative_error": 1.250089407666408e-11,
+      "insertion_bound_holds": true
+    },
+    {
+      "y": 3.0,
+      "parallel_phase_error": 1.293805888740797e-16,
+      "resolvent_derivative_error": 1.0304388161599015e-11,
+      "insertion_identity_error": 4.5406646788630985e-17,
+      "fixed_trace_derivative_error": 7.548082146687926e-13,
+      "moving_trace_derivative_error": 1.24949674048463e-12,
+      "insertion_bound_holds": true
+    }
+  ],
+  "gaussian_controls": {
+    "general_squared_coefficient": 2.7500000000000004,
+    "uniform_velocity_squared_coefficient": 0.7499999999999994
+  },
+  "source_sha256": "b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+    "dihole_collar_resolvent_results.json": "df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17",
+    "dihole_collar_resolvent.py": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531"
+  },
+  "total_source": null,
+  "source_sign": null,
+  "atom_transit": null,
+  "current_error_envelope_absolutely_frequency_integrable": false,
+  "scope": [
+    "Baseline and first paired metric variation on the actual collar, with fixed y,Lambda,chi,eta; no finite-epsilon stability theorem.",
+    "Global self-adjoint realization must preserve the declared axial sector; the broader exterior-mixing class of167 is not covered by this new graph estimate.",
+    "Full radial graph control uses F itself as a compact multiplier. Polar cancellations retained. No global spectral gap assumed.",
+    "Finite metric-inserted resolvent trace difference is bounded, not measured; effective h variation includes the moving normalized trial.",
+    "Fixed-filter and varying-effective-Gaussian derivative bounds are separate. Neither is the unfiltered renormalized vacuum stress.",
+    "Atomic-reference entries evaluate bounding formulas and exact sector counts only; no huge-flux wave function, supported opening, atom survival or clock shift."
+  ]
+}

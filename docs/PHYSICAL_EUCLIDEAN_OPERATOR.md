@@ -4001,3 +4001,268 @@ stress value, source sign, stable opening, hydrogen survival or clock
 advantage. One hydrogen atom remains the target. The current static
 geometry still excludes backward causal passage, including travel from
 13 to 12 September 2027.
+
+
+## Metric response of the full collar resolvent
+
+The [metric-resolvent calculation](../scripts/dihole_metric_resolvent.py)
+closes the preceding finite-observable calculation's missing first metric
+variation. All **13 controls pass** in the
+[saved results](../results/dihole_metric_resolvent_results.json).
+The output bounds a finite trace containing the actual geometry-variation
+operator. It does not determine the vacuum stress, supporting-source sign,
+stability, or hydrogen propagation.
+
+This increment uses a self-adjoint global realization preserving axial
+symmetry and the declared half-integer sector. This is the symmetry of the
+prescribed geometry. Unlike167's unvaried comparison, the new graph estimate
+does not cover arbitrary exterior mixing of sectors. The complete-line
+reference velocity is varied only inside the collars; its continuation is
+held fixed outside. Frequencies, the Gaussian scale and spatial windows are
+held fixed under the virtual metric variation unless explicitly stated.
+
+### A graph bound without a global spectral gap
+
+Write the actual canonical Hamiltonian as
+
+$$
+H=W^{-1/2}(P+B)W^{-1/2},\quad P=-i\sigma_3\partial_s,\quad
+B=K/R,\quad K=-i\sigma_1\partial_\theta+\sigma_2 V,\quad
+V=q\,NP(\nu-a)/\sin\theta.
+$$
+
+On the regular compact core,
+
+$$
+\{P,B\}=-i\sigma_3B_s,\qquad
+B_s=-\frac{R_s}{R}B+\sigma_2\frac{V_s}{R}.
+$$
+
+The cross term is bounded by
+$\|R_s/R\|_\infty\|\phi\|\|B\phi\|
++\|V_s/R\|_\infty\|\phi\|^2$.
+Completing the square in $\|B\phi\|$ gives
+
+$$
+\|P\phi\|^2\le\|(P+B)\phi\|^2+C_g\|\phi\|^2,\qquad
+C_g=\frac14\|R_s/R\|_\infty^2+\|V_s/R\|_\infty.
+$$
+
+The apparent polar singularity in $V_s$ is removable. At both axes,
+$(NP)_R=a_R=0$. With $x=\cos\theta$, the mean-value theorem bounds each
+radial derivative by its mixed $Rx$ bound times $1-|x|$; dividing by
+$\sin\theta$ costs at most one. The saved165 interval table therefore gives
+
+$$
+\left\|\frac{V_s}{qR}\right\|_\infty
+\le40\left(\|(NP)_{Rx}\|_\infty\|\nu-a\|_\infty
++\|NP\|_\infty\|a_{Rx}\|_\infty\right)<30.727337<31.
+$$
+
+The implementation uses the actual interval enclosure of $a$, including
+its small overhang past zero and one; it needs no numerical clipping.
+Since $|R_s|\le1$ and $R\ge1/40$, $C_g\le400+31q$ in $D=1$ units.
+The regular polar domain and graph closure extend the estimate to the
+localized resolvent range.
+
+For the original compact variation mask $F$, let $c=e^{\epsilon F}$.
+The specified family is $H_\epsilon=cH_{\rm rad}c+cH_{\rm ang}$.
+Its full connection term has a useful exact rearrangement:
+
+$$
+\boxed{\dot H\psi=FH\psi+W^{-1/2}P(FW^{-1/2}\psi).}
+$$
+
+Thus $F$ itself localizes the graph estimate. Its flat endpoints justify
+zero extension; no larger unknown collar or omitted cutoff is introduced.
+The scalar commutator already contains the required $F_s$ term. Writing
+$F_*=4$, $F_{s*}=1200$, $w_-=\inf W$, $w_+=\sup W$, one obtains
+
+$$
+C_H(y):=F_*+\frac1{\sqrt{w_-}}
+\sqrt{\left(F_*\sqrt{w_+}+\frac{F_{s*}}{\sqrt{w_-}y}\right)^2
++\frac{(400+31q)F_*^2}{w_-y^2}}
+\ \ge\ \|\dot H(H-iy)^{-1}\|.
+$$
+
+This uses only $\|H(H-iy)^{-1}\|\le1$ and $\|(H-iy)^{-1}\|\le1/y$.
+Both collars obey the same direct-sum estimate without an extra factor two.
+No frozen angular gap is substituted for a full-space gap.
+
+### Controlling the moving effective channel
+
+Let $M$ denote166's bound on $\|\dot U\|$ in the real normalized gauge,
+so $U^*\dot U=0$. Differentiating $r_1=(A_s-v)U$, with
+$\dot A_s=2FA_s$, gives the sharper bounds
+
+$$
+|\dot v-2Fv|\le2MR_1,\qquad
+\|\dot r_1\|\le2F_*R_1+2MR_1+2M/w_-=:\dot R_1,
+$$
+
+$$
+|\dot v/v|\le\alpha:=2F_*+2MR_1/v_-.
+$$
+
+This avoids the much larger165 generic $\dot r_1$ estimate while preserving
+its $\dot R_0$ bound. At the atomic-reference integer,
+$M<.147678$, $\dot R_1<.016775315$, and $\alpha<8.015179$.
+
+The mixed derivative $\dot v_s$ includes normalization and the mask's
+radial derivative. Use167's $f,A,d,\zeta$ and put
+$g=f_s+\zeta f_\theta$, $J_0=\dot\Lambda L$,
+$j=qJ_0-\mathbb E(qJ_0)$. The canonical weight $W$, $\zeta$ and $d$
+are unchanged under this interpolation; $\dot p=2jp$. Differentiation yields
+
+$$
+\begin{aligned}
+\dot v_s={}&2Fv_s+2F_sv+\mathbb E\dot g+2\operatorname{Cov}(j,g)\\
+&+2q\{\operatorname{Cov}(\dot A,f)+\operatorname{Cov}(A,\dot f)
++2\mathbb E[(A-\mathbb EA)(f-\mathbb Ef)j]\}\\
+&+\operatorname{Cov}(d,\dot f)
++2\mathbb E[(d-\mathbb Ed)(f-\mathbb Ef)j].
+\end{aligned}
+$$
+
+All constants below come from165/167. Define $L_{\dot f}=F_*T^2(2C_t+L_{W\theta})/w_-$,
+$G=(T_sT+L_{Ws})/w_-+|\theta_{0,s}|_*L_f$, and
+
+$$
+\dot G=\frac{F_*T_sT+T(F_{s*}T+F_*T_s+2F_*T^2T_s)+F_*T^2L_{Ws}}{w_-}
++|\theta_{0,s}|_*L_{\dot f},
+$$
+
+$$
+K_5=\sqrt{C_2C_3}+2C_1\sqrt{C_1C_2}+\sqrt{C_1}C_2+4C_1^{5/2}.
+$$
+
+Centered moment bounds and Cauchy--Schwarz give the explicit sufficient bound
+
+$$
+\begin{aligned}
+\dot V_s={}&2F_*V_s+2F_{s*}/w_-+\dot G+2J_2\sqrt{C_2}G\\
+&+\frac{2(\dot A_2L_f+A_2L_{\dot f})\sqrt{C_1C_2}
++d_0L_{\dot f}\sqrt{C_1}}{\sqrt q}\\
+&+\frac{4A_2L_fJ_2K_5
++4d_0L_fJ_2[\sqrt{C_1C_2}+3C_1^{3/2}]}{\sqrt q}
+\ \ge|\dot v_s|.
+\end{aligned}
+$$
+
+For example, the first triple uses
+$\mathbb E[(\delta^2+m_2)^2(|\delta|+m_1)]
+=m_5+m_1m_4+2m_2m_3+4m_1m_2^2$,
+where $m_j=\mathbb E|\delta|^j$.
+This derivation retains $2F_sv$ and the $F_s$ part of $\dot g$.
+The bound is loose: $D\dot V_s<24909.031$ at the atomic reference.
+
+Since $\dot h=(\dot v/v)h-i(\dot v_s-\dot vv_s/v)/2$, the exact spectral
+graph identity yields
+
+$$
+\|\dot hG_h\|\le C_h(y):=\sqrt{\alpha^2+(\beta/y)^2},\qquad
+\beta=(\dot V_s+\alpha V_s)/2.
+$$
+
+For $T=HJ-Jh$ with $J=\chi U$, retain
+$\dot T=\chi\dot R-i\chi'(2FA_sU+A_s\dot U)$.
+With $a_d=\dot R_1/v_-$ and
+$b_d=\dot R_1V_s/(2v_-)+\dot R_0+800(2F_*+M)/w_-$,
+
+$$
+\|\dot T G_h\|\le C_T(y):=\sqrt{a_d^2+(b_d/y)^2}.
+$$
+
+### A finite trace containing the physical metric insertion
+
+Let $e_y$ be167's bound for $E_y=G_HJ-JG_h$. Resolvent differentiation gives
+
+$$
+\dot E_y=G_H\dot H G_HTG_h-G_H\dot T G_h+G_HTG_h\dot hG_h,
+\qquad
+\|\dot E_y\|\le(C_H+C_h)e_y+C_T/y.
+$$
+
+At fixed $X=\eta e^{-h^2/(2\Lambda^2)}$ evaluated at the baseline, define
+
+$$
+Q_X=\operatorname{Tr}X^*
+[J^*G_H\dot H G_HJ-G_h\dot hG_h]X.
+$$
+
+All products are trace-class after the stated filtering and graph estimates.
+Let $E_-=(H+iy)^{-1}J-J(h+iy)^{-1}$. The real normalized gauge and
+$X^*\chi^2=X^*$ give the exact insertion identity
+
+$$
+Q_X=\operatorname{Tr}X^*[-J^*\dot E_y+E_-^*\dot J]X.
+$$
+
+The same graph estimate holds at both frequency signs. Therefore
+
+$$
+\boxed{|Q_X|,\ |\dot\Delta_X|
+\le\|X\|_{\rm HS}^2[(M+C_H+C_h)e_y+C_T/y].}
+$$
+
+Here $\dot\Delta_X$ is the derivative of167's selected trace with $X$
+fixed and $J,h$ varied. **It is not generally $-Q_X$**: moving-embedding
+terms remain. The effective $\dot h$ also contains the changing channel
+state, so this comparison is not a full vacuum-stress formula.
+
+If the effective Gaussian is varied as well, with fixed $\eta,\Lambda$,
+its complete-line kernel obeys
+
+$$
+|\dot K(s,t)|\le\alpha[1+\Lambda^2(x(s)-x(t))^2]|K(s,t)|,
+\quad
+\|\dot X\|_{\rm HS}\le\frac{\sqrt{11}}2\alpha\|X\|_{\rm HS}.
+$$
+
+The outside velocity continuation is frozen, making $\alpha$ a global
+bound for this chosen reference. Gaussian integration of $(1+z^2)^2$
+against $e^{-z^2}/\sqrt\pi$ gives $11/4$. The two filter-derivative terms
+add at most $\sqrt{11}\alpha e_y\|X\|_{\rm HS}^2$. They must be kept
+separately; at $iy$ they are not generally a twice-real-part pair.
+
+### Result, checks, and the next obstruction
+
+At the same integer $q=4642875905017627791065088$ and fixed
+$yD=\Lambda D=\sqrt q$,
+
+$$
+C_H<11.459086,\quad C_h<8.015179,\quad C_T<1.438857,\quad
+y\|\dot E_y\|<2.439625.
+$$
+
+The per-sector fixed-filter insertion-error bound is **$1.184237D$**.
+The varying-effective-filter derivative-error bound is **$1.845309D$**.
+The finite-band insertion-error bound is below $5.498264\times10^{23}D$.
+These are absolute upper bounds for the declared observable, not measured
+relative errors, probabilities or percentages of the required support.
+At $q=1000$ the fixed-filter bound exceeds $6.08\times10^{10}D$;
+the uninformative low-flux case is retained. No huge-flux state is simulated.
+
+Actual profile controls reproduce the momentum-derivative identity within
+$5.8\times10^{-18}$ and the transported mixed velocity derivative within
+$8.9\times10^{-16}$. Noncommuting finite matrices check both trace derivatives,
+the resolvent derivative, insertion ordering, parallel phase and the bound;
+the largest derivative discrepancy is $6.46\times10^{-11}$.
+Independent Gaussian integrals give $11/4$ and the uniform-velocity special
+case $3/4$. The source and all34 inherited input hashes are recorded exactly.
+
+There is a concrete next obstruction: at fixed $q,\Lambda$, the present
+positive error envelope decays only as $1/y$. Its coefficient divided by
+$\|X\|_{\rm HS}^2$ approaches a value bounded above by
+$2.444458$ at the atomic reference. Thus this *error bound* cannot be
+integrated absolutely to infinite frequency. This does not prove that the
+actual renormalized response diverges. The next reduction must preserve
+paired-frequency/subtraction cancellations before taking absolute values,
+then address filter removal, omitted angular sectors and null/open channels.
+
+![Metric-response and finite-trace error bounds](../figures/dihole_metric_resolvent_progress.png)
+
+One neutral hydrogen atom remains the payload. No supporting medium,
+stable opening, survival probability, new physical law or exterior-clock
+advantage is established. The current static geometry still excludes
+backward causal passage, including 13 to 12 September 2027.
