@@ -198,3 +198,8 @@ still the transport target, with no established opening, survival or time shift.
 ## Metric-response control
 
 The [metric-insertion result](PHYSICAL_EUCLIDEAN_OPERATOR.md#metric-response-of-the-full-collar-resolvent) bounds a finite supporting-field observable with the actual geometry variation included. All 13 controls pass. This controls an error in the source reduction; it does not provide the total supporting stress or an atom trajectory. Its current frequency-error envelope is not integrable to infinity, so cancellations and the omitted sectors must be addressed next. One hydrogen atom and the trial 1 nm opening remain the target; stability, survival and clock advantage are unproved.
+
+
+## Paired-frequency and source-selection control
+
+The [paired-frequency result](PHYSICAL_EUCLIDEAN_OPERATOR.md#paired-frequencies-and-a-finite-selected-sign-insertion) bounds an integrated high-frequency remainder and a separate finite massless source selection. All 14 checks pass. This is supporting-field mathematics, not hydrogen propagation. Physical massive-regulator matching and the omitted field contributions remain necessary before a total supporting stress can be reported. The atom target, trial 1 nm diameter, survival and clock requirements remain unchanged.

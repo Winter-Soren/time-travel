@@ -4266,3 +4266,236 @@ One neutral hydrogen atom remains the payload. No supporting medium,
 stable opening, survival probability, new physical law or exterior-clock
 advantage is established. The current static geometry still excludes
 backward causal passage, including 13 to 12 September 2027.
+
+
+## Paired frequencies and a finite selected sign insertion
+
+The [paired-frequency calculation](../scripts/dihole_paired_frequency.py)
+uses the actual collar constants to control the high-frequency remainder
+that168's single-sign absolute estimate could not integrate. All **14
+checks pass** in the [results](../results/dihole_paired_frequency_results.json).
+It also bounds a separate finite massless sign insertion, closer to the
+Hamiltonian source formula. Neither number is the full renormalized stress.
+
+Throughout this increment, $Y=JX$ and $X=\eta e^{-h^2/(2\Lambda^2)}$ are
+**fixed at the baseline** when differentiating the selected energy. This
+is not the moving-embedding or moving-filter energy derivative. The full
+axial-sector and canonical-domain assumptions of168 remain in force.
+The bounds below refer to one Weyl field, one collar selection and one
+allowed half-integer sector; the saved band value multiplies only the
+previous exact sector count.
+
+### Evaluated first graph moments
+
+In the optical coordinate, Fourier normalization gives the exact identities
+
+$$
+\|X\|_{\rm HS}^2=\frac\Lambda{2\sqrt\pi}\int\eta^2\frac{ds}{v},\qquad
+\|hX\|_{\rm HS}^2=\frac{\Lambda^3}{4\sqrt\pi}\int\eta^2\frac{ds}{v}
++\frac\Lambda{2\sqrt\pi}\int v(\eta')^2ds.
+$$
+
+The cross term vanishes by oddness of the Fourier momentum. The actual
+inner cutoff has two disjoint ramps, each of width$.005D$, with
+$|\eta'|\le1600/D$. Thus, in $D=1$ units,
+
+$$
+\int\eta^2 ds/v\le.02/v_-,\qquad
+\int v(\eta')^2ds\le25600/w_-.
+$$
+
+Let $A,B$ bound these two Hilbert--Schmidt norms. From $HJ=Jh+T$ and167's
+graph estimate, $B_H=(1+a)B+bA$ bounds $\|HY\|_{\rm HS}$.
+The original compact metric variation obeys the full graph inequality
+
+$$
+\|\dot H\psi\|\le a_H\|H\psi\|+b_H\|\psi\|,\quad
+a_H=4(1+\sqrt{w_+/w_-}),\quad
+b_H=\frac{1200+4\sqrt{400+31q}}{w_-}.
+$$
+
+Therefore $D_H=a_HB_H+b_HA$ bounds $\|\dot H Y\|_{\rm HS}$, while
+$D_h=\alpha B+\beta A$ bounds $\|\dot hX\|_{\rm HS}$.
+The outer cutoff part of167's $b$ is retained conservatively. These
+estimates establish first graph moments, not $H^2Y$ or a global gap.
+At the atomic-reference integer with $\Lambda D=\sqrt q$:
+
+| Evaluated upper bound | Value in $D=1$ units |
+| --- | ---: |
+| $A^2$ | $1.042702005\times10^{12}$ |
+| $B^2$ | $2.420568007\times10^{36}$ |
+| $B_H$ | $1.635769988\times10^{18}$ |
+| $D_H$ | $2.061581915\times10^{19}$ |
+| $D_h$ | $1.247015414\times10^{19}$ |
+
+### Pair before taking an absolute value
+
+For a self-adjoint $H$ and its symmetric metric derivative $V=\dot H$,
+put $G_\pm=(H\mp iy)^{-1}$ and $S_y=(H^2+y^2)^{-1}$. The exact identity is
+
+$$
+\operatorname{Tr}Y^*(G_+VG_+-G_-VG_-)Y
+=4iy\,\operatorname{Re}\operatorname{Tr}[(HS_yY)^*VS_yY].
+$$
+
+It follows from $G_\pm=(H\pm iy)S_y$ without commuting $V$ through $H$.
+The leading real term cancels in the pair. Since
+$\|HS_yY\|_{\rm HS}\le B_H/y^2$ and
+$\|VS_yY\|_{\rm HS}\le D_H/y^2$,
+
+$$
+|\operatorname{Im}\operatorname{Tr}Y^*G_+VG_+Y|
+\le\frac{2B_HD_H}{y^3}.
+$$
+
+For168's full-minus-reduced insertion, set $C=B_HD_H+BD_h$.
+Its imaginary part is bounded by $2C/y^3$. Thus the high-frequency
+obstruction from the old positive $1/y$ error envelope was a limitation
+of that envelope, not a divergence of this paired selected observable.
+
+### Which energy integral this controls
+
+Introduce an explicit **spectral** infrared smoothing $\delta>0$,
+$f_\delta(H)=\sqrt{H^2+\delta^2}$, and
+$\kappa=\sqrt{\omega^2+\delta^2}$. For fixed $Y$,
+
+$$
+\frac{d}{d\epsilon}\operatorname{Tr}Y^*f_\delta(H_\epsilon)Y
+=\frac2\pi\int_0^\infty\frac{\omega^2}{\kappa}
+\operatorname{Im}\operatorname{Tr}Y^*G_+(\kappa)V G_+(\kappa)Y\,d\omega.
+$$
+
+The positive smoothing avoids assuming differentiability through a zero
+crossing. It is not a physical proper mass. The paired comparison tail is
+
+$$
+|\mathrm{tail}_{\omega>\Omega}|
+\le\frac{4C}{\pi}\left[
+\frac{\arctan(\delta/\Omega)}{2\delta}
++\frac{\Omega}{2(\Omega^2+\delta^2)}\right]
+\le\frac{4C}{\pi\Omega}.
+$$
+
+The same formula over the full half-line gives the coarse bound $C/\delta$.
+For a sharper finite window, triangle bounds in168 give
+
+$$
+|Q_\kappa|\le A^2(K_1/\kappa+K_2/\kappa^2+K_3/\kappa^3),
+$$
+
+$$
+K_1=(M+a_H+\alpha)a+a_d,\quad
+K_2=(M+a_H+\alpha)b+(b_H+\beta)a+b_d,\quad
+K_3=(b_H+\beta)b.
+$$
+
+Integrating the weighted imaginary-part upper bound over$[0,\Omega]$
+uses the following exact integrals:
+
+$$
+I_1=\Omega-\delta\arctan(\Omega/\delta),\quad
+I_2=\operatorname{arsinh}(\Omega/\delta)-\frac\Omega{\sqrt{\Omega^2+\delta^2}},
+$$
+
+$$
+I_3=\frac{\arctan(\Omega/\delta)}{2\delta}
+-\frac\Omega{2(\Omega^2+\delta^2)}.
+$$
+
+The middle error is at most $2A^2(K_1I_1+K_2I_2+K_3I_3)/\pi$.
+Add the paired tail, and take the smallest of these valid bounds and
+$C/\delta$. The reported split is selected from four explicit frequencies;
+it is not claimed to be a continuous optimum.
+
+At the atomic reference and $\delta D=1$, the paired tail falls from
+$3.139118\times10^{25}/D$ above$\Lambda$ to
+$4.904871\times10^{23}/D$ above$64\Lambda$. The complete selected derivative
+error bound is still loose: below$1.974373\times10^{29}/D$, with the best
+saved split$4\Lambda$. The separate trial$\delta=.1\Lambda$ gives a bound
+below$2.154453\times10^{25}/D$. It is a different smoothed observable,
+not evidence that changing a physical material or subtraction improves
+support. The limit$\delta\downarrow0$ remains unproved here.
+
+### A distinct bound on a finite massless source selection
+
+For the source-oriented observable, retain the actual sign insertion:
+
+$$
+s_Y=\operatorname{Re}\operatorname{Tr}Y^*\dot H\operatorname{sgn}(H)Y,
+\qquad \operatorname{sgn}(0)=0.
+$$
+
+It equals the selected trace of the symmetrized operator
+$\{\dot H,\operatorname{sgn}H\}/2$. The sign operator is a contraction
+preserving the Hamiltonian graph domain, so
+
+$$
+\boxed{|s_Y|\le A(a_HB_H+b_HA)=AD_H.}
+$$
+
+This bound needs no spectral infrared smoothing or frequency integral.
+A different zero-state occupation would require its additional contribution.
+At the atomic reference the per-sector bound is below
+$2.105139\times10^{25}/D$, or$4.534127q/D$. Multiplying by the exact finite
+regular-band count gives less than$9.773898\times10^{48}/D$, or
+$.453413q^2/D$. These are absolute bounds, not a measured sign. No fermionic
+$-1/2$, second Weyl component, second collar or physical factor$\hbar c$
+is included. Comparing this selected massless quantity directly with the
+complete renormalized supporting-source requirement is not justified.
+
+The energy derivative above is generally **different** from$s_Y$ because
+$YY^*$ need not commute with$H$. An exact noncommuting control makes the
+distinction visible: for $H=\mathrm{diag}(1,-2)$, $V=\sigma_x$ and
+$Y=(1,1)^T/\sqrt2$, the selected unsmoothed energy derivative is$-1/3$,
+$s_Y=0$, and the selected derivative of$\operatorname{sgn}H$ is$2/3$.
+The corresponding smoothed energy derivative is
+$[\sqrt{1+\delta^2}-\sqrt{4+\delta^2}]/3$.
+Neither the frequency weight nor this filter-commutator distinction can
+be discarded when matching a physical source.
+
+### Checks and the remaining physical prescription
+
+Independent quadratures reproduce the four closed frequency integrals to
+$1.47\times10^{-16}$ relatively and the Fourier/position first Gaussian
+moments to$2.23\times10^{-16}$. Noncommuting matrix controls reproduce the
+paired identity to$2.78\times10^{-17}$ and the weighted energy derivative
+to$1.56\times10^{-15}$; all tested absolute tails lie below their bounds.
+The script records its source and all38 input hashes, including the
+[preserved unit-label pilot source](../provenance/dihole_paired_frequency_units_trial.py)
+and [pilot results](../results/dihole_paired_frequency_units_trial.json).
+The saved label for $C=B_HD_H+BD_h$ was corrected from $D^3$ to $D^2$:
+$C$ has units $D^{-2}$. All numerical formulas, values and tolerances
+are unchanged; the exact pre-correction artifacts remain available. An initial
+NumPy Boolean serialization failure occurred before any result was written;
+explicit conversion corrected reporting without changing calculations or
+tolerances. No scientific failed case was discarded.
+
+The physical proper-mass prescription from136--161 is still
+
+$$
+Q_M=-\frac14\sum_{j,\sigma=\pm}c_j
+\operatorname{Tr}[V_{\sigma m_j}\operatorname{sgn}H_{\sigma m_j}],\qquad
+H_m=H_0+mN\beta.
+$$
+
+In particular,
+
+$$
+H_m^2=H_0^2+m[H_0,N]\beta+m^2N^2,
+$$
+
+which is not$H_0^2+\delta^2$. The independent finite-matrix check reproduces
+this identity to$1.34\times10^{-15}$ and rejects the scalar-mass shortcut.
+The lapse-dependent mass term also varies; its derivative must be retained.
+The next source step is to extend the channel comparison to these actual
+four-component massive operators, including off-channel lapse variation,
+and preserve the common signed-mass regulator sum. Omitted angular and
+null/open channels, filter removal and the fixed counterterms remain.
+The finite-selected bounds do not settle their contributions.
+
+![Paired frequency tail and selected sign-insertion bound](../figures/dihole_paired_frequency_progress.png)
+
+One hydrogen atom remains the payload. No stable supporting medium,
+atom survival or passage, new physical law, or future clock advantage is
+established. The current static geometry excludes backward causal travel,
+including 13 to 12 September 2027.

@@ -1,3 +1,74 @@
+# Authoritative checkpoint169 - paired frequency tail and finite sign insertion
+
+Previous checkpoint168 published ba5a46d348119b6887c6b85219143a66c0492694.
+Previous goal turn classified PROGRESS: finite metric insertion,13 checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom, trial1nm areal diameter; humans deferred.
+No new law, supporting medium, stable opening, atom transit or clock advantage.
+
+- Implemented scripts/dihole_paired_frequency.py; all14 controls PASS.
+  Exact165--168 inputs reused; no historical solves rerun.
+- Actual Gaussian first graph moments: A²=Lambda/(2sqrtpi) inteta²ds/v;
+  B²=Lambda³/(4sqrtpi) inteta²ds/v +Lambda/(2sqrtpi) intv eta'^2 ds.
+  Odd Fourier cross term vanishes. Two inner ramps imply derivative
+  integral<=25600/wmin (D=1). BH=(1+a)B+bA bounds ||HJX||HS.
+- Full graph coefficients aH=4(1+sqrt(wmax/wmin)),
+  bH=(1200+4sqrt(400+31q))/wmin. DH=aH BH+bH A;
+  Dh=alpha B+beta A. Axial-sector assumptions retained, no global gap.
+- Exact +/- pair: TrY*(G+ V G+ -G- V G-)Y
+  =4iy ReTr[(H S_y Y)* V S_y Y], S_y=(H²+y²)^-1.
+  Therefore |ImTrY*G+ V G+Y|<=2 BH DH/y³. No H²Y required.
+  This removes168's nonintegrable single-sign absolute-envelope obstruction
+  for this selected observable, not the whole physical source.
+- Freeze baseline Y=JX and X. For spectral delta>0, kappa=sqrt(omega²+delta²),
+  dTrY*sqrt(H²+delta²)Y = (2/pi)int omega²/kappa ImQ_kappa d omega.
+  NOT an unweighted Q integral. C=BH DH+B Dh has units D^-2.
+  Paired tail<=4C/pi [atan(delta/Omega)/(2delta)+Omega/(2(Omega²+delta²))]
+  <=4C/(pi Omega). Total coarse bound C/delta; no delta-removal claimed.
+- Finite frequency-window bound integrates168's triangle envelope exactly;
+  four declared split choices. At atomic q=4642875905017627791065088,
+  LambdaD=sqrtq and deltaD=1: tail aboveLambda<3.139118e25/D,
+  above64Lambda<4.904871e23/D; best complete error<1.974373e29/D.
+  Separate delta=.1Lambda observable bound<2.154453e25/D.
+  Loose error bounds, not measured values or optimized physical materials.
+- Separate source-oriented massless finite selection:
+  sY=ReTrY*dotH sign(H)Y, sign(0)=0, |sY|<=A DH without IR smoothing.
+  Atomic one-Weyl/one-collar/one-mu bound<2.105139e25/D=4.534127q/D;
+  exactband bound<9.773898e48/D=.453413q²/D. No fermionic -1/2,
+  second Weyl/collar, hbar*c factor, omitted modes or PV terms included.
+  Cannot compare directly to the full required renormalized support.
+- Noncommuting control H=diag(1,-2), V=sigma_x, Y=(1,1)/sqrt2:
+  selected energy derivative=-1/3; symmetrized sign insertion=0;
+  derivative of signH=2/3. These are different filtered observables.
+- Proper mass Hm=H0+m N beta obeys Hm²=H0²+m[H0,N]beta+m²N².
+  Spectral delta is NOT proper mass. Common physical PV sum, varying
+  mass/lapse term and counterterms cannot be replaced by scalar smoothing.
+- Independent integrals relative error<1.47e-16; Gaussian moments<2.23e-16;
+  matrix paired identity<2.78e-17; energy derivative<1.56e-15;
+  proper-mass identity<1.34e-15. All tested absolute tails enclosed.
+- Preserved exact units_trial source/results: renamed C's stored dimensional
+  label D3 -> D2. All numerical records exactly unchanged. Current hashes
+  include both pilot artifacts (38 inputs). Initial NumPy Boolean report
+  error occurred before any result write; explicitbool fixed only output.
+- NEXT: extend channel comparison to actual four-component H_m and V_m,
+  including off-channel lapse/mass term, preserve common signed-mass PV
+  cancellation. Then omitted angular and null/open channels, filter removal,
+  and physical counterterm matching. Total source and sign remain unknown.
+  Current static geometry excludes13Sep2027->12Sep2027; no future clock gain.
+
+Source SHA256 c118af9191e5f371de9320d134a454d02f6180444ca5be57ecd07caca2520044
+Results SHA256 e2de59a035d0874484a857164a1ff93a0d0e6155a8307a7493f3d7c2e21ce429
+
+Verification PASS:14 saved controls, exact source/result and38 input hashes;
+independent derivation/code audits and80-digit directed bound checks
+for every saved flux/smoothing/frequency split. Figure inspected.
+All six prior document byte sequences preserved; pilot numerical records
+exactly unchanged after dimensional-key rename. Layout PASS:164 imports,
+1456 Markdown links,8 historical guards,14 frozen hashes, operator identity.
+Git diff check passes. Publication follows; no simulation is running.
+
+--- Preserved checkpoint168 and earlier history ---
+
 # Authoritative checkpoint168 - metric-inserted finite collar trace
 
 Previous checkpoint167 published 794bb0da5618e34c1ea0d55c877522250b7f53a6.
