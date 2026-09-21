@@ -1,0 +1,347 @@
+{
+  "passed": true,
+  "checks": {
+    "gapless_integral_matches_exact": true,
+    "all_paths_obey_mass_independent_bound": true,
+    "all_gapless_paths_decrease_to_zero": true,
+    "smallest_cutoff_envelope_below_1e_5": true,
+    "atom_equal_scales_half": true,
+    "atom_joint_limit_is_path_dependent": true,
+    "numerical_quadrature_control": true,
+    "counterexample_denominator_identity": true,
+    "counterexample_weighted_vector_bound": true,
+    "counterexample_non_beta_phase": true,
+    "counterexample_operator_bound_decreases": true
+  },
+  "rows": [
+    {
+      "epsilon": 1e-06,
+      "gapless_uniform_bound": 9.431846958920822e-06,
+      "paths": {
+        "0.5": {
+          "mass": 0.001,
+          "envelope": 4.83888474053026e-06
+        },
+        "1.0": {
+          "mass": 1e-06,
+          "envelope": 9.079603138202675e-06
+        },
+        "2.0": {
+          "mass": 1e-12,
+          "envelope": 9.431846958917932e-06
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.0006366195601611178,
+        "1.0": 0.5,
+        "2.0": 0.9999993633802277
+      }
+    },
+    {
+      "epsilon": 3.162277660168379e-06,
+      "gapless_uniform_bound": 2.7508373061646846e-05,
+      "paths": {
+        "0.5": {
+          "mass": 0.0017782794100389228,
+          "envelope": 1.4143023817020828e-05
+        },
+        "1.0": {
+          "mass": 3.162277660168379e-06,
+          "envelope": 2.6394480296462028e-05
+        },
+        "2.0": {
+          "mass": 1e-11,
+          "envelope": 2.7508373061556217e-05
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.0011320866399018453,
+        "1.0": 0.5,
+        "2.0": 0.9999979868315159
+      }
+    },
+    {
+      "epsilon": 1e-05,
+      "gapless_uniform_bound": 7.96597576117247e-05,
+      "paths": {
+        "0.5": {
+          "mass": 0.0031622776601683794,
+          "envelope": 4.105948664197675e-05
+        },
+        "1.0": {
+          "mass": 1e-05,
+          "envelope": 7.613731940470079e-05
+        },
+        "2.0": {
+          "mass": 1.0000000000000002e-10,
+          "envelope": 7.965975760886168e-05
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.002013161773658131,
+        "1.0": 0.5,
+        "2.0": 0.9999936338022766
+      }
+    },
+    {
+      "epsilon": 3.1622776601683795e-05,
+      "gapless_uniform_bound": 0.00022872881320621933,
+      "paths": {
+        "0.5": {
+          "mass": 0.005623413251903491,
+          "envelope": 0.00011825273172105044
+        },
+        "1.0": {
+          "mass": 3.1622776601683795e-05,
+          "envelope": 0.00021758988555935368
+        },
+        "2.0": {
+          "mass": 1e-09,
+          "envelope": 0.00022872881311597796
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.0035799383288105126,
+        "1.0": 0.5,
+        "2.0": 0.9999798683151649
+      }
+    },
+    {
+      "epsilon": 0.0001,
+      "gapless_uniform_bound": 0.0006500104564464037,
+      "paths": {
+        "0.5": {
+          "mass": 0.01,
+          "envelope": 0.00033730082919711783
+        },
+        "1.0": {
+          "mass": 0.0001,
+          "envelope": 0.0006147860745337281
+        },
+        "2.0": {
+          "mass": 1e-08,
+          "envelope": 0.0006500104531348617
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.00636598552981651,
+        "1.0": 0.5,
+        "2.0": 0.9999363380229754
+      }
+    },
+    {
+      "epsilon": 0.00031622776601683794,
+      "gapless_uniform_bound": 0.0018237389612482115,
+      "paths": {
+        "0.5": {
+          "mass": 0.01778279410038923,
+          "envelope": 0.0009507479596040471
+        },
+        "1.0": {
+          "mass": 0.00031622776601683794,
+          "envelope": 0.0017123496897621467
+        },
+        "2.0": {
+          "mass": 1.0000000000000001e-07,
+          "envelope": 0.0018237388681170766
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.011319685233261009,
+        "1.0": 0.5,
+        "2.0": 0.9997986831582927
+      }
+    },
+    {
+      "epsilon": 0.001,
+      "gapless_uniform_bound": 0.005034233471747411,
+      "paths": {
+        "0.5": {
+          "mass": 0.03162277660168379,
+          "envelope": 0.002640025076503838
+        },
+        "1.0": {
+          "mass": 0.001,
+          "envelope": 0.004681989810183909
+        },
+        "2.0": {
+          "mass": 1e-06,
+          "envelope": 0.005034230893150815
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.020124978303644132,
+        "1.0": 0.5,
+        "2.0": 0.999363380439839
+      }
+    },
+    {
+      "epsilon": 0.0031622776601683794,
+      "gapless_uniform_bound": 0.013601901192842956,
+      "paths": {
+        "0.5": {
+          "mass": 0.05623413251903491,
+          "envelope": 0.00718926036170232
+        },
+        "1.0": {
+          "mass": 0.0031622776601683794,
+          "envelope": 0.012488013460530275
+        },
+        "2.0": {
+          "mass": 1e-05,
+          "envelope": 0.01360183123937103
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.03576209582064011,
+        "1.0": 0.5,
+        "2.0": 0.9979868382263418
+      }
+    },
+    {
+      "epsilon": 0.01,
+      "gapless_uniform_bound": 0.03568372777896538,
+      "paths": {
+        "0.5": {
+          "mass": 0.1,
+          "envelope": 0.019066249173947603
+        },
+        "1.0": {
+          "mass": 0.01,
+          "envelope": 0.03216144871280087
+        },
+        "2.0": {
+          "mass": 0.0001,
+          "envelope": 0.03568188217331036
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.06345103486110715,
+        "1.0": 0.5,
+        "2.0": 0.9936340144701836
+      }
+    },
+    {
+      "epsilon": 0.03162277660168379,
+      "gapless_uniform_bound": 0.08966741523685298,
+      "paths": {
+        "0.5": {
+          "mass": 0.17782794100389226,
+          "envelope": 0.04867141564815882
+        },
+        "1.0": {
+          "mass": 0.03162277660168379,
+          "envelope": 0.07853351610717604
+        },
+        "2.0": {
+          "mass": 0.0009999999999999998,
+          "envelope": 0.08962065384971153
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.11203760056099835,
+        "1.0": 0.5,
+        "2.0": 0.979875021696356
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "gapless_uniform_bound": 0.21035488350512901,
+      "paths": {
+        "0.5": {
+          "mass": 0.31622776601683794,
+          "envelope": 0.11701241190430187
+        },
+        "1.0": {
+          "mass": 0.1,
+          "envelope": 0.17528827883629622
+        },
+        "2.0": {
+          "mass": 0.010000000000000002,
+          "envelope": 0.20924591573271056
+        }
+      },
+      "zero_atom": {
+        "0.5": 0.19498222904213666,
+        "1.0": 0.5,
+        "2.0": 0.9365489651388929
+      }
+    }
+  ],
+  "abstract_unbounded_weight_counterexample": [
+    {
+      "mass": 1e-12,
+      "normalized_denominator_error": 3.1401849173675503e-16,
+      "coefficient_real": 0.9003171267269399,
+      "coefficient_imag": -0.9003163161567412,
+      "coefficient_error": 8.105698336980649e-07,
+      "v_error_squared": 0.0010261721529770309,
+      "v_error_squared_bound": 0.0010261721529770309,
+      "scaled_inverse_operator_error_bound": 0.08232942469324428
+    },
+    {
+      "mass": 1e-10,
+      "normalized_denominator_error": 0.0,
+      "coefficient_real": 0.9003244218882858,
+      "coefficient_imag": -0.9003163161206175,
+      "coefficient_error": 8.10573117967947e-06,
+      "v_error_squared": 0.0032450412748461577,
+      "v_error_squared_bound": 0.0032450412748461534,
+      "scaled_inverse_operator_error_bound": 0.1474561678876461
+    },
+    {
+      "mass": 1e-08,
+      "normalized_denominator_error": 2.220446049250313e-16,
+      "coefficient_real": 0.9003973767528646,
+      "coefficient_imag": -0.9003163125082033,
+      "coefficient_error": 8.106059584053552e-05,
+      "v_error_squared": 0.010261721529770295,
+      "v_error_squared_bound": 0.010261721529770309,
+      "scaled_inverse_operator_error_bound": 0.26558880689890035
+    },
+    {
+      "mass": 1e-06,
+      "normalized_denominator_error": 2.220446049250313e-16,
+      "coefficient_real": 0.9011272505107996,
+      "coefficient_imag": -0.9003159512144208,
+      "coefficient_error": 0.0008109344358104946,
+      "v_error_squared": 0.032450412748318676,
+      "v_error_squared_bound": 0.032450412748461534,
+      "scaled_inverse_operator_error_bound": 0.48340572093003664
+    },
+    {
+      "mass": 0.0001,
+      "normalized_denominator_error": 3.1401849173675503e-16,
+      "coefficient_real": 0.9084585002514339,
+      "coefficient_imag": -0.9002797703433664,
+      "coefficient_error": 0.008142266111005336,
+      "v_error_squared": 0.10261721386913167,
+      "v_error_squared_bound": 0.1026172152977031,
+      "scaled_inverse_operator_error_bound": 0.8993695715265809
+    },
+    {
+      "mass": 0.01,
+      "normalized_denominator_error": 0.0,
+      "coefficient_real": 0.9850319280667972,
+      "coefficient_imag": -0.896618738600115,
+      "coefficient_error": 0.08479626749464475,
+      "v_error_squared": 0.3244898424369528,
+      "v_error_squared_bound": 0.3245041274846154,
+      "scaled_inverse_operator_error_bound": 1.7741257147562024
+    }
+  ],
+  "abstract_counterexample_limit": {
+    "scaled_inverse_coefficient_real": 0.9003163161571062,
+    "scaled_inverse_coefficient_imag": -0.9003163161571062,
+    "signed_mass_averaged_zero_probe_response": -0.7071067811865475,
+    "scope": "Bounded nonlocal K on L2(0,1), not the differential Dirac operator of the sewn geometry."
+  },
+  "maximum_exact_integral_error": 2.7755575615628914e-17,
+  "maximum_reported_quadrature_error": 2.5948470546918903e-12,
+  "measure": "Illustrative uniform continuous density on 0<=p<=1, plus a separate unit zero-atom control. No measure fitted to the sewn geometry.",
+  "scope": "Controls a bounded-energy spectral envelope only. Atom path dependence is not a proof that the beta-odd physical stress fails; cancellation needs separate analysis.",
+  "source_sha256": "5d83fce9f6e2c9ef6a37b813ff4a518a9c6a05e1ced8140f106293f54fb02a70",
+  "inputs_sha256": {
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  }
+}

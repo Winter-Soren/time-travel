@@ -1,3 +1,26 @@
+# Checkpoint152 — a conditional joint limit and a zero-state counterexample
+
+Uniform local smoothing now upgrades bounded-energy resolvent limits to
+trace norm and differentiated-kernel convergence. The joint mass/frequency
+corner needs no spectral gap when exact zeros are absent. With zeros, a
+precise weighted-zero density condition suffices for the signed-mass
+average and this metric probe. That condition is not yet verified on the
+actual sewn geometry; high-energy and full regulator limits remain open.
+
+An exact abstract nonlocal counterexample satisfies the algebraic symmetries
+but selects a different zero contribution, so symmetry alone cannot close
+that gap. This is not a counterexample to the actual differential geometry
+or an available negative-energy material. Eleven illustrative controls pass.
+The151 isolated-cluster statement is qualified for unbounded lapse domains.
+
+See [proof, counterexample and next physical test](PHYSICAL_EUCLIDEAN_OPERATOR.md#uniform-low-energy-limit-and-zero-state-test),
+[controls](../scripts/dirac_infrared_corner.py),
+[results](../results/dirac_infrared_corner_results.json), and
+[visual](../figures/dirac_infrared_corner_progress.png).
+No new law, physical source value, supported stable bridge or past passage.
+
+--- Preserved checkpoint151 and earlier research ---
+
 # Checkpoint151 — proper-mass Green identity on the actual static geometry
 
 A compact-domain argument establishes the positive-mass Euclidean/Hamiltonian

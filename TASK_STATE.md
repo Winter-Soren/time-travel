@@ -1,3 +1,81 @@
+# Authoritative checkpoint152 — joint low-energy limit and zero-state criterion
+
+Previous goal turn: PROGRESS; checkpoint151 published
+330f61377e4e8eab596d6e60cf53d5e23c38d260. Goal ACTIVE, unachieved.
+Import complete. No new law, obtainable material, supported stable bridge
+or13Sep2027->12Sep2027 passage. Scalar-clock rejection150 remains valid.
+
+- Joint bounded-Hamiltonian-energy corner: smooth compact energy cutoff theta,
+  compact differential Li, Ai,m=Li theta(Hm). Uniform compact elliptic estimates
+  and Sobolev singular-value tails prove Ai,m->Ai,0 in Hilbert-Schmidt norm.
+  Strong functional calculus + adjoint convergence needed, not strong alone.
+- g_eps(lambda)=2/pi sign(lambda)atan(eps/|lambda|), g_eps(0)=0.
+  Tm,eps=A1m g_eps(Hm) A2m*, Bi=||Ai,m 1_[-delta,delta](Hm)||HS.
+  ||T||trace <=B1*B2+2eps/(pi delta)*C1*C2, Ci uniformHSbounds.
+  At continuity endpoints Bi(m,delta)->Bi(0,delta)->||Ai,0 P0||HS.
+  Interval MUST include zero. If P0=0 jointlimit0 without ratio restriction.
+  Repeating for arbitrary derivatives gives localC^r / stress coincidence,
+  on this bounded-H part only. Fixed I-P0 legs also remove its zero ceiling.
+- Sufficient zero condition: T=closure(N^-1/2 H0 N^-1/2), proper self-adjoint
+  spatial Dirac, B=N^-1/2. Hm^-1=B(T+m beta)^-1B and
+  m Hm^-1->beta C strongly, C=B PkerT B>=0.
+  supportC=closure(kerH0 intersect D(sqrtN)). If this equalskerH0,
+  sign(H_+m)P0->betaP0; sign(H_-m)P0->-betaP0.
+- Under this weighted-zero density, signed-mass averaged JOINT corner vanishes
+  locally in trace norm and every finite differentiated kernel norm. Proof:
+  g_eps(H_+/-a)=2/pi atan[(eps/a)(aH_+/-a^-1)]; finite ratio limits onP0
+  are +/-beta*2/pi atan(rC); infinite ratio uses zero-free spectral measure
+  of C onP0, NOT operator-norm convergence. Opposite limits cancel.
+  Average occupations retainP0/2 versus emptyzero state; beta-odd metricprobe
+  trace cancels it, not all observables. Compact massvariation isO(m) onband.
+- Weightedzero criterion UNVERIFIED for actual sewngeometry. It tests density
+  of zero solutions with integral N|psi|²dvol_h finite, beyond ordinaryL2.
+  Equivalently properT zero solutions in L2(N^-1dvol_h) must be approximable
+  in that weightednorm by ordinaryL2 zero solutions. Need actual tail proof.
+- Exact abstract counterexample proves symmetries insufficient: onL2(0,1),
+  psi1,u=x,K=Mx-2|u><u|>=0,kerK=span1,N=x^-3. H0=diag(K,-K),betaSwap.
+  CommonCc core,self-adjointHm,massgap hold, but psi notD(sqrtN).
+  Qm=K+i mN, dm=sqrt(im)*atan[1/sqrt(im)], vm=x4/(x4+im).
+  sqrtm Qm^-1 -> a|1><1| in norm, a=(4/pi)e^-i*pi/4.
+  Polar convergence proves sign(H_+/-m)P0 -> (Gamma+/-beta)P0/sqrt2.
+  Averaged sign nonzero; probeV=GammaP0 gives -1/sqrt2 vs emptyzero0.
+  This K is bounded/nonlocal, NOT the actual differential Dirac geometry.
+- Report append docs/PHYSICAL_EUCLIDEAN_OPERATOR.md section
+  'Uniform low-energy limit and zero-state test'. Also corrected151 claim:
+  isolatedfinitecluster alone does not justify mass expansion with unboundedN;
+  finite-matrix or extra domain/perturbation assumptions required.
+- New scripts/dirac_infrared_corner.py uses illustrative uniform density[0,1],
+  zeroatom and exact counterexample, NOT bridge simulation/source fitting.
+  All11checks PASS. Exact continuous envelope reproduced to2.8e-17;
+  m=eps^.5,eps,eps² paths bounded uniformly. epsilon1e-6 envelope9.43185e-6.
+  Counterexample denominator/vectorbounds/phase independently checked.
+  Initial7check export failed on NumPybool; explicit bool conversion fixed it.
+  Counterexample added afterward; final11check run passed. Figure inspected.
+
+NEXT: actual zero-mode weighted tail condition (or absence of kernel), then
+high-H contribution at small frequency with common UV subtraction. Do not
+redo151 correspondence or conditional152 proof. LowH is NOT low properP.
+Full fixedM source, spatial remainders and fixed-scheme M->infinity still open.
+
+Concrete next test from existing geometry: canonical u_mu=P*sqrt(rho/N)*psi_mu;
+prove ||sqrtN*u_mu||2<=C_mu||u_mu||2 for every exact sewn zero solution.
+Use docs/DIHOLE_DIRAC_DOMAIN.md canonical H_mu and large-rho squared-form
+bounds UNIFORM in z, including jointescape and v derivatives. C_mu need not
+be uniform in mu: reducing axial projections commute with N, finite-sector
+truncations then prove weighted-zero density. Existing melvin_leads.py zero
+profiles have all polynomial lapse moments; another channel count is not this
+exact geometry estimate. Independent agents finished; no simulation running.
+
+Source SHA256:5d83fce9f6e2c9ef6a37b813ff4a518a9c6a05e1ced8140f106293f54fb02a70
+Result SHA256:866b691b147fa5e9d72b2b5bebf99365193b92bdc1b37e9236b531d29467af7c
+
+Verification PASS:135 imports,1218 local Markdown links, historical guards
+and operator identity; exact current source/input hashes, historical byte
+suffixes and whitespace. Previous calculations/results unchanged. Figure
+inspected; independent proof audits agree on conditional scope.
+
+--- Preserved checkpoint151 and earlier history ---
+
 # Authoritative checkpoint151 — localized Green correspondence and proper mass
 
 Previous goal turn: PROGRESS; checkpoint150 published

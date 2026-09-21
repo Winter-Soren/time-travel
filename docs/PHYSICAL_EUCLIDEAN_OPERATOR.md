@@ -1,5 +1,7 @@
 # A common physical Euclidean Dirac operator
 
+Update152: the [uniform low-energy limit and zero-state test](#uniform-low-energy-limit-and-zero-state-test) now prove joint convergence on bounded Hamiltonian energies if zero states are absent, or for the signed-mass average under an explicit weighted-zero density condition. That condition is not yet verified for the sewn geometry. An abstract counterexample shows why symmetry alone is insufficient; high-energy and regulator limits remain open.
+
 Update151: the [localized Green identity and proper-mass limit](#localized-green-identity-and-proper-mass-limit) below close the positive-mass correspondence and the massless limit at fixed nonzero frequency without an upper lapse bound. The joint infrared limit and stress coincidence remain unresolved. No physical supporting stress is reported.
 
 Increment137. This constructs the common positive operator needed by the
@@ -585,9 +587,12 @@ the other. Their average occupies each by one half; the declared massless
 state occupies neither. Thus small mass alone does not select the
 empty-zero prescription.
 
-For an isolated finite zero cluster the splitting is
+In the finite-dimensional control, the zero-cluster splitting is
 $m(P_0NP_0)\beta$. Its sign is $\operatorname{sgn}(m)\beta$ on that
 cluster, since $P_0NP_0$ is positive and commutes with $\beta$.
+For an infinite-dimensional operator with unbounded $N$, isolation and
+finite multiplicity alone do not justify this expansion: the required
+$N$ form/domain conditions and perturbation theorem must also hold.
 The massless full-Dirac metric probe anticommutes with $\beta$, making
 both $\operatorname{Tr}(P_0\delta H_0)$ and
 $\operatorname{Tr}(\beta P_0\delta H_0)$ zero. This removes that
@@ -629,3 +634,243 @@ applied directly to this exterior's unbounded lapse. The compact-domain
 argument above addresses precisely that issue; novelty is not claimed.
 The self-adjoint closures remain those justified in the earlier sections
 using [Bandara--Saratchandran](https://arxiv.org/abs/1606.06190).
+
+## Uniform low-energy limit and zero-state test
+
+Increment152 advances the actual infrared question from151. The results
+below are conditional analytic statements for the specified operator family,
+with a counterexample to a tempting unrestricted argument. No physical
+supporting stress or chronology-changing geometry is obtained.
+The [executable controls](../scripts/dirac_infrared_corner.py) and
+[results](../results/dirac_infrared_corner_results.json) use explicitly
+illustrative spectral measures and an abstract operator, not fitted bridge data.
+
+![Conditional infrared convergence and the zero-state counterexample](../figures/dirac_infrared_corner_progress.png)
+
+### Uniform local smoothing removes the need for a spectral gap
+
+Let $\theta\in C_c^\infty(\mathbb R)$ be real, even and one near zero.
+For compactly supported differential operators $L_i$, put
+
+$$A_{i,m}=L_i\theta(H_m),\qquad
+C_i=\sup_{|m|\le m_0}\|A_{i,m}\|_2.$$
+
+The norm $\|\cdot\|_2$ here is Hilbert--Schmidt; $\|\cdot\|_1$ below
+is trace norm. On any fixed compact set, the coefficients of $H_m$ and
+their derivatives are uniformly bounded for bounded $m$. Local elliptic
+estimates and the bounded spectral support of $\theta$ give, for every $s$,
+uniform maps $A_{i,m}:L^2\to H^s(K)$.
+Choose a fixed local Laplacian basis with eigenvalues $\lambda_n$ and
+projection $\Pi_J$. The resulting singular-value tail obeys
+
+$$\|(I-\Pi_J)A_{i,m}\|_2^2
+\le C_s^2\sum_{n>J}(1+\lambda_n)^{-s}.$$
+
+Taking $s>\dim\Sigma/2$ makes this uniformly summable. Strong functional
+calculus from151 gives adjoint strong convergence, first on smooth compact
+test sections and then by the uniform operator bounds. Finite-rank rows
+plus the uniform tail therefore prove
+
+$$\boxed{A_{i,m}\longrightarrow A_{i,0}
+\quad\hbox{in Hilbert--Schmidt norm}.}$$
+
+This uses compact coefficient bounds, not a global upper bound on $N$.
+Define the missing small-frequency factor
+
+$$g_\epsilon(\lambda)=\frac2\pi\operatorname{sgn}(\lambda)
+\arctan\frac\epsilon{|\lambda|},\quad g_\epsilon(0)=0,
+\qquad T_{m,\epsilon}=A_{1,m}g_\epsilon(H_m)A_{2,m}^*.$$
+
+With $E_m^\delta=\mathbf1_{[-\delta,\delta]}(H_m)$ and
+$B_i(m,\delta)=\|A_{i,m}E_m^\delta\|_2$, split the spectrum to obtain
+
+$$\boxed{\|T_{m,\epsilon}\|_1
+\le B_1(m,\delta)B_2(m,\delta)
++\frac{2\epsilon}{\pi\delta}C_1C_2.}$$
+
+Choose endpoints $\pm\delta$ carrying no $H_0$ spectral atoms.
+Strong spectral-projection convergence and the Hilbert--Schmidt result give
+
+$$B_i(m,\delta)\to B_i(0,\delta),\qquad
+B_i(0,\delta)\to\|A_{i,0}P_0\|_2\quad(\delta\downarrow0),$$
+
+where $P_0=\mathbf1_{\{0\}}(H_0)$. The interval must include zero:
+deleting it at $m=0$ would invalidate the first limit.
+If $P_0=0$, first choosing $\delta$, then small $m,\epsilon$, proves
+$T_{m,\epsilon}\to0$ jointly without restricting $\epsilon/|m|$.
+Repeating for every differentiated $L_i$ and applying Sobolev embedding
+on $K\times K$ gives local $C^r$ kernel convergence for every finite $r$.
+This covers a differentiated diagonal on this bounded-energy part.
+
+With fixed $I-P_0$ projections on both external legs, the same statement
+holds off the exact-zero space even when $P_0\ne0$. Without projection,
+the displayed bound retains the localized zero-space contribution. There
+is no numerical rate for the actual geometry until its spectral weight is bounded.
+
+### A sufficient condition for the zero states
+
+There is an additional criterion for the actual proper-space Dirac family.
+Write $B=N^{-1/2}$ and let
+
+$$T=\overline{N^{-1/2}H_0N^{-1/2}}$$
+
+be the self-adjoint spatial Dirac operator on the complete physical metric.
+It anticommutes with $\beta$. The same maximal-domain reasoning as151 gives
+the bounded inverse identity, for $m\ne0$,
+
+$$H_m^{-1}=B(T+m\beta)^{-1}B.$$
+
+Since $(T+m\beta)^2=T^2+m^2$, spectral calculus yields, for $m\downarrow0$,
+
+$$mH_m^{-1}\longrightarrow\beta C\quad\hbox{strongly},
+\qquad C=B\mathbf1_{\{0\}}(T)B\ge0.$$
+
+The support of $C$ is exactly
+
+$$\overline{\ker H_0\cap D(N^{1/2})}.$$
+
+Indeed, $y=Bv$ for $v\in\ker T$ is a zero vector of $H_0$ with
+$N^{1/2}y\in L^2$; conversely any such weighted zero vector maps to
+$\ker T$ by the maximal-domain argument. Thus a sufficient condition is
+
+$$\boxed{\overline{\ker H_0\cap D(N^{1/2})}=\ker H_0.}$$
+
+Under this condition, the limit spectral measure of every zero vector
+for $\beta C$ has no atom at zero. Applying bounded functional calculus
+to $mH_m^{-1}$ proves
+
+$$\operatorname{sgn}(H_{\pm m})P_0\to\pm\beta P_0
+\quad\hbox{strongly}.$$
+
+Together with convergence off $P_0$, the averaged signs tend to
+$\operatorname{sgn}H_0$. The averaged occupations still differ from the
+declared empty-zero state by $P_0/2$. Their contribution to this particular
+full-Dirac metric probe vanishes because $\{\beta,\delta H_0\}=0$;
+the states are not identical for arbitrary observables.
+
+This also controls the signed-mass average of the joint corner. For
+$a=|m|$, write
+
+$$g_\epsilon(H_{\pm a})
+=\frac2\pi\arctan\left[\frac\epsilon a(aH_{\pm a}^{-1})\right].$$
+
+On $P_0$, along $\epsilon/a\to r<\infty$ the limits are
+$\pm\beta(2/\pi)\arctan(rC)$, and cancel. For $r=0$, the uniform
+bound $\|aH_{\pm a}^{-1}\|\le1/c_N$ gives zero directly. For
+$r\to\infty$, splitting the limit spectral measure at continuity
+points $\pm\delta$ makes its small-eigenvalue weight vanish, while
+the error outside is at most $2/(\pi r\delta)$. The limits are then
+$\pm\beta P_0$, again cancelling. Off $P_0$, the preceding joint estimate
+applies. The Hilbert--Schmidt convergence upgrades this signed average
+to local trace norm and every finite differentiated-kernel norm.
+No operator-norm convergence or restriction on the rate ratio is asserted.
+
+Compact mass-dependent metric insertions contribute $O(m)$ on this band.
+The weighted-zero criterion is **not yet verified for the sewn geometry**.
+Proving that its kernel vanishes would also suffice. In spatial notation,
+the extra weight tests $\int_\Sigma N|\psi|^2\,d\mathrm{vol}_h$;
+ordinary normalization tests only $\int_\Sigma|\psi|^2\,d\mathrm{vol}_h$.
+
+### Counterexample: algebraic symmetries alone do not suffice
+
+The following abstract example satisfies the algebraic and common-core
+assumptions but is not a local elliptic Dirac operator. On $L^2(0,1)$ set
+
+$$\psi(x)=1,\quad u(x)=x,\quad
+K=M_x-2|u\rangle\langle u|,\quad N_s=M_{x^{-3}},$$
+$$H_0=\begin{pmatrix}K&0\\0&-K\end{pmatrix},\quad
+\Gamma=\sigma_z,\quad\beta=\sigma_x,\quad
+H_m=H_0+m\operatorname{diag}(N_s,N_s)\beta.$$
+
+Weighted Cauchy--Schwarz proves $K\ge0$ and $\ker K=\operatorname{span}\psi$.
+The rank-one perturbation preserves the essential threshold at zero.
+$H_m$ is self-adjoint on $D(N_s)^2$ for $m\ne0$, with a common compact
+smooth core and the previously proved gap $|m|$. All the stated $\beta$
+and $\Gamma$ symmetries hold, but $\psi\notin D(N_s^{1/2})$.
+
+Put $Q_m=K+imN_s$, $D_m=M_{x+imx^{-3}}$ and
+$v_m=x^4/(x^4+im)$. The rank-one inverse formula has denominator
+
+$$d_m=1-2\int_0^1\frac{x^5}{x^4+im}\,dx
+=\sqrt{im}\arctan\frac1{\sqrt{im}}.$$
+
+It gives $Q_m^{-1}=D_m^{-1}+(2/d_m)|v_m\rangle\langle\bar v_m|$.
+Here $v_m\to\psi$ in $L^2$ and
+
+$$\sqrt m\,Q_m^{-1}\longrightarrow
+a|\psi\rangle\langle\psi|\quad\hbox{in operator norm},
+\qquad a=\frac4\pi e^{-i\pi/4}.$$
+
+For an explicit bound, let $C_8=\pi/[8\sin(\pi/8)]$ and
+$C_D=3^{3/8}/2$. Then $\|v_m-\psi\|^2\le C_8m^{1/4}$ and
+
+$$\|\sqrt m Q_m^{-1}-a|\psi\rangle\langle\psi|\|
+\le C_Dm^{1/4}+|2\sqrt m/d_m-a|+2|a|\sqrt{C_8}m^{1/8}.$$
+
+To justify the sign, write $Q_m=U_m|Q_m|$. The polar unitary of
+$\sqrt m Q_m^{-1}$ is $U_m^\dagger$. Norm convergence of that inverse
+and its absolute value implies $U_m^\dagger\psi\to e^{-i\pi/4}\psi$,
+hence $U_m\psi\to e^{i\pi/4}\psi$. A fixed Pauli rotation puts $H_m$
+into off-diagonal blocks $Q_m,Q_m^\dagger$, proving full vector convergence
+on its rank-two zero space:
+
+$$\operatorname{sgn}(H_{\pm m})P_0
+\longrightarrow\frac{\Gamma\pm\beta}{\sqrt2}P_0.$$
+
+Thus the averaged sign tends to $\Gamma P_0/\sqrt2$, not zero.
+For the finite-rank probe $V=\Gamma P_0$, which is $\beta$-odd and
+$\Gamma$-even, the averaged parity-even zero contribution is
+
+$$-\frac12\operatorname{Tr}\left[\frac\Gamma{\sqrt2}P_0V\right]
+=-\frac1{\sqrt2},$$
+
+while declared empty zeros contribute zero. This disproves an argument
+using only those abstract symmetries. It does not disprove convergence
+for the actual sewn differential operator or establish a physical negative source.
+
+### Verification and the next physical decision
+
+Eleven controls pass. For an illustrative continuous spectral density on
+$0\le p\le1$, the low-frequency envelope is bounded uniformly in $m$ by
+
+$$\frac2\pi\int_0^1\arctan\frac\epsilon p\,dp
+=\frac2\pi\left[\arctan\epsilon+
+\frac\epsilon2\log(1+\epsilon^{-2})\right]\longrightarrow0.$$
+
+Numerical quadrature reproduces this expression to $2.8\times10^{-17}$;
+three independent mass/cutoff paths obey it. A separate zero atom shows
+path-dependent individual limits, which alone do not prove failure of
+the physical metric probe. The counterexample denominator, vector bound
+and non-$\beta$ limit are independently checked. These illustrative
+measures are not estimates of the unknown bridge spectral density.
+
+Next establish the actual zero-mode weighted condition, or its absence,
+and control the high-Hamiltonian-energy contribution with the common
+ultraviolet subtraction. Bounded Hamiltonian energy is not low proper-$P$
+spectrum. Full fixed-$M$ source convergence, spatial remainder bounds and
+the fixed-scheme $M\to\infty$ limit remain open. A Hadamard state's local
+existence does not by itself prove convergence of this regulator family;
+the [ground-state microlocal result](https://arxiv.org/abs/math-ph/0002021)
+addresses a different statement. Likewise,
+[flat-space decaying-potential zero-mode asymptotics](https://arxiv.org/abs/0707.3008)
+do not supply the required weighted estimate in the Melvin exterior.
+
+This increment also qualifies151's zero-cluster expansion: outside finite
+matrices, the needed $N$ domain and perturbation hypotheses must be checked.
+
+The next geometry-specific test can be stated precisely. In the canonical
+exterior normalization $u_\mu=P\sqrt{\rho/N}\,\psi_\mu$, prove a
+sectorwise estimate $\|\sqrt N u_\mu\|_2\le C_\mu\|u_\mu\|_2$ for
+every exact sewn zero solution. A constant uniform in $\mu$ is unnecessary
+for density: axial projections reduce the Hamiltonian and commute with $N$,
+so finite-sector truncations suffice. The
+[actual canonical operator](DIHOLE_DIRAC_DOMAIN.md) is
+
+$$H_\mu=-i\sigma_x(v\partial_\rho+v_\rho/2)
+-i\sigma_z(v\partial_z+v_z/2)+\sigma_yW_\mu.$$
+
+Its squared form needs large-$\rho$ coefficient estimates uniform in $z$,
+including joint radial/axial escape. The
+[existing Melvin reference modes](../scripts/melvin_leads.py) already have
+finite polynomial lapse moments; repeating their count does not prove
+this estimate for the actual dihole-coupled and sewn zero solutions.
