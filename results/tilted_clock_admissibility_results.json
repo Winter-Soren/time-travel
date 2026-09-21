@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "checks": {
+    "saved_provenance": true,
+    "all_sampled_principal_gates_positive": true,
+    "directional_schur_identity": true,
+    "coupled_k4_identity": true,
+    "sampled_full_kinetic_matrices_positive": true,
+    "high_frequency_eigenvalue_real_part": true,
+    "desitter_limit": true,
+    "right_horizon_incoming": true,
+    "static_patch_two_null_directions": true,
+    "light_round_trip_positive": true,
+    "optical_quadrature_consistent": true
+  },
+  "principal_profiles": {
+    "through_flow_static": {
+      "minimum_A_star": 0.45738297446594967,
+      "maximum_A_star": 1.7326273418261182,
+      "minimum_k4_coefficient": 0.7236470911629198,
+      "maximum_k4_coefficient": 1.6251400299228245,
+      "samples": 1601,
+      "scope": "Frozen preferred-clock principal system only; lower orders and global stability unresolved."
+    },
+    "through_flow_horizon": {
+      "minimum_A_star": 0.477749860085812,
+      "maximum_A_star": 1.7482778559805652,
+      "minimum_k4_coefficient": 0.7199003216809201,
+      "maximum_k4_coefficient": 1.5816990042564487,
+      "samples": 1001,
+      "scope": "Frozen preferred-clock principal system only; lower orders and global stability unresolved."
+    },
+    "flow_reversal_static": {
+      "minimum_A_star": 0.9331634018050723,
+      "maximum_A_star": 1.068661891924157,
+      "minimum_k4_coefficient": 0.9607629803332557,
+      "maximum_k4_coefficient": 1.0422164101370766,
+      "samples": 1601,
+      "scope": "Frozen preferred-clock principal system only; lower orders and global stability unresolved."
+    },
+    "flow_reversal_horizon": {
+      "minimum_A_star": 0.9331634018050723,
+      "maximum_A_star": 1.0702413184673887,
+      "minimum_k4_coefficient": 0.959915906567807,
+      "maximum_k4_coefficient": 1.0422164101370766,
+      "samples": 1001,
+      "scope": "Frozen preferred-clock principal system only; lower orders and global stability unresolved."
+    }
+  },
+  "direct_matrix_checks": {
+    "count": 91,
+    "maximum_relative_schur_error": 7.657496858826107e-11,
+    "maximum_relative_k4_error": 7.432443549504342e-11,
+    "minimum_kinetic_eigenvalue": 51.744431911237825,
+    "maximum_high_frequency_real_part": 3.469446951953614e-17,
+    "desitter_relative_error": 1.1102230246251565e-16
+  },
+  "horizon_orientation": {
+    "through_flow": {
+      "right_exterior_plus_max": -9.72484255790107e-07,
+      "right_exterior_minus_max": -2.272580342332634,
+      "inside_plus_min": 2.4367086334020627e-05,
+      "inside_minus_max": -2.8089595839560126,
+      "minimum_dphi_along_normalized_future_null": 1.2294940600412267,
+      "scope": "q>0,W>0: both right exterior future metric-null directions point toward the static patch."
+    },
+    "flow_reversal": {
+      "right_exterior_plus_max": -6.445234508545283e-06,
+      "right_exterior_minus_max": -1.9893248995734316,
+      "inside_plus_min": 2.85304886349369e-05,
+      "inside_minus_max": -2.0213720957848205,
+      "minimum_dphi_along_normalized_future_null": 1.3948776267903573,
+      "scope": "q>0,W>0: both right exterior future metric-null directions point toward the static patch."
+    }
+  },
+  "conditional_static_clock_tests": {
+    "through_flow": {
+      "half_patch_optical_time": 423.5712943475044,
+      "quadrature_difference": 3.97164399146277e-08,
+      "symmetric_patch_light_crossing": 847.1425886950088,
+      "same_station_reflected_round_trip": 1694.2851773900177,
+      "scope": "Killing-coordinate time differences Delta t in units 1/Lambda, not station proper time or generally preferred-clock time. Conditional ideal metric-null test between symmetric N=.1 stations; no reflector or apparatus constructed."
+    },
+    "flow_reversal": {
+      "half_patch_optical_time": 423.4417786389605,
+      "quadrature_difference": 3.859997832478257e-08,
+      "symmetric_patch_light_crossing": 846.883557277921,
+      "same_station_reflected_round_trip": 1693.767114555842,
+      "scope": "Killing-coordinate time differences Delta t in units 1/Lambda, not station proper time or generally preferred-clock time. Conditional ideal metric-null test between symmetric N=.1 stations; no reflector or apparatus constructed."
+    }
+  },
+  "causal_decision": "A smooth real single-valued scalar with X>0 forbids closed future metric-causal curves wherever those assumptions hold. Local data do not establish a complete global extension; dispersive field signals require their own causal analysis.",
+  "stability_decision": "Positive coupled frozen kinetic and k4 terms at saved samples; no lower-order or global stability conclusion.",
+  "source_sha256": "85628442f3fd896347ed491b9f3ab1ba7a9844f1694f4b03cb766817979699f4",
+  "inputs_sha256": {
+    "tilted_clock_throat.py": "481d052af4d3f76be94c6e10c213e778433210574ee8545ad13a4b512e611652",
+    "tilted_clock_throat_results.json": "8d5f01d9a58142885eec279134f0ddd92de240ee1b2fc6f131aed6e9184865f2",
+    "tilted_clock_throat_state.npz": "72d9156856102b14a774ddb6ac5c0c8f889db5a2849e38f14e7f62948ad3a5c1",
+    "tilted_clock_diagnostics.py": "0094e4d07f3dc4cea5e2f35ccd1551ea53c64b42cc9c0fde670270690123e6f4",
+    "tilted_clock_diagnostics_results.json": "ec8dc1c224c3ac990bb3befc341a07d2effdc78400c349119600f7dc73c6aa9d",
+    "tilted_clock_diagnostics_state.npz": "4d42fd832702a5dd7b81b80b1d32d4edd5ed96c51be537eeab95414828bb49b8",
+    "expanding_field_completion.py": "9031efdfb575046c6e3935d9e444dd505cbb2cdfa64686605c2e553b5ff27a97",
+    "expanding_field_completion_results.json": "611eafd4a4fdf1446f39510d85648e650e5bc9f01a58fd22d28087054055eb29",
+    "nonlinear_packet_constraints.py": "5d5af618813717c5f34d5c5429789ee345f2b7c9e0bb0e5bf68b1a694ff428c2",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "calculation_type": "Saved-state analysis and local algebraic matrices only; no background or perturbation evolution.",
+  "calculation_source_sha256": "0bc09bdb25de4e97c6ed77afa72a34c5f3cd69196cee447ba77931fe623fb883",
+  "postprocessing": "Only clock-coordinate wording and plot layering/label changed after calculation. Numerical result fields retained exactly; figure regenerated from saved background arrays without matrix or evolution reruns."
+}

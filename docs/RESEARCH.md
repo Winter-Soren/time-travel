@@ -1,3 +1,25 @@
+# Checkpoint150 — causal restriction and local coupled perturbations
+
+The same smooth real single-valued timelike scalar is a temporal function:
+it advances along every future metric-causal path and excludes a closed
+such path wherever it exists. This known causal theorem changes the project
+route: stop tuning this branch as a backward-time device. The reversing
+continuation selects incoming horizon pieces; a future exit is not supplied.
+
+The actual local throat passes eleven saved-state checks, including the
+coupled kinetic and quartic principal terms with anisotropic tensor mixing.
+No new evolution or failed distant states were used. This is not full
+stability, an obtainable material, a new law or a route to yesterday.
+The quantum-source alternative still needs its physical Green-kernel/state
+identification; its current static geometry also excludes time loops.
+
+See [derivation, clock definitions and next decision](TILTED_CLOCK_ADMISSIBILITY.md),
+[results](../results/tilted_clock_admissibility_results.json),
+[calculator](../scripts/tilted_clock_admissibility.py), and
+[visual](../figures/tilted_clock_admissibility_progress.png).
+
+--- Preserved checkpoint149 and earlier research ---
+
 # Checkpoint149 — tilted-clock throat and regular horizon; global result unresolved
 
 The same action with a radially flowing clock admits a local self-consistent

@@ -1,3 +1,66 @@
+# Authoritative checkpoint150 — causal restriction; coupled principal checks
+
+Previous published checkpoint149: c2bfd38e27ed539dbf0a85978d67910a6b809b34.
+Goal ACTIVE, unachieved. Import complete. No new law, obtainable material,
+stable global medium or 13Sep2027->12Sep2027 passage established.
+
+- DECISION: stop tuning the globally regular real-clock branch for backward
+  travel. For smooth single-valued real phi with X>0, dphi(V)=-s*g(u,V)>0
+  for every nonzero future metric-causal V. No closed such curve in that
+  domain. Established temporal-function argument; no novelty claim.
+  Local data do not establish global extension/hyperbolicity/completeness.
+  Dispersive field signals need separate causal and well-posedness analysis.
+- Saved149 q>0 right exterior: kpm^x=-W+-sqrtQ are both inward for A<0.
+  Reversal left exterior similarly inward. Selected clock covers incoming
+  past cosmological horizon pieces, not future exits on opposite pieces.
+  Fixed-q sign reversal of psi,W,chi selects outgoing pieces but does not
+  join them into a single smooth incoming/outgoing solution.
+- New scripts/tilted_clock_admissibility.py uses saved local and separately
+  refined near-horizon states only. No failed long-tail use/evolution.
+  Independent coupled ADM matrix includes lapse, shifts, scalar and tensors.
+  U=XF_X+2X²F_XX,c=alpha*Lambda²X;
+  A*=U-c(P-9c)Theta²/(P+3c), a4=Pc/[(P+3c)A*].
+  Positive P,c,A* give positive frozen kinetic matrix; omega²=a4*k4+lower.
+  Tensor mixing must be retained. Background derivatives and lower orders,
+  global spectrum and a controlled EFT wavelength window remain unresolved.
+- All11 checks PASS. Sampled minimumA*:throughstatic .457383,throughhorizon
+  .477750,reversalstatic/horizon .933163. 91 matrices/7directions reproduce
+  identities to7.7e-11; homogeneous limit error1.2e-16. Not global stability.
+- Optical crossing/return results are Killing-coordinate Delta t in1/Lambda,
+  not station proper time. EndpointN.1 proper return=.1*Delta t.
+  Preferred T=phi/q differs by Delta psi/q one-way (zero for symmetric
+  reversal, not generally through-flow); endpoint shift cancels for returns.
+- docs/TILTED_CLOCK_ADMISSIBILITY.md records equations, scope and source.
+  Plot layering/label and clock-coordinate wording fixed after original
+  calculation. Numerical fields checked unchanged; only figure regenerated
+  from saved arrays. Original and current source hashes recorded in JSON.
+  A first postprocessing command lacked PYTHONPATH and failed before edits;
+  corrected invocation completed. No simulation/agent job left running.
+
+NEXT PHYSICAL DECISION: existing Dirac route's physical supporting stress.
+Immediate dependency: compact stress-differentiated proper-P/H Green-kernel
+identification, with lapse factors/ordered limits, in
+  docs/PHYSICAL_EUCLIDEAN_OPERATOR.md (local infrared target section).
+Use the already proved gap-free localized Hamiltonian target; do not redo it
+or launch another basis sweep. Matching would identify the observable only;
+spatial remainder bounds and fixed-scheme regulator removal still remain.
+The current static Dirac background ALSO has a global time function and no
+closed causal loops (docs/SEWN_SOURCE_STATE.md). Its action does not impose
+this particular scalar clock on all geometries; no chronology loophole proved.
+No defensible deadline for a new law. Research progress is conditional.
+
+Current source SHA256:85628442f3fd896347ed491b9f3ab1ba7a9844f1694f4b03cb766817979699f4
+Result SHA256:6caedf4e269d90f845583f8940ebc38389ea71dd2fc0665241f3d6d06481b710
+Original calculation source SHA256:0bc09bdb25de4e97c6ed77afa72a34c5f3cd69196cee447ba77931fe623fb883
+Inputs listed in savedJSON; unchanged149 failed long result retained.
+
+Verification PASS:133 imports,1186 Markdown links,historical guards/operator
+identity; exact current/input hashes, original calculation-source reconstruction,
+unchanged numerical fields and failed evidence, historical byte suffixes and
+diff whitespace. Corrected figure inspected. No background evolution rerun.
+
+--- Preserved checkpoint149 and earlier history ---
+
 # Authoritative checkpoint149 — tilted source, local throat and horizon; long-tail failure
 
 Previous goal turn: PROGRESS, checkpoint148 published
