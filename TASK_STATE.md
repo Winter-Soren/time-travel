@@ -1,3 +1,63 @@
+# Authoritative checkpoint165 - uniform collar errors and a frozen slice gap
+
+Previous checkpoint164 published 5d5d8ed543ea20641394a7abf9720e62d49307ff.
+Previous goal turn classified PROGRESS: regular trial and16 checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One hydrogen atom, nominal1nm areal diameter remains target; humans deferred.
+No new law, supporting medium, stable opening, atom transit or clock advantage.
+
+- Implemented scripts/dihole_channel_bounds.py; all19 controls PASS.
+  q>=1000, nu=mu/q in[.85,.95], R/D in[.025,.05]; actual q integer, mu halfinteger.
+  Directed60digit16x32 geometry covers plus32tile center brackets.
+- Centers uniformly in(2.2,2.75); plateau clearance>.04, local radius.02.
+  Exact symbolic NP,W,a jets use factored geometry; independent original
+  field derivative comparisons pass. Global singular raw angular L
+  derivatives explicitly None; pole-safe combinations evaluated instead.
+- Uniform normalization Z>=20.1634973462/sqrt(q), even moments
+  E(delta^(2j))<=Cj/q^j, j1..4. Approximate Cj:1118.95765432,74690.6226526,
+  8309353.934153,1294185327.303916; exact directed bounds inJSON.
+- Normalization transport includes zeta=Ctheta0_s and its divergence.
+  Combined A=(Lambda L)_s+zeta(Lambda L)_theta and dotA vanish to second
+  order atcenter. Outsideplateau use clearance, not discarded tailmass.
+  All Ctheta, spin and normalization derivatives retained.
+- Conservative uniform bounds D||r0||<=197384.15501662745,
+  D||dotr0||<=15010467413.306374, ||r1||<=.03996949695736316,
+  ||dotr1||<=2204.42459098881. These are loose upper bounds, not measured
+  residual values, finite-epsilon stability or a useful source error yet.
+- Separate NEW frozen-slice finite-q gap proof: N=sin²theta Ltheta,theta
+  <=-.027248651910161972 onclosedcollar; logWtheta,theta<=.01761171050415938.
+  kappa=.02724865191016197, RmaxWmax<=4.288079450100342.
+  gap_D>=sqrt(2qkappa-Mw)/(RmaxWmax); atq1000>=1.7212917960077967.
+  Strong-log-concavity Poincare proof supplied on the actual polar interval;
+  pole exponents>=50, opposite zero notL2; closed block spectra pair.
+  This is NOT aligned-trial complement, radial/full/exterior gap or stability.
+- Independent math and actual-code audits PASS for normalization,
+  projector/transition factors and the frozen-slice proof. The published
+  variance inequality is cited with an explicit interval endpoint argument.
+- Exact pre-audit source/results preserved: missing eta_dot*E1 in angular
+  transition derivative was restored; incomplete global singular derivative
+  ranges nowNone. No moment result or test tolerance was weakened.
+- NEXT: convert local residual/gap tools into a controlled regular-band
+  source reduction retaining longitudinal momentum, projector differences
+  and metric variation. Nullband/open channels/state/subtraction still open.
+  Do not divide aligned residual by a different frozen operator gap and
+  label it a leakage probability. No extra point refinement without source budget.
+- Atomic1nm target still fails unchanged weakly perturbed1s diagnostic;
+  support, survival and transit remain uncomputed. Static geometry excludes
+  backward causal passage:13Sep2027->12Sep2027 remains unestablished.
+
+Source SHA256 435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5
+Results SHA256 612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664
+
+Verification PASS:19 saved checks,28 exact input hashes, current source and
+result hashes, exact audit archives and unchanged normalized moments.
+Displayed gap bound passes an independent80digit Decimal composition check.
+160 imports,1412 Markdown links,8 historical guards,14 frozen hashes and
+operator identity pass. Figure inspected; six prior document byte sequences
+preserved. Calculation and delegated audits finished; no live background job.
+
+--- Preserved checkpoint164 and earlier history ---
+
 # Authoritative checkpoint164 - regular aligned trial and profile envelope
 
 Previous checkpoint163 published 5ef80df3e57ddd630d40d4d0eb5a0deaa8698659.

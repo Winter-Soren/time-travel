@@ -151,3 +151,20 @@ normalization and derivative bounds remain to be supplied. All16 controls
 pass. This advances the supporting-field approximation, not hydrogen transit.
 The one-atom target and its support, stability, survival and clock requirements
 remain unchanged. Neither past passage nor a future clock advantage is proved.
+
+
+## Uniform supporting-field bounds
+
+The [uniform collar result](PHYSICAL_EUCLIDEAN_OPERATOR.md#uniform-collar-errors-and-a-frozen-transverse-gap)
+now bounds normalized supporting-field profiles and their full trial error
+across a regular band, with 19 checks passing. A separate proof establishes
+a positive gap above the frozen cross-section's zero state. These are local
+mathematical controls on the proposed supporting field; they do not establish
+the total support, stability or hydrogen propagation. The residual bounds
+are loose, and the frozen gap is not a global or aligned-trial gap.
+
+The next step is a controlled contribution to the total supporting stress,
+including radial mixing and its uncertainty. The payload remains one neutral
+hydrogen atom. Neither enlarging to humans nor claiming an atom has crossed
+is justified. No backward passage or future exterior-clock advantage has
+been calculated. See the [visual](../figures/dihole_channel_bounds_progress.png).

@@ -3226,3 +3226,280 @@ has been established; the current static metric still excludes backward
 causal passage.
 
 A reporting-rounding pilot is preserved as an exact [source](../provenance/dihole_aligned_channel_rounding_trial.py) and [result](../results/dihole_aligned_channel_rounding_trial.json). Its reported envelope coefficient exceeded the product of its two reported rounded bounds divided by four by3.03e-18. The coefficient is now composed after rounding both factors outward, with an independent80-digit Decimal check. No residual values or test tolerances changed.
+
+
+## Uniform collar errors and a frozen transverse gap
+
+The [uniform calculation](../scripts/dihole_channel_bounds.py) now bounds
+normalized profile moments, the complete trial residual and its first
+paired metric derivative for every allowed sector in
+
+$$
+q\ge1000,\qquad .85\le\nu=\mu/q\le.95,\qquad .025\le R/D\le.05.
+$$
+
+Here $q$ is a positive integer and $\mu$ is a half-integer. All derivations
+below use $D=1$; frequency eigenvalues recover units $c/D$. The
+[saved result](../results/dihole_channel_bounds_results.json) has **19 passing
+controls**, including independent original-field derivatives. A separate
+argument bounds the actual frozen transverse spectral gap. Neither result
+is a full supporting-stress calculation or an atomic-transport simulation.
+
+### Geometry and normalized moments
+
+The exact balanced parameters are evaluated with directed 60-digit interval
+arithmetic. Symbolic derivatives are taken before evaluation. With
+$x=\cos\theta$, $d=\sqrt{R^2+4k^2+4kRx}$ and the existing prolate $r,c$,
+use the cancellation-resistant expressions
+
+$$
+S=\frac{d-R-2kx}{2k^2}=\frac{1-c^2}{R},\qquad
+\widehat\Delta=\frac{R+d+2kx}{2}=\frac{\Delta}{R},
+$$
+
+$$
+w=(r^2-a_g^2)^2+R^2\widehat\Delta a_g^2S,\quad
+h=2Mra_g+Bw/2,\quad z=a_g^2+2BMra_g+B^2w/4,
+$$
+
+$$
+\widehat{\mathcal V}=\widehat\Delta+Sz,\qquad
+NP=(\widehat{\mathcal V}/d)^2,\qquad
+W=(\Sigma/(Rd))^2,\qquad a=Sh/(2Q\widehat{\mathcal V}).
+$$
+
+The symbol $a_g$ denotes the geometry parameter, distinct from the unit
+flux potential $a$. Each region uses 16 radial by 32 angular interval tiles;
+all value, first and second $(R,x)$ derivatives are enclosed. Independent
+point comparisons use the original unfactored geometry, not this expression
+as its own reference. These point comparisons are implementation controls;
+the tile coverage and analytic inequalities provide the uniform bounds.
+
+At $\theta=2.2$ the potential lies in $[.7925094,.7954739]$, and at
+$\theta=2.75$ in $[.9599376,.9640722]$ (display ranges rounded outward).
+Together with the earlier strict monotonicity enclosure this places every
+center in $(2.2,2.75)$. The polar-window plateau has clearance greater than
+$.04$. Within radius $.02$ of every center,
+$L\ge-M\delta^2$, $\delta=\theta-\theta_0$, with $M<.588680$.
+The full collar has $W>25.019078$, $W<85.761590$ and
+$\lambda_c>.999887668$. Exact directed values are in the JSON.
+
+Reuse $L\le-\gamma\delta^2$ from the preceding section. To avoid requiring
+a numerical error-function enclosure, choose
+
+$$
+\ell=\min\{.02\sqrt{1000},(2M)^{-1/2}\},\qquad
+C_Z=2W_{\mathrm{center},-}\ell e^{-2M\ell^2}.
+$$
+
+Rounding $\ell$ downward preserves the integration neighborhood. Then
+$Z\ge C_Zq^{-1/2}$, with $C_Z>20.163497$. For the normalized probability
+$p=Wg^2$ and $b=2\gamma\lambda_{\min}$,
+
+$$
+\mathbb E_p\delta^{2j}\le C_jq^{-j},\qquad
+C_j=\frac{W_+}{C_Z}\frac{\Gamma(j+1/2)}{b^{j+1/2}},\qquad j=1,2,3,4.
+$$
+
+Conservative display bounds are
+$C_1<1118.958$, $C_2<74690.623$, $C_3<8309353.935$ and
+$C_4<1294185327.305$. These are normalized finite-flux bounds, including
+polar tails, rather than extrapolated Gaussian fits.
+
+### Keeping normalization and transition terms
+
+Write $\Lambda=\lambda_c$, $P=(\Lambda L)_s$, $T=(\Lambda L)_\theta$,
+$\zeta=C\theta_{0,s}$ and
+
+$$
+A=P+\zeta T,\qquad
+d=(\log W)_s+\zeta_\theta+\zeta(\log W)_\theta.
+$$
+
+Since $\zeta$ vanishes near the poles, integration by parts gives the exact
+normalization identity
+
+$$
+b_0=\frac{Z_s}{2Z}=\mathbb E_p[qP+(\log W)_s/2]
+=\mathbb E_p[qA+d/2].
+$$
+
+On the plateau $A=A_\theta=0$ at the center. The same cancellation holds
+for its first paired metric derivative, keeping $\theta_{0,s}$ fixed in
+that variation. Taylor bounds therefore control these quantities by
+$\delta^2$. Outside the plateau, $|\delta|\ge.04$ turns finite supremum
+bounds into conservative quadratic bounds. No small tail probability is
+used to discard a singular derivative.
+
+The individual raw derivatives $L_{\theta\theta}$,
+$L_{\theta\theta\theta}$ and $L_{s\theta\theta}$ are singular at the poles:
+the global table explicitly exports `null` for them. The finite combined
+radial derivative is bounded using exact $NP_R=a_R=0$ at both poles:
+
+$$
+|L_s|\le2\left(\|NP_{Rx}\|_\infty+
+\|NP\|_\infty\|a_{Rx}\|_\infty\right).
+$$
+
+Here $0\le a\le1$ follows from the exact polar values and monotonicity.
+The factor 2 bounds the integral of
+$\min(1-\cos\theta,1+\cos\theta)/\sin\theta$, which equals $2\log2$.
+The smooth-step estimates $S'\le8$, $|S''|<120$ give
+$|F|\le4$, $|F_s|\le1200$, $|C_\theta|\le40$ and $|R_{ss}|\le160$.
+These loose inequalities follow directly from differentiating the logistic
+representation of the existing step; they are not fitted maxima.
+
+With $J=\dot\Lambda L$, the probability variation is
+$\dot p=2q(J-\mathbb E_pJ)p$. The constants $a_2,\dot a_2,j_2,d_0$ in
+the JSON bound $|A|,|\dot A|,|J|$ by their coefficient times $\delta^2$,
+and $|d|$ by $d_0$. Sufficient normalization bounds are
+
+$$
+B=a_2C_1+d_0/2,\qquad
+\dot B=\dot a_2C_1+2j_2a_2(C_2+C_1^2)+2d_0j_2C_1,
+\qquad H_g=j_2(\sqrt{C_2}+C_1).
+$$
+
+Thus $|b_0|\le B$, $|\dot b_0|\le\dot B$ and
+$\|\dot g/g\|_{L^2(p)}\le H_g$. The radial profile derivative, window
+terms and spin derivatives are retained in the actual Pauli action.
+In particular the angular transition vector is
+
+$$
+E_1=(\Lambda\sigma_1+i\sigma_2-Ct\Lambda\sigma_3)\eta
+=[\sin(C\beta)-Ct\Lambda]\sigma_3\eta
++[\Lambda-\cos(C\beta)]\sigma_1\eta.
+$$
+
+Interpolation gives $\|E_1\|\le t_*^2/8+t_*^3/4$. Its derivative bound
+includes the rotating spin basis:
+
+$$
+\|\dot E_1\|\le F_*[(17/8)t_*^3+2t_*^2]
++\|\dot\eta\|_*\|E_1\|_*.
+$$
+
+The exact pre-audit [source](../provenance/dihole_channel_bounds_derivative_trial.py)
+and [result](../results/dihole_channel_bounds_derivative_trial.json) are
+preserved. The audit added that last term and stopped exporting incomplete
+endpoint derivative ranges as global enclosures. Neither correction changes
+the normalized moments; no tolerance or physical requirement was weakened.
+
+Let $\chi_0=\sqrt Wg$, $\Pi=|\chi\rangle\langle\chi|$. Direct action,
+with its scalar projection removed, has the form
+
+$$
+r_0=(1-\Pi)\chi_0(qK+D_0-b_0B_0),\qquad
+r_1=(1-\Pi)\chi_0B_0.
+$$
+
+The JSON supplies constants bounding $|K|\le k_2\delta^2$,
+$|\dot K|\le\dot k_2\delta^2$, and $D_0,B_0$ and their derivatives.
+Using the fourth and eighth moments, and
+$\|\dot\Pi\|\le2(H_g+\|\dot\eta\|_*)$, yields the following
+outward-rounded sufficient bounds:
+
+| Quantity | Uniform upper bound |
+| --- | ---: |
+| $D\|r_0\|$ | $197385$ |
+| $D\|\dot r_0\|$ | $1.5010475\times10^{10}$ |
+| $\|r_1\|$ | $.039969497$ |
+| $\|\dot r_1\|$ | $2204.425$ |
+
+For a collar-supported envelope, in dimensionless $s/D$ coordinates,
+$\|(HU-Uh)\psi\|\le R_1\|\psi_s\|+R_0\|\psi\|$, with the analogous
+first metric derivative inequality. These bounds are deliberately very
+loose relative to sampled residuals. They do not establish a useful
+supporting-stress error interval or a finite-deformation stability range.
+
+### A gap for the actual frozen transverse operator
+
+This separate statement uses the exact frozen zero mode, not the aligned
+trial. Put $f=NP$ and $x=\cos\theta$. Algebraically,
+
+$$
+(1-x^2)L_{\theta\theta}
+=(1-x^2)[-f_x(\nu-a)+fa_x]-f(\nu-a)x=\mathcal N.
+$$
+
+The expression is finite at both poles. The full interval cover gives
+$\mathcal N\le-.027248651910161972$, so
+$L_{\theta\theta}\le-\kappa$, with
+$\kappa=.02724865191016197$. The same cover encloses
+
+$$
+(\log W)_{\theta\theta}
+=-xW_x/W+(1-x^2)[W_{xx}/W-(W_x/W)^2]
+\le M_W=.01761171050415938.
+$$
+
+For $f_q=Z_f^{-1/2}e^{qL}$, $p_f=Wf_q^2$ and $U=-\log p_f$, this implies
+$U''\ge c_q=2q\kappa-M_W>0$. The variance inequality is the one-dimensional
+strong-convexity consequence of the published
+[Brascamp--Lieb inequality, equation (1.3)](https://arxiv.org/pdf/1106.0709).
+That paper states it on Euclidean space. For this interval we also give the
+endpoint argument, rather than assume the same domain without checking it.
+
+For a bounded smooth mean-zero $h$, set
+$v(\theta)=p_f(\theta)^{-1}\int_0^\theta hp_f$. Then
+$h=v'-U'v$. The polar powers
+$p_f\sim\theta^{2\mu}$ and
+$p_f\sim(\pi-\theta)^{2(q-\mu)}$ make boundary terms vanish. Integration
+by parts and Cauchy--Schwarz give
+
+$$
+\int h^2p_f=\int[(v')^2+U''v^2]p_f\ge c_q\int v^2p_f,
+\qquad \int h^2p_f=-\int h'vp_f,
+$$
+
+$$
+\operatorname{Var}_{p_f}(h)\le c_q^{-1}\mathbb E_{p_f}|h'|^2.
+$$
+
+The inequality extends by form closure, with real and imaginary parts
+handled separately. For the actual frozen angular operator
+
+$$
+H_\perp=W^{-1/2}[-i\sigma_1\partial_\theta+
+\sigma_2qNP(\nu-a)/\sin\theta]W^{-1/2}/R,
+$$
+
+write its upper-to-lower block as $D_\perp$. Its normalized zero is
+$\chi_f=\sqrt W f_q$ and
+
+$$
+\|D_\perp(\chi_fh)\|^2
+=\mathbb E_{p_f}\frac{|h'|^2}{R^2W^2}
+\ge\frac{c_q}{R_{\max}^2W_{\max}^2}\|\chi_fh\|^2
+\quad(\mathbb E_{p_f}h=0).
+$$
+
+Both polar exponents $\mu,q-\mu$ are at least 50 in the stated range.
+The Dirac endpoints are limit-point; the opposite formal zero
+$\sqrt W e^{-qL}$ is not square integrable. The positive spectra of the
+closed products $D_\perp^*D_\perp$ and $D_\perp D_\perp^*$ pair. Therefore
+
+$$
+D\,\operatorname{gap}(H_\perp)\ge
+\frac{\sqrt{2q\kappa-M_W}}{4.288079450100342},\qquad
+D\,\operatorname{gap}(H_\perp)\big|_{q=1000}>1.721291795.
+$$
+
+Here the gap excludes the single zero state in each declared angular
+sector. It is an actual frozen-slice inequality, stronger than an oscillator
+approximation. It does **not** directly bound the aligned-trial complement,
+radial evolution, the exterior or the full Hamiltonian. In particular the
+exterior magnetic null previously found still obstructs a global uniform
+gap argument. Dividing the aligned residual by this different operator's
+gap is not a proved leakage probability.
+
+![Uniform profile and frozen-slice bounds](../figures/dihole_channel_bounds_progress.png)
+
+The next source task is to turn these local inequalities into a controlled
+regular-band reduction with longitudinal momentum, projector differences
+and first metric variation retained, then combine its error with the
+separate null/open-channel and subtraction terms. More pointwise refinement
+alone does not meet that requirement. One hydrogen atom remains the target;
+no stable opening, admissible material, survival, passage, new law or clock
+advantage is established. The current static metric excludes backward
+causal transport, including 13 September 2027 to 12 September 2027.

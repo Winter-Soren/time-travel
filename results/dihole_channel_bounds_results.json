@@ -1,0 +1,868 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_inputs": true,
+    "interior_flux_band": true,
+    "window_clearance": true,
+    "positive_weights": true,
+    "positive_angular_field": true,
+    "positive_width": true,
+    "positive_normalization": true,
+    "finite_positive_moments": true,
+    "independent_field_jets": true,
+    "independent_pole_safe_curvature": true,
+    "whole_slice_strict_concavity": true,
+    "positive_frozen_slice_gap": true,
+    "limit_point_poles": true,
+    "normalization_transport_identity": true,
+    "independent_angular_matrix": true,
+    "incomplete_endpoint_derivatives_not_exported": true,
+    "sampled_baseline_moments_enclosed": true,
+    "finite_residual_bounds": true,
+    "saved_high_flux_states_enclosed": true
+  },
+  "edge_potential_enclosures": [
+    [
+      0.7925094147636668,
+      0.795473863380113
+    ],
+    [
+      0.9599376546724727,
+      0.9640721918396161
+    ]
+  ],
+  "regions": {
+    "global": {
+      "radial_tiles": 16,
+      "angular_tiles": 32,
+      "fields": {
+        "NP": {
+          "value": [
+            0.8970639861910226,
+            1.1179712165177296
+          ],
+          "R": [
+            -0.2962865267965253,
+            0.4171058386860198
+          ],
+          "x": [
+            -0.022375173672908085,
+            0.024645429169779652
+          ],
+          "RR": [
+            -1.5398913713791278,
+            1.725098247859112
+          ],
+          "Rx": [
+            -0.44735865238244543,
+            0.5091204280139028
+          ],
+          "xx": [
+            -0.015585344778951281,
+            -0.002160773630208597
+          ]
+        },
+        "W": {
+          "value": [
+            25.01907895079927,
+            85.76158900200683
+          ],
+          "R": [
+            -6197.465539305321,
+            -739.1403943127488
+          ],
+          "x": [
+            -1.2679253842809353,
+            1.2034517583398754
+          ],
+          "RR": [
+            40803.91486029181,
+            714057.4353272074
+          ],
+          "Rx": [
+            -46.424964494009444,
+            45.63864484461775
+          ],
+          "xx": [
+            -0.023221218787318722,
+            0.10593433295477588
+          ]
+        },
+        "a": {
+          "value": [
+            -0.0009488349076403712,
+            1.0108582128682582
+          ],
+          "R": [
+            -0.2145224224881821,
+            0.2276416726858494
+          ],
+          "x": [
+            -0.5379307239228386,
+            -0.46256378847495266
+          ],
+          "RR": [
+            -0.741583263907464,
+            1.1120545511357818
+          ],
+          "Rx": [
+            -0.20864204248699286,
+            0.25406372603276994
+          ],
+          "xx": [
+            -0.012038711502450282,
+            0.014496761411146955
+          ]
+        }
+      },
+      "derived": {
+        "a_theta": [
+          -1.002960326323628e-61,
+          0.5371356465815293
+        ],
+        "L_theta_theta": null,
+        "L_theta_theta_theta": null,
+        "L_s_theta_theta": null,
+        "log_W_R": [
+          -85.87818373003896,
+          -25.83346800795442
+        ],
+        "log_W_theta": [
+          -0.018153192531926994,
+          0.02382722068559962
+        ],
+        "log_W_theta_theta": [
+          -0.022783413851443498,
+          0.017611710504159377
+        ],
+        "sine_squared_L_theta_theta": [
+          -1.0082295645718116,
+          -0.027248651910161972
+        ]
+      }
+    },
+    "center": {
+      "radial_tiles": 16,
+      "angular_tiles": 32,
+      "fields": {
+        "NP": {
+          "value": [
+            0.9817968083749289,
+            1.0239920235749485
+          ],
+          "R": [
+            -0.052390590669031095,
+            0.13694739971771744
+          ],
+          "x": [
+            -0.0027067809514596587,
+            0.014611219304240496
+          ],
+          "RR": [
+            -0.3250025306505224,
+            0.4411375823015431
+          ],
+          "Rx": [
+            -0.0005325832567920886,
+            0.25701315981944023
+          ],
+          "xx": [
+            -0.012884750133163274,
+            -0.0033322982186806097
+          ]
+        },
+        "W": {
+          "value": [
+            25.529012197698297,
+            85.1303870554361
+          ],
+          "R": [
+            -6100.659316998586,
+            -771.8825926204037
+          ],
+          "x": [
+            -1.2086953243062286,
+            1.1224944980201468
+          ],
+          "RR": [
+            43064.83906205105,
+            700595.1282451078
+          ],
+          "Rx": [
+            -36.90039786553129,
+            35.56455399402784
+          ],
+          "xx": [
+            0.007025601376717612,
+            0.07919680772503299
+          ]
+        },
+        "a": {
+          "value": [
+            0.7759535829602836,
+            0.9739591114401105
+          ],
+          "R": [
+            -0.05378940669381303,
+            0.04486230854746634
+          ],
+          "x": [
+            -0.5095680174140171,
+            -0.48994520061165725
+          ],
+          "RR": [
+            -0.18850465882296497,
+            0.23559263317866802
+          ],
+          "Rx": [
+            -0.08313908147099958,
+            0.07818996349637074
+          ],
+          "xx": [
+            -0.0004701992267768025,
+            0.01216186415039288
+          ]
+        }
+      },
+      "derived": {
+        "a_theta": [
+          0.17941743912949695,
+          0.41748248332979326
+        ],
+        "L_theta_theta": [
+          -1.4288566914968606,
+          -0.30955406065986585
+        ],
+        "L_theta_theta_theta": [
+          -6.500464130611828,
+          0.17835024036907726
+        ],
+        "L_s_theta_theta": [
+          -0.4478916372723328,
+          0.4478916372723328
+        ],
+        "log_W_R": [
+          -83.80643105571318,
+          -27.394359892286342
+        ],
+        "log_W_theta": [
+          -0.01228574174910303,
+          0.016429962050719494
+        ],
+        "log_W_theta_theta": [
+          -0.019947416378693864,
+          0.014476662921845362
+        ],
+        "sine_squared_L_theta_theta": [
+          -0.3258702763269651,
+          -0.06793048219199228
+        ]
+      }
+    },
+    "plateau": {
+      "radial_tiles": 16,
+      "angular_tiles": 32,
+      "fields": {
+        "NP": {
+          "value": [
+            0.9198513830701361,
+            1.0925543914023386
+          ],
+          "R": [
+            -0.2253923783349093,
+            0.3399017635705595
+          ],
+          "x": [
+            -0.018887504788453722,
+            0.02137053473180529
+          ],
+          "RR": [
+            -1.2055697444999753,
+            1.3659941793489205
+          ],
+          "Rx": [
+            -0.3678853962147354,
+            0.4293818989406512
+          ],
+          "xx": [
+            -0.014719057758288289,
+            -0.0024202069760773746
+          ]
+        },
+        "W": {
+          "value": [
+            25.151068053110322,
+            85.54106298165436
+          ],
+          "R": [
+            -6169.414398218031,
+            -748.9427130195451
+          ],
+          "x": [
+            -1.247329693316526,
+            1.1755185264631598
+          ],
+          "RR": [
+            41463.76726006625,
+            710003.4594165917
+          ],
+          "Rx": [
+            -43.2261378112912,
+            42.30372420068136
+          ],
+          "xx": [
+            -0.012902904283082047,
+            0.09702253380707195
+          ]
+        },
+        "a": {
+          "value": [
+            0.028489389528718132,
+            0.9910901325767686
+          ],
+          "R": [
+            -0.17111639454027128,
+            0.17636770151661094
+          ],
+          "x": [
+            -0.5295167187960684,
+            -0.4697008220918492
+          ],
+          "RR": [
+            -0.5895893070262007,
+            0.9676286307171025
+          ],
+          "Rx": [
+            -0.1652260425830004,
+            0.20883408169361706
+          ],
+          "xx": [
+            -0.011668583759297843,
+            0.013790248703286333
+          ]
+        }
+      },
+      "derived": {
+        "a_theta": [
+          0.16632191113820072,
+          0.5286742465049729
+        ],
+        "L_theta_theta": [
+          -8.266593400756227,
+          -0.16600537878629168
+        ],
+        "L_theta_theta_theta": [
+          -9.401199714791423,
+          47.06405573695051
+        ],
+        "L_s_theta_theta": [
+          -1.8678242889683763,
+          1.8678242889683763
+        ],
+        "log_W_R": [
+          -85.26253711045709,
+          -26.309911221927678
+        ],
+        "log_W_theta": [
+          -0.016454399812288488,
+          0.02216468574209808
+        ],
+        "log_W_theta_theta": [
+          -0.02193050061691602,
+          0.016955923059080304
+        ],
+        "sine_squared_L_theta_theta": [
+          -0.9875329795836549,
+          -0.03951700376966245
+        ]
+      }
+    }
+  },
+  "uniform_bound": {
+    "constants": {
+      "W_lower": [
+        25.019078950799265,
+        25.019078950799273
+      ],
+      "W_upper": [
+        85.76158900200682,
+        85.76158900200684
+      ],
+      "center_W_lower": [
+        25.529012197698293,
+        25.5290121976983
+      ],
+      "NP_upper": [
+        1.1179712165177293,
+        1.1179712165177298
+      ],
+      "a_theta_lower": [
+        0.17941743912949693,
+        0.17941743912949698
+      ],
+      "theta0_s_bound": [
+        0.29980032573639503,
+        0.29980032573639515
+      ],
+      "theta0_ss_bound": [
+        49.82035859777351,
+        49.82035859777353
+      ],
+      "tilt_bound": [
+        0.014990016286819754,
+        0.014990016286819757
+      ],
+      "tilt_s_bound": [
+        2.7908182556250707,
+        2.7908182556250716
+      ],
+      "lambda_lower": [
+        0.9998876686361985,
+        0.9998876686361987
+      ],
+      "local_lower_log_M": [
+        0.5886793070882101,
+        0.5886793070882104
+      ],
+      "Z_coefficient_lower": [
+        20.1634973462045,
+        20.163497346204508
+      ],
+      "gaussian_exponent_lower": [
+        0.022471850171660823,
+        0.02247185017166083
+      ],
+      "L2_bound": [
+        8.266593400756225,
+        8.266593400756229
+      ],
+      "L3_bound": [
+        47.0640557369505,
+        47.064055736950515
+      ],
+      "Ls2_bound": [
+        1.867824288968376,
+        1.8678242889683765
+      ],
+      "Ls_global_bound": [
+        1.5863127217595712,
+        1.5863127217595716
+      ],
+      "L_on_window_bound": [
+        23.502770695809076,
+        23.502770695809083
+      ],
+      "A2_bound": [
+        3027.5363782639356,
+        3027.5363782639365
+      ],
+      "Adot2_bound": [
+        9039.07282493248,
+        9039.072824932484
+      ],
+      "J2_bound": [
+        13.202716003843998,
+        13.202716003844001
+      ],
+      "normalization_b_bound": [
+        3387733.9428568454,
+        3387733.9428568464
+      ],
+      "normalization_bdot_bound": [
+        106078468168.71686,
+        106078468168.71689
+      ],
+      "log_weight_transport_bound": [
+        97.87734016801768,
+        97.87734016801771
+      ],
+      "profile_metric_derivative_bound": [
+        18381.527647644896,
+        18381.527647644903
+      ],
+      "spin_metric_derivative_bound": [
+        0.029980032573639508,
+        0.029980032573639515
+      ],
+      "K2_bound": [
+        226.77840875112767,
+        226.77840875112773
+      ],
+      "K2dot_bound": [
+        2623.6406012498414,
+        2623.6406012498423
+      ],
+      "D_bound": [
+        0.5350885291818729,
+        0.5350885291818731
+      ],
+      "Ddot_bound": [
+        52.84282806284602,
+        52.84282806284603
+      ],
+      "B0_bound": [
+        0.03996949695736315,
+        0.03996949695736316
+      ],
+      "B0dot_bound": [
+        0.32095426247963893,
+        0.32095426247963904
+      ],
+      "angular_transition_E1_bound": [
+        2.8929639904380695e-05,
+        2.89296399043807e-05
+      ],
+      "angular_transition_E1dot_bound": [
+        0.0018271022743423264,
+        0.0018271022743423268
+      ],
+      "r0_bound_D": [
+        197384.1550166274,
+        197384.15501662745
+      ],
+      "dot_r0_bound_D": [
+        15010467413.30637,
+        15010467413.306374
+      ],
+      "r1_bound": [
+        0.03996949695736315,
+        0.03996949695736316
+      ],
+      "dot_r1_bound": [
+        2204.424590988809,
+        2204.42459098881
+      ]
+    },
+    "even_moment_coefficients": [
+      1118.9576543187054,
+      74690.62265263447,
+      8309353.934152978,
+      1294185327.3039157
+    ],
+    "q_min": 1000,
+    "local_radius": 0.02,
+    "plateau_clearance": 0.04,
+    "step_bounds": {
+      "S_first": 8,
+      "S_second": 120,
+      "F": 4,
+      "F_s": 1200,
+      "C_theta": 40,
+      "R_second": 160
+    }
+  },
+  "frozen_slice_gap": {
+    "kappa_lower": 0.02724865191016197,
+    "log_W_curvature_upper": 0.01761171050415938,
+    "Rmax_Wmax_upper": 4.288079450100342,
+    "density_curvature_at_q1000_lower": 54.47969210981977,
+    "gap_at_q1000_lower_D": 1.7212917960077967,
+    "formula": "gap_D >= sqrt(2*q*kappa_lower-log_W_curvature_upper)/Rmax_Wmax_upper",
+    "operator": "H_ang=W^-1/2[-i sigma1 d_theta+sigma2 q NP(nu-a)/sin(theta)]W^-1/2/R",
+    "domain": "Regular polar Dirac domain; mu and q-mu >=50 for q>=1000 on this band. Both endpoints are limit-point.",
+    "scope": "Frozen transverse operator on each collar slice, with one zero per declared mu sector. Not the aligned-trial complement, full Hamiltonian gap, source trace or dynamical stability.",
+    "theorem_reference": "https://arxiv.org/pdf/1106.0709, equation (1.3); the finite-interval endpoint argument is supplied in the project derivation."
+  },
+  "independent_curvature_errors": [
+    2.6645352591003757e-15,
+    3.885780586188048e-16,
+    4.163336342344337e-16
+  ],
+  "point_jet_relative_errors": [
+    7.0897489268251235e-12,
+    2.627495443441319e-12,
+    4.334831105179404e-13
+  ],
+  "independent_controls": {
+    "normalization": [
+      {
+        "u": 0.0125,
+        "mu": 854.5,
+        "epsilon": 0.0,
+        "normalization_identity_error": 1.7763568394002505e-15,
+        "even_moments": [
+          0.0009924220632066183,
+          2.9546410957764405e-06,
+          1.4669971141289555e-08,
+          1.020991078275766e-10
+        ]
+      },
+      {
+        "u": 0.0125,
+        "mu": 854.5,
+        "epsilon": 0.03,
+        "normalization_identity_error": 1.7763568394002505e-15,
+        "even_moments": [
+          0.000992422063220873,
+          2.954641095861318e-06,
+          1.4669971141921815e-08,
+          1.0209910783344614e-10
+        ]
+      },
+      {
+        "u": 0.025,
+        "mu": 904.5,
+        "epsilon": 0.0,
+        "normalization_identity_error": 5.329070518200751e-15,
+        "even_moments": [
+          0.0009918005304194147,
+          2.9525457947042876e-06,
+          1.4674142642798472e-08,
+          1.0239197999684668e-10
+        ]
+      },
+      {
+        "u": 0.025,
+        "mu": 904.5,
+        "epsilon": 0.03,
+        "normalization_identity_error": 5.329070518200751e-15,
+        "even_moments": [
+          0.0009918005327013563,
+          2.9525458082943662e-06,
+          1.4674142744178589e-08,
+          1.0239198094101418e-10
+        ]
+      },
+      {
+        "u": 0.0375,
+        "mu": 954.5,
+        "epsilon": 0.0,
+        "normalization_identity_error": 1.8260948309034575e-12,
+        "even_moments": [
+          0.000990207680664935,
+          2.9479333080717393e-06,
+          1.4699268375143538e-08,
+          1.0338393892538178e-10
+        ]
+      },
+      {
+        "u": 0.0375,
+        "mu": 954.5,
+        "epsilon": 0.03,
+        "normalization_identity_error": 1.8332002582610585e-12,
+        "even_moments": [
+          0.0009902076869471085,
+          2.9479333455162436e-06,
+          1.4699268655731743e-08,
+          1.0338394156334503e-10
+        ]
+      }
+    ],
+    "angular_matrix": [
+      {
+        "tilt": -0.014990016286819757,
+        "C": 0.0,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": -0.014990016286819757,
+        "C": 0.25,
+        "norm": 2.106281276261306e-05,
+        "derivative_norm": 0.00016848194315557274
+      },
+      {
+        "tilt": -0.014990016286819757,
+        "C": 0.5,
+        "norm": 2.80832355059304e-05,
+        "derivative_norm": 0.00022463473817406384
+      },
+      {
+        "tilt": -0.014990016286819757,
+        "C": 0.75,
+        "norm": 2.106202406366203e-05,
+        "derivative_norm": 0.00016846991764301155
+      },
+      {
+        "tilt": -0.014990016286819757,
+        "C": 1.0,
+        "norm": 6.498827568137041e-17,
+        "derivative_norm": 7.175523895434496e-18
+      },
+      {
+        "tilt": -0.007495008143409879,
+        "C": 0.0,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": -0.007495008143409879,
+        "C": 0.25,
+        "norm": 5.266240796227467e-06,
+        "derivative_norm": 4.212864095393512e-05
+      },
+      {
+        "tilt": -0.007495008143409879,
+        "C": 0.5,
+        "norm": 7.02162221062447e-06,
+        "derivative_norm": 5.6171030311929915e-05
+      },
+      {
+        "tilt": -0.007495008143409879,
+        "C": 0.75,
+        "norm": 5.2661914926016565e-06,
+        "derivative_norm": 4.2127889106657986e-05
+      },
+      {
+        "tilt": -0.007495008143409879,
+        "C": 1.0,
+        "norm": 4.4197657331595593e-17,
+        "derivative_norm": 7.174648137343063e-18
+      },
+      {
+        "tilt": 0.0,
+        "C": 0.0,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": 0.0,
+        "C": 0.25,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": 0.0,
+        "C": 0.5,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": 0.0,
+        "C": 0.75,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": 0.0,
+        "C": 1.0,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": 0.007495008143409879,
+        "C": 0.0,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": 0.007495008143409879,
+        "C": 0.25,
+        "norm": 5.266240796227467e-06,
+        "derivative_norm": 4.212864095393512e-05
+      },
+      {
+        "tilt": 0.007495008143409879,
+        "C": 0.5,
+        "norm": 7.02162221062447e-06,
+        "derivative_norm": 5.6171030311929915e-05
+      },
+      {
+        "tilt": 0.007495008143409879,
+        "C": 0.75,
+        "norm": 5.2661914926016565e-06,
+        "derivative_norm": 4.2127889106657986e-05
+      },
+      {
+        "tilt": 0.007495008143409879,
+        "C": 1.0,
+        "norm": 4.4197657331595593e-17,
+        "derivative_norm": 7.174648137343063e-18
+      },
+      {
+        "tilt": 0.014990016286819757,
+        "C": 0.0,
+        "norm": 0.0,
+        "derivative_norm": 0.0
+      },
+      {
+        "tilt": 0.014990016286819757,
+        "C": 0.25,
+        "norm": 2.106281276261306e-05,
+        "derivative_norm": 0.00016848194315557274
+      },
+      {
+        "tilt": 0.014990016286819757,
+        "C": 0.5,
+        "norm": 2.80832355059304e-05,
+        "derivative_norm": 0.00022463473817406384
+      },
+      {
+        "tilt": 0.014990016286819757,
+        "C": 0.75,
+        "norm": 2.106202406366203e-05,
+        "derivative_norm": 0.00016846991764301155
+      },
+      {
+        "tilt": 0.014990016286819757,
+        "C": 1.0,
+        "norm": 6.498827568137041e-17,
+        "derivative_norm": 7.175523895434496e-18
+      }
+    ],
+    "angular_matrix_enclosed": true
+  },
+  "band": {
+    "nu": [
+      0.85,
+      0.95
+    ],
+    "R_over_D": [
+      0.025,
+      0.05
+    ],
+    "theta_center": [
+      2.2,
+      2.75
+    ]
+  },
+  "scope": [
+    "Uniform collar trial residual bounds for q>=1000 and regular half-integer mu=q nu in the declared band.",
+    "Bounds include pole-restoring transitions and normalization/metric derivatives. They are deliberately conservative and are not exact residual values.",
+    "Baseline geometry and first paired metric derivative only, not a finite-epsilon stability interval.",
+    "A finite-q frozen-slice gap is bounded separately. It does not bound the aligned-trial complement or the full Hamiltonian.",
+    "No exterior/null/open channels, global source trace, supported geometry or atom propagation is established."
+  ],
+  "full_source_bound": null,
+  "atomic_transit": null,
+  "source_sha256": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7"
+  },
+  "elapsed_seconds": 10.986701600020751,
+  "audit_correction": {
+    "source": "provenance/dihole_channel_bounds_derivative_trial.py",
+    "source_sha256": "4a455e7e1e784987bb2ba25083184fd48d5fe84c1d608b740cecffdc4b8cee19",
+    "results": "dihole_channel_bounds_derivative_trial.json",
+    "results_sha256": "a0337d8dd446a098f40b032357dd34b236db738796d8660f8fa4884f86de49b9",
+    "finding": "The E1 derivative bound also needs the changing spin basis, eta_dot*E1. Add it explicitly. Global singular angular derivatives skipped endpoint tiles and must not be reported as a whole-region enclosure; export None. Neither omission affected the normalization/moment bounds.",
+    "scope": "Exact pre-audit source and result preserved. No physical support claim or test tolerance was weakened."
+  }
+}
