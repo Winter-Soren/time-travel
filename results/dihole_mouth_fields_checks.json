@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "tests": {
+    "reference_profiles": true,
+    "reference_angular_action": true,
+    "seam_value": true,
+    "seam_theta_derivative": true,
+    "normal_current": true,
+    "cartesian_derivatives": true,
+    "actual_axis_gauge": true,
+    "actual_axis_metric": true,
+    "indicial_domain": true,
+    "flat_outer_taper": true,
+    "physical_collar_measure": true,
+    "old_polar_support": true,
+    "old_bridge_preserved": true,
+    "nested_zero_fields": true,
+    "exact_chiral_pairing": true
+  },
+  "errors": {
+    "profile": 2.220446049250313e-16,
+    "angular": 2.220446049250313e-16,
+    "seam": 8.89720416711953e-16,
+    "seam_theta": 2.3314683517128287e-15,
+    "normal": 2.220446049250313e-16,
+    "derivatives": 3.360020332468551e-11,
+    "axis_gauge": 1.2485606017198763e-15,
+    "axis_metric": 4.440892098500626e-16,
+    "indicial": 8.423967487465785e-16,
+    "forbidden_component_halving": 9.879933785157669e-13,
+    "outer": 0.0,
+    "volume": 0.0,
+    "nested": 0.0,
+    "chiral": 0.0
+  },
+  "columns": [
+    {
+      "index": 0,
+      "family": "mouth",
+      "profile": "zero",
+      "side": "left",
+      "chirality": "R",
+      "mu": 0.5,
+      "l": 0
+    },
+    {
+      "index": 1,
+      "family": "mouth",
+      "profile": "zero",
+      "side": "left",
+      "chirality": "L",
+      "mu": 0.5,
+      "l": 0
+    },
+    {
+      "index": 2,
+      "family": "mouth",
+      "profile": "zero",
+      "side": "right",
+      "chirality": "R",
+      "mu": 0.5,
+      "l": 0
+    },
+    {
+      "index": 3,
+      "family": "mouth",
+      "profile": "zero",
+      "side": "right",
+      "chirality": "L",
+      "mu": 0.5,
+      "l": 0
+    },
+    {
+      "index": 4,
+      "family": "mouth",
+      "profile": "upper1",
+      "side": "left",
+      "chirality": "R",
+      "mu": 0.5,
+      "l": 1
+    },
+    {
+      "index": 5,
+      "family": "mouth",
+      "profile": "upper1",
+      "side": "left",
+      "chirality": "L",
+      "mu": 0.5,
+      "l": 1
+    },
+    {
+      "index": 6,
+      "family": "mouth",
+      "profile": "upper1",
+      "side": "right",
+      "chirality": "R",
+      "mu": 0.5,
+      "l": 1
+    },
+    {
+      "index": 7,
+      "family": "mouth",
+      "profile": "upper1",
+      "side": "right",
+      "chirality": "L",
+      "mu": 0.5,
+      "l": 1
+    },
+    {
+      "index": 8,
+      "family": "mouth",
+      "profile": "lower1",
+      "side": "left",
+      "chirality": "R",
+      "mu": 0.5,
+      "l": 1
+    },
+    {
+      "index": 9,
+      "family": "mouth",
+      "profile": "lower1",
+      "side": "left",
+      "chirality": "L",
+      "mu": 0.5,
+      "l": 1
+    },
+    {
+      "index": 10,
+      "family": "mouth",
+      "profile": "lower1",
+      "side": "right",
+      "chirality": "R",
+      "mu": 0.5,
+      "l": 1
+    },
+    {
+      "index": 11,
+      "family": "mouth",
+      "profile": "lower1",
+      "side": "right",
+      "chirality": "L",
+      "mu": 0.5,
+      "l": 1
+    }
+  ],
+  "seconds": 3.9448018999537453,
+  "scope": [
+    "Fixed q=1,mu=1/2 on the existing declared spin/gauge sewing; phase applies to both Weyls.",
+    "Four zero-profile traces precede eight first-pair traces. No extra parity or gauge-charge flip.",
+    "Regular monopole profiles and actual axis coefficients establish the local indicial domain.",
+    "Linear bridge lifts give H1 conformity; no matching normal derivatives or operator-domain claim.",
+    "Tests are floating controls, not continuum/source or quadrature-error bounds."
+  ],
+  "source_sha256": "b91db722633e202b73ddbcf5c719514abd5611e1659113fb3f4f3053e70408b8"
+}

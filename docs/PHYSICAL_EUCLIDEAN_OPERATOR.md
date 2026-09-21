@@ -1687,3 +1687,139 @@ short-scale heat contribution. Repeating regulator rearrangements or treating
 the last finite-space difference as a continuum error would not settle it.
 No new law, supporting material, stable passage, or travel from13September2027
 to12September2027 has been established.
+
+
+## Fields crossing the openings and regional residuals
+
+Checkpoint157 tests a specific approximation defect on the same prescribed
+geometry. This is an unpublished numerical calculation within the existing
+model, not evidence for a new law or a realizable material. The earlier
+sine-only bridge additions vanish at both openings, so they cannot enlarge
+the finite set of field traces supplied by the global exterior functions.
+Adding more sine modes alone does not remove that restriction.
+
+### Where the first residual lives
+
+This is the auxiliary linear equation $(A+m)X=H$ used to estimate a
+regulated field response. Its residual is not an Einstein-equation residual
+or a measured spacetime effect.
+
+The [regional helper](../scripts/dihole_residual_regions.py) keeps the
+216-column source insertion fixed and splits the first least-squares
+residual over the bridge and exterior. For raw source coefficients $H$,
+trial coefficients $X$, mass $m$ and regional forms $G_\Omega,Q_\Omega,W_\Omega$,
+
+$$\|r\|_\Omega^2=\operatorname{Tr}\left[
+X^*\{Q_\Omega+m(W_\Omega+W_\Omega^*)+m^2G_\Omega\}X
+-2\operatorname{Re}\{X^*(W_\Omega^*+mG_\Omega)H\}
++H^*G_\Omega H\right].$$
+
+The real part here means the scalar real part after the trace, or the
+Hermitian part inside it. Regional weak forms need not be skew, so their
+mass cross terms are retained. At $\kappa D=.7$, $mD=.1$, phase0 and
+$\mu=1/2$, the old344-field residual squared is4325.367065942:
+4319.856019217 inside and5.511046725 outside. Thus99.8726% is inside.
+The earlier32 exterior-only additions reduce the residual squared by only
+about0.00101%. This locates the error geographically; it does not by itself
+prove that the opening traces cause all of it. Nine regional checks pass,
+including independent direct-action and frozen156 recovery controls.
+See [regional results](../results/dihole_residual_regions_results.json)
+and the authenticated [exterior48 cache](../data/dihole_residual_regions_state.npz).
+
+### A genuinely larger set of opening traces
+
+The [new field helper](../scripts/dihole_mouth_fields.py) adds independent
+left/right endpoint lifts in both chiralities: four fields using the
+monopole zero profile, followed by eight using the first angular pair.
+Their exterior values are
+
+$$v_e(r,\theta)=e^{i\phi\mathbf1_{\rm right}}
+\frac{\chi(r)}{r}U_\sigma(\theta)p(\theta),\qquad
+R_c=.05D,\quad R_{\rm out}=.10D.$$
+
+The taper is smooth and flat at both ends; its outer value and derivatives
+vanish. The spin rotation and the inverse-radius factor implement the
+existing trace map. The bridge lift is linear in its radial coordinate.
+These are global first-order form-domain fields, including the polar caps
+omitted by the old exterior support. No matching normal derivative or
+second-order operator-domain membership is asserted. These mathematical
+trial functions are not a manufactured field or new matter species.
+
+The two exterior boundary normals have the opposite signs to the bridge
+normals after the declared spin rotation. The factor $1/R_c$ cancels the
+boundary area factor in the Green pairing. The phases cancel in paired
+fields. Fifteen [helper checks](../results/dihole_mouth_fields_checks.json)
+pass, including exact preservation of all old312 bridge columns, seam
+values and tangential derivatives, chiral pairing, Cartesian derivative
+controls, and the actual polar gauge/metric coefficients.
+
+Only old-new and new-new Gram blocks are assembled by the
+[incremental driver](../scripts/dihole_mouth_enrichment.py). The old344
+core and retained216 source remain identical. The new collar fields vanish
+on the support of141's32 exterior-only functions, so those cross blocks are
+zero by disjoint support, not dropped approximations.
+
+| Trial fields | Total residual squared | Bridge | Exterior | Reduction from344 |
+| --- | ---: | ---: | ---: | ---: |
+| Existing344 |4325.36706594|4319.85601922|5.51104673|0%|
+| Plus4 zero-profile opening fields |4197.61474519|4142.71225047|54.90249472|2.95356%|
+| Plus12 zero/first-pair opening fields |3878.28812100|3730.69978697|147.58833403|10.33621%|
+
+The total decreases while the exterior residual grows: the least-squares
+solution trades regional errors. We have improved the approximation, not
+made the field equations exact. In particular,89.66% of the old squared
+residual remains. This does not translate into a percentage of progress
+toward time travel.
+
+The common-filter conditional retained-source interval at $\eta D^2=.01$
+shrinks from $[-208408.4085,5529.3546]$ to
+$[-188536.4314,3280.8364]$. It still includes both signs and is uninformative
+for support. At $\eta D^2=.0001$ the new interval is
+$[-19072765.9939,329780.4754]$. Neither interval encloses the omitted
+physical insertion, all angular sectors, or the completed renormalized
+source. Floating arithmetic and geometry quadrature are not enclosed.
+
+### Preserved failure and targeted numerical correction
+
+The initial exterior integration orders24/32 failed the unchanged global
+weak-skew tolerance $2\times10^{-8}$, although nine other checks passed.
+Its exact [source](../provenance/dihole_mouth_enrichment_quadrature_failure.py),
+[results](../results/dihole_mouth_enrichment_quadrature_failure_results.json)
+and [matrices](../data/dihole_mouth_enrichment_quadrature_failure_state.npz)
+are preserved. An independent scalar calculation identifies the new-new
+boundary mismatch:
+
+$$-2\int_{R_c}^{R_{\rm out}}\chi\chi'\,dr=1,$$
+
+whereas Gauss order24 gives0.999999973518265 and order32 gives
+1.0000000012274999. This reproduces the observed mismatch; no sign change
+or manual antisymmetrization was applied. Independent seam integration
+also agrees with the saved bridge64 old-new boundary terms to about
+$1.62\times10^{-11}$.
+
+The successful run uses exterior orders48/64 and bridge orders64/80.
+`--recover-quadrature` authenticates the failed source and all its inputs,
+reproduces exterior24 bitwise, reuses bridge64, and recovers bridge80 from
+the saved refined total minus the frozen core and reproduced exterior32.
+Recombination reproduces the saved refined total exactly in this run.
+The recovered bridge and both refined regional increments are now saved
+separately. No bridge geometry was reassembled during recovery.
+
+The largest normalized weak-skew defect is $3.02\times10^{-9}$; the refined
+356-field value is $3.27\times10^{-10}$. The first residual changes by
+$4.43\times10^{-10}$ relatively under the new-field integration refinement;
+new-block form changes are below $8.31\times10^{-11}$. The old344 core
+remains fixed in these comparisons, so these are not whole-domain or
+continuum error certificates. All ten driver checks pass, giving34 checks
+across the three new components. See [successful results](../results/dihole_mouth_enrichment_results.json),
+[saved matrices](../data/dihole_mouth_enrichment_state.npz), and
+[figure](../figures/dihole_mouth_enrichment_progress.png).
+
+The next useful calculation must target the remaining first-order residual
+using this enlarged trace space; increasing only the distant exterior
+family has already shown little benefit. The large residual and the
+uncontrolled physical source remain the constraints. There is no scheduled
+transition from a completed numerical task list to a new physical law.
+A supported geometry, its stability, and a chronology-changing extension
+are separate unachieved requirements. Travel from13September2027 to
+12September2027 remains unproved.

@@ -1,0 +1,274 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_input_provenance": true,
+    "disjoint_bridge_extension": true,
+    "exterior_probe_zero": true,
+    "frozen156_recovery": true,
+    "regional_and_full_identities": true,
+    "least_squares": true,
+    "same_source": true,
+    "nested_residual_nonincrease": true,
+    "independent_regional_action": true
+  },
+  "parameters": {
+    "phase": 0.0,
+    "mu": 0.5,
+    "regulator_mass": 1.0,
+    "kappa": 0.7,
+    "first_mass": 0.1,
+    "eta": 0.01,
+    "source_dimension": 216,
+    "source_radial_modes": 12,
+    "source_angular_modes": 3,
+    "exterior_assembly_order": 24,
+    "cache_columns": 48
+  },
+  "records": [
+    {
+      "label": "angular3_exterior48",
+      "kappa": 0.7,
+      "mass": 0.1,
+      "eta": 0.010000000000000002,
+      "source_dimension": 216,
+      "trial_dimension": 216,
+      "ambient_dimension": 344,
+      "source_positive_negative_ranks": [
+        150,
+        66
+      ],
+      "residual_norm": 65.76786946125752,
+      "regions": {
+        "full": {
+          "source_norm_squared": 17025.04416460006,
+          "residual_norm_squared": 4325.412653473009,
+          "positive_source_residual_squared": 4213.9926524704915,
+          "negative_source_residual_squared": 111.42000100251816
+        },
+        "bridge": {
+          "source_norm_squared": 17021.845658010312,
+          "residual_norm_squared": 4319.907781910473,
+          "positive_source_residual_squared": 4209.50354614867,
+          "negative_source_residual_squared": 110.40423576180456
+        },
+        "exterior": {
+          "source_norm_squared": 3.198506589738826,
+          "residual_norm_squared": 5.504871562536966,
+          "positive_source_residual_squared": 4.489106321823353,
+          "negative_source_residual_squared": 1.015765240713614
+        }
+      },
+      "in_trial_residual_squared": 2579.860261801467,
+      "unrepresented_action_residual_squared": 1745.5523916715351,
+      "regional_form_sum_relative_error": 0.0,
+      "regional_residual_sum_error": -9.094947017729282e-13,
+      "regional_source_sum_error": 1.0913936421275139e-11,
+      "full_residual_identity_error": 7.275957614183426e-12,
+      "least_squares_relative_error": 3.0350749482584213e-16
+    },
+    {
+      "label": "angular4_exterior48",
+      "kappa": 0.7,
+      "mass": 0.1,
+      "eta": 0.010000000000000002,
+      "source_dimension": 216,
+      "trial_dimension": 264,
+      "ambient_dimension": 344,
+      "source_positive_negative_ranks": [
+        150,
+        66
+      ],
+      "residual_norm": 65.76786030321625,
+      "regions": {
+        "full": {
+          "source_norm_squared": 17025.04416460006,
+          "residual_norm_squared": 4325.411448863369,
+          "positive_source_residual_squared": 4213.9915750262035,
+          "negative_source_residual_squared": 111.41987383716533
+        },
+        "bridge": {
+          "source_norm_squared": 17021.845658010312,
+          "residual_norm_squared": 4319.905832616197,
+          "positive_source_residual_squared": 4209.501856517849,
+          "negative_source_residual_squared": 110.40397609834807
+        },
+        "exterior": {
+          "source_norm_squared": 3.198506589738826,
+          "residual_norm_squared": 5.505616247171434,
+          "positive_source_residual_squared": 4.489718508354261,
+          "negative_source_residual_squared": 1.0158977388171717
+        }
+      },
+      "in_trial_residual_squared": 2579.859489988706,
+      "unrepresented_action_residual_squared": 1745.5519588746427,
+      "regional_form_sum_relative_error": 0.0,
+      "regional_residual_sum_error": 9.094947017729282e-13,
+      "regional_source_sum_error": 1.0913936421275139e-11,
+      "full_residual_identity_error": 1.978150976356119e-11,
+      "least_squares_relative_error": 3.8649890252986245e-16
+    },
+    {
+      "label": "angular5_exterior48",
+      "kappa": 0.7,
+      "mass": 0.1,
+      "eta": 0.010000000000000002,
+      "source_dimension": 216,
+      "trial_dimension": 312,
+      "ambient_dimension": 344,
+      "source_positive_negative_ranks": [
+        150,
+        66
+      ],
+      "residual_norm": 65.76785492501989,
+      "regions": {
+        "full": {
+          "source_norm_squared": 17025.04416460006,
+          "residual_norm_squared": 4325.410741438463,
+          "positive_source_residual_squared": 4213.990943488904,
+          "negative_source_residual_squared": 111.41979794955844
+        },
+        "bridge": {
+          "source_norm_squared": 17021.845658010312,
+          "residual_norm_squared": 4319.9043986762335,
+          "positive_source_residual_squared": 4209.5005784071045,
+          "negative_source_residual_squared": 110.40382026912947
+        },
+        "exterior": {
+          "source_norm_squared": 3.198506589738826,
+          "residual_norm_squared": 5.50634276222944,
+          "positive_source_residual_squared": 4.4903650818005065,
+          "negative_source_residual_squared": 1.015977680428936
+        }
+      },
+      "in_trial_residual_squared": 2579.8589958985012,
+      "unrepresented_action_residual_squared": 1745.551745539936,
+      "regional_form_sum_relative_error": 0.0,
+      "regional_residual_sum_error": 9.094947017729282e-13,
+      "regional_source_sum_error": 1.0913936421275139e-11,
+      "full_residual_identity_error": 2.6147972675971687e-11,
+      "least_squares_relative_error": 4.1313305463521816e-16
+    },
+    {
+      "label": "angular5_exterior80",
+      "kappa": 0.7,
+      "mass": 0.1,
+      "eta": 0.010000000000000002,
+      "source_dimension": 216,
+      "trial_dimension": 344,
+      "ambient_dimension": 344,
+      "source_positive_negative_ranks": [
+        150,
+        66
+      ],
+      "residual_norm": 65.76752288129943,
+      "regions": {
+        "full": {
+          "source_norm_squared": 17025.04416460006,
+          "residual_norm_squared": 4325.367065942243,
+          "positive_source_residual_squared": 4213.95865942259,
+          "negative_source_residual_squared": 111.40840651965325
+        },
+        "bridge": {
+          "source_norm_squared": 17021.845658010312,
+          "residual_norm_squared": 4319.856019217111,
+          "positive_source_residual_squared": 4209.459745139836,
+          "negative_source_residual_squared": 110.39627407727443
+        },
+        "exterior": {
+          "source_norm_squared": 3.198506589738826,
+          "residual_norm_squared": 5.511046725134322,
+          "positive_source_residual_squared": 4.498914282755536,
+          "negative_source_residual_squared": 1.0121324423787867
+        }
+      },
+      "in_trial_residual_squared": 2579.874943018568,
+      "unrepresented_action_residual_squared": 1745.4921229236347,
+      "regional_form_sum_relative_error": 0.0,
+      "regional_residual_sum_error": -1.8189894035458565e-12,
+      "regional_source_sum_error": 1.0913936421275139e-11,
+      "full_residual_identity_error": 4.0472514228895307e-11,
+      "least_squares_relative_error": 4.692992684243927e-16
+    }
+  ],
+  "independent_control": {
+    "maximum_direct_action_error": 4.440892098500626e-16,
+    "non_skew_regional_weak_norm": 5.325724046234173
+  },
+  "frozen156_relative_error": 9.34221972413976e-15,
+  "source_sha256": "302154d669ad62a0d56998fc1615ebd96058c09fcb227c7febbd890b65e20968",
+  "input_sha256": {
+    "dihole_radial_refinement.py": "15f7e6dd414b87365cf3d1ef3a14ef3558201cc07c851d38853e26a601f15a1c",
+    "dihole_radial_stream.py": "54b25d772a9b63eda3547188715aa746b4752b1988ed977702683a6f0503a76a",
+    "dihole_bridge_enrichment.py": "c5fb3c062e40041c3f6b681903d8985f4c38aba59ca6deaeb2dd85f0b037737b",
+    "dihole_enriched_bridge.py": "b5b7588b4991219329f8fca1b2132b4c369602adcdd197d6271e33750e4e74b2",
+    "dihole_finite_frequency_tail.py": "37aad394ced2841bcbe6a595f93b77067592323e785f4aa16c1e1827af91dd0a",
+    "dihole_sewn_form.py": "ee043fdd42b7ee5efde627c1e53ce7b18f238c81fc31e354feb12662ce9a4f0f",
+    "dihole_sewn_quadrature.py": "5c30ad3f66a53561f14733795d6106ca69be51514fe468bd9588bd33685c2bab",
+    "dihole_euclidean_form.py": "050f817fe5c0533b0f51eb82e248e315b01387e719386ba941b9555aea2fd459",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_azimuthal_bridge.py": "4382f13b42fd66f94b9a180dd6937508767e26561d8897118b33e0eb1e78a5c1",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_curved_exterior.py": "71c8782caa1305e31c84fee95f688d62b349df4c66ee2c4acfcc37650f112cf5",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_angular_crosscheck.py": "6ffde17e3d191ac7b1cd7968205bf958018a0af1f6f6e1851dc39a1f2b7e204b",
+    "dihole_angular_crosscheck_state.npz": "e98bf9d543dcbe61ac535fbead63447f67cceec2a666142d3e27bc34b8fab740",
+    "dihole_angular_crosscheck_results.json": "40bbb98215ecb6450f0be9158204648ee0e1b5c13520ec757410ff62717e399b",
+    "dihole_exterior_extension.py": "1c03ff071f17a74c70c313c36b2c8c56c12cb45ea983d043b2c37ab3a32dcb37",
+    "dihole_radial_schur.py": "65a75257c6c7a584462aeac06bbaaf985e7b8e1fc9c0034524965776b08d96a4",
+    "dihole_exterior_feedback.py": "fd3a411db80418c2e35949a60135651267dcf67befddedd189469c13c9bed687",
+    "dihole_exterior_feedback_state.npz": "b68b175fc06a958bb0fee1c13dc6fd0d5aebcd300b27d8a293bc56cf67e33bee",
+    "dihole_exterior_feedback_results.json": "8c012ba980a379ffc694937533ffb0ba0d886d1f23043a40ef4988832f1ddaa1",
+    "dihole_retained_resolvent.py": "8f0be07c290d51017300022f4e9fd43ba40e01c32f7bff22ec81f4babf2dee8c",
+    "dihole_retained_resolvent_results.json": "ea9fe66600e1b24ab3376ab258928edbdc0653c326fc1a9ed0a6419e98ccfff8",
+    "dihole_common_pv_residual_results.json": "3ec88cd2261475a0f327c9fe164979e4a63fdf519588dc3c23aa372b9314c5d5",
+    "dihole_common_pv_residual.py": "ab96d903a82cf431ced53031a6c24433c21dcd6a254d71e182eb62c0cfc9461b"
+  },
+  "state_sha256": "866811b1ab98a458c2446d392ac9cc4bc1e0d7c5a0e7ecc5f1be57c7c14c2019",
+  "cache_arrays": {
+    "norm": {
+      "shape": [
+        48,
+        48
+      ],
+      "dtype": "complex128",
+      "sha256_C_bytes": "e6edc2e24f1093764d2c254f0beae9025c61daee83a5b2c8eea75893a644afbb"
+    },
+    "q": {
+      "shape": [
+        3,
+        48,
+        48
+      ],
+      "dtype": "complex128",
+      "sha256_C_bytes": "ba94e766f9eba5bfc538061b671c57f1165a077ed523b86954c2950766f83cc0"
+    },
+    "derivative": {
+      "shape": [
+        3,
+        48,
+        48
+      ],
+      "dtype": "complex128",
+      "sha256_C_bytes": "7c98d2da7afa2bdee9765910c81cb588e14781b77538fb54df84f7e7039e4348"
+    },
+    "weak": {
+      "shape": [
+        2,
+        48,
+        48
+      ],
+      "dtype": "complex128",
+      "sha256_C_bytes": "bd43f1724f60d9967a1d2b608c1bf755ce1a5b6163578f52ac626c38daa718dc"
+    }
+  },
+  "seconds": 3.4736892000073567,
+  "scope": [
+    "Same finite-rank source, first common-filter step only; no full source or completed filter bound.",
+    "Regional squared norms retain the non-skew regional weak cross terms.",
+    "Bridge/exterior split is geometric; it does not identify radial versus mouth-trace deficiencies.",
+    "Floating quadrature and arithmetic are not enclosed; no continuum, omitted-insertion or azimuthal-tail certificate.",
+    "The cached48-column exterior form is newly assembled once; frozen140-142 files are unchanged."
+  ]
+}

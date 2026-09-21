@@ -1,3 +1,70 @@
+# Research increment157 — opening fields reduce the auxiliary residual
+
+Previous checkpoint156 published5609b20dd9621503fad793c89d05cab9446dea64.
+Goal ACTIVE, unachieved. Import COMPLETE; do not reopen Browser/Downloads.
+No new law, physical source value, obtainable medium, stable bridge or
+backward passage. No scheduled jump from calculations to new physics.
+
+- Located the first common-filter residual of156 geometrically using the
+  same216-column source at kappaD=.7, mD=.1, phase0, mu=.5. In344 fields,
+  squared residual4325.367065942 =4319.856019217 bridge+5.511046725 exterior.
+  About99.87% is inside. Prior extra32 distant exterior fields reduced the
+  total by only0.00101%. Regional weak forms retain all mass cross terms.
+- Added4 zero-profile fields and8 first-angular-pair fields through both
+  openings/chiralities. Their collars extend fromradius.05D to.10D, including
+  regular polar caps; linear bridge lifts preserve the declared spin/gauge
+  sewing. They are first-order form-domain trial functions, not new matter.
+  They do not claim second-order operator-domain membership.
+- Assembled only old-new and new-new forms. All old344 blocks/source216
+  remain bitwise fixed. Newcollars and141extraexterior supports are disjoint.
+  The first residual squared falls4325.36706594->4197.61474519(+4)->
+  3878.28812100(+12), a10.33620819% reduction. Exterior error grows to147.5883
+  while bridge error falls to3730.6998. This is an auxiliary resolvent
+  equation's error, NOT Einstein-equation error or time-travel progress.
+- Conditional retained-source interval eta.01 remains
+  [-188536.43139459,3280.83638151]; eta.0001
+  [-19072765.9938537,329780.4753696]. Signs unresolved. Floating integrations,
+  no continuum enclosure, omitted insertion, angular sum or physical stress.
+- Pilot exteriororders24/32 failed ONLY unchanged globalweakskew tolerance
+  2e-8. Exactsource/result/state preserved with _quadrature_failure names.
+  Boundary identity -2integral chi chi'=1 gives GL24=.999999973518265,
+  reproducing mismatch2.64817e-8. No seam/gauge/sign defect found.
+- Successful exteriororders48/64, bridge64/80: normalized weakskew
+  3.0183e-9 nominal356,3.2663e-10 refined. Residual refinement4.43164e-10
+  relative; maximum newblock quadraturechange8.31e-11. Old344 remainsfixed.
+- --recover-quadrature authenticates exactfailedsource andinputs, reproduces
+  exterior24 bitwise, reuses bridge64, recovers bridge80 from savedrefined
+  total minusfrozencore minusreproducedexterior32. Recombination exact.
+  No bridge reassembly. Both refined regional increments now saved separately.
+-9 regional+15 field+10 driver checks PASS. Independent rawleast-squares
+  reproduces all firstresiduals within2.1e-11. Independent boundary Gram
+  agrees withbridge64 old-new terms within1.62e-11. Figures inspected.
+- New sources: dihole_residual_regions.py, dihole_mouth_fields.py,
+  dihole_mouth_enrichment.py. Successful/failure JSON,NPZ andPNG/PDF retained.
+  Report appended PHYSICAL_EUCLIDEAN_OPERATOR.md section 'Fields crossing
+  the openings and regional residuals'. Navigation updated.
+
+NEXT: target the remaining first-order residual with the new opening space.
+Use saved356 forms and residual columns to distinguish missing radial
+profiles from further mouth/angular modes; do not blindly add distant
+exterior fields. Preserve cancellations and the full action residual.
+Still need controlled omitted insertion, short-scale heat correction and
+all angular sectors before a physical source value. No regulator fitting,
+finite-basis UV shortcut or repeated existence proof. Static prescribed
+geometry has no demonstrated backward passage; support and stability alone
+would not create chronology change.13Sep2027->12Sep2027 remains unproved.
+
+Driver source SHA256:f3a4d0d6062e1793717e57bb8f642ce70295428fadb60b763c53faee7ebbfb42
+Results SHA256:490a62e74e47edd9627f566cf7d00e72f5ecfade5ca32e7f4c07c9ecdc0fb423
+State SHA256:9c7774e9ac746a520dcaa7fc82ba16cac4f51f815167d320245afccda14d0767
+
+All delegated checks finished. No simulation remains running.
+Layout/navigation/provenance PASS:143 imports,1289 links,8 historical
+guards,14 frozen hashes and operator identity. All new source/state hashes
+and historical byte-preservation checks pass. Figures inspected.
+
+--- Preserved checkpoint156 and earlier history ---
+
 # Research increment156 — proper heat response and common-filter residual
 
 Previous goal turn: PROGRESS; checkpoint155 published
