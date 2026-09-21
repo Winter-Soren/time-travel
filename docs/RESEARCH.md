@@ -1,3 +1,26 @@
+# Checkpoint153 — weighted zero states controlled on the actual geometry
+
+The outstanding zero-state condition is now proved for the specified sewn
+background. Exact dihole coefficient identities and 70-digit interval
+constants give an exterior confinement bound uniform in every position and
+half-integer angular sector. A cutoff argument proves every square-integrable
+zero state has the lapse weight required by152, including the full sum over
+angular sectors. No assumption about whether zero states exist is needed.
+
+Eight controls pass. Independent original-coordinate derivatives agree to
+5.92e-14; sampled plots illustrate the analytic all-position bound. The new
+proof closes the bounded-energy signed-mass corner, while high-energy
+subtraction, the full physical source and supported stable geometry remain
+unresolved. This is mathematical progress within established field theory,
+not a new physical law or demonstrated backward passage.
+
+See [derivation](PHYSICAL_EUCLIDEAN_OPERATOR.md#uniform-zero-state-confinement-on-the-sewn-geometry),
+[calculation](../scripts/dihole_zero_tail.py),
+[results](../results/dihole_zero_tail_results.json), and
+[visual](../figures/dihole_zero_tail_progress.png).
+
+--- Preserved checkpoint152 and earlier research ---
+
 # Checkpoint152 — a conditional joint limit and a zero-state counterexample
 
 Uniform local smoothing now upgrades bounded-energy resolvent limits to

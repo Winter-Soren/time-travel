@@ -1,5 +1,7 @@
 # A common physical Euclidean Dirac operator
 
+Update153: [uniform zero-state confinement](#uniform-zero-state-confinement-on-the-sewn-geometry) proves the weighted-zero condition for the actual sewn background, for every axial sector. This closes152's bounded-energy signed-mass limit, including possible exact zero states. The full high-energy/regulator limit and physical supporting stress remain unresolved.
+
 Update152: the [uniform low-energy limit and zero-state test](#uniform-low-energy-limit-and-zero-state-test) now prove joint convergence on bounded Hamiltonian energies if zero states are absent, or for the signed-mass average under an explicit weighted-zero density condition. That condition is not yet verified for the sewn geometry. An abstract counterexample shows why symmetry alone is insufficient; high-energy and regulator limits remain open.
 
 Update151: the [localized Green identity and proper-mass limit](#localized-green-identity-and-proper-mass-limit) below close the positive-mass correspondence and the massless limit at fixed nonzero frequency without an upper lapse bound. The joint infrared limit and stress coincidence remain unresolved. No physical supporting stress is reported.
@@ -874,3 +876,220 @@ including joint radial/axial escape. The
 [existing Melvin reference modes](../scripts/melvin_leads.py) already have
 finite polynomial lapse moments; repeating their count does not prove
 this estimate for the actual dihole-coupled and sewn zero solutions.
+
+## Uniform zero-state confinement on the sewn geometry
+
+Increment153 proves the weighted condition left open in152, for the exact
+linked calibration and the compact sewing in [133](SEWN_SOURCE_STATE.md).
+Every square-integrable zero solution obeys
+
+$$\boxed{\ker H_0\subset D(N^{1/2}).}$$
+
+This is an application of coercive Dirac estimates to the prescribed
+background. It asserts neither the existence nor the absence of zero
+states, and makes no claim of a new physical law or mathematical novelty.
+The exterior is taken from
+[Emparan's exact magnetized dihole, equations8--12](https://arxiv.org/pdf/hep-th/9906160).
+The compact horizon replacement remains our prescribed geometry, with
+its gravitational source still unknown.
+
+The [calculation](../scripts/dihole_zero_tail.py) records exact symbolic
+identities, interval-certified constants and sampled independent controls
+in [these results](../results/dihole_zero_tail_results.json).
+
+![The exact exterior confinement bound and sampled controls](../figures/dihole_zero_tail_progress.png)
+
+### Exact identities valid in every escape direction
+
+Use $D=1$, $Q=1/5$, $k=1/2$, $q=1$, and the linked $M,a_g,B$ defined in133.
+All radii below are dimensionless lengths in units of $D$. To avoid confusing
+the cylindrical radius with the prolate radial coordinate, put
+
+$$R=r-M,\quad d=R^2-k^2,\quad s=1-c^2=\rho^2/d,\quad
+b=B^2/4,\quad F=\frac1{QB}.$$
+
+For $\rho>0$, $R\ge\sqrt{\rho^2+k^2}$ and $0<s\le1$. Define the
+scalar coefficient variables $u,t$ below; they are not spinor amplitudes:
+
+$$u=\frac{2M(R+M)}d,\quad t=\frac{a_g^2s}d,\quad Z=1+u+t,$$
+$$G=\frac{(1+u)^2+t}{Z},\quad
+L=\frac{1+t+Ba_gus}{Z},\quad
+K=\frac{1+t+Ba_gus/2}{Z}.$$
+
+Direct rational simplification of the exact fields gives
+
+$$\boxed{N=L+b\rho^2G,\qquad qa=F(1-K/N),}$$
+$$\boxed{W_\mu=\frac{N^2(\mu-qa)}\rho
+=\frac{(\mu-F)N^2+FKN}\rho.}$$
+
+The linked constants satisfy $0<Ba_g<1$. Hence
+
+$$0<L,K\le1,\qquad 1\le G\le1+u,\qquad N\ge b\rho^2.$$
+
+These are exact, including $|z|\gg\rho$; no fixed-angle asymptotic limit
+has been substituted. The same expressions show the global exterior bound
+
+$$\boxed{N(\rho,z)\le1+b\rho^2+
+2bM\left(\sqrt{\rho^2+k^2}+M\right).}$$
+
+Indeed $\rho^2u=2Ms(R+M)$, and
+$(R+M)/(R^2-k^2)$ decreases for $R>k$; its maximum at fixed $\rho$ occurs
+at $R=\sqrt{\rho^2+k^2}$. Continuity extends the bound to regular axes.
+Thus bounded $\rho$ also bounds $N$ when $z$ is unbounded. The compact
+inserted bridge has bounded positive lapse.
+
+### Explicit bounds uniform in position and angular sector
+
+Let $h=R^2-k^2c^2$. Euclidean gradients in the $(\rho,z)$ plane obey
+
+$$|\nabla R|^2=d/h\le1,\qquad
+|\nabla s|^2=4s(1-s)/h\le1/h.$$
+
+For $\rho\ge1$, set $e=1-k^2=3/4$ and
+
+$$U_0=\frac{2M(1+M)}e,\quad
+U_1=\frac{2M(1+2M+k^2)}{e^2},\quad S_1=e^{-1/2},$$
+$$T_1=a_g^2(e^{-3/2}+2e^{-2}).$$
+
+Since $R\ge\rho\ge1$ and $d\ge eR^2$, differentiating the preceding
+rational functions gives
+
+$$u\le U_0/\rho,\quad |\nabla u|\le U_1/\rho^2,\quad
+|\nabla t|\le T_1/\rho^3,\quad |\nabla s|\le S_1/\rho.$$
+
+For independent nonnegative $u,t$ and $0\le s\le1$, the partial derivatives
+satisfy $0\le G_u\le1$, $|G_t|\le u$;
+$|L_u|,|K_u|\le1$, $|L_t|,|K_t|\le u$; and
+$|L_s|\le Ba_gu$, $|K_s|\le Ba_gu/2$. These follow directly from
+$G=1+u(1+u)/Z$ and $L=1-u(1-Ba_gs)/Z$, with the analogous expression for $K$.
+
+Fix $R_*=100$ and define
+
+$$A=R_*^{-2}+b(1+U_0/R_*),$$
+$$C=2b(1+U_0/R_*)+bU_1/R_*+bU_0T_1/R_*^3
++(U_1+Ba_gU_0S_1)/R_*^3+U_0T_1/R_*^5,$$
+$$K_1=U_1+Ba_gU_0S_1/2+U_0T_1/R_*^2.$$
+
+The chain rule then proves, for every $\rho\ge R_*$ and every $z$,
+
+$$N\le A\rho^2,\qquad |\nabla N|\le C\rho,\qquad
+|\nabla K|\le K_1/\rho^2.$$
+
+Put
+
+$$A_1=2AC+A^2,\qquad A_0=\frac{F}{R_*^2}(C+A+AK_1/R_*).$$
+
+Differentiating the exact $W_\mu$ identity proves
+
+$$|\nabla W_\mu|\le(|\mu-F|A_1+A_0)\rho^2.$$
+
+The 70-digit outward interval calculation encloses
+$20.5<F<21$, so the distance from every allowed half-integer is at least
+$g=F-20.5\simeq0.3155163204344487$. It certifies both positive margins
+
+$$bR_*^2-2F/g>12.30,$$
+$$b^4R_*^4/8-A_1/g-A_0/g^2>0.5368.$$
+
+The first inequality and $K\le1$ imply
+$|W_\mu|\ge|\mu-F|N^2/(2\rho)$, for either sign of $\mu-F$.
+The second dominates the gradient term by half of this squared lower bound.
+Because $0<v=N/P\le1$, the result is
+
+$$\boxed{W_\mu^2-v|\nabla W_\mu|\ge c_*\rho^6,
+\qquad c_*=\frac{g^2b^4}{8}\simeq5.387362967147425\times10^{-10}.}$$
+
+This holds for **every** $z\in\mathbb R$ and
+$\mu\in\mathbb Z+1/2$ when $\rho\ge100$. The decimal is for display;
+the proof uses the exact expression and its interval enclosure. The
+radius100 is a conservative sufficient cutoff, not an opening size or
+an optimized confinement radius. No finite-channel truncation appears
+in this assertion.
+
+### Cutoff proof for exact sewn zero states
+
+In the canonical normalization, write
+
+$$H_\mu=D_v+\sigma_yW_\mu,\qquad
+D_v=-i\sigma_x(v\partial_\rho+v_\rho/2)
+-i\sigma_z(v\partial_z+v_z/2).$$
+
+For compact smooth test spinors supported at $\rho>R_*$, the Pauli
+anticommutation relations give the exact multiplication operator
+
+$$\{D_v,\sigma_yW_\mu\}
+=v(\sigma_z\partial_\rho W_\mu-\sigma_x\partial_zW_\mu).$$
+
+All first derivatives of the test spinor and the connection terms
+proportional to $\nabla v$ cancel in this cross term. Consequently
+
+$$\|H_\mu f\|^2=\|D_vf\|^2+\|W_\mu f\|^2
++\langle f,v(\sigma_z W_{\mu,\rho}-\sigma_x W_{\mu,z})f\rangle$$
+$$\boxed{\|H_\mu f\|^2\ge c_*\int\rho^6|f|^2\,d\rho\,dz.}$$
+
+There is no need to expand $D_v^2$ or assume separate global square
+integrability of $D_v\psi$ and $W_\mu\psi$.
+
+Let $\psi_\mu$ be an actual global sewn $L^2$ zero solution in the canonical
+representation. Local elliptic regularity makes it smooth. Choose a smooth
+radial cutoff $\chi_R$, zero below $R\ge R_*$ and one above $2R$, with
+$|\chi_R'|\le2/R$. Let $\eta_n$ be compact Euclidean exhaustions tending
+pointwise to1, with $|\nabla\eta_n|\le2/n$. Then
+$f_n=\chi_R\eta_n\psi_\mu$ is a genuine compact smooth section supported
+away from the axes, openings and sewn interfaces. Since $H_\mu\psi_\mu=0$,
+
+$$H_\mu f_n=-iv(\sigma_x\partial_\rho+\sigma_z\partial_z)
+(\chi_R\eta_n)\psi_\mu.$$
+
+The commutator bound $v\le1$ and the quadratic estimate imply
+
+$$c_*\int\rho^6\chi_R^2\eta_n^2|\psi_\mu|^2\,d\rho\,dz
+\le(8/R^2+8/n^2)\|\psi_\mu\|^2.$$
+
+Fatou's lemma gives the stronger-than-required radial moment
+
+$$\boxed{\int_{\rho\ge2R}\rho^6|\psi_\mu|^2\,d\rho\,dz
+\le\frac8{c_*R^2}\|\psi_\mu\|^2.}$$
+
+On the remaining exterior strip, the global lapse bound above is finite;
+on the inserted bridge its maximum is finite by compactness. Outside the
+strip, $N\le A\rho^2$. Thus one constant $C_*$, independent of $\mu$,
+satisfies
+
+$$\|N^{1/2}\psi_\mu\|^2\le C_*\|\psi_\mu\|^2.$$
+
+The reducing axial projections commute with $N$ and these cutoffs. Apply
+this estimate to finite sums of projected zero states and then use Parseval
+and monotone convergence. Both Weyl blocks obey the same zero equation;
+the canonical half-density change commutes with $N$. We obtain
+$\ker H_0\subset D(N^{1/2})$ for the full physical Hilbert space, with a
+uniform bound on the kernel. This includes either of the fixed handle
+phases because they change only the compact bridge.
+
+### Consequence, verification and remaining source calculation
+
+The sufficient weighted-zero density premise in152 is now verified for
+this background. Its signed-mass averaged joint bounded-Hamiltonian-energy
+corner converges locally in trace norm and in every finite differentiated
+kernel norm, including possible exact zero states. The specified full-Dirac
+metric probe has the zero-state cancellation established there. This does
+not identify the states for other observables or supply a quantitative rate
+for the complete spectral limit.
+
+Eight executable controls pass. The exact symbolic lapse/gauge identities
+and Pauli cross term are checked; the all-position/all-sector constants
+have 70-digit outward interval enclosures. Independent original-coordinate
+field and derivative formulas agree to $5.92\times10^{-14}$ relative error.
+Sampled radii100 through100000, $z/\rho$ through $10^9$, and six sectors
+including the two nearest the flux obey the certified inequalities.
+Those samples illustrate the analytic bound; they do not establish its
+continuum scope. An initial syntax error in the check dictionary was fixed
+before any result file was produced. Independent audits checked the
+coefficient estimates and domain/cutoff argument.
+
+The next unresolved contribution is high Hamiltonian energy at small
+frequency, with the common physical ultraviolet subtraction retained.
+Low Hamiltonian energy is not low proper-$P$ energy. Full fixed-$M$ source
+convergence, spatial remainders, and the specified $M\to\infty$ subtraction
+limit remain open. No physical source value, self-consistent stable bridge,
+obtainable material, or passage from13September2027 to12September2027 follows
+from this weighted estimate.

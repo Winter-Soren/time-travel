@@ -1,3 +1,65 @@
+# Authoritative checkpoint153 — actual zero-state confinement proved
+
+Previous goal turn: NO PROGRESS (status answer only). Revalidated published
+checkpoint152 ebe4732c5334c08f2bbf9d0fdfcdc891efe7c0ef, then performed the next
+actual-geometry test. Goal ACTIVE, unachieved. Import remains complete.
+No new law, obtainable matter, physical supporting stress, stable bridge or
+13Sep2027->12Sep2027 passage. Scalar-clock rejection150 remains valid.
+
+- Exact actual exterior identities: R=r-M,d=R²-k²,s=rho²/d,b=B²/4,F=1/(QB).
+  Scalar u=2M(R+M)/d,t=a_g²s/d,Z=1+u+t;
+  G=((1+u)²+t)/Z,L=(1+t+B*a_g*u*s)/Z,K=(1+t+B*a_g*u*s/2)/Z.
+  N=L+b*rho²G; qa=F(1-K/N); W_mu=((mu-F)N²+FKN)/rho.
+  0<B*a_g<1 gives0<L,K<=1,1<=G<=1+u,N>=b*rho².
+- Explicit gradients uniform ALL z: N<=A*rho²,|gradN|<=C*rho,
+  |gradK|<=K1/rho² forrho>=100. Analytic constants from exact prolate
+  gradients; no fixedangle or reference-Melvin substitution.
+- 70digit outward intervals at linked Q1/5,D1,q1 prove20.5<F<21,
+  g=F-20.5=.3155163204344487 is minimum distance to all halfintegers.
+  Positive dominance margins>12.30 and>.5368 certify ALLmu,ALLz:
+  W_mu²-v|gradW_mu|>=cstar*rho6, cstar=g²*b4/8=5.387362967147425e-10,
+  forrho>=100. Display decimals not the interval certificate.
+- Exact cross term {Dv,sigma_y W}=v(sigma_z W_rho-sigma_x W_z);
+  vderivatives cancel. ||Hf||²>=cstar integralrho6|f|² for compactf
+  farfromaxis/seams. No assumption Du or Wu individuallyL2 onzeros.
+- For exactzero psi_mu, radialcutoffchi_R and Euclideanexhaustioneta_n:
+  H(chi eta psi)=[H,chi eta]psi; v<=1 and Fatou prove
+  integralrho>=2R rho6|psi|² <=8/(cstar R²)||psi||².
+- GLOBAL exterior N<=1+b*rho²+2bM(sqrt(rho²+k²)+M), including axes
+  bycontinuity. Compact sewn region has boundedpositiveN.
+  Gives uniforminmu ||sqrtN psi_mu||²<=Cstar||psi_mu||².
+  Reducing axial sums, Parseval and monotoneconvergence prove stronger
+  kerH0 subset D(sqrtN), not merely denseweightedzeros. BothWeylblocks
+  and either fixedhandlephase covered. No kernel existence/absence claim.
+- Thus152 weightedzero premise now VERIFIED on actualsewnbackground.
+  Its signedmass averaged boundedH jointcorner converges locally in
+  trace norm and arbitrary finite differentiatedkernel norms includingzeros.
+  This is not the highH or lowproperP argument; no fullsource value.
+- New scripts/dihole_zero_tail.py:8checksPASS. Exactsymboliclapse/gauge,
+  Pauliidentity, allsector/position intervalconstants, originalfield/gradient
+  maxrelativeerror5.915e-14, sampledcontrol z/rho up to1e9.
+  Sampledcoercivity min2.4467 timesanalyticbound, gradientmax.59260 ofbound.
+  Samples illustrate proof, not continuum certificate. Initialsyntaxerror
+  in checkdictionary fixed before any result written. Figure inspected.
+- Independent coefficient and cutoff/domain audits agree. Report appended
+  docs/PHYSICAL_EUCLIDEAN_OPERATOR.md section 'Uniform zero-state confinement
+  on the sewn geometry'. Earlier source/result assets remain unchanged.
+
+NEXT: high-H contribution at small frequency with common physical UV
+subtraction. Do NOT redo conditional152 or weightedzero153; lowH is NOT
+lowproperP. Need full fixedM source, spatial remainders and specified M->inf
+subtraction limit, then physical source/gravity/stability/chronology tests.
+The source-prescription issue is the next dependency, not another basis sweep.
+
+Source SHA256:1bd14e40de1c5b5752a81eb92e003e743c0c2b2176f0476517a5ddf71361a72d
+Result SHA256:6e4070fab4a8b2c032173306ef83251c370d1a7583a85868528a89ca127c0747
+
+Verification PASS:136 imports,1230 local Markdown links,8 historical guards,
+14 frozen pilot hashes, operator identity, exact new source/input hashes,
+historical byte suffixes, and whitespace. No historical physics rerun.
+
+--- Preserved checkpoint152 and earlier history ---
+
 # Authoritative checkpoint152 — joint low-energy limit and zero-state criterion
 
 Previous goal turn: PROGRESS; checkpoint151 published
