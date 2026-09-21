@@ -1,5 +1,7 @@
 # Directory guide
 
+Current increment149: [tilted-clock throat and horizon](docs/TILTED_CLOCK_THROAT.md), [local driver](scripts/tilted_clock_throat.py), [extension driver](scripts/tilted_clock_extension.py), [diagnostic driver](scripts/tilted_clock_diagnostics.py), and [visual](figures/tilted_clock_diagnostics_progress.png). Local and separate short horizon checks pass; the [long extension fails its accuracy target](results/tilted_clock_extension_results.json). The report links all saved states and source hashes. No stable global passage is established.
+
 Current increment148: [throat source budget and static-branch rejection](docs/THROAT_SOURCE_BUDGET.md), [calculator](scripts/throat_source_budget.py), [results](results/throat_source_budget_results.json), and [visual](figures/throat_source_budget_progress.png). Eleven checks pass using saved states; a published no-go theorem and the specific density bound exclude the static aligned completion. A tilted-clock source is the next hypothesis, not an established medium.
 
 Current increment147: [nonlinear evolution and null stress](docs/NONLINEAR_PACKET_EVOLUTION.md), [calculation](scripts/nonlinear_packet_evolution.py), [results](results/nonlinear_packet_evolution_results.json), [saved states](data/nonlinear_packet_evolution_state.npz), and [visual](figures/nonlinear_packet_evolution_progress.png). Eighteen checks pass through Ht=0.5; no stable bridge or backward passage is established. [Failed numerical pilots](results/nonlinear_packet_evolution_fd_trial.json) and their provenance sources are retained.

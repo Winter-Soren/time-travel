@@ -1,0 +1,123 @@
+{
+  "complete": true,
+  "passed": false,
+  "checks": {
+    "saved_provenance": true,
+    "through_flow_coordinate_equivalence": true,
+    "through_flow_constraint": true,
+    "through_flow_regular_scalar_chart": true,
+    "through_flow_crossed_horizon": true,
+    "through_flow_refinement": true,
+    "flow_reversal_coordinate_equivalence": true,
+    "flow_reversal_constraint": true,
+    "flow_reversal_regular_scalar_chart": true,
+    "flow_reversal_crossed_horizon": true,
+    "flow_reversal_refinement": false
+  },
+  "branches": {
+    "through_flow": {
+      "initial_throat_radius": 142.8790104571619,
+      "stop_reason": "derivative_limit",
+      "coordinate_endpoint": 607.4101438815062,
+      "horizon_positions": [
+        0.7048081757273005
+      ],
+      "horizons": [
+        {
+          "x": 0.7048081757273005,
+          "r": 141.76937624416652,
+          "X": 0.8116504465148288,
+          "theta": 0.09203731912482703,
+          "A_derivative": -0.014235689423542012,
+          "mixed_stress_eigenvalues": [
+            -0.484105750241272,
+            -0.484105750241272,
+            -0.650730517198815
+          ],
+          "advanced_radial_stress": -0.08452566656344938
+        }
+      ],
+      "final_radius_over_throat": 0.8828425336963454,
+      "final_A": -29.85602635954095,
+      "minimum_X": 0.43723154588219004,
+      "maximum_X": 1.5642293648173684,
+      "maximum_abs_theta": 0.2999999999999998,
+      "maximum_Kretschmann_fourth_root": 0.0671730729814177,
+      "maximum_constraint_residual": 5.362369437378334e-10,
+      "maximum_scalar_norm_residual": 6.661338147750939e-16,
+      "proper_coordinate_transform_error": 9.930966639315475e-15,
+      "refinement_maximum_errors": {
+        "r": 4.298783551348606e-10,
+        "r_x": 7.146703784322028e-10,
+        "A_x_over_two": 1.8252475225688514e-10,
+        "W": 3.9183355227123684e-08,
+        "chi": 6.328800255268191e-07,
+        "Q": 4.412670100428784e-07
+      },
+      "refinement_endpoint_difference": 1.1154850199091015e-07,
+      "rhs_evaluations": 115091,
+      "scope": "Finite continuation across the chart horizon. No global asymptotic state, future completeness, stability or time travel follows."
+    },
+    "flow_reversal": {
+      "initial_throat_radius": 141.4567216273315,
+      "stop_reason": "finite_coordinate_limit",
+      "coordinate_endpoint": 4000.0,
+      "horizon_positions": [
+        0.7090786463745729
+      ],
+      "horizons": [
+        {
+          "x": 0.7090786463745729,
+          "r": 141.4959369644309,
+          "X": 0.9790069287795005,
+          "theta": 0.0017424181022792757,
+          "A_derivative": -0.014139886971405774,
+          "mixed_stress_eigenvalues": [
+            -0.4997368731557468,
+            -0.4997368731557468,
+            -0.5202951799078601
+          ],
+          "advanced_radial_stress": -0.020126724754293307
+        }
+      ],
+      "final_radius_over_throat": 0.991146911384048,
+      "final_A": -863.0640639078568,
+      "minimum_X": 0.851947642733035,
+      "maximum_X": 1.146444837955355,
+      "maximum_abs_theta": 0.08086594913360201,
+      "maximum_Kretschmann_fourth_root": 0.16678982020178265,
+      "maximum_constraint_residual": 4.483393101217814e-10,
+      "maximum_scalar_norm_residual": 8.881784197001252e-16,
+      "proper_coordinate_transform_error": 9.719818266223923e-15,
+      "refinement_maximum_errors": {
+        "r": 4.3613397338049253e-08,
+        "r_x": 4.4755539949006135e-09,
+        "A_x_over_two": 2.7706956312600894e-08,
+        "W": 2.552825186796781e-07,
+        "chi": 1.876700359181721e-05,
+        "Q": 1.4834022051379847e-05
+      },
+      "refinement_endpoint_difference": 0.0,
+      "rhs_evaluations": 4009244,
+      "scope": "Finite continuation across the chart horizon. No global asymptotic state, future completeness, stability or time travel follows."
+    }
+  },
+  "source_sha256": "558bfa91512dfd42ecea8d400d18f8c296d76220a1e8de26af5d2e8a7535a9c3",
+  "state_sha256": "b0a4db0c9e278e758f332f643b88db1bfb69ed72f33a316ce865db3a50e92b04",
+  "inputs_sha256": {
+    "tilted_clock_throat.py": "481d052af4d3f76be94c6e10c213e778433210574ee8545ad13a4b512e611652",
+    "tilted_clock_throat_results.json": "8d5f01d9a58142885eec279134f0ddd92de240ee1b2fc6f131aed6e9184865f2",
+    "tilted_clock_throat_state.npz": "72d9156856102b14a774ddb6ac5c0c8f889db5a2849e38f14e7f62948ad3a5c1",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "parameters": {
+    "P": 10000.0,
+    "vacuum": 0.4998500227010054,
+    "alpha": 1.0,
+    "minimum_radius_fraction": 0.1,
+    "minimum_X": 0.1,
+    "maximum_X": 3.0,
+    "maximum_abs_theta": 0.3
+  },
+  "calculation_type": "New horizon-regular equations initialized from saved149 endpoints; no rerun of the proper-distance integration."
+}

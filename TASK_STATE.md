@@ -1,3 +1,86 @@
+# Authoritative checkpoint149 — tilted source, local throat and horizon; long-tail failure
+
+Previous goal turn: PROGRESS, checkpoint148 published
+07c78c492ee1db06524a3963c7ad9a6a1036b945. Goal ACTIVE, unachieved.
+Import complete. No new law, obtainable material, stable global bridge or past travel.
+
+- Same action144 with stationary tilted phi=q*t+psi(l). Auxiliary chi=-2alphaXTheta
+  makes matter first-derivative: F+gradphi.gradchi/s+chi²/(4alphaX), Lambda1.
+  Independent covariant current/stress variation proves T^l_t=-q J^l off shell.
+  Static metric forces zero net current, not zero tilt. Derivative flux cancels.
+- Define w=psi_l/s, X=q²/[2N²(1+w²)], V=chi²/(4alphaX),
+  B=(F_X-V/X)/(1+w²). Exact pr=F+V,rho=2XB-pr,pt=pr+2XB*w².
+  chi_l=2XBw; w_l=chi/(2alphaX)-(n+2r_l/r)w, n=N_l/N.
+  Einstein r_ll=(1-r_l²-rho*r²/P)/(2r), n_l=pt/P-n²-n*r_l/r-r_ll/r.
+  Radial Einstein constraint checked independently. Ellis anisotropy still fails.
+- Conditional no-go: for w!=0 everywhere and z=chi/w,
+  [(z+2P*r_l/r)/(N*r²)]_l=-z²/(2alphaXNr²)-6P*r_l²/(Nr4)<=0.
+  If bracket tends0both complete ends, no flare. Do not assume this boundary
+  limit from separate chi/w decay. A regular reversal w0=0,chi0!=0 has
+  z~2alphaX0/l; original fields smooth, proof quotient singular. Outside no-go.
+- scripts/tilted_clock_throat.py integrates two constraint-compatible seeds:
+  throughflow X.8,w1,chi0,r0=142.8790105; reversal X1,w0,chi.02,r0=141.4567216.
+  Both N1,n0,r_l0. Reversal nullstress=-.0002,flare=.00040020008,w_l0=.01,
+  n_l0=-rhoVac/P. Parity w odd; chi,X,N,r even. Throat imposed, not formed.
+- Fourteen checks PASS. Finite static patches stop atN.1 aroundl208/Lambda.
+  Reversal r/r0=1.00027619; throughflow .99230085. Constraints<1.4e-14;
+  refinement<7.4e-13. Original current/stress and conservation checks pass.
+  One JSON numpy-bool export defect fixed before successful run; no physics change.
+- scripts/tilted_clock_extension.py reuses saved endpoints, no149 rerun.
+  Regular x coordinate dx=Ndl; A=N²,R=r_l/N,k=N_l,W=Nw,Q=A+W²=q²/(2X).
+  Hx=X*F_X-V. r_x=R,R_x=-r*Hx/(P*Q),k_x=(pt+Hx*A/Q)/P-2kR/r,
+  W_x=chi/(2alphaX)-2RW/r,chi_x=2HxW/Q,Q_x=2k+2W*W_x.
+  Constraint obeys C_x=-2R*C/r. Independent agent verified all equations.
+- Both patches crossA0 with finite field and regular advanced EF stress.
+  For q>0,W>0, phi_x|v=-2X/(sqrt(2X)*W+q). This selects one horizon branch.
+  Future/past access not determined. Scalar cannot cover a bifurcation sphere
+  smoothly when K.gradphi=q!=0. For A<0, x is temporal; rho_formal and
+  null_formal are NOT physical static-frame quantities. Physical diagonal
+  T-region density=-pr, longitudinalpressure=-rho_formal, nullsum=-null_formal.
+- LONG EXTENSION FAILED:10/11 checks pass. Reversal atx4000 has chi/Q
+  refinement differences1.8767e-5/1.4834e-5, above1e-6 target. About4million
+  baselineRHS evaluations. Preserve original failedJSON/state/source; no claims
+  of global accuracy or physical singularity. Throughflow stops when|Theta|=.3
+  atx607.4101; that selected threshold is not a proven EFT cutoff.
+- scripts/tilted_clock_diagnostics.py preserves parentfailure and performs
+  separate x0..5 integrations. Both checks PASS:state differences<3.5e-13,
+  horizonlocation<1.4e-13,constraints<1.5e-14. Reversalhorizonx=.7090786464
+  from savedN.1endpoint. This does NOT replace failed long-tail coverage.
+- Properclock derivative audit reveals smallTheta alone insufficient:
+  DuTheta=-W*Theta_x,DeTheta=sqrtQ*Theta_x,Du logX=-W*X_x/X.
+  In savedreversal first samplesabove1 atx657.5(DuTheta) and462.5(DulogX);
+  maxima~71 and125. Samples, not rigorous crossings/suprema; distanttail
+  unconverged. Nearhorizon maxima.01427 and.02928. True EFT validity unresolved.
+- Exact constant-radius control: z>0 solves3z²+(P+1)z-rhoVac=0,
+  X=1+2z,chi=2Xsqrtz,r=1/sqrtz,Q1,W=sqrtz*x,k=-z*x,R0.
+  ZeroNEC/noflare; verified both sidesA0 to1.2e-16. Explains nearlycylindrical
+  local geometry; not a discovered law or substitute for the throat stability.
+- Reportdocs/TILTED_CLOCK_THROAT.md includes full derivations and limits.
+  Local and horizon figures inspected. No live simulation; agents finished.
+
+NEXT PHYSICAL DECISION: classify causal access through the selected horizons
+and derive perturbation equations on this ACTUAL tilted throat. Do not spend
+more long-tail refinement where proper derivatives already exceed nominal
+Lambda. The local solution needs stability and meaningful controlled global
+ends; clock sign selects a horizon branch. No formed/obtainable medium or
+13Sep2027->12Sep2027 passage. Existing Dirac route remains incomplete.
+
+149 source SHA256:481d052af4d3f76be94c6e10c213e778433210574ee8545ad13a4b512e611652
+149 result SHA256:8d5f01d9a58142885eec279134f0ddd92de240ee1b2fc6f131aed6e9184865f2
+149 state SHA256:72d9156856102b14a774ddb6ac5c0c8f889db5a2849e38f14e7f62948ad3a5c1
+Extension source SHA256:558bfa91512dfd42ecea8d400d18f8c296d76220a1e8de26af5d2e8a7535a9c3
+Extension result SHA256:855daac2ae3e3a56b8de88617093810167cebbfedeab2b75295a151e296892c3
+Extension state SHA256:b0a4db0c9e278e758f332f643b88db1bfb69ed72f33a316ce865db3a50e92b04
+Diagnostic source SHA256:0094e4d07f3dc4cea5e2f35ccd1551ea53c64b42cc9c0fde670270690123e6f4
+Diagnostic result SHA256:ec8dc1c224c3ac990bb3befc341a07d2effdc78400c349119600f7dc73c6aa9d
+Diagnostic state SHA256:4d42fd832702a5dd7b81b80b1d32d4edd5ed96c51be537eeab95414828bb49b8
+
+Final verification:132 imports,1165 local links, historical guards/operator identity
+PASS. All three source/input/state hashes exact; original failed extension kept.
+Historical byte suffixes and diff whitespace verified. No physics rerun for docs.
+
+--- Preserved checkpoint148 and earlier history ---
+
 # Authoritative checkpoint148 — throat source budget and static-branch rejection
 
 Previous checkpoint147 published b54ea49293e7ee9812d46fe2bdf91ec12bed5362.

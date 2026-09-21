@@ -1,3 +1,26 @@
+# Checkpoint149 — tilted-clock throat and regular horizon; global result unresolved
+
+The same action with a radially flowing clock admits a local self-consistent
+throat. Its derivative source cancels net radial energy flux. A conditional
+through-flow obstruction is derived; a regular flow reversal lies outside it.
+Fourteen finite-patch checks pass. Regular coordinates continue the field
+and metric through a selected horizon, with separate short refinement checks.
+
+The long reversing continuation FAILS its1e-6 accuracy target, and proper
+field derivatives become large relative to nominalLambda. That failed result
+is preserved and not replaced by the short checks. No global completeness,
+stability, new physical law, obtainable material or backward passage follows.
+The next test is causal access and perturbation dynamics of the actual throat,
+not further integration of its uncontrolled distant tail.
+
+See [derivation and limits](TILTED_CLOCK_THROAT.md),
+[local results](../results/tilted_clock_throat_results.json),
+[retained extension failure](../results/tilted_clock_extension_results.json),
+[separate diagnostics](../results/tilted_clock_diagnostics_results.json), and
+[near-horizon visual](../figures/tilted_clock_diagnostics_progress.png).
+
+--- Preserved checkpoint148 and earlier research ---
+
 # Checkpoint148 — source budget and global static-branch decision
 
 The saved nonlinear source is 396,208 times weaker in negative radial null

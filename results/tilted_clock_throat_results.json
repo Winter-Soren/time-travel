@@ -1,0 +1,167 @@
+{
+  "complete": true,
+  "passed": true,
+  "checks": {
+    "through_flow_finite": true,
+    "through_flow_constraint": true,
+    "through_flow_current_and_flux": true,
+    "through_flow_covariant_stress": true,
+    "through_flow_conservation": true,
+    "through_flow_refinement": true,
+    "flow_reversal_finite": true,
+    "flow_reversal_constraint": true,
+    "flow_reversal_current_and_flux": true,
+    "flow_reversal_covariant_stress": true,
+    "flow_reversal_conservation": true,
+    "flow_reversal_refinement": true,
+    "flow_reversal_regular_center": true,
+    "both_initial_throats_flare": true
+  },
+  "parameters": {
+    "P": 10000.0,
+    "alpha": 1.0,
+    "vacuum": 0.4998500227010054,
+    "units": "Lambda=1",
+    "maximum_proper_distance": 400.0,
+    "stops": {
+      "minimum_lapse": 0.1,
+      "minimum_radius_fraction": 0.1,
+      "minimum_X": 0.1,
+      "maximum_X": 3.0,
+      "maximum_abs_theta": 0.3
+    }
+  },
+  "branches": {
+    "through_flow": {
+      "end_distance_times_cutoff": 208.5708731392959,
+      "nfev": 15662,
+      "throat_radius_times_cutoff": 142.8790104571619,
+      "q_squared": 3.2,
+      "initial": {
+        "X": 0.8,
+        "F": -0.4898500227010054,
+        "V": 0.0,
+        "B": -0.04999999999999999,
+        "null": -0.07999999999999999,
+        "pr": -0.4898500227010054,
+        "rho": 0.40985002270100546,
+        "pt": -0.5698500227010054,
+        "theta": -0.0
+      },
+      "final": {
+        "X": 0.7558278218383297,
+        "F": -0.4849450095539518,
+        "V": 0.0012509077001423487,
+        "B": -0.0005845435655429387,
+        "null": -0.0008836285798278607,
+        "pr": -0.48369410185380945,
+        "rho": 0.4828104732739816,
+        "pt": -0.6698644142477221,
+        "theta": 0.0406818969964667
+      },
+      "final_radius_over_throat": 0.9923008525626494,
+      "maximum_radius_over_throat": 1.0000402164744109,
+      "final_lapse": 0.09999999999999998,
+      "minimum_lapse": 0.09999999999999998,
+      "minimum_X": 0.7434771713226288,
+      "maximum_X": 1.2542825258508723,
+      "maximum_abs_theta": 0.13405323407845526,
+      "minimum_radius_derivative": -0.00909559654437733,
+      "maximum_radius_derivative": 0.0015301125611656427,
+      "noncentral_tilt_sign_changes": 0,
+      "throat_flare": 0.16331529303374226,
+      "maximum_constraint_residual": 1.3933298959045715e-14,
+      "maximum_original_current_residual": 8.881784197001252e-16,
+      "maximum_original_flux_residual": 6.411537967210279e-15,
+      "maximum_covariant_stress_residual": 6.439293542825908e-15,
+      "maximum_conservation_residual": 2.8392544391964147e-18,
+      "finite": true,
+      "scope": "Sampled finite static patch. No global ends, perturbation stability, EFT completion or chronology change established.",
+      "seed": {
+        "X": 0.8,
+        "w": 1.0,
+        "chi": 0.0
+      },
+      "stop_reason": "lapse_cut",
+      "refinement_maximum_absolute_errors": {
+        "r": 7.389644451905042e-13,
+        "r_prime": 2.4858587410747646e-15,
+        "log_N": 2.6645352591003757e-15,
+        "log_N_prime": 1.6653345369377348e-16,
+        "w": 3.863576125695545e-14,
+        "chi": 5.0431880893597736e-14
+      },
+      "refinement_endpoint_difference": 2.842170943040401e-14
+    },
+    "flow_reversal": {
+      "end_distance_times_cutoff": 208.00749370313844,
+      "nfev": 15617,
+      "throat_radius_times_cutoff": 141.4567216273315,
+      "q_squared": 2.0,
+      "initial": {
+        "X": 1.0,
+        "F": -0.4998500227010054,
+        "V": 0.0001,
+        "B": -0.0001,
+        "null": -0.0002,
+        "pr": -0.49975002270100544,
+        "rho": 0.49955002270100546,
+        "pt": -0.49975002270100544,
+        "theta": -0.01
+      },
+      "final": {
+        "X": 0.9728420543588893,
+        "F": -0.499665634198144,
+        "V": 4.812127020285761e-05,
+        "B": -0.00013258317085035456,
+        "null": -0.00025796496860694905,
+        "pr": -0.49961751292794115,
+        "rho": 0.4993595479593342,
+        "pt": -0.5258761821294051,
+        "theta": -0.007033109403238659
+      },
+      "final_radius_over_throat": 1.0002761897529777,
+      "maximum_radius_over_throat": 1.0002761897529777,
+      "final_lapse": 0.09999999999999998,
+      "minimum_lapse": 0.09999999999999998,
+      "minimum_X": 0.9728420543588893,
+      "maximum_X": 1.027047134526598,
+      "maximum_abs_theta": 0.02061988476194896,
+      "minimum_radius_derivative": -2.0102517489948406e-05,
+      "maximum_radius_derivative": 0.0008684647527967163,
+      "noncentral_tilt_sign_changes": 0,
+      "throat_flare": 0.0004002000818710471,
+      "maximum_constraint_residual": 1.3711254354120683e-14,
+      "maximum_original_current_residual": 5.551115123125783e-17,
+      "maximum_original_flux_residual": 8.153200337090993e-16,
+      "maximum_covariant_stress_residual": 8.881784197001252e-16,
+      "maximum_conservation_residual": 3.4777485365811964e-19,
+      "finite": true,
+      "scope": "Sampled finite static patch. No global ends, perturbation stability, EFT completion or chronology change established.",
+      "seed": {
+        "X": 1.0,
+        "w": 0.0,
+        "chi": 0.02
+      },
+      "stop_reason": "lapse_cut",
+      "refinement_maximum_absolute_errors": {
+        "r": 3.979039320256561e-13,
+        "r_prime": 1.1263640844680345e-15,
+        "log_N": 1.5987211554602254e-14,
+        "log_N_prime": 8.604228440844963e-16,
+        "w": 1.8829382497642655e-13,
+        "chi": 6.0298988024953815e-15
+      },
+      "refinement_endpoint_difference": 2.2737367544323206e-13
+    }
+  },
+  "source_sha256": "481d052af4d3f76be94c6e10c213e778433210574ee8545ad13a4b512e611652",
+  "state_sha256": "72d9156856102b14a774ddb6ac5c0c8f889db5a2849e38f14e7f62948ad3a5c1",
+  "inputs_sha256": {
+    "nonlinear_packet_constraints.py": "5d5af618813717c5f34d5c5429789ee345f2b7c9e0bb0e5bf68b1a694ff428c2",
+    "expanding_field_completion.py": "9031efdfb575046c6e3935d9e444dd505cbb2cdfa64686605c2e553b5ff27a97",
+    "expanding_field_completion_results.json": "611eafd4a4fdf1446f39510d85648e650e5bc9f01a58fd22d28087054055eb29",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "scope": "First-order stationary zero-current field plus Einstein equations. A finite local throat continuation is not a global solution or stable supporting material."
+}

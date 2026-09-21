@@ -1,0 +1,97 @@
+{
+  "near_horizon_checks_passed": true,
+  "parent_long_extension_passed": false,
+  "global_medium_established": false,
+  "exact_constant_radius_control": {
+    "radius": 141.44964401515512,
+    "X": 1.0000999600070406,
+    "chi": 0.014140720776927348,
+    "z": 4.9980003520348285e-05,
+    "maximum_residual": 1.1543500530453166e-16,
+    "scope": "Exact constant-radius, zero-null-stress control; no flaring throat."
+  },
+  "near_horizon": {
+    "through_flow": {
+      "interval": [
+        0.0,
+        5.0
+      ],
+      "maximum_refinement_error": 3.410605131648481e-13,
+      "horizon_position_error": 1.3067324999838092e-13,
+      "horizon": 0.7048081757271165,
+      "maximum_constraint_residual": 1.4099832412739488e-14,
+      "maximum_abs_DuTheta": 0.1336908934436773,
+      "maximum_abs_Du_logX": 0.26211014249982356,
+      "minimum_X": 0.7558278218383297,
+      "maximum_X": 1.2590616003180242,
+      "passed": true,
+      "scope": "Separate finite near-horizon check. The longer integration failure remains in force."
+    },
+    "flow_reversal": {
+      "interval": [
+        0.0,
+        5.0
+      ],
+      "maximum_refinement_error": 1.9895196601282805e-13,
+      "horizon_position_error": 1.0558220964185239e-13,
+      "horizon": 0.7090786463745489,
+      "maximum_constraint_residual": 1.459943277382081e-14,
+      "maximum_abs_DuTheta": 0.014267456150963335,
+      "maximum_abs_Du_logX": 0.02928184472607143,
+      "minimum_X": 0.9728417968601497,
+      "maximum_X": 1.0276584671074467,
+      "passed": true,
+      "scope": "Separate finite near-horizon check. The longer integration failure remains in force."
+    }
+  },
+  "saved_derivative_diagnostics": {
+    "through_flow": {
+      "abs_DuTheta_over_Lambda2": {
+        "maximum_saved": 8.508592711274202,
+        "first_saved_sample_above_one": 207.278711599564
+      },
+      "abs_DeTheta_over_Lambda2": {
+        "maximum_saved": 1.5494349062006636,
+        "first_saved_sample_above_one": 441.1316169939439
+      },
+      "abs_Du_logX_over_Lambda": {
+        "maximum_saved": 11.271810786526247,
+        "first_saved_sample_above_one": 145.7784345315615
+      },
+      "acceleration_over_Lambda": {
+        "maximum_saved": 1.229845415134018,
+        "first_saved_sample_above_one": 520.0949356985398
+      }
+    },
+    "flow_reversal": {
+      "abs_DuTheta_over_Lambda2": {
+        "maximum_saved": 70.98631521567897,
+        "first_saved_sample_above_one": 657.5
+      },
+      "abs_DeTheta_over_Lambda2": {
+        "maximum_saved": 2.2696403302250667,
+        "first_saved_sample_above_one": 2262.5
+      },
+      "abs_Du_logX_over_Lambda": {
+        "maximum_saved": 125.15760445228628,
+        "first_saved_sample_above_one": 462.5
+      },
+      "acceleration_over_Lambda": {
+        "maximum_saved": 2.1548445035922628,
+        "first_saved_sample_above_one": 2365.0
+      }
+    }
+  },
+  "derivative_scope": "Sampled nominal-scale indicators, not suprema or the actual EFT cutoff. The long reversing branch is unconverged at the requested tolerance.",
+  "source_sha256": "0094e4d07f3dc4cea5e2f35ccd1551ea53c64b42cc9c0fde670270690123e6f4",
+  "inputs_sha256": {
+    "tilted_clock_extension.py": "558bfa91512dfd42ecea8d400d18f8c296d76220a1e8de26af5d2e8a7535a9c3",
+    "tilted_clock_extension_results.json": "855daac2ae3e3a56b8de88617093810167cebbfedeab2b75295a151e296892c3",
+    "tilted_clock_extension_state.npz": "b0a4db0c9e278e758f332f643b88db1bfb69ed72f33a316ce865db3a50e92b04",
+    "tilted_clock_throat.py": "481d052af4d3f76be94c6e10c213e778433210574ee8545ad13a4b512e611652",
+    "tilted_clock_throat_results.json": "8d5f01d9a58142885eec279134f0ddd92de240ee1b2fc6f131aed6e9184865f2",
+    "tilted_clock_throat_state.npz": "72d9156856102b14a774ddb6ac5c0c8f889db5a2849e38f14e7f62948ad3a5c1",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "state_sha256": "4d42fd832702a5dd7b81b80b1d32d4edd5ed96c51be537eeab95414828bb49b8"
+}
