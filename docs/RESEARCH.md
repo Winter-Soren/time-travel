@@ -1,3 +1,67 @@
+# Research increment166 - aligned complement gap and metric response
+
+Previous checkpoint165 published 726f160cf887e7e023b53b054f52ca40fac15951.
+Previous goal turn classified PROGRESS: uniform collar bounds and19 checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One hydrogen atom, nominal1nm areal diameter remains target; humans deferred.
+No new law, supporting medium, stable opening, atom transit or clock advantage.
+
+- Implemented scripts/dihole_projected_gap.py; all13 controls PASS.
+  Same collar, nu in[.85,.95], q>=1000. New16x32 interval cover ofwhole
+  polar window gives |L|<=Mw delta², Mw<21.823011; localM0<.588680.
+- Interpolate NORMALIZED width Lambda_tau=1+tau C(lambda-1) and spin
+  beta_tau=tau C atan(t). Previous normalization/moments hold foralltau.
+  Tail4<=C2/q² min(1,2^(5/2)exp(-b q r²/2)), r=.02.
+  S(q)=sqrt(C2[M0²+(Mw²-M0²)tail]) bounds q||CL|| uniformly.
+- Projector distance d<=sqrt([(T²/2)S]²+[atanT/2]²).
+  Fixedslice metric derivative Mdot<=sqrt([F T² S]²+[FT/2]²), no F_s.
+  Atq1000 d<.670115, Mdot<5.360666. Atcontinuousatomicestimate
+  d<.019568, Mdot<.147678, retainedfraction> .9996171.
+- ACTUAL compressed firstorder Ca=Qa Hperp Qa gap>=g(1-d²).
+  Proof uses both angle projections and selfadjoint finite-rank deletion.
+  This closes165's frozen-versus-aligned complement mismatch.
+  gap_D>.9483395 atq1000; >1.17260544e11 atcontinuousatomicestimate.
+  This is dimensionless; physicalD varies withq. Not a global H gap.
+- Withfrozenradialcarrier Hk=Hperp+k sigma3/W, gap>=Delta_a-|k|/Wmin.
+  Saved exact conservative |kD| limits correspond tofractions0,.25,.5,.9;
+  fixed imaginaryfrequency choices0,Delta_a,10Delta_a. No radial evolution.
+- Kato-transported complement: dotCk=F Ck+FkQaAQa-bk w*-w bk*.
+  Exact Ca^-1 b=-Qa chif/<chia,chif> avoidsseparatinglargecancelingterms.
+  ||Ck^-1 bk||<=(d/sqrt(1-d²)+alpha)/(1-alpha).
+  Resolvent derivativebound includesmetricoperator ANDmovingcomplement.
+  Embedded fullangular derivative adds2Mdot/sqrt(Delta_k²+omega²).
+- Atatomicestimate,k=omega=0: inverse/D<8.528018e-12,
+  Katoderivative/D<3.416137e-11; embeddedderivative/D<3.668017e-11.
+  Actualprofiles6sectors,2orders, refinement1.8271e-11absolute;
+  indefinite matrix derivativechecks<8.4e-10. MathandcodeauditsPASS.
+- Preservedparameterreportingpilot: explicit rounded-down carrierlimits
+  and chosenbinaryfrequencies replaceambiguous rounded-up inputenclosures;
+  zeroisexactzero. Gapcomposedfromexportedprojectordistance. No weakenedtest.
+- Local-to-global lemma supplied withcutoff J=eta U and
+  T=eta R-i eta' A U; E=GH J-J Gh=-GH T Gh. Cutofftermindispensable.
+  CurrentR0boundtoo looseatIm(z)D~1; frozen gapcannotreplaceglobal1/|Imz|.
+  Firstvariationneedsadditionalgraphnormsfor dotH G_H anddot h G_h.
+- NEXT: radial coupling andderivative-weighted resolventerror for actual
+  regular-band source reduction. Mustretain cutoff/connection, spectral
+  andfrequencytails; boundedselectedobservable doesnotestablishstresstrace.
+  Nullband/openchannels/state/subtractionstillopen. No extra pointrefinement
+  withoutthissourcebudget. Atomicfluxentryiscontinuousboundestimate only.
+- Atomicsupport/survival/transitunproved. Staticgeometryexcludesbackward
+  causalpassage;13Sep2027->12Sep2027remainsunestablished. No futureclockgain.
+
+Source SHA256 da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948
+Results SHA256 875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46
+
+Verification PASS:13 saved checks,30 exact input hashes, exact source/result
+and parameter-pilot hashes; pilot profile/matrix controls unchanged.
+80digit Decimal checks validate exported projector, gap and carrier limits.
+161 imports,1424 Markdown links,8 historical guards,14 frozen hashes and
+operator identity pass. Figure inspected; six previous document byte
+sequences preserved. All calculations and delegated audits finished; no
+worker, simulation or background job remains live.
+
+--- Preserved checkpoint165 and earlier history ---
+
 # Research increment165 - uniform collar errors and a frozen slice gap
 
 Previous checkpoint164 published 5d5d8ed543ea20641394a7abf9720e62d49307ff.

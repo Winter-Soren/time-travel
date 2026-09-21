@@ -168,3 +168,16 @@ including radial mixing and its uncertainty. The payload remains one neutral
 hydrogen atom. Neither enlarging to humans nor claiming an atom has crossed
 is justified. No backward passage or future exterior-clock advantage has
 been calculated. See the [visual](../figures/dihole_channel_bounds_progress.png).
+
+
+## Aligned-complement control
+
+The [new projector comparison](PHYSICAL_EUCLIDEAN_OPERATOR.md#aligned-complement-gap-and-its-metric-response)
+retains more than 99.96% of the frozen cross-section gap after accounting
+for the supporting-field trial's mismatch at the continuous atomic-flux
+estimate. It also bounds the complementary inverse and its first metric
+variation; all 13 checks pass. This improves the local supporting-field
+reduction. It does not establish total support, global stability or an
+atom's motion. The chosen flux entry is a bound evaluated at a size
+estimate, not an explicit quantized atomic-scale state. The one-hydrogen
+payload and the outstanding support, survival and clock requirements remain.

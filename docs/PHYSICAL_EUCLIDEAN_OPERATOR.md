@@ -3503,3 +3503,257 @@ alone does not meet that requirement. One hydrogen atom remains the target;
 no stable opening, admissible material, survival, passage, new law or clock
 advantage is established. The current static metric excludes backward
 causal transport, including 13 September 2027 to 12 September 2027.
+
+
+## Aligned complement gap and its metric response
+
+The [projector comparison](../scripts/dihole_projected_gap.py) closes the
+specific mismatch left by the preceding frozen-slice result. It bounds the
+angle between the exact slice zero and the field-following trial, then
+transfers the gap to the trial's actual orthogonal complement. It also
+bounds the complementary resolvent and its first metric variation for
+specified longitudinal carriers. The [results](../results/dihole_projected_gap_results.json)
+have **13 passing controls**. All statements retain the same collar,
+$.85\le\mu/q\le.95$, $q\ge1000$, and $D=1$ conventions as above.
+
+### Comparing normalized states without extrapolating samples
+
+Let $T_*\ge|t|$ be the recorded tilt bound. Along the normalized path
+
+$$
+\Lambda_\tau=1+\tau C(\lambda-1),\quad
+\beta_\tau=\tau C\arctan t,\quad
+\chi_\tau=\sqrt W Z_\tau^{-1/2}e^{q\Lambda_\tau L}
+\begin{pmatrix}\cos(\beta_\tau/2)\\\sin(\beta_\tau/2)\end{pmatrix},
+\qquad0\le\tau\le1,
+$$
+
+$\chi_0=\chi_f$ is the frozen zero and $\chi_1=\chi_a$ the aligned trial.
+Since $\lambda_{\min}\le\Lambda_\tau\le1$, the previous normalization and
+moment bounds hold uniformly along the whole path.
+
+A new directed 16 by 32 tile cover of the entire window
+$[.15,\pi-.15]$ gives $|L|\le M_w\delta^2$ there with
+$M_w<21.823011$, where $\delta=\theta-\theta_0$. This follows by integrating
+the bounded $L_{\theta\theta}$ twice from its stationary center. In the
+smaller region $|\delta|\le r=.02$, reuse $M_0<.588680$.
+The window makes $CL=0$ outside its support, so no polar singularity is
+estimated as if it were bounded.
+
+Let $b$ denote the preceding Gaussian exponent coefficient and $C_2$ its
+fourth-moment constant. Splitting the exponent in half on $|\delta|\ge r$
+gives the uniform tail bound
+
+$$
+\mathbb E_\tau[\delta^4\mathbf1_{|\delta|\ge r}]
+\le\frac{C_2}{q^2}\rho(q),\qquad
+\rho(q)=\min\{1,2^{5/2}e^{-bqr^2/2}\}.
+$$
+
+Consequently
+
+$$
+q\|CL\|_{L^2(p_\tau)}\le
+S(q):=\sqrt{C_2[M_0^2+(M_w^2-M_0^2)\rho(q)]}.
+$$
+
+The normalized amplitude derivative is centered: its scalar factor is
+$(\lambda-1)[qCL-\mathbb E_\tau(qCL)]$. The spin derivative is pointwise
+orthogonal to it. Integrating the resulting path-length bound proves
+
+$$
+d:=\|P_a-P_f\|\le\|\chi_a-\chi_f\|
+\le d_*(q):=\sqrt{[T_*^2S(q)/2]^2+[\arctan(T_*)/2]^2},
+$$
+
+where $P_a=|\chi_a\rangle\langle\chi_a|$ and likewise $P_f$.
+This is a finite-flux bound, not a fit to sampled overlaps. The same
+statistic bounds the first paired metric derivative at a fixed slice:
+
+$$
+\|\dot\chi_a\|\le M_*(q):=
+\sqrt{[F_*T_*^2S(q)]^2+[F_*T_*/2]^2}.
+$$
+
+Here $\dot\lambda=-Ft^2/(1+t^2)^{3/2}$ and
+$\dot\beta=Ft/(1+t^2)$. There is no $F_s$ term in this fixed-slice state
+derivative; radial operator derivatives still contain it. The fixed
+canonical measure $W$ is not varied a second time.
+
+At $q=1000$, $d_*<.670115$ and $M_*<5.360666$. Both decrease monotonically
+with $q$. At the continuous atomic flux estimate,
+
+$$
+d_*<.019568,\qquad M_*<.147678,\qquad1-d_*^2>.9996171.
+$$
+
+The saved entry at $q\simeq4.6428759050\times10^{24}$ evaluates the bounding
+formula at the size estimate; it does not instantiate an admissible
+quantized global flux sector or simulate its wave function.
+
+### Transferring an indefinite Dirac gap
+
+Set $Q_a=1-P_a$, $C_a=Q_aH_\perp Q_a$ on its natural complement domain.
+Write $c=\langle\chi_a,\chi_f\rangle>0$. For $\psi\perp\chi_a$,
+
+$$
+\|H_\perp\psi\|\ge g c\|\psi\|,\qquad
+H_\perp\psi\perp\chi_f,\qquad
+\|Q_aH_\perp\psi\|\ge c\|H_\perp\psi\|.
+$$
+
+Since $\chi_a$ belongs to the polar Dirac domain, deleting its off-diagonal
+blocks is a bounded finite-rank perturbation of the self-adjoint operator.
+The resulting restriction $C_a$ is self-adjoint. Thus
+
+$$
+\operatorname{gap}(C_a)\ge g c^2\ge g[1-d_*^2]=:\Delta_a.
+$$
+
+This argument retains both signs of the Dirac spectrum. It proves an
+actual **compressed first-order** gap, not merely a bound on
+$\|H_\perp\psi\|$ before projection. The transferred bound is
+$D\Delta_a>.9483395$ at $q=1000$, and
+$D\Delta_a>1.17260544\times10^{11}$ at the continuous atomic estimate.
+The latter is dimensionless; at fixed physical coupling $D$ changes with
+flux. It is not evidence that increasing the opening size raises its
+physical excitation frequency.
+
+### Longitudinal carriers and the moving complement
+
+Freeze the radial coefficients at the slice and add the carrier symbol
+
+$$
+H_k=H_\perp+kA,\qquad A=\sigma_3/W,\quad
+b_k=|k|/W_{\min},\quad\alpha=b_k/\Delta_a<1.
+$$
+
+For $C_k=Q_aH_kQ_a$, bounded self-adjoint perturbation gives
+$\operatorname{gap}(C_k)\ge\Delta_k:=\Delta_a-b_k>0$. At imaginary
+frequency $i\omega$,
+
+$$
+\|(C_k-i\omega)^{-1}\|\le(\Delta_k^2+\omega^2)^{-1/2}.
+$$
+
+The data evaluate ranges corresponding to momentum fractions
+$0,.25,.5,.9$, and frequencies near $0,\Delta_a,10\Delta_a$.
+Each `k_D_limit` is an explicit conservative binary limit for
+$|kD|$; each `omega_D` is the exact chosen binary parameter for the bound.
+The result does not replace $-i\partial_s$ with $k$ in a varying global
+operator: radial derivatives, connections and exterior matching are
+still separate work.
+
+To differentiate the inverse, identify the moving complements by the
+unitary transport generated by $K=[\dot P_a,P_a]$. This geometric
+intertwining construction is described by
+[Avron, Seiler and Yaffe, sections 1--2](https://phsites.technion.ac.il/avron/wp-content/uploads/sites/3/2013/05/commun_math_phys_110_33-49_1987.pdf).
+We use the change of subspace only; no adiabatic passage theorem is assumed.
+
+Let $b_a=Q_aH_\perp\chi_a$ and $v=Q_a\chi_f$. The exact zero equation gives
+$C_a^{-1}b_a=-v/c$, so $\|C_a^{-1}b_a\|\le d_*/\sqrt{1-d_*^2}$.
+This avoids bounding the two terms separately and losing their cancellation.
+Writing $w=Q_a\dot\chi_a$, the derivative in the transported complement is
+
+$$
+\dot C_k=F C_k+FkQ_aAQ_a-b_{a,k}w^*-wb_{a,k}^*,\qquad
+b_{a,k}=Q_aH_k\chi_a.
+$$
+
+The Neumann bound implies
+
+$$
+\|C_k^{-1}b_{a,k}\|\le
+\beta_k:=\frac{d_*/\sqrt{1-d_*^2}+\alpha}{1-\alpha}.
+$$
+
+Put $s_\omega=\sqrt{\Delta_k^2+\omega^2}$. Differentiating the resolvent
+and using $\|C_k(C_k-i\omega)^{-1}\|\le1$ gives
+
+$$
+\|\dot G_k\|\le
+\frac{F_*+2\beta_kM_*}{s_\omega}
++\frac{F_*b_k}{s_\omega^2}.
+$$
+
+This derivative is in Kato-identified complement spaces. Embedding back
+into the full angular space differentiates both outer projectors and adds
+at most $2M_*/s_\omega$. Both versions are saved. For example, at the
+continuous atomic estimate and $k=\omega=0$,
+
+$$
+\|G_0\|/D<8.528018\times10^{-12},\quad
+\|\dot G_0\|_{\mathrm{Kato}}/D<3.416137\times10^{-11},\quad
+\|\dot G_0\|_{\mathrm{embedded}}/D<3.668017\times10^{-11}.
+$$
+
+Actual normalized profile checks at six regular sectors agree under
+512-to-1024 angular refinement within $1.83\times10^{-11}$ absolutely.
+Separate indefinite Hermitian matrix controls check the inverse-mixing
+identity, commutator sign and embedded derivative; their largest derivative
+error is below $8.4\times10^{-10}$. These controls verify implementation;
+the domain and interval arguments above supply the stated uniform scope.
+
+A parameter-reporting [pilot source](../provenance/dihole_projected_gap_parameter_trial.py)
+and [result](../results/dihole_projected_gap_parameter_trial.json) are
+preserved. They exported rounded upper enclosures of carrier parameters,
+including tiny positive upper bounds for exact zero. The final version
+chooses explicit conservative parameters before evaluation and composes
+the retained gap from the exported projector distance. This removes an
+ambiguity in reproducing the declared carrier range; no tolerance changed.
+
+### The remaining route to a full source estimate
+
+The transverse inverse does not control the global Hamiltonian resolvent
+by itself. For any specified self-adjoint global $H$ agreeing with the
+collar, $G_H(z)=(H-z)^{-1}$, and $\psi\in C_c^\infty(I)$, the existing
+local residual $R=HU-Uh$ gives the exact prepared-source identity
+
+$$
+G_H(z)U(h-z)\psi-U\psi=-G_H(z)R\psi,\qquad
+\|\text{error}\|\le\frac{R_1\|\psi'\|+R_0\|\psi\|}{|\operatorname{Im}z|}.
+$$
+
+For a full operator comparison, specify a self-adjoint longitudinal $h$
+and a fixed smooth cutoff $\eta\Subset I$. Then
+
+$$
+J=\eta U,\quad T=HJ-Jh=\eta R-i\eta' A U,\qquad
+E_z:=G_HJ-JG_h=-G_HTG_h.
+$$
+
+The cutoff commutator cannot be dropped. If
+$P_E=\mathbf1_{[-E,E]}(h)$ and
+$m_z=\sup_{|\lambda|\le E}|\lambda-z|^{-1}$, then
+
+$$
+\|E_zP_E\|\le\frac{m_z}{|\operatorname{Im}z|}
+\left[R_1\left(E\|\eta/v\|_\infty+
+\tfrac12\|\eta v'/v\|_\infty\right)+R_0\|\eta\|_\infty+
+\frac{\|\eta'\|_\infty}{W_{\min}}\right].
+$$
+
+The present $R_0$ upper bound is too loose to establish a small global
+comparison error at $|\operatorname{Im}z|D$ of order one. For differentiable
+families on compatible graph domains,
+
+$$
+\dot E_z=G_H\dot H G_HTG_h-G_H\dot T G_h+G_HTG_h\dot hG_h,
+\qquad\dot T=\eta\dot R-i\eta'(\dot A U+A\dot U).
+$$
+
+Here $\dot A=2FA$. Bounds on $\dot R$ alone leave graph/resolvent bounds
+for $\dot H$ and $\dot h$ missing. Moving frequency conventions, cutoffs
+or spectral windows also need their own derivatives. A bounded selected
+observable is still not the vacuum stress: derivative-weighted trace-ideal
+estimates and the omitted angular/frequency tails are required.
+
+![Transferred gap and state variation](../figures/dihole_projected_gap_progress.png)
+
+The next target is the radial coupling and derivative-weighted resolvent
+error needed to turn this local channel reduction into a regular-band
+contribution to the source. The exterior magnetic null and open channels
+still prevent a whole-space gap shortcut. One hydrogen atom remains the
+payload; no total supporting stress, stable opening, survival, atom passage,
+new law or clock advantage is established. The current static geometry
+still excludes backward causal travel from 13 to 12 September 2027.

@@ -1,0 +1,1328 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_inputs": true,
+    "finite_window_curvature": true,
+    "nontrivial_projector_bound": true,
+    "positive_compressed_gap": true,
+    "original_profile_controls": true,
+    "profile_quadrature_sensitivity": true,
+    "indefinite_compression_gap": true,
+    "inverse_mixing_identity": true,
+    "kato_connection_derivative": true,
+    "resolvent_derivative": true,
+    "embedded_projector_derivative": true,
+    "exact_zero_carrier_parameters": true,
+    "all_declared_carrier_gaps_positive": true
+  },
+  "records": [
+    {
+      "q": 1000,
+      "tail_fourth_moment_fraction_upper": 1.0000000000000002,
+      "tail_exponent_lower": 0.004494370034332163,
+      "window_quadratic_coefficient_upper": 21.823010601727276,
+      "log_statistic_rms_upper": 5964.138272898272,
+      "projector_distance_upper": 0.6701145988642727,
+      "gap_retained_fraction_lower": 0.5509464243889747,
+      "profile_metric_derivative_norm_upper": 5.360665347745304,
+      "aligned_complement_gap_lower_D": 0.9483395603405719,
+      "carriers": [
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.9483395603405718,
+          "resolvent_norm_upper_over_D": 1.054474622613946,
+          "kato_resolvent_derivative_upper_over_D": 14.424454406302125,
+          "embedded_resolvent_derivative_upper_over_D": 25.7298255453489
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.9483395603405718,
+          "gap_lower_D": 0.9483395603405718,
+          "resolvent_norm_upper_over_D": 0.745626156239447,
+          "kato_resolvent_derivative_upper_over_D": 10.199629525612409,
+          "embedded_resolvent_derivative_upper_over_D": 18.193734121863066
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 9.483395603405716,
+          "gap_lower_D": 0.9483395603405718,
+          "resolvent_norm_upper_over_D": 0.10492414656335199,
+          "kato_resolvent_derivative_upper_over_D": 1.4352868582758966,
+          "embedded_resolvent_derivative_upper_over_D": 2.560213331523718
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 5.931645583081757,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.7112546702554288,
+          "resolvent_norm_upper_over_D": 1.4059661634852614,
+          "kato_resolvent_derivative_upper_over_D": 30.668083895224562,
+          "embedded_resolvent_derivative_upper_over_D": 45.74191208062026
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 5.931645583081757,
+          "omega_D": 0.9483395603405718,
+          "gap_lower_D": 0.7112546702554288,
+          "resolvent_norm_upper_over_D": 0.8435796980911568,
+          "kato_resolvent_derivative_upper_over_D": 17.950941164819454,
+          "embedded_resolvent_derivative_upper_over_D": 26.995238076056875
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 5.931645583081757,
+          "omega_D": 9.483395603405716,
+          "gap_lower_D": 0.7112546702554288,
+          "resolvent_norm_upper_over_D": 0.10515213659655177,
+          "kato_resolvent_derivative_upper_over_D": 2.1639473222032777,
+          "embedded_resolvent_derivative_upper_over_D": 3.2913181519923094
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 11.863291166163513,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.47416978017028594,
+          "resolvent_norm_upper_over_D": 2.1089492452278917,
+          "kato_resolvent_derivative_upper_over_D": 80.30855990330201,
+          "embedded_resolvent_derivative_upper_over_D": 102.91930218139555
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 11.863291166163513,
+          "omega_D": 0.9483395603405718,
+          "gap_lower_D": 0.47416978017028594,
+          "resolvent_norm_upper_over_D": 0.9431507746852882,
+          "kato_resolvent_derivative_upper_over_D": 33.82963612122062,
+          "embedded_resolvent_derivative_upper_over_D": 43.94146747232975
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 11.863291166163513,
+          "omega_D": 9.483395603405716,
+          "gap_lower_D": 0.47416978017028594,
+          "resolvent_norm_upper_over_D": 0.10531589956230115,
+          "kato_resolvent_derivative_upper_over_D": 3.610191403719291,
+          "embedded_resolvent_derivative_upper_over_D": 4.739317990419796
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 21.353924099094325,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.09483395603405731,
+          "resolvent_norm_upper_over_D": 10.544746226139445,
+          "kato_resolvent_derivative_upper_over_D": 2459.9288431444147,
+          "embedded_resolvent_derivative_upper_over_D": 2572.982554534882
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 21.353924099094325,
+          "omega_D": 0.9483395603405718,
+          "gap_lower_D": 0.09483395603405731,
+          "resolvent_norm_upper_over_D": 1.0492414656335196,
+          "kato_resolvent_derivative_upper_over_D": 210.75789906442333,
+          "embedded_resolvent_derivative_upper_over_D": 222.00716379690152
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 21.353924099094325,
+          "omega_D": 9.483395603405716,
+          "gap_lower_D": 0.09483395603405731,
+          "resolvent_norm_upper_over_D": 0.1054421902836766,
+          "kato_resolvent_derivative_upper_over_D": 20.840096999734943,
+          "embedded_resolvent_derivative_upper_over_D": 21.970577591023087
+        }
+      ]
+    },
+    {
+      "q": 1005,
+      "tail_fourth_moment_fraction_upper": 1.0000000000000002,
+      "tail_exponent_lower": 0.004516841884503824,
+      "window_quadratic_coefficient_upper": 21.823010601727276,
+      "log_statistic_rms_upper": 5964.138272898272,
+      "projector_distance_upper": 0.6701145988642727,
+      "gap_retained_fraction_lower": 0.5509464243889747,
+      "profile_metric_derivative_norm_upper": 5.360665347745304,
+      "aligned_complement_gap_lower_D": 0.9507082175838629,
+      "carriers": [
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.9507082175838628,
+          "resolvent_norm_upper_over_D": 1.0518474348958586,
+          "kato_resolvent_derivative_upper_over_D": 14.388516367923915,
+          "embedded_resolvent_derivative_upper_over_D": 25.66572055864594
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.9507082175838628,
+          "gap_lower_D": 0.9507082175838628,
+          "resolvent_norm_upper_over_D": 0.7437684539885373,
+          "kato_resolvent_derivative_upper_over_D": 10.174217494972634,
+          "embedded_resolvent_derivative_upper_over_D": 18.148405051057534
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 9.507082175838626,
+          "gap_lower_D": 0.9507082175838628,
+          "resolvent_norm_upper_over_D": 0.104662731614836,
+          "kato_resolvent_derivative_upper_over_D": 1.4317108898029456,
+          "embedded_resolvent_derivative_upper_over_D": 2.553834646938982
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 5.946460988726077,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.713031163187897,
+          "resolvent_norm_upper_over_D": 1.4024632465278115,
+          "kato_resolvent_derivative_upper_over_D": 30.591675405518966,
+          "embedded_resolvent_derivative_upper_over_D": 45.627947659815
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 5.946460988726077,
+          "omega_D": 0.9507082175838628,
+          "gap_lower_D": 0.713031163187897,
+          "resolvent_norm_upper_over_D": 0.841477947916687,
+          "kato_resolvent_derivative_upper_over_D": 17.906217004422484,
+          "embedded_resolvent_derivative_upper_over_D": 26.927980357000106
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 5.946460988726077,
+          "omega_D": 9.507082175838626,
+          "gap_lower_D": 0.713031163187897,
+          "resolvent_norm_upper_over_D": 0.10489015361860937,
+          "kato_resolvent_derivative_upper_over_D": 2.1585559209257505,
+          "embedded_resolvent_derivative_upper_over_D": 3.2831179445716723
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 11.892921977452154,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.47535410879193146,
+          "resolvent_norm_upper_over_D": 2.103694869791717,
+          "kato_resolvent_derivative_upper_over_D": 80.10847385313969,
+          "embedded_resolvent_derivative_upper_over_D": 102.66288223458373
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 11.892921977452154,
+          "omega_D": 0.9507082175838628,
+          "gap_lower_D": 0.47535410879193146,
+          "resolvent_norm_upper_over_D": 0.9408009465543697,
+          "kato_resolvent_derivative_upper_over_D": 33.74535073149287,
+          "embedded_resolvent_derivative_upper_over_D": 43.831988798132855
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 11.892921977452154,
+          "omega_D": 9.507082175838626,
+          "gap_lower_D": 0.47535410879193146,
+          "resolvent_norm_upper_over_D": 0.10505350857449007,
+          "kato_resolvent_derivative_upper_over_D": 3.601196734419157,
+          "embedded_resolvent_derivative_upper_over_D": 4.727510140567824
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 21.407259559413877,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.09507082175838646,
+          "resolvent_norm_upper_over_D": 10.518474348958565,
+          "kato_resolvent_derivative_upper_over_D": 2453.8000139573637,
+          "embedded_resolvent_derivative_upper_over_D": 2566.5720558645835
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 21.407259559413877,
+          "omega_D": 0.9507082175838628,
+          "gap_lower_D": 0.09507082175838646,
+          "resolvent_norm_upper_over_D": 1.0466273161483597,
+          "kato_resolvent_derivative_upper_over_D": 210.2328029150826,
+          "embedded_resolvent_derivative_upper_over_D": 221.45404048644298
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 21.407259559413877,
+          "omega_D": 9.507082175838626,
+          "gap_lower_D": 0.09507082175838646,
+          "resolvent_norm_upper_over_D": 0.10517948464682134,
+          "kato_resolvent_derivative_upper_over_D": 20.788174605675103,
+          "embedded_resolvent_derivative_upper_over_D": 21.915838642954952
+        }
+      ]
+    },
+    {
+      "q": 10005,
+      "tail_fourth_moment_fraction_upper": 1.0000000000000002,
+      "tail_exponent_lower": 0.044966172193493296,
+      "window_quadratic_coefficient_upper": 21.823010601727276,
+      "log_statistic_rms_upper": 5964.138272898272,
+      "projector_distance_upper": 0.6701145988642727,
+      "gap_retained_fraction_lower": 0.5509464243889747,
+      "profile_metric_derivative_norm_upper": 5.360665347745304,
+      "aligned_complement_gap_lower_D": 3.0000989998909904,
+      "carriers": [
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.0,
+          "gap_lower_D": 3.00009899989099,
+          "resolvent_norm_upper_over_D": 0.3333223337084328,
+          "kato_resolvent_derivative_upper_over_D": 4.55960978298457,
+          "embedded_resolvent_derivative_upper_over_D": 8.133268750865353
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 3.00009899989099,
+          "gap_lower_D": 3.00009899989099,
+          "resolvent_norm_upper_over_D": 0.23569448248615815,
+          "kato_resolvent_derivative_upper_over_D": 3.2241309971129115,
+          "embedded_resolvent_derivative_upper_over_D": 5.751089486949533
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 30.000989998909898,
+          "gap_lower_D": 3.00009899989099,
+          "resolvent_norm_upper_over_D": 0.03316681183674754,
+          "kato_resolvent_derivative_upper_over_D": 0.4536981306914945,
+          "embedded_resolvent_derivative_upper_over_D": 0.809290488508377
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 18.764928434621645,
+          "omega_D": 0.0,
+          "gap_lower_D": 2.2500742499182422,
+          "resolvent_norm_upper_over_D": 0.4444297782779103,
+          "kato_resolvent_derivative_upper_over_D": 9.694265822141801,
+          "embedded_resolvent_derivative_upper_over_D": 14.459144445982846
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 18.764928434621645,
+          "omega_D": 3.00009899989099,
+          "gap_lower_D": 2.2500742499182422,
+          "resolvent_norm_upper_over_D": 0.2666578669667462,
+          "kato_resolvent_derivative_upper_over_D": 5.674341964236151,
+          "embedded_resolvent_derivative_upper_over_D": 8.533269138540778
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 18.764928434621645,
+          "omega_D": 30.000989998909898,
+          "gap_lower_D": 2.2500742499182422,
+          "resolvent_norm_upper_over_D": 0.033238880114445896,
+          "kato_resolvent_derivative_upper_over_D": 0.6840297110905272,
+          "embedded_resolvent_derivative_upper_over_D": 1.0403947367452684
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 37.52985686924329,
+          "omega_D": 0.0,
+          "gap_lower_D": 1.5000494999454954,
+          "resolvent_norm_upper_over_D": 0.6666446674168653,
+          "kato_resolvent_derivative_upper_over_D": 25.385757067699824,
+          "embedded_resolvent_derivative_upper_over_D": 32.53307500346139
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 37.52985686924329,
+          "omega_D": 3.00009899989099,
+          "gap_lower_D": 1.5000494999454954,
+          "resolvent_norm_upper_over_D": 0.2981325586363701,
+          "kato_resolvent_derivative_upper_over_D": 10.693641192122525,
+          "embedded_resolvent_derivative_upper_over_D": 13.890018944355793
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 37.52985686924329,
+          "omega_D": 30.000989998909898,
+          "gap_lower_D": 1.5000494999454954,
+          "resolvent_norm_upper_over_D": 0.033290646039151876,
+          "kato_resolvent_derivative_upper_over_D": 1.1411914502397635,
+          "embedded_resolvent_derivative_upper_over_D": 1.4981114754920353
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 67.55374236463793,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.30000989998909966,
+          "resolvent_norm_upper_over_D": 3.3332233370843194,
+          "kato_resolvent_derivative_upper_over_D": 777.5902854077236,
+          "embedded_resolvent_derivative_upper_over_D": 813.3268750865313
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 67.55374236463793,
+          "omega_D": 3.00009899989099,
+          "gap_lower_D": 0.30000989998909966,
+          "resolvent_norm_upper_over_D": 0.33166811836747534,
+          "kato_resolvent_derivative_upper_over_D": 66.62115261673699,
+          "embedded_resolvent_derivative_upper_over_D": 70.17707619490581
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 67.55374236463793,
+          "omega_D": 30.000989998909898,
+          "gap_lower_D": 0.30000989998909966,
+          "resolvent_norm_upper_over_D": 0.0333305668841602,
+          "kato_resolvent_derivative_upper_over_D": 6.587612084435081,
+          "embedded_resolvent_derivative_upper_over_D": 6.944960114268331
+        }
+      ]
+    },
+    {
+      "q": 100000,
+      "tail_fourth_moment_fraction_upper": 1.0000000000000002,
+      "tail_exponent_lower": 0.44943700343321635,
+      "window_quadratic_coefficient_upper": 21.823010601727276,
+      "log_statistic_rms_upper": 5964.138272898272,
+      "projector_distance_upper": 0.6701145988642727,
+      "gap_retained_fraction_lower": 0.5509464243889747,
+      "profile_metric_derivative_norm_upper": 5.360665347745304,
+      "aligned_complement_gap_lower_D": 9.484913007377914,
+      "carriers": [
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.0,
+          "gap_lower_D": 9.484913007377912,
+          "resolvent_norm_upper_over_D": 0.1054305926920091,
+          "kato_resolvent_derivative_upper_over_D": 1.4422146770544597,
+          "embedded_resolvent_derivative_upper_over_D": 2.5725709267270647
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 9.484913007377912,
+          "gap_lower_D": 9.484913007377912,
+          "resolvent_norm_upper_over_D": 0.07455068703703652,
+          "kato_resolvent_derivative_upper_over_D": 1.0197997780719752,
+          "embedded_resolvent_derivative_upper_over_D": 1.8190823473720685
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 94.84913007377912,
+          "gap_lower_D": 9.484913007377912,
+          "resolvent_norm_upper_over_D": 0.010490736071443059,
+          "kato_resolvent_derivative_upper_over_D": 0.14350572399358769,
+          "embedded_resolvent_derivative_upper_over_D": 0.2559803746546407
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 59.32594684326272,
+          "omega_D": 0.0,
+          "gap_lower_D": 7.113684755533435,
+          "resolvent_norm_upper_over_D": 0.14057412358934548,
+          "kato_resolvent_derivative_upper_over_D": 3.066317759062419,
+          "embedded_resolvent_derivative_upper_over_D": 4.573459425292559
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 59.32594684326272,
+          "omega_D": 9.484913007377912,
+          "gap_lower_D": 7.113684755533435,
+          "resolvent_norm_upper_over_D": 0.0843444741536073,
+          "kato_resolvent_derivative_upper_over_D": 1.794806935888861,
+          "embedded_resolvent_derivative_upper_over_D": 2.6990919356269454
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 59.32594684326272,
+          "omega_D": 94.84913007377912,
+          "gap_lower_D": 7.113684755533435,
+          "resolvent_norm_upper_over_D": 0.010513531427360244,
+          "kato_resolvent_derivative_upper_over_D": 0.21636011321792065,
+          "embedded_resolvent_derivative_upper_over_D": 0.3290791604280832
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 118.65189368652544,
+          "omega_D": 0.0,
+          "gap_lower_D": 4.742456503688957,
+          "resolvent_norm_upper_over_D": 0.21086118538401818,
+          "kato_resolvent_derivative_upper_over_D": 8.029571207563045,
+          "embedded_resolvent_derivative_upper_over_D": 10.290283706908255
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 118.65189368652544,
+          "omega_D": 9.484913007377912,
+          "gap_lower_D": 4.742456503688957,
+          "resolvent_norm_upper_over_D": 0.09429998886696998,
+          "kato_resolvent_derivative_upper_over_D": 3.382422402896544,
+          "embedded_resolvent_derivative_upper_over_D": 4.393443768120412
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 118.65189368652544,
+          "omega_D": 94.84913007377912,
+          "gap_lower_D": 4.742456503688957,
+          "resolvent_norm_upper_over_D": 0.010529905104042152,
+          "kato_resolvent_derivative_upper_over_D": 0.3609613842409859,
+          "embedded_resolvent_derivative_upper_over_D": 0.4738559790535562
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 213.5734086357458,
+          "omega_D": 0.0,
+          "gap_lower_D": 0.9484913007377923,
+          "resolvent_norm_upper_over_D": 1.05430592692009,
+          "kato_resolvent_derivative_upper_over_D": 245.95353017597984,
+          "embedded_resolvent_derivative_upper_over_D": 257.2570926727059
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 213.5734086357458,
+          "omega_D": 9.484913007377912,
+          "gap_lower_D": 0.9484913007377923,
+          "resolvent_norm_upper_over_D": 0.10490736071443058,
+          "kato_resolvent_derivative_upper_over_D": 21.07241818470949,
+          "embedded_resolvent_derivative_upper_over_D": 22.19716469132002
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 213.5734086357458,
+          "omega_D": 94.84913007377912,
+          "gap_lower_D": 0.9484913007377923,
+          "resolvent_norm_upper_over_D": 0.010542532155770631,
+          "kato_resolvent_derivative_upper_over_D": 2.0836762984341903,
+          "embedded_resolvent_derivative_upper_over_D": 2.1967062720440507
+        }
+      ]
+    },
+    {
+      "q": 1000000,
+      "tail_fourth_moment_fraction_upper": 0.06319677024002125,
+      "tail_exponent_lower": 4.494370034332163,
+      "window_quadratic_coefficient_upper": 21.823010601727276,
+      "log_statistic_rms_upper": 1507.3873558811981,
+      "projector_distance_upper": 0.16952115674266455,
+      "gap_retained_fraction_lower": 0.9712625774166288,
+      "profile_metric_derivative_norm_upper": 1.3551749616737374,
+      "aligned_complement_gap_lower_D": 52.87632588029623,
+      "carriers": [
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.0,
+          "gap_lower_D": 52.87632588029622,
+          "resolvent_norm_upper_over_D": 0.018912055316850956,
+          "kato_resolvent_derivative_upper_over_D": 0.08446519756785809,
+          "embedded_resolvent_derivative_upper_over_D": 0.1357234852462283
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 52.87632588029622,
+          "gap_lower_D": 52.87632588029622,
+          "resolvent_norm_upper_over_D": 0.013372842560720412,
+          "kato_resolvent_derivative_upper_over_D": 0.059725913974493935,
+          "embedded_resolvent_derivative_upper_over_D": 0.09597099678388035
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 528.7632588029621,
+          "gap_lower_D": 52.87632588029622,
+          "resolvent_norm_upper_over_D": 0.0018818198383575267,
+          "kato_resolvent_derivative_upper_over_D": 0.008404601285845314,
+          "embedded_resolvent_derivative_upper_over_D": 0.013504991540491394
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 330.7292429568304,
+          "omega_D": 0.0,
+          "gap_lower_D": 39.65724441022216,
+          "resolvent_norm_upper_over_D": 0.02521607375580127,
+          "kato_resolvent_derivative_upper_over_D": 0.17294181242213444,
+          "embedded_resolvent_derivative_upper_over_D": 0.24128619599329468
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 330.7292429568304,
+          "omega_D": 52.87632588029622,
+          "gap_lower_D": 39.65724441022216,
+          "resolvent_norm_upper_over_D": 0.015129644253480765,
+          "kato_resolvent_derivative_upper_over_D": 0.09569594385142427,
+          "embedded_resolvent_derivative_upper_over_D": 0.13670257399412042
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 330.7292429568304,
+          "omega_D": 528.7632588029621,
+          "gap_lower_D": 39.65724441022216,
+          "resolvent_norm_upper_over_D": 0.001885908851053609,
+          "kato_resolvent_derivative_upper_over_D": 0.010607826765606029,
+          "embedded_resolvent_derivative_upper_over_D": 0.015719299675499503
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 661.4584859136608,
+          "omega_D": 0.0,
+          "gap_lower_D": 26.438162940148114,
+          "resolvent_norm_upper_over_D": 0.037824110633701905,
+          "kato_resolvent_derivative_upper_over_D": 0.4403773656281725,
+          "embedded_resolvent_derivative_upper_over_D": 0.5428939409849128
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 661.4584859136608,
+          "omega_D": 52.87632588029622,
+          "gap_lower_D": 26.438162940148114,
+          "resolvent_norm_upper_over_D": 0.016915456513086027,
+          "kato_resolvent_derivative_upper_over_D": 0.15954020751399214,
+          "embedded_resolvent_derivative_upper_over_D": 0.2053870137776224
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 661.4584859136608,
+          "omega_D": 528.7632588029621,
+          "gap_lower_D": 26.438162940148114,
+          "resolvent_norm_upper_over_D": 0.0018888459480692074,
+          "kato_resolvent_derivative_upper_over_D": 0.01481331026490605,
+          "embedded_resolvent_derivative_upper_over_D": 0.019932743735470614
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 1190.6252746445894,
+          "omega_D": 0.0,
+          "gap_lower_D": 5.287632588029632,
+          "resolvent_norm_upper_over_D": 0.18912055316850918,
+          "kato_resolvent_derivative_upper_over_D": 13.05976564783907,
+          "embedded_resolvent_derivative_upper_over_D": 13.572348524622772
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 1190.6252746445894,
+          "omega_D": 52.87632588029622,
+          "gap_lower_D": 5.287632588029632,
+          "resolvent_norm_upper_over_D": 0.018818198383575263,
+          "kato_resolvent_derivative_upper_over_D": 0.6894494157738325,
+          "embedded_resolvent_derivative_upper_over_D": 0.7404533183202933
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 1190.6252746445894,
+          "omega_D": 528.7632588029621,
+          "gap_lower_D": 5.287632588029632,
+          "resolvent_norm_upper_over_D": 0.0018911109784999415,
+          "kato_resolvent_derivative_upper_over_D": 0.06319189777408492,
+          "embedded_resolvent_derivative_upper_over_D": 0.06831747026970379
+        }
+      ]
+    },
+    {
+      "q": 10000000,
+      "tail_fourth_moment_fraction_upper": 1.7130653618293292e-19,
+      "tail_exponent_lower": 44.94370034332164,
+      "window_quadratic_coefficient_upper": 21.823010601727276,
+      "log_statistic_rms_upper": 160.88361271245228,
+      "projector_distance_upper": 0.01956742114643921,
+      "gap_retained_fraction_lower": 0.9996171160296777,
+      "profile_metric_derivative_norm_upper": 0.14767770824428592,
+      "aligned_complement_gap_lower_D": 172.091080611823,
+      "carriers": [
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.0,
+          "gap_lower_D": 172.09108061182297,
+          "resolvent_norm_upper_over_D": 0.005810876405940228,
+          "kato_resolvent_derivative_upper_over_D": 0.0232770951074729,
+          "embedded_resolvent_derivative_upper_over_D": 0.02499336892851299
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 172.09108061182297,
+          "gap_lower_D": 172.09108061182297,
+          "resolvent_norm_upper_over_D": 0.004108910111277249,
+          "kato_resolvent_derivative_upper_over_D": 0.016459391796818296,
+          "embedded_resolvent_derivative_upper_over_D": 0.01767298065404869
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 1720.9108061182296,
+          "gap_lower_D": 172.09108061182297,
+          "resolvent_norm_upper_over_D": 0.0005782038131624286,
+          "kato_resolvent_derivative_upper_over_D": 0.0023161575311990523,
+          "embedded_resolvent_derivative_upper_over_D": 0.002486933159250922
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 1076.3900831388898,
+          "omega_D": 0.0,
+          "gap_lower_D": 129.06831045886722,
+          "resolvent_norm_upper_over_D": 0.007747835207920303,
+          "kato_resolvent_derivative_upper_over_D": 0.04214429077819185,
+          "embedded_resolvent_derivative_upper_over_D": 0.04443265587291197
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 1076.3900831388898,
+          "omega_D": 172.09108061182297,
+          "gap_lower_D": 129.06831045886722,
+          "resolvent_norm_upper_over_D": 0.004648701124752182,
+          "kato_resolvent_derivative_upper_over_D": 0.02280726720038062,
+          "embedded_resolvent_derivative_upper_over_D": 0.024180286257212694
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 1076.3900831388898,
+          "omega_D": 1720.9108061182296,
+          "gap_lower_D": 129.06831045886722,
+          "resolvent_norm_upper_over_D": 0.0005794601941850711,
+          "kato_resolvent_derivative_upper_over_D": 0.0024371394643095097,
+          "embedded_resolvent_derivative_upper_over_D": 0.00260828617130159
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 2152.7801662777797,
+          "omega_D": 0.0,
+          "gap_lower_D": 86.0455403059115,
+          "resolvent_norm_upper_over_D": 0.011621752811880453,
+          "kato_resolvent_derivative_upper_over_D": 0.09654092807197173,
+          "embedded_resolvent_derivative_upper_over_D": 0.09997347571405191
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 2152.7801662777797,
+          "omega_D": 172.09108061182297,
+          "gap_lower_D": 86.0455403059115,
+          "resolvent_norm_upper_over_D": 0.005197405861012806,
+          "kato_resolvent_derivative_upper_over_D": 0.031682194361422465,
+          "embedded_resolvent_derivative_upper_over_D": 0.03321727633416205
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 2152.7801662777797,
+          "omega_D": 1720.9108061182296,
+          "gap_lower_D": 86.0455403059115,
+          "resolvent_norm_upper_over_D": 0.0005803626401362888,
+          "kato_resolvent_derivative_upper_over_D": 0.002615501033767513,
+          "embedded_resolvent_derivative_upper_over_D": 0.002786914283059374
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 3875.004299300004,
+          "omega_D": 0.0,
+          "gap_lower_D": 17.20910806118232,
+          "resolvent_norm_upper_over_D": 0.0581087640594022,
+          "kato_resolvent_derivative_upper_over_D": 2.4821741546408913,
+          "embedded_resolvent_derivative_upper_over_D": 2.499336892851292
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 3875.004299300004,
+          "omega_D": 172.09108061182297,
+          "gap_lower_D": 17.20910806118232,
+          "resolvent_norm_upper_over_D": 0.005782038131624285,
+          "kato_resolvent_derivative_upper_over_D": 0.05954422162034157,
+          "embedded_resolvent_derivative_upper_over_D": 0.06125197790086027
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 3875.004299300004,
+          "omega_D": 1720.9108061182296,
+          "gap_lower_D": 17.20910806118232,
+          "resolvent_norm_upper_over_D": 0.0005810585883908903,
+          "kato_resolvent_derivative_upper_over_D": 0.004111562003883882,
+          "embedded_resolvent_derivative_upper_over_D": 0.004283180805262335
+        }
+      ]
+    },
+    {
+      "q": 100000000,
+      "tail_fourth_moment_fraction_upper": 3.669141283615991e-195,
+      "tail_exponent_lower": 449.4370034332164,
+      "window_quadratic_coefficient_upper": 21.823010601727276,
+      "log_statistic_rms_upper": 160.88361271245228,
+      "projector_distance_upper": 0.019567421146439206,
+      "gap_retained_fraction_lower": 0.9996171160296777,
+      "profile_metric_derivative_norm_upper": 0.1476777082442859,
+      "aligned_complement_gap_lower_D": 544.1997876470284,
+      "carriers": [
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.0,
+          "gap_lower_D": 544.1997876470283,
+          "resolvent_norm_upper_over_D": 0.0018375604377277093,
+          "kato_resolvent_derivative_upper_over_D": 0.007360863678152269,
+          "embedded_resolvent_derivative_upper_over_D": 0.007903597106560259
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 544.1997876470283,
+          "gap_lower_D": 544.1997876470283,
+          "resolvent_norm_upper_over_D": 0.001299351446357384,
+          "kato_resolvent_derivative_upper_over_D": 0.005204916622211223,
+          "embedded_resolvent_derivative_upper_over_D": 0.005588687109815136
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 5441.997876470283,
+          "gap_lower_D": 544.1997876470283,
+          "resolvent_norm_upper_over_D": 0.00018284409747976182,
+          "kato_resolvent_derivative_upper_over_D": 0.0007324333111827402,
+          "embedded_resolvent_derivative_upper_over_D": 0.0007864373057463522
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 3403.844363037299,
+          "omega_D": 0.0,
+          "gap_lower_D": 408.14984073527125,
+          "resolvent_norm_upper_over_D": 0.002450080583636946,
+          "kato_resolvent_derivative_upper_over_D": 0.013327194729340916,
+          "embedded_resolvent_derivative_upper_over_D": 0.01405083930055157
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 3403.844363037299,
+          "omega_D": 544.1997876470283,
+          "gap_lower_D": 408.14984073527125,
+          "resolvent_norm_upper_over_D": 0.0014700483501821678,
+          "kato_resolvent_derivative_upper_over_D": 0.007212291050840729,
+          "embedded_resolvent_derivative_upper_over_D": 0.007646477793567121
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 3403.844363037299,
+          "omega_D": 5441.997876470283,
+          "gap_lower_D": 408.14984073527125,
+          "resolvent_norm_upper_over_D": 0.0001832414000380402,
+          "kato_resolvent_derivative_upper_over_D": 0.0007706911570622939,
+          "embedded_resolvent_derivative_upper_over_D": 0.0008248124970884783
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 6807.688726074598,
+          "omega_D": 0.0,
+          "gap_lower_D": 272.09989382351415,
+          "resolvent_norm_upper_over_D": 0.0036751208754554183,
+          "kato_resolvent_derivative_upper_over_D": 0.030528921569425046,
+          "embedded_resolvent_derivative_upper_over_D": 0.03161438842624103
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 6807.688726074598,
+          "omega_D": 544.1997876470283,
+          "gap_lower_D": 272.09989382351415,
+          "resolvent_norm_upper_over_D": 0.0016435640206093711,
+          "kato_resolvent_derivative_upper_over_D": 0.01001878939972565,
+          "embedded_resolvent_derivative_upper_over_D": 0.010504224935558363
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 6807.688726074598,
+          "omega_D": 5441.997876470283,
+          "gap_lower_D": 272.09989382351415,
+          "resolvent_norm_upper_over_D": 0.00018352677850099464,
+          "kato_resolvent_derivative_upper_over_D": 0.0008270940368950166,
+          "embedded_resolvent_derivative_upper_over_D": 0.0008812996649959837
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 12253.839706934277,
+          "omega_D": 0.0,
+          "gap_lower_D": 54.4199787647029,
+          "resolvent_norm_upper_over_D": 0.018375604377277074,
+          "kato_resolvent_derivative_upper_over_D": 0.7849323763719441,
+          "embedded_resolvent_derivative_upper_over_D": 0.7903597106560241
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 12253.839706934277,
+          "omega_D": 544.1997876470283,
+          "gap_lower_D": 54.4199787647029,
+          "resolvent_norm_upper_over_D": 0.001828440974797618,
+          "kato_resolvent_derivative_upper_over_D": 0.01882953590838361,
+          "embedded_resolvent_derivative_upper_over_D": 0.01936957585401973
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 12253.839706934277,
+          "omega_D": 5441.997876470283,
+          "gap_lower_D": 54.4199787647029,
+          "resolvent_norm_upper_over_D": 0.0001837468566596101,
+          "kato_resolvent_derivative_upper_over_D": 0.0013001900484199008,
+          "embedded_resolvent_derivative_upper_over_D": 0.001354460677797066
+        }
+      ]
+    },
+    {
+      "q": 4.642875905017628e+24,
+      "tail_fourth_moment_fraction_upper": 1e-323,
+      "tail_exponent_lower": 2.086680234063405e+19,
+      "window_quadratic_coefficient_upper": 21.823010601727276,
+      "log_statistic_rms_upper": 160.88361271245228,
+      "projector_distance_upper": 0.019567421146439206,
+      "gap_retained_fraction_lower": 0.9996171160296777,
+      "profile_metric_derivative_norm_upper": 0.1476777082442859,
+      "aligned_complement_gap_lower_D": 117260544544.97697,
+      "carriers": [
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 0.0,
+          "gap_lower_D": 117260544544.97696,
+          "resolvent_norm_upper_over_D": 8.528017705191841e-12,
+          "kato_resolvent_derivative_upper_over_D": 3.4161366605394835e-11,
+          "embedded_resolvent_derivative_upper_over_D": 3.668016282653368e-11
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 117260544544.97696,
+          "gap_lower_D": 117260544544.97696,
+          "resolvent_norm_upper_over_D": 6.03021914942009e-12,
+          "kato_resolvent_derivative_upper_over_D": 2.4155733981274356e-11,
+          "embedded_resolvent_derivative_upper_over_D": 2.593679186966869e-11
+        },
+        {
+          "momentum_fraction": 0.0,
+          "k_D_limit": 0.0,
+          "omega_D": 1172605445449.7693,
+          "gap_lower_D": 117260544544.97696,
+          "resolvent_norm_upper_over_D": 8.485694775435131e-13,
+          "kato_resolvent_derivative_upper_over_D": 3.399183024076544e-12,
+          "embedded_resolvent_derivative_upper_over_D": 3.649812615535899e-12
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 733437705446.123,
+          "omega_D": 0.0,
+          "gap_lower_D": 87945408408.73271,
+          "resolvent_norm_upper_over_D": 1.137069027358912e-11,
+          "kato_resolvent_derivative_upper_over_D": 6.185078339676362e-11,
+          "embedded_resolvent_derivative_upper_over_D": 6.520917835828209e-11
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 733437705446.123,
+          "omega_D": 117260544544.97696,
+          "gap_lower_D": 87945408408.73271,
+          "resolvent_norm_upper_over_D": 6.822414164153472e-12,
+          "kato_resolvent_derivative_upper_over_D": 3.3471849150509664e-11,
+          "embedded_resolvent_derivative_upper_over_D": 3.548688612742074e-11
+        },
+        {
+          "momentum_fraction": 0.25,
+          "k_D_limit": 733437705446.123,
+          "omega_D": 1172605445449.7693,
+          "gap_lower_D": 87945408408.73271,
+          "resolvent_norm_upper_over_D": 8.504133370333843e-13,
+          "kato_resolvent_derivative_upper_over_D": 3.576735598851601e-12,
+          "embedded_resolvent_derivative_upper_over_D": 3.827909784198533e-12
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 1466875410892.246,
+          "omega_D": 0.0,
+          "gap_lower_D": 58630272272.488495,
+          "resolvent_norm_upper_over_D": 1.7056035410383675e-11,
+          "kato_resolvent_derivative_upper_over_D": 1.4168305886385694e-10,
+          "embedded_resolvent_derivative_upper_over_D": 1.4672065130613464e-10
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 1466875410892.246,
+          "omega_D": 117260544544.97696,
+          "gap_lower_D": 58630272272.488495,
+          "resolvent_norm_upper_over_D": 7.627690920852287e-12,
+          "kato_resolvent_derivative_upper_over_D": 4.6496654820835486e-11,
+          "embedded_resolvent_derivative_upper_over_D": 4.874953464960991e-11
+        },
+        {
+          "momentum_fraction": 0.5,
+          "k_D_limit": 1466875410892.246,
+          "omega_D": 1172605445449.7693,
+          "gap_lower_D": 58630272272.488495,
+          "resolvent_norm_upper_over_D": 8.517377629052023e-13,
+          "kato_resolvent_derivative_upper_over_D": 3.838498285923852e-12,
+          "embedded_resolvent_derivative_upper_over_D": 4.090063647625762e-12
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 2640375739606.043,
+          "omega_D": 0.0,
+          "gap_lower_D": 11726054454.497726,
+          "resolvent_norm_upper_over_D": 8.528017705191818e-11,
+          "kato_resolvent_derivative_upper_over_D": 3.64282832044196e-09,
+          "embedded_resolvent_derivative_upper_over_D": 3.6680162826533488e-09
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 2640375739606.043,
+          "omega_D": 117260544544.97696,
+          "gap_lower_D": 11726054454.497726,
+          "resolvent_norm_upper_over_D": 8.48569477543513e-12,
+          "kato_resolvent_derivative_upper_over_D": 8.738684851411427e-11,
+          "embedded_resolvent_derivative_upper_over_D": 8.98931444287078e-11
+        },
+        {
+          "momentum_fraction": 0.9,
+          "k_D_limit": 2640375739606.043,
+          "omega_D": 1172605445449.7693,
+          "gap_lower_D": 11726054454.497726,
+          "resolvent_norm_upper_over_D": 8.527591336283985e-13,
+          "kato_resolvent_derivative_upper_over_D": 6.034111055824862e-12,
+          "embedded_resolvent_derivative_upper_over_D": 6.285978084902111e-12
+        }
+      ]
+    }
+  ],
+  "window_cover": {
+    "radial_tiles": 16,
+    "angular_tiles": 32,
+    "fields": {
+      "NP": {
+        "value": [
+          0.90681750402981,
+          1.1070013370121257
+        ],
+        "R": [
+          -0.2659313685707187,
+          0.3840206274216985
+        ],
+        "x": [
+          -0.02083950373263136,
+          0.023221257339071655
+        ],
+        "RR": [
+          -1.3959386206450002,
+          1.5726314136141395
+        ],
+        "Rx": [
+          -0.41296548695304164,
+          0.4747022689742214
+        ],
+        "xx": [
+          -0.015209036194642846,
+          -0.0022730403520332025
+        ]
+      },
+      "W": {
+        "value": [
+          25.07641102918108,
+          85.66459032639385
+        ],
+        "R": [
+          -6185.204837735684,
+          -743.3951290893361
+        ],
+        "x": [
+          -1.2587850944956116,
+          1.191098660751412
+        ],
+        "RR": [
+          41087.946903057535,
+          712295.2563000262
+        ],
+        "Rx": [
+          -45.03060929562392,
+          44.18298639073617
+        ],
+        "xx": [
+          -0.018818324771445693,
+          0.10204932540122556
+        ]
+      },
+      "a": {
+        "value": [
+          0.0043619567992394925,
+          1.009276106607628
+        ],
+        "R": [
+          -0.19604113310364454,
+          0.20535373499446452
+        ],
+        "x": [
+          -0.5343048383422444,
+          -0.46560590230109555
+        ],
+        "RR": [
+          -0.675970085059839,
+          1.0475910640208674
+        ],
+        "Rx": [
+          -0.18958600109481671,
+          0.23481247861635926
+        ],
+        "xx": [
+          -0.011870146380614217,
+          0.014183355784815568
+        ]
+      }
+    },
+    "derived": {
+      "a_theta": [
+        0.07323556603013706,
+        0.5334829045002991
+      ],
+      "L_theta_theta": [
+        -43.646021203454545,
+        -0.12866968732596648
+      ],
+      "L_theta_theta_theta": [
+        -105.92797638308308,
+        582.1108679578693
+      ],
+      "L_s_theta_theta": [
+        -5.913050476808995,
+        5.913050476808995
+      ],
+      "log_W_R": [
+        -85.60806505514563,
+        -26.03728225236512
+      ],
+      "log_W_theta": [
+        -0.017420030014071643,
+        0.02312382514889733
+      ],
+      "log_W_theta_theta": [
+        -0.022517097531456212,
+        0.017320295321500576
+      ],
+      "sine_squared_L_theta_theta": [
+        -0.9985639664116571,
+        -0.030428238218594417
+      ]
+    }
+  },
+  "profile_controls": [
+    {
+      "q": 1005,
+      "u": 0.0125,
+      "mu": 854.5,
+      "records": [
+        {
+          "order": 512,
+          "projector_distance": 1.4777197285730247e-05,
+          "metric_derivative_norm": 7.979446968757903e-06,
+          "log_statistic_rms": 0.4326585049381406
+        },
+        {
+          "order": 1024,
+          "projector_distance": 1.4777197285730247e-05,
+          "metric_derivative_norm": 7.979446968757903e-06,
+          "log_statistic_rms": 0.43265850493814967
+        }
+      ],
+      "bounds_enclose": true,
+      "refinement_absolute_change": 9.048317650695026e-15
+    },
+    {
+      "q": 1005,
+      "u": 0.025,
+      "mu": 904.5,
+      "records": [
+        {
+          "order": 512,
+          "projector_distance": 0.00013649410253227848,
+          "metric_derivative_norm": 0.00013649409807792368,
+          "log_statistic_rms": 0.4325411014927122
+        },
+        {
+          "order": 1024,
+          "projector_distance": 0.00013649410253227846,
+          "metric_derivative_norm": 0.00013649409807792368,
+          "log_statistic_rms": 0.43254110149267494
+        }
+      ],
+      "bounds_enclose": true,
+      "refinement_absolute_change": 3.7247982476174e-14
+    },
+    {
+      "q": 1005,
+      "u": 0.0375,
+      "mu": 954.5,
+      "records": [
+        {
+          "order": 512,
+          "projector_distance": 0.00031069068581381873,
+          "metric_derivative_norm": 0.00016776790514930139,
+          "log_statistic_rms": 0.4321801829330905
+        },
+        {
+          "order": 1024,
+          "projector_distance": 0.00031069068581400777,
+          "metric_derivative_norm": 0.00016776790514940344,
+          "log_statistic_rms": 0.4321801829513613
+        }
+      ],
+      "bounds_enclose": true,
+      "refinement_absolute_change": 1.8270773782802507e-11
+    },
+    {
+      "q": 10005,
+      "u": 0.0125,
+      "mu": 8504.5,
+      "records": [
+        {
+          "order": 512,
+          "projector_distance": 1.4768858367722712e-05,
+          "metric_derivative_norm": 7.97494408822839e-06,
+          "log_statistic_rms": 0.43297716616325604
+        },
+        {
+          "order": 1024,
+          "projector_distance": 1.4768858367722714e-05,
+          "metric_derivative_norm": 7.974944088228388e-06,
+          "log_statistic_rms": 0.43297716614962534
+        }
+      ],
+      "bounds_enclose": true,
+      "refinement_absolute_change": 1.3630707673684128e-11
+    },
+    {
+      "q": 10005,
+      "u": 0.025,
+      "mu": 9004.5,
+      "records": [
+        {
+          "order": 512,
+          "projector_distance": 0.00013649410253352374,
+          "metric_derivative_norm": 0.00013649409808290475,
+          "log_statistic_rms": 0.4329653581712229
+        },
+        {
+          "order": 1024,
+          "projector_distance": 0.00013649410253352372,
+          "metric_derivative_norm": 0.00013649409808290475,
+          "log_statistic_rms": 0.4329653581735791
+        }
+      ],
+      "bounds_enclose": true,
+      "refinement_absolute_change": 2.3562263251619697e-12
+    },
+    {
+      "q": 10005,
+      "u": 0.0375,
+      "mu": 9504.5,
+      "records": [
+        {
+          "order": 512,
+          "projector_distance": 0.0003103230796979169,
+          "metric_derivative_norm": 0.00016756940394888094,
+          "log_statistic_rms": 0.43292950965354676
+        },
+        {
+          "order": 1024,
+          "projector_distance": 0.00031032307969791693,
+          "metric_derivative_norm": 0.00016756940394888094,
+          "log_statistic_rms": 0.43292950965348087
+        }
+      ],
+      "bounds_enclose": true,
+      "refinement_absolute_change": 6.589173651150304e-14
+    }
+  ],
+  "matrix_controls": [
+    {
+      "angle": 0.1,
+      "k": 0.0,
+      "minimum_abs_eigenvalue": 0.9900332889206205,
+      "theoretical_gap_lower": 0.9900332889206209,
+      "inverse_mixing_identity_error": 5.356604824930099e-16,
+      "connection_derivative_error": 7.212092309810062e-10,
+      "resolvent_derivative_error": 2.472755920192346e-10,
+      "embedded_derivative_error": 2.751870711278746e-10
+    },
+    {
+      "angle": 0.1,
+      "k": 0.1,
+      "minimum_abs_eigenvalue": 0.9852304601333213,
+      "theoretical_gap_lower": 0.890033288920621,
+      "inverse_mixing_identity_error": 5.356604824930099e-16,
+      "connection_derivative_error": 6.297477338864174e-10,
+      "resolvent_derivative_error": 2.881329831772353e-10,
+      "embedded_derivative_error": 3.503065711370159e-10
+    },
+    {
+      "angle": 0.6,
+      "k": 0.0,
+      "minimum_abs_eigenvalue": 0.6811788772383374,
+      "theoretical_gap_lower": 0.6811788772383368,
+      "inverse_mixing_identity_error": 4.931773384061165e-16,
+      "connection_derivative_error": 7.472682107433631e-10,
+      "resolvent_derivative_error": 4.610253917053826e-10,
+      "embedded_derivative_error": 5.013875305014334e-10
+    },
+    {
+      "angle": 0.6,
+      "k": 0.1,
+      "minimum_abs_eigenvalue": 0.6586082411917779,
+      "theoretical_gap_lower": 0.5811788772383368,
+      "inverse_mixing_identity_error": 4.931773384061165e-16,
+      "connection_derivative_error": 8.379003090894884e-10,
+      "resolvent_derivative_error": 3.1792113306462816e-10,
+      "embedded_derivative_error": 3.8223796464628914e-10
+    }
+  ],
+  "parameter_reporting_correction": {
+    "source": "provenance/dihole_projected_gap_parameter_trial.py",
+    "source_sha256": "d6adfaf947e5cc04f9e65d0e168801dd6bd059ae85eeef0da87473d2332bc68a",
+    "results": "dihole_projected_gap_parameter_trial.json",
+    "results_sha256": "9f9a0666d77713ea5a48ce2b63e2e76c2c0717718c58420ffc53e82f543e6239",
+    "finding": "Pilot exported rounded-up bounds on k and omega, rather than explicit chosen parameters; even exact zero appeared as a subnormal upper bound. Now choose a rounded-down momentum limit and explicit binary frequency before interval evaluation, and compose the gap from the exported projector-distance bound.",
+    "scope": "Makes the declared all-|k|<=k_limit range and fixed frequency directly reproducible. No test tolerance or physical scope changed."
+  },
+  "atomic_flux_is_continuous_estimate": true,
+  "source_sha256": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5"
+  },
+  "source_trace_bound": null,
+  "global_resolvent_bound": null,
+  "atom_transit": null,
+  "scope": [
+    "Same collar and regular nu band as165, for q>=1000; moment interpolation covers the normalized path between frozen and aligned profiles.",
+    "Compressed frozen transverse gap and imaginary-frequency resolvent with bounded radial carrier k; no s derivatives or exterior propagation are included in this frozen symbol.",
+    "First paired metric derivative in Kato-identified complement spaces and separate embedded derivative including both outer projectors.",
+    "A whole-space resolvent comparison needs a collar cutoff, its commutator, a self-adjoint longitudinal extension and source trace-ideal estimates. No global spectral gap follows.",
+    "No total supporting stress, stable opening, new physical law, atomic survival or time shift is established."
+  ]
+}
