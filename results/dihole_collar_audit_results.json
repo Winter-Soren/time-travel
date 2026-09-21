@@ -1,0 +1,174 @@
+{
+  "complete": true,
+  "passed": true,
+  "tests": {
+    "exact_provenance": true,
+    "fixed_frequency_archive": true,
+    "exact_old628": true,
+    "exact_source": true,
+    "exact_retained_insertion": true,
+    "refined_old_block_zero": true,
+    "raw_residual_reproduction": true,
+    "normal_equation": true,
+    "independent_gain_spectrum": true,
+    "gain_total_and_groups": true,
+    "adapter_baseline_chain": true,
+    "expanded_residual_identity": true,
+    "positive_balanced_matrices": true
+  },
+  "parameters": {
+    "kappa": 0.7,
+    "first_mass": 0.1,
+    "old_dimension": 628,
+    "total_dimension": 892,
+    "source_dimension": 216
+  },
+  "raw_solve_rows": [
+    {
+      "residual_squared": 1187.0431131730656,
+      "expanded_residual_squared": 1187.043113173073,
+      "expanded_difference": 7.275957614183426e-12,
+      "relative_normal_residual": 4.4164556108492395e-16,
+      "scalar_subtraction_factor": 27.68479497613303,
+      "selected": 0,
+      "saved_difference": 6.639311322942376e-11
+    },
+    {
+      "residual_squared": 1159.0231775351003,
+      "expanded_residual_squared": 1159.0231775351021,
+      "expanded_difference": 1.8189894035458565e-12,
+      "relative_normal_residual": 4.566446881828485e-16,
+      "scalar_subtraction_factor": 28.378263514638714,
+      "selected": 8,
+      "saved_difference": 3.8198777474462986e-11
+    },
+    {
+      "residual_squared": 1135.334854271794,
+      "expanded_residual_squared": 1135.334854271794,
+      "expanded_difference": 0.0,
+      "relative_normal_residual": 4.228908172612225e-16,
+      "scalar_subtraction_factor": 28.991229636863267,
+      "selected": 16,
+      "saved_difference": 2.114575181622058e-11
+    },
+    {
+      "residual_squared": 1114.62781565333,
+      "expanded_residual_squared": 1114.6278156533372,
+      "expanded_difference": 7.275957614183426e-12,
+      "relative_normal_residual": 4.723617817297257e-16,
+      "scalar_subtraction_factor": 29.548392791760616,
+      "selected": 32,
+      "saved_difference": 2.7284841053187847e-11
+    },
+    {
+      "residual_squared": 1114.6114108181955,
+      "expanded_residual_squared": 1114.6114108181973,
+      "expanded_difference": 1.8189894035458565e-12,
+      "relative_normal_residual": 5.498298553012482e-16,
+      "scalar_subtraction_factor": 29.5488424025779,
+      "selected": 64,
+      "saved_difference": 4.547473508864641e-11
+    }
+  ],
+  "full_pool": {
+    "residual_squared": 1114.6111099212903,
+    "expanded_residual_squared": 1114.611109921294,
+    "expanded_difference": 3.637978807091713e-12,
+    "relative_normal_residual": 8.186266396790291e-16,
+    "scalar_subtraction_factor": 29.548850649447196,
+    "saved_difference": 6.230038707144558e-11
+  },
+  "same64_refined": {
+    "residual_squared": 1114.6114108173333,
+    "expanded_residual_squared": 1114.6114108173315,
+    "expanded_difference": -1.8189894035458565e-12,
+    "relative_normal_residual": 5.261140056801474e-16,
+    "scalar_subtraction_factor": 29.54884240260153,
+    "saved_difference": 4.9112713895738125e-11
+  },
+  "group_gains": {
+    "collar": {
+      "gain": 72.30427859782799,
+      "saved_difference": 0.0
+    },
+    "global": {
+      "gain": 41.0163797217939,
+      "saved_difference": 0.0
+    }
+  },
+  "gain_spectrum_maximum_absolute_error": 1.509903313490213e-14,
+  "smallest_computed_gain": -5.045235828607523e-16,
+  "independent_total_gain": 72.43200325177231,
+  "condition": {
+    "balanced_schur_minimum": 3.479130188202134e-05,
+    "balanced_schur_maximum": 3.552812640960574,
+    "balanced_schur_condition": 102117.84120664124,
+    "balanced_full_normal_condition": 2606588.256671072,
+    "schur_frobenius_subtraction_factor": 1.4945239766786338,
+    "reduced_rhs_subtraction_factor": 5.2416485095746825,
+    "machine_epsilon": 2.220446049250313e-16,
+    "scope": "Basis-dependent floating condition and cancellation diagnostics, not certified arithmetic errors."
+  },
+  "adapter_baseline_chain_maximum_relative_error": 0.0,
+  "equations": {
+    "normal": "N=M+m(B+B*)+m^2 G; rhs=(B*+m G)h",
+    "residual": "tr(h*Gh)-Re tr(rhs*N^-1 rhs)",
+    "gain": "eigenvalues of Q* S^-1 Q, S=N_HH-N_HL N_LL^-1 N_LH, Q=rhs_H-N_HL N_LL^-1 rhs_L"
+  },
+  "scope": [
+    "Independent raw saved-matrix solves and source-space eigenvalues; no assembly or production SVD rerun.",
+    "The ephemeral adapter supplies only the actual VxV insertion read by the fixed-frequency callers.",
+    "First-step gains optimize absolute-eigenvalue-weighted errors, not the signed four-filter source.",
+    "Floating quadrature, omitted fields, other frequencies/sectors, and physical source errors are not enclosed."
+  ],
+  "source_sha256": "7133a35901cd2cb8c3beadaa0e487fccef0068a3bf88681f9c87077cc1faed47",
+  "input_sha256": {
+    "dihole_radial_refinement.py": "15f7e6dd414b87365cf3d1ef3a14ef3558201cc07c851d38853e26a601f15a1c",
+    "dihole_radial_stream.py": "54b25d772a9b63eda3547188715aa746b4752b1988ed977702683a6f0503a76a",
+    "dihole_bridge_enrichment.py": "c5fb3c062e40041c3f6b681903d8985f4c38aba59ca6deaeb2dd85f0b037737b",
+    "dihole_enriched_bridge.py": "b5b7588b4991219329f8fca1b2132b4c369602adcdd197d6271e33750e4e74b2",
+    "dihole_finite_frequency_tail.py": "37aad394ced2841bcbe6a595f93b77067592323e785f4aa16c1e1827af91dd0a",
+    "dihole_sewn_form.py": "ee043fdd42b7ee5efde627c1e53ce7b18f238c81fc31e354feb12662ce9a4f0f",
+    "dihole_sewn_quadrature.py": "5c30ad3f66a53561f14733795d6106ca69be51514fe468bd9588bd33685c2bab",
+    "dihole_euclidean_form.py": "050f817fe5c0533b0f51eb82e248e315b01387e719386ba941b9555aea2fd459",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_azimuthal_bridge.py": "4382f13b42fd66f94b9a180dd6937508767e26561d8897118b33e0eb1e78a5c1",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_curved_exterior.py": "71c8782caa1305e31c84fee95f688d62b349df4c66ee2c4acfcc37650f112cf5",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_angular_crosscheck.py": "6ffde17e3d191ac7b1cd7968205bf958018a0af1f6f6e1851dc39a1f2b7e204b",
+    "dihole_angular_crosscheck_state.npz": "e98bf9d543dcbe61ac535fbead63447f67cceec2a666142d3e27bc34b8fab740",
+    "dihole_angular_crosscheck_results.json": "40bbb98215ecb6450f0be9158204648ee0e1b5c13520ec757410ff62717e399b",
+    "dihole_exterior_extension.py": "1c03ff071f17a74c70c313c36b2c8c56c12cb45ea983d043b2c37ab3a32dcb37",
+    "dihole_radial_schur.py": "65a75257c6c7a584462aeac06bbaaf985e7b8e1fc9c0034524965776b08d96a4",
+    "dihole_exterior_feedback.py": "fd3a411db80418c2e35949a60135651267dcf67befddedd189469c13c9bed687",
+    "dihole_exterior_feedback_state.npz": "b68b175fc06a958bb0fee1c13dc6fd0d5aebcd300b27d8a293bc56cf67e33bee",
+    "dihole_exterior_feedback_results.json": "8c012ba980a379ffc694937533ffb0ba0d886d1f23043a40ef4988832f1ddaa1",
+    "dihole_residual_regions.py": "302154d669ad62a0d56998fc1615ebd96058c09fcb227c7febbd890b65e20968",
+    "dihole_residual_regions_results.json": "c15cb463e1489d2556af83fb52da48348cbedd7382721d96b9e707a9d2dbda51",
+    "dihole_residual_regions_state.npz": "866811b1ab98a458c2446d392ac9cc4bc1e0d7c5a0e7ecc5f1be57c7c14c2019",
+    "dihole_mouth_fields.py": "b91db722633e202b73ddbcf5c719514abd5611e1659113fb3f4f3053e70408b8",
+    "dihole_mouth_fields_checks.json": "4b3b2f09ce3c7da3a8bb4078e6bc386770901ff771f8af1ef6e6ed102e99b466",
+    "dihole_common_pv_residual.py": "ab96d903a82cf431ced53031a6c24433c21dcd6a254d71e182eb62c0cfc9461b",
+    "dihole_retained_resolvent.py": "8f0be07c290d51017300022f4e9fd43ba40e01c32f7bff22ec81f4babf2dee8c",
+    "provenance/dihole_mouth_enrichment_quadrature_failure.py": "dfcb7f7fd7b481ea4105ae3653a19f0ccf1233d96b733392044d6c6336252c07",
+    "dihole_mouth_enrichment_quadrature_failure_state.npz": "93103ca06b06976dfebdc12be73881f6d87d9e38c39ebbce9bf0802a0cb07332",
+    "dihole_mouth_enrichment_quadrature_failure_results.json": "58eddc9d2eeae17bb09638ae3839aff5548c275c04665a7b9f095bba06517fa6",
+    "dihole_mouth_enrichment.py": "f3a4d0d6062e1793717e57bb8f642ce70295428fadb60b763c53faee7ebbfb42",
+    "dihole_mouth_enrichment_state.npz": "9c7774e9ac746a520dcaa7fc82ba16cac4f51f815167d320245afccda14d0767",
+    "dihole_mouth_enrichment_results.json": "490a62e74e47edd9627f566cf7d00e72f5ecfade5ca32e7f4c07c9ecdc0fb423",
+    "dihole_residual_candidates.py": "0985680eceb6df9a4e72077410303c92109a425bc0c9970f292c9b3f6fde8e1c",
+    "dihole_residual_candidates_checks.json": "867db4e1858ce973485e2fa0135a403d23489f28eaf5c9bf2ac91a4927475304",
+    "dihole_residual_selection.py": "a4623b5913a1b03dd40c71db7e5113e661764bd1db2329ecd48a2142c0fd9ed3",
+    "dihole_residual_selection_state.npz": "4977aa90e23fcf201d5fe91436e93520c481bc6ea42dca9fd0f04ff5bd9a04c0",
+    "dihole_residual_selection_results.json": "3da8d3e020724d5b605bee047fd40224ae2725802abfcff07d0e427ab1853121",
+    "dihole_collar_candidates.py": "486e0a8d58c4fd45791812d4de9ffef37b27b6c2f366a646a133ed83258f0424",
+    "dihole_collar_candidates_checks.json": "fab014c334d6ba1d65c776355d260e9cd0f6c1de767db0b963a5ae571f420c19",
+    "dihole_collar_selection.py": "317779a02311707c19c2afc724842b388779ec63a690974cf04f1ce920b9e83f",
+    "dihole_collar_selection_state.npz": "8a631525fa61ebe49d1ae10b178bc1fdf9db4e244c6ead38998f851ecd142620",
+    "dihole_collar_selection_results.json": "a69c7da57a0a8f4eeadf14f619a760c0602fc25c35fafb5bb87be72ec3377a8a"
+  },
+  "seconds": 1.4713709999341518
+}

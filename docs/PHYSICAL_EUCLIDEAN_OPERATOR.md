@@ -2018,3 +2018,153 @@ localization,45 checks pass. Both figures were inspected. These are
 reproducible numerical improvements within the model; no obtainable matter,
 stable supporting bridge or travel from13September2027 to12September2027
 has been established.
+
+
+## Localized collar comparison and a physical decision criterion
+
+Increment159 completes the targeted comparison suggested by158's spatial
+residual. **Localized collar fields help, but the squared auxiliary residual
+falls only6.10%, and the physical support question remains undecided.** The
+[provider](../scripts/dihole_collar_candidates.py),
+[fixed-frequency calculation](../scripts/dihole_collar_selection.py) and
+[independent audit](../scripts/dihole_collar_audit.py) pass44 checks in total.
+See their [provider checks](../results/dihole_collar_candidates_checks.json),
+[calculation results](../results/dihole_collar_selection_results.json) and
+[audit results](../results/dihole_collar_audit_results.json).
+
+### Candidate construction and the frequency restriction
+
+The fixed628-field baseline and retained216-field insertion are unchanged.
+Each existing regular angular profile receives six localized radial fields:
+left/right openings, each with widths $w/D=.0025,.005,.01$. With inward
+distance $d$ from an opening and the existing smooth step $S$,
+
+$$h_w(d)=\frac2{\sqrt w}\frac d w e^{-d/w}[1-S(d/.05D)],
+\qquad 0\le d\le .05D.$$
+
+Outside that collar the field vanishes. Its value is zero at the opening;
+the inner cutoff is flat. The nonzero opening normal derivative is allowed
+in the first-order form domain, with no second-order domain assertion.
+The132 collar fields are compared with132 additional global sine modes
+$n=21,\ldots,26$ on the same22 angular profiles. The provider recovers
+angular values/actions from existing fields; it introduces no geometry,
+matter model, gauge choice or physical medium.
+
+Only three sets of candidate blocks are integrated, at $\kappa D=.7$:
+
+$$G=Z^*Z,\qquad M=(AZ)^*(AZ),\qquad B=Z^*AZ.$$
+
+The full differential-action Gram $M$ is retained; $B^*B$ cannot replace it.
+Measured weak-action skew defects are kept. The old628 blocks and exterior
+are reused exactly. The
+[14.7MB cache](../data/dihole_collar_selection_state.npz) contains explicit
+fixed-frequency matrices and the retained insertion separately, **not
+frequency-polynomial coefficients**. A documented ephemeral adapter lets
+the existing single-frequency solvers read those matrices; it cannot be
+used at another frequency or as a full source insertion.
+
+### Measured gains and numerical checks
+
+The established Schur/SVD selection optimizes only the first weighted solve,
+with source216 and $mD=.1$ fixed.
+
+| Trial space | Squared auxiliary residual |
+| --- | ---: |
+| Existing628 |1187.043113173|
+| +8 selected combinations |1159.023177535|
+| +16 |1135.334854272|
+| +32 |1114.627815653|
+| +64 |1114.611410818|
+| Full264 candidate pool |1114.611109921|
+
+The separate available gains are72.304278598 for localized collars and
+41.016379722 for global sines; their coupled gain is72.432003252. These
+overlapping groups do not add. Selected64 captures99.999585% of this finite
+pool's gain, leaving only0.000300897, while a large residual remains.
+Its bridge contribution is967.985859405 and exterior146.625551413.
+
+New-block integration orders64/80 agree within1.09e-13 relatively; the
+selected residual changes7.77e-13. The baseline residual reproduces exactly.
+The audit solves the raw normal equations independently and checks gain
+eigenvalues through $Q^*S^{-1}Q$, without the production SVD: residuals
+agree within6.64e-11 and gain eigenvalues within1.51e-14. Both baseline
+four-filter chains reproduce exactly through the adapter. The balanced
+Schur spectrum is3.47913e-5 to3.55281, with no discarded modes. Its
+condition number is1.02118e5, and the measured Schur subtraction factor
+is1.49. These floating checks do not enclose continuum or integration error.
+
+The main calculation completed in185.73s; the independent cached audit took
+1.47s. It reused the frozen geometry and source. The
+[figure](../figures/dihole_collar_selection_progress.png) was inspected.
+
+### The physical decision and a stop rule for refinement
+
+The selected64 retained-source interval at $\eta=.01$ remains
+$[-52446.98464,2884.96515]$, around a trial-filter response
+$2.9907821\times10^{-6}$. At $\eta=.0001$ it is
+$[-5288490.4272,289850.3173]$. These intervals concern one retained
+insertion at one frequency and positive regulator shift. They neither
+give nor bound the full physical response $C$.
+
+Further growth of this candidate pool is exhausted. Another basis campaign
+must identify its quantitative contribution to an error budget for the
+physical source. The next target is a **coarse absolute bound**, not a
+chosen number of extra fields or a percentage reduction of solver error.
+
+The already declared necessary masked Einstein test requires, for the
+specified one-field model,
+
+$$C_{\rm required}(D)=-a(D/\ell_P)^2,\qquad
+a=0.006804484661784583.$$
+
+Consequently either rigorous inequality
+
+$$|C(D)|\le B(D)<a(D/\ell_P)^2,$$
+
+$$|\widehat C(D)|+\epsilon_{\rm total}(D)<a(D/\ell_P)^2$$
+
+would reject that support model at the specified admissible scale. **A
+sign determination or small relative error in a tiny finite signal is not
+needed for this rejection.** The absolute accuracy required is set by the
+gravitational source demand. No such $B(D)$ or total error is available yet.
+
+The existing finite-anchor identity gives a concrete route. If
+$\widehat Q_{M_0}$ approximates the *full continuum* anchor with error
+$\epsilon_{\rm anchor}$, the declared local counterterm has error
+$\epsilon_{\rm ct}$, and the actual heat remainder obeys
+$|\mathcal R(s)|\le C_Rs$, then triangle inequalities and154's heat bound give
+
+$$
+|C(D)|\le\frac D{\hbar c}
+\left(
+|\widehat Q_{M_0}-\widehat{\mathcal C}_{M_0}|
++\epsilon_{\rm anchor}+\epsilon_{\rm ct}
++\frac{11C_R}{12M_0^2}
+\right).
+$$
+
+This conditional bound is useful only after its constants and errors are
+evaluated. A quantitative anchor error must include omitted insertion,
+spatial/exterior and sector contributions, frequency integration and any
+infrared regularization used. The positive-frequency retained bounds above
+cannot stand in for that error. The fixed-basis short-time heat asymptotic
+still cannot replace the continuum ultraviolet remainder.
+
+Keep the renormalization prescription and physical couplings consistent:
+$C$ may depend on $\mu_H D$ and other dimensionless parameters. A change of
+subtraction scale requires the corresponding coupling changes, not tuning
+a counterterm to force support. Charge/flux constraints may prevent
+arbitrary rescaling of $D$ at fixed physical couplings. A uniform bound
+$B(D)\le B_0$ would exclude $D>\ell_P\sqrt{B_0/a}$ only within an actually
+admissible scaling family. For several fields the appropriate magnitude
+bound includes all their contributions; rejecting one field does not reject
+every other matter model.
+
+Passing this necessary masked test would still leave the other Einstein
+and Maxwell equations, induced current, backreaction, formation and
+dynamical stability to solve. The current static background has a global
+time function and no closed future causal curves. Its support would not
+by itself establish a chronology extension. No new law or travel from
+13September2027 to12September2027 has been established. These are
+conditional algebraic consequences of the existing model and its declared
+source prescription, not a new empirical law.

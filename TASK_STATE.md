@@ -1,3 +1,70 @@
+# Authoritative checkpoint159 — collar comparison and physical decision target
+
+Previous checkpoint158 published 64529f3b71a2b075ed13830a8bd2e578a08272da.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+No new law, physical supporting stress, obtainable medium, stable bridge,
+or backward passage is established. No discovery deadline.
+
+- Compared 132 localized zero-trace collar fields with 132 global radial
+  sines n21..26, using the same22 angular profiles. Old596 local fields and
+  scalar geometry arrays remain bitwise unchanged. Provider18 checks PASS.
+- Kept old628 full fields, exterior and source216 fixed at kappa=.7, m=.1,
+  phase0, mu=.5. Assembled ONLY new/cross Gram, full-action Gram and weak
+  action at this frequency. Saved892-field cache is explicitly NOT a
+  frequency polynomial; retained insertion stored separately. Assembly and
+  solve185.73s; no geometry or old-core reassembly.
+- Squared first residual: 1187.043113173 baseline; +8=1159.023177535;
+  +16=1135.334854272; +32=1114.627815653; +64=1114.611410818;
+  full264 pool=1114.611109921. Selected64 reduces6.10185945% and misses
+  only0.000300897 of this pool's available gain. This is auxiliary solver
+  error, NOT Einstein-equation error or percentage toward time travel.
+- Separate gains: collars72.304278598, global41.016379722, coupled72.432003252.
+  Groups do not add. Selected64 bridge residual967.985859405 and exterior
+  146.625551413. No new spatial-profile pass justified by this modest gain.
+- New-block quadrature64/80 differences <=1.09e-13; selected residual
+  refinement7.77e-13 relative. Old628 fixed: not a whole-domain enclosure.
+  Driver13 checks PASS. Measured weak skew retained, no silent antisymmetry.
+- Independent cached audit13 checks PASS, no reassembly: raw residuals
+  agree within6.64e-11, gain eigenvalues1.51e-14. Adapter reproduces both
+  baseline filter chains exactly. Old628/source/insertion bitwise fixed.
+  Balanced Schur min3.47913e-5, max3.55281, condition1.02118e5; no dropped
+  modes. Floating conditioning checks are not certified error bars.
+- Selected64 retained-source interval eta=.01 is
+  [-52446.984643770,2884.965150923], trial response2.990782066e-6.
+  At eta=.0001 interval[-5288490.427216,289850.317285].
+  Neither bounds the physical renormalized coefficient C. Missing source
+  insertion, sectors, frequency/IR limits and heat correction remain.
+- All44 provider/driver/audit checks PASS. Figure inspected. Saved source,
+  input and state hashes verified; no failed pilot this increment.
+- DECISION: stop automatic growth of this exhausted finite candidate pool.
+  Further numerical enlargement needs a predicted contribution to a total
+  PHYSICAL source-error budget. The next target is a coarse absolute bound
+  |C(D)|<=B(D), sufficient to reject one-field support if
+  B(D)<0.006804484661784583*(D/lP)^2. Sign/high relative accuracy are not
+  needed for that rejection. We do NOT yet have B(D).
+- Reuse154's finite-anchor plus heat-remainder formula; quantify the full
+  anchor/omitted-insertion and heat-remainder errors. No finite-source
+  interval may be relabeled as B. Keep renormalization scheme/couplings,
+  physical charge/flux and allowed scaling family consistent.
+- Passing this necessary masked stress test would still not prove all
+  field equations, stability, formation, or a chronology extension.
+  Current static geometry has a global time and no backward-time loop.
+  13Sep2027 -> 12Sep2027 remains unproved.
+
+Producer source317779a02311707c19c2afc724842b388779ec63a690974cf04f1ce920b9e83f
+Results a69c7da57a0a8f4eeadf14f619a760c0602fc25c35fafb5bb87be72ec3377a8a
+State8a631525fa61ebe49d1ae10b178bc1fdf9db4e244c6ead38998f851ecd142620
+Audit source7133a35901cd2cb8c3beadaa0e487fccef0068a3bf88681f9c87077cc1faed47
+Audit results3992c009c8bc270a9a3fb6e939c1ae4405a866b6a6dfbce9389031f57a25597f
+
+All delegated calculations finished; no simulation remains running.
+
+Layout/navigation/provenance verification PASS:150 imports,1326 links,
+8 historical guards,14 frozen hashes and operator identity. All44 saved
+checks and exact source/input/state hashes pass; historical bytes preserved.
+
+--- Preserved checkpoint158 and earlier history ---
+
 # Authoritative checkpoint158 — residual-selected radial improvement
 
 Previous goal turn: PROGRESS; checkpoint157 published
