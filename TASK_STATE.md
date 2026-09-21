@@ -50,6 +50,17 @@ subtraction. Do NOT redo conditional152 or weightedzero153; lowH is NOT
 lowproperP. Need full fixedM source, spatial remainders and specified M->inf
 subtraction limit, then physical source/gravity/stability/chronology tests.
 The source-prescription issue is the next dependency, not another basis sweep.
+Concrete high-H target (NOT proved): theta smooth,1 on[-E*,E*];
+Rhigh_m,k=(1-theta(Hm)^2)(Hm+ik)^-1 extends to k0 with norm<=1/E*.
+At fixedM combine S_high=.5 sum_j c_j sum_sign sqrtN Rhigh_(sign*mj),k
+sqrtN beta, mj=sqrt(eta+jM²), AFTER forming the metric derivative.
+Prove uniform localized trace bound on chi dotA_k S_high chi for smallk,
+eta>=0, plus eta0 trace continuity. Keep commonPV cancellation (Greenorder-7,
+sourceorder-6); a uniform local parametrix must also bound its global smoothing
+remainder. HighH resolventbound is the proposed tool, not symbolorder alone.
+Success would bound this frequencycorner by epsilon*C/pi; neither its
+constant nor a proof is saved yet. Do not presume bounds uniform inM.
+Independent agents finished; no simulation or agent work remains running.
 
 Source SHA256:1bd14e40de1c5b5752a81eb92e003e743c0c2b2176f0476517a5ddf71361a72d
 Result SHA256:6e4070fab4a8b2c032173306ef83251c370d1a7583a85868528a89ca127c0747
