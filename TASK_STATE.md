@@ -1,3 +1,54 @@
+# Authoritative checkpoint148 — throat source budget and static-branch rejection
+
+Previous checkpoint147 published b54ea49293e7ee9812d46fe2bdf91ec12bed5362.
+Goal ACTIVE, unachieved. Import complete. No new law, obtainable medium or passage.
+
+- New scripts/throat_source_budget.py reconstructs saved147 states only; no
+  evolution or refinement rerun. All11 comparison/provenance/unit checks PASS.
+- Peak simultaneous negative radial null magnitude S=1.009873237e-5 Lambda4
+  at savedHt.25, center, flux0. Totalrho=.499689220154; pr=pt=-.499699318887.
+  It is a sampled maximum, not a certified continuum supremum.
+- At radiusR=70.70008026/Lambda an Ellis throat needs null stress -4.00119928
+  Lambda4:396208x larger magnitude, plus opposite density/tangential signs.
+  Reject direct use of this saved packet for that specified throat.
+- A pointwise isotropic match gives r0=141.4638982/Lambda, delta=2.0209618e-5,
+  N_ll/N=-4.99704368e-5 Lambda2. Actual source lies at areal radius0, not r0.
+  Full geometry/global matching does not follow. Proper lapse curvature stays
+  finite as delta->0; do not treat large coordinate Phi_r as invariant failure.
+- COMPLETED NEXT PHYSICAL DECISION: strictly static aligned phi=omega*t has
+  Theta=0 and totalrho>=rhoVac-1/3=.1665166894>0. Integrating db/dr=rho*r2/P
+  bounds r_l² by (r-r0)/r*[1-rhomin*(r²+r*r0+r0²)/(3P)], excluding a monotone
+  infinite-radius static end. Published isotropic no-go also excludes two
+  flat/AdS ends. Its deSitter escape has horizons; aligned X~N^-2 makes our
+  source singular there. Scope excludes tilted clocks, dynamics and shells.
+  Do NOT launch a global BVP for this rejected aligned static branch.
+- Static local flare maximum.585998617 atX.414177156 remains only algebra;
+  quartic gradient factor negative. Not a stable/global solution.
+- Nominal derivative indicators belowLambda; max retained p/Lambda.177920.
+  Actual strong-coupling cutoff/omitted operators/UV validity NOT established.
+  P=1e4 fixes Lambda/MbarPl=.01. Actual width5.72862e-31m and elapsed
+  duration3.31120e-39s; these cannot be turned into lab scales by relabeling.
+- Independent agent confirmed throat relations and global static rejection.
+  Primary sources: Morris-Thorne1988; Bronnikov etal arXiv:1708.02324 sec2.2;
+  NIST CODATA2022 constants. Figure inspected. Reportdocs/THROAT_SOURCE_BUDGET.md.
+
+NEXT: same action with stationary tilted phi=omega*t+psi(l), X>0. Derive
+scalar current and mixed stress, impose T_tl=0 and intended current boundary
+condition. Quartic term alone forces alignment orX1 (no null flare); the
+higher-derivative contribution must supply a real flux cancellation. First
+check whether a regular throat-compatible branch survives; only then build
+its two-ended solver. Do not repeat weak regular-center runs or physics
+suites for summary/figure edits. Dirac route remains incomplete.
+No new-law deadline is defensible.13Sep2027->12Sep2027 remains unproved.
+
+Source SHA256: 0b57caa820aca69b8e308642bfa8662e80660319079402f126b0c99044de899d
+Result SHA256: 39c5ae21fbeb3efbf4ac0c620c12ec81ca32dd5693744115177dabac575e6530
+Inputs match saved147 source, result and state hashes. No live simulation.
+Layout PASS:129 imports,1136 Markdown links, historical guards and operator
+identity. Source/input/result hashes and byte suffixes verified. Whitespace PASS.
+
+--- Preserved checkpoint147 and earlier history ---
+
 # Authoritative checkpoint147 — short nonlinear evolution and null stress
 
 Previous turn: PROGRESS, checkpoint146 published

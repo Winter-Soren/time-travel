@@ -1,5 +1,7 @@
 # Directory guide
 
+Current increment148: [throat source budget and static-branch rejection](docs/THROAT_SOURCE_BUDGET.md), [calculator](scripts/throat_source_budget.py), [results](results/throat_source_budget_results.json), and [visual](figures/throat_source_budget_progress.png). Eleven checks pass using saved states; a published no-go theorem and the specific density bound exclude the static aligned completion. A tilted-clock source is the next hypothesis, not an established medium.
+
 Current increment147: [nonlinear evolution and null stress](docs/NONLINEAR_PACKET_EVOLUTION.md), [calculation](scripts/nonlinear_packet_evolution.py), [results](results/nonlinear_packet_evolution_results.json), [saved states](data/nonlinear_packet_evolution_state.npz), and [visual](figures/nonlinear_packet_evolution_progress.png). Eighteen checks pass through Ht=0.5; no stable bridge or backward passage is established. [Failed numerical pilots](results/nonlinear_packet_evolution_fd_trial.json) and their provenance sources are retained.
 
 Current increment146: [nonlinear spherical initial constraints](docs/NONLINEAR_PACKET_CONSTRAINTS.md), [calculation](scripts/nonlinear_packet_constraints.py), [results](results/nonlinear_packet_constraints_results.json), [initial fields](data/nonlinear_packet_constraints_state.npz), and [visual](figures/nonlinear_packet_constraints_progress.png). Fourteen checks pass for one initial slice; nonlinear evolution, stability and time passage remain unproved.

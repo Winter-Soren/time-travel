@@ -1,3 +1,25 @@
+# Checkpoint148 — source budget and global static-branch decision
+
+The saved nonlinear source is 396,208 times weaker in negative radial null
+stress than a specified Ellis throat at the packet width, and its full stress
+pattern differs. A local weak-flare algebraic match does not provide a neck.
+A global analytic check now rejects the strictly static, clock-aligned branch
+for flat/AdS ends or regular cosmological horizons. It does not reject the
+full action with a tilted clock or time dependence. No new law is claimed.
+
+Eleven saved-state comparison checks pass; no simulation was rerun.
+Physical scales for the chosen parameters are microscopic. True EFT validity,
+material realization and backward passage remain unresolved. Next derive
+whether derivative stress can cancel the radial flux of a tilted clock while
+preserving a regular throat; do not solve the excluded static aligned branch.
+
+See [derivation, published obstruction and limits](THROAT_SOURCE_BUDGET.md),
+[calculator](../scripts/throat_source_budget.py),
+[results](../results/throat_source_budget_results.json), and
+[visual](../figures/throat_source_budget_progress.png).
+
+--- Preserved checkpoint147 and earlier research ---
+
 # Checkpoint147 — nonlinear evolution and total radial null stress
 
 The same candidate action now evolves its nonlinear initial packet through

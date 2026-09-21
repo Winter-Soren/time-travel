@@ -1,0 +1,130 @@
+{
+  "complete": true,
+  "passed": true,
+  "checks": {
+    "saved_provenance": true,
+    "peak_flux_free": true,
+    "ellis_tensor_identity": true,
+    "pointwise_density_match": true,
+    "pointwise_pressure_match": true,
+    "pointwise_nec_match": true,
+    "saved_source_insufficient_for_ellis": true,
+    "static_subclass_ellis_density_obstruction": true,
+    "static_flare_extremum": true,
+    "conversion_consistency": true,
+    "original_width_and_time_are_microscopic": true
+  },
+  "saved_source": {
+    "simultaneous_negative_null_magnitude": 1.0098732370317824e-05,
+    "time_Ht": 0.25,
+    "radius_over_initial_width": 0.0,
+    "total_density": 0.49968922015416,
+    "pressure": -0.49969931888653035,
+    "flux": 0.0,
+    "background_density": 0.4997000452683884,
+    "scope": "Maximum over saved samples, not a rigorous continuum supremum."
+  },
+  "benchmarks": [
+    {
+      "radius_times_cutoff": 70.70008025824305,
+      "flare": 2.0,
+      "density": -2.000599640321567,
+      "radial_pressure": -2.000599640321567,
+      "constant_redshift_tangential_pressure": 2.000599640321567,
+      "radial_null_stress": -4.001199280643134,
+      "proper_radius_second_derivative": 0.014144255513534699,
+      "isotropic_required_redshift_curvature": -0.00040011992806431344,
+      "name": "Ellis, constant redshift",
+      "required_to_saved_null_ratio": 396208.07185696415
+    },
+    {
+      "radius_times_cutoff": 70.70008025824305,
+      "flare": 1.0,
+      "density": 0.0,
+      "radial_pressure": -2.000599640321567,
+      "constant_redshift_tangential_pressure": 1.0002998201607836,
+      "radial_null_stress": -2.000599640321567,
+      "proper_radius_second_derivative": 0.007072127756767349,
+      "isotropic_required_redshift_curvature": -0.0003000899460482351,
+      "name": "Unit flare",
+      "required_to_saved_null_ratio": 198104.03592848207
+    },
+    {
+      "radius_times_cutoff": 70.70008025824305,
+      "flare": 0.0001,
+      "density": 2.000399580357535,
+      "radial_pressure": -2.000599640321567,
+      "constant_redshift_tangential_pressure": 0.00010002998201607836,
+      "radial_null_stress": -0.00020005996403215672,
+      "proper_radius_second_derivative": 7.07212775676735e-07,
+      "isotropic_required_redshift_curvature": -0.00020006996703035836,
+      "name": "Weak flare",
+      "required_to_saved_null_ratio": 19.810403592848207
+    }
+  ],
+  "largest_flare_from_saved_strength_at_packet_width": 5.04785273713965e-06,
+  "ellis_radius_if_strength_could_be_relocated": 44502.20872577383,
+  "same_radius_nec_comparison": {
+    "largest_saved_nec_flare_budget": 2.6283537638665454e-06,
+    "time_Ht": 0.5,
+    "radius_over_initial_width": 0.8368118139378937,
+    "areal_radius_times_cutoff": 97.47407892331516,
+    "scope": "Necessary static NEC magnitude comparison at the same areal radius; no throat or full stress match."
+  },
+  "pointwise_isotropic_match": {
+    "radius_times_cutoff": 141.46389815646057,
+    "flare": 2.020961804160104e-05,
+    "density": 0.4996892201541601,
+    "radial_pressure": -0.49969931888653046,
+    "constant_redshift_tangential_pressure": 5.049366185172489e-06,
+    "radial_null_stress": -1.0098732370344978e-05,
+    "proper_radius_second_derivative": 7.143030237739167e-08,
+    "isotropic_required_redshift_curvature": -4.997043682527157e-05,
+    "scope": "Algebraic pointwise matching of rho and pr at a hypothetical static throat. The saved center has zero areal radius, not rmatch; time evolution, topology, flux away from center and global matching remain unsolved."
+  },
+  "stationary_clock_aligned_subclass": {
+    "minimum_total_density": 0.1665166893676721,
+    "largest_negative_null_magnitude": 0.25,
+    "maximum_local_flare": 0.5859986171136506,
+    "X_at_maximum_flare": 0.4141771558659679,
+    "radius_at_maximum_flare_times_cutoff": 155.40753550290657,
+    "time_kinetic_factor_at_maximum": 0.12126573379895189,
+    "gradient_factor_at_maximum": -0.29291142206701604,
+    "scope": "Only strictly stationary, clock-aligned beta=Theta=0 configurations of this quartic action and this fixed vacuum term; no global static solution or stability claim."
+  },
+  "nominal_EFT_indicators": {
+    "H_over_cutoff": 0.004081258160863258,
+    "inverse_initial_width_over_cutoff": 0.014144255513534699,
+    "maximum_retained_local_wavenumber_over_cutoff": 0.1779197877047269,
+    "maximum_trace_extrinsic_curvature_over_cutoff": 0.012390176316415796,
+    "maximum_sqrt_abs_Ricci_scalar_over_cutoff": 0.014137896320666728,
+    "minimum_X": 1.000295145038669,
+    "maximum_X": 1.000304532182417,
+    "true_strong_coupling_cutoff_established": false,
+    "scope": "Derivative indicators relative to the nominal Lambda parameter; not bounds on all omitted operators or all curvature components."
+  },
+  "physical_units": {
+    "cutoff_over_reduced_planck": 0.01,
+    "cutoff_GeV": 2.4353232035965256e+16,
+    "inverse_cutoff_length_m": 8.102700964027456e-33,
+    "inverse_cutoff_time_s": 2.7027704331439117e-41,
+    "initial_packet_width_m": 5.728616084652844e-31,
+    "simulated_duration_s": 3.311197584928354e-39,
+    "pressure_matched_radius_m": 1.1462396639674349e-30,
+    "constants_source": "https://physics.nist.gov/cuu/pdf/all.pdf",
+    "relative_planck_unit_uncertainty": 1.1e-05,
+    "scope": "Conversion for the actual chosen cutoff/Planck ratio. Changing Lambda changes P and the dimensionless solution; this is not a scalable material blueprint."
+  },
+  "source_sha256": "0b57caa820aca69b8e308642bfa8662e80660319079402f126b0c99044de899d",
+  "inputs_sha256": {
+    "nonlinear_packet_evolution.py": "4266e284f49f988c893fba7c9c31947a648442d6c5aa3f1b7bfea103af4ae461",
+    "nonlinear_packet_evolution_results.json": "00c08f0cacf6ed99babd793125ac46ee66dcecc58bd4d834942387beea1b5b0f",
+    "nonlinear_packet_evolution_state.npz": "bf6f6feb89b3bf5a1a32801b77b3610e0fd401b099351026bd16ea49508cdd91",
+    "nonlinear_packet_constraints.py": "5d5af618813717c5f34d5c5429789ee345f2b7c9e0bb0e5bf68b1a694ff428c2",
+    "expanding_field_completion.py": "9031efdfb575046c6e3935d9e444dd505cbb2cdfa64686605c2e553b5ff27a97",
+    "expanding_field_completion_results.json": "611eafd4a4fdf1446f39510d85648e650e5bc9f01a58fd22d28087054055eb29",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "calculation_type": "Analysis and field reconstruction of saved states only; no evolution or refinement rerun.",
+  "decision": "Reject direct use of the saved packet as support for the specified Ellis throat at the packet width. Very weak static flare can pass local algebra, but no global two-ended or dynamic throat solution is supplied."
+}
