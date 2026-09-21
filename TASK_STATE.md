@@ -1,3 +1,84 @@
+# Authoritative checkpoint154 — ordered compact source limit exists
+
+Previous goal turn: PROGRESS; actual zero-state confinement153 published
+6cfc1a76830c3b51cc72213596e6667022c87686; handoff3bd55e7f9e9d04571dee0af6fc4aa0e3a71966ed.
+Goal ACTIVE, unachieved. Import complete. No new law, obtainable matter,
+computed physical source value, supported stable bridge or past passage.
+
+- Closed154 high-H target from153, then same local parameter proof closed
+  large-frequency tail. Independent audits also closed the ordered M->inf
+  limit using proper heat coefficients. This is existence of an ALREADY
+  FORMED compact first variation in136's operational heat/zeta scheme.
+- C=sqrtN,B=C^-1,A_k+m=beta B(Hm+ik)B. theta smooth even[0,1],1near0.
+  Fhigh=(1-theta(Hm)^2)(Hm+ik)^-1 norm<=1/E*, extends throughk0.
+  Ghigh=C Fhigh C beta; (A_k+m)Ghigh=I-beta B theta(Hm)^2 C beta.
+  Defect uniformly locally smoothing; nested compact parametrix and global
+  highR bound control actual remainder. Never subtract singularlowR.
+- Finite localinverse expansion sum_l0..5(-m)^l Q_k^(l+1)+order-7;
+  signs killoddpowers and commonPV sum_j cj(eta+jM²)^r=0 r0,1,2.
+  CombinedGreenorder-7, metricinsertion sourceorder-6. Uniformcompact
+  L2->H4 givestraceclass. ADJOINTstrong convergence controlsfinite rows;
+  uniformtrace tails sum(1+lambda_n)^-2 givejoint tracecontinuityeta,k0.
+- Actual insertion: f=delta logN,V=deltaH0,Tm=Hm+ik;
+  C beta dotA_k C=V+m fN beta-.5{f,Tm}.
+  Lowtrace=Tr[(V+m fN beta)theta² R]-Tr[f theta²]. Contacts doNOTcancel
+  mass-by-mass but areO(epsilon). Mass termO(epsilon) from|m| ||R||<=1/cN.
+  V term is153's signed integratedlowcorner. No individualhighcontacttrace.
+- Large|k|: compact parameterellipticity in(xi,k), fullglobalH resolvent
+  norm<=1/|k|, separatedcutoff remaindersrapid. Sourcejointorder-6 gives
+  ||Lambda_k^4 T||<=C_M k^-2, TrLambda_k^-4=O(k^-1), hence
+  ||T||trace<=C_M |k|^-3; two-sidedtail<=C_M/(2pi K²), uniformeta bounded.
+  This +lowcorner+bandcontinuity proves Q_M=lim_eta0 compactfrequencyresponse.
+  Full limit usesreal/common/symmetricfrequency trace; not absoluteintegral
+  of separate lowtrace norms, not pointwise masslessGreen atk0.
+- ProperheatdeltaK(s)=-sTr_per_time(dotP e^-sP). Fixed-time local heat
+  factors (dotA heat)^* (chi A heat), compacttimewindow of norm1 onoutputs,
+  and semigroupcontraction give|deltaK|<=Cs forlarge s. Cyclicity inper-time
+  trace, not throughwindow. Small s heat expansion throughphysicalA4 hasO(s)
+  remainder (integratedcoefficients perunitKillingtime, variedmeasureincluded).
+- IRsafe difference Q_M-Q_M0=.5 integral(wM-wM0)deltaK ds/s, w=(1-e^-M²s)^3.
+  Masslesspiece cancels. Scale derivative3M integral e^-M²s(1-e^-M²s)^2deltaK ds.
+  MomentsJ0=3ln3-4ln2,J1=2ln2-ln3,J2=1/3 match136countertermderivative.
+  SubtractedderivativeO(M^-3), so ordered eta0 THEN M∞ responseexists.
+- Exact numerical handoff: Rheat=deltaK-(deltaA0/s²+deltaA2/s+deltaA4)/(16pi²),
+  |Rheat|<=C_R*s globally forsome UNEVALUATED constant. Q_HK=Q_M0-C_M0
+  +.5 integral[1-wM0]Rheat ds/s. Plus sign. Correctionbound11C_R/(12M0²).
+  IfA6 retained, leadingcorrection11deltaA6/(192pi² M0²); notcomputedhere.
+  Sameoperator,variation,state and136scheme needed throughout.
+- This doesNOTprove globaldeterminant, differentiationofunregulatedaction,
+  simultaneouseta/Mlimit, equivalence to133contactpair, or numericalstress.
+  ConstantsC_M,C_R remainunevaluated; oldfinitebasis/finiteMvalues notQ_HK.
+- scripts/dirac_regulator_limits.py:13checksPASS, reuses151matrixbenchmark.
+  ExactPV/massmoments, actualsplitcontactidentity(maxerror1.066e-14), high
+  multiplier, finitebounds, continuity, flatsymboltail,heatmoments/subtractions.
+  Initialeta1e-8 failedchosencontinuitytoleranceatN100(max8.453e-5).
+  Preserved results/dirac_regulator_limits_initial_trial.json and exactsource
+  provenance/dirac_regulator_limits_initial_trial.py. Extendedregularhighpart
+  toeta1e-12: maxchange8.454e-9; unchangedtolerance andsplitchecks stillpass.
+  No actualbridge simulation/sourcefitting. Figureinspected.
+- Report appended docs/PHYSICAL_EUCLIDEAN_OPERATOR.md section 'Frequency and
+  regulator limits of the compact response'. Two independentanalyticaudits
+  agree including per-timeheat estimates and136countertermnormalization.
+
+NEXT: numerical value or useful rigorous bound for Q_HK[f], using one finiteM0
+continuum anchor and convergent properheat correction above. Inspect saved
+physical sewn form/basis data; establish quantitative spatial/angular/error
+control, then boundheatcorrection/C_R. Do NOT redo153weightedzeros or154limit
+existence. No infiniteM sweep needed if finiteanchor/heatidentity can beused.
+Compare value with gravitational requirement; fullsource/current, coupled
+support/stability and chronology remain subsequentphysicaltests.
+Agents finished; no simulation or worker remains running.
+
+Source SHA256:0e0ec66cbeea16c1d95527341ba2f840435f83714f20d89dc8215a9aa80a065a
+Result SHA256:f16eb5bf44b7c4b4a81684028925233f704855f61c04d19de96c30af689ac30e
+
+Verification PASS:137 imports,1243 local Markdown links,8 historical guards,
+14 frozen pilot hashes, operator identity, exact new source/input hashes,
+failed-trial source provenance, historical byte suffixes and whitespace.
+No historical simulation or frozen scientific result was rerun or rewritten.
+
+--- Preserved checkpoint153 and earlier history ---
+
 # Authoritative checkpoint153 — actual zero-state confinement proved
 
 Previous goal turn: NO PROGRESS (status answer only). Revalidated published

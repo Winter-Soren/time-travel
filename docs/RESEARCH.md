@@ -1,3 +1,27 @@
+# Checkpoint154 — the declared compact source prescription has a finite limit
+
+The high-energy remainder and large-frequency tail are now controlled at
+fixed regulator scale. The actual lapse-contact insertion is retained.
+Together with153, this proves the compact first-variation massless limit.
+A separate proper-heat scale derivative reproduces136's counterterms and
+has an integrable remainder, establishing the ordered renormalized limit.
+
+This supplies a finite definition with unevaluated error constants, not a
+physical stress value. An exact formula now uses one finite-scale continuum
+anchor plus a convergent heat correction; evaluating it with spatial and
+angular error control is the next task. No new law or stable medium follows.
+
+Thirteen algebra and scalar-integral controls pass. The initial finite
+continuity trial and its source are preserved; smaller shifts resolve its
+failed tolerance without changing the tolerance or earlier split check.
+
+See [proof and numerical target](PHYSICAL_EUCLIDEAN_OPERATOR.md#frequency-and-regulator-limits-of-the-compact-response),
+[calculation](../scripts/dirac_regulator_limits.py),
+[results](../results/dirac_regulator_limits_results.json), and
+[visual](../figures/dirac_regulator_limits_progress.png).
+
+--- Preserved checkpoint153 and earlier research ---
+
 # Checkpoint153 — weighted zero states controlled on the actual geometry
 
 The outstanding zero-state condition is now proved for the specified sewn

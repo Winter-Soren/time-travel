@@ -1,5 +1,7 @@
 # A common physical Euclidean Dirac operator
 
+Update154: the [frequency and regulator limits](#frequency-and-regulator-limits-of-the-compact-response) below establish a finite compact first-variation response in136's declared heat/zeta scheme, taking the common positive shift to zero at fixed regulator scale and then removing that scale. The high-energy remainder, large-frequency tail and lapse contacts are included. This is an existence result with unevaluated constants; the physical source value and supporting geometry remain unestablished.
+
 Update153: [uniform zero-state confinement](#uniform-zero-state-confinement-on-the-sewn-geometry) proves the weighted-zero condition for the actual sewn background, for every axial sector. This closes152's bounded-energy signed-mass limit, including possible exact zero states. The full high-energy/regulator limit and physical supporting stress remain unresolved.
 
 Update152: the [uniform low-energy limit and zero-state test](#uniform-low-energy-limit-and-zero-state-test) now prove joint convergence on bounded Hamiltonian energies if zero states are absent, or for the signed-mass average under an explicit weighted-zero density condition. That condition is not yet verified for the sewn geometry. An abstract counterexample shows why symmetry alone is insufficient; high-energy and regulator limits remain open.
@@ -1093,3 +1095,320 @@ convergence, spatial remainders, and the specified $M\to\infty$ subtraction
 limit remain open. No physical source value, self-consistent stable bridge,
 obtainable material, or passage from13September2027 to12September2027 follows
 from this weighted estimate.
+
+## Frequency and regulator limits of the compact response
+
+Increment154 closes the remaining existence questions for the already formed
+compact paired first variation, under the established smooth sewn-background
+and domain hypotheses. The order is
+
+$$\boxed{\eta\downarrow0\ \hbox{at fixed }M>0,
+\qquad\hbox{then }M\to\infty\ \hbox{with136's counterterms}.}$$
+
+It does not interchange these limits with variation of an unregulated
+global action, assert a finite global determinant, or identify136 with133's
+unspecified charged contact prescription. Exact-zero occupations agree only
+for the specified full-Dirac metric response. Most importantly, existence of
+the response supplies neither its numerical value nor a supporting material.
+
+The [controls](../scripts/dirac_regulator_limits.py) and
+[saved results](../results/dirac_regulator_limits_results.json) check new
+algebra and scalar integrals. They reuse151's finite noncommuting-lapse
+benchmark; they do not simulate the bridge or supply its continuum errors.
+
+![Frequency-tail and high-energy algebra controls](../figures/dirac_regulator_limits_progress.png)
+
+### High Hamiltonian energy without a singular low-resolvent subtraction
+
+Write $C=N^{1/2}$, $B=C^{-1}$, and keep the identity from151,
+
+$$A_\kappa+m=\beta B(H_m+i\kappa)B.$$
+
+Choose a fixed real even $0\le\theta\le1$ in $C_c^\infty$, equal to1
+on $[-E_*,E_*]$. This is an analysis cutoff inserted **after** taking the
+metric variation. It is not a cutoff-modified action and is never varied.
+Set
+
+$$F_{m,\kappa}=(1-\theta(H_m)^2)(H_m+i\kappa)^{-1},\qquad
+G^>_{m,\kappa}=CF_{m,\kappa}C\beta.$$
+
+The multiplier extends continuously to $\kappa=0$, and
+
+$$\|F_{m,\kappa}\|\le E_*^{-1},\qquad
+\|\partial_\kappa^rF_{m,\kappa}\|\le r!E_*^{-r-1}.$$
+
+These are cutoff bounds, not a physical spectral gap. All $C$ factors have
+compact endpoint localization. The exact distributional defect equation is
+
+$$\boxed{(A_\kappa+m)G^>_{m,\kappa}=I-E_m,\qquad
+E_m=\beta B\theta(H_m)^2C\beta.}$$
+
+For compactly supported input, $E_m$ is uniformly locally smoothing when
+$m$ stays bounded. This follows from local elliptic estimates and
+$\|H_m^r\theta(H_m)^2\|\le\sup_\lambda|\lambda^r\theta(\lambda)^2|$.
+The coefficients and local ellipticity constants are uniform on each
+fixed compact set even though $N$ is unbounded globally.
+
+To control the actual global remainder, take nested compact cutoffs
+$\chi_0\prec\chi_1\prec\chi_2$ and $u=G^>_{m,\kappa}\chi_0h$.
+Then
+
+$$\|\chi_2u\|\le
+\|\chi_2C\|_\infty\|C\chi_0\|_\infty E_*^{-1}\|h\|.$$
+
+A local left parametrix $Q_{m,\kappa}$, with smoothing remainder
+$R_{m,\kappa}=I-Q_{m,\kappa}(A_\kappa+m)$, yields
+
+$$\begin{aligned}
+\chi_0u={}&\chi_0Q_{m,\kappa}\chi_0h
+-\chi_0Q_{m,\kappa}\chi_1E_m\chi_0h\\
+&+\chi_0Q_{m,\kappa}[A_\kappa,\chi_1]\chi_2u
++\chi_0R_{m,\kappa}\chi_1u.
+\end{aligned}$$
+
+The last three terms map $L^2$ uniformly into every local $H^s$. The
+commutator is supported away from $\chi_0$, so its parametrix kernel is
+smoothing; the displayed bound on $u$ controls the remaining global input.
+Thus the unknown response from infinity is included. Merely declaring a
+local symbol order would not have supplied this remainder estimate.
+
+The local elliptic-parametrix construction is standard; see
+[Dyatlov, Theorem2](https://math.mit.edu/~dyatlov/files/2010/psdoer.pdf).
+The compactly localized application and the uniform remainder above are
+the present derivation, not a claim made by that reference about this bridge.
+
+### Common mass cancellation and trace continuity
+
+Let $Q_\kappa$ be a mass-independent local parametrix of $A_\kappa$.
+Modulo an operator of order $-7$ and local smoothing remainders,
+
+$$Q_{m,\kappa}=\sum_{\ell=0}^5(-m)^\ell Q_\kappa^{\ell+1}.
+$$
+
+Multiplication by $A_\kappa+m$ leaves an order $-6$ error; one further
+parametrix lowers it to $-7$. This finite geometric expansion is uniform
+for bounded $(m,\kappa)$ and remains valid with variable lapse.
+
+For $m_j^2=\eta+jM^2$, $c=(1,-3,3,-1)$, signed averaging removes odd
+powers, and
+
+$$\sum_jc_j(\eta+jM^2)^r=0\quad(r=0,1,2),\qquad
+\sum_jc_j(\eta+jM^2)^3=-6M^6.$$
+
+Consequently
+
+$$S^>_{\eta,M}=\tfrac12\sum_{j,\sigma=\pm1}c_jG^>_{\sigma m_j,\kappa}$$
+
+maps compactly localized $L^2$ uniformly into $H^7$. With the actual
+first-order metric insertion and $\chi=1$ near its support,
+
+$$T^>_{\eta,\kappa}=\chi\dot A_\kappa S^>_{\eta,M}\chi,
+\qquad \sup_{\eta\le\eta_0,\,|\kappa|\le\kappa_0}
+\|T^>_{\eta,\kappa}\|_{L^2\to H^4}<\infty.$$
+
+The source actually gains six derivatives; four suffice for trace class
+in three spatial dimensions. On a compact auxiliary manifold containing
+the supports, use Laplacian eigenvalues $\lambda_n$ and projections $\Pi_J$:
+
+$$\|(I-\Pi_J)T^>_{\eta,\kappa}\|_1
+\le C\sum_{n>J}(1+\lambda_n)^{-2}\longrightarrow0.$$
+
+Common-core convergence gives strong resolvent convergence of $H_m$.
+The high multiplier and its adjoint are bounded continuous functions.
+On compact smooth tests, this gives strong convergence of $(T^>)^*$;
+the uniform operator bound extends it to all $L^2$. Adjoint convergence
+controls the finite rows $\Pi_JT^>$, and the uniform tail upgrades this
+to joint trace-norm continuity, including $\eta=\kappa=0$. In particular,
+the high part of the small-frequency interval is bounded by
+$\epsilon C_{M,E_*,\chi}/\pi$.
+
+### Lapse contacts and the complete small-frequency response
+
+Let $f=\delta\log N$ and $V=\delta H_0$. With the fixed spin-frame and
+Hilbert identification used above,
+
+$$\boxed{C\beta\dot A_\kappa C
+=V+mfN\beta-\tfrac12\{f,H_m+i\kappa\}.}$$
+
+For the low band $q_m=\theta(H_m)^2$ this gives
+
+$$\boxed{\operatorname{Tr}(\dot A_\kappa Cq_m(H_m+i\kappa)^{-1}C\beta)
+=\operatorname{Tr}[(V+mfN\beta)q_m(H_m+i\kappa)^{-1}]
+-\operatorname{Tr}(fq_m).}$$
+
+Cycling here is legitimate with localized Hilbert--Schmidt band factors:
+$q_m$ maps into every $H_m$ power domain, and compact smooth $f$ preserves
+the first-order domain. The $-i\kappa f$ part of $\dot A_\kappa$ must be
+retained for this identity. Low-band contacts do not cancel mass by mass,
+but their smoothing bounds make their frequency integral $O(\epsilon)$.
+The mass insertion has the same uniform bound because151 gives
+$|m|\|(H_m+i\kappa)^{-1}\|\le1/c_N$.
+
+The remaining $V$ term is exactly the symmetric-frequency, signed-mass
+averaged low corner covered by152--153. The regulator masses $j\ge1$
+also stay gapped at fixed $M$. This closes the complete compact source
+corner. It does not assert a pointwise massless Green operator at
+$\kappa=0$, or absolute integrability of every separate low-band trace norm.
+Individual high-band contact traces are not split: their identity terms
+cancel only in the common PV sum.
+
+### Large-frequency tail and the fixed-scale limit
+
+For $|\kappa|\ge1$, use the full Hamiltonian resolvent, with norm at most
+$1/|\kappa|$. On a fixed compact chart, the joint principal symbol obeys
+
+$$a_1(x,\xi,\kappa)^*a_1(x,\xi,\kappa)
+=\left(|\xi|_h^2+\kappa^2/N^2\right)I.$$
+
+It is elliptic in $(\xi,\kappa)$ on that compact set. A parameter
+parametrix with separated cutoffs has remainders decreasing faster than
+any power of $|\kappa|$ in local Sobolev norms. The full resolvent bound
+controls the global factor left in the remainder. Only compact coefficient
+bounds are needed; no global upper lapse bound is introduced. See
+[Grubb, ChapterII, Lemma2.1.20, Theorem2.1.22 and Theorem2.5.6](https://web.math.ku.dk/~grubb/fun96/fun96-2.pdf)
+for the interior parameter calculus used here.
+
+The common Green operator has joint order $-7$, and the insertion,
+including its term linear in $\kappa$, has joint order1. For
+$\Lambda_\kappa=(1+\kappa^2+\Delta)^{1/2}$ on the compact auxiliary space,
+
+$$\|\Lambda_\kappa^4T_{\eta,\kappa}\|\le C_M|\kappa|^{-2},\qquad
+\|\Lambda_\kappa^{-4}\|_1\le C|\kappa|^{-1}.$$
+
+The second estimate follows by summing the three-dimensional Laplacian
+counting bound. Hence
+
+$$\boxed{\|T_{\eta,\kappa}\|_1\le C_M|\kappa|^{-3},\qquad
+\int_{|\kappa|\ge K}\|T_{\eta,\kappa}\|_1\frac{d\kappa}{2\pi}
+\le\frac{C_M}{2\pi K^2}.}$$
+
+These estimates are uniform over $0\le\eta\le\eta_0$ at fixed $M$.
+Combined with trace continuity on bands away from zero and the small-corner
+argument, they prove existence of
+
+$$Q_M=\lim_{\eta\downarrow0}
+-\int_{\mathbb R}\operatorname{Tr}(\dot A_\kappa S_{\eta,M})
+\frac{d\kappa}{2\pi}.$$
+
+The real common response uses the symmetric-frequency prescription.
+This is convergence of the already formed compact first variation, not
+differentiation of an unregulated action through a possible zero crossing.
+
+### Removing the regulator scale in the declared scheme
+
+No uniform-in-$M$ frequency constant is assumed. Instead, compare two
+positive fixed scales using the proper four-dimensional heat operator $P$.
+Let $w_M(s)=(1-e^{-M^2s})^3$, and write
+
+$$\delta K(s)=-s\operatorname{Tr}_{/\mathcal T}(\dot P e^{-sP}).$$
+
+For a compact spatial insertion, static translation invariance allows a
+compact time window of squared integral1 on the outputs of localized heat
+form factors. Their ordinary four-dimensional Hilbert--Schmidt estimates
+then equal the per-unit-time estimates. Explicitly, with a spatial
+$\chi=1$ near the insertion,
+
+$$\operatorname{Tr}_{/\mathcal T}(\dot P e^{-sP})
+=2\operatorname{Re}\operatorname{Tr}_{/\mathcal T}
+[(\dot A e^{-sP/2})^*(\chi A e^{-sP/2})].$$
+
+Cyclicity is taken in the translation-invariant per-time trace, not
+through the compact time window. Fixed-time local heat smoothing
+and the contraction of $e^{-(s-s_0)P}$ give $|\delta K(s)|\le Cs$ for
+$s\ge1$. On the other hand, the local small-$s$ expansion is
+
+$$\delta K(s)=\frac1{(4\pi s)^2}
+\left(\delta\mathcal A_0+s\delta\mathcal A_2+s^2\delta\mathcal A_4\right)
++O(s).$$
+
+Here $\delta\mathcal A_{2r}$ is the compact variation of the integrated
+physical four-dimensional coefficient per unit Killing time, including
+the measure variation. The standard local expansion is reviewed in
+[Vassilevich, section2](https://arxiv.org/pdf/hep-th/0306138). Smoothness on
+the support gives a finite local remainder constant; we have not evaluated it.
+
+First use the infrared-safe difference
+
+$$Q_M-Q_{M_0}=\tfrac12\int_0^\infty
+[w_M(s)-w_{M_0}(s)]\delta K(s)\,\frac{ds}{s}.$$
+
+The massless term cancels, and the remaining large-$s$ weights are
+exponential. This identity follows first with $\eta>0$, then by dominated
+convergence for the difference. It does not require an absolutely convergent
+individual massless heat integral. Differentiating the difference gives
+
+$$Q'_M=3M\int_0^\infty
+e^{-M^2s}(1-e^{-M^2s})^2\delta K(s)\,ds.$$
+
+Set $F(t)=e^{-t}-2e^{-2t}+e^{-3t}$. Its first moments are
+
+$$\int_0^\infty\frac{F(t)}{t^2}\,dt=3\log3-4\log2,\quad
+\int_0^\infty\frac{F(t)}t\,dt=2\log2-\log3,\quad
+\int_0^\infty F(t)\,dt=\tfrac13.$$
+
+After $t=M^2s$, these reproduce precisely
+
+$$\frac{4\beta_0M^3\delta\mathcal A_0
++2\beta_1M\delta\mathcal A_2+2\delta\mathcal A_4/M}{32\pi^2},$$
+
+the derivative of136's counterterm, with its signs and fixed scale unchanged.
+The $O(s)$ heat remainder contributes $O(M^{-3})$; the large-$s$ part is
+exponentially small. If $\mathcal C_M$ denotes that declared counterterm,
+
+$$\boxed{\frac{d}{dM}(Q_M-\mathcal C_M)=O(M^{-3}),\qquad
+\mathcal Q_{\rm HK}=\lim_{M\to\infty}(Q_M-\mathcal C_M)
+\ \hbox{exists}.}$$
+
+The remaining scale tail is $O(M^{-2})$ with an unevaluated constant.
+Retaining the next heat coefficient gives leading derivative
+$11\delta\mathcal A_6/(96\pi^2M^3)$ and integrated tail
+$11\delta\mathcal A_6/(192\pi^2M^2)$, since
+$\int_0^\infty tF(t)\,dt=11/18$. We have not calculated this coefficient
+for the actual source variation. The paired variation has
+$\delta\mathcal A_0=0$; it was retained above to check the general normalization.
+
+There is also a finite-scale formula suited to numerical evaluation. Define
+
+$$\mathcal R(s)=\delta K(s)-\frac1{16\pi^2}
+(\delta\mathcal A_0s^{-2}+\delta\mathcal A_2s^{-1}+\delta\mathcal A_4).$$
+
+The short- and long-time bounds give one finite, unevaluated $C_R$ with
+$|\mathcal R(s)|\le C_Rs$ for all $s>0$. Integration over regulator scale
+can therefore be exchanged with the heat integral, yielding the exact identity
+
+$$\boxed{\mathcal Q_{\rm HK}=Q_{M_0}-\mathcal C_{M_0}
++\tfrac12\int_0^\infty[1-w_{M_0}(s)]\mathcal R(s)\,\frac{ds}{s}.}$$
+
+Indeed $1-w_{M_0}=3e^{-M_0^2s}-3e^{-2M_0^2s}+e^{-3M_0^2s}$.
+The derivative remainder is bounded by $11C_R/(6M^3)$, and the magnitude
+of the displayed finite-scale correction is at most $11C_R/(12M_0^2)$.
+This gives one finite-$M_0$ anchor plus a convergent heat correction as the
+next numerical target. It is not an evaluated error bar until $C_R$ or
+the correction integral has been bounded for the actual geometry.
+
+### Checks, limitations and the next numerical target
+
+Thirteen controls pass: exact PV rational identity and mass moments,
+the high-multiplier bound, the retained low-band lapse-contact identity,
+the high/low split after variation, finite matrix bounds and continuity,
+flat frequency-tail integrals, and the heat moments and counterterm derivatives.
+The maximum contact-identity error is $1.07\times10^{-14}$. At
+$\eta=10^{-12}$ the largest high-part matrix change from $\eta=0$ is
+$8.46\times10^{-9}$. The unchanged split check still tests the earlier
+finite shifts; only the regular high part is used for the smaller-shift test.
+
+The [initial trial](../results/dirac_regulator_limits_initial_trial.json)
+and its [exact source](../provenance/dirac_regulator_limits_initial_trial.py)
+are retained: $\eta=10^{-8}$ was insufficient for the chosen continuity
+tolerance at lapse100. Extending the small-shift check to $10^{-12}$
+resolved that finite numerical issue without loosening the tolerance.
+These matrix and flat-symbol controls do not estimate the actual bridge
+stress or the constants in its continuum bounds.
+
+The next target is a **numerical value or rigorous useful bound for
+$\mathcal Q_{\rm HK}[f]$**, using this exact prescription and controlled
+spatial/angular approximation and regulator tails. The old finite-basis,
+finite-$M$ values cannot be relabeled as that answer. Compare the resulting
+energy-and-pressure response against the prescribed geometry's gravitational
+requirement before attempting self-consistent support and stability. No new
+law, obtainable medium, or13September2027-to12September2027 passage is established.
