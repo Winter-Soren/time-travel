@@ -3757,3 +3757,247 @@ still prevent a whole-space gap shortcut. One hydrogen atom remains the
 payload; no total supporting stress, stable opening, survival, atom passage,
 new law or clock advantage is established. The current static geometry
 still excludes backward causal travel from 13 to 12 September 2027.
+
+
+## Full collar resolvent comparison and a finite filtered trace
+
+The [collar resolvent calculation](../scripts/dihole_collar_resolvent.py)
+now retains the actual radial derivative in a comparison with the global
+Hamiltonian. It does not use the frozen transverse gap as a global gap.
+A sharper momentum-residual bound makes the resulting estimate nontrivial
+at the atomic-flux reference. The
+[saved results](../results/dihole_collar_resolvent_results.json) contain
+**12 passing controls** and an error bound for a genuinely trace-class,
+Gaussian-filtered channel observable. That observable is not the vacuum
+stress or a supporting-source verdict.
+
+### A smaller coefficient for radial momentum
+
+Use the same normalized aligned state and probability $p=Wg^2$ as above,
+with $f=\cos\beta_c/W$, $v=\mathbb E_p f$. Its radial derivative coefficient
+has the exact identity
+
+$$
+\|r_1\|^2=\mathbb E_p(W^{-2})-v^2
+=\operatorname{Var}_p(f)+\mathbb E_p(\sin^2\beta_c/W^2).
+$$
+
+Let $T,T_s$ bound the tilt and its radial derivative, $C_t$ bound the
+window derivative, and $L_{W\theta},L_{Ws}$ bound the corresponding
+logarithmic derivatives of $W$. The previous interval tables imply
+
+$$
+|f_\theta|\le L_f:=\frac{C_tT^2+L_{W\theta}}{w_-},\qquad
+R_1(q):=\sqrt{\frac{L_f^2C_1}{q}+\frac{T^2}{w_-^2}},\qquad
+v\ge v_-:=\frac1{\sqrt{1+T^2}\,w_+}.
+$$
+
+These use the actual normalized moment bound
+$\mathbb E_p(\theta-\theta_0)^2\le C_1/q$. They retain the spin term,
+which need not vanish when flux increases.
+
+The derivative of $v$ also needs normalization transport. With the
+preceding $A,d$ and $\zeta=C\theta_{0,s}$, integration by parts gives
+
+$$
+v_s=\mathbb E_p(f_s+\zeta f_\theta)
++2q\operatorname{Cov}_p(A,f)+\operatorname{Cov}_p(d,f).
+$$
+
+The advection sign is positive. Its boundary terms vanish because $\zeta$
+vanishes near both poles. Applying Cauchy--Schwarz to the centered
+covariances gives the sufficient bound
+
+$$
+V_s(q):=\frac{T_sT+L_{Ws}}{w_-}+|\theta_{0,s}|_*L_f
++\frac{L_f\sqrt{C_1}\,[2A_2\sqrt{C_2}+d_0]}{\sqrt q}
+\ge |v_s|.
+$$
+
+No interpolation in flux or new numerical geometry approximation is used.
+At the integer near the atomic-flux estimate,
+
+$$
+R_1<.000599144,\quad v_->.0116589219,\quad
+V_s<3.434574.
+$$
+
+The former generic $R_1<.039969497$ bound was too loose for a useful
+radial graph comparison. The $R_0$ bound from165 remains unchanged;
+this calculation does not pretend its large constant has disappeared.
+
+### Comparing actual radial operators with their edge terms
+
+Let $H$ be a self-adjoint global realization of the prescribed geometry
+agreeing with the collar operator and containing its regular compact core.
+Complete the positive collar velocity smoothly to a bounded positive
+velocity on the real line. The auxiliary operator
+$h=-i(v\partial_s+v_s/2)$ is then self-adjoint through the optical coordinate
+$x(s)=\int^s du/v(u)$ and the unitary map
+$\psi(s)\mapsto\sqrt{v(s)}\psi(s)$ to $L^2(dx)$.
+
+Choose the same smooth step $S$ as before and define
+
+$$
+\chi(s)=S((s-.005)/.01)S((.045-s)/.01),\qquad
+\eta(s)=S((s-.015)/.005)S((.035-s)/.005).
+$$
+
+The outer cutoff is one on the support of the inner cutoff. Its transition
+regions are disjoint, so $S'\le8$ gives $\|\chi'\|_\infty\le800$ in
+$D=1$ units. The sampled maximum of200 is only a control; it does not
+replace this analytic upper bound.
+
+Set $J=\chi U$, $A_s=\sigma_3/W$ and $R=HU-Uh$. Compact support and the
+regular polar trial imply $J\operatorname{Dom}h\subset\operatorname{Dom}H$.
+The exact defect is
+
+$$
+T=HJ-Jh=\chi R-i\chi'A_sU.
+$$
+
+Thus, for $G_H=(H-iy)^{-1}$ and $G_h=(h-iy)^{-1}$, $y>0$,
+
+$$
+E_y:=G_HJ-JG_h=-G_HTG_h.
+$$
+
+The cutoff term is essential even when the internal residual vanishes:
+it then becomes the reduced-resolvent cutoff commutator. The frozen
+transverse gap is not used to estimate $\|G_H\|$.
+
+Since $\partial_s=i v^{-1}h-v_s/(2v)$ locally,
+
+$$
+\|T\psi\|\le a\|h\psi\|+b\|\psi\|,\qquad
+a=R_1/v_-,\quad
+b=R_1V_s/(2v_-)+R_0+800/w_-.
+$$
+
+The spectral theorem gives the exact identity
+$\|hG_hu\|^2+y^2\|G_hu\|^2=\|u\|^2$. Combining it with
+$\|G_H\|\le1/y$ yields
+
+$$
+\boxed{\|E_y\|\le\frac1y\sqrt{a^2+(b/y)^2}.}
+$$
+
+This comparison includes arbitrary longitudinal momenta and the full radial
+operator; no longitudinal energy cutoff or assumed global angular gap
+enters the norm estimate. It is uniform over the stated global
+self-adjoint realizations. It is not a proof that such a geometry is
+self-consistently sourced.
+
+For the chosen atomic-reference integer,
+$a<.051389264$ and $Db<197416.219$. With $yD=\sqrt q$,
+
+$$
+y\|E_y\|<.051389264,\qquad \|E_y\|/D<2.384948\times10^{-14}.
+$$
+
+The quantity $.051389264$ is measured against the universal norm scale
+$1/y$. It is **not** a measured relative error, transmission probability,
+percentage of the required support, or finite-time transport fidelity.
+At $q=1000$ the corresponding bound exceeds6247, so this estimate gives
+no useful small-error conclusion there. The failure at low flux is retained.
+
+### A trace-class selected observable
+
+The cutoff comparison can be used inside a finite quantum observable
+without claiming an unfiltered stress trace. Put
+
+$$
+X=\eta e^{-h^2/(2\Lambda^2)},\qquad \Lambda>0.
+$$
+
+In the optical coordinate $h$ is $-i\partial_x$. Fourier normalization
+$dp/(2\pi)$ gives the exact Hilbert--Schmidt norm
+
+$$
+\|X\|_{\rm HS}^2=\frac{\Lambda}{2\sqrt\pi}
+\int\frac{\eta(s)^2}{v(s)}ds
+\le\frac{\Lambda}{2\sqrt\pi}\frac{.02}{v_-}.
+$$
+
+Both terms in the following difference are trace-class. Since
+$J^*JX=X$, their difference has the exact form
+
+$$
+\Delta\mathcal O_y=
+\operatorname{Tr}[(JX)^*G_H(JX)-X^*G_hX]
+=\operatorname{Tr}(X^*J^*E_yX),
+$$
+
+$$
+|\Delta\mathcal O_y|
+\le\|E_y\|\,\|X\|_{\rm HS}^2.
+$$
+
+Within the stated complete-line velocity extensions, the localized
+reference is independent of the continuation outside the window. Indeed
+
+$$
+(XX^*)(s,t)=\frac{\eta(s)\eta(t)\Lambda}
+{2\sqrt{\pi v(s)v(t)}}
+\exp[-\Lambda^2(x(s)-x(t))^2/4],
+$$
+
+and, for $y>0$,
+
+$$
+G_h(s,t)=\frac{i\mathbf1_{s>t}}{\sqrt{v(s)v(t)}}
+\exp[-y(x(s)-x(t))].
+$$
+
+When both arguments are in the inner window, only collar values of $v$
+enter their coordinate difference. This argument does not apply to a
+circle or reflecting endpoint completion.
+
+Choose the explicit integer
+$q=4642875905017627791065088$ near the prior continuous size estimate.
+This instantiates the bound's integer parameter; it does not calculate a
+wave function at that flux. For $yD=\Lambda D=\sqrt q$,
+
+$$
+|\Delta\mathcal O_y|/D<.024867898\quad\text{per sector}.
+$$
+
+The exact count of allowed half-integer sectors in the regular band is
+
+$$
+N_q=\left\lfloor\frac{19q-10}{20}\right\rfloor
+-\left\lceil\frac{17q-10}{20}\right\rceil+1.
+$$
+
+Multiplying the uniform bound by this finite count gives the saved band
+trace-error bound. This can be formulated with a joint direct-sum $J,X$,
+so exterior mixing of sectors does not invalidate the bound; independent
+global blocks would require global axial symmetry. The band error itself
+is about $1.154586\times10^{22}D$ at the selected reference. It is the
+error of this resolvent observable, with different dimensions and weights
+from stress; comparing that number directly to the required energy would
+be invalid.
+
+### Checks and remaining physical work
+
+The actual normalized states satisfy the $r_1$ variance identity to
+$1.04\times10^{-25}$ absolutely and the transported velocity derivative
+to $2.23\times10^{-16}$. All six field cases are enclosed. Independent
+momentum-space and position-space Gaussian integrals check the trace
+normalization; sector counts are checked by exact finite enumeration at
+three smaller fluxes. The full results retain all bounds, parameters and
+source hashes. The initial report writer rejected NumPy Boolean values
+before creating an artifact; explicit Boolean conversion fixed the output
+without changing calculations or tolerances.
+
+![Full radial comparison and finite trace error](../figures/dihole_collar_resolvent_progress.png)
+
+The next source requirement is a derivative-weighted version: evaluated
+bounds for the localized $\dot H G_H$ and longitudinal metric terms,
+including changes to the windows/filter if they are varied. Removing the
+filter and controlling omitted frequencies, null/open channels and the
+renormalized subtraction remain necessary. This checkpoint supplies no
+stress value, source sign, stable opening, hydrogen survival or clock
+advantage. One hydrogen atom remains the target. The current static
+geometry still excludes backward causal passage, including travel from
+13 to 12 September 2027.

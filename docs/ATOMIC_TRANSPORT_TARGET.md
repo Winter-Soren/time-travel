@@ -181,3 +181,15 @@ reduction. It does not establish total support, global stability or an
 atom's motion. The chosen flux entry is a bound evaluated at a size
 estimate, not an explicit quantized atomic-scale state. The one-hydrogen
 payload and the outstanding support, survival and clock requirements remain.
+
+
+## Full radial comparison
+
+The [collar resolvent result](PHYSICAL_EUCLIDEAN_OPERATOR.md#full-collar-resolvent-comparison-and-a-finite-filtered-trace)
+now retains full radial coupling and the cutoff commutator in an operator
+comparison, with 12 checks passing. It bounds a finite Gaussian-filtered
+channel observable near the atomic-flux estimate. The reported 0.05139
+normalizes to a universal inverse-operator scale; it is not an atom's
+transmission error or a percentage of supporting stress. The metric-weighted
+source and omitted modes remain unresolved. One neutral hydrogen atom is
+still the transport target, with no established opening, survival or time shift.

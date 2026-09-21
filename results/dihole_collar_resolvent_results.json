@@ -1,0 +1,492 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_inputs": true,
+    "actual_r1_variance_identity": true,
+    "actual_velocity_transport_identity": true,
+    "actual_field_quantities_enclosed": true,
+    "positive_velocity": true,
+    "improved_momentum_residual": true,
+    "nested_cutoffs": true,
+    "gaussian_trace_normalization": true,
+    "exact_spectral_graph_identity": true,
+    "exact_integer_band_count": true,
+    "finite_trace_bounds": true,
+    "atomic_scaled_resolvent_error_below_one": true
+  },
+  "records": [
+    {
+      "q": 1000,
+      "band": {
+        "first_n": 850,
+        "last_n": 949,
+        "count": 100,
+        "mu_equals": "n+1/2"
+      },
+      "r1_upper": 0.0015112694774411912,
+      "velocity_lower": 0.011658921905152676,
+      "velocity_derivative_upper_D": 2299.5263381838818,
+      "f_theta_lipschitz_upper": 0.0013116088038770972,
+      "graph_h_coefficient_upper": 0.12962343257255063,
+      "graph_zero_coefficient_upper_D": 197565.16686281655,
+      "outer_cutoff_derivative_upper_D": 800,
+      "inner_optical_volume_upper_over_D": 1.715424476011026,
+      "frequency_rows": [
+        {
+          "y_D": 3.1622776601683795,
+          "filter_Lambda_D": 31.622776601683793,
+          "scaled_resolvent_error_upper": 62475.591359906764,
+          "resolvent_error_upper_over_D": 19756.51668632418,
+          "filter_HS_norm_squared_upper": 15.30265088545001,
+          "per_sector_trace_error_upper_over_D": 302327.0775633866,
+          "band_trace_error_upper_over_D": 30232707.756338656
+        },
+        {
+          "y_D": 31.622776601683793,
+          "filter_Lambda_D": 31.622776601683793,
+          "scaled_resolvent_error_upper": 6247.559137321934,
+          "resolvent_error_upper_over_D": 197.56516690533985,
+          "filter_HS_norm_squared_upper": 15.30265088545001,
+          "per_sector_trace_error_upper_over_D": 3023.270776278078,
+          "band_trace_error_upper_over_D": 302327.0776278078
+        },
+        {
+          "y_D": 316.2277660168379,
+          "filter_Lambda_D": 31.622776601683793,
+          "scaled_resolvent_error_upper": 624.755927044762,
+          "resolvent_error_upper_over_D": 1.9756517111514365,
+          "filter_HS_norm_squared_upper": 15.30265088545001,
+          "per_sector_trace_error_upper_over_D": 30.232708406992355,
+          "band_trace_error_upper_over_D": 3023.2708406992356
+        }
+      ]
+    },
+    {
+      "q": 1005,
+      "band": {
+        "first_n": 854,
+        "last_n": 954,
+        "count": 101,
+        "mu_equals": "n+1/2"
+      },
+      "r1_upper": 0.0015080976444020614,
+      "velocity_lower": 0.011658921905152676,
+      "velocity_derivative_upper_D": 2293.8075453310867,
+      "f_theta_lipschitz_upper": 0.0013116088038770972,
+      "graph_h_coefficient_upper": 0.12935138057109344,
+      "graph_zero_coefficient_upper_D": 197564.48420056983,
+      "outer_cutoff_derivative_upper_D": 800,
+      "inner_optical_volume_upper_over_D": 1.715424476011026,
+      "frequency_rows": [
+        {
+          "y_D": 3.170173496829472,
+          "filter_Lambda_D": 31.701734968294716,
+          "scaled_resolvent_error_upper": 62319.77032127169,
+          "resolvent_error_upper_over_D": 19658.157631939837,
+          "filter_HS_norm_squared_upper": 15.340859811059282,
+          "per_sector_trace_error_upper_over_D": 301573.04037529416,
+          "band_trace_error_upper_over_D": 30458877.07790471
+        },
+        {
+          "y_D": 31.701734968294716,
+          "filter_Lambda_D": 31.701734968294716,
+          "scaled_resolvent_error_upper": 6231.977033456159,
+          "resolvent_error_upper_over_D": 196.5815763613201,
+          "filter_HS_norm_squared_upper": 15.340859811059282,
+          "per_sector_trace_error_upper_over_D": 3015.730404396056,
+          "band_trace_error_upper_over_D": 304588.77084400173
+        },
+        {
+          "y_D": 317.01734968294716,
+          "filter_Lambda_D": 31.701734968294716,
+          "scaled_resolvent_error_upper": 623.197716635509,
+          "resolvent_error_upper_over_D": 1.9658158055348594,
+          "filter_HS_norm_squared_upper": 15.340859811059282,
+          "per_sector_trace_error_upper_over_D": 30.15730468707485,
+          "band_trace_error_upper_over_D": 3045.8877733945596
+        }
+      ]
+    },
+    {
+      "q": 10005,
+      "band": {
+        "first_n": 8504,
+        "last_n": 9504,
+        "count": 1001,
+        "mu_equals": "n+1/2"
+      },
+      "r1_upper": 0.0007425448719650718,
+      "velocity_lower": 0.011658921905152676,
+      "velocity_derivative_upper_D": 729.341088608867,
+      "f_theta_lipschitz_upper": 0.0013116088038770972,
+      "graph_h_coefficient_upper": 0.06368898239526788,
+      "graph_zero_coefficient_upper_D": 197439.35611006964,
+      "outer_cutoff_derivative_upper_D": 800,
+      "inner_optical_volume_upper_over_D": 1.715424476011026,
+      "frequency_rows": [
+        {
+          "y_D": 10.002499687578101,
+          "filter_Lambda_D": 100.024996875781,
+          "scaled_resolvent_error_upper": 19739.001477430014,
+          "resolvent_error_upper_over_D": 1973.4068576821326,
+          "filter_HS_norm_squared_upper": 48.40332733232551,
+          "per_sector_trace_error_upper_over_D": 95519.45809224415,
+          "band_trace_error_upper_over_D": 95614977.55033639
+        },
+        {
+          "y_D": 100.024996875781,
+          "filter_Lambda_D": 100.024996875781,
+          "scaled_resolvent_error_upper": 1973.900148760207,
+          "resolvent_error_upper_over_D": 19.734068586990844,
+          "filter_HS_norm_squared_upper": 48.40332733232551,
+          "per_sector_trace_error_upper_over_D": 955.19458141468,
+          "band_trace_error_upper_over_D": 956149.7759960947
+        },
+        {
+          "y_D": 1000.2499687578099,
+          "filter_Lambda_D": 100.024996875781,
+          "scaled_resolvent_error_upper": 197.39002504807402,
+          "resolvent_error_upper_over_D": 0.1973406960394197,
+          "filter_HS_norm_squared_upper": 48.40332733232551,
+          "per_sector_trace_error_upper_over_D": 9.551946306384982,
+          "band_trace_error_upper_over_D": 9561.498252691368
+        }
+      ]
+    },
+    {
+      "q": 100000000,
+      "band": {
+        "first_n": 85000000,
+        "last_n": 94999999,
+        "count": 10000000,
+        "mu_equals": "n+1/2"
+      },
+      "r1_upper": 0.0005991594744407469,
+      "velocity_lower": 0.011658921905152676,
+      "velocity_derivative_upper_D": 10.69545281875983,
+      "f_theta_lipschitz_upper": 0.0013116088038770972,
+      "graph_h_coefficient_upper": 0.051390641374478,
+      "graph_zero_coefficient_upper_D": 197416.40543728342,
+      "outer_cutoff_derivative_upper_D": 800,
+      "inner_optical_volume_upper_over_D": 1.715424476011026,
+      "frequency_rows": [
+        {
+          "y_D": 1000.0,
+          "filter_Lambda_D": 10000.0,
+          "scaled_resolvent_error_upper": 197.41641212618543,
+          "resolvent_error_upper_over_D": 0.19741641212618544,
+          "filter_HS_norm_squared_upper": 4839.123103641444,
+          "per_sector_trace_error_upper_over_D": 955.3223209578248,
+          "band_trace_error_upper_over_D": 9553223209.578247
+        },
+        {
+          "y_D": 10000.0,
+          "filter_Lambda_D": 10000.0,
+          "scaled_resolvent_error_upper": 19.741707432636105,
+          "resolvent_error_upper_over_D": 0.0019741707432636107,
+          "filter_HS_norm_squared_upper": 4839.123103641444,
+          "per_sector_trace_error_upper_over_D": 9.553255254259938,
+          "band_trace_error_upper_over_D": 95532552.54259938
+        },
+        {
+          "y_D": 100000.0,
+          "filter_Lambda_D": 10000.0,
+          "scaled_resolvent_error_upper": 1.9748328313046315,
+          "resolvent_error_upper_over_D": 1.9748328313046317e-05,
+          "filter_HS_norm_squared_upper": 4839.123103641444,
+          "per_sector_trace_error_upper_over_D": 0.09556459179795888,
+          "band_trace_error_upper_over_D": 955645.9179795888
+        }
+      ]
+    },
+    {
+      "q": 1000000000000,
+      "band": {
+        "first_n": 850000000000,
+        "last_n": 949999999999,
+        "count": 100000000000,
+        "mu_equals": "n+1/2"
+      },
+      "r1_upper": 0.0005991434119732955,
+      "velocity_lower": 0.011658921905152676,
+      "velocity_derivative_upper_D": 3.507181921359139,
+      "f_theta_lipschitz_upper": 0.0013116088038770972,
+      "graph_h_coefficient_upper": 0.051389263676987436,
+      "graph_zero_coefficient_upper_D": 197416.22072994162,
+      "outer_cutoff_derivative_upper_D": 800,
+      "inner_optical_volume_upper_over_D": 1.715424476011026,
+      "frequency_rows": [
+        {
+          "y_D": 100000.0,
+          "filter_Lambda_D": 1000000.0,
+          "scaled_resolvent_error_upper": 1.9748309490056526,
+          "resolvent_error_upper_over_D": 1.9748309490056526e-05,
+          "filter_HS_norm_squared_upper": 483912.3103641444,
+          "per_sector_trace_error_upper_over_D": 9.55645007111941,
+          "band_trace_error_upper_over_D": 955645007111.941
+        },
+        {
+          "y_D": 1000000.0,
+          "filter_Lambda_D": 1000000.0,
+          "scaled_resolvent_error_upper": 0.20399514854171405,
+          "resolvent_error_upper_over_D": 2.0399514854171405e-07,
+          "filter_HS_norm_squared_upper": 483912.3103641444,
+          "per_sector_trace_error_upper_over_D": 0.09871576363389765,
+          "band_trace_error_upper_over_D": 9871576363.389765
+        },
+        {
+          "y_D": 10000000.0,
+          "filter_Lambda_D": 1000000.0,
+          "scaled_resolvent_error_upper": 0.05505077713652979,
+          "resolvent_error_upper_over_D": 5.505077713652979e-09,
+          "filter_HS_norm_squared_upper": 483912.3103641444,
+          "per_sector_trace_error_upper_over_D": 0.0026639748751479744,
+          "band_trace_error_upper_over_D": 266397487.51479745
+        }
+      ]
+    },
+    {
+      "q": 10000000000000000,
+      "band": {
+        "first_n": 8500000000000000,
+        "last_n": 9499999999999999,
+        "count": 1000000000000000,
+        "mu_equals": "n+1/2"
+      },
+      "r1_upper": 0.0005991434103670273,
+      "velocity_lower": 0.011658921905152676,
+      "velocity_derivative_upper_D": 3.435299212385132,
+      "f_theta_lipschitz_upper": 0.0013116088038770972,
+      "graph_h_coefficient_upper": 0.05138926353921584,
+      "graph_zero_coefficient_upper_D": 197416.21888294164,
+      "outer_cutoff_derivative_upper_D": 800,
+      "inner_optical_volume_upper_over_D": 1.715424476011026,
+      "frequency_rows": [
+        {
+          "y_D": 10000000.0,
+          "filter_Lambda_D": 100000000.0,
+          "scaled_resolvent_error_upper": 0.055050776941686794,
+          "resolvent_error_upper_over_D": 5.50507769416868e-09,
+          "filter_HS_norm_squared_upper": 48391231.03641444,
+          "per_sector_trace_error_upper_over_D": 0.26639748657192824,
+          "band_trace_error_upper_over_D": 266397486571928.22
+        },
+        {
+          "y_D": 100000000.0,
+          "filter_Lambda_D": 100000000.0,
+          "scaled_resolvent_error_upper": 0.051427169117605365,
+          "resolvent_error_upper_over_D": 5.142716911760537e-10,
+          "filter_HS_norm_squared_upper": 48391231.03641444,
+          "per_sector_trace_error_upper_over_D": 0.024886240223187986,
+          "band_trace_error_upper_over_D": 24886240223187.99
+        },
+        {
+          "y_D": 1000000000.0,
+          "filter_Lambda_D": 100000000.0,
+          "scaled_resolvent_error_upper": 0.05138964273339967,
+          "resolvent_error_upper_over_D": 5.1389642733399666e-11,
+          "filter_HS_norm_squared_upper": 48391231.03641444,
+          "per_sector_trace_error_upper_over_D": 0.0024868080743907397,
+          "band_trace_error_upper_over_D": 2486808074390.7397
+        }
+      ]
+    },
+    {
+      "q": 4642875905017627791065088,
+      "band": {
+        "first_n": 3946444519264983622405325,
+        "last_n": 4410732109766746401511833,
+        "count": 464287590501762779106509,
+        "mu_equals": "n+1/2"
+      },
+      "r1_upper": 0.0005991434103668666,
+      "velocity_lower": 0.011658921905152676,
+      "velocity_derivative_upper_D": 3.434573158113044,
+      "f_theta_lipschitz_upper": 0.0013116088038770972,
+      "graph_h_coefficient_upper": 0.05138926353920206,
+      "graph_zero_coefficient_upper_D": 197416.21886428594,
+      "outer_cutoff_derivative_upper_D": 800,
+      "inner_optical_volume_upper_over_D": 1.715424476011026,
+      "frequency_rows": [
+        {
+          "y_D": 215473337214.08847,
+          "filter_Lambda_D": 2154733372140.8845,
+          "scaled_resolvent_error_upper": 0.05138926354736932,
+          "resolvent_error_upper_over_D": 2.384947678993357e-13,
+          "filter_HS_norm_squared_upper": 1042702004331.4191,
+          "per_sector_trace_error_upper_over_D": 0.24867897251119392,
+          "band_trace_error_upper_over_D": 1.1545856095567633e+23
+        },
+        {
+          "y_D": 2154733372140.8845,
+          "filter_Lambda_D": 2154733372140.8845,
+          "scaled_resolvent_error_upper": 0.05138926353928374,
+          "resolvent_error_upper_over_D": 2.3849476786181098e-14,
+          "filter_HS_norm_squared_upper": 1042702004331.4191,
+          "per_sector_trace_error_upper_over_D": 0.02486789724720668,
+          "band_trace_error_upper_over_D": 1.154585609375101e+22
+        },
+        {
+          "y_D": 21547333721408.844,
+          "filter_Lambda_D": 2154733372140.8845,
+          "scaled_resolvent_error_upper": 0.05138926353920288,
+          "resolvent_error_upper_over_D": 2.3849476786143574e-15,
+          "filter_HS_norm_squared_upper": 1042702004331.4191,
+          "per_sector_trace_error_upper_over_D": 0.0024867897247167555,
+          "band_trace_error_upper_over_D": 1.1545856093732843e+21
+        }
+      ]
+    }
+  ],
+  "field_controls": [
+    {
+      "q": 1005,
+      "u": 0.0125,
+      "mu": 854.5,
+      "r1": 4.66533300849617e-07,
+      "velocity": 0.012166819960650336,
+      "velocity_derivative": 0.05516611795024789,
+      "r1_variance_identity_error": 1.729183104244458e-26,
+      "transport_identity_error": 6.938893903907228e-18,
+      "bounds_enclose": true
+    },
+    {
+      "q": 1005,
+      "u": 0.025,
+      "mu": 904.5,
+      "r1": 4.137834721686024e-06,
+      "velocity": 0.015084199239714878,
+      "velocity_derivative": 0.4576444513496596,
+      "r1_variance_identity_error": 5.169878828456423e-26,
+      "transport_identity_error": 0.0,
+      "bounds_enclose": true
+    },
+    {
+      "q": 1005,
+      "u": 0.0375,
+      "mu": 954.5,
+      "r1": 1.506705570330786e-05,
+      "velocity": 0.024209460787780725,
+      "velocity_derivative": 0.993164885306939,
+      "r1_variance_identity_error": 1.0339757656912846e-25,
+      "transport_identity_error": 0.0,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.0125,
+      "mu": 8504.5,
+      "r1": 3.7154885779400794e-07,
+      "velocity": 0.01216681859855065,
+      "velocity_derivative": 0.055166105630960346,
+      "r1_variance_identity_error": 5.182500602939959e-26,
+      "transport_identity_error": 0.0,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.025,
+      "mu": 9004.5,
+      "r1": 4.1198207295969525e-06,
+      "velocity": 0.015084185037120557,
+      "velocity_derivative": 0.457643544136897,
+      "r1_variance_identity_error": 1.6155871338926322e-26,
+      "transport_identity_error": 1.6653345369377348e-16,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.0375,
+      "mu": 9504.5,
+      "r1": 1.5027835122999726e-05,
+      "velocity": 0.024209386062308526,
+      "velocity_derivative": 0.9931582586123966,
+      "r1_variance_identity_error": 0.0,
+      "transport_identity_error": 2.220446049250313e-16,
+      "bounds_enclose": true
+    }
+  ],
+  "analytic_controls": {
+    "cutoff_overlap_error": 0.0,
+    "cutoff_derivative_max_sample": 200.0,
+    "inner_eta_squared_integral": 0.014057052527733517,
+    "gaussian_HS_relative_errors": [
+      0.0,
+      2.220446049250313e-16,
+      0.0,
+      0.0,
+      0.0,
+      1.1102230246251565e-16
+    ],
+    "spectral_graph_identity_errors": [
+      1.1102230246251565e-16,
+      0.0,
+      1.1102230246251565e-16
+    ],
+    "exact_sector_counts": [
+      true,
+      true,
+      true
+    ]
+  },
+  "continuous_atomic_flux_estimate": 4.642875905017628e+24,
+  "chosen_integer_near_estimate": 4642875905017627791065088,
+  "source_sha256": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948"
+  },
+  "total_source": null,
+  "metric_trace_derivative_bound": null,
+  "atom_transit": null,
+  "cutoff_definitions": {
+    "outer_support": [
+      0.005,
+      0.045
+    ],
+    "outer_ramp_width": 0.01,
+    "inner_support": [
+      0.015,
+      0.035
+    ],
+    "inner_ramp_width": 0.005
+  },
+  "scope": [
+    "Uniform collar radial comparison for q integer>=1000 and all half-integer labels in [.85q,.95q], not a frozen-carrier calculation.",
+    "H is a self-adjoint global realization agreeing with the collar and containing its regular compact core. h is a positive complete-line velocity extension; reflecting/circle completions are not included.",
+    "Scaled resolvent error is y*||G_H J-J G_h||, normalized to the universal 1/y scale, not an actual relative error or probability.",
+    "Finite observable Tr[(JX)*G_H(JX)-X*G_h X], X=eta exp(-h^2/(2Lambda^2)); trace-class error bound, not its measured value or a stress trace.",
+    "Integer near atomic estimate is used only to evaluate bounds and exact sector count; no huge-flux wave function, supporting geometry or atomic trajectory is simulated.",
+    "Metric derivative, frequency/filter removal, omitted channels and renormalization still prevent a total supporting-source conclusion."
+  ]
+}

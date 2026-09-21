@@ -1,3 +1,69 @@
+# Research increment167 - full radial resolvent and finite trace error
+
+Previous checkpoint166 published fa73f953c6b93e05b56c99ba62007aa3124d2ff9.
+Previous goal turn classified PROGRESS: aligned complement and13 checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One hydrogen atom, nominal1nm areal diameter remains target; humans deferred.
+No new law, supporting medium, stable opening, atom transit or clock advantage.
+
+- Implemented scripts/dihole_collar_resolvent.py; all12 controls PASS.
+  Reuses exact165 interval bounds and166 inputs; no prior solves rerun.
+  Same regular collar/band; q integer>=1000. Graph lookup confirmed unindexed.
+- Exact r1²=Var(cos beta/W)+E(sin²beta/W²). Global Lipschitz bound Lf
+  gives r1<=sqrt(Lf² C1/q+T²/wmin²), much tighter than generic1/wmin.
+  v>=1/(sqrt(1+T²)wmax). Transported v_s has +E[zeta ftheta].
+  Covariance Cauchy-Schwarz yields Vs=(TsT+logWs)/wmin+drift Lf
+  +Lf sqrt(C1)(2 A2 sqrt(C2)+d0)/sqrt(q). All factors independently audited.
+- Atomic-reference r1<.000599144, vmin>.0116589219, Vs<3.434574.
+  R0 remains197384.155...; no unproved improvement claimed.
+- J=chi U with smooth outercutoff support[.005,.045], plateau[.015,.035],
+  ramps.01 and analytic derivativebound800. Inner eta support[.015,.035],
+  ramps.005; chi²eta=eta. Cutoff commutator retained exactly.
+- H any selfadjoint global realization agreeing with collar/regular core;
+  h=-i(v partial+v_s/2) a positive complete-line extension. Optical x
+  and sqrt(v) unitary identify h with free -i partial_x.
+  T=HJ-Jh=chi R-i chi' A U, A=sigma3/W.
+  E=GH J-J Gh=-GH T Gh, imaginary z=iy>0.
+- ||Tpsi||<=a||hpsi||+b||psi||; a=R1/vmin,
+  b=R1 Vs/(2vmin)+R0+800/wmin. Exact spectral identity gives
+  ||E||<=[a²+(b/y)²]^1/2/y. Full radial operator, all longitudinalmomentum;
+  no assumed global gap. Uniform over stated completions, not selfsupport.
+- Chosen integernear atomicestimate:4642875905017627791065088.
+  Bounds/sectorcounts only, no hugeflux wavefunction simulation.
+  atyD=sqrt(q): y||E||<.051389264, ||E||/D<2.384948e-14.
+  This normalizes to universal1/y, NOTactualrelativeerror/probability.
+  Atq1000 yD=sqrt(q), bound>6247: retained uninformative lowfluxcase.
+- X=eta exp(-h²/(2Lambda²)) isHS; HS²=Lambda/(2sqrt(pi))inteta² ds/v.
+  True trace-class selectedobservable difference
+  Tr[(JX)*GH(JX)-X*GhX]=Tr X*J*E X, boundedby ||E||HS².
+  AtyD=LambdaD=sqrt(q), persectorerror/D<.024867898.
+  Exactregularsectorcount floor((19q-10)/20)-ceil((17q-10)/20)+1.
+  Jointdirectsumcoverspossibleexteriormixing. This is NOTstresstrace.
+- Localizedcomplete-line kernels depend onlyoncollarvelocity, so the
+  selectedreference is independentofoutsidevelocitycontinuation in that
+  class; circle/reflecting completions notcovered. No edge term dropped.
+- Actualfield identities: r1variance1.04e-25absolute, v_s transport2.23e-16.
+  Six fieldcases enclosed; FourierGaussian normalization andexactcounts pass.
+  InitialNumPy-bool serialization error fixed beforeanyresultwrite; no
+  calculation/testtolerance changed. No scientificfailedresultwaslost.
+- NEXT: bound localized dotH GH and longitudinal metric graph terms to
+  obtain derivative-weighted finite traceerror. Then filter/frequencytails,
+  null/openchannels and subtraction. No supportsign/atompassage followsyet.
+  Staticgeometryexcludes13Sep2027->12Sep2027; no futureclockgaincalculated.
+
+Source SHA256 79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531
+Results SHA256 df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17
+
+Verification PASS: 12 saved controls, 32 exact input hashes, exact source
+and result hashes; independent mathematical and code audits complete.
+80-digit Decimal checks validate the graph and resolvent bounds; exact
+integer sector endpoints and all six prior document byte sequences pass.
+Figure inspected. Layout PASS: 162 imports, 1434 Markdown links,
+8 historical guards, 14 frozen hashes and operator identity.
+Git diff check passes. Publication follows; no simulation is running.
+
+--- Preserved checkpoint166 and earlier history ---
+
 # Research increment166 - aligned complement gap and metric response
 
 Previous checkpoint165 published 726f160cf887e7e023b53b054f52ca40fac15951.
