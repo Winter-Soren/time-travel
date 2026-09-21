@@ -1,3 +1,53 @@
+# Authoritative checkpoint144 — coupled expanding completion
+
+Previous goal turn made progress by deriving a candidate action; this turn
+verified and implemented the coupled result. Goal ACTIVE/unachieved. Import
+COMPLETE; no need to reopen the source chat. Previous published checkpoint:
+98259b592b7ed1220df1ff16222bb07bfa704877. Prior bytes below remain history.
+
+- NEW scripts/expanding_field_completion.py and matching results/PNG/PDF;
+  docs/EXPANDING_FIELD_COMPLETION.md gives the equations and physical limits.
+  All15 checks PASS in5.58sec, production terminalexit0. No live process.
+  Source9031efdfb575046c6e3935d9e444dd505cbb2cdfa64686605c2e553b5ff27a97.
+  Results611eafd4a4fdf1446f39510d85648e650e5bc9f01a58fd22d28087054055eb29.
+- Explicit constant vacuum energy solves the homogeneous deSitter background.
+  Scalar lapse/shift eliminated from geometric ADM expansion. The time-IBP
+  mixed term changes the gradient coefficient by -HJ; do not omit it.
+  K,G,W allpositive: healthy time kinetic/quartic, but residual negative k².
+  Independent agent 3D derivation agrees; tensor action remains P/8 GR form.
+  Static, zero-higher-derivative and fixed-metric limits checked exactly.
+- Derived mode coefficients now justify the earlier Volterra bound for the
+  stated band-entry initial data. Lambda/MbarPl=.01,alpha1 numericaloptimum:
+  H/Lambda=.00408125816086,X0=1.00029982003,kJ/Lambda=.01414425551.
+  Fractional-amplification bound .0002001399893 (0.020014%); integrated
+  .0002001331230. ODE resolution difference<=2.7e-15, not interval proof.
+  Required addedvacuumenergy/Lambda4=.49985002270. Cutoff/energy scales
+  illustrative; actual strongcoupling, material availability and joins open.
+- Extra analytic progress (not counted in15 executablechecks): full total
+  linear nullstress observable for 1D disturbances derived and independently
+  verified by direct4D Ricci expansion, including physical frame. With
+  q=zetadot-Hn,s=divshift,d=zeta_xx/a²: Ruu+Ree=-2(qdot+Hs+d),Rue=-2qx/a.
+  At bandentry zeta=eps*cos(kx), k/a=kJ, retain d_dot=-2Hd; both null
+  directions have negative stress at trough. Exampleeps.001 gives
+  Tnull/Lambda4=-5.595921369e-6,n=1.198920648e-6,Xlinear1.00029742147.
+  This includes higher-derivative stress and has sign-changing, nonlocalized
+  Fourier lobes. It is not evidence for a finite supported bridge.
+- Figure inspected; saved source hash verified. No new law, material recipe,
+  nonlinear stability, or 13Sep2027->12Sep2027 passage established.
+- Layout PASS:124 imports,1049 links, original migration/provenance guards
+  and operator identity. Diff whitespace PASS; both historical document
+  suffixes verified byte-identical to the previous published HEAD.
+
+Next critical physical calculation: a finite, genuinely3D localized on-shell
+packet and its TOTAL null stress/flux, compensating source, evolution and
+backreaction. Use144 coefficients/constraints and derive radial projections;
+one-dimensional Fourier lobes alone do not supply a localized medium. Then
+compare actual source to geometric needs. No further homogeneous parameter
+sweep is needed before this source calculation. Existing Dirac route still
+needs compact proper-P/H representation, not another import or scheme audit.
+
+--- Preserved checkpoint143/142 and earlier history ---
+
 # Authoritative checkpoint143/142 — hypothesis branch tested
 
 This prefix supersedes earlier next-action statements; all prior bytes below

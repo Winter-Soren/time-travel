@@ -1,3 +1,36 @@
+## The expanding action supplies coupled mode bounds — increment144
+
+The [expanding completion](EXPANDING_FIELD_COMPLETION.md) includes its required
+constant vacuum energy and derives the background and scalar constraints from
+the same action. The exact geometric ADM expansion, background equations,
+constraint elimination, expanding-measure integration by parts, and three
+independent limits pass. All15 executable checks pass; see
+[source](../scripts/expanding_field_completion.py),
+[results](../results/expanding_field_completion_results.json), and
+[figure](../figures/expanding_field_completion_progress.png).
+
+An independent three-dimensional derivation confirms the reduced coefficients.
+The theory retains an instantaneous negative-gradient band, but expansion
+bounds growth from the specified band-entry data. In one illustrative case,
+the analytic upper bound on fractional growth evaluates to0.020014%, with
+added energy density0.499850 Lambda^4. The true strong-coupling cutoff and
+physical availability of that energy are not established. The homogeneous
+total null energy is zero, so this is not a localized supporting source.
+
+A further analytic calculation obtains the total linear null stress of a
+sinusoidal perturbation, including its higher-derivative contribution.
+Independent direct four-dimensional curvature/frame expansion confirms the
+projection signs. At the illustrative negative curvature trough, amplitude
+0.001 gives Tnull/Lambda^4 about-5.596e-6 in both null directions, even though
+the ordinary two-derivative clock coefficient remains positive. The source
+has compensating positive lobes and is not spatially localized. This is the
+starting observable for the next genuinely three-dimensional packet test,
+not a supported wormhole, material blueprint or discovery of new physics.
+The additional curvature identities are documented analytical checks, separate
+from the15 checks in the saved numerical result. All earlier evidence remains.
+
+--- Preserved increment143/142 and earlier research ---
+
 ## Hypothesis testing starts now; first completion rejected — increment143
 
 The separate [matter hypothesis](LOCALIZED_FIELD_HYPOTHESIS.md) has an explicit
