@@ -1,0 +1,142 @@
+{
+  "complete": true,
+  "passed": true,
+  "checks": {
+    "original_lapse": true,
+    "independent_momentum": true,
+    "action_density": true,
+    "action_flux": true,
+    "independent_mass_identity": true,
+    "bvp_converged": true,
+    "regular_branch": true,
+    "resolution": true,
+    "exterior_refinement": true,
+    "center_refinement": true,
+    "homogeneous_control": true,
+    "nonlinear_correction_is_quadratic": true,
+    "linear_limit": true,
+    "no_initial_neck": true
+  },
+  "summary": {
+    "density_near_center": -6.110489485485274e-06,
+    "maximum_density_excess": 7.489363259003453e-07,
+    "maximum_absolute_compactness": 1.8693866806676007e-06,
+    "difference_from_linear_over_maximum_linear": 0.29616101569131814,
+    "maximum_lapse_deviation": 2.355363200701177e-06,
+    "minimum_lapse": 0.9999976446367993,
+    "minimum_discriminant": 0.23825745107852458,
+    "minimum_implicit_denominator": 3336.347371806966,
+    "minimum_areal_derivative_factor": 1.0,
+    "near_center_shift_over_Hr": -0.011954863319590923,
+    "exterior_shift_tail_x3w": 7.958784037798397e-06
+  },
+  "controls": {
+    "original_lapse_relative": 5.673501767954541e-16,
+    "original_momentum_relative_five_point": [
+      1.7273556123946703e-09,
+      2.174204069333346e-09
+    ],
+    "action_density_relative": 6.822746772232201e-11,
+    "action_flux_relative_five_point": [
+      6.119247829236299e-09,
+      6.099730951937332e-09
+    ],
+    "geometric_mass_integral_relative": 1.1185947554287326e-08,
+    "maximum_bvp_residual": 9.995966559997596e-12,
+    "zero_amplitude_maximum_compactness": 3.697414744938005e-15,
+    "zero_amplitude_maximum_density_excess": 2.2191139826527913e-16
+  },
+  "absolute_refinement_changes": {
+    "resolution": {
+      "w": 7.715591047872039e-13,
+      "lapse": 1.3353762540191383e-12,
+      "density_excess": 2.6689283853169148e-12,
+      "compactness_excess": 1.9678932513414005e-12
+    },
+    "outer_radius": {
+      "w": 4.64521144381723e-14,
+      "lapse": 1.7541523789077473e-13,
+      "density_excess": 3.506939797308219e-13,
+      "compactness_excess": 5.739913351881255e-13
+    },
+    "center_cutoff": {
+      "w": 7.787173683659887e-15,
+      "lapse": 7.993605777301127e-15,
+      "density_excess": 1.597853793722237e-14,
+      "compactness_excess": 1.502467041839678e-17
+    }
+  },
+  "amplitude_controls": [
+    {
+      "epsilon": 0.001,
+      "largest_absolute_compactness": 1.8693866806676007e-06,
+      "largest_linear_compactness": 1.9313346842242304e-06,
+      "largest_difference": 5.719860417197193e-07,
+      "difference_over_maximum_linear": 0.29616101569131814,
+      "density_near_center": -6.110489485485274e-06
+    },
+    {
+      "epsilon": 0.0001,
+      "largest_absolute_compactness": 1.9088943634946068e-07,
+      "largest_linear_compactness": 1.9313346842242302e-07,
+      "largest_difference": 5.797219019024369e-09,
+      "difference_over_maximum_linear": 0.0300166463450273,
+      "density_near_center": -1.6783672656098172e-06
+    },
+    {
+      "epsilon": 1e-05,
+      "largest_absolute_compactness": 1.92893924056709e-08,
+      "largest_linear_compactness": 1.9313346842242304e-08,
+      "largest_difference": 5.80541948546077e-11,
+      "difference_over_maximum_linear": 0.0030059106445306056,
+      "density_near_center": -1.7865583829446315e-07
+    }
+  ],
+  "quadratic_correction_ratios": [
+    98.66559118133517,
+    99.85874463581938
+  ],
+  "background": {
+    "P": 10000.0,
+    "c": 1.0002998200271611,
+    "X": 1.0002998200271611,
+    "H": 0.004081258160863258,
+    "radius": 70.70008025824305,
+    "rho": 0.4998500227010054,
+    "J": 2447287.184452436,
+    "W": 59928.064745124764,
+    "G": 11.98920647742642
+  },
+  "parameters": {
+    "epsilon": 0.001,
+    "zetadot": 0,
+    "scale_factor": 1,
+    "profile": "Exact Gaussian, no spectral truncation",
+    "outer_radii": [
+      12.0,
+      18.0
+    ],
+    "inner_cutoffs": [
+      1e-05,
+      1e-06
+    ],
+    "tolerances": [
+      2e-10,
+      1e-11
+    ]
+  },
+  "source_sha256": "5d5af618813717c5f34d5c5429789ee345f2b7c9e0bb0e5bf68b1a694ff428c2",
+  "state_sha256": "c456ebb87785043e9249630e1bb17839f040cf577326b59f0f2686ac1f4e615e",
+  "inputs_sha256": {
+    "expanding_field_completion.py": "9031efdfb575046c6e3935d9e444dd505cbb2cdfa64686605c2e553b5ff27a97",
+    "expanding_field_completion_results.json": "611eafd4a4fdf1446f39510d85648e650e5bc9f01a58fd22d28087054055eb29",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "scope": [
+    "Numerically consistent nonlinear initial constraints of the stated hypothetical action, not a proof of continuum existence or uniqueness.",
+    "A regular center and a decaying asymptotic shift are imposed through tested finite-boundary approximations.",
+    "Negative density relative to the expanding background is not negative total density, null-energy violation, or evidence for a throat.",
+    "Prescribed zeta=-epsilon exp(-x^2/2) implies 1+r*zeta_r>=1 exactly for epsilon>=0; this slice cannot have a spatial neck.",
+    "No nonlinear null stress, full evolution, long-term stability, UV completion, material recipe or chronology change has been established."
+  ]
+}

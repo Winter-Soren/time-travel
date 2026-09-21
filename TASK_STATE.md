@@ -1,3 +1,57 @@
+# Authoritative checkpoint146 — nonlinear spherical initial constraints
+
+Previous checkpoint145: 2826b327afe78efc723104eb5a4824d1dd4acfa3.
+Goal ACTIVE, unachieved. Import complete; no new law, material or backward passage.
+
+- NEW scripts/nonlinear_packet_constraints.py solves the full nonlinear lapse
+  and radial momentum initial constraints for action144. Same background,
+  epsilon=.001, R=1/kJ, zetadot=0, a=1. This is an exact Gaussian, not145's
+  slightly tapered spectrum. No UV validity bound or nonlinear evolution.
+- beta=H*r*w(r/R); implicit lapse branch connects to N=1. Smooth-center
+  Taylor slope is imposed at xmin1e-5 and checked at1e-6. The initial trial
+  with zero slope at the cutoff exhausted nodes; correct Taylor data resolve
+  that numerical failure. No physical-collapse claim follows from it.
+  Outer x*w_x+3w=0 at radii12 and18 checks the decaying beta~r^-2 tail.
+- All14 checks PASS, final terminal exit0 in2.55s: original lapse,
+  independent momentum derivative, matter-action/geometric density and flux,
+  flux-corrected mass identity, regular branch, resolution, center/outer
+  refinement, homogeneous zero control, quadratic correction and linear
+  limit, and the analytic no-neck condition for this initial profile.
+- At epsilon.001 central density EXCESS=-6.11048949e-6 Lambda4; positive
+  shell max7.48936e-7. TOTAL density stays positive. This is NOT null stress.
+  Max|deltaC|=1.86938668e-6. Profile difference from linear divided by the
+  linear peak=.296161 (29.6%); NOT a29.6% change of the peak itself.
+  At epsilon1e-4 and1e-5 the ratios are.0300166 and.00300591. Preserve145's
+  failed reconstruction. Discriminant min.238257; implicit denominator
+  min3336.35; lapse min.999997645. Numerical, not interval, evidence.
+- Largest compactness changes: resolution1.968e-12, outer radius5.740e-13,
+  center cutoff1.51e-17. Momentum residual relative2.18e-9; action flux
+  disagreement6.12e-9; density6.83e-11; integrated mass identity1.12e-8.
+- The prescribed positive-amplitude Gaussian has1+r*zeta_r>=1 exactly.
+  This excludes an initial spatial neck by construction; it is not a general
+  nonlinear no-go result. Nonlinear pressure/null stress require evolution.
+- Agent formation_updates independently verified the ODE, center expansion,
+  density, flux, compactness and mass identity. No agent file edits; no live
+  simulation or delegated analysis remains at this checkpoint.
+- Report: docs/NONLINEAR_PACKET_CONSTRAINTS.md. Saved results/state/PNG/PDF
+  use nonlinear_packet_constraints names. Figure inspected;14 checks and
+  source/input/state hashes verified. Historical document suffixes preserved.
+- Layout verification PASS:127 imports,1094 Markdown links, all migration
+  and provenance guards, and operator identity. Diff whitespace PASS.
+
+NEXT: derive and test nonlinear evolution from these constraint-compatible
+initial data. Need actual accelerations, pressures, constraint preservation
+and scale control. An initial slice is not a stable medium. Record loss of
+regularity or EFT validity as a limitation rather than tuning away a physical
+failure. Existing Dirac source work remains incomplete. No discovery deadline
+is defensible;13Sep2027->12Sep2027 remains unproved.
+
+Source SHA256: 5d5af618813717c5f34d5c5429789ee345f2b7c9e0bb0e5bf68b1a694ff428c2
+Result SHA256: e0c66f1c3b8738cd8c65eee85b3a1d204322f120b2c44deb94e8c1e71161aac3
+State SHA256: c456ebb87785043e9249630e1bb17839f040cf577326b59f0f2686ac1f4e615e
+
+--- Preserved checkpoint145 and earlier history ---
+
 # Authoritative checkpoint145 — localized packet and geometric rejection
 
 Previous turn: PROGRESS, coupled action144 published

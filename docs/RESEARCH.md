@@ -1,3 +1,23 @@
+# Checkpoint146 — nonlinear constraint-compatible initial data
+
+The full lapse and radial momentum constraints now solve for the fixed
+Gaussian initial packet. Fourteen numerical checks pass, including original
+constraint residuals, matter-versus-geometry density/flux, boundary controls
+and the exact spherical mass identity. At epsilon=.001 the compactness
+profile differs from its linear estimate by29.6% of the linear peak.
+Central density deficit is -6.11049e-6 Lambda4; total density remains positive.
+This does not determine null energy. The prescribed initial spatial geometry
+has no neck. Full nonlinear evolution, stability, obtainable material and
+chronology change remain unproved; there is no discovery/new-law claim.
+
+See [derivation and limits](NONLINEAR_PACKET_CONSTRAINTS.md),
+[calculation](../scripts/nonlinear_packet_constraints.py),
+[results](../results/nonlinear_packet_constraints_results.json),
+[saved initial fields](../data/nonlinear_packet_constraints_state.npz), and
+[visual](../figures/nonlinear_packet_constraints_progress.png).
+
+--- Preserved checkpoint145 and earlier research ---
+
 ## A localized packet exposes a nonlinear limitation — increment145
 
 The [spherical packet](LOCALIZED_EXPANDING_PACKET.md) replaces the extended

@@ -1,5 +1,7 @@
 # Directory guide
 
+Current increment146: [nonlinear spherical initial constraints](docs/NONLINEAR_PACKET_CONSTRAINTS.md), [calculation](scripts/nonlinear_packet_constraints.py), [results](results/nonlinear_packet_constraints_results.json), [initial fields](data/nonlinear_packet_constraints_state.npz), and [visual](figures/nonlinear_packet_constraints_progress.png). Fourteen checks pass for one initial slice; nonlinear evolution, stability and time passage remain unproved.
+
 Current increment145: [spherical packet and nonlinear-geometry limitation](docs/LOCALIZED_EXPANDING_PACKET.md), [packet calculation](scripts/localized_expanding_packet.py), [results](results/localized_expanding_packet_results.json), [saved fields](data/localized_expanding_packet_state.npz), [geometric check](scripts/localized_packet_geometry.py), [rejection result](results/localized_packet_geometry_results.json), and [visual](figures/localized_expanding_packet_progress.png). Linear negative stress is localized; a controlled nonlinear gravitational source is still missing.
 
 Current increment144: [coupled expanding completion](docs/EXPANDING_FIELD_COMPLETION.md), [calculation](scripts/expanding_field_completion.py), [results](results/expanding_field_completion_results.json), and [visual](figures/expanding_field_completion_progress.png). The added energy source is included in the background; conditional mode amplification is bounded. A localized negative-null-energy source is still required.
