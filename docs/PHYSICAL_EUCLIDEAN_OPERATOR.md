@@ -2637,3 +2637,244 @@ any magnetic zeros require separate treatment. Actual field derivatives,
 longitudinal propagation, the global vacuum state and the remainder still
 need control. This is a proposed next calculation, not a computed source.
 It does not establish a supporting material, atomic survival or a time shift.
+
+
+## Strong-field response at the atomic target
+
+The [new calculation](../scripts/dihole_strong_field_response.py) evaluates
+the leading constant-field approximation on the actual compact collars.
+It retains arbitrary $s\mathcal B$ and analytically integrates the combined
+magnetic heat response in the declared subtraction convention. It does not
+compute the full inhomogeneous quantum source.
+
+Let $\mathcal B=\sqrt{F_{ab}F^{ab}/2}$ include the charge and let
+$C_\perp=\sum_aF_{\hat u\hat a}^2$. In the actual axisymmetric geometry,
+$C_\perp=F_{u\phi}^2/(g_{uu}g_{\phi\phi})$. The compact paired variation
+changes the lapse by $\delta\log N=f$ and $\delta\log g_{uu}=-2f$,
+leaving the physical volume and the charge-included gauge one-form fixed.
+Consequently,
+
+$$
+\delta\mathcal B=fC_\perp/\mathcal B,\qquad
+\delta\Theta_0(s)=\frac{\delta\mathcal B}{4\pi^2s}g(s\mathcal B),
+\quad g(x)=\coth x-x\operatorname{csch}^2x.
+$$
+
+The lowest Landau term replaces $g$ by1, and the gapped tower replaces it
+by $g-1$. For this nonnegative mask, their signs are respectively positive
+and negative. Their opposite short-time singularities cancel; the combined
+response must be subtracted before any separate physical interpretation.
+The full leading local response is positive at finite proper time, but
+that does not fix the sign after renormalization.
+
+The corresponding local energy density and compact response are
+
+$$
+\mathcal E_{\rm loc}=\frac{\mathcal B^2}{24\pi^2}
+ [12\log A_G-\log(2\mathcal B/\mu_H^2)],
+$$
+$$
+\mathcal Q_{\rm loc}=\int N\sqrt h\,\frac{fC_\perp}{12\pi^2}
+ [12\log A_G-\tfrac12-\log(2\mathcal B/\mu_H^2)],
+$$
+
+where $A_G$ is Glaisher's constant. This is consistent with the massless
+constant-magnetic-field result of
+[Fucci, equations6.16 and7.28](https://arxiv.org/pdf/0906.2430), using our
+rank-four Dirac determinant normalization. Applying it pointwise to our
+varying geometry is an approximation. The same paper's massless curvature
+terms have infrared singularities, so the displayed local density cannot
+justify omitting the global low-energy contribution.
+
+An independent65-digit subtracted proper-time quadrature recovers the
+constant
+
+$$
+\int_0^1\left[\frac{g(x)}{x^2}-\frac{2}{3x}\right]dx
+ +\int_1^\infty\frac{g(x)}{x^2}dx
+=\frac23[12\log A_G-\tfrac12-\log2-\gamma_E]
+=0.809793919295955320362194474249
+$$
+
+within $2.60\times10^{-36}$ in the numerical control. Three split points
+give the same result. This is an independent constant-field check, not an
+error estimate for the approximation on the actual geometry.
+
+### Keep the physical reference fixed while changing the size
+
+[Scheme136](DIRAC_SCHEME_MATCHING.md) fixes a physical subtraction length.
+Denote it here by $D_{\rm ref}$ to distinguish it from the present Weyl
+scale $D$. For comparison, take $D_{\rm ref}$ to be checkpoint160's
+illustrative $q=1$ physical size. With that reference and the declared
+coupling fixed, $D=qD_{\rm ref}$ and
+$\mu_HD=q\sqrt2e^{-\gamma_E}$. The numerical coupling remains an
+illustration, not a measured high-energy or hydrogen interaction.
+
+The actual collar integrals give
+
+$$
+\frac{D\mathcal Q_{\rm loc}}{\hbar c\,q^2}
+=-8.0617368762\times10^{-9}
+ +(9.5773780159\times10^{-9})\log q.
+$$
+
+At the nominal atomic flux estimate $q=4.6428759050\times10^{24}$,
+
+| Compact response divided by $q^2$ | Value in $\hbar c/D$ |
+| --- | ---: |
+| Leading local approximation, fixed physical reference | $+5.3590820543\times10^{-7}$ |
+| Required supporting response | $-5.8278709657$ |
+
+The computed magnitude is $9.1956086\times10^{-8}$ of the required one.
+The omitted contribution would need to supply approximately
+$-5.8278715016q^2\hbar c/D$ to meet this necessary condition. Its magnitude
+is not bounded here. These numbers therefore do not exclude the full
+candidate or establish any support.
+
+Holding $\mu_HD=0.7940236164$ instead would change the loop component to
+$-5.5203167918\times10^{-7}q^2\hbar c/D$. This is not a physical sign
+improvement: a matched Maxwell-coupling change of
+$+1.0879398846\times10^{-6}q^2\hbar c/D$ cancels it. The massless Dirac
+scale dependence gives
+$\Delta(e_R^{-2})=-\log(\mu_2/\mu_1)/(6\pi^2)$.
+A change of subtraction convention must change the renormalized couplings
+on the other side consistently; it cannot be used to obtain support.
+
+Twelve [saved checks](../results/dihole_strong_field_response_results.json)
+pass, including the actual paired complex variation, the previously saved
+magnetic heat coefficient, quadrature refinement and matched scale
+cancellation. The64/128 full local response changes by at most
+$9.28\times10^{-13}$ relative on the sampled proper-time grid.
+A [failed small-argument numerical pilot](../results/dihole_strong_field_response_small_x_trial.json)
+and its [exact source](../provenance/dihole_strong_field_response_small_x_trial.py)
+are preserved: subtraction near $x=.01$ exceeded the accuracy target.
+Extending the existing small-$x$ series to $x<.1$ fixes that cancellation;
+the physical result and the tolerance were not altered to hide the error.
+
+![Atomic strong-field contribution and support requirement](../figures/dihole_strong_field_response_progress.png)
+
+
+### The field is nonzero throughout the prescribed collar closure
+
+The independent [geometry calculation](../scripts/dihole_strong_field_geometry.py)
+reuses the full Euclidean curvature and covariant field derivative, including
+the time-direction connection terms. Its32/64/128 samples give:
+
+| Largest sampled local indicator | $q=1$ | Nominal atomic flux |
+| --- | ---: | ---: |
+| $\|\mathrm{Riem}\|/\mathcal B$ | $6.6133634091$ | $1.4244109781\times10^{-24}$ |
+| $\|\nabla F\|^2/\mathcal B^3$ | $1.1615225399$ | $2.5017307456\times10^{-25}$ |
+
+Both indicators scale exactly as $1/|q|$ at fixed shape. The largest
+64/128 sensitivity of these sampled upper indicators is0.0692%.
+The weighted means are well resolved numerically. These small ratios
+support investigating a local strong-field expansion, but do not bound
+its remainder or the global massless sector. No second covariant field
+derivative bound has been computed. In the geometry JSON, $D_0$ labels
+the numerical shape unit, denoted $D$ here; it is not the physical
+subtraction reference $D_{\rm ref}$ introduced above.
+
+A separate directed interval calculation covers the entire closed
+rectangle $R/D\in[1/40,1/20]$, $\cos\theta\in[-1,1]$ using the exact linked
+balanced parameters. Its16 by32 tiles enclose the pole-safe derivative
+of the charge-included $q=1$ potential as
+
+$$
+-0.83088345391\le\partial_{\cos\theta}A_\phi
+\le-0.25473589752,
+\qquad \mathcal B D^2\ge4.74460439748.
+$$
+
+The lower bound uses the angular field component alone and includes both
+polar limits and the central boundary where $R'=0$. Positive denominators
+are enclosed in the same calculation. An8 by16 cover already proves the
+sign with a looser field bound. This excludes magnetic zeros on these
+prescribed collars for nonzero flux; it does not cover the full exterior.
+The separately sampled field minimum7.63789 is not promoted to an enclosure.
+
+Eight [checks](../results/dihole_strong_field_geometry_results.json) pass.
+An initial relative-convergence guard for every minimum failed because
+the sampled gradient minimum tends to zero near the poles. The result
+retains that failed diagnostic and its values; the final gate tests the
+requested upper indicators and the strictly positive magnetic minimum.
+No positive gradient minimum is claimed. The source and reconstruction
+provenance are recorded in the result. This correction does not relax the
+upper-indicator checks or change the interval proof.
+
+
+### A bound for ideal closed channels, and the next global object
+
+For a fixed coordinate flux contour that threads the bridge, let
+$L=\oint d\ell_h/N$ be its full optical length. The paired variation gives
+
+$$
+\delta L=-J_f,\qquad
+J_f=\int_{\rm collars} f(1+w_u)\,\frac{d\ell_h}{N},
+\quad 0\le w_u\le1,
+$$
+
+where $w_u$ is the squared radial component of its spatial unit tangent.
+Thus $J_f\le2L$ because the actual mask obeys $0\le f\le1$.
+Using $2f$ throughout a tilted collar would be incorrect. Nine independent
+finite-symbol variations of the optical line element check the factor
+$1+w_u$ exactly at the reported floating precision.
+
+Every such returning contour crosses both complete collars. There,
+$P/N=\Sigma^2/(R\,d)^2$, $R/D\le.05$, $d/D\le1.05$ and the interval cover
+gives $\Sigma/D^2\ge0.22033474370227862$. Hence the two crossings alone give
+
+$$
+L/D\ge2(.05)\frac{(0.22033474370227862)^2}{(.05\cdot1.05)^2}
+\ge1.7613568900625416.
+$$
+
+This is a geometric lower bound, independent of sampled field-line lengths.
+For a decoupled massless complex Dirac circle of fixed holonomy, the most
+negative flat-circle Casimir coefficient is $-\pi/(6L)$. Therefore
+
+$$
+\mathcal Q_{\rm Cas}\ge-\frac{\pi J_f}{6L^2}
+\ge-\frac{\pi}{3L_{\min}}
+$$
+
+per ideal channel. Assuming at most $|q|$ such mouth channels bounds their
+negative contribution by $0.594540241733414|q|\hbar c/D$. At the nominal
+atomic flux this is only $2.1972742\times10^{-26}$ of the required source
+magnitude. **The assumptions defining these ideal channels have not been
+proved for the full Dirac operator.** Conformal-anomaly terms, varying
+holonomy, projector/mode mixing and the noncompact exterior are excluded
+from this conditional bound. It must not be added to the local result as
+an exact total without matching their two- and four-dimensional subtraction.
+
+[Maldacena--Milekhin--Popov, section5.5](https://arxiv.org/pdf/1807.04726)
+uses a field-line-length integral for the Casimir contribution in its own
+wormhole construction and treats the conformal anomaly separately. That
+supports this direction of approximation; their geometry and control
+assumptions are not established for ours.
+
+The existing [return-topology results](../results/dihole_return_geometry_results.json)
+and [null-ring calculation](../results/dihole_null_scaling_results.json)
+remain the starting data, with historical source/input provenance checked.
+They locate the exterior separatrix at $A_\phi/q=0.7790141348$ and a
+returning classical flux fraction0.2209858652. Saved exterior optical lengths
+at labels0.8,0.9,0.98 are5.71969,5.17046,4.91434 times $D$; they stop at the
+two outer cuts and do not include the sewn bridge. They are not a complete
+optical-length distribution or quantum state calculation.
+
+The source-weighted moment $\int_{\rm return}J_f(a)/L(a)^2\,da$ would give
+the ideal-channel response, rather than the returning fraction alone.
+However, the inexpensive lower-length bound already makes this ideal
+contribution far too small by itself. More precise optical lengths are
+not the limiting uncertainty and are deferred.
+
+The next bounded calculation is a normalized transverse ground-state map
+$U_q$ on a regular actual flux tube, checking both its full Dirac residual
+$(H_q+i\kappa)U_q-U_q(h_\parallel+i\kappa)$ and its metric variation.
+A separate band around the known exterior null ring must be retained;
+it persists as flux increases and prevents a global gap argument.
+The null-band mode conversion, open/bypass channels, global vacuum state
+and two-/four-dimensional subtraction matching need their own source-error
+budgets. A small residual for a single trial state alone would not bound
+the full trace. This targets the missing reduction error instead of
+refining an already negligible ideal term or restarting broad basis growth.
+No atom transit, stable medium or chronology change is established.

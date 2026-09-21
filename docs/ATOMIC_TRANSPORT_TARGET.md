@@ -110,3 +110,20 @@ tidal and supporting-field effects can be included in a controlled atomic
 model. Existing small-scale field calculations remain reference data,
 with their actual parameter values and limits preserved. Enlarging to
 humans is outside the current transport milestone.
+
+
+## Supporting-field update at atomic size
+
+The [strong-field calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#strong-field-response-at-the-atomic-target)
+now evaluates the leading local magnetic contribution at the atomic flux
+estimate. With the physical subtraction reference and declared coupling
+held fixed, it is positive and about ten million times smaller in magnitude
+than the required negative supporting response. The omitted curvature,
+field-gradient and global quantum contributions are not bounded, so this
+is not a rejection of the complete candidate. It does show that the
+computed local piece cannot supply the required support by itself.
+
+The comparison distinguishes the fixed physical reference length from
+the size of the new opening. Changing the subtraction convention without
+matching the physical couplings would give a spurious improvement. No
+atom trajectory, survival probability or clock advantage has been computed.

@@ -1,3 +1,79 @@
+# Authoritative checkpoint162 - atomic strong-field response and reduction error
+
+Previous checkpoint161 published 49fc5db04a9f6601e75b417de75daabcc38c4732.
+Previous goal turn classified PROGRESS: atomic target and28 checks published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+No new physical law, obtainable medium, supported/stable bridge or atom transit.
+One hydrogen atom remains the target; humans deferred. No discovery deadline.
+
+- Completed leading constant-magnetic-field heat variation on actual collars,
+  with all sB retained. Full local response=(deltaB)/(4pi²s)*(coth(sB)-sB*csch²(sB)).
+  Paired volume fixed, charge one-form fixed; deltaB=f F_u-frame,a²/B.
+  Lowest local Landau term and tower cancel at short times; never renormalize
+  them separately or relabel them as exact global sectors.
+- Analytic local energy density B²/(24pi²)*(12log(A_G)-log(2B/mu_H²)).
+  Independent65-digit proper-time integral agrees2.60e-36; full-collar
+  complex variation and saved magnetic a4 agree.64/128 sensitivity9.28e-13.
+- IMPORTANT scale distinction: subtraction length D_ref stays physically fixed.
+  Take D_ref=old illustrativeq1 size for this comparison. Fixed coupling then
+  gives D=q D_ref and mu_H D=q*.7940236164. The coupling is a declared
+  illustration, not a measured high-energy/hydrogen interaction.
+- Local response/q²=-8.0617368762e-9+9.5773780159e-9 log(q).
+  Nominal atomic flux4.6428759050e24 gives +5.3590820543e-7, vs required
+  -5.8278709657 in hbar*c/D perq². Magnitude ratio9.1956086e-8. Omitted
+  contribution would need -5.8278715016 perq². Actual remainder unknown.
+- Holding mu_H D=.794 instead gives loop component-5.5203167918e-7;
+  matched Maxwell change+1.0879398846e-6 cancels that apparent sign change.
+  Do not tune subtraction scale or keep incompatible couplings to claim support.
+- Geometry sampled maxima at atomic flux: ||Riem||/B=1.4244109781e-24,
+  ||covariant gradF||²/B³=2.5017307456e-25; both scale1/|q|. Largest upper
+ 64/128 sensitivity0.0692%. Not certified maxima or approximation errors.
+- Directed interval proof on ENTIRE CLOSED collars R/D in[.025,.05],mu in[-1,1]:
+  A_mu lies[-.83088345391,-.25473589752], q1 B D²>=4.74460439748. Includes
+  central boundary R'=0 and polar limits. No collar magnetic zeros; no
+  claim about the full exterior. Exact linked calibration used.
+- Conditional closed-channel bound: optical length>=1.76135689006D for any
+  loop threading both complete collars. Actual variation deltaL=-J_f with
+  J_f=integral f*(1+radial_tangent_fraction) dl/N <=2L, not always2f.
+  At most |q| decoupled complex1+1 Dirac circles of fixed holonomy imply
+  Q_Casimir>=-.594540241733414 |q| hbar*c/D. Atomic ratio to required
+  magnitude2.1972742e-26. This is NOT an exact global LLL/source bound.
+  Conformal anomaly, changing holonomy, projector/mode mixing excluded;
+  combining this with local result needs2D/4D subtraction matching.
+- Existing exterior return topology reused, not rerun: null-ring label
+  a*=.7790141348, returning fraction.2209858652. Source/input provenance PASS.
+  Old exterior lengths exclude bridge. The null persists for all q and
+  prevents a global transverse gap argument; mouthq is not all Melvin modes.
+- DECISION: do not refine ideal optical lengths; their crude bound already
+  makes that ideal term negligible. NEXT: construct normalized transverse
+  ground-state map U_q on a regular actual flux tube; calculate actual Dirac
+  residual (H_q+i kappa)U_q-U_q(h_parallel+i kappa) AND its metric variation.
+  Isolate a band around the known null. Source errors from that band,
+  open/bypass channels and global state must be bounded. One small trial
+  residual alone does not bound the full stress trace. No broad basis growth.
+- Two numerical failures retained: root small-x cancellation pilot has exact
+  source+failedJSON; corrected by extending series region with fixed tolerance.
+  Geometry's relative minimum guard failed at gradient minimum tendingzero;
+  measured values and reconstructed pre-correction source retained, explicitly
+  marked reconstructed, no failedJSON existed. Upper tests unchanged.
+- Twelve response checks and8 geometry checks PASS. Figure inspected.
+  All delegated work finished; no simulations or background jobs remain.
+- Original atom support/stability/transit/clock requirements remain unmet.
+  Current static metric excludes backward causal passage.13Sep2027->12Sep2027
+  remains unproved; no future clock advantage has been calculated.
+
+dihole_strong_field_response source 1a53665df353076d4aac74b6dea354489a20baf37450c3040bfcb81c670614b6
+Results c2eb432077204aaa479a3e461e7de3ed180cf5526597f390ca8ef6a079e64801
+dihole_strong_field_geometry source 3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544
+Results cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04
+
+Verification PASS: all20 saved checks, exact source/input hashes and both
+failure archives; 157 imports,1377 links,8 historical guards,14 older frozen
+hashes and operator identity. Figure inspected; six historical document
+byte sequences retained. No live worker or simulation remains.
+
+--- Preserved checkpoint161 and earlier history ---
+
 # Authoritative checkpoint161 - one atom before larger payloads
 
 Previous checkpoint160 published 1776ee352447f5e29b2c77886e563eed6aeacdf1.

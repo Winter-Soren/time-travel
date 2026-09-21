@@ -1,0 +1,729 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_current_input_hashes": true,
+    "independent_static_and_field_controls": true,
+    "field_tensor_matches_potential": true,
+    "all_covariant_direction_fractions_normalized": true,
+    "sampled_maxima_and_positive_B_minimum_sensitivity": true,
+    "mask_integral_sensitivity": true,
+    "closed_collar_magnetic_zero_exclusion": true,
+    "closure_grid_respects_separate_lower_bound": true
+  },
+  "source_sha256": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+  "input_sha256": {
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a"
+  },
+  "parameters": {
+    "geometry": {
+      "Q": 0.2,
+      "D": 1.0,
+      "k": 0.5,
+      "M": 0.15311288741492748,
+      "a": 0.4759794572326244,
+      "rplus": 0.6531128874149275,
+      "B": 0.24020542767375577,
+      "q": 1.0,
+      "physical_A_factor": -2.5
+    },
+    "q_reference": 1,
+    "nominal_atomic_continuous_flux": 4.642875905017628e+24,
+    "nominal_atomic_D_m": 2.1961110716288053e-09,
+    "nominal_atomic_areal_diameter_m": 1e-09
+  },
+  "equations": {
+    "B": "sqrt(F_charge_ab F_charge_ab/2), Euclidean orthonormal components",
+    "curvature": "sqrt(R_abcd R_abcd)/B",
+    "gradient": "(nabla_a F_bc)(nabla_a F_bc)/B^3; a,b,c=0..3",
+    "charge_scaling": "B(q)=|q| B(1); both ratios scale as 1/|q| on the fixed geometric shape.",
+    "paired_variation": "g_tt(epsilon)=exp(2 epsilon f)g_tt; g_uu(epsilon)=exp(-2 epsilon f)g_uu; angular metric and charge one-form fixed.",
+    "weight": "Normalized actual four-volume-per-Killing-time measure times f>=0, including both collars and full azimuth.",
+    "field_identity": "B^2=(N0/P/R^2)^2[A_mu^2+R^2 Rprime^2 exp(2 epsilon f) A_R^2/(1-mu^2)].",
+    "zero_exclusion": "A_mu=factor*(R/distance)*(k A_r+A_c)<0 on R in[1/40,1/20],mu in[-1,1]; B>=distance^2 |A_mu|/Sigma^2.",
+    "pole_limits": "A(mu=-1)=1,A(mu=+1)=0 independent of R; A_R^2/(1-mu^2)->0 at both poles."
+  },
+  "controls": {
+    "static_covariant_time_gradient": 0.3333333333333333,
+    "expected_time_gradient": 0.3333333333333333,
+    "static_curvature_norm": 0.2222222222222222,
+    "expected_curvature_norm": 0.2222222222222222,
+    "pole_safe_derivative_complex_step_error": 1.6653345369377348e-16,
+    "exact_axis_potential_error": 4.5654880919025955e-15,
+    "passed": true
+  },
+  "samples": [
+    {
+      "order": 32,
+      "paired_metric_epsilon": 0.0,
+      "q1": {
+        "B_times_D0_squared": {
+          "minimum": 7.642553487596417,
+          "maximum": 9.681519770725318,
+          "minimum_location": {
+            "u_over_D0": 0.04993159654623704,
+            "cos_theta": -0.33186860228212767,
+            "theta": 1.9090800801734302
+          },
+          "maximum_location": {
+            "u_over_D0": 6.840345376296076e-05,
+            "cos_theta": 0.9972638618494816,
+            "theta": 0.0739917130997095
+          },
+          "mask_volume_mean": 9.213955581143715,
+          "mask_volume_RMS": 9.221575041003572
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 3.987455212100936,
+          "maximum": 6.589579673595795,
+          "minimum_location": {
+            "u_over_D0": 0.003765809656685751,
+            "cos_theta": 0.048307665687738324,
+            "theta": 1.5224698526415292
+          },
+          "maximum_location": {
+            "u_over_D0": 0.030982184056303427,
+            "cos_theta": 0.9972638618494816,
+            "theta": 0.0739917130997095
+          },
+          "mask_volume_mean": 5.754191910750419,
+          "mask_volume_RMS": 5.798451525278673
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 1.1507047899671223e-06,
+          "maximum": 1.1591423366900664,
+          "minimum_location": {
+            "u_over_D0": 6.840345376296076e-05,
+            "cos_theta": -0.9972638618494816,
+            "theta": 3.0676009404900837
+          },
+          "maximum_location": {
+            "u_over_D0": 0.04993159654623704,
+            "cos_theta": -0.42135127613063533,
+            "theta": 2.0057311307494996
+          },
+          "mask_volume_mean": 0.2066409881878586,
+          "mask_volume_RMS": 0.3028219737793504
+        }
+      },
+      "nominal_atomic_continuous_flux": {
+        "B_times_D0_squared": {
+          "minimum": 3.548342744036984e+25,
+          "maximum": 4.495009486745237e+25,
+          "minimum_location": {
+            "u_over_D0": 0.04993159654623704,
+            "cos_theta": -0.33186860228212767,
+            "theta": 1.9090800801734302
+          },
+          "maximum_location": {
+            "u_over_D0": 6.840345376296076e-05,
+            "cos_theta": 0.9972638618494816,
+            "theta": 0.0739917130997095
+          },
+          "mask_volume_mean": 4.277925235759485e+25,
+          "mask_volume_RMS": 4.281462856418742e+25
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 8.588330366081143e-25,
+          "maximum": 1.4192883480849303e-24,
+          "minimum_location": {
+            "u_over_D0": 0.003765809656685751,
+            "cos_theta": 0.048307665687738324,
+            "theta": 1.5224698526415292
+          },
+          "maximum_location": {
+            "u_over_D0": 0.030982184056303427,
+            "cos_theta": 0.9972638618494816,
+            "theta": 0.0739917130997095
+          },
+          "mask_volume_mean": 1.239359403194855e-24,
+          "mask_volume_RMS": 1.2488922047242738e-24
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 2.478431070543018e-31,
+          "maximum": 2.4966041746611477e-25,
+          "minimum_location": {
+            "u_over_D0": 6.840345376296076e-05,
+            "cos_theta": -0.9972638618494816,
+            "theta": 3.0676009404900837
+          },
+          "maximum_location": {
+            "u_over_D0": 0.04993159654623704,
+            "cos_theta": -0.42135127613063533,
+            "theta": 2.0057311307494996
+          },
+          "mask_volume_mean": 4.4507109906715026e-26,
+          "mask_volume_RMS": 6.52229307813474e-26
+        }
+      },
+      "mask_volume": 0.03415352034159812,
+      "weighted_covariant_gradient_direction_fractions": [
+        3.7638945612809146e-05,
+        0.666460825379672,
+        0.17056090184659561,
+        0.16294063382811955
+      ],
+      "independent_B_relative_error": 3.3187008371806343e-15
+    },
+    {
+      "order": 64,
+      "paired_metric_epsilon": 0.0,
+      "q1": {
+        "B_times_D0_squared": {
+          "minimum": 7.639067169780333,
+          "maximum": 9.681684597296913,
+          "minimum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.31132287199021097,
+            "theta": 1.8873810934983095
+          },
+          "maximum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 9.213955581755126,
+          "mask_volume_RMS": 9.221575041564352
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 3.987469486161423,
+          "maximum": 6.608789307230323,
+          "minimum_location": {
+            "u_over_D0": 0.0033500150461476808,
+            "cos_theta": 0.07299312178779904,
+            "theta": 1.4977382312639094
+          },
+          "maximum_location": {
+            "u_over_D0": 0.031617179055219186,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 5.754191912699021,
+          "mask_volume_RMS": 5.798451527152453
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 2.9406334034957433e-07,
+          "maximum": 1.1610315771029251,
+          "minimum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": -0.9993050417357722,
+            "theta": 3.104308909849478
+          },
+          "maximum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.4022701579639916,
+            "theta": 1.9847914610808126
+          },
+          "mask_volume_mean": 0.2066409877729349,
+          "mask_volume_RMS": 0.3028219729125167
+        }
+      },
+      "nominal_atomic_continuous_flux": {
+        "B_times_D0_squared": {
+          "minimum": 3.546724089938431e+25,
+          "maximum": 4.495086013677013e+25,
+          "minimum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.31132287199021097,
+            "theta": 1.8873810934983095
+          },
+          "maximum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 4.277925236043355e+25,
+          "mask_volume_RMS": 4.281462856679106e+25
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 8.588361110087184e-25,
+          "maximum": 1.423425790917242e-24,
+          "minimum_location": {
+            "u_over_D0": 0.0033500150461476808,
+            "cos_theta": 0.07299312178779904,
+            "theta": 1.4977382312639094
+          },
+          "maximum_location": {
+            "u_over_D0": 0.031617179055219186,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 1.2393594036145521e-24,
+          "mask_volume_RMS": 1.2488922051278553e-24
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 6.333646351214675e-32,
+          "maximum": 2.500673291414445e-25,
+          "minimum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": -0.9993050417357722,
+            "theta": 3.104308909849478
+          },
+          "maximum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.4022701579639916,
+            "theta": 1.9847914610808126
+          },
+          "mask_volume_mean": 4.4507109817347213e-26,
+          "mask_volume_RMS": 6.522293059464552e-26
+        }
+      },
+      "mask_volume": 0.0341535202973955,
+      "weighted_covariant_gradient_direction_fractions": [
+        3.763894562337244e-05,
+        0.66646082537959,
+        0.17056090184571632,
+        0.1629406338290703
+      ],
+      "independent_B_relative_error": 2.9487479582035574e-15
+    },
+    {
+      "order": 128,
+      "paired_metric_epsilon": 0.0,
+      "q1": {
+        "B_times_D0_squared": {
+          "minimum": 7.6381891394293016,
+          "maximum": 9.68172661757745,
+          "minimum_location": {
+            "u_over_D0": 0.0499956221986783,
+            "cos_theta": -0.3008654388776772,
+            "theta": 1.876396336844513
+          },
+          "maximum_location": {
+            "u_over_D0": 4.37780132170329e-06,
+            "cos_theta": 0.9998248879471319,
+            "theta": 0.018714548555173533
+          },
+          "mask_volume_mean": 9.213955581755123,
+          "mask_volume_RMS": 9.22157504156435
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 3.987456985176573,
+          "maximum": 6.613363409068685,
+          "minimum_location": {
+            "u_over_D0": 0.0034521132765112875,
+            "cos_theta": 0.06108196960413957,
+            "theta": 1.5096763104011637
+          },
+          "maximum_location": {
+            "u_over_D0": 0.031936565504447616,
+            "cos_theta": 0.9998248879471319,
+            "theta": 0.018714548555173533
+          },
+          "mask_volume_mean": 5.754191912699017,
+          "mask_volume_RMS": 5.798451527152451
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 7.42119481579191e-08,
+          "maximum": 1.161522539936936,
+          "minimum_location": {
+            "u_over_D0": 0.0018307687280263052,
+            "cos_theta": -0.9998248879471319,
+            "theta": 3.1228781050346197
+          },
+          "maximum_location": {
+            "u_over_D0": 0.0499956221986783,
+            "cos_theta": -0.414906379552275,
+            "theta": 1.9986362323758264
+          },
+          "mask_volume_mean": 0.20664098777293488,
+          "mask_volume_RMS": 0.30282197291251695
+        }
+      },
+      "nominal_atomic_continuous_flux": {
+        "B_times_D0_squared": {
+          "minimum": 3.5463164313423633e+25,
+          "maximum": 4.495105523171816e+25,
+          "minimum_location": {
+            "u_over_D0": 0.0499956221986783,
+            "cos_theta": -0.3008654388776772,
+            "theta": 1.876396336844513
+          },
+          "maximum_location": {
+            "u_over_D0": 4.37780132170329e-06,
+            "cos_theta": 0.9998248879471319,
+            "theta": 0.018714548555173533
+          },
+          "mask_volume_mean": 4.2779252360433545e+25,
+          "mask_volume_RMS": 4.281462856679106e+25
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 8.588334184997852e-25,
+          "maximum": 1.424410978101207e-24,
+          "minimum_location": {
+            "u_over_D0": 0.0034521132765112875,
+            "cos_theta": 0.06108196960413957,
+            "theta": 1.5096763104011637
+          },
+          "maximum_location": {
+            "u_over_D0": 0.031936565504447616,
+            "cos_theta": 0.9998248879471319,
+            "theta": 0.018714548555173533
+          },
+          "mask_volume_mean": 1.2393594036145521e-24,
+          "mask_volume_RMS": 1.248892205127855e-24
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 1.598404731811098e-32,
+          "maximum": 2.501730745552903e-25,
+          "minimum_location": {
+            "u_over_D0": 0.0018307687280263052,
+            "cos_theta": -0.9998248879471319,
+            "theta": 3.1228781050346197
+          },
+          "maximum_location": {
+            "u_over_D0": 0.0499956221986783,
+            "cos_theta": -0.414906379552275,
+            "theta": 1.9986362323758264
+          },
+          "mask_volume_mean": 4.4507109817347236e-26,
+          "mask_volume_RMS": 6.522293059464557e-26
+        }
+      },
+      "mask_volume": 0.03415352029739524,
+      "weighted_covariant_gradient_direction_fractions": [
+        3.7638945623379406e-05,
+        0.6664608253795898,
+        0.17056090184572037,
+        0.1629406338290664
+      ],
+      "independent_B_relative_error": 4.605318380083571e-15
+    }
+  ],
+  "paired_variation_samples": [
+    {
+      "order": 64,
+      "paired_metric_epsilon": -0.001,
+      "q1": {
+        "B_times_D0_squared": {
+          "minimum": 7.639067169780333,
+          "maximum": 9.681684597296913,
+          "minimum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.31132287199021097,
+            "theta": 1.8873810934983095
+          },
+          "maximum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 9.213955579200245,
+          "mask_volume_RMS": 9.221575039098264
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 3.9874683861923708,
+          "maximum": 6.645085619251382,
+          "minimum_location": {
+            "u_over_D0": 0.005400691026416465,
+            "cos_theta": 0.07299312178779904,
+            "theta": 1.4977382312639094
+          },
+          "maximum_location": {
+            "u_over_D0": 0.03278307179975528,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 5.769580089437039,
+          "mask_volume_RMS": 5.814899967190224
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 2.940633403495744e-07,
+          "maximum": 1.1610315771029251,
+          "minimum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": -0.9993050417357722,
+            "theta": 3.104308909849478
+          },
+          "maximum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.4022701579639916,
+            "theta": 1.9847914610808126
+          },
+          "mask_volume_mean": 0.20634592932788343,
+          "mask_volume_RMS": 0.3024682502992343
+        }
+      },
+      "nominal_atomic_continuous_flux": {
+        "B_times_D0_squared": {
+          "minimum": 3.546724089938431e+25,
+          "maximum": 4.495086013677013e+25,
+          "minimum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.31132287199021097,
+            "theta": 1.8873810934983095
+          },
+          "maximum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 4.277925234857157e+25,
+          "mask_volume_RMS": 4.281462855534131e+25
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 8.588358740932645e-25,
+          "maximum": 1.4312434265300812e-24,
+          "minimum_location": {
+            "u_over_D0": 0.005400691026416465,
+            "cos_theta": 0.07299312178779904,
+            "theta": 1.4977382312639094
+          },
+          "maximum_location": {
+            "u_over_D0": 0.03278307179975528,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 1.2426737667491318e-24,
+          "mask_volume_RMS": 1.2524349317426235e-24
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 6.333646351214677e-32,
+          "maximum": 2.500673291414445e-25,
+          "minimum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": -0.9993050417357722,
+            "theta": 3.104308909849478
+          },
+          "maximum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.4022701579639916,
+            "theta": 1.9847914610808126
+          },
+          "mask_volume_mean": 4.4443559024457715e-26,
+          "mask_volume_RMS": 6.514674449350502e-26
+        }
+      },
+      "mask_volume": 0.0341535202973955,
+      "weighted_covariant_gradient_direction_fractions": [
+        3.771481270731328e-05,
+        0.6664604968033343,
+        0.1705613186750019,
+        0.16294046970895634
+      ],
+      "independent_B_relative_error": 2.9487479582043278e-15
+    },
+    {
+      "order": 64,
+      "paired_metric_epsilon": 0.001,
+      "q1": {
+        "B_times_D0_squared": {
+          "minimum": 7.639067169780333,
+          "maximum": 9.681684597296913,
+          "minimum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.31132287199021097,
+            "theta": 1.8873810934983095
+          },
+          "maximum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 9.213955584314032,
+          "mask_volume_RMS": 9.22157504403436
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 3.987469565619169,
+          "maximum": 6.58050961870738,
+          "minimum_location": {
+            "u_over_D0": 0.0022369465730374296,
+            "cos_theta": 0.07299312178779904,
+            "theta": 1.4977382312639094
+          },
+          "maximum_location": {
+            "u_over_D0": 0.031617179055219186,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 5.738898368683153,
+          "mask_volume_RMS": 5.782152441373911
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 2.9406334034957433e-07,
+          "maximum": 1.1610315771029251,
+          "minimum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": -0.9993050417357722,
+            "theta": 3.104308909849478
+          },
+          "maximum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.4022701579639916,
+            "theta": 1.9847914610808126
+          },
+          "mask_volume_mean": 0.20693652645713595,
+          "mask_volume_RMS": 0.3031762906353799
+        }
+      },
+      "nominal_atomic_continuous_flux": {
+        "B_times_D0_squared": {
+          "minimum": 3.546724089938431e+25,
+          "maximum": 4.495086013677013e+25,
+          "minimum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.31132287199021097,
+            "theta": 1.8873810934983095
+          },
+          "maximum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 4.277925237231423e+25,
+          "mask_volume_RMS": 4.281462857825899e+25
+        },
+        "Riemann_norm_over_B": {
+          "minimum": 8.588361281226253e-25,
+          "maximum": 1.4173348056956942e-24,
+          "minimum_location": {
+            "u_over_D0": 0.0022369465730374296,
+            "cos_theta": 0.07299312178779904,
+            "theta": 1.4977382312639094
+          },
+          "maximum_location": {
+            "u_over_D0": 0.031617179055219186,
+            "cos_theta": 0.9993050417357722,
+            "theta": 0.0372837437403153
+          },
+          "mask_volume_mean": 1.236065422830069e-24,
+          "mask_volume_RMS": 1.2453816469927723e-24
+        },
+        "covariant_gradient_F_squared_over_B_cubed": {
+          "minimum": 6.333646351214675e-32,
+          "maximum": 2.500673291414445e-25,
+          "minimum_location": {
+            "u_over_D0": 0.0017607706967015108,
+            "cos_theta": -0.9993050417357722,
+            "theta": 3.104308909849478
+          },
+          "maximum_location": {
+            "u_over_D0": 0.04998262604339431,
+            "cos_theta": -0.4022701579639916,
+            "theta": 1.9847914610808126
+          },
+          "mask_volume_mean": 4.457076404594326e-26,
+          "mask_volume_RMS": 6.529924487271619e-26
+        }
+      },
+      "mask_volume": 0.0341535202973955,
+      "weighted_covariant_gradient_direction_fractions": [
+        3.7563213308721556e-05,
+        0.666461153548666,
+        0.17056048546724817,
+        0.1629407977707771
+      ],
+      "independent_B_relative_error": 2.948747958202787e-15
+    }
+  ],
+  "sensitivity_64_to_128": {
+    "B_times_D0_squared": {
+      "minimum": 0.00011495268511991594,
+      "maximum": 4.340163918759488e-06,
+      "mask_volume_mean": 3.8557964028341466e-16,
+      "mask_volume_RMS": 1.9263052476325226e-16
+    },
+    "Riemann_norm_over_B": {
+      "minimum": 3.135077041939963e-06,
+      "maximum": 0.0006916453180374413,
+      "mask_volume_mean": 6.174131368402852e-16,
+      "mask_volume_RMS": 4.59525314064132e-16
+    },
+    "covariant_gradient_F_squared_over_B_cubed": {
+      "minimum": 2.9624797306738677,
+      "maximum": 0.000422689028520704,
+      "mask_volume_mean": 1.3431786169222058e-16,
+      "mask_volume_RMS": 7.332512987397331e-16
+    }
+  },
+  "closed_collar_field_samples": {
+    "radial_count": 65,
+    "angular_count": 257,
+    "q1_B_D0_squared_sampled_minimum": 7.637894623860444,
+    "minimum_location": {
+      "u_over_D0": 0.05,
+      "cos_theta": -0.3046875,
+      "theta": 1.8804066384525695
+    },
+    "sampled_A_mu_range": [
+      -0.5038451866184566,
+      -0.49839312622483734
+    ],
+    "note": "Includes u=0,.05 and both polar limits. The minimum remains sampled, not enclosed."
+  },
+  "initial_relative_minimum_guard": {
+    "passed": false,
+    "maximum_relative_difference": 2.9624797306738677,
+    "threshold": 0.01,
+    "explanation": "The initial all-extrema relative guard fails at the gradient-ratio minimum tending to zero near the poles. It is retained here; no positive gradient minimum or relative convergence of that minimum is claimed. The acceptance gate checks the three upper indicators and positive B minimum.",
+    "archived_source": "provenance/dihole_strong_field_geometry_relative_minimum_failure.py",
+    "archived_source_sha256": "7ad41d3ab43785e1c761f617f6d2610fc731856da6a4509ed00c31298d7a272b",
+    "archive_origin": "Reconstructed by reversing the recorded sole correction patch; it was not copied before editing.",
+    "failed_JSON_was_written": false,
+    "measured_gradient_minimum_64": 2.9406334034957433e-07,
+    "measured_gradient_minimum_128": 7.42119481579191e-08
+  },
+  "interval_zero_exclusion": {
+    "records": [
+      {
+        "radial_panels": 8,
+        "angular_panels": 16,
+        "decimal_precision": 70,
+        "failed_tiles": 0,
+        "A_mu_enclosure": [
+          -1.3411754499125697,
+          -0.009209721212395846
+        ],
+        "potential_denominator_lower": 0.019730131414910385,
+        "Sigma_lower": 0.21857868654539586,
+        "q1_B_D0_squared_lower": 0.16584617481095498,
+        "passed": true
+      },
+      {
+        "radial_panels": 16,
+        "angular_panels": 32,
+        "decimal_precision": 70,
+        "failed_tiles": 0,
+        "A_mu_enclosure": [
+          -0.8308834539081562,
+          -0.2547358975272669
+        ],
+        "potential_denominator_lower": 0.022053272061495002,
+        "Sigma_lower": 0.22033474370227862,
+        "q1_B_D0_squared_lower": 4.7446043974880245,
+        "passed": true
+      }
+    ],
+    "scope": "Closed collar rectangle only, exact linked balanced constants and q!=0. This sign enclosure is independent of the floating diagnostic extrema.",
+    "calibration": "k=1/2,Q=1/5,M=(sqrt(k^2+4Qk)-k)/2,a=sqrt(k^2-M^2),Bext=M/((k+a)(M+k)).",
+    "regularity": "N=V/Sigma>0, P=N Sigma^2/(R distance)^2>0; axes are regular bundle patches. Paired variations leave the nonzero angular field component intact."
+  },
+  "unavailable": {
+    "covariant_second_field_derivative_bound": null,
+    "inhomogeneous_heat_remainder_bound": null,
+    "full_source_bound": null
+  },
+  "limitations": [
+    "Curvature/gradient extrema and weighted diagnostics are sampled numerical values with quadrature sensitivity, not certified maxima or remainder bounds.",
+    "The near-zero sampled gradient minimum fails a relative-error guard; it is not used as a nonzero lower bound or convergence claim.",
+    "The interval result excludes field zeros only on the closed prescribed collars; it supplies no blanket exterior control.",
+    "Small atomic-flux ratios are local applicability indicators, not a proof of a controlled strong-field approximation, source sign, support or atomic survival.",
+    "The saved atomic flux is a continuous estimate, not a selected exact integer sector. Changing flux changes the Dirac operator.",
+    "The q=1 reference is not atomic size. The fixed s0=.01 weak-field heat truncation is not justified for the nominal atomic flux.",
+    "No covariant second derivative of F, higher inhomogeneous remainder or global massless lowest-sector contribution is evaluated."
+  ],
+  "elapsed_seconds": 7.985842900001444
+}
