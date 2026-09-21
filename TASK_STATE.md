@@ -1,3 +1,84 @@
+# Authoritative checkpoint156 — proper heat response and common-filter residual
+
+Previous goal turn: PROGRESS; checkpoint155 published
+cb1cde8816cf41c93e991c7c84eb6fb0a81fbe0c. Goal ACTIVE, unachieved.
+Browser/Downloads import COMPLETE. No new law, physical source value,
+obtainable supporting matter, stable bridge or backward passage.
+
+- Reused frozen140/141/142 forms; no geometry reassembly. Combined142's312
+  angular fields with141's32 exterior-only fields ->344 (172/chirality).
+  New exterior support |z|.6..1.2 is disjoint from bridge/mouths. Its
+  cross blocks with ALL compact fields vanish; global48 cross terms reused.
+  Old312 block exact. q80 control holds appended exterior matrices fixed.
+- scripts/dihole_proper_heat.py computes actual proper heat derivative
+  -s/pi integral_0^inf sum_b Tr(dotQ_b exp(-s Q_b)) dk. Both chiralities
+  once; exact kappa polynomial inclmixed terms; shared spectra reused for57
+  heat times1e-6..10. The parameter s is NOT elapsed travel time.
+- Eight spaces: radial8/10/12 angular3 ext48; radial12 angular4/5 ext48;
+  radial12 angular3/5 ext80; q80 combined. Positivefrequency cutoff8192,
+  GL24/40 geometricpanels. Exact-dyadic Gaussian frequencytail<1.1e-31;
+  middlechanges/(1+|heat|)<2.70e-9. These are not continuum error bounds.
+- Finite MD1 phase0 mu.5 integral: old angular5/ext48=-.000679224323989;
+  new angular5/ext80=-.000679166771814. Change~.00847 percent.
+  Prior angular5 integral recovered to1.58e-15. Bothvaluesunrenormalized.
+- Latest radial10->12/angular4->5/exterior48->80 heat changes<1percent at14
+  SAMPLE points s=.133352..5.623413 with|heat|>1e-10. Not an interval or
+  continuum certificate. Earlier radial8->10 still4.15percent at s1.
+  At s.01 latest radial change41.66percent, angular.353percent.
+  Short scales and full azimuthal sum remain unresolved. Finite small-s
+  coefficient sqrt(s)*deltaK rises1.64604(216) to2.585918(344).
+- Ten checksPASS, including exact noncommuting Gaussian integral, independent
+  trace derivative, tailcontrol, strictprovenance, quadrature, UVlimit and
+  frozenPV recovery. Spectra/canonicalpencils saved in data/ for reuse.
+- Initial JSON save failed on NumPy boolean AFTER all high40 spectra saved.
+  Exact source, failure record, and spectralstate preserved. Recovery checks
+  hashes and exact canonical equality, reuses high40, reruns only unsaved24.
+  Mathematical formulas/tolerances unchanged; all tests are nativebool now.
+  Production OPENBLAS_NUM_THREADS=1,OMP_NUM_THREADS=1 before Python import.
+- Plot uses unchanged plot() on a JSON copy with relative-change points masked
+  when larger|heat|<1e-10. Saved JSON retains its1e-12 denominatorfloor.
+  Report documents display recipe; no physics rerun for this presentation.
+- scripts/dihole_common_pv_residual.py independently tests commonPV filter:
+  T=sqrt6 M³ prod_j(A+mj)^-1, T*T=6M6/prod_j(P+eta+jM²), mj>0.
+  Firstorderleast-squares uses FULL MY=(AY)*(AY), B=Y*AY, Delta=MY-B*B.
+  Complete residual includes withinY and u*Delta u, no secondorderPphi.
+  e_new=(e_old+residualnorm)/mj; positive/negative sourcecolumns squared
+  norm intervals. Numericalnormalmatrixretains tinymeasuredskewdefect.
+- Commonfilter at155caseV216/Y312,k.7: eta.01 interval
+  [-208409.803276,5529.884613]; eta1e-4[-21081682.118895,557666.993731].
+  Still uninformative, despite preservedPV cancellation. Firstresidualnorm
+  ~65.768 vssourcenorm130.480; squared4325.4107=2579.859withinY+
+  1745.552outsideY. Weak global smallmasscoercivity amplifies this error.
+  Newfiltertrialcentre is NOT oldr(MV) orphysicalsignchange.
+- Eight commonfilterchecksPASS, completeoperatorrecovery<1.35e-13relative.
+  Allboundsforretainedinsertiononly, floatingintegralsnotcontinuumenclosures.
+  Needomittedphysicalinsertion,sectors,IRcorrection,UVheatcontribution.
+- Report appended PHYSICAL_EUCLIDEAN_OPERATOR.md section 'Proper heat response
+  and a common-filter residual test'. No contact/countertermfit or M∞sweep.
+
+NEXT: target the large FIRST-ORDER action residual, not another algebraic
+regulator rearrangement. Quantify which retained-source/field directions and
+regions dominate the first common-filter solve; use existing raw forms and
+pointwise assembly APIs to design a conforming enrichment that captures them.
+The new combined344 heat data can be reused without rediagonalization for
+other heat parameters. Last radial step is not a continuum error certificate.
+Keep short-scale heat/omitted insertion and all-sector sum explicit; no finite
+source+counterterm shortcut. Do not repeat153/154 existence proofs,155loose
+independent-shift bound, or old geometry assembly without a new requirement.
+
+Heat source SHA256:30e6c5c6da12ceb3676454adebe34ee0a093439ac4413f8d508f11ac6b3f0fcb
+Heat results SHA256:67d33fd2163216fab21243e5dfde7702bc8e4884ea44da7cdd37ccb64d8cae9a
+Common-filter source SHA256:ab96d903a82cf431ced53031a6c24433c21dcd6a254d71e182eb62c0cfc9461b
+Common-filter results SHA256:3ec88cd2261475a0f327c9fe164979e4a63fdf519588dc3c23aa372b9314c5d5
+
+Verification PASS:140 imports,1271 Markdown links,8 historical guards,
+14 frozen hashes, operator identity, all new source/input/state hashes,
+failed-run provenance and historical byte suffixes. Independent heat audit
+reproduces every canonical model/grid; figures inspected. All agents finished.
+No simulation remains running.
+
+--- Preserved checkpoint155 and earlier history ---
+
 # Authoritative checkpoint155 — retained-source estimator is too wide
 
 Previous goal turn: PROGRESS; checkpoint154 published

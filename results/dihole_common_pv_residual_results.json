@@ -1,0 +1,346 @@
+{
+  "source_sha256": "ab96d903a82cf431ced53031a6c24433c21dcd6a254d71e182eb62c0cfc9461b",
+  "input_sha256": {
+    "dihole_radial_refinement.py": "15f7e6dd414b87365cf3d1ef3a14ef3558201cc07c851d38853e26a601f15a1c",
+    "dihole_radial_stream.py": "54b25d772a9b63eda3547188715aa746b4752b1988ed977702683a6f0503a76a",
+    "dihole_bridge_enrichment.py": "c5fb3c062e40041c3f6b681903d8985f4c38aba59ca6deaeb2dd85f0b037737b",
+    "dihole_enriched_bridge.py": "b5b7588b4991219329f8fca1b2132b4c369602adcdd197d6271e33750e4e74b2",
+    "dihole_finite_frequency_tail.py": "37aad394ced2841bcbe6a595f93b77067592323e785f4aa16c1e1827af91dd0a",
+    "dihole_sewn_form.py": "ee043fdd42b7ee5efde627c1e53ce7b18f238c81fc31e354feb12662ce9a4f0f",
+    "dihole_sewn_quadrature.py": "5c30ad3f66a53561f14733795d6106ca69be51514fe468bd9588bd33685c2bab",
+    "dihole_euclidean_form.py": "050f817fe5c0533b0f51eb82e248e315b01387e719386ba941b9555aea2fd459",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_azimuthal_bridge.py": "4382f13b42fd66f94b9a180dd6937508767e26561d8897118b33e0eb1e78a5c1",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_curved_exterior.py": "71c8782caa1305e31c84fee95f688d62b349df4c66ee2c4acfcc37650f112cf5",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_angular_crosscheck.py": "6ffde17e3d191ac7b1cd7968205bf958018a0af1f6f6e1851dc39a1f2b7e204b",
+    "dihole_angular_crosscheck_state.npz": "e98bf9d543dcbe61ac535fbead63447f67cceec2a666142d3e27bc34b8fab740",
+    "dihole_angular_crosscheck_results.json": "40bbb98215ecb6450f0be9158204648ee0e1b5c13520ec757410ff62717e399b",
+    "dihole_retained_resolvent.py": "8f0be07c290d51017300022f4e9fd43ba40e01c32f7bff22ec81f4babf2dee8c",
+    "dihole_retained_resolvent_results.json": "ea9fe66600e1b24ab3376ab258928edbdc0653c326fc1a9ed0a6419e98ccfff8"
+  },
+  "controls": {
+    "records": [
+      {
+        "eta": 0.01,
+        "regulator_mass": 1.0,
+        "flux_dimension": 8,
+        "rational_response_error": 5.3699482083273766e-14,
+        "complete_response_error": null,
+        "source_interval_margin": 13.850769274249242,
+        "error_bound_margin": 4.728239207036856,
+        "independent_residual_relative_error": 1.6653345369377348e-16,
+        "gram_identity_relative_error": 5.519171482060311e-16
+      },
+      {
+        "eta": 0.01,
+        "regulator_mass": 1.0,
+        "flux_dimension": 13,
+        "rational_response_error": 5.3699482083273766e-14,
+        "complete_response_error": 1.727395927154261e-14,
+        "source_interval_margin": 5.452562796147798e-13,
+        "error_bound_margin": 4.4824284765722937e-14,
+        "independent_residual_relative_error": 2.2126553050958268e-28,
+        "gram_identity_relative_error": 6.570050694996425e-14
+      },
+      {
+        "eta": 0.03,
+        "regulator_mass": 0.7,
+        "flux_dimension": 8,
+        "rational_response_error": 8.25418637818883e-14,
+        "complete_response_error": null,
+        "source_interval_margin": 14.72987584602665,
+        "error_bound_margin": 2.798642259592901,
+        "independent_residual_relative_error": 4.440892098500626e-16,
+        "gram_identity_relative_error": 7.7209302062799e-16
+      },
+      {
+        "eta": 0.03,
+        "regulator_mass": 0.7,
+        "flux_dimension": 13,
+        "rational_response_error": 8.25418637818883e-14,
+        "complete_response_error": 1.34787462954694e-13,
+        "source_interval_margin": 9.373293295381473e-13,
+        "error_bound_margin": 2.4879330238213398e-14,
+        "independent_residual_relative_error": 2.341786535953115e-27,
+        "gram_identity_relative_error": 5.250920657529661e-14
+      }
+    ],
+    "zero_eta_rejected": true,
+    "passed": true
+  },
+  "parameters": {
+    "phase": 0.0,
+    "mu": 0.5,
+    "kappa": 0.7,
+    "regulator_mass": 1.0,
+    "radial_modes": 12,
+    "retained_angular_modes": 3,
+    "flux_angular_modes": 5,
+    "retained_dimension": 216,
+    "flux_dimension": 312,
+    "mass_order": "ascending j=0,1,2,3"
+  },
+  "records": [
+    {
+      "eta": 0.01,
+      "regulator_mass": 1.0,
+      "filter_scale": 2.449489742783178,
+      "source_positive_negative_ranks": [
+        150,
+        66
+      ],
+      "trial_filter_response": -1.6068859084872436e-05,
+      "positive_negative_output_norms": [
+        0.007254936455385789,
+        0.0045272933196271745
+      ],
+      "positive_negative_error_bounds": [
+        645.6084252880331,
+        105.16091011812222
+      ],
+      "positive_negative_squared_norm_intervals": [
+        [
+          0.0,
+          416819.606551729
+        ],
+        [
+          0.0,
+          11059.769225939892
+        ]
+      ],
+      "conditional_retained_source_interval": [
+        -208409.8032758645,
+        5529.884612969946
+      ],
+      "sign_resolved": false,
+      "delta_minimum_eigenvalue": 6.331594369367793e-10,
+      "delta_frobenius_norm": 2584.6185248684687,
+      "normalized_weak_skew_relative_error": 9.586992610280633e-11,
+      "overlap_isometry_error": 3.075890260232572e-13,
+      "stages": [
+        {
+          "index": 0,
+          "squared_mass": 0.010000000000000002,
+          "mass": 0.1,
+          "inverse_coercivity": 10.0,
+          "pv_coefficient": 1,
+          "source_coefficient": -0.5,
+          "positive_negative_residual_norms": [
+            64.91525971209624,
+            10.555557680651377
+          ],
+          "in_space_residual_squared": 2579.8589958985253,
+          "complement_residual_squared": 1745.5517455399392,
+          "total_residual_squared": 4325.410741438465,
+          "gram_identity_relative_error": 1.386050016581824e-15,
+          "least_squares_relative_error": 4.07292807877934e-16,
+          "negative_square_roundoff_clamps": 0
+        },
+        {
+          "index": 1,
+          "squared_mass": 1.0099999999999998,
+          "mass": 1.004987562112089,
+          "inverse_coercivity": 0.9950371902099893,
+          "pv_coefficient": -3,
+          "source_coefficient": 1.5,
+          "positive_negative_residual_norms": [
+            2.242484525758326,
+            0.5096404098628149
+          ],
+          "in_space_residual_squared": 3.2637535680937892,
+          "complement_residual_squared": 2.0247166275368937,
+          "total_residual_squared": 5.288470195630683,
+          "gram_identity_relative_error": 3.2286933619838308e-15,
+          "least_squares_relative_error": 4.300771214960611e-16,
+          "negative_square_roundoff_clamps": 0
+        },
+        {
+          "index": 2,
+          "squared_mass": 2.01,
+          "mass": 1.4177446878757824,
+          "inverse_coercivity": 0.7053456158585983,
+          "pv_coefficient": 3,
+          "source_coefficient": -1.5,
+          "positive_negative_residual_norms": [
+            0.12499163870970685,
+            0.0538450529338025
+          ],
+          "in_space_residual_squared": 0.013180527611200508,
+          "complement_residual_squared": 0.0053416718615813714,
+          "total_residual_squared": 0.018522199472781883,
+          "gram_identity_relative_error": 2.929219455137505e-17,
+          "least_squares_relative_error": 4.631948583759235e-16,
+          "negative_square_roundoff_clamps": 0
+        },
+        {
+          "index": 3,
+          "squared_mass": 3.01,
+          "mass": 1.7349351572897471,
+          "inverse_coercivity": 0.576390417704235,
+          "pv_coefficient": -1,
+          "source_coefficient": 0.5,
+          "positive_negative_residual_norms": [
+            0.007697970556868422,
+            0.00448842684643379
+          ],
+          "in_space_residual_squared": 6.086872246224521e-05,
+          "complement_residual_squared": 1.8536003787955467e-05,
+          "total_residual_squared": 7.940472625020067e-05,
+          "gram_identity_relative_error": 2.500093874654246e-19,
+          "least_squares_relative_error": 1.8584261900744508e-16,
+          "negative_square_roundoff_clamps": 0
+        }
+      ],
+      "previous_independent_shift_interval": [
+        -214022.61416192487,
+        12606.47569599944
+      ],
+      "previous_finite_positive_form_response": 1.4018145754355805e-05,
+      "interval_radius_over_previous_finite_signal": 14867144835.830893
+    },
+    {
+      "eta": 0.0001,
+      "regulator_mass": 1.0,
+      "filter_scale": 2.449489742783178,
+      "source_positive_negative_ranks": [
+        150,
+        66
+      ],
+      "trial_filter_response": -1.608054285109421e-05,
+      "positive_negative_output_norms": [
+        0.0072575383371260935,
+        0.004528882534650966
+      ],
+      "positive_negative_error_bounds": [
+        6493.325033188025,
+        1056.089211020431
+      ],
+      "positive_negative_squared_norm_intervals": [
+        [
+          0.0,
+          42163364.237789676
+        ],
+        [
+          0.0,
+          1115333.9874622333
+        ]
+      ],
+      "conditional_retained_source_interval": [
+        -21081682.118894838,
+        557666.9937311166
+      ],
+      "sign_resolved": false,
+      "delta_minimum_eigenvalue": 6.331594369367793e-10,
+      "delta_frobenius_norm": 2584.6185248684687,
+      "normalized_weak_skew_relative_error": 9.586992610280633e-11,
+      "overlap_isometry_error": 3.075890260232572e-13,
+      "stages": [
+        {
+          "index": 0,
+          "squared_mass": 0.0001,
+          "mass": 0.01,
+          "inverse_coercivity": 100.0,
+          "pv_coefficient": 1,
+          "source_coefficient": -0.5,
+          "positive_negative_residual_norms": [
+            64.91541763065938,
+            10.55616720887155
+          ],
+          "in_space_residual_squared": 2579.910948899418,
+          "complement_residual_squared": 1745.5331634051593,
+          "total_residual_squared": 4325.444112304576,
+          "gram_identity_relative_error": 1.433638348973515e-15,
+          "least_squares_relative_error": 4.2638116623515105e-16,
+          "negative_square_roundoff_clamps": 0
+        },
+        {
+          "index": 1,
+          "squared_mass": 1.0000999999999998,
+          "mass": 1.0000499987500624,
+          "inverse_coercivity": 0.9999500037496877,
+          "pv_coefficient": -3,
+          "source_coefficient": 1.5,
+          "positive_negative_residual_norms": [
+            2.2425493596866755,
+            0.5090090269507421
+          ],
+          "in_space_residual_squared": 3.2637656514002997,
+          "complement_residual_squared": 2.02435216874816,
+          "total_residual_squared": 5.288117820148459,
+          "gram_identity_relative_error": 3.2025583275631464e-15,
+          "least_squares_relative_error": 4.356502535853544e-16,
+          "negative_square_roundoff_clamps": 0
+        },
+        {
+          "index": 2,
+          "squared_mass": 2.0001,
+          "mass": 1.4142489172702237,
+          "inverse_coercivity": 0.7070891041799028,
+          "pv_coefficient": 3,
+          "source_coefficient": -1.5,
+          "positive_negative_residual_norms": [
+            0.12507789025525848,
+            0.05396099793452701
+          ],
+          "in_space_residual_squared": 0.013207112814380566,
+          "complement_residual_squared": 0.005349155114415951,
+          "total_residual_squared": 0.018556267928796517,
+          "gram_identity_relative_error": 2.7784134419119e-17,
+          "least_squares_relative_error": 4.475291305734181e-16,
+          "negative_square_roundoff_clamps": 0
+        },
+        {
+          "index": 3,
+          "squared_mass": 3.0000999999999998,
+          "mass": 1.7320796748417782,
+          "inverse_coercivity": 0.5773406469256952,
+          "pv_coefficient": -1,
+          "source_coefficient": 0.5,
+          "positive_negative_residual_norms": [
+            0.007680912628723341,
+            0.004473127131471567
+          ],
+          "in_space_residual_squared": 6.056057792775983e-05,
+          "complement_residual_squared": 1.8444707216628926e-05,
+          "total_residual_squared": 7.900528514438875e-05,
+          "gram_identity_relative_error": 3.0889966895405577e-19,
+          "least_squares_relative_error": 1.7298300478060502e-16,
+          "negative_square_roundoff_clamps": 0
+        }
+      ],
+      "previous_independent_shift_interval": [
+        -21073397.562997233,
+        564263.4905450596
+      ],
+      "previous_finite_positive_form_response": 1.4032775031364058e-05,
+      "interval_radius_over_previous_finite_signal": 1502317401352.1904
+    }
+  ],
+  "scope": [
+    "The common rational PV filter is represented by one squared first-order product.",
+    "MY is the full differential-action form; the weak matrix B is not squared in its place.",
+    "Bounds apply to the finite-rank source V D_V V* for positive eta, with exact continuum forms.",
+    "Saved numbers use unenclosed floating quadrature and arithmetic; they are conditional numerical bounds.",
+    "The filter trial centre and the old r(MV) centre are different approximations; their sign difference is not physical.",
+    "No omitted insertion, other sector, frequency integral, eta=0 or regulator-removal error is bounded.",
+    "The large first-step residual and its small-mass amplification leave the retained sign unresolved."
+  ],
+  "tests": {
+    "complete_and_partial_operator_controls": true,
+    "exact_input_provenance": true,
+    "retained_dimensions": true,
+    "nested_overlap": true,
+    "measured_weak_skew": true,
+    "sampled_complement_positive": true,
+    "residual_gram_identity": true,
+    "least_squares_equations": true
+  },
+  "passed": true,
+  "seconds": 1.133022899972275,
+  "retained_sign_certified": false,
+  "physical_source_computed": false
+}

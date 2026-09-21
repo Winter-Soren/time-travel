@@ -1536,3 +1536,154 @@ is no deadline at which finishing these checks guarantees a new law. A new
 physical law would require a distinct testable prediction and empirical
 support. No stable supporting medium or13September2027-to12September2027
 passage has been established.
+
+
+## Proper heat response and a common-filter residual test
+
+Increment156 combines the saved angular and exterior improvements and evaluates
+the proper heat variation at57 heat parameters. Ten heat-calculation checks and
+eight independent common-filter checks pass. **Neither computation supplies the
+physical supporting source.** The new evidence identifies a limitation of the
+field approximation, beyond155's loss of regulator cancellation.
+
+### A combined344-field space without new geometry assembly
+
+The32 exterior fields from141 have support at $.005<\rho/D<.5$ and
+$.6<|z|/D<1.2$, away from the mouths and bridge. Every compact bridge field
+extends by zero into that exterior. Consequently their mutual norm, positive
+form, first-order weak form and metric-derivative blocks vanish exactly.
+The saved cross terms with the48 original global fields can be appended to
+142's312-field angular space. The resulting344-field space has172 fields in
+each chirality, with the old312 block preserved bitwise. It is a larger
+variational space, not a new physical exterior or an imposed boundary.
+
+The [heat script](../scripts/dihole_proper_heat.py) reuses the exact quadratic
+pencils and includes both chiralities once:
+
+$$\delta K_V(s)=-\frac{s}{\pi}\int_0^\infty
+\sum_b\sum_a e^{-s\lambda_{a,b}(\kappa)}
+(U_b^*\dot Q_{b,\kappa}U_b)_{aa}\,d\kappa.$$
+
+Full chiral pairing establishes evenness in frequency. The heat parameter
+$s$ is a spectral smoothing parameter, **not elapsed travel time**. The
+proper-time representation and continuum heat expansion are standard;
+see [Vassilevich, sections2.2 and4](https://arxiv.org/pdf/hep-th/0306138).
+The numerical values here are our finite-space evaluations on the prescribed
+geometry, not values reported in that paper.
+
+Eigenvalues and diagonal insertions are reused across every heat parameter.
+Positive-frequency quadrature uses geometric panels, orders24 and40, and
+cutoff8192. With $a\le\lambda_{\min}(Q_2)$, $b\ge\|Q_1\|$, $Q_0\ge-cI$,
+$d_j\ge\|\dot Q_j\|_F$, and $\chi=a-b/K-c/K^2>0$, each block has tail bound
+
+$$|T_s(K)|\le\frac{n e^{-s\chi K^2}}{2\pi\chi}
+\left[\frac{d_0}{K}+d_1+d_2\left(K+\frac1{2s\chi K}\right)\right].$$
+
+The implementation uses outward arithmetic and
+$e^{-x}\le2^{-\lfloor x\rfloor}$; $n$ is conservative (a Hilbert--Schmidt
+estimate permits $\sqrt n$). These tails enclose only the supplied dyadic
+matrices, not geometry integration or omitted physical fields. The maximum
+saved heat-frequency tail is below $1.1\times10^{-31}$. Middle quadrature
+changes divided by $1+|\delta K|$ stay below $2.70\times10^{-9}$.
+
+An exact noncommuting Gaussian pencil independently tests the full heat
+integration. Its error is $8.89\times10^{-16}$. The old angular-five finite
+PV integral is recovered within $1.58\times10^{-15}$. The calculation also
+recovers the independently evaluated finite-basis small-$s$ coefficient;
+this is explicitly distinct from the continuum coefficient in154.
+
+### What has become more stable, and what has not
+
+At $MD=1$, phase0 and $\mu=1/2$, the finite, frequency-integrated values are:
+
+| Compact radial/angular fields; global exterior fields | Total dimension | Finite source in $\hbar c/D$ |
+| --- | ---: | ---: |
+|12/3;48|216|$-0.000679225419486$|
+|12/5;48|312|$-0.000679224323989$|
+|12/3;80|248|$-0.000679166739392$|
+|12/5;80, combined|344|$-0.000679166771814$|
+
+The combined exterior addition changes the angular-five result by about
+$0.00847\%$. These numbers have **not** had continuum counterterms subtracted
+and must not be called renormalized stress.
+
+The latest radial10-to12, angular4-to5 and exterior48-to80 comparisons each
+change the heat response by less than1% at14 sampled parameters between
+$s/D^2=.133352$ and5.623413, with response magnitude above $10^{-10}$.
+This is a sampled sensitivity window, not a bound between sample points or
+on the infinite complement. The earlier radial8-to10 change remains4.15%
+at $s/D^2=1$, further limiting any convergence claim. At $.01$, the latest
+radial change is41.66%, while the angular change is0.353%: the intermediate
+short-scale calculation is still particularly sensitive to radial fields.
+At still shorter scales the angular and radial cutoffs both matter strongly.
+The full azimuthal sum remains missing.
+
+See [results](../results/dihole_proper_heat_results.json),
+[saved spectra and canonical matrices](../data/dihole_proper_heat_state.npz),
+and [figure](../figures/dihole_proper_heat_progress.png).
+The figure masks relative-change points where the larger response magnitude
+is below $10^{-10}$; the saved JSON retains all values and its $10^{-12}$
+denominator floor. To reproduce that display, load the JSON, replace each
+comparison's displayed `relative_change` value by `float('nan')` where the
+corresponding larger model's heat magnitude is below $10^{-10}$, then call
+the unchanged script's `plot(result)` function. No physics is rerun for plotting.
+
+The q80 combined control holds the appended exterior matrices fixed, because
+141 did not save its higher-order extension matrices. It is not a completely
+refined344-field geometry dataset. An initial JSON serialization failure is
+preserved with its [exact source](../provenance/dihole_proper_heat_serialization_failure.py),
+[record](../results/dihole_proper_heat_serialization_failure.json), and
+[computed spectra](../data/dihole_proper_heat_serialization_failure_state.npz).
+The successful recovery authenticates those bytes and identical canonical
+matrices, reuses the order40 spectra, and recomputes only the unsaved order24
+comparison. Only NumPy-boolean serialization and cache extraction changed;
+the numerical equations and tolerances were retained.
+
+### Preserving cancellation does not fix the trial-space residual
+
+The [common-filter calculation](../scripts/dihole_common_pv_residual.py) tests
+an alternative to155's separate-shift bound. For $A^*=-A$, $P=A^*A$ and
+$m_j=\sqrt{\eta+jM^2}>0$,
+
+$$\mathcal T=\sqrt6M^3\prod_{j=0}^3(A+m_j)^{-1},\qquad
+\mathcal T^*\mathcal T=\frac{6M^6}{\prod_{j=0}^3(P+\eta+jM^2)}.$$
+
+This exact positive-product identity keeps the whole PV combination and uses
+no false operator-monotonicity assumption. In a conforming trial space $Y$,
+let $M_Y=(AY)^*AY$, $B=Y^*AY$, and
+$\Delta=M_Y-B^*B\ge0$. Source-weighted columns are propagated by four
+first-order least-squares solves. Their full residuals include
+
+$$\|r_j\|_F^2=\|(B+m_j)u_{j+1}-u_j\|_F^2+
+\operatorname{Tr}(u_{j+1}^*\Delta u_{j+1}).$$
+
+The second term accounts for action outside the trial space and cannot be
+discarded. The global error recurrence is
+$e_{j+1,\pm}\le(e_{j,\pm}+\|r_{j,\pm}\|_F)/m_j$, separately for the
+positive and negative parts of the insertion. Squared norm intervals give
+the retained source interval. The implementation retains the measured tiny
+skew defect in the finite least-squares normal matrix; it does not replace
+$M_Y$ by $B^*B$ or apply a second-order operator to nonsmooth mouth lifts.
+
+At the same155 single-frequency case, the resulting intervals remain
+$[-208409.8033,5529.8846]$ for $\eta=.01$ and
+$[-21081682.1189,557666.9937]$ for $\eta=.0001$.
+The first residual norm is about65.768 against initial source-column norm
+about130.480. Its squared residual splits into2579.859 within the trial
+space and1745.552 outside it. Small-mass coercivity amplifies that error.
+Thus cancellation preservation alone does not deliver a useful bound.
+
+Eight checks pass, including comparison with a complete finite operator,
+an independent direct residual, and strict provenance. The complete-space
+response error is below $1.35\times10^{-13}$ relatively. See
+[common-filter results](../results/dihole_common_pv_residual_results.json).
+These are conditional floating evaluations for the finite-rank insertion,
+not rigorous numerical bounds on the full physical source. The new trial
+centre differs from155's centre and its sign is not a physical sign change.
+
+The next targeted task is to improve the field directions that carry this
+large first-order residual and to account for the omitted insertion and
+short-scale heat contribution. Repeating regulator rearrangements or treating
+the last finite-space difference as a continuum error would not settle it.
+No new law, supporting material, stable passage, or travel from13September2027
+to12September2027 has been established.
