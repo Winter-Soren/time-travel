@@ -1,0 +1,103 @@
+{
+  "complete": true,
+  "passed": true,
+  "checks": {
+    "principal_trace_cancellation": true,
+    "principal_quartic_coefficient": true,
+    "lapse_derivative": true,
+    "homogeneous_control": true,
+    "initial_slice_reconstructed": true,
+    "basis_refinement": true,
+    "domain_refinement": true,
+    "nonlinear_quadrature": true,
+    "time_refinement": true,
+    "linear_limit": true,
+    "independent_geometric_null_stress": true,
+    "stress_time_derivative": true,
+    "lapse_constraint": true,
+    "continued_lapse_branch": true,
+    "regular_center_flux": true,
+    "negative_central_null_stress": true,
+    "no_sampled_neck": true,
+    "no_neck_bound_at_saved_times": true
+  },
+  "summary": {
+    "initial_central_null": -4.892933792817782e-06,
+    "final_central_null": -7.686465671772943e-06,
+    "minimum_saved_central_null": -1.0098732370317824e-05,
+    "time_of_saved_central_minimum": 0.25,
+    "final_central_zeta": -0.0009985304462052486,
+    "largest_absolute_compactness": 2.4614081729286203e-06,
+    "smallest_sampled_areal_derivative": 0.9999999999999898,
+    "minimum_lapse": 0.9999976446368812,
+    "maximum_geometric_null_relative_error": 9.971912936403163e-08,
+    "maximum_stress_time_derivative_relative_change": 8.787057486860618e-10,
+    "initial_reconstruction_errors": {
+      "lapse": 8.337774914934926e-14,
+      "shift": 4.2619380247188587e-13,
+      "zeta_tau": 9.793292042280695e-14
+    },
+    "linear_limit_relative_errors": {
+      "zeta": 3.3794122150466076e-08,
+      "mu": 7.948774030089756e-08
+    },
+    "evolution_rhs_evaluations": 1235,
+    "all_space_neck_exclusion_bound_at_saved_times": 0.002000000000000024
+  },
+  "refinement_changes": {
+    "coarse_basis": {
+      "zeta": 8.516757177973178e-12,
+      "mu": 3.093061282793963e-09,
+      "rhs_evaluations": 1235
+    },
+    "finer_basis": {
+      "zeta": 1.1800771347201165e-14,
+      "mu": 1.2128523879662012e-11,
+      "rhs_evaluations": 1235
+    },
+    "larger_domain": {
+      "zeta": 2.0293662583714678e-14,
+      "mu": 2.7910063149505504e-11,
+      "rhs_evaluations": 1235
+    },
+    "quadrature": {
+      "zeta": 3.5409550019905942e-15,
+      "mu": 1.6355651077733612e-12,
+      "rhs_evaluations": 1235
+    },
+    "time_accuracy": {
+      "zeta": 9.90960785651751e-17,
+      "mu": 8.146955332577477e-14,
+      "rhs_evaluations": 2435
+    }
+  },
+  "parameters": {
+    "epsilon": 0.001,
+    "modes": 48,
+    "xmax": 12.0,
+    "time_Ht": [
+      0.0,
+      0.5
+    ],
+    "quadrature_factor": 4,
+    "largest_retained_initial_wavenumber_over_cutoff": 0.17774195684727015
+  },
+  "source_sha256": "4266e284f49f988c893fba7c9c31947a648442d6c5aa3f1b7bfea103af4ae461",
+  "state_sha256": "bf6f6feb89b3bf5a1a32801b77b3610e0fd401b099351026bd16ea49508cdd91",
+  "inputs_sha256": {
+    "nonlinear_packet_constraints.py": "5d5af618813717c5f34d5c5429789ee345f2b7c9e0bb0e5bf68b1a694ff428c2",
+    "nonlinear_packet_constraints_results.json": "e0c66f1c3b8738cd8c65eee85b3a1d204322f120b2c44deb94e8c1e71161aac3",
+    "expanding_field_completion.py": "9031efdfb575046c6e3935d9e444dd505cbb2cdfa64686605c2e553b5ff27a97",
+    "expanding_field_completion_results.json": "611eafd4a4fdf1446f39510d85648e650e5bc9f01a58fd22d28087054055eb29",
+    "localized_expanding_packet.py": "3a51fcb12596971685ec86e6a0ac7036a8585e4c8d7c41e4b300d9090149c3e7",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "scope": [
+    "Finite radial Bessel Galerkin evolution with numerical basis, quadrature, domain and time refinement. No continuum error enclosure.",
+    "Scalars vanish at a finite outer radius; auxiliary lapse and shift use an approximate asymptotic tail. Domain refinement is a check, not an exact infinite-domain construction.",
+    "The full nonlinear matter null stress is compared with independent geometric projections of the evolving fields.",
+    "The negative-null-energy region is an assumed EFT source. No material production, UV-validity bound, long-term stability, throat, safe transit or chronology change is established.",
+    "Failed nodal-grid pilots are preserved; their grid-sensitive branch failures were not treated as physical singularities.",
+    "An all-space derivative bound excludes a spatial neck for the finite-basis states at saved times; unsaved times and the exact nonlinear continuum are not certified."
+  ]
+}

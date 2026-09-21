@@ -1,0 +1,70 @@
+{
+  "source_sha256": "1031e5b63e13239e32ef2ab06cbef72cbe6cccbad95d8c0dbe9d67f2b45ad4c6",
+  "source_copy": "provenance\\nonlinear_packet_evolution_fd_trial.py",
+  "status": "Numerically unresolved; not physical rejection",
+  "observations": [
+    {
+      "epsilon": 1e-07,
+      "dx": 0.05,
+      "Ht": 0.2,
+      "terminal": "success",
+      "center_zeta": -9.996479032869447e-08,
+      "center_mu": 2.4087565599149012e-06
+    },
+    {
+      "epsilon": 1e-07,
+      "dx": 0.025,
+      "Ht": 0.2,
+      "terminal": "success",
+      "center_zeta": -9.996458095580922e-08,
+      "center_mu": 2.408643018335592e-06
+    },
+    {
+      "epsilon": 0.001,
+      "dx": 0.025,
+      "target_Ht": 0.2,
+      "terminal": "Local nonlinear lapse constraint did not converge"
+    },
+    {
+      "epsilon": 0.001,
+      "dx": 0.0125,
+      "target_Ht": 0.2,
+      "terminal": "Local nonlinear lapse constraint did not converge"
+    }
+  ],
+  "jacobian_diagnostic": {
+    "dx": 0.1,
+    "epsilon": 0.001,
+    "largest_real_eigenvalue": 5.945703827738113,
+    "imaginary_part": 65.52493409417491,
+    "mode_peak_radius": 0.0
+  },
+  "scope": "Internal integration-stage failure and grid-sensitive modes; no continuum physical singularity established.",
+  "spline_trial": {
+    "source": "provenance\\nonlinear_packet_evolution_spline_trial.py",
+    "source_sha256": "57a40e8b43bbf72c62bf2bbdf2ecd5fd0035475c6099db93b7ea68fd2b4e9684",
+    "observations": [
+      {
+        "epsilon": 0.001,
+        "dx": 0.1,
+        "Ht": 0.2,
+        "terminal": "success",
+        "center_zeta": -0.0009986593679695136,
+        "center_mu": 0.02275237424506462
+      },
+      {
+        "epsilon": 0.001,
+        "dx": 0.05,
+        "target_Ht": 0.2,
+        "terminal": "Local nonlinear lapse constraint did not converge"
+      },
+      {
+        "epsilon": 0.001,
+        "dx": 0.025,
+        "target_Ht": 0.2,
+        "terminal": "Local nonlinear lapse constraint did not converge"
+      }
+    ]
+  },
+  "diagnosis": "The nodal first derivative annihilates alternating modes while the second derivative does not; the nonlinear momentum-integral principal cancellation can fail. Oversampled analytic Bessel derivatives and local quadrature remove this specific nodal defect. The continuum quartic principal coefficient is positive on the checked lapse branch."
+}

@@ -1,3 +1,22 @@
+# Checkpoint147 — nonlinear evolution and total radial null stress
+
+The same candidate action now evolves its nonlinear initial packet through
+Ht=.5. Eighteen checks pass, including full matter-versus-geometry null stress,
+basis/domain/quadrature/time refinement and the independent linear limit.
+Central null stress stays negative, deepens to -1.00987e-5 Lambda4 at the
+saved timeHt=.25, then eases to -7.68647e-6 atHt=.5. No spatial neck is
+present in the saved finite-basis states. The nodal discretizations that
+failed were diagnosed and preserved; they are not physical collapse evidence.
+This is short numerical evolution, not a stability theorem or new-law claim.
+
+See [derivation and limits](NONLINEAR_PACKET_EVOLUTION.md),
+[calculation](../scripts/nonlinear_packet_evolution.py),
+[results](../results/nonlinear_packet_evolution_results.json),
+[saved states](../data/nonlinear_packet_evolution_state.npz), and
+[visual](../figures/nonlinear_packet_evolution_progress.png).
+
+--- Preserved checkpoint146 and earlier research ---
+
 # Checkpoint146 — nonlinear constraint-compatible initial data
 
 The full lapse and radial momentum constraints now solve for the fixed

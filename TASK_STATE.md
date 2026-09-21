@@ -1,3 +1,64 @@
+# Authoritative checkpoint147 — short nonlinear evolution and null stress
+
+Previous turn: PROGRESS, checkpoint146 published
+56736960fa73564c0edfa6cc41f075f9dc6798ed. Goal remains ACTIVE, unachieved.
+Import complete. No new law, obtainable medium, bridge or backward passage.
+
+- NEW scripts/nonlinear_packet_evolution.py derives and evolves the SAME
+  action144 from nonlinear initial146 data, epsilon=.001, through Ht=.5.
+  Canonical m=(P+3cy)k, y=N^-2, k=traceK, sigma=(beta_r-beta/r)/N.
+  Momentum is sigma_r+3(zeta_r+1/r)sigma=-m_r/P; regular integral solves it.
+  Lapse is local algebraic F(y)=0. Shift beta/r=-integral_r^infty N*sigma/s ds.
+  zeta_dot=N(k+sigma)/3-H+beta(zeta_r+1/r).
+  m_dot=beta*m_r+P*LapN-N/2[m*k+P*sigma²+3f+P*R3/2].
+  Both evolution and exact stress independently derived by agents.
+- Full nonlinear matter: rho=2Xf_X-f-3cy*k², p=f+cy*k²+2Du(cyk),
+  j=2De(cyk), Tnull=rho+p±2j. Exact geometric radial projections agree
+  within1.0e-7 relative to peak stress over11 saved times. Time-derivative
+  refinement changes matter stress by8.8e-10 relative.
+- Central Tnull/Lambda4: initial -4.892933793e-6; saved minimum
+  -1.009873237e-5 atHt.25; final -7.686465672e-6 atHt.5. Core deepens,
+  then eases. Final zeta0=-.0009985304462. Max sampled |deltaC|2.46141e-6.
+  Do NOT substitute old linear null stress as the nonlinear source.
+- Failed FD4 and nodal-spline pilots preserved in provenance/ and
+  results/nonlinear_packet_evolution_fd_trial.json, with exact source hashes.
+  Nodal alternating modes lose nonlinear derivative/integral cancellation;
+  smaller time steps did not fix it, spatial refinement worsened it.
+  These failures are NOT continuum singularities. Frozen principal trace
+  cancels and k4 coefficient=-P*c*N²/[(P+3cy)*F_y]>0 on checked branch.
+- Successful radial Bessel Galerkin solver:48 scalar modes, x0..12,
+ 192 Gauss nodes pluscenter,96 auxiliary lapse modes, analytic derivatives,
+  oversampled products and local shear quadrature. Finite scalar Dirichlet
+  cut and approximate auxiliary tails remain assumptions; not continuum proof.
+- All18 checks PASS. Baseline1235 RHS evaluations. Refinements:
+  modes64 changes zeta<1.19e-14,mu<1.22e-11; domain18/modes72 changes
+  zeta<2.03e-14,mu<2.80e-11; quadrature6x and time accuracy also pass.
+  Weak-amplitude linear-mode agreement<8e-8 relative. Initial lapse/shift
+  reconstruction errors<4.3e-13; initial zeta_tau<9.8e-14. No live process.
+- At saved times, analytic |r*zeta_r|<=2sum|zeta_n|<=.002000000000000024
+  excludes a neck at ALL radii for those finite-basis states. Unsaved times
+  and exact continuum are not certified. Min sampled lapse.9999976446.
+- Largest retained initial scalar wavenumber.177742Lambda; actual EFT cutoff,
+  strong coupling, long-time stability and material realization unresolved.
+  Source/input/state hashes verified; figure inspected; historical suffixes
+  preserved. Reportdocs/NONLINEAR_PACKET_EVOLUTION.md contains derivations.
+- Layout verification PASS:128 imports,1119 local Markdown links, historical
+  migration/provenance guards and operator identity. Diff whitespace PASS.
+
+NEXT PHYSICAL DECISION: compare the actual nonlinear source with explicit
+throat geometric requirements and check EFT scales. A regular-center weak
+packet is not a throat. A self-consistent two-ended geometry needs appropriate
+boundary conditions (including the momentum integration constant); do not
+silently reuse the regular-center proof there. Longer evolution can test
+persistence but does not by itself prove geometry matching. Dirac source
+route remains incomplete.13Sep2027->12Sep2027 still unproved.
+
+Source SHA256: 4266e284f49f988c893fba7c9c31947a648442d6c5aa3f1b7bfea103af4ae461
+Result SHA256: 00c08f0cacf6ed99babd793125ac46ee66dcecc58bd4d834942387beea1b5b0f
+State SHA256: bf6f6feb89b3bf5a1a32801b77b3610e0fd401b099351026bd16ea49508cdd91
+
+--- Preserved checkpoint146 and earlier history ---
+
 # Authoritative checkpoint146 — nonlinear spherical initial constraints
 
 Previous checkpoint145: 2826b327afe78efc723104eb5a4824d1dd4acfa3.
