@@ -1,3 +1,54 @@
+# Authoritative checkpoint160 - physical scaling and full-source budget
+
+Previous checkpoint159 published d69a97c93655cc70796bde6ab80ad034596ba063.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+No new physical law, supported medium, stable bridge or backward passage.
+No discovery date can be estimated. New hypotheses are not established new physics.
+
+- Physical normalization gives D/lP=5|q|/(2 sqrt(alpha_R)) at fixed Q/D=1/5.
+  This applies an existing constraint, not a new law. q is integer flux,
+  not species count; changing q needs a new charged-field calculation.
+- For the expressly illustrative fixed low-energy alpha value and q=1:
+  D=29.26559405 lP; central AREAL radius=6.66304961 lP.
+  D is a Weyl-coordinate scale, not proper separation or opening radius.
+  No physical fermion species or high-energy running coupling is supplied.
+- Required dimensionless source=-0.042528029136153604 q^2/alpha_R;
+  illustrative q=1 target=-5.827870965726473. Actual source remains unknown.
+- Exact heat-cutoff formula combines the full anchor/correction before
+  estimates. Its local term retains +Euler gamma in136's fixed scheme.
+  At s0/D0^2=.01, L=-.14564678057411926 hbar*c/D0; this is NOT total stress.
+- UV and IR integrals and their actual bounds remain null. IR has an Abel
+  prescription; its existence does not establish absolute integrability.
+  An auxiliary oscillatory counterexample checks that distinction.
+- One-sided source rejection could follow if eps_L+(U+V)/2<5.682224185152354
+  in the illustrative q=1 case. This is a permitted budget, not achieved.
+- Eleven normalization checks and seven independent cutoff checks PASS.
+  Auxiliary 70-digit integral checks are not an actual geometry heat kernel.
+- Direct use of the reviewed Dirac energy-density/scalar null QEIs fails
+  to match this charged-field spatial null-stress insertion. No blanket
+  exclusion of all charged-field inequalities is claimed.
+- NEXT: quantify complete source bounds, via actual subtracted heat
+  integrals or common-regulator Hamiltonian estimates in regular buffered
+  charts. Conditional all-sector trace construction is recorded in the
+  physical operator report; its elliptic/high-energy constants are unknown.
+  Do not grow159's finite basis without a physical omitted-source budget.
+- Other field equations, current, formation, stability and chronology
+  remain unresolved. Static background has global time/no backward loop.
+  13Sep2027 -> 12Sep2027 remains unproved.
+
+dihole_flux_scale source ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a
+Results 27303fa54f6273dfd97419480ab78d1874925096a7ef3e98d4a9d952c30999fb
+dihole_heat_cutoff source f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8
+Results d6c9f974bb2f018f984f6d7007d1d1a5af12ecaa7775ec3097b30b91b9436619
+
+All delegated calculations finished; no simulation remains running.
+
+Verification PASS: all18 saved checks and exact current source/input hashes;
+figure inspected; layout verifies152 imports,1339 links,8 historical guards,
+14 frozen hashes and the operator identity. Historical document bytes retained.
+
+--- Preserved checkpoint159 and earlier history ---
+
 # Authoritative checkpoint159 — collar comparison and physical decision target
 
 Previous checkpoint158 published 64529f3b71a2b075ed13830a8bd2e578a08272da.

@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "source_sha256": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c"
+  },
+  "parameters": {
+    "q": 1,
+    "Q_over_D": 0.2,
+    "alpha_R": 0.0072973525643,
+    "alpha_status": "Illustrative fixed coupling, numerically equal to low-energy CODATA alpha; not a high-energy prediction."
+  },
+  "constants": {
+    "alpha": 0.0072973525643,
+    "alpha_standard_uncertainty": 1.1e-12,
+    "planck_length_m": 1.616255e-35,
+    "planck_length_standard_uncertainty_m": 1.8e-40,
+    "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+    "retrieved_on": "2026-09-22",
+    "metrology": "Central values only; no uncertainty enclosure claimed."
+  },
+  "normalization": {
+    "action": "(R-Fhat^2)/(16 pi G)",
+    "charge_included_connection": "A=-q Fhat_potential/(2Q)",
+    "alpha_R": "e_R^2/(4 pi) in hbar=c=1 canonical Maxwell units",
+    "scale": "D/lP=5 |q|/(2 sqrt(alpha_R)) for Q/D=1/5",
+    "magnetic_flux": "integral F_charge=2 pi q; q is integer flux, not species count",
+    "required_source": "C_required=-(25 a/4) q^2/alpha_R, a=0.00680448466178458"
+  },
+  "illustration": {
+    "D_over_planck": 29.265594045908895,
+    "D_m": 4.730066270467048e-34,
+    "Q_over_planck": 5.85311880918178,
+    "central_areal_radius_over_planck": 6.663049611649031,
+    "cut_areal_radius_over_planck": 7.474126386160488,
+    "required_dimensionless_source": -5.827870965726473
+  },
+  "target_size_examples": [
+    {
+      "label": "D = 1 fm",
+      "D_m": 1e-15,
+      "continuous_flux_requirement": 2.1141352844116913e+18,
+      "alpha_if_q_stays_one": 1.6326751406406248e-39,
+      "scope": "Continuous requirement locates the scale; allowed q is integer and the source must be recomputed."
+    },
+    {
+      "label": "D = 1 nm",
+      "D_m": 1e-09,
+      "continuous_flux_requirement": 2.114135284411691e+24,
+      "alpha_if_q_stays_one": 1.632675140640625e-51,
+      "scope": "Continuous requirement locates the scale; allowed q is integer and the source must be recomputed."
+    },
+    {
+      "label": "D = 1 micrometre",
+      "D_m": 1e-06,
+      "continuous_flux_requirement": 2.114135284411691e+27,
+      "alpha_if_q_stays_one": 1.6326751406406258e-57,
+      "scope": "Continuous requirement locates the scale; allowed q is integer and the source must be recomputed."
+    },
+    {
+      "label": "D = 1 m",
+      "D_m": 1.0,
+      "continuous_flux_requirement": 2.114135284411691e+33,
+      "alpha_if_q_stays_one": 1.6326751406406248e-69,
+      "scope": "Continuous requirement locates the scale; allowed q is integer and the source must be recomputed."
+    }
+  ],
+  "required_q_squared_over_alpha_coefficient": 0.042528029136153604,
+  "actual_physical_source": null,
+  "physical_support_bound": null,
+  "sources": [
+    "https://arxiv.org/pdf/hep-th/9906160",
+    "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
+  ],
+  "scope": [
+    "This applies an existing normalization constraint; it is not a new physical law.",
+    "No physical fermion species, mass or high-energy running coupling is identified.",
+    "D is a Weyl-coordinate scale, not proper distance or the opening radius.",
+    "Changing q changes the Dirac operator and mode population; q=1 source data cannot be scaled to large q.",
+    "At fixed physical coupling, changing separation with fixed charge changes Q/D and requires a new geometry/source calculation.",
+    "The source remains unknown. Even support would leave current, backreaction, stability and chronology unresolved."
+  ],
+  "tests": {
+    "canonical_Maxwell_coefficient": true,
+    "required_source_substitution": true,
+    "scale_coupling_roundtrip": true,
+    "orientation_independence": true,
+    "fixed_q_rescaling_changes_coupling": true,
+    "species_not_implicitly_multiplied": true,
+    "invalid_parameters_rejected": true,
+    "required_target_negative": true,
+    "exact_current_provenance": true,
+    "actual_radius_distinguished": true,
+    "no_fabricated_source": true
+  }
+}

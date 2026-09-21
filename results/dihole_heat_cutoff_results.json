@@ -1,0 +1,192 @@
+{
+  "complete": true,
+  "passed": true,
+  "tests": {
+    "authenticated_inputs_unchanged": true,
+    "cutoff_invariance_with_gamma_E": true,
+    "independent_finite_PV_identity": true,
+    "numerical_local_formula": true,
+    "fixed_scheme_scale_sign": true,
+    "unknown_or_invalid_bounds_rejected": true,
+    "Abel_is_not_ordinary_IR_control": true
+  },
+  "coefficients": {
+    "a0_variation": 0.0,
+    "a2_action_derivative": 0.11400999281577749,
+    "a4_action_derivative": 7.706927314195081,
+    "quadratic_mass_response_coefficient": 0.00031154963588733757,
+    "logarithmic_response_coefficient": 0.0244023436787409,
+    "scale_only_response": -0.011256414343386234
+  },
+  "mu_H_times_D0": 0.7940236163832829,
+  "local_rows": [
+    {
+      "s0_over_D0_squared": 0.0001,
+      "mu_times_D0": 0.7940236163832829,
+      "a0_term": -0.0,
+      "a2_term": -3.609883568484063,
+      "a4_term": -0.22192489046685115,
+      "local_term": -3.8318084589509143
+    },
+    {
+      "s0_over_D0_squared": 0.001,
+      "mu_times_D0": 0.7940236163832829,
+      "a0_term": -0.0,
+      "a2_term": -0.3609883568484063,
+      "a4_term": -0.1657364176780649,
+      "local_term": -0.5267247745264712
+    },
+    {
+      "s0_over_D0_squared": 0.01,
+      "mu_times_D0": 0.7940236163832829,
+      "a0_term": -0.0,
+      "a2_term": -0.03609883568484063,
+      "a4_term": -0.10954794488927863,
+      "local_term": -0.14564678057411926
+    },
+    {
+      "s0_over_D0_squared": 0.1,
+      "mu_times_D0": 0.7940236163832829,
+      "a0_term": -0.0,
+      "a2_term": -0.003609883568484063,
+      "a4_term": -0.05335947210049237,
+      "local_term": -0.05696935566897643
+    },
+    {
+      "s0_over_D0_squared": 1.0,
+      "mu_times_D0": 0.7940236163832829,
+      "a0_term": -0.0,
+      "a2_term": -0.0003609883568484063,
+      "a4_term": 0.0028290006882939135,
+      "local_term": 0.0024680123314455072
+    }
+  ],
+  "controls": {
+    "kernel": "exp(-s)*(2/s^2+3/s+4)/(16*pi^2), auxiliary only",
+    "coefficients": [
+      2,
+      1,
+      2
+    ],
+    "mu": "1.4",
+    "expected": "-0.00048795982357882758172812582166988064910677091892951408934682027",
+    "expected_formula": "[-3/2+2 log(mu^2)]/(32 pi^2)",
+    "cutoff_rows": [
+      {
+        "s0": 0.03,
+        "value": "-0.00048795982357882758172812582166988064910677091892951408934682027",
+        "absolute_error": 1.2517884507889855e-71
+      },
+      {
+        "s0": 0.3,
+        "value": "-0.00048795982357882758172812582166988064910677091892951408934682027",
+        "absolute_error": 6.6325774503125335e-74
+      },
+      {
+        "s0": 3.0,
+        "value": "-0.00048795982357882758172812582166988064910677091892951408934682027",
+        "absolute_error": 6.6325774503125335e-74
+      }
+    ],
+    "finite_PV_rows": [
+      {
+        "mass": 0.7,
+        "recovered": "-0.00048795982357882758172812582166988064910677091892951408934682027",
+        "absolute_error": 7.516921110354205e-74
+      },
+      {
+        "mass": 2.0,
+        "recovered": "-0.00048795982357882758172812582166988064910677091892951408934682027",
+        "absolute_error": 4.3200187793035635e-72
+      }
+    ],
+    "public_local_max_scaled_error": 3.5212405437919665e-17,
+    "IR_counterexample": {
+      "deltaK": "s*sin(s)",
+      "bound": "|deltaK(s)| <= s",
+      "short_time": "O(s^2), hence valid O(s) remainder with H=0",
+      "ordinary_truncations": "Integral_0^T deltaK(s) ds/s = 1-cos(T); no limit.",
+      "abel_integral": "Integral_0^infinity exp(-eta*s)*sin(s) ds = 1/(1+eta^2) -> 1.",
+      "absolute_integral": "Integral_0^infinity |sin(s)| ds diverges.",
+      "finite_quadrature_control_error": 4.471844562561697e-77
+    }
+  },
+  "scale_identity_error": 6.938893903907228e-18,
+  "equations": {
+    "heat": "deltaK(s)=-s Tr_per_Killing_time(dotP exp(-sP)); P is the common physical4D operator.",
+    "subtraction": "H(s)=(a0/s^2+a2/s+a4)/(16 pi^2), aj=delta integrated physical4D Aj including volume variation.",
+    "combined": "Q_HK=-C_M0+(1/2) Abel Integral_0^infinity [deltaK-(1-w_M0)H] ds/s, w_M=(1-exp(-M^2 s))^3.",
+    "cutoff": "Q_HK=(1/2)Integral_0^s0(deltaK-H)ds/s+(1/2)Abel Integral_s0^infinity deltaK ds/s+L(s0;mu_H).",
+    "local": "L=[-a0/(2 s0^2)-a2/s0+a4*(log(mu_H^2 s0)+gamma_E)]/(32 pi^2).",
+    "cancellation": "dL/ds0=H(s0)/(2 s0), cancelling the derivative of the two split integrals.",
+    "PV_log_moment": "Integral_0^s0 w_M ds/s=log(M^2 s0)+gamma_E+log(3/8)+3E1(M^2s0)-3E1(2M^2s0)+E1(3M^2s0).",
+    "conditional_bound": "If B_UV >= Integral_0^s0 |deltaK-H|ds/s and B_IR >= Integral_s0^infinity |deltaK|ds/s, then |Q_HK| <= |L|+(B_UV+B_IR)/2."
+  },
+  "actual_unknowns": {
+    "UV_remainder_integral": null,
+    "UV_absolute_integral_bound": null,
+    "IR_heat_integral": null,
+    "IR_absolute_integral_bound": null,
+    "total_response": null,
+    "total_absolute_response_bound": null
+  },
+  "units": "s0 is in D0^2, mu is in 1/D0; numerical responses are in hbar*c/D0 with D0=1.",
+  "prescription": "Checkpoint136 physical heat/zeta scheme: mu_H=sqrt(2)*exp(-gamma_E)/D0, fixed couplings, no added finite R2/Ric2/F2 actions; same state and ordered IR prescription.",
+  "scope": [
+    "The physical anchor cancels algebraically before estimates; neither it nor a global C_R is evaluated here.",
+    "The O(s) ultraviolet remainder makes the subtracted short-time integral locally integrable; its magnitude is not bounded by the three local coefficients alone.",
+    "Abel means eta down to zero after multiplying the heat integrand by exp(-eta*s), using the established ordered physical prescription. It is not an absolute IR bound.",
+    "The bound |deltaK|<=C*s by itself permits an Abel limit without an ordinary improper integral, as the auxiliary oscillatory control shows.",
+    "Real local coefficient inputs are saved numerical quadratures, not interval enclosures. Conditional bound arithmetic also needs rounding and coefficient error control for a certificate.",
+    "No actual heat kernel, geometry, angular/frequency completion, or physical source magnitude/sign is calculated; a compressed finite model cannot replace this physical4D kernel."
+  ],
+  "input_sha256": {
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0"
+  },
+  "historical_source_authentication": {
+    "dihole_local_source.py": {
+      "recorded_sha256": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+      "current_sha256": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+      "accepted_as": "exact"
+    },
+    "balanced_dihole.py": {
+      "recorded_sha256": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+      "current_sha256": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+      "accepted_as": "exact"
+    },
+    "dihole_stretched_collar.py": {
+      "recorded_sha256": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+      "current_sha256": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+      "accepted_as": "exact"
+    },
+    "dihole_bridge_scattering.py": {
+      "recorded_sha256": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+      "current_sha256": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+      "accepted_as": "exact"
+    },
+    "project_paths.py": {
+      "recorded_sha256": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+      "current_sha256": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+      "accepted_as": "exact"
+    },
+    "dihole_pv_counterterms.py": {
+      "recorded_sha256": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+      "current_sha256": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+      "accepted_as": "exact"
+    },
+    "dihole_local_source_results.json": {
+      "recorded_sha256": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+      "current_sha256": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+      "accepted_as": "exact"
+    }
+  },
+  "source_sha256": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+  "elapsed_seconds": 0.6821672999067232
+}

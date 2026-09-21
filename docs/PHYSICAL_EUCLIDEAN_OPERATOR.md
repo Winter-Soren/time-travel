@@ -2168,3 +2168,230 @@ by itself establish a chronology extension. No new law or travel from
 13September2027 to12September2027 has been established. These are
 conditional algebraic consequences of the existing model and its declared
 source prescription, not a new empirical law.
+
+
+## Physical flux scaling and a subtracted heat cutoff
+
+This increment applies the existing charge normalization to physical sizes
+and rewrites the full source target as two unknown integrals plus known
+local subtraction terms. It does not calculate a supporting stress or
+establish a new law. See the [scale calculation](../scripts/dihole_flux_scale.py),
+[scale results](../results/dihole_flux_scale_results.json),
+[cutoff calculation](../scripts/dihole_heat_cutoff.py), and
+[cutoff results](../results/dihole_heat_cutoff_results.json).
+
+### Charge and size must describe the same physical field
+
+In units $\hbar=c=1$, the Einstein-Maxwell normalization is
+
+$$
+S=\frac1{16\pi G}\int\sqrt{-g}\,(R-\widehat F^2),\qquad
+A=-\frac{q}{2Q}\widehat A,\qquad \int F=2\pi q,\quad q\in\mathbb Z.
+$$
+
+This uses the nondilatonic limit of equation23 of
+[Emparan, Black diholes](https://arxiv.org/pdf/hep-th/9906160)
+and the balanced magnetic charge in equations15--16 and20. With canonical
+Maxwell field $A_{\rm can}=-\widehat A/\sqrt{4\pi G}$ and
+$A=e_R A_{\rm can}$, define $\alpha_R=e_R^2/(4\pi)$. Therefore
+
+$$
+\frac{|q|}{2Q}=\frac{|e_R|}{\sqrt{4\pi G}},\qquad
+\boxed{\frac D{\ell_P}=\frac{5|q|}{2\sqrt{\alpha_R}}}
+\quad\hbox{for the saved shape }Q/D=1/5.
+$$
+
+This constraint was already implicit in checkpoint118. Applying it now
+prevents treating physical size, flux and coupling as independent knobs.
+Here $q$ counts integer magnetic flux, not fermion species. Increasing $q$
+changes the Dirac operator and its angular sectors; the saved $q=1$ quantum
+source cannot simply be multiplied by $q$. Changing separation at fixed
+physical charge changes $Q/D$, requiring a different shape calculation.
+
+As a numerical illustration only, set $\alpha_R=0.0072973525643$, equal to
+the low-energy central value in the
+[NIST CODATA2022 table](https://physics.nist.gov/cuu/Constants/Table/allascii.txt)
+(retrieved22September2026). No high-energy running coupling or physical
+fermion species has been specified. At $q=1$,
+
+$$
+D=29.26559405\,\ell_P=4.73006627\,10^{-34}{\rm m},\qquad
+r_{\rm central}=6.66304961\,\ell_P.
+$$
+
+$D$ is a Weyl-coordinate scale, not proper separation or opening radius.
+The saved central areal radius is $0.2276751875D$; the cut areal radius is
+$0.2553895327D=7.47412639\ell_P$ in this illustration. The coordinate
+parameters $R_0=0.025D$ and $R_c=0.05D$ are not those areal radii.
+These sizes alone certify neither validity nor failure of the semiclassical
+approximation; curvature and backreaction still require assessment.
+Metrology central values are used, without interval enclosures.
+
+At the same illustrative coupling, a coordinate scale $D=1$nm would require
+$q\approx2.11413528\,10^{24}$, and $D=1$m would require
+$q\approx2.11413528\,10^{33}$. These continuous estimates locate the required
+integer sector; they are not a material-production prescription.
+
+The existing masked Einstein source requirement becomes
+
+$$
+C_{\rm required}
+=-0.006804484661784576(D/\ell_P)^2
+=-0.042528029136153604\,q^2/\alpha_R.
+$$
+
+The illustrative $q=1$ target is $-5.827870965726473$. The actual quantum
+source is still unknown. This necessary test is specific to the declared
+field content, geometry, state and renormalization prescription.
+
+![Physical size and flux constraint](../figures/dihole_flux_scale_progress.png)
+
+### Combine the subtraction before estimating its size
+
+Keep checkpoint136's physical four-dimensional operator and fixed
+heat/zeta prescription, including $\mu_H D_0=\sqrt2e^{-\gamma_E}$ and its
+declared finite gravitational and Maxwell couplings. Define
+
+$$
+\delta K(s)=-s\,{\rm Tr}_{/T}(\dot P e^{-sP}),\qquad
+H(s)=\frac{a_0/s^2+a_2/s+a_4}{16\pi^2}.
+$$
+
+Combining the finite anchor and its heat correction before taking absolute
+values gives, for every $s_0>0$,
+
+$$
+Q_{\rm HK}=
+\frac12\int_0^{s_0}\frac{\delta K-H}{s}\,ds
++\frac12\lim_{\eta\downarrow0}\int_{s_0}^{\infty}
+ e^{-\eta s}\frac{\delta K}{s}\,ds+L(s_0;\mu_H),
+$$
+
+$$
+L=\frac{-a_0/(2s_0^2)-a_2/s_0
++a_4[\log(\mu_H^2s_0)+\gamma_E]}{32\pi^2}.
+$$
+
+This is a reformulation of the existing scheme, not a newly assumed source.
+The logarithmic Pauli-Villars moment contributes
+$\gamma_E+\log(3/8)$; checkpoint136's counterterm removes $\log(3/8)$.
+Dropping the remaining $+\gamma_E$ would change the physical prescription.
+The identity $L'(s_0)=H(s_0)/(2s_0)$ cancels the cutoff dependence of the
+two integrals. General heat/zeta background is discussed in
+[Vassilevich's review](https://arxiv.org/pdf/hep-th/0306138);
+the scheme-specific expression here is checked against the existing
+finite-mass prescription by an independent auxiliary kernel.
+
+The actual saved local coefficients are $a_0=0$,
+$a_2=0.11400999281577749D_0$ and
+$a_4=7.706927314195081/D_0$. At $s_0/D_0^2=0.01$,
+$LD_0/(\hbar c)=-0.14564678057411926$. This is a subtraction term,
+not the total physical stress. Its variation or sign change with cutoff
+does not diagnose support.
+
+The infrared integral is an Abel limit in the established ordered
+prescription. Existence of that limit does not imply an ordinary or
+absolutely convergent integral. The auxiliary function
+$\delta K=s\sin s$, $H=0$, has $|\delta K|\le s$ and Abel integral1,
+but its ordinary truncated integral is $1-\cos T$ and has no limit.
+It is a control of the inference, not an alleged heat kernel of this
+geometry. Checkpoint154's growth estimate alone cannot supply an absolute
+infrared bound.
+
+Suppose $U$ bounds the magnitude of the short-scale integral, $V$ bounds
+the magnitude of the infrared Abel limit, and $\epsilon_L$ bounds error
+in a numerical local term $\widehat L$. Then
+
+$$
+Q_{\rm HK}\ge \widehat L-\epsilon_L-\tfrac12(U+V).
+$$
+
+All terms must use the same units and scheme. For the illustrative $q=1$
+case, expressed in $\hbar c/D_0$, the specific supporting-source target
+would be excluded if
+
+$$
+\epsilon_L+\tfrac12(U+V)<5.682224185152354.
+$$
+
+This is an allowed error budget, not an achieved bound. Both actual
+integrals and their bounds remain null in the result file. The helper
+conditional_absolute_bound requires supplied finite nonnegative bounds on
+the two absolute integrals, a stronger sufficient condition; it does not
+certify the inputs or numerical rounding. A direct bound on the Abel value
+could also support the one-sided argument without absolute integrability.
+
+### Scope of the checks and the next physical calculation
+
+Eleven flux-scale checks and seven cutoff checks pass. The latter compare
+independent 70-digit quadratures with an exactly integrable auxiliary
+kernel at three cutoffs and two finite regulator masses (errors below
+$10^{-50}$), and reject missing bounds. They validate algebra, normalization
+and implementation; they do not validate a physical source value.
+
+Published energy inequalities cannot be inserted without matching their
+field and observable. [Dawson--Fewster](https://arxiv.org/pdf/gr-qc/0604106)
+and [Smith](https://arxiv.org/pdf/0705.2203) treat timelike Dirac energy
+density without this external magnetic connection; the relevant
+null-contracted theorem of
+[Fewster--Roman](https://arxiv.org/pdf/gr-qc/0209036) concerns a scalar field.
+Our insertion is a spatially smeared null stress of a charged Dirac field.
+Stationarity alone does not repair either mismatch. This rejects those
+direct substitutions, not every possible charged-field inequality.
+
+The next useful result is a quantitative bound on the complete source:
+either bound the actual subtracted heat integrals above or quantify a
+common-regulator Hamiltonian trace bound in regular, buffered local charts.
+For the latter route the fixed-Hilbert-space variation is
+
+$$
+H_m=W^{-1}(F+\mathcal A_m),\quad F=-i\Sigma\partial_s,\quad
+\mathcal A_m=\mathcal A+mP\beta,\qquad
+V_m=W^{-1}(2fF+f\mathcal A_m-if'\Sigma).
+$$
+
+The Hamiltonian Hilbert map is $J_H=e^{\epsilon f}$, distinct from the
+Euclidean map. Proper mass is held fixed but the lapse-dependent mass term
+still varies. With common Pauli-Villars coefficients $c_j$ and
+$m_j=\sqrt j M$, the full frequency-integrated anchor is formally
+
+$$
+Q_M=-\tfrac14\sum_{j,\sigma=\pm}c_j
+ {\rm Tr}\,[V_{\sigma m_j}\operatorname{sgn}H_{\sigma m_j}].
+$$
+
+Only the common sum has the ultraviolet cancellation required here.
+A possible quantitative route uses a smooth bounded-energy spectral
+cutoff $\Theta_m=\theta(H_m)$ and a partition $\sum_i\chi_i^2=1$
+near the insertion. In regular buffered coordinate boxes let
+$J_i=(1-\ell_i^2\Delta_{D,\Omega_i})^{1/2}$. For four spinor components,
+
+$$
+S_i={\rm Tr}J_i^{-4}
+=4\sum_{\mathbf n\in\mathbb N^3}
+ \left(1+\pi^2\ell_i^2\sum_a n_a^2/L_{ia}^2\right)^{-2}
+\le\frac{{\rm Vol}(\Omega_i)}{2\pi\ell_i^3}.
+$$
+
+If actual elliptic estimates supply
+$C_{0,im}\ge\|J_i^2\chi_i\Theta_m\|$ and
+$C_{1,im}\ge\|J_i^2\chi_iV_m\Theta_m\|$, two Hilbert-Schmidt factors give
+
+$$
+|Q_{\rm low}|\le\tfrac14\sum_{j,\sigma}|c_j|
+ \sum_i S_i C_{0,i,\sigma m_j}C_{1,i,\sigma m_j}.
+$$
+
+No spectral gap is assumed. These constants require coefficient and cutoff
+derivative bounds in regular axis and gauge charts; they have not been
+evaluated. The complementary high-energy common-regulator trace and
+heat-remainder constants also remain unevaluated. Bounding separate
+regulator masses before their cancellation is not an admissible shortcut.
+
+Stop automatic enlargement of checkpoint159's exhausted finite field pool.
+Further numerical work must bound an actual omitted contribution to this
+physical source budget. Even a successful necessary source test would
+leave other field equations, induced current, formation and stability
+unresolved. The current static metric has a global time coordinate and
+no backward-time loop. Travel from13September2027 to12September2027
+remains unproved.
