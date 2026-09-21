@@ -1,0 +1,385 @@
+{
+  "complete": true,
+  "passed": true,
+  "tests": {
+    "input_provenance": true,
+    "independent_raw_normal_solves": true,
+    "independent_gain_eigenvalues": true,
+    "unchanged_comparison_grid": true,
+    "pointwise_selected_bridge": true,
+    "quadrature_coordinates": true,
+    "nonnegative_finite_density": true,
+    "radial_and_angular_marginals": true,
+    "exact_radial_partition": true
+  },
+  "parameters": {
+    "mu": 0.5,
+    "phase": 0.0,
+    "kappa": 0.7,
+    "first_mass": 0.1,
+    "eta": 0.01,
+    "source_dimension": 216,
+    "old_dimension": 356,
+    "selected_dimension": 64,
+    "trial_dimension": 420,
+    "raw_dimension": 628,
+    "quadrature_order": 64,
+    "measure": "ds*dcos(theta)",
+    "categories": [
+      "total",
+      "positive_source_directions",
+      "negative_source_directions"
+    ]
+  },
+  "summary": {
+    "total_residual_squared": [
+      1040.248475664251,
+      998.1546196910384,
+      42.09385597322164
+    ],
+    "radial_regions": [
+      {
+        "region": "left_collar",
+        "s_interval": [
+          -0.1,
+          -0.05
+        ],
+        "residual_squared": [
+          518.2375345411789,
+          497.226009693606,
+          21.011524847575775
+        ],
+        "fraction_of_bridge": 0.49818629554853056
+      },
+      {
+        "region": "central",
+        "s_interval": [
+          -0.05,
+          0.05
+        ],
+        "residual_squared": [
+          3.7734065818966656,
+          3.7026003038260056,
+          0.07080627807065458
+        ],
+        "fraction_of_bridge": 0.003627408902942305
+      },
+      {
+        "region": "right_collar",
+        "s_interval": [
+          0.05,
+          0.1
+        ],
+        "residual_squared": [
+          518.2375345411828,
+          497.2260096936057,
+          21.01152484757573
+        ],
+        "fraction_of_bridge": 0.4981862955485343
+      }
+    ],
+    "angular_regions": [
+      {
+        "region": "cosine_negative_polar_cap",
+        "cosine_interval": [
+          -1.0,
+          -0.99498743710662
+        ],
+        "residual_squared": [
+          7.279084749057147,
+          7.011504682066673,
+          0.2675800669904403
+        ],
+        "fraction_of_bridge": 0.00699744812835134
+      },
+      {
+        "region": "middle_angles",
+        "cosine_interval": [
+          -0.99498743710662,
+          0.99498743710662
+        ],
+        "residual_squared": [
+          1025.683406084372,
+          984.1238129750303,
+          41.55959310934551
+        ],
+        "fraction_of_bridge": 0.9859984706340682
+      },
+      {
+        "region": "cosine_positive_polar_cap",
+        "cosine_interval": [
+          0.99498743710662,
+          1.0
+        ],
+        "residual_squared": [
+          7.285984830826933,
+          7.019302033940912,
+          0.26668279688604984
+        ],
+        "fraction_of_bridge": 0.007004081237585535
+      }
+    ],
+    "sampled_density_peak": {
+      "s": 0.09664998495385232,
+      "theta": 0.0018664198399570835,
+      "density": 70505.44795194469
+    },
+    "sampled_radial_peak": {
+      "s": 0.09601573240631452,
+      "density": 48593.72699173372
+    }
+  },
+  "initial_summary": {
+    "total_residual_squared": [
+      3730.699786966057,
+      3681.0157646475286,
+      49.68402231853015
+    ],
+    "radial_regions": [
+      {
+        "region": "left_collar",
+        "s_interval": [
+          -0.1,
+          -0.05
+        ],
+        "residual_squared": [
+          1514.015398354148,
+          1490.1002433476344,
+          23.915155006508428
+        ],
+        "fraction_of_bridge": 0.40582611435089533
+      },
+      {
+        "region": "central",
+        "s_interval": [
+          -0.05,
+          0.05
+        ],
+        "residual_squared": [
+          702.6689902578026,
+          700.8152779522882,
+          1.853712305513354
+        ],
+        "fraction_of_bridge": 0.18834777129822045
+      },
+      {
+        "region": "right_collar",
+        "s_interval": [
+          0.05,
+          0.1
+        ],
+        "residual_squared": [
+          1514.0153983541422,
+          1490.1002433476322,
+          23.915155006508133
+        ],
+        "fraction_of_bridge": 0.4058261143508938
+      }
+    ],
+    "angular_regions": [
+      {
+        "region": "cosine_negative_polar_cap",
+        "cosine_interval": [
+          -1.0,
+          -0.99498743710662
+        ],
+        "residual_squared": [
+          21.86238239479275,
+          21.552550805888515,
+          0.309831588904073
+        ],
+        "fraction_of_bridge": 0.0058601291026346685
+      },
+      {
+        "region": "middle_angles",
+        "cosine_interval": [
+          -0.99498743710662,
+          0.99498743710662
+        ],
+        "residual_squared": [
+          3686.9259303662643,
+          3637.8602728112987,
+          49.0656575549703
+        ],
+        "fraction_of_bridge": 0.9882665829202538
+      },
+      {
+        "region": "cosine_positive_polar_cap",
+        "cosine_interval": [
+          0.99498743710662,
+          1.0
+        ],
+        "residual_squared": [
+          21.91147420501445,
+          21.602941030358483,
+          0.3085331746558291
+        ],
+        "fraction_of_bridge": 0.005873287977115326
+      }
+    ],
+    "sampled_density_peak": {
+      "s": 0.09998262604339432,
+      "theta": 0.0018664198399570835,
+      "density": 156318.41132630064
+    },
+    "sampled_radial_peak": {
+      "s": 0.09998262604339432,
+      "density": 137868.59711481375
+    }
+  },
+  "target_bridge": {
+    "source_norm_squared": 17021.845658010312,
+    "residual_norm_squared": 1040.248475664257,
+    "positive_source_residual_squared": 998.154619691035,
+    "negative_source_residual_squared": 42.093855973221935
+  },
+  "pointwise_bridge_relative_error": 5.901560425788764e-15,
+  "saved_matrix_audit": {
+    "raw_solve_rows": [
+      {
+        "selected": 0,
+        "residual_squared": 3878.2881210000596,
+        "saved_difference": 1.000444171950221e-11,
+        "relative_normal_residual": 4.784757400708202e-16
+      },
+      {
+        "selected": 8,
+        "residual_squared": 2355.4221437373635,
+        "saved_difference": 1.1823431123048067e-11,
+        "relative_normal_residual": 4.89902029105846e-16
+      },
+      {
+        "selected": 16,
+        "residual_squared": 1377.4520563834722,
+        "saved_difference": 3.637978807091713e-12,
+        "relative_normal_residual": 5.0103395043826e-16
+      },
+      {
+        "selected": 32,
+        "residual_squared": 1193.348958147275,
+        "saved_difference": -6.821210263296962e-12,
+        "relative_normal_residual": 4.4234861837497363e-16
+      },
+      {
+        "selected": 64,
+        "residual_squared": 1187.0470712896076,
+        "saved_difference": 5.9117155615240335e-12,
+        "relative_normal_residual": 4.443327408629171e-16
+      }
+    ],
+    "full_pool_residual_squared": 1187.0431131730656,
+    "full_pool_saved_difference": 6.639311322942376e-11,
+    "gain_spectrum_maximum_absolute_error": 8.526512829121202e-13,
+    "gain_spectrum_relative_error": 4.168082873907407e-15,
+    "smallest_computed_gain": -4.223138544862188e-15,
+    "total_gain": 2691.245007827052,
+    "total_gain_saved_difference": 1.3642420526593924e-12
+  },
+  "first_solve": {
+    "kappa": 0.7,
+    "mass": 0.1,
+    "eta": 0.010000000000000002,
+    "source_dimension": 216,
+    "trial_dimension": 420,
+    "ambient_dimension": 420,
+    "source_positive_negative_ranks": [
+      150,
+      66
+    ],
+    "residual_norm": 34.45354947301659,
+    "regions": {
+      "full": {
+        "source_norm_squared": 17025.04416460006,
+        "residual_norm_squared": 1187.0470712896017,
+        "positive_source_residual_squared": 1128.7973829350426,
+        "negative_source_residual_squared": 58.24968835455862
+      },
+      "exterior": {
+        "source_norm_squared": 3.198506589738826,
+        "residual_norm_squared": 146.79859562534338,
+        "positive_source_residual_squared": 130.64276324400666,
+        "negative_source_residual_squared": 16.15583238133671
+      },
+      "bridge": {
+        "source_norm_squared": 17021.845658010312,
+        "residual_norm_squared": 1040.248475664257,
+        "positive_source_residual_squared": 998.154619691035,
+        "negative_source_residual_squared": 42.093855973221935
+      }
+    },
+    "in_trial_residual_squared": 788.0698721469621,
+    "unrepresented_action_residual_squared": 398.9771991426293,
+    "regional_form_sum_relative_error": 0.0,
+    "regional_residual_sum_error": 1.3642420526593924e-12,
+    "regional_source_sum_error": 1.0913936421275139e-11,
+    "full_residual_identity_error": 1.0345502232667059e-11,
+    "least_squares_relative_error": 5.532086291419574e-16
+  },
+  "evaluation": {
+    "seconds": 25.66162270004861,
+    "working_chunk_bytes": 133134336,
+    "weight_maximum_absolute_error": 0.0,
+    "radial_slices": 192
+  },
+  "equations": {
+    "coefficient_lift": "C628[:356]=C420[:356]; C628[356:]=T64*C420[356:]",
+    "residual": "P^(-1/2)*beta*(radial+angular+i*kappa*W*value)*trial + P^(1/2)*value*(m*trial-source)",
+    "beta": "component permutation [2,3,0,1]; raw local map excludes exterior-only312:344"
+  },
+  "scope": [
+    "Same retained216-column insertion; the trial has64 selected additions to the frozen356 fields.",
+    "Selection is optimal only for the first weighted solve inside the tested272-candidate pool.",
+    "Both eigen-sign groups contain nonnegative squared errors; their labels are not physical stress signs.",
+    "No exterior or form assembly; exactly one bridge pointwise pass at the frozen nominal order64.",
+    "Sampled densities and floating integrals do not enclose continuum error or supply supporting energy."
+  ],
+  "source_sha256": "d2065ed03dd9dc716e8715e67bdfef5f99d785a62298e17f2030745d1fccaf67",
+  "input_sha256": {
+    "dihole_radial_refinement.py": "15f7e6dd414b87365cf3d1ef3a14ef3558201cc07c851d38853e26a601f15a1c",
+    "dihole_radial_stream.py": "54b25d772a9b63eda3547188715aa746b4752b1988ed977702683a6f0503a76a",
+    "dihole_bridge_enrichment.py": "c5fb3c062e40041c3f6b681903d8985f4c38aba59ca6deaeb2dd85f0b037737b",
+    "dihole_enriched_bridge.py": "b5b7588b4991219329f8fca1b2132b4c369602adcdd197d6271e33750e4e74b2",
+    "dihole_finite_frequency_tail.py": "37aad394ced2841bcbe6a595f93b77067592323e785f4aa16c1e1827af91dd0a",
+    "dihole_sewn_form.py": "ee043fdd42b7ee5efde627c1e53ce7b18f238c81fc31e354feb12662ce9a4f0f",
+    "dihole_sewn_quadrature.py": "5c30ad3f66a53561f14733795d6106ca69be51514fe468bd9588bd33685c2bab",
+    "dihole_euclidean_form.py": "050f817fe5c0533b0f51eb82e248e315b01387e719386ba941b9555aea2fd459",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_azimuthal_bridge.py": "4382f13b42fd66f94b9a180dd6937508767e26561d8897118b33e0eb1e78a5c1",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_curved_exterior.py": "71c8782caa1305e31c84fee95f688d62b349df4c66ee2c4acfcc37650f112cf5",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_angular_crosscheck.py": "6ffde17e3d191ac7b1cd7968205bf958018a0af1f6f6e1851dc39a1f2b7e204b",
+    "dihole_angular_crosscheck_state.npz": "e98bf9d543dcbe61ac535fbead63447f67cceec2a666142d3e27bc34b8fab740",
+    "dihole_angular_crosscheck_results.json": "40bbb98215ecb6450f0be9158204648ee0e1b5c13520ec757410ff62717e399b",
+    "dihole_exterior_extension.py": "1c03ff071f17a74c70c313c36b2c8c56c12cb45ea983d043b2c37ab3a32dcb37",
+    "dihole_radial_schur.py": "65a75257c6c7a584462aeac06bbaaf985e7b8e1fc9c0034524965776b08d96a4",
+    "dihole_exterior_feedback.py": "fd3a411db80418c2e35949a60135651267dcf67befddedd189469c13c9bed687",
+    "dihole_exterior_feedback_state.npz": "b68b175fc06a958bb0fee1c13dc6fd0d5aebcd300b27d8a293bc56cf67e33bee",
+    "dihole_exterior_feedback_results.json": "8c012ba980a379ffc694937533ffb0ba0d886d1f23043a40ef4988832f1ddaa1",
+    "dihole_residual_regions.py": "302154d669ad62a0d56998fc1615ebd96058c09fcb227c7febbd890b65e20968",
+    "dihole_residual_regions_results.json": "c15cb463e1489d2556af83fb52da48348cbedd7382721d96b9e707a9d2dbda51",
+    "dihole_residual_regions_state.npz": "866811b1ab98a458c2446d392ac9cc4bc1e0d7c5a0e7ecc5f1be57c7c14c2019",
+    "dihole_mouth_fields.py": "b91db722633e202b73ddbcf5c719514abd5611e1659113fb3f4f3053e70408b8",
+    "dihole_mouth_fields_checks.json": "4b3b2f09ce3c7da3a8bb4078e6bc386770901ff771f8af1ef6e6ed102e99b466",
+    "dihole_common_pv_residual.py": "ab96d903a82cf431ced53031a6c24433c21dcd6a254d71e182eb62c0cfc9461b",
+    "dihole_retained_resolvent.py": "8f0be07c290d51017300022f4e9fd43ba40e01c32f7bff22ec81f4babf2dee8c",
+    "provenance/dihole_mouth_enrichment_quadrature_failure.py": "dfcb7f7fd7b481ea4105ae3653a19f0ccf1233d96b733392044d6c6336252c07",
+    "dihole_mouth_enrichment_quadrature_failure_state.npz": "93103ca06b06976dfebdc12be73881f6d87d9e38c39ebbce9bf0802a0cb07332",
+    "dihole_mouth_enrichment_quadrature_failure_results.json": "58eddc9d2eeae17bb09638ae3839aff5548c275c04665a7b9f095bba06517fa6",
+    "dihole_mouth_enrichment.py": "f3a4d0d6062e1793717e57bb8f642ce70295428fadb60b763c53faee7ebbfb42",
+    "dihole_mouth_enrichment_state.npz": "9c7774e9ac746a520dcaa7fc82ba16cac4f51f815167d320245afccda14d0767",
+    "dihole_mouth_enrichment_results.json": "490a62e74e47edd9627f566cf7d00e72f5ecfade5ca32e7f4c07c9ecdc0fb423",
+    "dihole_residual_candidates.py": "0985680eceb6df9a4e72077410303c92109a425bc0c9970f292c9b3f6fde8e1c",
+    "dihole_residual_candidates_checks.json": "867db4e1858ce973485e2fa0135a403d23489f28eaf5c9bf2ac91a4927475304",
+    "dihole_residual_profile.py": "cc08d16b1e25288f7bd8aa377037782e1c2ab9ef4930423c82913b7e8c7c91e3",
+    "dihole_residual_profile_results.json": "6436ab832fe57584fa3486776d5795f885bd0eb60224890d69ea5a59fcd3bbcf",
+    "dihole_residual_profile_state.npz": "2b8b375e326fa2f9aa9869b8efa7b9b1cf429c61512cd123bf574e6b4ac43fd1",
+    "dihole_residual_selection.py": "a4623b5913a1b03dd40c71db7e5113e661764bd1db2329ecd48a2142c0fd9ed3",
+    "dihole_residual_selection_state.npz": "4977aa90e23fcf201d5fe91436e93520c481bc6ea42dca9fd0f04ff5bd9a04c0",
+    "dihole_residual_selection_results.json": "3da8d3e020724d5b605bee047fd40224ae2725802abfcff07d0e427ab1853121"
+  },
+  "state_sha256": "294e176625c4861927457581965c61f5dd391e303e6ea83884d387dd06dad2b4",
+  "seconds": 27.977698700036854
+}

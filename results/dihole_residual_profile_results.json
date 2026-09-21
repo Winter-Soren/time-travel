@@ -1,0 +1,242 @@
+{
+  "complete": true,
+  "passed": true,
+  "tests": {
+    "input_provenance": true,
+    "saved_first_solve": true,
+    "saved_bridge_full_action": true,
+    "quadrature_coordinates": true,
+    "nonnegative_finite_density": true,
+    "signed_direction_sum": true,
+    "marginal_integrals": true,
+    "exact_radial_partition": true,
+    "first_solve_normal_equation": true
+  },
+  "parameters": {
+    "mu": 0.5,
+    "phase": 0.0,
+    "kappa": 0.7,
+    "first_mass": 0.1,
+    "eta": 0.01,
+    "source_dimension": 216,
+    "trial_dimension": 356,
+    "quadrature_order": 64,
+    "radial_slices": 192,
+    "polar_nodes": 192,
+    "measure": "ds*dcos(theta)",
+    "categories": [
+      "total",
+      "positive_source_directions",
+      "negative_source_directions"
+    ]
+  },
+  "summary": {
+    "total_residual_squared": [
+      3730.699786966057,
+      3681.0157646475286,
+      49.68402231853015
+    ],
+    "radial_regions": [
+      {
+        "region": "left_collar",
+        "s_interval": [
+          -0.1,
+          -0.05
+        ],
+        "residual_squared": [
+          1514.015398354148,
+          1490.1002433476344,
+          23.915155006508428
+        ],
+        "fraction_of_bridge": 0.40582611435089533
+      },
+      {
+        "region": "central",
+        "s_interval": [
+          -0.05,
+          0.05
+        ],
+        "residual_squared": [
+          702.6689902578026,
+          700.8152779522882,
+          1.853712305513354
+        ],
+        "fraction_of_bridge": 0.18834777129822045
+      },
+      {
+        "region": "right_collar",
+        "s_interval": [
+          0.05,
+          0.1
+        ],
+        "residual_squared": [
+          1514.0153983541422,
+          1490.1002433476322,
+          23.915155006508133
+        ],
+        "fraction_of_bridge": 0.4058261143508938
+      }
+    ],
+    "angular_regions": [
+      {
+        "region": "cosine_negative_polar_cap",
+        "cosine_interval": [
+          -1.0,
+          -0.99498743710662
+        ],
+        "residual_squared": [
+          21.86238239479275,
+          21.552550805888515,
+          0.309831588904073
+        ],
+        "fraction_of_bridge": 0.0058601291026346685
+      },
+      {
+        "region": "middle_angles",
+        "cosine_interval": [
+          -0.99498743710662,
+          0.99498743710662
+        ],
+        "residual_squared": [
+          3686.9259303662643,
+          3637.8602728112987,
+          49.0656575549703
+        ],
+        "fraction_of_bridge": 0.9882665829202538
+      },
+      {
+        "region": "cosine_positive_polar_cap",
+        "cosine_interval": [
+          0.99498743710662,
+          1.0
+        ],
+        "residual_squared": [
+          21.91147420501445,
+          21.602941030358483,
+          0.3085331746558291
+        ],
+        "fraction_of_bridge": 0.005873287977115326
+      }
+    ],
+    "sampled_density_peak": {
+      "s": 0.09998262604339432,
+      "theta": 0.0018664198399570835,
+      "density": 156318.41132630064
+    },
+    "sampled_radial_peak": {
+      "s": 0.09998262604339432,
+      "density": 137868.59711481375
+    }
+  },
+  "target_bridge": {
+    "source_norm_squared": 17021.845658010312,
+    "residual_norm_squared": 3730.6997869660863,
+    "positive_source_residual_squared": 3681.0157646475564,
+    "negative_source_residual_squared": 49.684022318530054
+  },
+  "saved_bridge_relative_error": 7.80117192983834e-15,
+  "saved_first_solve_difference": 0.0,
+  "source_positive_negative_ranks": [
+    150,
+    66
+  ],
+  "first_solve": {
+    "kappa": 0.7,
+    "mass": 0.1,
+    "eta": 0.010000000000000002,
+    "source_dimension": 216,
+    "trial_dimension": 356,
+    "ambient_dimension": 356,
+    "source_positive_negative_ranks": [
+      150,
+      66
+    ],
+    "residual_norm": 62.27590321304099,
+    "regions": {
+      "full": {
+        "source_norm_squared": 17025.04416460006,
+        "residual_norm_squared": 3878.2881210000496,
+        "positive_source_residual_squared": 3812.4244313779163,
+        "negative_source_residual_squared": 65.86368962213326
+      },
+      "exterior": {
+        "source_norm_squared": 3.198506589738826,
+        "residual_norm_squared": 147.58833403396343,
+        "positive_source_residual_squared": 131.4086667303601,
+        "negative_source_residual_squared": 16.17966730360333
+      },
+      "bridge": {
+        "source_norm_squared": 17021.845658010312,
+        "residual_norm_squared": 3730.6997869660863,
+        "positive_source_residual_squared": 3681.0157646475564,
+        "negative_source_residual_squared": 49.684022318530054
+      }
+    },
+    "in_trial_residual_squared": 2144.751593330183,
+    "unrepresented_action_residual_squared": 1733.5365276698399,
+    "regional_form_sum_relative_error": 0.0,
+    "regional_residual_sum_error": 0.0,
+    "regional_source_sum_error": 1.0913936421275139e-11,
+    "full_residual_identity_error": 2.6830093702301383e-11,
+    "least_squares_relative_error": 5.297848514696088e-16
+  },
+  "evaluation": {
+    "weight_maximum_absolute_error": 0.0,
+    "largest_working_chunk_bytes": 79656960,
+    "seconds": 19.260284100077115,
+    "all_radial_slices": 192
+  },
+  "equations": {
+    "residual": "P^(-1/2)*beta*(radial+angular+i*kappa*W*value)*trial + P^(1/2)*value*(m*trial-source)",
+    "density": "sum over physical spin components and retained source directions of |residual|^2",
+    "bridge_norm": "integral ds dcos(theta) density; beta permutes components [2,3,0,1]"
+  },
+  "scope": [
+    "The fixed nominal356 trial and retained216-column insertion of checkpoint157 are unchanged.",
+    "Positive/negative labels classify insertion eigenvectors; both residual squared densities are nonnegative.",
+    "Only bridge fields are evaluated; saved exterior matrices enter the one first-step solve.",
+    "The central/collar and polar-cap partitions coincide with quadrature panel boundaries.",
+    "Sampled peaks are grid diagnostics; no interval quadrature, continuum source, physical stress or support bound follows."
+  ],
+  "source_sha256": "cc08d16b1e25288f7bd8aa377037782e1c2ab9ef4930423c82913b7e8c7c91e3",
+  "input_sha256": {
+    "dihole_radial_refinement.py": "15f7e6dd414b87365cf3d1ef3a14ef3558201cc07c851d38853e26a601f15a1c",
+    "dihole_radial_stream.py": "54b25d772a9b63eda3547188715aa746b4752b1988ed977702683a6f0503a76a",
+    "dihole_bridge_enrichment.py": "c5fb3c062e40041c3f6b681903d8985f4c38aba59ca6deaeb2dd85f0b037737b",
+    "dihole_enriched_bridge.py": "b5b7588b4991219329f8fca1b2132b4c369602adcdd197d6271e33750e4e74b2",
+    "dihole_finite_frequency_tail.py": "37aad394ced2841bcbe6a595f93b77067592323e785f4aa16c1e1827af91dd0a",
+    "dihole_sewn_form.py": "ee043fdd42b7ee5efde627c1e53ce7b18f238c81fc31e354feb12662ce9a4f0f",
+    "dihole_sewn_quadrature.py": "5c30ad3f66a53561f14733795d6106ca69be51514fe468bd9588bd33685c2bab",
+    "dihole_euclidean_form.py": "050f817fe5c0533b0f51eb82e248e315b01387e719386ba941b9555aea2fd459",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_interval_arithmetic.py": "a2275ea924c449d31b5e660d639e11dff46610ab14f5eb02ea13d7b88d86053f",
+    "dihole_azimuthal_bridge.py": "4382f13b42fd66f94b9a180dd6937508767e26561d8897118b33e0eb1e78a5c1",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_curved_exterior.py": "71c8782caa1305e31c84fee95f688d62b349df4c66ee2c4acfcc37650f112cf5",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_angular_crosscheck.py": "6ffde17e3d191ac7b1cd7968205bf958018a0af1f6f6e1851dc39a1f2b7e204b",
+    "dihole_angular_crosscheck_state.npz": "e98bf9d543dcbe61ac535fbead63447f67cceec2a666142d3e27bc34b8fab740",
+    "dihole_angular_crosscheck_results.json": "40bbb98215ecb6450f0be9158204648ee0e1b5c13520ec757410ff62717e399b",
+    "dihole_exterior_extension.py": "1c03ff071f17a74c70c313c36b2c8c56c12cb45ea983d043b2c37ab3a32dcb37",
+    "dihole_radial_schur.py": "65a75257c6c7a584462aeac06bbaaf985e7b8e1fc9c0034524965776b08d96a4",
+    "dihole_exterior_feedback.py": "fd3a411db80418c2e35949a60135651267dcf67befddedd189469c13c9bed687",
+    "dihole_exterior_feedback_state.npz": "b68b175fc06a958bb0fee1c13dc6fd0d5aebcd300b27d8a293bc56cf67e33bee",
+    "dihole_exterior_feedback_results.json": "8c012ba980a379ffc694937533ffb0ba0d886d1f23043a40ef4988832f1ddaa1",
+    "dihole_residual_regions.py": "302154d669ad62a0d56998fc1615ebd96058c09fcb227c7febbd890b65e20968",
+    "dihole_residual_regions_results.json": "c15cb463e1489d2556af83fb52da48348cbedd7382721d96b9e707a9d2dbda51",
+    "dihole_residual_regions_state.npz": "866811b1ab98a458c2446d392ac9cc4bc1e0d7c5a0e7ecc5f1be57c7c14c2019",
+    "dihole_mouth_fields.py": "b91db722633e202b73ddbcf5c719514abd5611e1659113fb3f4f3053e70408b8",
+    "dihole_mouth_fields_checks.json": "4b3b2f09ce3c7da3a8bb4078e6bc386770901ff771f8af1ef6e6ed102e99b466",
+    "dihole_common_pv_residual.py": "ab96d903a82cf431ced53031a6c24433c21dcd6a254d71e182eb62c0cfc9461b",
+    "dihole_retained_resolvent.py": "8f0be07c290d51017300022f4e9fd43ba40e01c32f7bff22ec81f4babf2dee8c",
+    "provenance/dihole_mouth_enrichment_quadrature_failure.py": "dfcb7f7fd7b481ea4105ae3653a19f0ccf1233d96b733392044d6c6336252c07",
+    "dihole_mouth_enrichment_quadrature_failure_state.npz": "93103ca06b06976dfebdc12be73881f6d87d9e38c39ebbce9bf0802a0cb07332",
+    "dihole_mouth_enrichment_quadrature_failure_results.json": "58eddc9d2eeae17bb09638ae3839aff5548c275c04665a7b9f095bba06517fa6",
+    "dihole_mouth_enrichment.py": "f3a4d0d6062e1793717e57bb8f642ce70295428fadb60b763c53faee7ebbfb42",
+    "dihole_mouth_enrichment_results.json": "490a62e74e47edd9627f566cf7d00e72f5ecfade5ca32e7f4c07c9ecdc0fb423",
+    "dihole_mouth_enrichment_state.npz": "9c7774e9ac746a520dcaa7fc82ba16cac4f51f815167d320245afccda14d0767"
+  },
+  "state_sha256": "2b8b375e326fa2f9aa9869b8efa7b9b1cf429c61512cd123bf574e6b4ac43fd1",
+  "seconds": 20.491616600076668
+}

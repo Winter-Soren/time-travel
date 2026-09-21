@@ -1823,3 +1823,198 @@ transition from a completed numerical task list to a new physical law.
 A supported geometry, its stability, and a chronology-changing extension
 are separate unachieved requirements. Travel from13September2027 to
 12September2027 remains unproved.
+
+
+## Residual localization and optimal candidate combinations
+
+Checkpoint158 continues the same auxiliary equation $(A+m)X=H$ at
+$\kappa D=.7$, $mD=.1$, phase0 and $\mu=1/2$. The geometry, exterior,
+old356 trial fields and retained216 source directions stay fixed. These
+are unpublished calculations on a prescribed geometry, not a new physical
+law, a stress measurement or an Einstein-equation solve.
+
+### Direct localization, including the full differential action
+
+The [profile calculation](../scripts/dihole_residual_profile.py) evaluates
+all216 weighted source directions pointwise. It applies the actual first
+order differential operator before squaring; it does not replace the
+operator by its compressed matrix. The bridge integration measure is
+$ds\,d\cos\theta$, with no additional radius, sine or azimuthal factor.
+The summed positive/negative insertion-direction densities are both
+nonnegative squared errors; their labels do not make them stress signs.
+
+The direct integral recovers157's bridge residual3730.699786966 to
+$7.8\times10^{-15}$ relatively. Its distribution is:
+
+| Region | Squared auxiliary residual | Share of bridge residual |
+| --- | ---: | ---: |
+| Left collar, $-.1<s/D<-.05$ |1514.015398354|40.5826%|
+| Central section, $-.05<s/D<.05$ |702.668990258|18.8348%|
+| Right collar, $.05<s/D<.1$ |1514.015398354|40.5826%|
+
+The two polar caps account for only1.17334% of the bridge integral, even
+though the pointwise maximum is near a pole. The radial marginal peaks
+near the openings. Thus the integrated error is chiefly in the collars;
+a peak in a plot alone would have suggested the wrong priority. Nine
+[checks](../results/dihole_residual_profile_results.json) pass. The
+[profile archive](../data/dihole_residual_profile_state.npz) contains the
+source/trial coefficients, all192-by192 nodal densities and quadrature
+weights, and radial/angular marginals for reuse.
+
+### Selecting fields by the residual they can actually remove
+
+Let $F_Y=(A+m)Y$ be the old field actions, $F_C=(A+m)C$ a candidate pool,
+and $U=VZ|d|^{1/2}$ the fixed source columns, with
+$D_V=Z\operatorname{diag}(d)Z^*$. Keep their original eigen-sign labels.
+Define the action Gram blocks and load overlaps
+
+$$M=F_Y^*F_Y,\quad C_a=F_Y^*F_C,\quad G=F_C^*F_C,
+\quad a=F_Y^*U,\quad b=F_C^*U,$$
+
+$$S=G-C_a^*M^{-1}C_a,\qquad Q=b-C_a^*M^{-1}a.$$
+
+The Schur complement $S$ is the Gram matrix of candidate actions after
+projection away from the old actions; $Q$ is their overlap with the
+remaining residual. For candidate combinations $CT$ and a joint refit of
+$Y$, the exact residual-Gram reduction is
+
+$$E_{\rm old}^*E_{\rm old}-E_T^*E_T
+=Q^*T(T^*ST)^+T^*Q\succeq0.$$
+
+If $S$ is positive, let $L=S^{-1/2}Q$ and choose its leading $k$ left
+singular vectors $U_k$. Then $T=S^{-1/2}U_k$ maximizes total weighted
+squared-residual reduction among $k$ candidate combinations, with gain
+$\sum_{j=1}^k\sigma_j(L)^2$. This follows by expressing the reduction as
+the squared Frobenius norm of a rank-$k$ orthogonal projection of $L$.
+The driver uses equivalent diagonally balanced Cholesky whitening.
+This is an application of established least-squares low-rank approximation,
+not a new mathematical law; see [Eckart and Young (1936), publisher abstract](https://www.cambridge.org/core/journals/psychometrika/article/approximation-of-one-matrix-by-another-of-lower-rank/B29672E1EDD0FA1B7611D4DFAFC321B3).
+The Schur reduction and application to these particular fields are derived
+above; the publisher abstract is not evidence for our numerical results.
+
+Exact null Schur directions are redundant actions and must have zero
+source overlap. A numerically tiny eigenvalue alone does not imply tiny
+gain. This implementation requires a well-resolved positive balanced
+Schur spectrum; it rejects unresolved rank and does not silently discard
+small modes. Source-sign groups each have nonincreasing first-step error,
+but the selection objective is their total, not a signed source estimate.
+Nor does it optimize later steps of the four-factor filter.
+
+The [candidate provider](../scripts/dihole_residual_candidates.py) supplies
+272 zero-trace fields:176 radial additions ($n=13,\ldots,20$ on the old22
+angular profiles) and96 angular additions ($l=6,7$ at $n=1,\ldots,12$ in
+both spin components and chiralities). Fourteen
+[pointwise checks](../results/dihole_residual_candidates_checks.json)
+pass. Its old324 local bridge columns and scalar data are bitwise unchanged;
+only the32 old exterior-only columns are absent locally, since they vanish
+on the bridge. No angular operator or geometry is redefined. The new
+radial factors vanish at both openings and have their exact analytic
+first derivatives.
+
+The [selection driver](../scripts/dihole_residual_selection.py) integrates
+only old-new and new-new blocks, scores radial and angular groups as well
+as their coupled pool, and directly refits selected combinations. A nested
+92-field comparison (radial13/14 plus angular6) uses the same integrated
+pool. The unused singular-value sum measures improvement still available
+within this finite pool; it is not a continuum remainder or a bound on
+physical supporting stress.
+
+
+### Measured candidate gains and remaining uncertainty
+
+The complete272-field pool permits a squared-residual reduction of
+2691.245007827. Scoring the two groups independently gives2691.244615059
+for the176 radial additions and0.000394150192 for the96 angular additions.
+These independent group gains need not add, because the candidate actions
+are coupled. The nested92-field pool permits2264.716241401. The conclusion
+is specific: radial13--20 is much more useful for this source and frequency
+than the tested angular6--7 additions. It does not exclude all omitted
+angular sectors or establish angular convergence of physical stress.
+
+| Added combinations | Total trial dimension | Squared first residual |
+| --- | ---: | ---: |
+| None |356|3878.288121000|
+|8 selected|364|2355.422143737|
+|16 selected|372|1377.452056383|
+|32 selected|388|1193.348958147|
+|64 selected|420|1187.047071290|
+|All272 candidates|628|1187.043113173|
+
+The64 selected directions leave only0.003958117 of the improvement
+available in this finite pool unused. The32-direction space is already
+close to the full-pool first-step result; adding more combinations from
+the same pool cannot remove the remaining1187.043113173 residual at the
+stored quadrature. Changing the underlying candidate functions, or adding
+previously omitted functions, is a distinct test.
+
+The balanced Schur eigenvalues lie between0.77208794 and1.21480838, so no
+candidate directions were dropped for unresolved rank. Action-metric
+orthonormality error is below $4.37\times10^{-15}$. Predicted and directly
+refitted gains agree within $2.73\times10^{-12}$; a separate synthetic
+least-squares control checks the algorithm against direct rectangular
+solves. New-block order64-to80 quadrature changes are below
+$2.21\times10^{-13}$, and the selected64 residual changes by
+$6.86\times10^{-14}$ relatively. The old356 core remains fixed during
+this refinement; it is not a continuum or whole-domain enclosure.
+
+All thirteen [selection checks](../results/dihole_residual_selection_results.json)
+pass. The [matrix archive](../data/dihole_residual_selection_state.npz)
+contains the full nominal628-field polynomial forms, refined candidate
+increments, Schur data, source coefficients and selected transformations.
+It can be reused without repeating the bridge integration. The source and
+selection stored here are for this single frequency and positive first
+mass; a new frequency requires evaluating its insertion and selection.
+See the [selection figure](../figures/dihole_residual_selection_progress.png).
+
+The four-factor filter is evaluated after selection, without claiming
+that its error was the optimized objective. With64 added directions, the
+conditional retained-source interval at $\eta D^2=.01$ becomes
+$[-56012.24022,2903.14948]$, versus
+$[-188536.43139,3280.83638]$ before selection. At $\eta D^2=.0001$ it is
+$[-5649053.25665,291677.61098]$. Both signs remain possible within these
+loose intervals. They still omit the physical insertion complement,
+all-sector sum and renormalized-source completion. No supporting matter,
+stability, chronology change or new physical law follows from the residual
+reduction.
+
+
+### Where the error moved after selection
+
+The [selected-profile calculation](../scripts/dihole_selected_profile.py)
+lifts the420-dimensional selected trial back to the628-dimensional raw
+chart, then evaluates the full action on the596 locally nonzero fields.
+It uses the same source directions and192-by192 bridge grid. Its integral
+recovers the selected64 bridge residual within $5.90\times10^{-15}$
+relatively. Nine further checks pass, including independent raw normal
+solves and a gain-spectrum check using eigenvalues of $Q^*S^{-1}Q$ rather
+than the production SVD. Independent full-pool residuals agree within
+$6.64\times10^{-11}$ and gain eigenvalues within $8.53\times10^{-13}$.
+
+| Region | Before selection | After64 selected combinations |
+| --- | ---: | ---: |
+| Left collar |1514.015398354|518.237534541|
+| Center |702.668990258|3.773406582|
+| Right collar |1514.015398354|518.237534541|
+
+The collars now contain99.6373% of the remaining bridge error; polar caps
+contain1.40015%. The radial marginal peaks near $|s|/D=.096$, close to
+the openings at$.1$. The source-weighted auxiliary error has therefore
+become much more localized. This supports testing explicit collar radial
+profiles rather than adding more combinations from the exhausted pool.
+It does not prove that the remaining error is entirely a trace-space error.
+
+The next candidate should preserve the same sewing and include localized
+zero-trace radial corrections in the collars, comparing their measured
+Schur gain against further global radial modes. The saved coefficient and
+density arrays provide the inputs; no old form assembly is needed merely
+to inspect them. A changed source/frequency or actual source completion
+requires separate calculations, not reuse of this one optimization claim.
+
+See [post-selection results](../results/dihole_selected_profile_results.json),
+[coefficients and profiles](../data/dihole_selected_profile_state.npz), and
+[before/after figure](../figures/dihole_selected_profile_progress.png).
+Across initial localization, candidate construction, selection and final
+localization,45 checks pass. Both figures were inspected. These are
+reproducible numerical improvements within the model; no obtainable matter,
+stable supporting bridge or travel from13September2027 to12September2027
+has been established.

@@ -1,3 +1,76 @@
+# Authoritative checkpoint158 — residual-selected radial improvement
+
+Previous goal turn: PROGRESS; checkpoint157 published
+ ead333184737bebea91e85790c8ea570e0a8d9f5. Goal ACTIVE, unachieved.
+Browser/Downloads import COMPLETE. No new law, physical supporting source,
+obtainable medium, stable bridge or backward passage. No discovery deadline.
+
+- Fixed source216 and old356 at kappaD=.7,mD=.1,phase0,mu=.5. Direct pointwise
+  first-action residual reproduces157 bridge3730.699786966 within7.8e-15rel.
+  Before enrichment:81.1652% in two collars,18.8348% central,1.17334% inpolar
+  caps. Peak radial error nearopenings;98.67% inpositivesource directions.
+  These are nonnegative auxiliary error densities, NOT stress or Einstein
+  equation residuals. Profile/coefficients/grids saved;9checksPASS.
+- New provider adds176 radialfields n13..20 onexisting22 angularprofiles
+  and96 angularfields l6,7 atn1..12 inbothspins/chiralities. Exactzerotraces,
+  old324localfields/scalarsbitwiseunchanged.14helperchecksPASS.
+- Assembled ONLY candidatecross/new blocks atbridgeorders64/80; exterior,
+  old356/source216fixed. Newrawdimension628. Schurcomplement ofactionnormal
+  matrix andweightedload givesoptimalrank-k candidate combinations bySVD.
+  Thisoptimizes total FIRSTSTEPresidual, notsignedsource orfourfilterchain.
+  BalancedSchureigenvalues .772088..1.214808; no dropped directions.
+- Residuals:old356=3878.288121000; +8selected=2355.422143737;
+  +16=1377.452056383; +32=1193.348958147; +64=1187.047071290;
+  full272pool=1187.043113173. +64reduces69.3924991%. +32captures99.76569%
+  offinitepool'savailablegain. +64missesonly.003958117 ofthatgain.
+- Separategroupgains:radial2691.244615059,angular.000394150192;
+  coupledpool2691.245007827,nested92pool2264.716241401. Groupsneednotadd.
+  More oftestedangular6/7notuseful atthissource/frequency. Not an angular
+  continuum/allsectorstatement. Changingbasisfunctions needed beyondpool.
+-13driverchecksPASS. Predicted/direct gainsagreewithin2.73e-12;
+  newblockquadraturechanges<2.21e-13; selected64refinement6.86e-14rel.
+  Old356corekeptfixed, so notwhole-domain orcontinuumenclosure.
+- +64conditionalretainedsourceinterval eta.01=[-56012.24022,2903.14948];
+  eta.0001=[-5649053.25665,291677.61098]. Bothsignsunresolved; missing
+  insertioncomplement,allsectors,IR/UVcompletionandphysicalrenormalizedstress.
+- Saved19.7MB selectionarchive:nominalfull628 polynomialforms,refined
+  candidateincrements,Schur/RHS,sourcecolumnsandtransform. Reusewithout
+  reassembly. Storedload/Tspecifictokappa.7,m.1; recomputeinsertion/selection
+  forotherfrequency. Fullpolynomialfieldformsremainavailable.
+- Reportappended PHYSICAL_EUCLIDEAN_OPERATOR.md 'Residual localization and
+  optimal candidate combinations'. SVD isestablishedlowrankmathematics
+  (Eckart/Young1936publisherabstractverified); no noveltyclaim foralgorithm.
+
+Driver source SHA256:a4623b5913a1b03dd40c71db7e5113e661764bd1db2329ecd48a2142c0fd9ed3
+Results SHA256:3da8d3e020724d5b605bee047fd40224ae2725802abfcff07d0e427ab1853121
+State SHA256:4977aa90e23fcf201d5fe91436e93520c481bc6ea42dca9fd0f04ff5bd9a04c0
+
+- Post-selection directprofile/audit9checksPASS. Same source/grid, trial420
+  lifted to628 chart/provider596 beforefullaction. Bridge1040.248475664
+  reproduced5.90e-15rel. Left/rightcollarseach518.237534541; center3.773406582
+  (was702.668990258). Collars99.6373% ofremainingbridgeerror,polar1.40015%.
+  Radialpeaknear|s|=.096. Exteriorresidual146.798595625 remainsseparate.
+- Independent rawsolvesagreewithin6.64e-11(fullpool),1.19e-11(selected);
+  gain-eigenvalues ofQ*S^-1Q agree8.53e-13abs withSVDgains. All45newchecks
+  PASS; source/dataset hashes preserved; bothfiguresinspected.
+- Selectedprofilesource d2065ed03dd9dc716e8715e67bdfef5f99d785a62298e17f2030745d1fccaf67
+  JSON244823c5282e0a24c42db284e341d337474bb443c129d25ccadba6bb225a6173
+  NPZ294e176625c4861927457581965c61f5dd391e303e6ea83884d387dd06dad2b4
+
+NEXT: test localized collar radial corrections preservingexactzerotraces
+andtheexistingsewing, againstfurtherglobalradialmodes. The measuredpeak
+atdistance~.004Dfromopeningscaninformwidths; useactualSchurgains, notonly
+peakheight. Do notincrease same272pool'srank to chaseitsremaining1187floor.
+Reuse628 forms, T64 andpostprofilecoefficientstoavoidoldassembly. Physical
+source,insertioncomplement,allsectors,IR/UVcompletion,stabilityandchronology
+remainseparateunachievedrequirements.13Sep2027->12Sep2027stillunproved.
+All delegatedwork finished; no simulation remainsrunning.
+Layout/navigation/provenance PASS:147 imports,1310 links,8 historical
+guards,14 frozen hashes and operator identity. All45 checks and every new
+source/input/state hash pass; historical byte preservation verified.
+
+--- Preserved checkpoint157 and earlier history ---
+
 # Authoritative checkpoint157 — opening fields reduce the auxiliary residual
 
 Previous checkpoint156 published5609b20dd9621503fad793c89d05cab9446dea64.
