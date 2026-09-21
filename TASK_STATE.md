@@ -1,3 +1,66 @@
+# Authoritative checkpoint151 — localized Green correspondence and proper mass
+
+Previous goal turn: PROGRESS; checkpoint150 published
+5c2c5615de4dc35e96ad666951bb5b536c56434e. Goal ACTIVE, unachieved.
+Import complete. No new law, obtainable material, supported stable bridge
+or 13Sep2027->12Sep2027 passage. Scalar-clock rejection150 still applies.
+
+- Returned to actual next Dirac-source dependency, not another basis sweep.
+  Existing sewn geometry has N>=cN>0, unbounded above, and complete domains.
+- For A_k=Dhat_k skew-adjoint and m!=0, (A_k+m)^-1 bounded1/|m|.
+  For compact source f, v=N^-1/2(A_k+m)^-1f lies in H and satisfies
+  (H_m+ik)v=sqrtN*beta*f distributionally. Maximal H_m domain gives
+  a(A_k+m)^-1b=a*sqrtN*(H_m+ik)^-1*sqrtN*beta*b for compact a,b.
+  No bounded global sqrtN assumption or massless global inverse asserted.
+- Core identity Re<beta*u,H_m*u>=m<u,N*u> gives ||H_m*u||>=|m|cN||u||;
+  graph closure proves a mass-dependent Hamiltonian gap. No massless gap.
+  Compact Green norm<=||a*sqrtN||||b*sqrtN||/sqrt(k²+m²cN²).
+- Common-core convergence H_m->H0 gives strong resolvent convergence;
+  both signs of m yield the same localized massless Green at fixed k!=0.
+  Dirac-weighted -A(P+eta)^-1 = [(A+sqrteta)^-1+(A-sqrteta)^-1]/2.
+  Bare squared inverse uses their difference/(2sqrteta), not same limit.
+  Proper PV shift masses sqrt(j*M²+eta), not a frequency substitution.
+- Positiveeta common PV trace exists: combined local operator order-6 in4D;
+  heat weight exp(-eta*s)(1-exp(-M²s))³ cures compact UV and large proper time.
+  deltaGamma=-Tr_per_time(deltaA*S_eta), S_eta=-A*sum c_j(P+eta+jM²)^-1.
+  Common relative trace only; no split divergent determinants. No uniform
+  eta->0 trace estimate follows. Fixed nonzero frequency convergence is
+  strong/distributional, not convergence of a differentiated diagonal.
+- Ordered eta->0 then frequency removal on bounded-H energy target uses
+  existing gap-free lemma. Original joint infrared/stress limit remains open.
+  Positive mass need not select empty exact-zero state. Finite isolated
+  cluster correction cancels for this full-Dirac metric probe, not arbitrary
+  observables or embedded continuum thresholds; vacuum cusp still possible.
+- New scripts/dirac_green_mass_limit.py is finite6x6 algebra control only,
+  NOT a bridge simulation or physical source. All10 checks PASS; inverse,
+  proper square, weighted inverse, derivative/PV differences<2.2e-14.
+  Wrong frequency shift and zero-occupation mismatch detected. Positive
+  gap observed with minimum ratio1.3582 to analytic lower bound.
+  Added weighted-inverse check after initial9check pass; final10check pass.
+- Report appended to docs/PHYSICAL_EUCLIDEAN_OPERATOR.md, section
+  'Localized Green identity and proper-mass limit'; existing history retained.
+  Muller arXiv1002.3263 A1 requires bounded inverse lapse and cannot directly
+  prove our global case. Compact proof supplied here; novelty not claimed.
+  Figure inspected; old physics simulations and saved results unchanged.
+
+NEXT: control joint small-mass/small-frequency corner of compact
+stress-differentiated kernel with empty-zero state and UV subtraction,
+or compute directly from declared covariance with explicit local matching.
+Do not redo positive-mass correspondence, low-H localized lemma or another
+radial/angular sweep. Spatial remainder and fixed-scheme M->infinity remain.
+Current static Dirac geometry also has global time and no causal loops.
+
+Source SHA256:1ff4edbbf5b574553ca8fb94f852781a8bfd29838d8c2574cb69ba62c8e0630a
+Result SHA256:867698565973e6b3eb7227e646fe80d1e2c8b92a189cc15a29697176852a0ed7
+
+Final verification PASS:134 imports,1202 local Markdown links, historical
+source guards and operator identity; current source/input hashes, full
+historical byte suffixes, unchanged prior calculations/results and whitespace.
+Independent agents confirm the compact proof and remaining limit restriction.
+No simulation or agent job remains running. No material/source value inferred.
+
+--- Preserved checkpoint150 and earlier history ---
+
 # Authoritative checkpoint150 — causal restriction; coupled principal checks
 
 Previous published checkpoint149: c2bfd38e27ed539dbf0a85978d67910a6b809b34.

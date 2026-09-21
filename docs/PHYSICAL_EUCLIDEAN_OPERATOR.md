@@ -1,5 +1,7 @@
 # A common physical Euclidean Dirac operator
 
+Update151: the [localized Green identity and proper-mass limit](#localized-green-identity-and-proper-mass-limit) below close the positive-mass correspondence and the massless limit at fixed nonzero frequency without an upper lapse bound. The joint infrared limit and stress coincidence remain unresolved. No physical supporting stress is reported.
+
 Increment137. This constructs the common positive operator needed by the
 fixed-mass PV identity in [136](DIRAC_SCHEME_MATCHING.md). The background is
 the exact smooth sewn manifold, magnetic bundle and chosen spin/flat-phase
@@ -424,3 +426,206 @@ common-P limit with the covariance above, retaining the correct lapse factors,
 UV subtraction and ordered limits. The lemma removes an unnecessarily strong
 absolute-IR premise on the Hamiltonian target; it does not automatically
 authorize the present proper-P trace and limit interchanges.
+
+## Localized Green identity and proper-mass limit
+
+Increment151 resolves part of the representation problem just stated.
+It uses the existing complete sewn geometry and self-adjoint domains, with
+$N\ge c_N>0$ but no finite upper bound on $N$. These are analytic results
+for that assumed geometry, not measurements or a new physical law.
+The [finite algebra controls](../scripts/dirac_green_mass_limit.py) and
+[saved results](../results/dirac_green_mass_limit_results.json) check the
+factors independently; they do not approximate the bridge stress.
+
+![Green correspondence and remaining source calculation](../figures/dirac_green_mass_limit_progress.png)
+
+### A positive proper mass gives a Hamiltonian gap
+
+Write $A_\kappa=\widehat{\mathcal D}_\kappa$ on the canonical spatial
+Hilbert space, $B=N^{-1/2}$ and $H_m=H_0+mN\beta$. Here $A_\kappa$
+is skew-adjoint, $B$ is bounded, and each $H_m$ has the self-adjoint
+maximal domain established above. On the common compact smooth core,
+
+$$\operatorname{Re}\langle\beta u,H_mu\rangle
+=m\langle u,Nu\rangle.$$
+
+The massless term has zero real part because $\{\beta,H_0\}=0$.
+Cauchy--Schwarz and $N\ge c_N$ imply
+
+$$\|H_mu\|\ge |m|c_N\|u\|.$$
+
+This inequality extends by graph closure without assuming that every
+vector in $D(H_m)$ belongs separately to $D(N)$. Self-adjointness then gives
+
+$$\operatorname{spec}(H_m)\cap(-|m|c_N,|m|c_N)=\varnothing,
+\qquad
+\|(H_m+i\kappa)^{-1}\|\le
+\frac1{\sqrt{\kappa^2+m^2c_N^2}}.$$
+
+This is a mass-dependent gap. It supplies no gap at $m=0$.
+
+### Compact Green identity without a bounded global lapse
+
+For $m\ne0$, skew-adjointness gives a bounded inverse
+$(A_\kappa+m)^{-1}$ with norm at most $1/|m|$. Take compactly
+supported $f$ and put $u=(A_\kappa+m)^{-1}f$, $v=Bu$.
+The already derived differential congruence implies, distributionally,
+
+$$ (H_m+i\kappa)v=N^{1/2}\beta f.$$
+
+Both $v$ and the right side are in the canonical $L^2$ space. The maximal
+domain of $H_m$ therefore places $v$ in $D(H_m)$, so its resolvent
+determines $v$ uniquely. For compact smooth spatial multipliers $a,b$,
+
+$$\boxed{a(A_\kappa+m)^{-1}b
+=aN^{1/2}(H_m+i\kappa)^{-1}N^{1/2}\beta b.}$$
+
+In particular,
+
+$$\|a(A_\kappa+m)^{-1}b\|
+\le\frac{\|a\sqrt N\|_\infty\|b\sqrt N\|_\infty}
+{\sqrt{\kappa^2+m^2c_N^2}}.$$
+
+The factors are finite on the compact supports. This proof does not treat
+$N^{1/2}$ as a bounded global map and does not assume a bounded global
+inverse for the massless Euclidean fibre. For a compact source its actual
+positive-mass solution also verifies the required weighted-domain condition.
+
+### What removing the proper-mass shift proves
+
+For a common positive shift $\eta$ of the proper squared operator,
+
+$$P_\kappa+jM^2+\eta
+=(A_\kappa+m_j)^\dagger(A_\kappa+m_j),
+\qquad m_j=\sqrt{jM^2+\eta}.$$
+
+This is a proper scalar mass, not $m_j=\sqrt jM+\sqrt\eta$ and not
+$\kappa\mapsto\sqrt{\kappa^2+\eta}$. A nonconstant lapse matters.
+For $m=\sqrt\eta$, functional calculus for the skew-adjoint $A_\kappa$
+gives the exact identities
+
+$$ (P_\kappa+m^2)^{-1}
+=\frac{(A_\kappa+m)^{-1}-(A_\kappa-m)^{-1}}{2m},$$
+$$\boxed{-A_\kappa(P_\kappa+m^2)^{-1}
+=\tfrac12\left[(A_\kappa+m)^{-1}+(A_\kappa-m)^{-1}\right].}$$
+
+On the common compact core, $H_mu\to H_0u$ as $m\to0$.
+This implies strong resolvent convergence: for the dense set
+$f=(H_0+i)u$, the resolvent identity bounds the difference by
+$\|(H_m-H_0)u\|$, and the resolvent norms are uniformly bounded.
+No norm-small bound on the global multiplication operator $mN$ is used.
+
+Consequently, at each fixed $\kappa\ne0$, both localized first-order
+inverses in the box converge strongly to
+
+$$G_{0,\kappa}^{a,b}
+=aN^{1/2}(H_0+i\kappa)^{-1}N^{1/2}\beta b.$$
+
+Thus the **Dirac-weighted** proper-$P$ inverse has the natural local
+massless Green limit. The bare squared inverse has an additional $1/m$
+in its difference formula and has not been assigned the same conclusion.
+The bound $C_{a,b}/|\kappa|$ also permits integration over any finite
+frequency band bounded away from zero, in the strong/weak distributional
+sense. Spatial derivatives are continuous on distributions. Evaluation
+on the diagonal is not, so this argument alone does not prove a
+stress-coincidence limit.
+
+### The common regulated stress trace at positive shift
+
+Let $A=\widehat{\mathcal D}_E$, $P=A^\dagger A=-A^2$ on the full
+Euclidean spacetime, and keep the same fixed Hilbert identification for
+the compact static metric variation. Put
+
+$$R_\eta=\sum_{j=0}^3c_j(P+\eta+jM^2)^{-1},\qquad
+S_\eta=-AR_\eta,\qquad c=(1,-3,3,-1).$$
+
+At fixed $\eta>0$ the common response exists as the compact relative
+trace per unit Killing time. Its heat representation has weight
+$e^{-\eta s}(1-e^{-M^2s})^3$. The compact second-order inserted heat
+trace is $O(s^{-3})$ at small $s$, so their product is bounded there;
+at large $s$ the positive shift supplies exponential decay. Equivalently,
+the common local orders are $R_\eta:-8$, $S_\eta:-7$ and
+$\delta A S_\eta:-6$, below the four-dimensional trace-class threshold.
+With the compact form factorization of the insertion, local heat smoothing
+controls the large-$s$ trace before multiplication by $e^{-\eta s}$.
+The local heat expansion used here is described in
+[Vassilevich, section2](https://arxiv.org/pdf/hep-th/0306138); the common
+positive-shift estimate and its restricted conclusion are given above.
+
+Since $\delta P=-A\delta A-\delta A A$, cyclicity of this common
+regulated trace, justified with spectral cutoffs before removal, yields
+
+$$\boxed{\delta\Gamma_{\rm PV,\eta}
+=-\tfrac12\operatorname{Tr}_{/\mathcal T}(\delta P R_\eta)
+=-\operatorname{Tr}_{/\mathcal T}(\delta A S_\eta).}$$
+
+This concerns the combined regulator expression. It does not split the
+individual ultraviolet-divergent mass traces. The estimates depend on
+$\eta$ and do not establish their uniformity as $\eta\downarrow0$.
+
+For an exact finite representation respecting the congruence, a separate
+metric-variation identity is
+
+$$\delta\log\det(P_\kappa+m^2)
+=2\operatorname{Re}\operatorname{Tr}
+[(H_m+i\kappa)^{-1}\{\delta H_0+m\delta(N\beta)\}]
+-2\operatorname{Tr}(N^{-1}\delta N).$$
+
+The lapse term cancels in the common PV sum. The mass-dependent term in
+$\delta H_m$ must remain. This finite identity does not authorize factoring
+separate infinite-dimensional determinants or replacing a conforming
+squared form by a squared compressed first-order matrix.
+
+### Zero modes and the remaining limit
+
+A simple exact control prevents an incorrect state identification. With
+$H_0=0$, $N=I$ and $\beta=\operatorname{diag}(1,-1)$, positive mass
+fills one zero-energy component as it tends to zero. Negative mass fills
+the other. Their average occupies each by one half; the declared massless
+state occupies neither. Thus small mass alone does not select the
+empty-zero prescription.
+
+For an isolated finite zero cluster the splitting is
+$m(P_0NP_0)\beta$. Its sign is $\operatorname{sgn}(m)\beta$ on that
+cluster, since $P_0NP_0$ is positive and commutes with $\beta$.
+The massless full-Dirac metric probe anticommutes with $\beta$, making
+both $\operatorname{Tr}(P_0\delta H_0)$ and
+$\operatorname{Tr}(\beta P_0\delta H_0)$ zero. This removes that
+isolated-cluster contribution to this probe, not every zero-mode observable
+or the embedded continuum-threshold problem. It also does not prove
+differentiability of a massless vacuum energy through a zero crossing.
+
+The proved fixed-frequency limit can be taken first, followed by the
+previous Hamiltonian low-energy frequency limit with explicit zero
+prescription. For $E_*<\infty$, that second step is controlled in local
+differentiated kernel norms by the gap-free lemma above. This ordered
+construction does not yet show that the original proper-$P$ response,
+integrated over all frequencies before $\eta\to0$, has the same limit.
+
+**Next unresolved decision:** control the joint small-mass/small-frequency
+corner in the compact, stress-differentiated kernel with the declared state
+and ultraviolet subtraction, or derive the source directly from the
+declared covariance with an explicitly matched local prescription. Do not
+redo the positive-mass identity or another radial basis sweep to answer
+this question. Spatial remainder control and fixed-scheme $M\to\infty$
+removal remain necessary before reporting the physical source value.
+
+### Controls and literature scope
+
+Ten executable controls pass for a six-dimensional factorization with
+noncommuting lapse and Hamiltonian, lapse maxima 2, 10 and 100, three
+frequencies and three positive shifts. Maximum normalized inverse,
+variation and PV-sum discrepancies are below $2.2\times10^{-14}$.
+The wrong-frequency substitution and the zero-occupation mismatch are
+detected explicitly. This is an algebra benchmark, not continuum evidence.
+The script records exact source/input hashes and reproduces the
+[PNG](../figures/dirac_green_mass_limit_progress.png) and
+[PDF](../figures/dirac_green_mass_limit_progress.pdf).
+
+Static Dirac Wick rotation is developed in
+[Muller, arXiv:1002.3263, sections3 and5](https://arxiv.org/pdf/1002.3263),
+but its assumption A1 bounds both $q=1/N$ and its inverse. It cannot be
+applied directly to this exterior's unbounded lapse. The compact-domain
+argument above addresses precisely that issue; novelty is not claimed.
+The self-adjoint closures remain those justified in the earlier sections
+using [Bandara--Saratchandran](https://arxiv.org/abs/1606.06190).

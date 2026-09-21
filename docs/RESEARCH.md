@@ -1,3 +1,26 @@
+# Checkpoint151 — proper-mass Green identity on the actual static geometry
+
+A compact-domain argument establishes the positive-mass Euclidean/Hamiltonian
+Green correspondence without an upper lapse bound. Proper mass gives a
+Hamiltonian gap; common-core convergence yields the localized massless Green
+at fixed nonzero frequency. The Dirac-weighted proper-P inverse therefore has
+the correct local limit in that order. The common positive-shift PV stress
+trace can also be written with this first-order kernel without splitting
+its divergent mass terms. These are analytic results, not a source value.
+
+The joint infrared limit, stress coincidence, state selection at threshold,
+spatial remainder and fixed-scheme regulator removal remain unresolved.
+Ten finite algebra controls pass; they detect the incorrect frequency-shift
+replacement and an exact-zero occupation mismatch. No new law, supported
+stable bridge, obtainable material or backward passage is established.
+
+See [proof and remaining physical decision](PHYSICAL_EUCLIDEAN_OPERATOR.md#localized-green-identity-and-proper-mass-limit),
+[controls](../scripts/dirac_green_mass_limit.py),
+[results](../results/dirac_green_mass_limit_results.json), and
+[visual](../figures/dirac_green_mass_limit_progress.png).
+
+--- Preserved checkpoint150 and earlier research ---
+
 # Checkpoint150 — causal restriction and local coupled perturbations
 
 The same smooth real single-valued timelike scalar is a temporal function:
