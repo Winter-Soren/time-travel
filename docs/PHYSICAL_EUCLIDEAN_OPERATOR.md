@@ -1412,3 +1412,127 @@ finite-$M$ values cannot be relabeled as that answer. Compare the resulting
 energy-and-pressure response against the prescribed geometry's gravitational
 requirement before attempting self-consistent support and stability. No new
 law, obtainable medium, or13September2027-to12September2027 passage is established.
+
+
+## Retained-source error test on the saved sewn forms
+
+Increment155 evaluates an error estimate on the actual saved forms, without
+rerunning the geometry. **The estimate is too wide to decide even the sign of
+the retained contribution.** This rejects this particular numerical shortcut;
+it does not reject the quantum state or establish a supporting medium.
+See the [calculation](../scripts/dihole_retained_resolvent.py),
+[results](../results/dihole_retained_resolvent_results.json), and
+[figure](../figures/dihole_retained_resolvent_progress.png).
+
+### A bound that only needs the first-order domain
+
+For fixed real frequency write $A=A_\kappa$, $A^*=-A$, and $P=A^*A$.
+Let $V,Y$ be orthonormal finite trial maps with ranges in $D(A)$, and define
+
+$$M_V=(AV)^*AV,\quad M_Y=(AY)^*AY,\quad B_Y=Y^*AV,\quad
+ g_V=(M_V+\sigma I)^{-1},\quad g_Y=(M_Y+\sigma I)^{-1},\qquad \sigma>0.$$
+
+The variational resolvent inequality gives
+$g_V\le V^*(P+\sigma)^{-1}V$. Normality of $A$ gives the exact bounded
+quadratic-form identity
+
+$$(AV)^*(P+\sigma)^{-1}(AV)=I-\sigma V^*(P+\sigma)^{-1}V.$$
+
+Applying the same variational lower bound to the loads $AV$ therefore gives
+
+$$\boxed{g_V\le V^*(P+\sigma)^{-1}V
+\le U_Y:=\sigma^{-1}(I-B_Y^*g_YB_Y).}$$
+
+No second-order residual $P\phi$ is used: the existing sewn lifts match values,
+but need not match normal derivatives at the mouths. They are admissible for
+this form argument without being in $D(P)$.
+
+This is an application of standard variational error estimation, with no
+novelty claim. Related functional flux estimates and their small-positive-shift
+limitation appear in [Repin and Sauter (2006), equations3 and7](https://www.numdam.org/item/10.1016/j.crma.2006.06.024.pdf).
+The displayed skew-operator specialization is derived above; that paper does
+not analyze this bridge or establish its physical support.
+
+Set $D_V=V^*\dot P V=D_+-D_-$, with $D_\pm\ge0$, and $E_\sigma=U_Y-g_V$.
+The finite-rank insertion then obeys
+
+$$-\operatorname{Tr}(D_-E_\sigma)\le
+\operatorname{Tr}\{D_V[V^*(P+\sigma)^{-1}V-g_V]\}
+\le\operatorname{Tr}(D_+E_\sigma).$$
+
+Use ordinary signed interval addition with coefficients
+$-c_j/2=(-1/2,3/2,-3/2,1/2)$ and shifts $\sigma_j=\eta+jM^2$.
+The central value is evaluated through the common rational expression,
+not a subtraction of four large traces. The error bounds still treat the
+four shifts independently, which loses the cancellation that makes the
+regulated source small.
+
+### Reconstruction and numerical result
+
+The authenticated142 archive already contains the needed first-order matrix:
+$W_{\rm raw}=\mathrm{weak}_0+\kappa\,\mathrm{weak}_1=\Phi^*A_\kappa\Phi$.
+For $G_V=L_VL_V^*$ and $G_Y=L_YL_Y^*$,
+
+$$B_Y=L_Y^{-1}W_{\rm raw}[Y,V]L_V^{-*}.$$
+
+No additional $\beta$ or $i$ is applied. This matrix exchanges chiralities;
+the calculation keeps both. A chiral implementation would require the
+opposite-chirality flux space. The positive form remains the squared
+*differential action*, never the square of the compressed first-order matrix.
+
+The test uses phase0, $\mu=1/2$, $\kappa D=.7$, $MD=1$, radial resolution12,
+216 retained fields, and216/264/312 flux fields. With312 flux fields:
+
+| Positive infrared shift $\eta$ | Finite fibre value | Conditional retained interval | Error radius / finite signal |
+| --- | ---: | ---: | ---: |
+| $.01$ | $1.4018145754\times10^{-5}$ | $[-214022.6142,12606.4757]$ | $1.52675\times10^{10}$ |
+| $.0001$ | $1.4032775031\times10^{-5}$ | $[-21073397.5630,564263.4905]$ | $1.50173\times10^{12}$ |
+
+These are **one-frequency** values. Their positive central sign is compatible
+with the earlier negative frequency-integrated finite-space estimate; neither
+is the physical renormalized source. Increasing the flux space from216 to312
+reduces the first error radius by only $0.00004065\%$. Decreasing $\eta$ worsens
+it by about two orders of magnitude. This estimator is not useful here.
+
+Seven controls pass: comparison with an independently known complete complex
+skew operator (including a nullspace), exact input provenance, nested-space
+normalization, the rational PV identity, sampled matrix order, monotonic
+improvement with the larger flux space, and saved higher-quadrature comparison.
+The complete-space control agrees to $1.13\times10^{-12}$ relatively.
+Changing the saved quadrature from64/24 to80/32 changes the reported interval
+by less than $6.4\times10^{-13}$ relatively. That comparison is sensitivity,
+not an outward error enclosure. The analytic theorem is rigorous under its
+stated operator assumptions; these floating integral inputs are not certified.
+
+### What this does and does not settle
+
+The bounded insertion is $VD_VV^*$, not the whole physical $\dot P$.
+Omitted insertion blocks, other azimuthal sectors, the frequency integral,
+the quantitative $\eta\downarrow0$ correction and the heat correction remain
+unbounded numerically. A nonzero $\kappa$ cannot replace $\sigma>0$ globally
+when the lapse is unbounded.154's existence result supplies no evaluated
+infrared error constant. The intervals do not measure the actual truncation
+error; a loose upper bound cannot prove that the true error is large.
+
+Do not keep adding angular fields merely to shrink this separated-shift
+estimate. The next calculation must preserve the common-PV cancellation or
+use the proper heat trace before estimating the omitted source. A fixed finite
+spatial basis also cannot simply be inserted into154's heat subtraction:
+with canonical $Q_\kappa=Q_0+\kappa Q_1+\kappa^2C$ and $C>0$, its frequency-
+integrated heat derivative has
+
+$$\delta K_V(s)\sim-\frac{\operatorname{Tr}(C^{-3/2}\dot C)}{4\sqrt{\pi s}},$$
+
+whereas the continuum variation with $\delta A_0=0$ starts with
+$\delta A_2/(16\pi^2s)$, and $\delta A_2=.11400999281577749D\ne0$.
+Thus the fixed-space continuum-subtracted correction integral diverges at
+small $s$. This diagnoses nonuniform truncation, not a divergent physical
+source. Any heat calculation needs a resolved positive-time window and an
+analytic continuum ultraviolet remainder, with omitted sectors and the
+exterior accounted for.
+
+The research remains within established mathematics and field theory. There
+is no deadline at which finishing these checks guarantees a new law. A new
+physical law would require a distinct testable prediction and empirical
+support. No stable supporting medium or13September2027-to12September2027
+passage has been established.

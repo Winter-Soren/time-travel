@@ -1,3 +1,70 @@
+# Research increment155 — retained-source estimator is too wide
+
+Previous goal turn: PROGRESS; checkpoint154 published
+5c0e5656363eb3058921114d50fbc0865573a2eb. Goal ACTIVE, unachieved.
+Import complete. No new law, physical source value, obtainable medium,
+supported stable bridge or backward passage. No breakthrough deadline.
+
+- Audited actual142 raw forms and reused them without reassembly. Their
+  positive form is the differential norm square; saved weak is Phi* A_k Phi,
+  including beta already. It flips chirality; no extra beta/i/degeneracy.
+- For skew-adjoint A, P=A*A, form-conforming orthonormal V,Y and sigma>0:
+  gV <= V*(P+sigma)^-1 V <= UY=(I-BY* gY BY)/sigma,
+  BY=Y*A V, gV=(MV+sigma)^-1, MV=(AV)*(AV), similarly Y.
+  Proof: variational lower bound plus (AV)*R(AV)=I-sigma V*R V.
+  Does not apply pointwise P to lifts with unmatched normal derivatives.
+- E=UY-gV>=0, DV=Dplus-Dminus gives error between -Tr(Dminus E)
+  and Tr(Dplus E). Signed PV coefficients(-.5,1.5,-1.5,.5) combine
+  the shift intervals. Central value keeps the common rational formula.
+- Tested phase0,mu.5,kappaD.7,MD1,radial12,V216,Y216/264/312 from142.
+  eta.01: finite fibre +1.4018145754e-5; Y312 interval
+  [-214022.6142,12606.4757], radius/signal1.52675e10.
+  eta1e-4: +1.4032775031e-5; interval[-21073397.5630,564263.4905],
+  radius/signal1.50173e12. One-frequency positive sign is distinct from
+  earlier negative integrated finite response; neither is physical Q_HK.
+- EnlargingY216->312 reduces eta.01 radius only0.00004065 percent.
+  The separated-shift bound loses PV cancellation and worsens as eta0.
+  Reject THIS ESTIMATOR as a useful sign certificate, not the geometry.
+  A large upper error bound does not prove actual error is large.
+- The analytic bracket includes full-operator feedback for VD_VV* ONLY.
+  Floating integral inputs are not enclosed. Omitted physical insertion,
+  azimuthal sectors, infrared correction and heat remainder still missing.
+  No nonzero-k global coercivity shortcut: lapse is unbounded.
+- Seven runnable checks PASS, including independent complete skew-matrix
+  comparison with a nullspace, provenance, overlap, PV rational identity,
+  order, flux-space monotonicity and saved higher-quadrature sensitivity.
+  Complete-space relative error1.13e-12; q80 intervalchange<6.4e-13relative.
+  Independent analytic/code audit agrees and reconstructs saved intervals.
+- Fixed spatial basis cannot be inserted into154 heat subtraction:
+  deltaK_V(s)~-Tr(C^-3/2 dotC)/(4sqrt(pi*s)), C=Q2>0, whereas physical
+  deltaK~deltaA2/(16pi²s), deltaA2=.11400999281577749D. The fixed-basis
+  continuum-subtracted correction integral diverges. This is nonuniform
+  truncation, not a physical divergence. No heat simulation was rerun.
+- Files: scripts/dihole_retained_resolvent.py, matching results and figure.
+  Report appended PHYSICAL_EUCLIDEAN_OPERATOR.md section 'Retained-source
+  error test on the saved sewn forms'. Frozen evidence remains unchanged.
+
+NEXT: pursue the finite-continuum anchor/heat correction of154 while preserving
+common-PV cancellation. Do not keep enlarging angular Y for this useless
+separated-shift estimator. Bounded next experiment: compute actual proper
+heat variation from saved sewn pencils at positive heat times, with exact
+frequency polynomial and both chiralities, then identify whether any time
+window is resolved across saved radial/angular/exterior families. A finite
+space alone cannot supply the continuum ultraviolet coefficient or remainder.
+Use analytic high-energy subtraction or a common-PV residual bound to cover
+omitted source insertions; full physical source sign remains the target.
+Do not redo153/154 qualitative existence proofs or unrelated old simulations.
+All delegated agents finished; no simulation remains running.
+
+Source SHA256:8f0be07c290d51017300022f4e9fd43ba40e01c32f7bff22ec81f4babf2dee8c
+Result SHA256:ea9fe66600e1b24ab3376ab258928edbdc0653c326fc1a9ed0a6419e98ccfff8
+
+Verification PASS:138 imports,1253 Markdown links,8 historical guards,
+14 frozen hashes, operator identity, exact source/input hashes and historical
+byte preservation. Independent audit agrees. Figure inspected.
+
+--- Preserved checkpoint154 and earlier history ---
+
 # Checkpoint154 — the declared compact source prescription has a finite limit
 
 The high-energy remainder and large-frequency tail are now controlled at
