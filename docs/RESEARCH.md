@@ -1,3 +1,72 @@
+# Research increment164 - regular aligned trial and profile envelope
+
+Previous checkpoint163 published 5ef80df3e57ddd630d40d4d0eb5a0deaa8698659.
+Previous goal turn classified PROGRESS: exact slice residual and14 checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One hydrogen atom, nominal1nm areal diameter remains target; humans deferred.
+No new law, supporting medium, stable opening, atom transit or clock advantage.
+
+- IMPLEMENTED full finite-q field-following trial with C-infinity pole window.
+  lambda_c=1+C(lambda-1), beta_c=C atan(t), lambda=1/sqrt(1+t²), t=Rtheta0_s.
+  g=normalizedexp(q lambda_c L), chi=sqrt(W)g eta. Anchor L(theta0)=0;
+  unlike a uniform width, theta-dependent lambda makes additive constants matter.
+- C=S((theta-.15)/.2)S((pi-.15-theta)/.2), plateau contains theta0 (checked).
+  Restores exact original polar profile/spin, so q5 is in the operator domain.
+  Both q C_theta(lambda-1)L and spin_theta terms retained, not tail-discarded.
+- Full r1/r0 evaluated atq5,25,105,1005,10005, nu=.9, u=.0125,.025,.0375.
+  Finite-epsilon common-H family c=exp(epsilon F), t_e=c t,
+  t_e,s=c(t_s+epsilon F_s t). Differentiate H_e,U_e,h_e consistently.
+  Angular projection is exact boundary term[g²sin(beta_c)]/2=0.
+- q10005 r0/frozen=.0879856,.0421003,.0393268 (91.2--96.1% reduction).
+  dotr0 ratios=.195421,.058485,.049634. r0 approaches a sampled plateau,
+  not a proved uniform/atomic-flux remainder. Units are D=1.
+- IMPORTANT: r1 increases4.77,31.97,46.34 times; dotr1 increases too.
+  Local carriers exp(ik s) have norm²=r0²+k²r1². All tested kD=0,1,10,100
+  improve atq10005 in both residual and variation. Not arbitrary envelopes,
+  normalizable global packets, all longitudinal momenta or a source trace.
+- Retained worse cases: q5 r0 is2.61--4.71 times worse; q105,u=.0125
+  dotr0 is15.95 times worse. Polar-window mass~14% atq5; <7.1e-240 atq10005
+  is sampled probability, not a bound on derivative contributions.
+-16 controls PASS. Radial actionFD6.67e-9, angularFD1.38e-8 absolute;
+  metric derivativeFD1.60e-8 relative; quadrature512/48->1024/80 change5.77e-9.
+  Fine derivative steps reach noise; no monotone convergence claim. Existing
+  centralq1 zero-tilt cylinder recovered. Figure explicitly labels k=0.
+- NEW UNIFORM GEOMETRY RESULT: source-verified162 interval cover implies
+  NP=V²/(R d)²>=.17645235686832322; a_theta/sin(theta)>=.25473589752726683.
+  Concavitysin and anchoredL give L<=-.011237187374413473*(theta-theta0)²
+  over the WHOLE CLOSED COLLAR for any interior flux center. Directed bounds.
+  This bounds the unnormalized log profile only, not its normalized residual.
+- Conditional next lemma independently checked: given local L>=-M delta²,
+  W bounds, positive lambda_min and plateau clearance, Z>=C_Z q^-1/2 and
+  moments E[delta^(2j)]<=C_j q^-j. On C=1 combined leading coefficient
+  A=lambda_s L+lambda L_s+(sin(beta)/R)L_theta has A=A_theta=0 atcenter.
+  At finiteepsilon last coefficient becomes exp(-epsilonF)sin(beta_e)/R
+  after factoringc². Uniform A_theta,theta and fourthmoment can bound qA.
+- NEXT: evaluate uniform normalization/moment constants on a REGULAR BAND,
+  then full residual and metric derivative including cutoff transitions and
+  normalization derivatives. No more selected-point refinement without this
+  error budget. Nullband, open/bypass, state and subtraction remain separate.
+- No full quantum source or gap enclosure, no atomic-flux simulation. Current
+  static geometry excludes backward causal passage:13Sep2027->12Sep2027 not
+  established. Hydrogen propagation/survival/clock calculation still undone.
+
+- Preserved exact rounding pilot source/result: reported envelope coefficient
+  exceeded the product of reported rounded bounds by3.03e-18. Compose bounds
+  after outward rounding, now independently Decimal-checked. Residuals and
+  tolerances unchanged; paths and hashes are in the final results.
+
+Source SHA256 adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7
+Results SHA256 fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7
+
+Verification PASS:16 saved checks,26 exact input hashes, current source/result
+hashes and exact rounding archives; unchanged pilot residual records.
+Independent carrier/algebra checks pass.159 imports,1399 Markdown links,
+8 historical guards,14 frozen hashes and operator identity pass. Figure
+inspected; six prior document byte sequences preserved. All delegated work
+finished; no simulation, worker or background job remains live.
+
+--- Preserved checkpoint163 and earlier history ---
+
 # Research increment163 - exact slice channels and radial coupling
 
 Previous checkpoint162 published 8a01f1ea1f24b1043e8933b5799c1d2fd435b036.

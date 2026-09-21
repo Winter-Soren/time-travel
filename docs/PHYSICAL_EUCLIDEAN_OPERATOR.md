@@ -3043,3 +3043,186 @@ regular flux band and matched to the separate exterior-null and open-channel
 contributions before it can control a stress trace. A small one-state
 residual is insufficient. No source bound, supported opening, stability,
 atom survival, new law, or backward/future clock advantage follows here.
+
+
+## Pole-regular field-following channels and a uniform profile envelope
+
+The [field-following calculation](../scripts/dihole_aligned_channel.py) now
+implements a regular finite-flux trial and its full collar action, rather
+than stopping at the leading matrix cancellation. All **16 checks pass**.
+The [saved results](../results/dihole_aligned_channel_results.json) retain
+both improvements and cases where this trial is worse; the
+[figure](../figures/dihole_aligned_channel_progress.png) explicitly displays
+the $k=0$ residual. The scope remains one supporting-field state per flux,
+at three collar slices, with no hydrogen propagation or source trace.
+
+### A normalized trial that remains in the operator domain
+
+Anchor the exact primitive by $L(s,\theta_0(s))=0$, where
+$a(s,\theta_0)=\nu=\mu/q$. With the existing smooth step $S$, use
+
+$$
+C(\theta)=S((\theta-.15)/.2)S((\pi-.15-\theta)/.2),\qquad
+\lambda_c=1+C(\lambda-1),\quad \beta_c=C\beta,
+$$
+
+$$
+t=R\theta_{0,s},\quad \lambda=(1+t^2)^{-1/2},\quad
+\beta=\arctan t,\qquad
+g=Z^{-1/2}e^{q\lambda_cL},\quad Z=\int We^{2q\lambda_cL}d\theta,
+\quad \chi=\sqrt Wg\eta,\quad
+\eta=\begin{pmatrix}\cos(\beta_c/2)\\\sin(\beta_c/2)\end{pmatrix}.
+$$
+
+The plateau must contain the field-line center; the implementation checks
+this. Since $C$ and its derivatives vanish on neighborhoods of both poles,
+the original regular powers and spin orientation are restored there,
+including the $q=5$ sector that invalidated the uncut proposal. The
+angle-dependent width makes the additive constant of $L$ consequential;
+anchoring and differentiating it consistently is essential.
+
+Let $\ell=g_s/g$ and $p=g_\theta/g$. The actual derivatives include
+
+$$
+\ell=q(\lambda_{c,s}L+\lambda_cL_s)-Z_s/(2Z),\qquad
+p=\lambda_cV+qC_\theta(\lambda-1)L,\qquad
+\eta_i=\frac{\beta_{c,i}}2
+\begin{pmatrix}-\sin(\beta_c/2)\\\cos(\beta_c/2)\end{pmatrix}.
+$$
+
+Both the window derivative in $p$ and the spin derivative $\eta_\theta$
+remain in the angular action. No tail probability is used to drop them.
+
+For the finite paired variation write $c=e^{\epsilon F}$ and replace
+$t$ by $t_\epsilon=ct$, including
+$t_{\epsilon,s}=c(t_s+\epsilon F_st)$. Normalize $g_\epsilon$ in the
+original $W$ measure so all trial vectors live in the same canonical space.
+With $v_\epsilon=c^2\int g_\epsilon^2\cos\beta_c\,d\theta$, direct action gives
+
+$$
+(H_\epsilon U_\epsilon-U_\epsilon h_\epsilon)\psi
+=-i(r_1\psi_s+r_0\psi),\qquad
+h_\epsilon=-i(v_\epsilon\partial_s+v_{\epsilon,s}/2),
+$$
+
+$$
+\frac{r_1}{\sqrt Wg}=\frac{c^2\sigma_3\eta}{W}-v_\epsilon\eta,
+$$
+
+$$
+\frac{r_0}{\sqrt Wg}=
+\frac{c^2\sigma_3[(\ell+\epsilon F_s)\eta+\eta_s]}{W}
++\frac{c[\sigma_1(p\eta+\eta_\theta)+i\sigma_2V\eta]}{RW}
+-\frac{v_{\epsilon,s}}2\eta.
+$$
+
+The angular scalar projection is the boundary term
+$[g^2\sin\beta_c]_0^\pi/2=0$, so it introduces no extra scalar potential.
+The metric derivative differentiates the operator, trial and projected
+operator together. It is not obtained by keeping the trial frozen.
+
+### Measured improvement and its limitations
+
+The same fluxes $5,25,105,1005,10005$ and label $\nu=.9$ are retained.
+At $q=10005$:
+
+| Collar $s/D$ | $D\|r_0\|$ | Ratio to frozen $\|r_0\|$ | Ratio of metric-derivative norms |
+| --- | ---: | ---: | ---: |
+| .0125 | $6.691657\times10^{-5}$ | .087986 | .195421 |
+| .0250 | $3.050727\times10^{-4}$ | .042100 | .058485 |
+| .0375 | $8.591902\times10^{-4}$ | .039327 | .049634 |
+
+The $r_0$ reduction is91.2--96.1%. Its sampled norm approaches a plateau as
+flux increases, replacing the frozen profile's observed square-root growth.
+This trend is not a uniform asymptotic error bound at atomic flux.
+All norms use $D=1$; physical dimensions and wavelengths must be restored
+consistently when $D$ changes with flux.
+
+The derivative coefficient $\|r_1\|$ **increases** by factors4.77,31.97,46.34
+at those points. For a local carrier $\psi=e^{iks}$, real residual vectors
+give exactly $\|r_0\|^2+k^2\|r_1\|^2$. All tested carriers
+$kD=0,1,10,100$ improve at $q=10005$, both for the action and its metric
+variation. At $kD=100$ their full local residual ratios are0.10187,0.07074,
+0.08486. These plane-wave checks are not normalizable global packets or
+bounds for all longitudinal momenta. A general envelope needs both
+coefficients, and the full vacuum trace includes more than these carriers.
+
+At $q=5$, $r_0$ is2.61--4.71 times worse. At $q=105$, $s/D=.0125$, its
+metric derivative is15.95 times worse despite the smaller $r_0$ itself.
+These are retained physical approximation outcomes, not numerical failures.
+The fraction of trial norm in the pole-restoring region is roughly14%
+at $q=5$ and below $7.1\times10^{-240}$ in the sampled $q=10005$ states.
+That numerical tail mass alone is not a bound on the derivative terms.
+
+Independent radial and angular action differences are below
+$6.67\times10^{-9}$ and $1.38\times10^{-8}$ in $D=1$ units. Metric finite
+differences agree with the complex derivative to $1.60\times10^{-8}$
+relatively. Angular/inner quadrature refinement changes the reported
+norms by at most $5.77\times10^{-9}$ relatively. The smallest derivative
+steps reach floating-point noise; monotone convergence at every step is
+not claimed. The central $q=1$, zero-tilt cylinder is recovered.
+
+### A uniform bound that starts the next error estimate
+
+Reuse the recorded directed interval bounds on the entire closed collar.
+Writing the positive potential denominator of the geometry as $\mathcal V$,
+
+$$
+NP=\frac{\mathcal V^2}{(Rd)^2}\ge n=0.17645235686832322,\qquad
+\frac{a_\theta}{\sin\theta}\ge m=0.25473589752726683.
+$$
+
+Here $R\le1/20$, $d\le21/20$ and
+$\mathcal V\ge0.022053272061495002$. Directed arithmetic rounds the new
+bounds outward; the exact source and input hashes of the interval
+calculation are checked before reuse.
+
+Concavity of $\sin\theta$ on $[0,\pi]$ gives
+$|\cos\theta-\cos\theta_0|\ge\sin\theta|\theta-\theta_0|/2$.
+Using $L_\theta=NP(\nu-a)/\sin\theta$ on both sides of the center and
+integrating with $L(\theta_0)=0$ proves
+
+$$
+L(s,\theta)\le-\gamma(\theta-\theta_0)^2,\qquad
+\gamma=0.011237187374413473.
+$$
+
+This logarithmic envelope applies throughout the collar for any interior
+flux center, not just the three sampled slices. It bounds the unnormalized
+profile; normalization still needs a lower estimate.
+
+Specifically, suppose a regular band additionally has uniform
+$0<w_-\le W\le w_+$, plateau clearance $r>0$,
+$L\ge-M(\theta-\theta_0)^2$ within that clearance and
+$\lambda_{\min}\le\lambda_c\le1$. For $q\ge q_{\min}>0$, put
+$b=\gamma\lambda_{\min}$ and
+
+$$
+C_Z=w_-\sqrt{\frac{\pi}{2M}}\operatorname{erf}
+\left(r\sqrt{2Mq_{\min}}\right).
+$$
+
+Then $Z\ge C_Zq^{-1/2}$ and
+
+$$
+\left\langle|\theta-\theta_0|^{2j}\right\rangle
+\le\frac{w_+}{C_Z}\frac{\Gamma(j+1/2)}{(2b)^{j+1/2}}q^{-j}.
+$$
+
+On the plateau, the combined leading coefficient
+$A=\lambda_sL+\lambda L_s+(\sin\beta/R)L_\theta$ obeys
+$A(\theta_0)=A_\theta(\theta_0)=0$. A uniform second-derivative bound
+therefore controls $qA$ through the fourth-moment estimate. At nonzero
+$\epsilon$, after factoring out $c^2$, the last coefficient becomes
+$c^{-1}\sin\beta_\epsilon/R$, preserving the cancellation.
+
+The next step is to evaluate these remaining constants on a regular band
+and bound normalization derivatives and pole-transition terms. This
+replaces further selected-point sampling with a finite-flux error estimate.
+The exterior magnetic null, open channels, global state and subtraction
+matching remain separate requirements for a source trace. No stable
+opening, obtainable medium, atomic survival, transport or clock advantage
+has been established; the current static metric still excludes backward
+causal passage.
+
+A reporting-rounding pilot is preserved as an exact [source](../provenance/dihole_aligned_channel_rounding_trial.py) and [result](../results/dihole_aligned_channel_rounding_trial.json). Its reported envelope coefficient exceeded the product of its two reported rounded bounds divided by four by3.03e-18. The coefficient is now composed after rounding both factors outward, with an independent80-digit Decimal check. No residual values or test tolerances changed.

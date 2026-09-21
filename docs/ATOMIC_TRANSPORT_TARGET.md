@@ -139,3 +139,15 @@ finite-flux residual remains untested. All14 controls pass. These are quantum
 states of the proposed support field, not the hydrogen payload. The next
 source calculation must retain their coupling and metric variation. Atom
 survival, passage and exterior-clock difference are still uncomputed.
+
+
+## Regular supporting-field trial
+
+The [regular field-following trial](PHYSICAL_EUCLIDEAN_OPERATOR.md#pole-regular-field-following-channels-and-a-uniform-profile-envelope)
+now evaluates the complete collar residual and metric variation. It improves
+the tested high-flux local carriers but can worsen low-flux cases. A new
+whole-collar profile envelope starts the next uniform error estimate;
+normalization and derivative bounds remain to be supplied. All16 controls
+pass. This advances the supporting-field approximation, not hydrogen transit.
+The one-atom target and its support, stability, survival and clock requirements
+remain unchanged. Neither past passage nor a future clock advantage is proved.
