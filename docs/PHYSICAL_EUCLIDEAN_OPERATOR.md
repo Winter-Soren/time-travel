@@ -4499,3 +4499,238 @@ One hydrogen atom remains the payload. No stable supporting medium,
 atom survival or passage, new physical law, or future clock advantage is
 established. The current static geometry excludes backward causal travel,
 including 13 to 12 September 2027.
+
+
+## Proper-mass channel comparison at fixed regulator
+
+The [calculation](../scripts/dihole_massive_channel.py) and
+[results](../results/dihole_massive_channel_results.json) extend the retained
+channel to the actual four-component auxiliary regulator fields. These are
+supporting-field calculations, not a hydrogen Hamiltonian. All 16 checks pass;
+40 exact prior input hashes are retained. The following estimates are our
+conditional derivation on the prescribed geometry, not a published proof
+that this geometry has a physical source. The published
+[Maldacena--Milekhin--Popov construction](https://arxiv.org/abs/1807.04726)
+provides relevant negative-energy wormhole context but explicitly does not
+produce ambient causality violation. Its solution cannot be transferred to
+our different geometry merely by choosing similar field content.
+
+### Lapse variance and the moving channel
+
+Let $\tau_i$ act on the two Weyl blocks, leaving the earlier $\sigma_i$
+for Weyl spin. With the same charge and axial sector in both blocks,
+
+$$
+H_m=\tau_3\otimes H+m\tau_1\otimes N,\qquad
+h_m=\tau_3\otimes h+m\tau_1 n,\qquad
+U_4=I_2\otimes U,\quad n=\langle U,NU\rangle=\mathbb E_pN.
+$$
+
+Here $N=\sqrt{NP/W}$ is the physical lapse. On the compact regular core,
+$r_N=(N-n)U$ and $J_4=\chi U_4$ give
+
+$$
+R_m=H_mU_4-U_4h_m=\tau_3\otimes R+m\tau_1\otimes r_N,\qquad
+T_m=H_mJ_4-J_4h_m=\tau_3\otimes T+m\tau_1\otimes\chi r_N.
+$$
+
+The exported collar bounds are $0.1022740140<N<0.2113876703$ and
+$L_N:=\sup|N_\theta|<0.005422164$. They are not global exterior bounds.
+Using the earlier normalized moment coefficients,
+
+$$
+\|r_N\|\le R_N=L_N\sqrt{C_1/q}.
+$$
+
+At fixed proper mass, $\dot N=FN$ and
+
+$$
+\dot n=Fn+2\operatorname{Re}\langle\dot U,r_N\rangle,\qquad
+\dot r_N=(FN-\dot n)U+(N-n)\dot U.
+$$
+
+The changing normalization must not be dropped. In the real parallel gauge,
+subtracting the normalization term is a reflection, so exactly
+
+$$
+\|\dot r_N\|=\|Fr_N+(N-n)\dot U\|.
+$$
+
+Writing $T$ for the earlier tilt bound, the whole-window logarithmic
+coefficient gives $J_2=F_*T^2M_{\rm window}<0.019614574$. With
+
+$$
+K_6=C_3+2\sqrt{C_1C_2C_3}+3C_1C_2+4C_1^2\sqrt{C_2}+6C_1^3,
+$$
+
+amplitude/spin orthogonality and the sixth moment give
+
+$$
+\dot R_N=F_*R_N+\frac{L_N}{\sqrt q}
+\sqrt{J_2^2K_6+F_*^2T^2C_1/4}\ \ge\ \|\dot r_N\|.
+$$
+
+The independently checked radial transport identity is
+
+$$
+n_s=\mathbb E_p(N_s+\zeta N_\theta)
+ +2q\operatorname{Cov}_p(A,N)+\operatorname{Cov}_p(d,N).
+$$
+
+Its bound retains all three terms. At the exact atomic reference,
+$R_N<8.417554\times10^{-14}$ and
+$\dot R_N<5.293817\times10^{-12}$. These are dimensionless bounds on
+normalized field-channel leakage coefficients; multiplying by $|m|$ is
+still necessary. They are not atom losses or material tolerances.
+
+### A full massive graph bound using only compact collar data
+
+Set $L=WN=\sqrt{NP\,W}$,
+$D_m=\tau_3P+B_m$, $B_m=\tau_3B+mL\tau_1$, and
+$\Gamma=\tau_3\sigma_3$. Since $\{\Gamma,B_m\}=0$,
+
+$$
+(B_m)_s=-\frac{R_s}{R}B_m+\tau_3\sigma_2\frac{V_s}{R}
+ +m\left(L_s+\frac{R_s}{R}L\right)\tau_1.
+$$
+
+Completing the square while retaining the entire nonnegative
+$\|B_m\phi\|^2$ yields
+
+$$
+\|\tau_3P\phi\|^2\le\|D_m\phi\|^2+C_{g,m}\|\phi\|^2,
+\qquad C_{g,m}=400+31q+|m|C_L,
+$$
+
+in $D=1$ units. Here
+
+$$
+C_L=\sqrt{NP_+W_+}
+\left[\frac12\left(\frac{\|NP_R\|}{NP_-}+L_{W,s}\right)+40\right]
+<814.397910.
+$$
+
+The angular mass commutator is included in $B_m^2$; replacing that square
+by $B^2+m^2L^2$ would lose it. The exact compact-mask metric identity is
+
+$$
+\dot H_m\psi=FH_m\psi+
+ W^{-1/2}\tau_3P(FW^{-1/2}\psi).
+$$
+
+It gives
+
+$$
+C_{H,m}=F_*+w_-^{-1/2}
+\sqrt{\left(F_*\sqrt{w_+}+\frac{F_{s,*}}{\sqrt{w_-}y}\right)^2
+ +\frac{C_{g,m}F_*^2}{w_-y^2}}
+\ \ge\ \|\dot H_m(H_m-iy)^{-1}\|.
+$$
+
+The full self-adjoint realization must preserve the axial sector as in168.
+Local regularity is used on the compact mask; neither a globally bounded
+lapse nor identical maximal domains for all masses is assumed.
+
+Choose a bounded positive complete-line continuation of $n$ inside the
+exported interval. Continue its metric variation with the bound
+$|\dot n|\le F_*n_++2M_pR_N$, where $M_p=\|\dot U\|$ is bounded by166.
+These are auxiliary reduced coefficients; no exterior lapse is replaced.
+No bound on the radial derivative of the continuation is needed here.
+From $h_0=h_m-m\tau_1n$, the earlier graph constants give
+
+$$
+b_m=b+|m|(a n_++R_N),\qquad
+b_{d,m}=b_d+|m|(a_d n_++\dot R_N),
+$$
+
+$$
+\beta_m=\beta+|m|(\alpha n_++F_*n_++2M_pR_N).
+$$
+
+The self-adjoint spectral identity
+$\|h_mG_{h_m}u\|^2+y^2\|G_{h_m}u\|^2=\|u\|^2$ then gives
+
+$$
+C_{T,m}=\sqrt{a^2+(b_m/y)^2},\quad
+C_{\dot T,m}=\sqrt{a_d^2+(b_{d,m}/y)^2},\quad
+C_{h,m}=\sqrt{\alpha^2+(\beta_m/y)^2}.
+$$
+
+Thus $\|E_m\|\le e_m=C_{T,m}/y$ and
+$\|\dot E_m\|\le(C_{H,m}+C_{h,m})e_m+C_{\dot T,m}/y$.
+For the same frozen, mass-independent Gaussian $X_4=I_2\otimes X$, the
+finite metric-insertion trace error is bounded by
+
+$$
+\boxed{2\|X\|_{\rm HS}^2
+\left[(M_p+C_{H,m}+C_{h,m})e_m+\frac{C_{\dot T,m}}y\right].}
+$$
+
+At $yD=\Lambda D=\sqrt q$ as represented by the declared saved frequency,
+and $m=M=y$, the atomic-reference resolvent bound is
+$y e_m<0.052524894$. The corresponding finite insertion error is below
+$2.442174D$ per sector and collar, including both Weyl blocks. It is an
+error bound for a filtered resolvent observable, not a stress value,
+percentage transmission, or physical accuracy percentage.
+
+### What the common regulator sum does and does not establish
+
+The saved finite choices are $M/y=0.1,1,10$, with declared binary values
+of $MD$ and outward intervals for the exact masses $\sqrt jM$.
+The negative masses are unitarily related by $\tau_3$. Their sign-source
+insertions are equal, not opposite. At each fixed $M,y$, the triangle
+bound for $\frac14\sum_{j,\sigma}c_j$ times the selected trace errors is
+$\frac12\sum_j|c_j|e^{\rm trace}_{m_j}$. At the atomic reference these
+bounds are $9.478908D$, $9.910403D$, and $38.689963D$ respectively.
+No frequency integration or regulator removal follows from these numbers.
+
+For the *same* positive proper Euclidean operator $P$, and $\eta>0$, the
+separate exact rational identity is
+
+$$
+\sum_{j=0}^3c_j(P+\eta+jM^2)^{-1}
+=6M^6\prod_{j=0}^3(P+\eta+jM^2)^{-1},
+\qquad(c_0,c_1,c_2,c_3)=(1,-3,3,-1).
+$$
+
+It survives a common conforming form compression of $P$. It does not
+justify squaring a compressed Hamiltonian: on the isometric core,
+
+$$
+U_4^*H_m^2U_4=h_m^2+R_m^*R_m.
+$$
+
+The last term includes mixed mass/channel residuals as well as lapse
+variance. Noncommuting matrix controls verify both identities.
+Even polynomial regulator moments do not control an arbitrary finite
+selection as $M\to\infty$: with $H_0=0$, $N=1$ and $\dot N=1$ in two
+components, the signed-pair average of the sign insertion equals
+
+$$
+M[-3+3\sqrt2-\sqrt3]=-0.4894101204\,M.
+$$
+
+This counterexample does not disprove the physical renormalization scheme;
+it prevents passing from a finite selection to its removal without the
+omitted modes and prescribed counterterms. The general heat-coefficient
+framework remains the one described by
+[Vassilevich](https://arxiv.org/abs/hep-th/0306138), with the physical
+subtraction fixed in136.
+
+The six actual-profile checks reproduce the normalized metric identity
+to $2.78\times10^{-17}$ and radial transport to $4.45\times10^{-16}$.
+Matrix checks reproduce square compression to $4.04\times10^{-15}$ and
+the differentiated resolvent to $3.92\times10^{-10}$; signed-mass source
+values agree. These controls check algebra and implementation, not the
+existence of an opening. An independent110-digit scalar audit also encloses
+all798 directed inequalities over7 fluxes,21 regulator cases and84 mass
+rows, including exact binary input values and the common finite weights.
+
+**Next:** transfer the retained/omitted comparison to the common proper
+Euclidean form before estimating the combined regulator contribution.
+Taking separate absolute mass bounds to infinite regulator is not valid.
+The total supporting source, stability and atom transport remain unknown.
+The present static geometry still excludes backward causal travel and has
+no established future clock advantage.
+
+![Proper-mass channel bounds](../figures/dihole_massive_channel_progress.png)

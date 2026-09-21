@@ -1,3 +1,58 @@
+# Authoritative checkpoint170 - proper-mass channel comparison
+
+Previous checkpoint169 published 2fb6a832e6185fc20076d63b1921850a849ef3ec.
+Previous goal turn PROGRESS: paired-frequency tail and finite sign bound.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom, trial 1 nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- Implemented scripts/dihole_massive_channel.py; all 16 checks PASS.
+  Reuses exact165--169 inputs,40 hashes; no historical solves rerun.
+- Actual Hm=tau3 H +m tau1 N; hm=tau3 h +m tau1 n, n=E_p N.
+  Mass defect rN=(N-n)U retained; Tm=tau3 T+m tau1 chi rN.
+- Collar lapse [.1022740140,.2113876703], angular Lipschitz<.005422164.
+  RN<=LN sqrt(C1/q); dotRN includes amplitude/spin sixth moments.
+  Reflection identity removes spurious2Mprofile RN from dotrN norm.
+  dotn=F n+2 Re<dotU,rN> still retains normalization term.
+- Exact atomic flux4642875905017627791065088: RN<8.417554e-14,
+  dotRN<5.293817e-12. Dimensionless coefficients, not atom losses.
+- Full massive radial graph Cg,m=400+31q+|m|CL, CL<814.397910/D.
+  Keep full nonnegative ||Bm phi||², including angular mass commutator.
+  Exact compact-mask dotHm identity gives square-root CH,m.
+  No global upper lapse bound or identical maximal domains assumed.
+- Auxiliary n has bounded positive complete-line continuation; its
+  metric continuation preserves dotn bound. No n_s extension bound used.
+  bm=b+|m|(a nmax+RN); analogous dotT/reduced metric estimates.
+- Atomic at m=M=y, yD=LambdaD=saved sqrtq: y||E_m||<.052524894.
+  Finite metric-insertion error<2.442174D, two Weyl blocks/one collar/sector.
+  Not a stress value, transmission or relative physical accuracy.
+- Finite M/y=.1,1,10 weighted trace error bounds9.478908D,9.910403D,
+  38.689963D. No frequency integral or regulator-removal conclusion.
+- Signed masses have equal sign insertions under tau3 conjugation.
+  Common-P identity sum c_j(P+eta+jM²)^-1=6M^6/product factors.
+  Common form projection preserves identity, squared compressed H does not:
+  U4* Hm² U4=hm²+Rm*Rm, including mixed residual terms.
+- Finite-selection counterexample H0=0,N=dotN=1 has signed-pair
+  sign insertion M(-3+3sqrt2-sqrt3)=-.4894101204M despite PV moments.
+  Do not extrapolate separate fixed-mass bounds to infinite regulator.
+- NEXT: common proper Euclidean form comparison, preserving combined
+  regulator cancellation and bounding omitted modes with fixed counterterms.
+  Full source/sign, stability, atomic state propagation remain unknown.
+  Current static geometry excludes13Sep2027->12Sep2027; no future clock gain.
+
+Source SHA256 b614c9a37d8a84c845f8138df226afece042faebe5b27bf9f7d09beef7f81789
+Results SHA256 f61f079f61a3db75c1549d1250128839985fba5b03b44141d4d591460412595b
+
+Verification PASS:16 controls, exact source/result and40 input hashes; figure
+inspected. Independent derivation/code audits pass, with metric continuation
+scope made explicit.110-digit independent audit encloses all798 inequalities
+over7 fluxes,21 regulator cases and84 mass rows. No false enclosure.
+Layout PASS:165 imports,1466 Markdown links,8 historical guards,14 frozen
+hashes and operator identity. Prior document bytes preserved; diff check passes.
+Publication follows. No simulation is running.
+
+--- Preserved checkpoint169 and earlier history ---
+
 # Authoritative checkpoint169 - paired frequency tail and finite sign insertion
 
 Previous checkpoint168 published ba5a46d348119b6887c6b85219143a66c0492694.

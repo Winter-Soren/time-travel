@@ -203,3 +203,10 @@ The [metric-insertion result](PHYSICAL_EUCLIDEAN_OPERATOR.md#metric-response-of-
 ## Paired-frequency and source-selection control
 
 The [paired-frequency result](PHYSICAL_EUCLIDEAN_OPERATOR.md#paired-frequencies-and-a-finite-selected-sign-insertion) bounds an integrated high-frequency remainder and a separate finite massless source selection. All 14 checks pass. This is supporting-field mathematics, not hydrogen propagation. Physical massive-regulator matching and the omitted field contributions remain necessary before a total supporting stress can be reported. The atom target, trial 1 nm diameter, survival and clock requirements remain unchanged.
+
+
+## Checkpoint170: proper-mass supporting fields
+
+The [massive-channel test](PHYSICAL_EUCLIDEAN_OPERATOR.md#proper-mass-channel-comparison-at-fixed-regulator) includes the real lapse-dependent mass and its leakage outside the retained channel. All 16 controls pass. The small leakage coefficient at atomic flux is a supporting-field bound, not a hydrogen transmission probability. The four components and regulator masses belong to the auxiliary field calculation; they do not model four particles, a human, or the payload's mass.
+
+The first physical target remains one neutral hydrogen atom and a trial 1 nm areal diameter. Support, stability, atomic quantum evolution and an exterior-clock difference must hold together before passage is established. The next source calculation must preserve the common regulator cancellation while including omitted modes. Enlarging the opening would require a new source and stability calculation; it is not automatic scaling.

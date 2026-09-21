@@ -1,0 +1,1616 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_inputs": true,
+    "actual_lapse_bounds": true,
+    "normalized_lapse_metric_identity": true,
+    "actual_mass_metric_identity": true,
+    "normalization_reflection_identity": true,
+    "lapse_transport_identity": true,
+    "massive_projection_identity": true,
+    "massive_square_compression": true,
+    "massive_resolvent_identity": true,
+    "massive_metric_derivative": true,
+    "massive_metric_insertion": true,
+    "finite_trace_enclosures": true,
+    "signed_mass_evenness": true,
+    "common_operator_pv": true,
+    "finite_selection_not_uniform_in_mass": true,
+    "finite_exported_bounds": true
+  },
+  "records": [
+    {
+      "q": 1000,
+      "y_D": 31.622776601683793,
+      "filter_Lambda_D": 31.622776601683793,
+      "four_component_filter_HS_squared_upper": 30.605301770900024,
+      "averaged_lapse_metric_upper": 0.9070440222267224,
+      "lapse": {
+        "lapse_lower": 0.10227401401169472,
+        "lapse_upper": 0.2113876702578109,
+        "lapse_theta_lipschitz_upper": 0.0054221630504385655,
+        "lapse_s_upper_D": 9.125938818858248,
+        "mass_defect_upper": 0.005735607168739121,
+        "metric_mass_defect_upper": 0.3607135176642642,
+        "averaged_lapse_s_upper_D": 9501.122351337068,
+        "metric_log_quadratic_upper": 0.019614573280918503,
+        "sixth_moment_combination_upper": 10086534083.913607,
+        "mass_radial_graph_coefficient_upper_D": 814.3979096661624
+      },
+      "cases": [
+        {
+          "regulator_M_D": 3.1622776601683795,
+          "nominal_M_over_y": 0.1,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 6247.559137321934,
+              "resolvent_error_upper_over_D": 197.56516690533985,
+              "full_metric_graph_upper": 12.967378797865962,
+              "reduced_metric_graph_upper": 20057750.249112256,
+              "defect_metric_graph_upper": 474674095.8121028,
+              "finite_metric_insertion_error_upper_over_D": 121739532430.08022
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                3.162277660168379,
+                3.16227766016838
+              ],
+              "scaled_resolvent_error_upper": 6247.562450962192,
+              "resolvent_error_upper_over_D": 197.56527169184548,
+              "full_metric_graph_upper": 12.971048490018667,
+              "reduced_metric_graph_upper": 20057750.53830409,
+              "defect_metric_graph_upper": 474674096.676432,
+              "finite_metric_insertion_error_upper_over_D": 121739598527.43474
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                4.472135954999579,
+                4.4721359549995805
+              ],
+              "scaled_resolvent_error_upper": 6247.563823516928,
+              "resolvent_error_upper_over_D": 197.56531509583726,
+              "full_metric_graph_upper": 12.972568086683998,
+              "reduced_metric_graph_upper": 20057750.658091273,
+              "defect_metric_graph_upper": 474674097.0344489,
+              "finite_metric_insertion_error_upper_over_D": 121739625905.85332
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                5.47722557505166,
+                5.477225575051662
+              ],
+              "scaled_resolvent_error_upper": 6247.56487671522,
+              "resolvent_error_upper_over_D": 197.56534840089154,
+              "full_metric_graph_upper": 12.973733939734057,
+              "reduced_metric_graph_upper": 20057750.750007212,
+              "defect_metric_graph_upper": 474674097.30916494,
+              "finite_metric_insertion_error_upper_over_D": 121739646914.05194
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 486958426321.99817
+        },
+        {
+          "regulator_M_D": 31.622776601683793,
+          "nominal_M_over_y": 1.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 6247.559137321934,
+              "resolvent_error_upper_over_D": 197.56516690533985,
+              "full_metric_graph_upper": 12.967378797865962,
+              "reduced_metric_graph_upper": 20057750.249112256,
+              "defect_metric_graph_upper": 474674095.8121028,
+              "finite_metric_insertion_error_upper_over_D": 121739532430.08022
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                31.62277660168379,
+                31.622776601683796
+              ],
+              "scaled_resolvent_error_upper": 6247.592273724518,
+              "resolvent_error_upper_over_D": 197.56621477039613,
+              "full_metric_graph_upper": 13.004008416417559,
+              "reduced_metric_graph_upper": 20057753.14103063,
+              "defect_metric_graph_upper": 474674104.45539516,
+              "finite_metric_insertion_error_upper_over_D": 121740193403.30305
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                44.72135954999578,
+                44.721359549995796
+              ],
+              "scaled_resolvent_error_upper": 6247.6059992718765,
+              "resolvent_error_upper_over_D": 197.566648810314,
+              "full_metric_graph_upper": 13.019137329149471,
+              "reduced_metric_graph_upper": 20057754.33890244,
+              "defect_metric_graph_upper": 474674108.03556406,
+              "finite_metric_insertion_error_upper_over_D": 121740467187.16786
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                54.7722557505166,
+                54.772255750516614
+              ],
+              "scaled_resolvent_error_upper": 6247.616531254789,
+              "resolvent_error_upper_over_D": 197.56698186085683,
+              "full_metric_graph_upper": 13.03072896678919,
+              "reduced_metric_graph_upper": 20057755.258061808,
+              "defect_metric_graph_upper": 474674110.7827243,
+              "finite_metric_insertion_error_upper_over_D": 121740677268.83415
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 486961095735.1636
+        },
+        {
+          "regulator_M_D": 316.2277660168379,
+          "nominal_M_over_y": 10.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 6247.559137321934,
+              "resolvent_error_upper_over_D": 197.56516690533985,
+              "full_metric_graph_upper": 12.967378797865962,
+              "reduced_metric_graph_upper": 20057750.249112256,
+              "defect_metric_graph_upper": 474674095.8121028,
+              "finite_metric_insertion_error_upper_over_D": 121739532430.08022
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                316.22776601683785,
+                316.22776601683796
+              ],
+              "scaled_resolvent_error_upper": 6247.890501347773,
+              "resolvent_error_upper_over_D": 197.5756455559028,
+              "full_metric_graph_upper": 13.327203926656619,
+              "reduced_metric_graph_upper": 20057779.168295987,
+              "defect_metric_graph_upper": 474674182.2450266,
+              "finite_metric_insertion_error_upper_over_D": 121746142131.6317
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                447.2135954999578,
+                447.21359549995793
+              ],
+              "scaled_resolvent_error_upper": 6248.027756821359,
+              "resolvent_error_upper_over_D": 197.57998595508136,
+              "full_metric_graph_upper": 13.472245725319352,
+              "reduced_metric_graph_upper": 20057791.147014104,
+              "defect_metric_graph_upper": 474674218.04671586,
+              "finite_metric_insertion_error_upper_over_D": 121748879940.954
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                547.7225575051659,
+                547.7225575051662
+              ],
+              "scaled_resolvent_error_upper": 6248.133076650488,
+              "resolvent_error_upper_over_D": 197.58331646050965,
+              "full_metric_graph_upper": 13.58205166842205,
+              "reduced_metric_graph_upper": 20057800.338607796,
+              "defect_metric_graph_upper": 474674245.51831824,
+              "finite_metric_insertion_error_upper_over_D": 121750980729.11761
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 486987789688.4775
+        }
+      ]
+    },
+    {
+      "q": 1005,
+      "y_D": 31.701734968294716,
+      "filter_Lambda_D": 31.701734968294716,
+      "four_component_filter_HS_squared_upper": 30.681719622118568,
+      "averaged_lapse_metric_upper": 0.9068908629821858,
+      "lapse": {
+        "lapse_lower": 0.10227401401169472,
+        "lapse_upper": 0.2113876702578109,
+        "lapse_theta_lipschitz_upper": 0.0054221630504385655,
+        "lapse_s_upper_D": 9.125938818858248,
+        "mass_defect_upper": 0.00572132169906314,
+        "metric_mass_defect_upper": 0.3598151015303291,
+        "averaged_lapse_s_upper_D": 9477.48098265467,
+        "metric_log_quadratic_upper": 0.019614573280918503,
+        "sixth_moment_combination_upper": 10086534083.913607,
+        "mass_radial_graph_coefficient_upper_D": 814.3979096661624
+      },
+      "cases": [
+        {
+          "regulator_M_D": 3.170173496829472,
+          "nominal_M_over_y": 0.1,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 6231.977033456159,
+              "resolvent_error_upper_over_D": 196.5815763613201,
+              "full_metric_graph_upper": 12.9636171892205,
+              "reduced_metric_graph_upper": 19957961.32111732,
+              "defect_metric_graph_upper": 473491838.46267366,
+              "finite_metric_insertion_error_upper_over_D": 120834029112.87802
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                3.1701734968294715,
+                3.1701734968294724
+              ],
+              "scaled_resolvent_error_upper": 6231.980339917027,
+              "resolvent_error_upper_over_D": 196.58168066037095,
+              "full_metric_graph_upper": 12.967279278803401,
+              "reduced_metric_graph_upper": 19957961.61023218,
+              "defect_metric_graph_upper": 473491839.3268054,
+              "finite_metric_insertion_error_upper_over_D": 120834094746.60446
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                4.483302354291978,
+                4.48330235429198
+              ],
+              "scaled_resolvent_error_upper": 6231.981709497962,
+              "resolvent_error_upper_over_D": 196.58172386245235,
+              "full_metric_graph_upper": 12.968795728016621,
+              "reduced_metric_graph_upper": 19957961.729987483,
+              "defect_metric_graph_upper": 473491839.6847405,
+              "finite_metric_insertion_error_upper_over_D": 120834121932.982
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                5.490901565316937,
+                5.490901565316939
+              ],
+              "scaled_resolvent_error_upper": 6231.982760414375,
+              "resolvent_error_upper_over_D": 196.58175701257534,
+              "full_metric_graph_upper": 12.969959166590652,
+              "reduced_metric_graph_upper": 19957961.821878955,
+              "defect_metric_graph_upper": 473491839.95939374,
+              "finite_metric_insertion_error_upper_over_D": 120834142793.82237
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 483336410972.7299
+        },
+        {
+          "regulator_M_D": 31.701734968294716,
+          "nominal_M_over_y": 1.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 6231.977033456159,
+              "resolvent_error_upper_over_D": 196.5815763613201,
+              "full_metric_graph_upper": 12.9636171892205,
+              "reduced_metric_graph_upper": 19957961.32111732,
+              "defect_metric_graph_upper": 473491838.46267366,
+              "finite_metric_insertion_error_upper_over_D": 120834029112.87802
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                31.701734968294712,
+                31.70173496829472
+              ],
+              "scaled_resolvent_error_upper": 6232.010098064834,
+              "resolvent_error_upper_over_D": 196.5826193518286,
+              "full_metric_graph_upper": 13.000171032072968,
+              "reduced_metric_graph_upper": 19957964.212265965,
+              "defect_metric_graph_upper": 473491847.103991,
+              "finite_metric_insertion_error_upper_over_D": 120834685449.8223
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                44.833023542919776,
+                44.83302354291979
+              ],
+              "scaled_resolvent_error_upper": 6232.023793874182,
+              "resolvent_error_upper_over_D": 196.58305137264267,
+              "full_metric_graph_upper": 13.01526871895058,
+              "reduced_metric_graph_upper": 19957965.409818947,
+              "defect_metric_graph_upper": 473491850.6833418,
+              "finite_metric_insertion_error_upper_over_D": 120834957313.27914
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                54.90901565316937,
+                54.909015653169384
+              ],
+              "scaled_resolvent_error_upper": 6232.034303038317,
+              "resolvent_error_upper_over_D": 196.58338287387267,
+              "full_metric_graph_upper": 13.026836459637087,
+              "reduced_metric_graph_upper": 19957966.328733668,
+              "defect_metric_graph_upper": 473491853.4298743,
+              "finite_metric_insertion_error_upper_over_D": 120835165921.36516
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 483339061661.7738
+        },
+        {
+          "regulator_M_D": 317.01734968294716,
+          "nominal_M_over_y": 10.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 6231.977033456159,
+              "resolvent_error_upper_over_D": 196.5815763613201,
+              "full_metric_graph_upper": 12.9636171892205,
+              "reduced_metric_graph_upper": 19957961.32111732,
+              "defect_metric_graph_upper": 473491838.46267366,
+              "finite_metric_insertion_error_upper_over_D": 120834029112.87802
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                317.0173496829471,
+                317.0173496829472
+              ],
+              "scaled_resolvent_error_upper": 6232.307679542914,
+              "resolvent_error_upper_over_D": 196.59200626640526,
+              "full_metric_graph_upper": 13.322708191917783,
+              "reduced_metric_graph_upper": 19957990.23260379,
+              "defect_metric_graph_upper": 473491924.875847,
+              "finite_metric_insertion_error_upper_over_D": 120840592451.86327
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                448.3302354291978,
+                448.3302354291979
+              ],
+              "scaled_resolvent_error_upper": 6232.444637636393,
+              "resolvent_error_upper_over_D": 196.59632647454583,
+              "full_metric_graph_upper": 13.467460204029651,
+              "reduced_metric_graph_upper": 19958002.208133593,
+              "defect_metric_graph_upper": 473491960.66935533,
+              "finite_metric_insertion_error_upper_over_D": 120843311057.31497
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                549.0901565316937,
+                549.0901565316939
+              ],
+              "scaled_resolvent_error_upper": 6232.549729277743,
+              "resolvent_error_upper_over_D": 196.59964148684574,
+              "full_metric_graph_upper": 13.577048953426676,
+              "reduced_metric_graph_upper": 19958011.39728081,
+              "defect_metric_graph_upper": 473491988.1346803,
+              "finite_metric_insertion_error_upper_over_D": 120845397109.87866
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 483365568375.14575
+        }
+      ]
+    },
+    {
+      "q": 10005,
+      "y_D": 100.024996875781,
+      "filter_Lambda_D": 100.024996875781,
+      "four_component_filter_HS_squared_upper": 96.80665466465103,
+      "averaged_lapse_metric_upper": 0.8649917232892174,
+      "lapse": {
+        "lapse_lower": 0.10227401401169472,
+        "lapse_upper": 0.2113876702578109,
+        "lapse_theta_lipschitz_upper": 0.0054221630504385655,
+        "lapse_s_upper_D": 9.125938818858248,
+        "mass_defect_upper": 0.001813304972129119,
+        "metric_mass_defect_upper": 0.11403912364496618,
+        "averaged_lapse_s_upper_D": 3010.0097441155954,
+        "metric_log_quadratic_upper": 0.019614573280918503,
+        "sixth_moment_combination_upper": 10086534083.913607,
+        "mass_radial_graph_coefficient_upper_D": 814.3979096661624
+      },
+      "cases": [
+        {
+          "regulator_M_D": 10.002499687578101,
+          "nominal_M_over_y": 0.1,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 1973.900148760207,
+              "resolvent_error_upper_over_D": 19.734068586990844,
+              "full_metric_graph_upper": 11.935443134425139,
+              "reduced_metric_graph_upper": 2004855.3206324724,
+              "defect_metric_graph_upper": 150067304.6510583,
+              "finite_metric_insertion_error_upper_over_D": 3975325752.0828876
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                10.0024996875781,
+                10.002499687578103
+              ],
+              "scaled_resolvent_error_upper": 1973.9016763972643,
+              "resolvent_error_upper_over_D": 19.734083859543755,
+              "full_metric_graph_upper": 11.936754332772985,
+              "reduced_metric_graph_upper": 2004855.5906759787,
+              "defect_metric_graph_upper": 150067305.4646268,
+              "finite_metric_insertion_error_upper_over_D": 3975329235.4373684
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                14.145670715805595,
+                14.145670715805599
+              ],
+              "scaled_resolvent_error_upper": 1973.9023091652518,
+              "resolvent_error_upper_over_D": 19.734090185642305,
+              "full_metric_graph_upper": 11.937297385470123,
+              "reduced_metric_graph_upper": 2004855.7025316616,
+              "defect_metric_graph_upper": 150067305.8016179,
+              "finite_metric_insertion_error_upper_over_D": 3975330678.290151
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                17.32483766157709,
+                17.324837661577096
+              ],
+              "scaled_resolvent_error_upper": 1973.902794705206,
+              "resolvent_error_upper_over_D": 19.73409503982845,
+              "full_metric_graph_upper": 11.937714059268924,
+              "reduced_metric_graph_upper": 2004855.7883615457,
+              "defect_metric_graph_upper": 150067306.06020027,
+              "finite_metric_insertion_error_upper_over_D": 3975331785.4300756
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 15901318639.347761
+        },
+        {
+          "regulator_M_D": 100.024996875781,
+          "nominal_M_over_y": 1.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 1973.900148760207,
+              "resolvent_error_upper_over_D": 19.734068586990844,
+              "full_metric_graph_upper": 11.935443134425139,
+              "reduced_metric_graph_upper": 2004855.3206324724,
+              "defect_metric_graph_upper": 150067304.6510583,
+              "finite_metric_insertion_error_upper_over_D": 3975325752.0828876
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                100.02499687578099,
+                100.02499687578101
+              ],
+              "scaled_resolvent_error_upper": 1973.9154251307807,
+              "resolvent_error_upper_over_D": 19.73422131251997,
+              "full_metric_graph_upper": 11.948545384575205,
+              "reduced_metric_graph_upper": 2004858.0210675362,
+              "defect_metric_graph_upper": 150067312.7867434,
+              "finite_metric_insertion_error_upper_over_D": 3975360585.6452103
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                141.4567071580559,
+                141.45670715805596
+              ],
+              "scaled_resolvent_error_upper": 1973.9217528106562,
+              "resolvent_error_upper_over_D": 19.734284573505455,
+              "full_metric_graph_upper": 11.953966192828126,
+              "reduced_metric_graph_upper": 2004859.139624364,
+              "defect_metric_graph_upper": 150067316.15665454,
+              "finite_metric_insertion_error_upper_over_D": 3975375014.1905746
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                173.24837661577087,
+                173.24837661577092
+              ],
+              "scaled_resolvent_error_upper": 1973.926608210196,
+              "resolvent_error_upper_over_D": 19.734333115366905,
+              "full_metric_graph_upper": 11.958123221583065,
+              "reduced_metric_graph_upper": 2004859.9979232056,
+              "defect_metric_graph_upper": 150067318.74247828,
+              "finite_metric_insertion_error_upper_over_D": 3975386085.6073813
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 15901459318.598812
+        },
+        {
+          "regulator_M_D": 1000.2499687578099,
+          "nominal_M_over_y": 10.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 1973.900148760207,
+              "resolvent_error_upper_over_D": 19.734068586990844,
+              "full_metric_graph_upper": 11.935443134425139,
+              "reduced_metric_graph_upper": 2004855.3206324724,
+              "defect_metric_graph_upper": 150067304.6510583,
+              "finite_metric_insertion_error_upper_over_D": 3975325752.0828876
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                1000.2499687578098,
+                1000.24996875781
+              ],
+              "scaled_resolvent_error_upper": 1974.052912465945,
+              "resolvent_error_upper_over_D": 19.735595842282116,
+              "full_metric_graph_upper": 12.06550789778685,
+              "reduced_metric_graph_upper": 2004882.3249831113,
+              "defect_metric_graph_upper": 150067386.00790966,
+              "finite_metric_insertion_error_upper_over_D": 3975674089.487049
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                1414.567071580559,
+                1414.5670715805595
+              ],
+              "scaled_resolvent_error_upper": 1974.1161892647,
+              "resolvent_error_upper_over_D": 19.736228452136967,
+              "full_metric_graph_upper": 12.118772216860862,
+              "reduced_metric_graph_upper": 2004893.510551389,
+              "defect_metric_graph_upper": 150067419.70702088,
+              "finite_metric_insertion_error_upper_over_D": 3975818376.7482014
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                1732.4837661577087,
+                1732.4837661577092
+              ],
+              "scaled_resolvent_error_upper": 1974.1647432600978,
+              "resolvent_error_upper_over_D": 19.736713870751455,
+              "full_metric_graph_upper": 12.159407603603372,
+              "reduced_metric_graph_upper": 2004902.0935398045,
+              "defect_metric_graph_upper": 150067445.56525838,
+              "finite_metric_insertion_error_upper_over_D": 3975929092.7406287
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 15902866121.764635
+        }
+      ]
+    },
+    {
+      "q": 100000000,
+      "y_D": 10000.0,
+      "filter_Lambda_D": 10000.0,
+      "four_component_filter_HS_squared_upper": 9678.24620728289,
+      "averaged_lapse_metric_upper": 0.8455560380644527,
+      "lapse": {
+        "lapse_lower": 0.10227401401169472,
+        "lapse_upper": 0.2113876702578109,
+        "lapse_theta_lipschitz_upper": 0.0054221630504385655,
+        "lapse_s_upper_D": 9.125938818858248,
+        "mass_defect_upper": 1.813758241720533e-05,
+        "metric_mass_defect_upper": 0.0011406762986304548,
+        "averaged_lapse_s_upper_D": 39.143887450319866,
+        "metric_log_quadratic_upper": 0.019614573280918503,
+        "sixth_moment_combination_upper": 10086534083.913607,
+        "mass_radial_graph_coefficient_upper_D": 814.3979096661624
+      },
+      "cases": [
+        {
+          "regulator_M_D": 1000.0,
+          "nominal_M_over_y": 0.1,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 19.741707432636105,
+              "resolvent_error_upper_over_D": 0.0019741707432636107,
+              "full_metric_graph_upper": 11.46384723855009,
+              "reduced_metric_graph_upper": 201.97898365787555,
+              "defect_metric_graph_upper": 1501046.7681534716,
+              "finite_metric_insertion_error_upper_over_D": 1456830.9883807325
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                999.9999999999999,
+                1000.0000000000001
+              ],
+              "scaled_resolvent_error_upper": 19.742795577503003,
+              "resolvent_error_upper_over_D": 0.0019742795577503,
+              "full_metric_graph_upper": 11.463861183625085,
+              "reduced_metric_graph_upper": 202.23277044131515,
+              "defect_metric_graph_upper": 1501046.7986830694,
+              "finite_metric_insertion_error_upper_over_D": 1456836.0923808985
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                1414.2135623730946,
+                1414.213562373095
+              ],
+              "scaled_resolvent_error_upper": 19.74324630186482,
+              "resolvent_error_upper_over_D": 0.001974324630186482,
+              "full_metric_graph_upper": 11.463866959856645,
+              "reduced_metric_graph_upper": 202.33789251583323,
+              "defect_metric_graph_upper": 1501046.811328843,
+              "finite_metric_insertion_error_upper_over_D": 1456838.2066863682
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                1732.050807568877,
+                1732.0508075688774
+              ],
+              "scaled_resolvent_error_upper": 19.743592154831823,
+              "resolvent_error_upper_over_D": 0.0019743592154831823,
+              "full_metric_graph_upper": 11.46387139211198,
+              "reduced_metric_graph_upper": 202.41855557885162,
+              "defect_metric_graph_upper": 1501046.8210322862,
+              "finite_metric_insertion_error_upper_over_D": 1456839.8291133186
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 5827346.857347926
+        },
+        {
+          "regulator_M_D": 10000.0,
+          "nominal_M_over_y": 1.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 19.741707432636105,
+              "resolvent_error_upper_over_D": 0.0019741707432636107,
+              "full_metric_graph_upper": 11.46384723855009,
+              "reduced_metric_graph_upper": 201.97898365787555,
+              "defect_metric_graph_upper": 1501046.7681534716,
+              "finite_metric_insertion_error_upper_over_D": 1456830.9883807325
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                9999.999999999998,
+                10000.000000000002
+              ],
+              "scaled_resolvent_error_upper": 19.75258888132336,
+              "resolvent_error_upper_over_D": 0.001975258888132336,
+              "full_metric_graph_upper": 11.463986688127621,
+              "reduced_metric_graph_upper": 204.51687381635645,
+              "defect_metric_graph_upper": 1501047.07344945,
+              "finite_metric_insertion_error_upper_over_D": 1456882.0528648861
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                14142.135623730948,
+                14142.135623730952
+              ],
+              "scaled_resolvent_error_upper": 19.757096124959773,
+              "resolvent_error_upper_over_D": 0.0019757096124959775,
+              "full_metric_graph_upper": 11.464044449270821,
+              "reduced_metric_graph_upper": 205.56811663422334,
+              "defect_metric_graph_upper": 1501047.1999071848,
+              "finite_metric_insertion_error_upper_over_D": 1456903.2203974857
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                17320.50807568877,
+                17320.508075688776
+              ],
+              "scaled_resolvent_error_upper": 19.76055465464811,
+              "resolvent_error_upper_over_D": 0.0019760554654648112,
+              "full_metric_graph_upper": 11.464088770651774,
+              "reduced_metric_graph_upper": 206.3747691760628,
+              "defect_metric_graph_upper": 1501047.2969416177,
+              "finite_metric_insertion_error_upper_over_D": 1456919.469141949
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 5827553.138654899
+        },
+        {
+          "regulator_M_D": 100000.0,
+          "nominal_M_over_y": 10.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 19.741707432636105,
+              "resolvent_error_upper_over_D": 0.0019741707432636107,
+              "full_metric_graph_upper": 11.46384723855009,
+              "reduced_metric_graph_upper": 201.97898365787555,
+              "defect_metric_graph_upper": 1501046.7681534716,
+              "finite_metric_insertion_error_upper_over_D": 1456830.9883807325
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                99999.99999999999,
+                100000.00000000001
+              ],
+              "scaled_resolvent_error_upper": 19.85052192132657,
+              "resolvent_error_upper_over_D": 0.001985052192132657,
+              "full_metric_graph_upper": 11.465241617105038,
+              "reduced_metric_graph_upper": 227.35987094107367,
+              "defect_metric_graph_upper": 1501049.8211132563,
+              "finite_metric_insertion_error_upper_over_D": 1457344.0769646887
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                141421.35623730946,
+                141421.35623730952
+              ],
+              "scaled_resolvent_error_upper": 19.89559435949959,
+              "resolvent_error_upper_over_D": 0.001989559435949959,
+              "full_metric_graph_upper": 11.465819111336643,
+              "reduced_metric_graph_upper": 237.87408988161326,
+              "defect_metric_graph_upper": 1501051.0856906045,
+              "finite_metric_insertion_error_upper_over_D": 1457558.1924719438
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                173205.08075688768,
+                173205.08075688774
+              ],
+              "scaled_resolvent_error_upper": 19.930179658185953,
+              "resolvent_error_upper_over_D": 0.0019930179658185954,
+              "full_metric_graph_upper": 11.466262207958733,
+              "reduced_metric_graph_upper": 245.94229630082688,
+              "defect_metric_graph_upper": 1501052.0560349324,
+              "finite_metric_insertion_error_upper_over_D": 1457723.1180926855
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 5829630.457391658
+        }
+      ]
+    },
+    {
+      "q": 1000000000000,
+      "y_D": 1000000.0,
+      "filter_Lambda_D": 1000000.0,
+      "four_component_filter_HS_squared_upper": 967824.6207282889,
+      "averaged_lapse_metric_upper": 0.8455507346015758,
+      "lapse": {
+        "lapse_lower": 0.10227401401169472,
+        "lapse_upper": 0.2113876702578109,
+        "lapse_theta_lipschitz_upper": 0.0054221630504385655,
+        "lapse_s_upper_D": 9.125938818858248,
+        "mass_defect_upper": 1.813758241720533e-07,
+        "metric_mass_defect_upper": 1.1406762986304547e-05,
+        "averaged_lapse_s_upper_D": 9.427727615759096,
+        "metric_log_quadratic_upper": 0.019614573280918503,
+        "sixth_moment_combination_upper": 10086534083.913607,
+        "mass_radial_graph_coefficient_upper_D": 814.3979096661624
+      },
+      "cases": [
+        {
+          "regulator_M_D": 100000.0,
+          "nominal_M_over_y": 0.1,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.20399514854171405,
+              "resolvent_error_upper_over_D": 2.0399514854171405e-07,
+              "full_metric_graph_upper": 11.45913276772051,
+              "reduced_metric_graph_upper": 8.015244091464613,
+              "defect_metric_graph_upper": 15010.467745316868,
+              "finite_metric_insertion_error_upper_over_D": 14531.374264766888
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                99999.99999999999,
+                100000.00000000001
+              ],
+              "scaled_resolvent_error_upper": 0.20504662057718703,
+              "resolvent_error_upper_over_D": 2.0504662057718704e-07,
+              "full_metric_graph_upper": 11.459132907259528,
+              "reduced_metric_graph_upper": 8.02029730420983,
+              "defect_metric_graph_upper": 15010.498161746038,
+              "finite_metric_insertion_error_upper_over_D": 14531.42467356736
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                141421.35623730946,
+                141421.35623730952
+              ],
+              "scaled_resolvent_error_upper": 0.2054822607551523,
+              "resolvent_error_upper_over_D": 2.054822607551523e-07,
+              "full_metric_graph_upper": 11.459132965058481,
+              "reduced_metric_graph_upper": 8.024744322184736,
+              "defect_metric_graph_upper": 15010.510760643518,
+              "finite_metric_insertion_error_upper_over_D": 14531.446026729827
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                173205.08075688768,
+                173205.08075688774
+              ],
+              "scaled_resolvent_error_upper": 0.20581658102998301,
+              "resolvent_error_upper_over_D": 2.0581658102998302e-07,
+              "full_metric_graph_upper": 11.459133009409177,
+              "reduced_metric_graph_upper": 8.029089717221963,
+              "defect_metric_graph_upper": 15010.520428117574,
+              "finite_metric_insertion_error_upper_over_D": 14531.462600788782
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 58125.72448322362
+        },
+        {
+          "regulator_M_D": 1000000.0,
+          "nominal_M_over_y": 1.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.20399514854171405,
+              "resolvent_error_upper_over_D": 2.0399514854171405e-07,
+              "full_metric_graph_upper": 11.45913276772051,
+              "reduced_metric_graph_upper": 8.015244091464613,
+              "defect_metric_graph_upper": 15010.467745316868,
+              "finite_metric_insertion_error_upper_over_D": 14531.374264766888
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                999999.9999999999,
+                1000000.0000000001
+              ],
+              "scaled_resolvent_error_upper": 0.21452549823290412,
+              "resolvent_error_upper_over_D": 2.1452549823290413e-07,
+              "full_metric_graph_upper": 11.459134163110567,
+              "reduced_metric_graph_upper": 8.417853073199959,
+              "defect_metric_graph_upper": 15010.77190960857,
+              "finite_metric_insertion_error_upper_over_D": 14531.952212446278
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                1414213.5623730947,
+                1414213.5623730952
+              ],
+              "scaled_resolvent_error_upper": 0.2188968412041191,
+              "resolvent_error_upper_over_D": 2.188968412041191e-07,
+              "full_metric_graph_upper": 11.459134741099978,
+              "reduced_metric_graph_upper": 8.796566304066692,
+              "defect_metric_graph_upper": 15010.897898583382,
+              "finite_metric_insertion_error_upper_over_D": 14532.239097836384
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                1732050.807568877,
+                1732050.8075688775
+              ],
+              "scaled_resolvent_error_upper": 0.22225456453176282,
+              "resolvent_error_upper_over_D": 2.2225456453176282e-07,
+              "full_metric_graph_upper": 11.45913518460682,
+              "reduced_metric_graph_upper": 9.158765405016515,
+              "defect_metric_graph_upper": 15010.994573323944,
+              "finite_metric_insertion_error_upper_over_D": 14532.47687699928
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 58128.21253630708
+        },
+        {
+          "regulator_M_D": 10000000.0,
+          "nominal_M_over_y": 10.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.20399514854171405,
+              "resolvent_error_upper_over_D": 2.0399514854171405e-07,
+              "full_metric_graph_upper": 11.45913276772051,
+              "reduced_metric_graph_upper": 8.015244091464613,
+              "defect_metric_graph_upper": 15010.467745316868,
+              "finite_metric_insertion_error_upper_over_D": 14531.374264766888
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                9999999.999999998,
+                10000000.000000002
+              ],
+              "scaled_resolvent_error_upper": 0.3103330518117745,
+              "resolvent_error_upper_over_D": 3.1033305181177446e-07,
+              "full_metric_graph_upper": 11.459146721609335,
+              "reduced_metric_graph_upper": 26.664311588212257,
+              "defect_metric_graph_upper": 15013.509388233888,
+              "finite_metric_insertion_error_upper_over_D": 14541.938687410619
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                14142135.623730948,
+                14142135.623730952
+              ],
+              "scaled_resolvent_error_upper": 0.35478708375661183,
+              "resolvent_error_upper_over_D": 3.5478708375661183e-07,
+              "full_metric_graph_upper": 11.459152501491689,
+              "reduced_metric_graph_upper": 36.83421026351919,
+              "defect_metric_graph_upper": 15014.769277982015,
+              "finite_metric_insertion_error_upper_over_D": 14548.296662980903
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                17320508.07568877,
+                17320508.075688776
+              ],
+              "scaled_resolvent_error_upper": 0.3889825359115739,
+              "resolvent_error_upper_over_D": 3.8898253591157386e-07,
+              "full_metric_graph_upper": 11.45915693654837,
+              "reduced_metric_graph_upper": 44.747886488920074,
+              "defect_metric_graph_upper": 15015.736025387634,
+              "finite_metric_insertion_error_upper_over_D": 14553.814709499855
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 58177.94751272066
+        }
+      ]
+    },
+    {
+      "q": 10000000000000000,
+      "y_D": 100000000.0,
+      "filter_Lambda_D": 100000000.0,
+      "four_component_filter_HS_squared_upper": 96782462.07282889,
+      "averaged_lapse_metric_upper": 0.845550681566947,
+      "lapse": {
+        "lapse_lower": 0.10227401401169472,
+        "lapse_upper": 0.2113876702578109,
+        "lapse_theta_lipschitz_upper": 0.0054221630504385655,
+        "lapse_s_upper_D": 9.125938818858248,
+        "mass_defect_upper": 1.813758241720533e-09,
+        "metric_mass_defect_upper": 1.1406762986304546e-07,
+        "averaged_lapse_s_upper_D": 9.130566017413488,
+        "metric_log_quadratic_upper": 0.019614573280918503,
+        "sixth_moment_combination_upper": 10086534083.913607,
+        "mass_radial_graph_coefficient_upper_D": 814.3979096661624
+      },
+      "cases": [
+        {
+          "regulator_M_D": 10000000.0,
+          "nominal_M_over_y": 0.1,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.051427169117605365,
+              "resolvent_error_upper_over_D": 5.142716911760537e-10,
+              "full_metric_graph_upper": 11.459085623297277,
+              "reduced_metric_graph_upper": 8.015178098336893,
+              "defect_metric_graph_upper": 150.1115726539788,
+              "finite_metric_insertion_error_upper_over_D": 146.25830856690257
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                9999999.999999998,
+                10000000.000000002
+              ],
+              "scaled_resolvent_error_upper": 0.05148031538098361,
+              "resolvent_error_upper_over_D": 5.148031538098361e-10,
+              "full_metric_graph_upper": 11.459085624692676,
+              "reduced_metric_graph_upper": 8.019205273352263,
+              "defect_metric_graph_upper": 150.14198655704678,
+              "finite_metric_insertion_error_upper_over_D": 146.28895382013044
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                14142135.623730948,
+                14142135.623730952
+              ],
+              "scaled_resolvent_error_upper": 0.051509023777339645,
+              "resolvent_error_upper_over_D": 5.150902377733964e-10,
+              "full_metric_graph_upper": 11.459085625270669,
+              "reduced_metric_graph_upper": 8.023228077678663,
+              "defect_metric_graph_upper": 150.15458440834797,
+              "finite_metric_insertion_error_upper_over_D": 146.30189217596583
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                17320508.07568877,
+                17320508.075688776
+              ],
+              "scaled_resolvent_error_upper": 0.05153370569608109,
+              "resolvent_error_upper_over_D": 5.153370569608109e-10,
+              "full_metric_graph_upper": 11.459085625714179,
+              "reduced_metric_graph_upper": 8.027248479679825,
+              "defect_metric_graph_upper": 150.16425107970773,
+              "finite_metric_insertion_error_upper_over_D": 146.31191725514225
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 585.1713819051669
+        },
+        {
+          "regulator_M_D": 100000000.0,
+          "nominal_M_over_y": 1.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.051427169117605365,
+              "resolvent_error_upper_over_D": 5.142716911760537e-10,
+              "full_metric_graph_upper": 11.459085623297277,
+              "reduced_metric_graph_upper": 8.015178098336893,
+              "defect_metric_graph_upper": 150.1115726539788,
+              "finite_metric_insertion_error_upper_over_D": 146.25830856690257
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                99999999.99999999,
+                100000000.00000001
+              ],
+              "scaled_resolvent_error_upper": 0.052968392861805734,
+              "resolvent_error_upper_over_D": 5.296839286180574e-10,
+              "full_metric_graph_upper": 11.459085637251267,
+              "reduced_metric_graph_upper": 8.408008972475308,
+              "defect_metric_graph_upper": 150.4157117100804,
+              "finite_metric_insertion_error_upper_over_D": 146.60206872182877
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                141421356.23730946,
+                141421356.23730952
+              ],
+              "scaled_resolvent_error_upper": 0.054234884218709985,
+              "resolvent_error_upper_over_D": 5.423488421870999e-10,
+              "full_metric_graph_upper": 11.4590856430312,
+              "reduced_metric_graph_upper": 8.78326663811834,
+              "defect_metric_graph_upper": 150.54169024846766,
+              "finite_metric_insertion_error_upper_over_D": 146.7682240115792
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                173205080.75688767,
+                173205080.75688773
+              ],
+              "scaled_resolvent_error_upper": 0.0554351966275825,
+              "resolvent_error_upper_over_D": 5.54351966275825e-10,
+              "full_metric_graph_upper": 11.459085647466297,
+              "reduced_metric_graph_upper": 9.143132328099771,
+              "defect_metric_graph_upper": 150.63835698741025,
+              "finite_metric_insertion_error_upper_over_D": 146.9047747458829
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 586.6369807565047
+        },
+        {
+          "regulator_M_D": 1000000000.0,
+          "nominal_M_over_y": 10.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.051427169117605365,
+              "resolvent_error_upper_over_D": 5.142716911760537e-10,
+              "full_metric_graph_upper": 11.459085623297277,
+              "reduced_metric_graph_upper": 8.015178098336893,
+              "defect_metric_graph_upper": 150.1115726539788,
+              "finite_metric_insertion_error_upper_over_D": 146.25830856690257
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                999999999.9999999,
+                1000000000.0000001
+              ],
+              "scaled_resolvent_error_upper": 0.12196010220147707,
+              "resolvent_error_upper_over_D": 1.2196010220147706e-09,
+              "full_metric_graph_upper": 11.459085762837177,
+              "reduced_metric_graph_upper": 26.633412370459794,
+              "defect_metric_graph_upper": 153.1529657072266,
+              "finite_metric_insertion_error_upper_over_D": 152.7389279491281
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                1414213562.3730948,
+                1414213562.3730953
+              ],
+              "scaled_resolvent_error_upper": 0.16386741709065727,
+              "resolvent_error_upper_over_D": 1.6386741709065728e-09,
+              "full_metric_graph_upper": 11.459085820636496,
+              "reduced_metric_graph_upper": 36.80258767071654,
+              "defect_metric_graph_upper": 154.4127535385284,
+              "finite_metric_insertion_error_upper_over_D": 157.12194184829815
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                1732050807.568877,
+                1732050807.5688775
+              ],
+              "scaled_resolvent_error_upper": 0.19695039372798384,
+              "resolvent_error_upper_over_D": 1.9695039372798385e-09,
+              "full_metric_graph_upper": 11.459085864987472,
+              "reduced_metric_graph_upper": 44.71601104531379,
+              "defect_metric_graph_upper": 155.37942334696282,
+              "finite_metric_insertion_error_upper_over_D": 161.11590929645243
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 618.478413627817
+        }
+      ]
+    },
+    {
+      "q": 4642875905017627791065088,
+      "y_D": 2154733372140.8845,
+      "filter_Lambda_D": 2154733372140.8845,
+      "four_component_filter_HS_squared_upper": 2085404008662.8384,
+      "averaged_lapse_metric_upper": 0.8455506810312685,
+      "lapse": {
+        "lapse_lower": 0.10227401401169472,
+        "lapse_upper": 0.2113876702578109,
+        "lapse_theta_lipschitz_upper": 0.0054221630504385655,
+        "lapse_s_upper_D": 9.125938818858248,
+        "mass_defect_upper": 8.417553026147415e-14,
+        "metric_mass_defect_upper": 5.293816457194004e-12,
+        "averaged_lapse_s_upper_D": 9.127564524411085,
+        "metric_log_quadratic_upper": 0.019614573280918503,
+        "sixth_moment_combination_upper": 10086534083.913607,
+        "mass_radial_graph_coefficient_upper_D": 814.3979096661624
+      },
+      "cases": [
+        {
+          "regulator_M_D": 215473337214.08847,
+          "nominal_M_over_y": 0.1,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.05138926353928374,
+              "resolvent_error_upper_over_D": 2.3849476786181098e-14,
+              "full_metric_graph_upper": 11.459085147113111,
+              "reduced_metric_graph_upper": 8.015178097335667,
+              "defect_metric_graph_upper": 1.4388561571830525,
+              "finite_metric_insertion_error_upper_over_D": 2.3684732374129065
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                215473337214.08844,
+                215473337214.0885
+              ],
+              "scaled_resolvent_error_upper": 0.05140074577447233,
+              "resolvent_error_upper_over_D": 2.385480562887553e-14,
+              "full_metric_graph_upper": 11.459085147113177,
+              "reduced_metric_graph_upper": 8.01920126002798,
+              "defect_metric_graph_upper": 1.4393248047065057,
+              "finite_metric_insertion_error_upper_over_D": 2.369345000433557
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                304725315817.95514,
+                304725315817.95526
+              ],
+              "scaled_resolvent_error_upper": 0.051412224311253696,
+              "resolvent_error_upper_over_D": 2.3860132755159357e-14,
+              "full_metric_graph_upper": 11.459085147113203,
+              "reduced_metric_graph_upper": 8.023222405239522,
+              "defect_metric_graph_upper": 1.4397070922379387,
+              "finite_metric_insertion_error_upper_over_D": 2.3701331008952
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                373210767731.22284,
+                373210767731.22296
+              ],
+              "scaled_resolvent_error_upper": 0.05142370009932469,
+              "resolvent_error_upper_over_D": 2.3865458605781698e-14,
+              "full_metric_graph_upper": 11.459085147113223,
+              "reduced_metric_graph_upper": 8.027241536091791,
+              "defect_metric_graph_upper": 1.440075098305088,
+              "finite_metric_insertion_error_upper_over_D": 2.370907316262942
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 9.47890742883106
+        },
+        {
+          "regulator_M_D": 2154733372140.8845,
+          "nominal_M_over_y": 1.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.05138926353928374,
+              "resolvent_error_upper_over_D": 2.3849476786181098e-14,
+              "full_metric_graph_upper": 11.459085147113111,
+              "reduced_metric_graph_upper": 8.015178097335667,
+              "defect_metric_graph_upper": 1.4388561571830525,
+              "finite_metric_insertion_error_upper_over_D": 2.3684732374129065
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                2154733372140.8843,
+                2154733372140.8848
+              ],
+              "scaled_resolvent_error_upper": 0.052524893131069346,
+              "resolvent_error_upper_over_D": 2.437651628279282e-14,
+              "full_metric_graph_upper": 11.45908514711376,
+              "reduced_metric_graph_upper": 8.407970703443391,
+              "defect_metric_graph_upper": 1.4720915885815655,
+              "finite_metric_insertion_error_upper_over_D": 2.442173157627652
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                3047253158179.5513,
+                3047253158179.5522
+              ],
+              "scaled_resolvent_error_upper": 0.05363647288662893,
+              "resolvent_error_upper_over_D": 2.4892394381647873e-14,
+              "full_metric_graph_upper": 11.459085147114028,
+              "reduced_metric_graph_upper": 8.783214830043551,
+              "defect_metric_graph_upper": 1.5037679027866027,
+              "finite_metric_insertion_error_upper_over_D": 2.5138415950067206
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                3732107677312.2285,
+                3732107677312.2295
+              ],
+              "scaled_resolvent_error_upper": 0.05472547722190098,
+              "resolvent_error_upper_over_D": 2.539779535113768e-14,
+              "full_metric_graph_upper": 11.459085147114234,
+              "reduced_metric_graph_upper": 9.143071373920185,
+              "defect_metric_graph_upper": 1.5346575380011402,
+              "finite_metric_insertion_error_upper_over_D": 2.584287352579733
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 9.91040242394788
+        },
+        {
+          "regulator_M_D": 21547333721408.844,
+          "nominal_M_over_y": 10.0,
+          "masses": [
+            {
+              "j": 0,
+              "absolute_mass_D_interval": [
+                0.0,
+                5e-324
+              ],
+              "scaled_resolvent_error_upper": 0.05138926353928374,
+              "resolvent_error_upper_over_D": 2.3849476786181098e-14,
+              "full_metric_graph_upper": 11.459085147113111,
+              "reduced_metric_graph_upper": 8.015178097335667,
+              "defect_metric_graph_upper": 1.4388561571830525,
+              "finite_metric_insertion_error_upper_over_D": 2.3684732374129065
+            },
+            {
+              "j": 1,
+              "absolute_mass_D_interval": [
+                21547333721408.84,
+                21547333721408.848
+              ],
+              "scaled_resolvent_error_upper": 0.12017269402973725,
+              "resolvent_error_upper_over_D": 5.577149153741325e-14,
+              "full_metric_graph_upper": 11.459085147119588,
+              "reduced_metric_graph_upper": 26.63329155553032,
+              "defect_metric_graph_upper": 3.3709911173445177,
+              "finite_metric_insertion_error_upper_over_D": 7.710079486832581
+            },
+            {
+              "j": 2,
+              "absolute_mass_D_interval": [
+                30472531581795.516,
+                30472531581795.523
+              ],
+              "scaled_resolvent_error_upper": 0.16199408851342384,
+              "resolvent_error_upper_over_D": 7.518057250511274e-14,
+              "full_metric_graph_upper": 11.45908514712227,
+              "reduced_metric_graph_upper": 36.802464021578395,
+              "defect_metric_graph_upper": 4.542249635044703,
+              "finite_metric_insertion_error_upper_over_D": 11.985790013432196
+            },
+            {
+              "j": 3,
+              "absolute_mass_D_interval": [
+                37321076773122.28,
+                37321076773122.3
+              ],
+              "scaled_resolvent_error_upper": 0.19504535656563096,
+              "resolvent_error_upper_over_D": 9.051948565303892e-14,
+              "full_metric_graph_upper": 11.459085147124329,
+              "reduced_metric_graph_upper": 44.71588640526914,
+              "defect_metric_graph_upper": 5.4677598989943474,
+              "finite_metric_insertion_error_upper_over_D": 15.923842155651402
+            }
+          ],
+          "finite_signed_mass_trace_combination_error_upper_over_D": 38.68996194692932
+        }
+      ]
+    }
+  ],
+  "field_controls": [
+    {
+      "q": 1005,
+      "u": 0.0125,
+      "mu": 854.5,
+      "averaged_lapse": 0.11036478163700521,
+      "mass_defect": 5.09579539951842e-06,
+      "metric_mass_defect": 2.751646906076052e-06,
+      "averaged_lapse_s_D": 0.25036727606054193,
+      "normalization_derivative_error": 6.938893903907228e-18,
+      "mass_derivative_identity_error": 5.3164372959255895e-18,
+      "reflection_norm_error": 5.031375706690544e-19,
+      "transported_lapse_derivative_error": 0.0,
+      "bounds_enclose": true
+    },
+    {
+      "q": 1005,
+      "u": 0.025,
+      "mu": 904.5,
+      "averaged_lapse": 0.12287292566452904,
+      "mass_defect": 6.2372919648201266e-06,
+      "metric_mass_defect": 6.237292254566439e-06,
+      "averaged_lapse_s_D": 1.8649384016967088,
+      "normalization_derivative_error": 1.3877787807814457e-17,
+      "mass_derivative_identity_error": 8.479539226200938e-18,
+      "reflection_norm_error": 9.56300197450105e-19,
+      "transported_lapse_derivative_error": 2.220446049250313e-16,
+      "bounds_enclose": true
+    },
+    {
+      "q": 1005,
+      "u": 0.0375,
+      "mu": 954.5,
+      "averaged_lapse": 0.15564386267570152,
+      "mass_defect": 9.1255016032793e-06,
+      "metric_mass_defect": 4.92762411690233e-06,
+      "averaged_lapse_s_D": 3.193847764055598,
+      "normalization_derivative_error": 0.0,
+      "mass_derivative_identity_error": 1.1514778340170877e-17,
+      "reflection_norm_error": 4.2012834183813297e-19,
+      "transported_lapse_derivative_error": 0.0,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.0125,
+      "mu": 8504.5,
+      "averaged_lapse": 0.11036480315043909,
+      "mass_defect": 1.6185561367261562e-06,
+      "metric_mass_defect": 8.739940748717577e-07,
+      "averaged_lapse_s_D": 0.25036737775493173,
+      "normalization_derivative_error": 0.0,
+      "mass_derivative_identity_error": 4.119493738261184e-18,
+      "reflection_norm_error": 2.4521603823011995e-19,
+      "transported_lapse_derivative_error": 0.0,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.025,
+      "mu": 9004.5,
+      "averaged_lapse": 0.12287274666495046,
+      "mass_defect": 1.9797719806676645e-06,
+      "metric_mass_defect": 1.979772072855776e-06,
+      "averaged_lapse_s_D": 1.864931635292319,
+      "normalization_derivative_error": 2.7755575615628914e-17,
+      "mass_derivative_identity_error": 8.195155750554736e-18,
+      "reflection_norm_error": 1.5352472168984194e-18,
+      "transported_lapse_derivative_error": 0.0,
+      "bounds_enclose": true
+    },
+    {
+      "q": 10005,
+      "u": 0.0375,
+      "mu": 9504.5,
+      "averaged_lapse": 0.15564308931333476,
+      "mass_defect": 2.885568844062053e-06,
+      "metric_mass_defect": 1.5581607711849654e-06,
+      "averaged_lapse_s_D": 3.193806832944799,
+      "normalization_derivative_error": 0.0,
+      "mass_derivative_identity_error": 4.657047931685235e-18,
+      "reflection_norm_error": 4.3113977015243887e-19,
+      "transported_lapse_derivative_error": 4.440892098500626e-16,
+      "bounds_enclose": true
+    }
+  ],
+  "matrix_controls": {
+    "records": [
+      {
+        "mass": 0.0,
+        "projection_error": 3.0474286599020594e-16,
+        "square_compression_error": 1.3671552866968039e-15,
+        "square_compression_shortcut_mismatch": 4.437327718146745,
+        "resolvent_identity_error": 5.574517733820189e-16,
+        "metric_derivative_error": 3.912249610727802e-10,
+        "metric_insertion_identity_error": 9.256254240597767e-16,
+        "finite_trace_bound_holds": true,
+        "signed_mass_unitary_error": 0.0,
+        "signed_mass_source_difference": 0.0
+      },
+      {
+        "mass": 0.7,
+        "projection_error": 3.912234073131042e-16,
+        "square_compression_error": 1.2695755045000261e-15,
+        "square_compression_shortcut_mismatch": 4.7839636387644076,
+        "resolvent_identity_error": 3.9243932713561183e-16,
+        "metric_derivative_error": 1.555630765847068e-10,
+        "metric_insertion_identity_error": 4.2377562029603337e-16,
+        "finite_trace_bound_holds": true,
+        "signed_mass_unitary_error": 0.0,
+        "signed_mass_source_difference": 0.0
+      },
+      {
+        "mass": 3.0,
+        "projection_error": 5.913958707675192e-16,
+        "square_compression_error": 4.035327059480151e-15,
+        "square_compression_shortcut_mismatch": 7.648032328482022,
+        "resolvent_identity_error": 1.989105500300821e-16,
+        "metric_derivative_error": 1.189399148638629e-11,
+        "metric_insertion_identity_error": 1.7276516604459963e-16,
+        "finite_trace_bound_holds": true,
+        "signed_mass_unitary_error": 0.0,
+        "signed_mass_source_difference": 0.0
+      }
+    ],
+    "common_positive_operator_pv_errors": [
+      1.7685709966932832e-13,
+      7.234816120872584e-17
+    ],
+    "finite_selection_mass_growth_coefficient": -0.48941012044959153,
+    "finite_selection_mass_growth": [
+      {
+        "M": 1.0,
+        "signed_pair_average": -0.4894101204495911,
+        "analytic_error": 4.440892098500626e-16
+      },
+      {
+        "M": 10.0,
+        "signed_pair_average": -4.894101204495922,
+        "analytic_error": 6.217248937900877e-15
+      },
+      {
+        "M": 100.0,
+        "signed_pair_average": -48.941012044959166,
+        "analytic_error": 1.4210854715202004e-14
+      }
+    ],
+    "polynomial_pv_moments": [
+      0,
+      0,
+      0
+    ]
+  },
+  "source_sha256": "b614c9a37d8a84c845f8138df226afece042faebe5b27bf9f7d09beef7f81789",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+    "dihole_collar_resolvent_results.json": "df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17",
+    "dihole_collar_resolvent.py": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531",
+    "dihole_metric_resolvent_results.json": "f15f1402458e8ee43b222d3ea40b665f2bc33315230436eda7887be941e9ce97",
+    "dihole_metric_resolvent.py": "b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc",
+    "dihole_paired_frequency_units_trial.json": "c5d9a8152c7931598e4f32baceb625a44f675e62ab995d1c781e778580e58e4d",
+    "provenance/dihole_paired_frequency_units_trial.py": "c81e58f0621ff73caa1ad617be46d9795d297f18299d6c6130f63165c7a5ca19",
+    "dihole_paired_frequency_results.json": "e2de59a035d0874484a857164a1ff93a0d0e6155a8307a7493f3d7c2e21ce429",
+    "dihole_paired_frequency.py": "c118af9191e5f371de9320d134a454d02f6180444ca5be57ecd07caca2520044"
+  },
+  "total_renormalized_source": null,
+  "source_sign": null,
+  "atom_transit": null,
+  "scope": [
+    "Fixed finite proper masses +/-sqrt(j)*M and nonzero y; Gaussian spatial filter frozen and mass independent. Both Weyl blocks, one collar, one axial sector.",
+    "The scalar reduced lapse has a chosen bounded positive complete-line continuation inside the exported collar bounds, with its metric variation fixed outside the collar. No spatial derivative bound on that continuation is used.",
+    "The full exterior lapse may be unbounded. Full metric graph estimates use lapse data only where the compact mask is supported; global axial self-adjoint realization assumed.",
+    "Finite resolvent-insertion error and weighted finite-mass error are not sign-source values. No frequency integral, regulator removal, omitted-mode bound or physical counterterms evaluated.",
+    "The exact common-P rational identity survives common form compression; it does not identify a squared compressed Hamiltonian with the compressed full square.",
+    "Atomic-flux entries evaluate bounding formulas only. No supported opening, payload propagation, stability, future clock advantage or new law established."
+  ]
+}
