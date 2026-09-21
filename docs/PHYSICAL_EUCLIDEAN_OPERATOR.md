@@ -2395,3 +2395,245 @@ leave other field equations, induced current, formation and stability
 unresolved. The current static metric has a global time coordinate and
 no backward-time loop. Travel from13September2027 to12September2027
 remains unproved.
+
+
+## Atomic target and quantitative heat-coefficient work
+
+The first transport target is now explicitly one hydrogen atom, with human
+transport deferred. The [atomic target and its actual first checks](ATOMIC_TRANSPORT_TARGET.md)
+define support, stability, internal-state transport and clock comparison
+as separate requirements. The nominal1nm areal diameter is a candidate,
+not an established feasible size. It requires a different flux sector from
+the old illustrative $q=1$ calculation.
+
+### Physical scales and local-coupling sensitivity
+
+The [physical-control calculation](../scripts/dihole_physical_control.py)
+samples both varied collars through64/128 quadrature orders. For160's
+illustrative $q=1$ coupling, the largest sampled values are
+
+$$
+|R|\ell_P^2=0.04505919,\qquad
+\max_{\hat a,\hat b}|R_{\hat a\hat b}|\ell_P^2=0.03747797,\qquad
+|F_{\rm charge}|\ell_P^2=0.01130416.
+$$
+
+The charge-included magnetic magnitude means $\sqrt{F^2/2}$.
+These are static-frame and scalar diagnostics, not a global curvature
+enclosure, a bound on all Riemann components, or a percentage error in the
+semiclassical approximation. Higher derivatives, nonlocal effects and
+backreaction still matter. This is consistent with the scope of
+[Donoghue's effective-gravity discussion, section6](https://arxiv.org/pdf/2211.09902);
+it is not a newly identified validity theorem.
+
+For the fixed local action basis
+$S_{\rm loc}=\int\sqrt{-g}(c_1R^2+c_2R_{ab}R^{ab})$, the saved compact
+energy responses imply
+
+$$
+\delta C_{\rm required}
+=-636.8446804260368\,\delta c_1
+-289.35080303598477\,\delta c_2.
+$$
+
+A change of0.0091511653 in $c_1$ alone, or0.0201411951 in $c_2$ alone,
+would shift the condition by the magnitude5.8278709657 of the illustrative
+$q=1$ target. This states physical sensitivity in the specified field
+basis; no uncertainty is assigned and the declared coefficients remain
+zero. Matching a scheme change on both sides does not change a physical
+prediction. A field redefinition must also change the matter terms and
+observables. Eight [checks](../results/dihole_physical_control_results.json)
+pass, including reproduction of the existing local action derivatives.
+
+![Physical-control diagnostic](../figures/dihole_physical_control_progress.png)
+
+### An exact cancellation reduces the ultraviolet calculation
+
+For the pointwise volume-preserving paired metric variation, the principal
+second-order coefficients of $\dot P$ in a physical Euclidean frame are
+$+2fI_4$ temporally and $-2fI_4$ radially. Their metric contraction is zero.
+Writing
+
+$$
+K_P(s;x,y)=(4\pi s)^{-2}e^{-d(x,y)^2/(4s)}
+ \left[u_0+s u_1+s^2u_2+\mathcal R_2(s;x,y)\right],
+$$
+
+the Gaussian gradient vanishes at coincidence and its Hessian is
+$-g_{ij}/(2s)$ times the Gaussian. The latter drops out when contracted
+against $\dot P$'s principal coefficient. With $u_j=\Phi_j/j!$, this gives
+
+$$
+a_2=-\int{\rm tr}[\dot P_xu_0]_{y=x},\quad
+a_4=-\int{\rm tr}[\dot P_xu_1]_{y=x},\quad
+a_6=-\int{\rm tr}[\dot P_xu_2]_{y=x}.
+$$
+
+All integrals use the physical four-volume per unit Killing time. No
+metric derivative of an unspecified remainder constant is needed.
+If the actual normalized remainder satisfies
+
+$$
+C_*\ge\sup_{0<s\le s_0}s^{-3}
+ \int\left|{\rm tr}[\dot P_x\mathcal R_2]_{y=x}\right|,
+$$
+
+then the short-scale integral obeys
+
+$$
+U\le\frac{|a_6|s_0}{16\pi^2}
++\frac{C_*s_0^2}{32\pi^2}.
+$$
+
+[Ludewig's Theorem3.1](https://arxiv.org/pdf/1607.05152) supplies the
+relevant normalized heat remainder estimates with spatial derivatives
+on compact sets, but not numerical values for these constants on our
+geometry. The saved second-order metric jets and $a_2,a_4$ do not supply
+$C_*$.
+
+The integrated $A_6$ functional can nevertheless be evaluated using only
+third metric jets after integration by parts. One varies the integrated
+functional with heat smearing1; inserting the collar mask as the heat
+smearing would compute a different observable. Compact smooth variation
+removes total-divergence variations. Cubic curvature and first covariant
+derivatives of curvature, $E$ and $\Omega$ suffice in
+[Vassilevich's equation4.29](https://arxiv.org/pdf/hep-th/0306138).
+Static coordinate independence does not remove the time-direction
+covariant tensor derivatives.
+
+### A finite-time heat norm replaces the infrared pole
+
+Let $A=\widehat{\mathcal D}_E$, $P=-A^2$, $C=\sqrt N$ and
+$E=e^{-s_0P}$. At $\eta>0$, the long-scale integral is exactly
+
+$$
+I_\eta=-{\rm Tr}_{/T}
+ [\dot P(P+\eta)^{-1}e^{-s_0(P+\eta)}]
+=-e^{-\eta s_0}\sum_{\sigma=\pm}{\rm Tr}_{/T}
+ [\dot A(A+\sigma\sqrt\eta)^{-1}E].
+$$
+
+Using151's proper-mass congruence, define
+
+$$
+K_\kappa=C\beta E_\kappa\dot A_\kappa C,\qquad
+K(t)=\int e^{i\kappa t}K_\kappa\,\frac{d\kappa}{2\pi}.
+$$
+
+The self-adjoint Hamiltonian Euclidean propagators have norm at most1.
+Consequently, if the indicated kernel norm is finite,
+
+$$
+V=\left|\lim_{\eta\downarrow0}I_\eta\right|
+\le2\int_{\mathbb R}\|K(t)\|_1\,dt.
+$$
+
+This bounds the signed, frequency-integrated Abel value. It does not
+bound the integral of the absolute frequency integrand, or establish
+absolute convergence of the original proper-time integral. The factor2
+counts the signed proper masses only. The massless zero-state convention
+remains the established paired prescription for this metric probe.
+Moving $\beta$ through the proper heat kernel is generally incorrect.
+
+For a compact partition of the insertion into regular input boxes
+$\Omega_i$, define $J_i=(1-\ell_i^2\Delta_{D,\Omega_i})^{1/2}$ and
+$S_i={\rm Tr}_4J_i^{-4}\le{\rm Vol}(\Omega_i)/(2\pi\ell_i^3)$.
+For any $T>0$, a sufficient numerical datum is
+
+$$
+B_i^2=\int(1+t^2/T^2)\|K_i(t)J_i^2\|_{\rm HS}^2\,dt
+=\frac1{2\pi}\int
+ \left(\|K_{i,\kappa}J_i^2\|_{\rm HS}^2+
+ T^{-2}\|\partial_\kappa K_{i,\kappa}J_i^2\|_{\rm HS}^2\right)d\kappa,
+$$
+
+which gives $V\le2\sum_i\sqrt{\pi T S_i}B_i$.
+The output Hilbert norm covers the whole spatial exterior and all sectors;
+the input box uses unitary conversion to ordinary coordinate measure.
+The $B_i$ are not evaluated. They need weighted heat estimates with
+source-side derivatives through order3 and the unbounded output factor
+$\sqrt N$. An undifferentiated scalar heat bound alone does not suffice.
+
+Uniform fixed-radius volume noncollapse also cannot be assumed globally.
+In the Melvin end $N=1+b\rho^2$, the azimuthal circumference behaves as
+$2\pi/(b\rho)$ and fixed proper-radius four-ball volumes tend to zero.
+Source-ball volume lower bounds and weighted off-diagonal control could
+replace a uniform noncollapse assumption, but must be quantified.
+
+An independent54-case noncommuting-lapse algebra audit at positive shifts
+checks the heat identity to $1.99\times10^{-14}$, congruence inverse to
+$3.26\times10^{-16}$ and cycled trace to $1.98\times10^{-14}$. It detects
+the incorrect beta/kernel exchange with a0.2527 trace discrepancy. These
+are finite algebra checks, not a computed physical $V$.
+
+
+### Numerical A6 reference and its remaining error
+
+The [A6 calculation](../scripts/dihole_uv_bound.py) now evaluates the compact
+variation of the integrated local coefficient on the prescribed geometry:
+
+$$
+\delta A_6 D_0^3=-1204.72809423935-3.2096919527759757q^2.
+$$
+
+The coefficients exclude the overall $(4\pi)^{-2}$ heat prefactor. This
+polynomial describes a local heat coefficient at fixed shape, not the full
+renormalized quantum source. At $q=1$, the formal leading contribution to
+the subtracted short-time integral with $s_0/D_0^2=.01$ is
+$-0.07649355391455707$. Its omitted remainder is unknown. Neither this
+number nor its absolute value is an achieved bound on $U$.
+
+Twelve [checks](../results/dihole_uv_bound_results.json) pass. They include
+the exact sphere coefficient, a constant magnetic field, a product-space
+metric, direct Clifford traces versus the traced scalar polynomial,
+covariant Bianchi identities, the saved lower heat coefficients, and an
+independent finite metric variation. The96/128 quadrature difference is
+$1.36\times10^{-11}$ relative; changing the third-jet difference step gives
+$8.72\times10^{-12}$. These are numerical sensitivity checks, not rigorous
+interval enclosures. Covariant time derivatives are retained even though
+the coordinate coefficients are static. The integrated gauge coefficients
+also reproduce [Shore's equation4.10](https://arxiv.org/pdf/gr-qc/0203034)
+after the stated charge and effective-action conversion.
+
+### Atomic flux requires a different approximation
+
+The one-atom target is not obtained by applying the $q=1$ source unchanged.
+Combining the atomic flux estimate with the sampled field peak gives
+
+$$
+(s_0/D_0^2)q\,(\mathcal B_{q=1}D_0^2)
+=.01(4.6428759050\times10^{24})(9.6817266176)
+\simeq4.4951\times10^{23}.
+$$
+
+Thus a weak-field heat truncation at the old cutoff cannot be justified
+for this atomic flux sector. These inputs are saved in the
+[atomic calculation](../results/atomic_aperture_budget_results.json) and
+[physical-control calculation](../results/dihole_physical_control_results.json).
+Shrinking the heat cutoff alone still leaves the intermediate and infrared
+contributions to be calculated.
+
+For a covariantly constant magnetic field, [Fucci, equations3.13--3.14](https://arxiv.org/pdf/0906.2430)
+gives the rank-four leading density. Separating it algebraically yields
+
+$$
+\Theta_0(s)=\frac{4s\mathcal B\coth(s\mathcal B)}{(4\pi s)^2}
+=\frac{\mathcal B}{4\pi^2s}
++\frac{\mathcal B}{2\pi^2s(e^{2s\mathcal B}-1)}.
+$$
+
+The first term is the local lowest Landau sector; it survives at large
+proper time. The paper's massless curvature coefficients contain infrared
+singularities, so a large magnetic field does not remove the entire
+low-energy problem. Applying this density to the varying collar is a local
+approximation, not an exact heat kernel for our geometry.
+
+The next bounded calculation is the compact variation of
+$\int N\sqrt h\,\Theta_0\,d^3x$, keeping the charge-included gauge one-form
+fixed and reporting those two pieces separately. It must accompany
+curvature and field-gradient diagnostics, including
+$|{\rm Riem}|/\mathcal B$ and $|\nabla F|^2/\mathcal B^3$;
+any magnetic zeros require separate treatment. Actual field derivatives,
+longitudinal propagation, the global vacuum state and the remainder still
+need control. This is a proposed next calculation, not a computed source.
+It does not establish a supporting material, atomic survival or a time shift.

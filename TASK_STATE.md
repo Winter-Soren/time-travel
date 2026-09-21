@@ -1,3 +1,78 @@
+# Authoritative checkpoint161 - one atom before larger payloads
+
+Previous checkpoint160 published 1776ee352447f5e29b2c77886e563eed6aeacdf1.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+No new physical law, obtainable medium, stable bridge or atom transit.
+No discovery deadline. Human transport is deferred.
+
+- TARGET: one neutral hydrogen atom, initially isolated nonrelativistic1s;
+  nominal central throat AREAL DIAMETER1nm, not a claimed feasible minimum.
+  Success requires self-consistent stress/current, stability, propagated
+  center and internal state with quantified survival/error, and an exterior
+  clock comparison. None of the combined transport conditions is met.
+- The current static metric has a global time function and excludes backward
+  causal passage. 13Sep2027 -> 12Sep2027 remains unproved. A future clock
+  advantage has not been calculated. Shrinking the payload does not change
+  the causal character of the metric.
+- The nominal1nm diameter means D=2.1961110716nm. At160's illustrative
+  coupling, continuous flux q=4.6428759050e24; physical flux is integer and
+  its source must be recomputed. Oldq1 diameter2.15383745e-34m was far below
+  atomic size. U(1) field content/coupling to hydrogen remain unspecified.
+- Flat1s relative-coordinate probability outside0.5nm=1.2436413e-6;
+  this is not wavepacket transmission through the actual geometry.
+- Actual collar tidal trace matches independent Ricci to1.78e-14. Sampled
+  first-order shift / ordinary binding peaks at279.8979534 for1nm. This
+  rejects a small perturbation of unchanged1s at those samples, not survival
+  or destruction. Transit needs its own moving frame and internal evolution.
+  Sampled64/128 sensitivity0.0488% is not a global enclosure. The1% diameter
+ 167nm is NOT a safe minimum. Keep atom payload fixed if revising size/shape.
+- Physical-control calculation reproduces saved local responses and shows
+  sensitivity to specified physical curvature-squared couplings; declared
+  coefficients remain zero, no uncertainty/tuning assigned. Sampled Ricci
+  and scalar curvature do not certify the semiclassical approximation.
+- Numerical local A6 at fixed shape: gravity=-1204.72809423935,
+  gauge=-3.2096919527759757 q^2, excluding(4pi)^-2. q1 sum=-1207.937786192126.
+  Relative96/128 difference1.36e-11. Formal leading UV integral at s0=.01
+  is-.07649355391455707, NOT full source or achieved remainder bound.
+  Exact sphere/product/magnetic, direct Clifford, Bianchi, lower-coefficient
+  and independent metric-variation controls pass. Numerical A6 not enclosed.
+- UV paired-principal cancellation reduces the needed remainder to a
+  normalized second-derivative heat estimate. Actual Cstar and U unknown.
+  IR can be bounded conditionally by a fixed-time heat trace norm; its
+  constants and V remain unknown.54 independent finite-lapse algebra cases
+  check beta ordering and signed-mass factor2, not actual physical traces.
+  Uniform fixed-radius noncollapse fails in the asymptotic Melvin end.
+- At the atomic flux, sampled s0*B~4.4951e23. The old weak-field truncation
+  at s0=.01 is not justified. Strong-field resummation is the next local
+  approximation to assess. Large B leaves a massless lowest Landau sector;
+  it does not remove the global infrared contribution.
+- NEXT bounded calculation: vary the actual compact-collar integral of
+ 4sB*coth(sB)/(4pi*s)^2 at fixed charge one-form, separately retaining the
+  local lowest sector and gapped tower. Evaluate curvature/field-gradient
+  diagnostics and identify zero-field regions requiring separate treatment.
+  It is a local approximation, not a full source bound. Global lowest-sector
+  response and an inhomogeneous remainder remain essential. Do not resume
+ 159's exhausted basis growth without a physical omitted-source budget.
+- Other field equations/current, formation, stability and atomic evolution
+  remain missing. No material-production recipe is established.
+
+All28 saved checks pass: atomic8, physical-control8, A6 twelve.
+Both new figures inspected. All delegated work finished; no jobs running.
+
+atomic_aperture_budget source 1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab
+Results c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33
+dihole_physical_control source 1372387ce52a834fe0f3695863295ac2801d9d921d085e1e678d7c5b40343658
+Results f27c482654dbc546c2cd338d3324388b210e08eb3c4a293d7a18e63109fc5924
+dihole_uv_bound source 19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0
+Results bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c
+
+Verification PASS: 28 saved checks, exact current source/input hashes,
+155 imports, 1358 links, 8 historical guards, 14 frozen hashes and the
+operator identity. Both figures inspected; all historical document bytes
+retained. No new simulation remains running.
+
+--- Preserved checkpoint160 and earlier history ---
+
 # Authoritative checkpoint160 - physical scaling and full-source budget
 
 Previous checkpoint159 published d69a97c93655cc70796bde6ab80ad034596ba063.

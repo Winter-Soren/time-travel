@@ -1,0 +1,112 @@
+# Atomic transport is the first target
+
+The user has reaffirmed that the first payload is a few atoms or molecules,
+with human transport deferred. The working reference is **one neutral
+hydrogen atom**, initially in its isolated nonrelativistic ground state,
+and a **nominal throat areal diameter of 1nm**. This diameter is a starting
+test, not a claimed feasible or minimum opening. Existing calculations
+of the supporting field are not simulations of a human or an atom.
+
+Success requires all of the following on the same physical model:
+
+1. A self-consistent geometry, supporting stress and induced current with
+   specified field content, state and physical couplings.
+2. Stability for the preparation and transit interval, including the
+   perturbation from the payload.
+3. A propagated atomic center and internal quantum state, with quantified
+   transmission, excitation/ionization and numerical errors. A probability
+   of transmission through a prescribed geometry alone does not prove that
+   the geometry can exist.
+4. A specified comparison of exterior clocks. Backward travel requires
+   return to an earlier event in the exterior chronology; future travel
+   requires a calculated elapsed-time difference, rather than merely
+   exiting later than entry.
+
+None of these combined conditions is established. The currently prescribed
+static metric has a global time function and cannot itself provide backward
+causal passage. Shrinking the payload does not change that property.
+Travel from13September2027 to12September2027 remains unproved.
+
+## What an atom-sized target changes
+
+The current shape has central areal radius $r_A=0.2276751874982177D$.
+An areal diameter of1nm therefore means $D=2.1961110716$nm. In the fixed
+shape and illustrative coupling of checkpoint160, the continuous flux
+requirement is $q\simeq4.6428759050\times10^{24}$. Physical flux is integer;
+this estimate locates the sector, not a production recipe. Keeping $q=1$
+would instead require $\alpha_R\simeq3.3852533560\times10^{-52}$.
+Neither alternative is an available material assumption.
+
+The old illustrative $q=1$ areal diameter is
+$2.1538374500\times10^{-34}$m, much smaller than an atom. Its quantum source
+must not be relabeled as an atom-sized result. Changing flux changes the
+charged Dirac operator, all mode sectors and the heat remainder. The same
+coupling value used in160 is only an illustration, not a high-energy
+measurement or a specified physical hydrogen interaction.
+
+For an isolated hydrogen1s state with reduced mass $\mu$, let
+$a_H=a_0m_e/\mu$. Its flat-space probability outside radius $r$ is
+
+$$
+P_{>r}=e^{-2r/a_H}\left[1+2r/a_H+2(r/a_H)^2\right].
+$$
+
+At $r=0.5$nm this is $1.2436413\times10^{-6}$. It concerns the internal
+relative coordinate only. It excludes center-of-mass localization, motion,
+the actual curved cross-section and supporting-field interactions; an
+areal radius is not a physical hard wall.
+
+## Tidal disturbance must be included
+
+The [calculation](../scripts/atomic_aperture_budget.py) reuses the actual
+collar metric jets and evaluates the static-frame tidal tensor
+
+$$
+\mathcal E_{\hat i\hat j}
+=R_{\hat0\hat i\hat0\hat j}
+=\frac{\operatorname{Hess}_h(N)_{ij}}
+{N\sqrt{h_{ii}h_{jj}}}.
+$$
+
+Its trace agrees with the independently computed
+$R_{\hat0\hat0}$ within $10^{-10}$. The64/128-order sampled peak changes
+by0.0488%; this is a sensitivity check, not a global enclosure. These
+components are the instantaneous Fermi-frame values for a geodesic
+momentarily at rest relative to the static frame. A moving transit needs
+its own boosted, transported frame and time history.
+
+The leading internal tidal Hamiltonian is
+$H_{\rm tidal}=\mu c^2\mathcal E_{ij}x_ix_j/2$, with
+$\langle x_ix_j\rangle_{1s}=a_H^2\delta_{ij}$. This follows from the local
+Fermi-coordinate coupling used, for example, by
+[Boughn--Rothman, equations3.2--3.3](https://arxiv.org/pdf/gr-qc/0605052).
+Using [NIST CODATA2022 central values](https://physics.nist.gov/cuu/Constants/Table/allascii.txt),
+the largest sampled first-order shift for the nominal1nm diameter is
+**279.90 times the isolated hydrogen binding energy**.
+
+This rejects the assumption of a small tidal perturbation of an unchanged
+1s atom at those points. It does not compute the true spectrum there,
+prove destruction, give an ionization probability, or establish what a
+moving atom experiences. Strong compression, excitation and subsequent
+recovery require an actual internal-state evolution. The supporting field's
+electromagnetic or hidden nature also remains unspecified.
+
+At fixed dimensionless shape the diagnostic scales as diameter$^{-2}$.
+Its sampled peak reaches1% at approximately167nm diameter. This is **not
+a safe minimum opening**: source support, trajectory, field coupling,
+higher tidal terms and stability are still missing. Changing diameter at
+fixed physical coupling also changes flux and requires the corresponding
+source calculation. We may revise the opening size or shape while keeping
+the payload at one atom.
+
+Eight [checks](../results/atomic_aperture_budget_results.json) pass. No
+atom transit has been simulated, and neither atom survival nor a time shift
+has been established.
+
+![One-atom size and tidal diagnostic](../figures/atomic_aperture_budget_progress.png)
+
+The immediate work is to assess an admissible source and a geometry whose
+tidal and supporting-field effects can be included in a controlled atomic
+model. Existing small-scale field calculations remain reference data,
+with their actual parameter values and limits preserved. Enlarging to
+humans is outside the current transport milestone.

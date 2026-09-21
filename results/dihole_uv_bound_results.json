@@ -1,0 +1,299 @@
+{
+  "name": "dihole_uv_bound",
+  "passed": true,
+  "tests": {
+    "exact_paired_volume_and_principal_trace": true,
+    "Clifford_relations": true,
+    "exact_S4_heat_coefficient": true,
+    "constant_magnetic_heat_control": true,
+    "product_metric_jet_control": true,
+    "actual_Clifford_scalar_charge_controls": true,
+    "actual_covariant_Bianchi_control": true,
+    "saved_lower_coefficients_recovered": true,
+    "angular_radial_quadrature_refinement": true,
+    "third_jet_step_refinement": true,
+    "independent_finite_metric_variation": true,
+    "local_gauge_primary_coefficient_control": true
+  },
+  "source_sha256": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+  "input_sha256": {
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8"
+  },
+  "historical_source_evidence": {
+    "dihole_local_source.py": {
+      "recorded_sha256": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+      "current_sha256": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+      "accepted_as": "exact"
+    },
+    "balanced_dihole.py": {
+      "recorded_sha256": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+      "current_sha256": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+      "accepted_as": "exact"
+    },
+    "dihole_stretched_collar.py": {
+      "recorded_sha256": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+      "current_sha256": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+      "accepted_as": "exact"
+    },
+    "dihole_bridge_scattering.py": {
+      "recorded_sha256": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+      "current_sha256": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+      "accepted_as": "exact"
+    },
+    "project_paths.py": {
+      "recorded_sha256": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+      "current_sha256": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+      "accepted_as": "exact"
+    },
+    "dihole_pv_counterterms.py": {
+      "recorded_sha256": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+      "current_sha256": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+      "accepted_as": "exact"
+    },
+    "dihole_local_source_results.json": {
+      "recorded_sha256": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+      "current_sha256": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+      "accepted_as": "exact"
+    }
+  },
+  "parameters": {
+    "geometry": {
+      "Q": 0.2,
+      "D": 1.0,
+      "k": 0.5,
+      "M": 0.15311288741492748,
+      "a": 0.4759794572326244,
+      "rplus": 0.6531128874149275,
+      "B": 0.24020542767375577,
+      "q": 1.0,
+      "physical_A_factor": -2.5
+    },
+    "fixed_charge_q": 1,
+    "heat_cutoff_s0_over_D0_squared": 0.01,
+    "scheme_mu_H_times_D0": 0.7940236163832829
+  },
+  "conventions": {
+    "operator": "Rank-four massless Euclidean charged Dirac square on the actual prescribed paired smooth collars.",
+    "heat": "Tr exp(-sP) per Killing time ~ (4*pi*s)^(-2) sum_j A_(2j) s^j; reported coefficients exclude (4*pi)^(-2).",
+    "variation": "log(g_tt)/2 += epsilon*f; log(g_uu)/2 -= epsilon*f; magnetic connection fixed; exact pointwise volume preservation.",
+    "measure": "Both collars and complete azimuth: 4*pi*P^2*R^2 du dcos(theta), per unit Killing time.",
+    "units": "D0=1; deltaA2/D0, deltaA4*D0, deltaA6*D0^3 are the reported dimensionless numbers.",
+    "curvature": "Positive-sphere R_abcd=delta_ac delta_bd-delta_ad delta_bc; Vassilevich explicit Riemann signs translated.",
+    "derivatives": "Analytic second coordinate jets; fourth-order centered third jets and all four covariant derivative directions.",
+    "IBP": "Only integrated compact metric variations are used; all derivatives of f vanish at the collar boundaries."
+  },
+  "symbolic": {
+    "determinant_residual": "0",
+    "gaussian_Hessian_residual": "0",
+    "passed": true
+  },
+  "tensor_controls": {
+    "clifford_error": 0.0,
+    "S4_a6": 0.09841269841269806,
+    "S4_expected": 0.09841269841269841,
+    "S4_error": 3.469446951953614e-16,
+    "flat_magnetic_a6": 0.0,
+    "flat_magnetic_a4": 1.3333333333333333,
+    "product_a6": -0.018332778567998337,
+    "product_expected": -0.018332778567998344,
+    "product_a6_error": 6.938893903907228e-18,
+    "product_scalar_error": 0.0,
+    "product_parallel_curvature_error": 9.852530536719103e-16
+  },
+  "actual_tensor_controls": {
+    "charge_cases": [
+      {
+        "q": 0,
+        "matrix_vs_scalar_polynomial_scaled_error": 1.9474785596689796e-14
+      },
+      {
+        "q": 1,
+        "matrix_vs_scalar_polynomial_scaled_error": 1.145727065216128e-14
+      },
+      {
+        "q": -1,
+        "matrix_vs_scalar_polynomial_scaled_error": 1.145727065216128e-14
+      },
+      {
+        "q": 2,
+        "matrix_vs_scalar_polynomial_scaled_error": 3.000784837816147e-15
+      }
+    ],
+    "max_matrix_vs_scalar_scaled_error": 1.9474785596689796e-14,
+    "contracted_Bianchi_scaled_error": 2.646771690706373e-13,
+    "covariant_time_curvature_derivative_max": 8.023070322416679,
+    "covariant_time_field_derivative_max": 0.12294045399728623,
+    "note": "All four covariant derivative directions are retained, including static time and azimuth."
+  },
+  "numerical_refinement": {
+    "records": [
+      {
+        "order": 64,
+        "step_fraction": 0.0002,
+        "coordinate_steps": [
+          5.791318868563859e-06,
+          0.0002
+        ],
+        "mixed_third_scaled_mismatch": 2.2166879554141872e-08,
+        "derivatives": {
+          "a2": 0.11400999301388565,
+          "a4": 7.706927313710675,
+          "a6_gravity": -1204.7280941462664,
+          "a6_gauge": -3.209691948417621,
+          "a6": -1207.9377860946843
+        }
+      },
+      {
+        "order": 64,
+        "step_fraction": 0.0001,
+        "coordinate_steps": [
+          5e-06,
+          0.0001
+        ],
+        "mixed_third_scaled_mismatch": 4.6440646550571785e-08,
+        "derivatives": {
+          "a2": 0.11400999301388565,
+          "a4": 7.706927313710675,
+          "a6_gravity": -1204.7280941489457,
+          "a6_gauge": -3.209691948417621,
+          "a6": -1207.9377860973634
+        }
+      },
+      {
+        "order": 64,
+        "step_fraction": 0.0004,
+        "coordinate_steps": [
+          5.791318868563859e-06,
+          0.0004
+        ],
+        "mixed_third_scaled_mismatch": 1.552993623629706e-08,
+        "derivatives": {
+          "a2": 0.11400999301388565,
+          "a4": 7.706927313710675,
+          "a6_gravity": -1204.7280941357367,
+          "a6_gauge": -3.209691948417621,
+          "a6": -1207.9377860841541
+        }
+      },
+      {
+        "order": 96,
+        "step_fraction": 0.0002,
+        "coordinate_steps": [
+          2.5874676397437867e-06,
+          0.0002
+        ],
+        "mixed_third_scaled_mismatch": 7.878814867190442e-08,
+        "derivatives": {
+          "a2": 0.1140099928157875,
+          "a4": 7.7069273141951316,
+          "a6_gravity": -1204.7280942558273,
+          "a6_gauge": -3.2096919527757484,
+          "a6": -1207.9377862086028
+        }
+      },
+      {
+        "order": 128,
+        "step_fraction": 0.0002,
+        "coordinate_steps": [
+          1.4592671072344299e-06,
+          0.0002
+        ],
+        "mixed_third_scaled_mismatch": 2.3440810976993465e-07,
+        "derivatives": {
+          "a2": 0.11400999281577906,
+          "a4": 7.706927314195074,
+          "a6_gravity": -1204.72809423935,
+          "a6_gauge": -3.2096919527759757,
+          "a6": -1207.9377861921257
+        }
+      }
+    ],
+    "relative_last_quadrature_difference": 1.3640676139693152e-11,
+    "relative_step_difference": 8.71744371067478e-12,
+    "lower_coefficient_recovery": {
+      "a2_absolute_error": 1.5681900222830336e-15,
+      "a4_absolute_error": 7.105427357601002e-15
+    },
+    "finite_variation": {
+      "order": 32,
+      "complex_step_reference": -1207.881034219039,
+      "centered_differences": [
+        {
+          "epsilon": 0.0001,
+          "derivative": -1207.8804329858526,
+          "error": 0.0006012331864440057
+        },
+        {
+          "epsilon": 5e-05,
+          "derivative": -1207.8808839108744,
+          "error": 0.00015030816462058283
+        }
+      ],
+      "error_ratio": 4.00000351252825
+    }
+  },
+  "reference_coefficient_estimate": {
+    "a2": 0.11400999281577906,
+    "a4": 7.706927314195074,
+    "a6_gravity": -1204.72809423935,
+    "a6_gauge": -3.2096919527759757,
+    "a6": -1207.9377861921257
+  },
+  "fixed_geometry_charge_polynomial": {
+    "equation": "deltaA6(q)=gravity+q^2*gauge",
+    "gravity": -1204.72809423935,
+    "gauge": -3.2096919527759757,
+    "interpretation": "Local heat coefficient only. Charge changes the Dirac operator; this does not scale its full vacuum response."
+  },
+  "local_primary_crosscheck": {
+    "coefficients_in_alpha_over_pi": [
+      "-1/144",
+      "13/360",
+      "-1/360",
+      "-1/30"
+    ],
+    "basis": [
+      "R F2",
+      "Ric_ab F_ac F_bc",
+      "R_abcd F_ab F_cd",
+      "|div F|2"
+    ]
+  },
+  "short_time_status": {
+    "actual_U_bound": null,
+    "actual_remainder_constant_Cstar": null,
+    "formal_leading_signed_subtracted_heat_integral": -0.07649355391455707,
+    "conditional_formula": "If |deltaK(s)-H(s)-deltaA6*s/(16*pi^2)| <= Cstar*s^2/(16*pi^2), then U <= |deltaA6|*s0/(16*pi^2)+Cstar*s0^2/(32*pi^2).",
+    "missing": "A proved quantitative remainder constant on 0<s<=s0, including localization/noncompact effects. The numerical A6 estimate is not an enclosure."
+  },
+  "limitations": [
+    "This calculation estimates an integrated local heat coefficient; it supplies no sign or bound for the full renormalized source, U, or the infrared tail.",
+    "Step and quadrature agreement are numerical checks, not interval enclosures or an asymptotic remainder theorem.",
+    "The fixed q=1 geometry is not the nominal one-nanometer atomic candidate and is not a semiclassical solution.",
+    "The local q^2 identity holds at fixed geometric shape. Large-q use of s0=.01 is not justified: q*F*s0 and higher heat terms require separate control.",
+    "No Maxwell field equation is imposed on the pulled-back collar field when retaining div(F) terms."
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/hep-th/0306138",
+      "role": "Vassilevich Eqs3.27-3.28 and4.29: Dirac bundle and integrated A6."
+    },
+    {
+      "url": "https://arxiv.org/pdf/gr-qc/0203034",
+      "role": "Shore Eq4.10: independent Drummond-Hathrell gauge-coefficient normalization."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1607.05152",
+      "role": "Ludewig Theorem3.1: heat remainder existence, not an evaluated constant for this geometry."
+    }
+  ],
+  "elapsed_seconds": 16.820726900012232
+}
