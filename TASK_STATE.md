@@ -1,3 +1,53 @@
+# Authoritative checkpoint181 - full heat defect evaluated, ceiling too loose for support
+
+Previous checkpoint180 published fcdf8d85eee01e268e0796114c2e6e35afd02a8e.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No stable opening, obtainable source, atom transit or clock gain established.
+
+- scripts/dihole_heat_defect.py:14 checks PASS,69 exact input hashes.
+  No old geometry simulation rerun; historical sources/results unchanged.
+- Full physical Q4 defect now bounded: interior t4*chi*G*P*u4 plus
+  the complete cutoff commutator. Gaussian derivatives preserve d powers
+  before 4D L2 integration. Normalized derivative schedules suffice.
+- Interior time exponents are nonnegative half-integers0..3. Annular
+  powers range-9..2 with exp(-rho²/(64t)); exact critical-time suprema
+  included forq1000. Atomic terms all peak at the saved cutoff.
+- Apply(1+Pg)^3 by derivative orders6->4->2->0. Physical/canonical
+  density conversion and full source integration included: rank4,
+  both collars, two hemispheres, per unit Killing time. No missing lapse.
+- Atomic log10B4 ceiling840.3253376464642. Interior contribution
+  log840.32534 dominates annular contribution log517.05591.
+  q1000 log10B4 ceiling737.4829100701412.
+- Diagonal Gaussian Hessian cancels for the exact volume-preserving
+  probe. Q4 coefficients b8/b10 have atomic log absolute ceilings
+  319.9665151674619 and404.8231204032095. Not asserted to be higher
+  full asymptotic coefficients based on the O(t²) defect alone.
+- Cstar<=|b8_Q4|+s0|b10_Q4|+16pi²B4, and Cgeometry<=Cstar+Cmag.
+  Both atomic log ceilings842.5237573745084. These subtract EXACT
+  a2/a4/a6; old numerical lower coefficients are not treated as certified.
+- At nominalM²s0=100 the curved-remainder envelope/q² has log ceiling
+  731.5711307743333. This is not the full source or its actual error.
+- Scientific result: generic bound now finite but quantitatively
+  insufficient to decide support. It does not establish impossibility.
+  Refining only the cutoff cannot resolve the dominant interior ceiling.
+- NEXT: target the interior/point-evaluation overestimates and retained
+  cancellations for a useful source enclosure at the same regulator.
+  Exact lower-coefficient enclosures and full source still unresolved.
+  Do not rerun settled scope, broad context or geometry without a defect.
+- One-atom support, stability, transmission/survival and clock comparison
+  are all required. Static geometry excludes13Sep2027->12Sep2027.
+  Human enlargement is deferred; no automatic scaling is claimed.
+
+Source SHA256 ff32753c8c84b68794b542a7f427963b28ad37d2cd893779610de9e0ae64a1d2
+Results SHA256 bb0af04d14108fe79d5658b3a08e4e6611355a8d4d18bb606780c64a09b3ce2b
+Verification:14 native true checks,69 exact inputs. Gaussian/remainder audit
+PASS:122 directed bounds+114 log enclosures at170-190 digits.
+Independent audits PASS:122 directed bounds and114 log enclosures at170-190 digits;120 directed coefficient/graph/source comparisons at600 digits. Both verify69 exact input hashes and final source/result hashes. Smallest positive margin in the latter audit:4.00469e-92. Figure inspected. Final layout PASS:177 imports,1583 Markdown links,8 source guards,14 frozen pilot hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint180 and earlier history ---
+
 # Authoritative checkpoint180 - local normal geometry and heat transport bounded
 
 Previous checkpoint179 published 41736dab5c92ded0db7ef9935734abaf2ce7934a.

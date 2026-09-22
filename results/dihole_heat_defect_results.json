@@ -1,0 +1,857 @@
+{
+  "passed": true,
+  "checks": {
+    "exact_inputs": true,
+    "flux_records_aligned": true,
+    "two_flux_cases": true,
+    "nonnegative_interior_time_powers": true,
+    "annular_powers_covered": true,
+    "atomic_endpoint_supremum": true,
+    "finite_packed_defect": true,
+    "gaussian_derivative_control": true,
+    "time_supremum_control": true,
+    "graph_operator_control": true,
+    "gaussian_integral_control": true,
+    "paired_gaussian_cancellation": true,
+    "finite_curved_remainder": true,
+    "physical_source_not_claimed": true
+  },
+  "controls": {
+    "gaussian_derivative_max_ratio": 1.0,
+    "time_supremum_max_ratio": 1.0,
+    "constant_graph_error": 2.4708276429446542e-83,
+    "gaussian_integral_error": 0.0,
+    "paired_gaussian_trace_error": 9.818186930595455e-91
+  },
+  "records": [
+    {
+      "q": 1000,
+      "cutoff_s0_over_D_squared": 8.325829275412147e-07,
+      "gaussian_gap_over_s0_lower": 1.5210059669491646e-19,
+      "normal_support_volume_upper": {
+        "mantissa": "551939957644777136444959970252189703666326811162784549748848342994746025566628925336433115",
+        "binary_exponent": -442,
+        "log10_upper": -43.3133662475654
+      },
+      "cutoff_normalized_frechet_upper": [
+        {
+          "mantissa": "1",
+          "binary_exponent": 0,
+          "log10_upper": 5e-324
+        },
+        {
+          "mantissa": "7838213866945028331154269433930834721716092414406464198785175338753988126930685440843102671",
+          "binary_exponent": -253,
+          "log10_upper": 14.733628206112348
+        },
+        {
+          "mantissa": "2004285677175530748112740621392970035740483655716678705609810215020327340052211285426148247",
+          "binary_exponent": -202,
+          "log10_upper": 29.49390049884876
+        },
+        {
+          "mantissa": "4108581654865947761973061342615688959295887093607275416357419627321856544286959000576468367",
+          "binary_exponent": -154,
+          "log10_upper": 44.25507259040747
+        },
+        {
+          "mantissa": "4212063406505030184191950600772315318904791078985985908301883774725206274567678753433557665",
+          "binary_exponent": -105,
+          "log10_upper": 59.01634535551812
+        },
+        {
+          "mantissa": "2159137179815511254026329243478069186919687210400517044360149634732288521131988371665263447",
+          "binary_exponent": -55,
+          "log10_upper": 73.77763047439761
+        },
+        {
+          "mantissa": "4427180999679211862464995522031140173902608440315144180296092322104816232154053978767137987",
+          "binary_exponent": -7,
+          "log10_upper": 88.53891730827294
+        },
+        {
+          "mantissa": "2269418462799044486287968373629734036364247439894818785220476954401511491078932525154226303",
+          "binary_exponent": 43,
+          "log10_upper": 103.30020439728459
+        },
+        {
+          "mantissa": "1163327325385651046006991364825526353182921849464498523273424383301554413911744819803809537",
+          "binary_exponent": 93,
+          "log10_upper": 118.06149152610273
+        }
+      ],
+      "squared_distance_constant_upper": [
+        {
+          "mantissa": "0",
+          "binary_exponent": 0,
+          "log10_upper": null
+        },
+        {
+          "mantissa": "0",
+          "binary_exponent": 0,
+          "log10_upper": null
+        },
+        {
+          "mantissa": "3266665341797207",
+          "binary_exponent": -43,
+          "log10_upper": 2.569814831283801
+        },
+        {
+          "mantissa": "2245166591332386561045794090435991862640261887592157847760978849835367676377272506811786153",
+          "binary_exponent": -252,
+          "log10_upper": 14.491689663856683
+        },
+        {
+          "mantissa": "2734058361943503688077496588730262410087767009935591633960862270647578601181539625306071573",
+          "binary_exponent": -212,
+          "log10_upper": 26.618448700133296
+        },
+        {
+          "mantissa": "7681488407399939149257721422923044525111323393910458706073576789248379879883070224249368649",
+          "binary_exponent": -173,
+          "log10_upper": 38.80725612960168
+        },
+        {
+          "mantissa": "5840717165769299450714400360391707759067474190032326569629914961068920454000644746610028599",
+          "binary_exponent": -132,
+          "log10_upper": 51.03050674857882
+        },
+        {
+          "mantissa": "2337459705404925220401943738496805657280529628827316945298034338398174637184516374825357991",
+          "binary_exponent": -90,
+          "log10_upper": 63.276044523210366
+        },
+        {
+          "mantissa": "1939763410021714879894577550546050448679000952711500070323499168556543201355330618022910175",
+          "binary_exponent": -49,
+          "log10_upper": 75.53727897539108
+        }
+      ],
+      "squared_distance_linear_upper": [
+        {
+          "mantissa": "0",
+          "binary_exponent": 0,
+          "log10_upper": null
+        },
+        {
+          "mantissa": "2453500394685800168019545975237232743402744710482068199703686344990856582375003217894160241",
+          "binary_exponent": -295,
+          "log10_upper": 1.5859374113058815
+        },
+        {
+          "mantissa": "7456261477380405656373987877894459306212682803119320687521819620582672908223882468154543205",
+          "binary_exponent": -258,
+          "log10_upper": 13.206782248214783
+        },
+        {
+          "mantissa": "7663647137878056214955130190949455087883890984214697367156356496331915982448625427393128355",
+          "binary_exponent": -218,
+          "log10_upper": 25.259896445289137
+        },
+        {
+          "mantissa": "2460990724859178259055625481840486609512996766536865485758590391748672221849547382294728147",
+          "binary_exponent": -176,
+          "log10_upper": 37.4098307400481
+        },
+        {
+          "mantissa": "7080779550204075912212092478230582257874657192020954470997779127842505778078734914847430083",
+          "binary_exponent": -137,
+          "log10_upper": 49.6089716675033
+        },
+        {
+          "mantissa": "85265159124019186460424012829844156851638935908304563629563697633597167247509524701538021",
+          "binary_exponent": -90,
+          "log10_upper": 61.838071997127834
+        },
+        {
+          "mantissa": "4405789419805672771047530667406342211917021888856493468850311411881970741630461533564817021",
+          "binary_exponent": -55,
+          "log10_upper": 74.087373974146
+        },
+        {
+          "mantissa": "114948602505173423966709644743646834479630367329124127980459515717950537167206516441824325",
+          "binary_exponent": -9,
+          "log10_upper": 86.35123373469924
+        }
+      ],
+      "interior_time_twice_powers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "annular_time_powers": [
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "interior_L2_derivative_upper": [
+        {
+          "mantissa": "4476033398278715135635213085919946217857661885030516904175496782622166544631183238875183005",
+          "binary_exponent": 856,
+          "log10_upper": 348.3325696067591
+        },
+        {
+          "mantissa": "2452443151084326443561289993860549464624647624407516235239662647053946641860895750145221431",
+          "binary_exponent": 961,
+          "log10_upper": 379.67942478208124
+        },
+        {
+          "mantissa": "5945381097234535425433736412246810969815243746166326572951002960206875099218745763363430419",
+          "binary_exponent": 1063,
+          "log10_upper": 410.76906508881154
+        },
+        {
+          "mantissa": "5267376329421548499786517749688811044068765330531866725427282404120337578202425806370585631",
+          "binary_exponent": 1166,
+          "log10_upper": 441.7225692919791
+        },
+        {
+          "mantissa": "7617233400255311039339131637483036384453377283208788176397527948882110818285477951201860381",
+          "binary_exponent": 1268,
+          "log10_upper": 472.58783176497724
+        },
+        {
+          "mantissa": "4764036046907969537145849283766002333659963242668968666698588856165780639623542510689023605",
+          "binary_exponent": 1371,
+          "log10_upper": 503.39009909421503
+        },
+        {
+          "mantissa": "5339690537390682104550579485634002503754231112241774160460200868422330370659801596093776489",
+          "binary_exponent": 1473,
+          "log10_upper": 534.1446997011968
+        }
+      ],
+      "annular_L2_derivative_upper": [
+        {
+          "mantissa": "4357819958068388404195437271398753776041622972815795648545569537302751248210694191079554433",
+          "binary_exponent": 742,
+          "log10_upper": 314.00352606621794
+        },
+        {
+          "mantissa": "4271273524853303961252727677732615401458038688628774725432732814749027158058718938808330411",
+          "binary_exponent": 846,
+          "log10_upper": 345.3019337155012
+        },
+        {
+          "mantissa": "2340254097849792416127741359088703089969550482992438590217882234101086117388074731585047753",
+          "binary_exponent": 950,
+          "log10_upper": 376.34775889515936
+        },
+        {
+          "mantissa": "7564539587080741175484988429004382473833481822638824121053244073656174379372247476408452737",
+          "binary_exponent": 1051,
+          "log10_upper": 407.261307942834
+        },
+        {
+          "mantissa": "5026415814937647678622145662986055259495953967956419546084245689400731562819877260612879805",
+          "binary_exponent": 1154,
+          "log10_upper": 438.0898734093932
+        },
+        {
+          "mantissa": "2907510687266136798116282616703642820386069528493444605960780017200115195401504242049446169",
+          "binary_exponent": 1257,
+          "log10_upper": 468.8582258693833
+        },
+        {
+          "mantissa": "378841771050195540288905747727879591883729362718414646558037829387761034007151450804279619",
+          "binary_exponent": 1362,
+          "log10_upper": 499.5813119525735
+        }
+      ],
+      "physical_graph_interior_upper": {
+        "mantissa": "74653836820608596437799818790840479789532405903718509938244640649455015430326897872628331",
+        "binary_exponent": 1605,
+        "log10_upper": 572.0261951738119
+      },
+      "physical_graph_annulus_upper": {
+        "mantissa": "169489922661365727334385994900616535427221541017229455878959724498157005912231575919069155",
+        "binary_exponent": 1489,
+        "log10_upper": 537.4628074251884
+      },
+      "physical_graph_column_upper": {
+        "mantissa": "2388922778259475086009594201306895418550180453999192516983623133199914276664790844710416907",
+        "binary_exponent": 1600,
+        "log10_upper": 572.0261951738119
+      },
+      "canonical_source_factor_upper": {
+        "mantissa": "6906277338710012956220090226234454268621388199027955669417319770251032628112880213709450153",
+        "binary_exponent": -300,
+        "log10_upper": 0.5302453153422346
+      },
+      "heat_defect_interior_upper": {
+        "mantissa": "7421289678159679642560219097565959774030405977610422272238616950191655084860960312975569045",
+        "binary_exponent": 2148,
+        "log10_upper": 737.4829100701412
+      },
+      "heat_defect_annulus_upper": {
+        "mantissa": "4212220922487282018451388653886347553960254174347052043141007186134053094319276601158089811",
+        "binary_exponent": 2034,
+        "log10_upper": 702.9195223215178
+      },
+      "heat_defect_B4_uniform_upper": {
+        "mantissa": "7421289678159679642560219097565959976841466152427481289435889748246070315673470448603104635",
+        "binary_exponent": 2148,
+        "log10_upper": 737.4829100701412
+      },
+      "integrated_defect_coefficient_upper": {
+        "mantissa": "4577824579332737748535841157058824566188223507507361725704122425382923444506489118325112907",
+        "binary_exponent": 2156,
+        "log10_upper": 739.6813297981853
+      },
+      "parametrix_b8_absolute_upper": {
+        "mantissa": "7313714515293347019258682835968956932450002512908624156639438683704754093382350107973461961",
+        "binary_exponent": 663,
+        "log10_upper": 290.4470251292319
+      },
+      "parametrix_b10_absolute_upper": {
+        "mantissa": "4933420424973545644588372574351846053086885181735390534712595990073039796931981051798098315",
+        "binary_exponent": 921,
+        "log10_upper": 367.94177413404356
+      },
+      "exact_low_order_remainder_Cstar_upper": {
+        "mantissa": "1144456144833184437133960289264706141547055876876840431426030606345730861126622279581278227",
+        "binary_exponent": 2158,
+        "log10_upper": 739.6813297981853
+      },
+      "curved_remainder_Cgeometry_upper": {
+        "mantissa": "4577824579332737748535841157058824566188223507507361725704122425382923444506489118325112909",
+        "binary_exponent": 2156,
+        "log10_upper": 739.6813297981853
+      },
+      "remainder_matching_diagnostics": [
+        {
+          "nominal_M_squared_s0": 1,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "5174411926443687903771655522038740003230309057964682361883394639612104820505726145604747147",
+            "binary_exponent": 2086,
+            "log10_upper": 718.6624319542927
+          }
+        },
+        {
+          "nominal_M_squared_s0": 10,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "2239210279387507777543103047790303628481263133935386547406582276006983185412811123811816097",
+            "binary_exponent": 2083,
+            "log10_upper": 717.3955758472212
+          }
+        },
+        {
+          "nominal_M_squared_s0": 30,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "7966691550397866210705529624927133328112985930419857218158677241302269722093685242251416165",
+            "binary_exponent": 2078,
+            "log10_upper": 716.4416089924898
+          }
+        },
+        {
+          "nominal_M_squared_s0": 50,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "2868008958153803269750124604906575840669049747108356392540568487664437215242336774597829949",
+            "binary_exponent": 2078,
+            "log10_upper": 715.9979114932587
+          }
+        },
+        {
+          "nominal_M_squared_s0": 100,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "2868008958153803269750124604906575840669049747108356392540568487664437215242336774597829949",
+            "binary_exponent": 2076,
+            "log10_upper": 715.3958515019308
+          }
+        },
+        {
+          "nominal_M_squared_s0": 200,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "2868008958153803269750124604906575840669049747108356392540568487664437215242336774597829949",
+            "binary_exponent": 2074,
+            "log10_upper": 714.7937915106028
+          }
+        }
+      ],
+      "gaussian_polynomial_terms": [
+        1,
+        1,
+        3,
+        5,
+        8,
+        11,
+        15,
+        19
+      ],
+      "physical_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 4642875905017627791065088,
+      "cutoff_s0_over_D_squared": 1.7932482895815272e-28,
+      "gaussian_gap_over_s0_lower": 706.1841955336314,
+      "normal_support_volume_upper": {
+        "mantissa": "551939957644777136444959970252189703666326811162784549748848342994746025566628925336433115",
+        "binary_exponent": -442,
+        "log10_upper": -43.3133662475654
+      },
+      "cutoff_normalized_frechet_upper": [
+        {
+          "mantissa": "1",
+          "binary_exponent": 0,
+          "log10_upper": 5e-324
+        },
+        {
+          "mantissa": "7838213866945028331154269433930834721716092414406464198785175338753988126930685440843102671",
+          "binary_exponent": -253,
+          "log10_upper": 14.733628206112348
+        },
+        {
+          "mantissa": "2004285677175530748112740621392970035740483655716678705609810215020327340052211285426148247",
+          "binary_exponent": -202,
+          "log10_upper": 29.49390049884876
+        },
+        {
+          "mantissa": "4108581654865947761973061342615688959295887093607275416357419627321856544286959000576468367",
+          "binary_exponent": -154,
+          "log10_upper": 44.25507259040747
+        },
+        {
+          "mantissa": "4212063406505030184191950600772315318904791078985985908301883774725206274567678753433557665",
+          "binary_exponent": -105,
+          "log10_upper": 59.01634535551812
+        },
+        {
+          "mantissa": "2159137179815511254026329243478069186919687210400517044360149634732288521131988371665263447",
+          "binary_exponent": -55,
+          "log10_upper": 73.77763047439761
+        },
+        {
+          "mantissa": "4427180999679211862464995522031140173902608440315144180296092322104816232154053978767137987",
+          "binary_exponent": -7,
+          "log10_upper": 88.53891730827294
+        },
+        {
+          "mantissa": "2269418462799044486287968373629734036364247439894818785220476954401511491078932525154226303",
+          "binary_exponent": 43,
+          "log10_upper": 103.30020439728459
+        },
+        {
+          "mantissa": "1163327325385651046006991364825526353182921849464498523273424383301554413911744819803809537",
+          "binary_exponent": 93,
+          "log10_upper": 118.06149152610273
+        }
+      ],
+      "squared_distance_constant_upper": [
+        {
+          "mantissa": "0",
+          "binary_exponent": 0,
+          "log10_upper": null
+        },
+        {
+          "mantissa": "0",
+          "binary_exponent": 0,
+          "log10_upper": null
+        },
+        {
+          "mantissa": "3266665341797207",
+          "binary_exponent": -43,
+          "log10_upper": 2.569814831283801
+        },
+        {
+          "mantissa": "2245166591332386561045794090435991862640261887592157847760978849835367676377272506811786153",
+          "binary_exponent": -252,
+          "log10_upper": 14.491689663856683
+        },
+        {
+          "mantissa": "2734058361943503688077496588730262410087767009935591633960862270647578601181539625306071573",
+          "binary_exponent": -212,
+          "log10_upper": 26.618448700133296
+        },
+        {
+          "mantissa": "7681488407399939149257721422923044525111323393910458706073576789248379879883070224249368649",
+          "binary_exponent": -173,
+          "log10_upper": 38.80725612960168
+        },
+        {
+          "mantissa": "5840717165769299450714400360391707759067474190032326569629914961068920454000644746610028599",
+          "binary_exponent": -132,
+          "log10_upper": 51.03050674857882
+        },
+        {
+          "mantissa": "2337459705404925220401943738496805657280529628827316945298034338398174637184516374825357991",
+          "binary_exponent": -90,
+          "log10_upper": 63.276044523210366
+        },
+        {
+          "mantissa": "1939763410021714879894577550546050448679000952711500070323499168556543201355330618022910175",
+          "binary_exponent": -49,
+          "log10_upper": 75.53727897539108
+        }
+      ],
+      "squared_distance_linear_upper": [
+        {
+          "mantissa": "0",
+          "binary_exponent": 0,
+          "log10_upper": null
+        },
+        {
+          "mantissa": "2453500394685800168019545975237232743402744710482068199703686344990856582375003217894160241",
+          "binary_exponent": -295,
+          "log10_upper": 1.5859374113058815
+        },
+        {
+          "mantissa": "7456261477380405656373987877894459306212682803119320687521819620582672908223882468154543205",
+          "binary_exponent": -258,
+          "log10_upper": 13.206782248214783
+        },
+        {
+          "mantissa": "7663647137878056214955130190949455087883890984214697367156356496331915982448625427393128355",
+          "binary_exponent": -218,
+          "log10_upper": 25.259896445289137
+        },
+        {
+          "mantissa": "2460990724859178259055625481840486609512996766536865485758590391748672221849547382294728147",
+          "binary_exponent": -176,
+          "log10_upper": 37.4098307400481
+        },
+        {
+          "mantissa": "7080779550204075912212092478230582257874657192020954470997779127842505778078734914847430083",
+          "binary_exponent": -137,
+          "log10_upper": 49.6089716675033
+        },
+        {
+          "mantissa": "85265159124019186460424012829844156851638935908304563629563697633597167247509524701538021",
+          "binary_exponent": -90,
+          "log10_upper": 61.838071997127834
+        },
+        {
+          "mantissa": "4405789419805672771047530667406342211917021888856493468850311411881970741630461533564817021",
+          "binary_exponent": -55,
+          "log10_upper": 74.087373974146
+        },
+        {
+          "mantissa": "114948602505173423966709644743646834479630367329124127980459515717950537167206516441824325",
+          "binary_exponent": -9,
+          "log10_upper": 86.35123373469924
+        }
+      ],
+      "interior_time_twice_powers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "annular_time_powers": [
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "interior_L2_derivative_upper": [
+        {
+          "mantissa": "6740590625231245503063220637177579026674530636536634880330121406269332004778358635301424751",
+          "binary_exponent": 762,
+          "log10_upper": 320.21355464798467
+        },
+        {
+          "mantissa": "2162428723871944197436498261167467827615055273749633483619225625873597349974082497723237279",
+          "binary_exponent": 880,
+          "log10_upper": 355.24133798583256
+        },
+        {
+          "mantissa": "1534725824209373258524845708488969339178405406180438533706193006322481051464046541779658831",
+          "binary_exponent": 996,
+          "log10_upper": 390.0119064822014
+        },
+        {
+          "mantissa": "6369035998593216977908045096838114410620451160640736348237665689787866215169242321900760353",
+          "binary_exponent": 1109,
+          "log10_upper": 424.64633889493484
+        },
+        {
+          "mantissa": "5392807272758231153340733423079460680354117637134969830817045237703883879882148227774283141",
+          "binary_exponent": 1224,
+          "log10_upper": 459.19252959253515
+        },
+        {
+          "mantissa": "7899342776138912881483346656816085008521101825552888004856297181240125651594987354622084733",
+          "binary_exponent": 1338,
+          "log10_upper": 493.6757251579796
+        },
+        {
+          "mantissa": "2592031737665167875056633862142247395505429585434475879031233819182689689017116704653436083",
+          "binary_exponent": 1454,
+          "log10_upper": 528.1112540103003
+        }
+      ],
+      "annular_L2_derivative_upper": [
+        {
+          "mantissa": "1573038584310276454997057845754774206975537772497782267956185341372321056528970146001765791",
+          "binary_exponent": -309,
+          "log10_upper": -2.8215292848148437
+        },
+        {
+          "mantissa": "7221969422747112538339149115627086354663267867460057042342903985261920863192168741922968051",
+          "binary_exponent": -195,
+          "log10_upper": 32.15780649084955
+        },
+        {
+          "mantissa": "2316858424623691964423887600638824590397627271307478058764990412679924107818266939533067643",
+          "binary_exponent": -78,
+          "log10_upper": 66.88455983454445
+        },
+        {
+          "mantissa": "1096218779718460712547774841257525067537839507595928944206743855972590978390500314618174901",
+          "binary_exponent": 38,
+          "log10_upper": 101.47903707308629
+        },
+        {
+          "mantissa": "3411940154023574821191822506375199105040296165910153413737745588131484029403785124856540057",
+          "binary_exponent": 151,
+          "log10_upper": 135.98853075022873
+        },
+        {
+          "mantissa": "1155586855978814485114753018236095242660739690798610751155068121136520543270039865039276561",
+          "binary_exponent": 267,
+          "log10_upper": 170.4378114356764
+        },
+        {
+          "mantissa": "5642315919828895358728047473366236923312578219422475947541904228732024735946393307888709739",
+          "binary_exponent": 379,
+          "log10_upper": 204.84182575580203
+        }
+      ],
+      "physical_graph_interior_upper": {
+        "mantissa": "4638594188637214086601946421136826676800852951254977586985051097025658991891582520364551387",
+        "binary_exponent": 1579,
+        "log10_upper": 565.9927495329845
+      },
+      "physical_graph_annulus_upper": {
+        "mantissa": "5048629166640667806723396968059811926635858222402883642242612130280744830106938045751857039",
+        "binary_exponent": 505,
+        "log10_upper": 242.72332128225452
+      },
+      "physical_graph_column_upper": {
+        "mantissa": "1159648547159303521650486605284206669200213237813744396746262774256414747972895630091137847",
+        "binary_exponent": 1581,
+        "log10_upper": 565.9927495329845
+      },
+      "canonical_source_factor_upper": {
+        "mantissa": "6906277338710012956220090226234454268621388199027955669417319770251032628112880213709450153",
+        "binary_exponent": -300,
+        "log10_upper": 0.5302453153422346
+      },
+      "heat_defect_interior_upper": {
+        "mantissa": "5762997658804606644587959231949531152172187703574913388943392183417347819674554915705081847",
+        "binary_exponent": 2490,
+        "log10_upper": 840.3253376464642
+      },
+      "heat_defect_annulus_upper": {
+        "mantissa": "6272425843759959190125351077296077740202493223313557178521856956216873803366492452781030825",
+        "binary_exponent": 1416,
+        "log10_upper": 517.0559093957343
+      },
+      "heat_defect_B4_uniform_upper": {
+        "mantissa": "5762997658804606644587959231949531152172187703574913388943392183417347819674554915705081849",
+        "binary_exponent": 2490,
+        "log10_upper": 840.3253376464642
+      },
+      "integrated_defect_coefficient_upper": {
+        "mantissa": "7109813382100701956204543765953930496498583483216161414332425721894637379316982491942106017",
+        "binary_exponent": 2497,
+        "log10_upper": 842.5237573745084
+      },
+      "parametrix_b8_absolute_upper": {
+        "mantissa": "7632880570834731974913637938073028870002023263816540691159316962826178755542095512695216157",
+        "binary_exponent": 761,
+        "log10_upper": 319.9665151674619
+      },
+      "parametrix_b10_absolute_upper": {
+        "mantissa": "7060491356185195699807223519226532910049355636961738852587858374408616033997390691399608391",
+        "binary_exponent": 1043,
+        "log10_upper": 404.8231204032095
+      },
+      "exact_low_order_remainder_Cstar_upper": {
+        "mantissa": "3554906691050350978102271882976965248249291741608080707166212860947318689658491245971053009",
+        "binary_exponent": 2498,
+        "log10_upper": 842.5237573745084
+      },
+      "curved_remainder_Cgeometry_upper": {
+        "mantissa": "7109813382100701956204543765953930496498583483216161414332425721894637379316982491942106019",
+        "binary_exponent": 2497,
+        "log10_upper": 842.5237573745084
+      },
+      "remainder_matching_diagnostics": [
+        {
+          "nominal_M_squared_s0": 1,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "4300515385905651022065162062338284099336234068254186590359980858142392676844304819342107655",
+            "binary_exponent": 2140,
+            "log10_upper": 734.8377112266952
+          }
+        },
+        {
+          "nominal_M_squared_s0": 10,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "3722068670092327358444938490459351322355513246634348892466092077173177414145252489658218823",
+            "binary_exponent": 2136,
+            "log10_upper": 733.5708551196236
+          }
+        },
+        {
+          "nominal_M_squared_s0": 30,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "3310606120490843449327327405573995182625401396025882290322663672111771190471860206088627057",
+            "binary_exponent": 2133,
+            "log10_upper": 732.6168882648924
+          }
+        },
+        {
+          "nominal_M_squared_s0": 50,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "1191818203381096626714772986971280593796694095937513343786671816223946225381469345195180081",
+            "binary_exponent": 2133,
+            "log10_upper": 732.1731907656613
+          }
+        },
+        {
+          "nominal_M_squared_s0": 100,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "4767272813524384794307893806974007461817272004081895632884275606840270565791087250040456219",
+            "binary_exponent": 2129,
+            "log10_upper": 731.5711307743333
+          }
+        },
+        {
+          "nominal_M_squared_s0": 200,
+          "remainder_envelope_per_q2_upper": {
+            "mantissa": "1191818203381096626714772986971280593796694095937513343786671816223946225381469345195180081",
+            "binary_exponent": 2129,
+            "log10_upper": 730.9690707830053
+          }
+        }
+      ],
+      "gaussian_polynomial_terms": [
+        1,
+        1,
+        3,
+        5,
+        8,
+        11,
+        15,
+        19
+      ],
+      "physical_source": null,
+      "atom_transit": null
+    }
+  ],
+  "source_sha256": "ff32753c8c84b68794b542a7f427963b28ad37d2cd893779610de9e0ae64a1d2",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+    "dihole_collar_resolvent_results.json": "df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17",
+    "dihole_collar_resolvent.py": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531",
+    "dihole_metric_resolvent_results.json": "f15f1402458e8ee43b222d3ea40b665f2bc33315230436eda7887be941e9ce97",
+    "dihole_metric_resolvent.py": "b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc",
+    "dihole_paired_frequency_units_trial.json": "c5d9a8152c7931598e4f32baceb625a44f675e62ab995d1c781e778580e58e4d",
+    "provenance/dihole_paired_frequency_units_trial.py": "c81e58f0621ff73caa1ad617be46d9795d297f18299d6c6130f63165c7a5ca19",
+    "dihole_paired_frequency_results.json": "e2de59a035d0874484a857164a1ff93a0d0e6155a8307a7493f3d7c2e21ce429",
+    "dihole_paired_frequency.py": "c118af9191e5f371de9320d134a454d02f6180444ca5be57ecd07caca2520044",
+    "dihole_massive_channel_results.json": "f61f079f61a3db75c1549d1250128839985fba5b03b44141d4d591460412595b",
+    "dihole_massive_channel.py": "b614c9a37d8a84c845f8138df226afece042faebe5b27bf9f7d09beef7f81789",
+    "dihole_proper_channel_results.json": "9d4b9e91dddc7b37e8f075e47a0e75b1b400d7102fa03385ab061c06efbfe967",
+    "dihole_proper_channel.py": "75c9e49ef29fd379d24e8246e357052334b21870000abf8972dd7ebf141120c5",
+    "dihole_local_zero_shift_results.json": "c6abf68b4d44f18d6f0b97016a0275a8a195aab2d306bcd6de77f7bdd17177a3",
+    "dihole_local_zero_shift.py": "f95cde7f9510dc82cfe9e5f1a44e937c45662ad3d385c1ddd15afb41c911abf2",
+    "dirac_green_mass_limit.py": "1ff4edbbf5b574553ca8fb94f852781a8bfd29838d8c2574cb69ba62c8e0630a",
+    "dihole_paired_low_frequency_results.json": "73641db16789394adc109dfb5b5088e375f1c68bb608e24e5e72396f2fd47e7a",
+    "dihole_paired_low_frequency.py": "cbe6669ec7851bcc251e47017af13ca3febd6dcdc75a4f9313af0f6d01d93f93",
+    "dihole_source_completion_derivative_trial.json": "b80e0e9efc27176d10d0b79a015e24165691e610b1b0c746160827fa80460e6e",
+    "provenance/dihole_source_completion_derivative_trial.py": "d231eee2ac075378b4e3fe84f2954e62419cb2fcbab6faa386371c43fbe94bef",
+    "dihole_source_completion_results.json": "dcd24ab0a676289da962656e02296532e2fbc0535d8e7ef9b82643c4a825db27",
+    "dihole_source_completion.py": "deb95497874e34e9f7f02a52465422b421c7ace669710db91b10a9855848d23c",
+    "dihole_buffer_geometry.py": "b15dfafe789e07e106575258b33591e9241d4978f64889d01f44fe5ff4d45d56",
+    "dihole_buffer_smoothing_prerate_trial.json": "4cd0341d90ccf386832b99f8eeb6732de39d78dd528b7cd15a76d9c3854844b9",
+    "provenance/dihole_buffer_geometry_prerate.py": "effb53114c95e45362ec9af9a5213eaa31847c8d119b8b404cd8a7b91bcadb24",
+    "provenance/dihole_buffer_smoothing_prerate.py": "dfeb4d1a39713b0da30f1b643cfcf0746b14914b2707857680dd3e304d8698fa",
+    "dihole_buffer_smoothing_results.json": "51fb304256cbd139b2acc1b59a280473082b729f4540700107ddb3c1ffc8cbdb",
+    "dihole_buffer_smoothing.py": "0862683252bf01a8d3dce372a44087bad4501eafa1e032e5e9c63969f23e46a8",
+    "dihole_full_frequency_results.json": "5974c84faea4438ee3d78051fa3d42a912fa3d2dd8d17d3c77c62e42a96e4d71",
+    "dihole_full_frequency.py": "7bfe224bd521b3793364410a1989d22834331a83c5ec225bbbea60f86d0b660c",
+    "dihole_regulator_heat_tail_results.json": "7fb8de096ffe0181ca548455a48bd7fc361e9fb423176a5dc544aae50f782005",
+    "dihole_regulator_heat_tail.py": "16517fa214d719c61030a29663c9b632806a729d9129f1e1918b0f8bda01d51b",
+    "dihole_magnetic_remainder_results.json": "368c51d0b025a4f31628e65666796c059a28c25f188bdcebff20202c2778f5ed",
+    "dihole_magnetic_remainder.py": "fa4b9c89dafa5782573646a9c721e990b5a09200e58bfba1f2930a670a3e2795",
+    "dihole_regular_jets_results.json": "e25dd81f979eca7fa6839f1850f19cced5be7065045626d2efccc66405ef3d06",
+    "dihole_regular_jets.py": "5369eab9d86a109fe5542d790bdeeba3fc6f19024384d469d75f543e1931f311",
+    "dihole_local_transport_results.json": "0be31a41b16c37b41cc16d9f8ea5dc4a25200731e7a8d29ec330754fb464b5ee",
+    "dihole_local_transport.py": "bf74297137c17b8b8273ee4212b230a843e861ff43712cfacf570042728443c4"
+  },
+  "convention": "Uniform B4 ceiling for0<t<=s0, D=1. Four-dimensional physical column norm, canonical source trace per unit Killing time; rank4 and both collars included.",
+  "bound_encoding": "Each packed upper endpoint is exactly int(mantissa)*2**binary_exponent. log10_upper is an upward rounded display bound, not the stored constant.",
+  "missing": {
+    "signed_parametrix_b8": null,
+    "signed_parametrix_b10": null,
+    "certified_numerical_lower_coefficients": null,
+    "finite_target_source": null,
+    "stability": null,
+    "atom_transit": null
+  },
+  "scope": [
+    "The full local Q4 defect is bounded, including cutoff, Gaussian derivatives and physical half-density conversion.",
+    "This is a conservative upper bound, not the true defect size or a signed supporting stress.",
+    "Cstar subtracts exact lower coefficients; old numerical a2/a4/a6 estimates are not substituted into this certificate.",
+    "Cgeometry uses the valid but loose triangle bound Cstar+Cmag. Matching diagnostics bound only this remainder, not the complete source.",
+    "One hydrogen atom and a trial1nm areal opening remain the target; no atom transport or time shift is established."
+  ]
+}

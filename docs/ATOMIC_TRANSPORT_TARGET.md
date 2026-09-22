@@ -280,3 +280,10 @@ The [local transport calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#explicit-normal
 The target remains **one neutral hydrogen atom through a trial 1 nm areal diameter**, with humans deferred. That size is a parameter to test, not a proved viable aperture or a classical size-only passage condition. The next calculation must evaluate the remaining field-error bound and supporting source. A successful model then needs stability, nonzero atom transmission with quantified internal-state survival, and an operational exterior-clock comparison. Scaling to molecules or humans would require new calculations.
 
 No supporting material or stable opening is established. The present static geometry cannot send an atom from 13 September 2027 to 12 September 2027. Future clock gain has not been established for this model.
+
+
+## Checkpoint181: complete field-error bound, insufficient for support
+
+The [full heat-defect calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#full-gaussian-and-cutoff-heat-defect-bound) evaluates the previously missing error ceiling, with all14 checks passing. It includes the Gaussian propagation estimate, cutoff derivatives, both collars and the full source integration. The result is finite but enormously loose; it cannot determine the supporting stress. This limits the current calculation, not a demonstrated physical impossibility.
+
+The next calculation should sharpen the interior field estimate and obtain a useful source enclosure. Tightening the already smaller cutoff contribution alone will not resolve the present bound. One hydrogen atom and a trial1nm opening remain the target. No stable opening, atom passage, survival or clock advantage has been proved; humans remain deferred. The static geometry still excludes travel from13September2027 to12September2027.

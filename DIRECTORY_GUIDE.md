@@ -1,5 +1,8 @@
 # Directory guide
 
+Current increment181: The [full heat-error calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#full-gaussian-and-cutoff-heat-defect-bound) now evaluates the previously missing error bound, including the opening's interior, cutoff and complete source integration. **All 14 checks pass.** The ceiling is finite but far too loose to decide whether the opening can be supported; it neither demonstrates feasibility nor proves impossibility. See the [results](results/dihole_heat_defect_results.json) and [visual](figures/dihole_heat_defect_progress.png). The next work must sharpen the dominant interior estimate. **One hydrogen atom through a trial 1 nm opening remains the target; humans are deferred.**
+
+
 Current increment180: The [local transport calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#explicit-normal-neighbourhood-heat-transport-and-graph-evaluation) now supplies a quantified local coordinate neighbourhood, explicit bounds for five quantum-field heat coefficients, and a point-evaluation bound. **All 16 checks and three independent audits pass.** These conservative bounds are inputs to the remaining supporting-energy calculation; they do not describe atom passage. The full heat defect and supporting source remain unknown. See the [results](results/dihole_local_transport_results.json) and [visual](figures/dihole_local_transport_progress.png). **One hydrogen atom through a trial 1 nm opening remains the target; humans are deferred.** Support, stability, atom survival and clock gain remain unproved.
 
 

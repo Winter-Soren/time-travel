@@ -6938,3 +6938,172 @@ This independently checked factor is **not a bound on the full defect**: its der
 One neutral hydrogen atom and a trial **1 nm areal diameter** remain the first target. A successful physical model must establish self-consistent support, dynamical stability, atom transmission and internal-state survival, and an operational comparison with exterior clocks. None has been established by these bounds. Human transport is deferred and enlargement would require new calculations. The present static geometry excludes 13 September 2027 to 12 September 2027.
 
 ![Local heat coefficient bounds, not atom transport](../figures/dihole_local_transport_progress.png)
+
+
+## Full Gaussian and cutoff heat-defect bound
+
+Checkpoint181 evaluates the previously missing $B_4$ and a conservative short-time remainder ceiling. The [script](../scripts/dihole_heat_defect.py) reuses the saved179/180 constants; its [results](../results/dihole_heat_defect_results.json) retain **69 exact input hashes** and **14 passing checks**. No old geometry simulation was rerun. All formulas below use $D=1$ and endpoint derivatives holding the kernel's source fixed.
+
+**Outcome:** the bound is finite but far too large to establish the supporting stress. At atomic flux, $B_4<10^{841}$ and $C_*<10^{843}$. These are conservative mathematical error ceilings, not physical energies, actual error sizes or evidence that a field exists.
+
+### Exact cancellation before estimation
+
+Let $G_t=(4\pi t)^{-2}\exp[-d^2/(4t)]$, $\chi(d)=S(2-4d/\rho)$ and $Q_4=\chi G_t\sum_{j=0}^4t^ju_j$. Transport cancellation gives the exact physical-volume identity
+
+$$
+E_{4,g}=(\partial_t+P_g)Q_4
+=t^4\chi G_tP_gu_4+[P_g,\chi]\left(G_t\sum_{j=0}^4t^ju_j\right).
+$$
+
+For component operator-norm bounds on ordered second-derivative pairs, the commutator is majorized by
+
+$$
+16p_2\chi''G_tu+32p_2\chi'(G_t'u+G_tu')+4p_1\chi'G_tu.
+$$
+
+Every product is differentiated by normalized Frechet-jet convolution. The cutoff needs derivatives through8, $u_4$ through8, other heat coefficients through at least7, the Gaussian through7, and physical operator coefficients through6. All are available. The cutoff and its positive-order derivatives vanish outside the normal support; its derivatives are confined to $\rho/4\le d\le\rho/2$.
+
+### Distance and cutoff derivatives without a diagonal singularity
+
+Let $Y_n$ be the saved normalized inverse-exponential derivatives and $M$ the real metric upper bound. Since $d^2=v^Tg_yv$ in initial-velocity coordinates,
+
+$$
+\frac{\|D^n(d^2)\|}{n!}\le A_n+B_nd,\qquad
+A_n=M\sum_{j=1}^{n-1}Y_jY_{n-j},\quad B_n=2\sqrt M\,Y_n.
+$$
+
+In particular $A_1=0$. Replacing the linear $d$ term by a constant too early would create an artificial small-time divergence.
+
+For cutoff derivatives only, put $d_0=\rho/4$, $d_1=\rho/2$, and use the squared-distance increment series $Z(z)=\sum_{n=1}^8(A_n+B_nd_1)z^n$. The distance-increment majorant is
+
+$$
+D(z)=\sum_{k=1}^8\left|{1/2\choose k}\right|d_0^{1-2k}Z(z)^k.
+$$
+
+If $S_k$ denotes the saved ordinary step-derivative bound, the normalized cutoff ceiling of order $n\ge1$ is
+
+$$
+[z^n]\sum_{k=1}^8\frac{S_k}{k!}(4/\rho)^kD(z)^k,\qquad \chi_0\le1.
+$$
+
+This calculation is confined to the annulus, so it never differentiates the distance function at coincidence. The actual cutoff is constant there.
+
+### Gaussian moments preserve the small-time powers
+
+Strip off the Gaussian exponential and write its normalized derivative bound as a positive polynomial $H_n(d,t^{-1})$:
+
+$$
+H_0=1,\qquad
+H_n=\frac1{4nt}\sum_{k=1}^n k(A_k+B_kd)H_{n-k}.
+$$
+
+Every monomial $d^at^{-b}$ satisfies $2b-a\le n$. With the saved normal-volume density ceiling $\theta_{\max}$, four-dimensional radial integration gives
+
+$$
+\|d^ae^{-d^2/(4t)}\|_{L^2(dV_g)}
+\le\pi\sqrt{\theta_{\max}(a+1)!}\,(2t)^{(a+2)/2}.
+$$
+
+This includes the Euclidean time-difference direction. Extending the radial integral beyond the normal support only increases the bound. Including $t^4(4\pi t)^{-2}$ from the interior defect leaves the time power
+
+$$
+t^{3+a/2-b}.
+$$
+
+It is nonnegative through derivative order6, so every interior term is bounded uniformly by its value at $s_0$. The saved twice-powers are $0,1,\ldots,6$. This is why the column graph norm remains bounded at arbitrarily small positive times.
+
+For the annulus, substitute $d\le d_1$ in $H_n$, retain $\exp(-\beta/t)$ with $\beta=\rho^2/64$, and multiply the pointwise bound by
+
+$$
+\sqrt{\operatorname{Vol}}\le\pi\sqrt{\theta_{\max}/2}\,d_1^2.
+$$
+
+Each time factor is $t^{-p}e^{-\beta/t}$ with $p\le9$. Its supremum is at $s_0$ when $p\le0$ or $s_0\le\beta/p$; otherwise it is $(p/(e\beta))^p$. At atomic flux $\beta/s_0\ge706.1841955336314$, so all annular terms peak at $s_0$. At $q=1000$ some peak inside the interval; the code includes those critical points and does not apply the atomic endpoint shortcut.
+
+### The full graph norm and source trace
+
+Convert canonical coefficients to physical volume exactly as in180. For normalized derivative bounds $F_n$, one application of $1+P_g$ is bounded by
+
+$$
+(\mathcal TF)_n=F_n+\sum_{j=0}^n\left[
+16p_{2,j}(n-j+2)(n-j+1)F_{n-j+2}
++4p_{1,j}(n-j+1)F_{n-j+1}
++p_{0,j}F_{n-j}\right].
+$$
+
+Apply this three times, reducing derivative orders $6\to4\to2\to0$, separately to interior and annular column bounds.
+
+The physical half-density must also remain in the source integral:
+
+$$
+E_{4,c}(z,y)=v(z)E_{4,g}(z,y)v(y),\qquad
+\|(1+P_c)^3E_{4,c}(\cdot,y)\|_{L^2(dz)}
+=v(y)\|(1+P_g)^3E_{4,g}(\cdot,y)\|_{L^2(dV_g)}.
+$$
+
+Two collars of coordinate length $1/20$ and two radius-one hemisphere disks give coordinate source volume $\pi/5$ per unit Killing time. Thus
+
+$$
+B_4(t)\le4C_{{\rm ev},c}\sqrt{\mu_{\max}}\,\frac{\pi}{5}
+\sup_y\|(1+P_g)^3E_{4,g}(\cdot,y)e_a\|_2.
+$$
+
+The rank4, both collars and both hemispheres are included. The prefactor excluding $C_{\rm ev}$ is bounded by approximately3.390356095299510. There is no extra lapse or Weyl multiplier. The source partition introduces no derivatives because it only partitions the final pointwise trace integral.
+
+### A finite remainder ceiling, with exact lower coefficients
+
+At coincidence, $\partial_iG_t=0$ and $\partial_i\partial_jG_t=-g_{ij}G_t/(2t)$. The paired metric probe preserves four-volume pointwise, so $\dot P_2^{ij}g_{ij}=0$. The Gaussian Hessian contribution therefore cancels exactly, while $\chi=1$ locally. Define the Q4 coefficients
+
+$$
+b_{8,Q4}=-\int\operatorname{tr}(\dot P_gu_3)(x,x)\,dV/T,\qquad
+b_{10,Q4}=-\int\operatorname{tr}(\dot P_gu_4)(x,x)\,dV/T.
+$$
+
+For $j=3,4$, the explicit bound is
+
+$$
+|b_{2j+2,Q4}|\le4V_{\rm coord}\mu_{\max}
+\left(32d_2u_{j,2}+4d_1u_{j,1}+d_0u_{j,0}\right),
+$$
+
+where $d_i$ are the converted physical $\dot P$ coefficient bounds and $u_{j,n}$ are normalized endpoint ceilings. This uses first-slot derivatives before setting the two points equal. It does not differentiate both slots along the diagonal.
+
+The Duhamel estimate from178 now gives
+
+$$
+C_*\le |b_{8,Q4}|+s_0|b_{10,Q4}|+16\pi^2\sup_{0<t\le s_0}B_4(t).
+$$
+
+This bounds the remainder after subtracting the **exact** lower coefficients $a_2,a_4,a_6$. Old numerical quadratures for those coefficients have not been substituted into the certificate. Any nonzero low-order coefficient error would need a separate term and cannot silently be treated as $O(t^2)$. The current defect estimate alone is also not used to identify the higher full heat-asymptotic coefficients.
+
+Using178's all-time magnetic reference bound gives the valid triangle estimate $C_{\rm geom}\le C_*+C_{\rm mag}$. It deliberately sacrifices magnetic cancellation; a sharper bound remains necessary.
+
+### Evaluated result and its limitation
+
+Logarithmic upper ceilings are:
+
+| Quantity | $q=1000$ | Exact atomic $q$ |
+| --- | ---: | ---: |
+| Physical interior graph-column bound | 572.02620 | 565.99275 |
+| Physical annular graph-column bound | 537.46281 | 242.72332 |
+| Full $B_4$ | 737.48292 | 840.32534 |
+| $|b_{8,Q4}|$ | 290.44703 | 319.96652 |
+| $|b_{10,Q4}|$ | 367.94178 | 404.82313 |
+| $C_*$ and $C_{\rm geom}$ | 739.68133 | 842.52376 |
+
+The table rounds upward for display; the artifact retains exact dyadic endpoints. At the atomic target with nominal $M^2s_0=100$, the resulting curved-remainder envelope divided by $q^2$ is below $10^{732}/D$, an enormous upper bound. It cannot determine the sign or useful magnitude of the total source. It does not show that the actual remainder is large or that the proposed geometry is impossible.
+
+This closes the previously unevaluated generic defect bound and reveals that its current implementation is quantitatively insufficient for support. The interior estimate dominates the annular estimate by more than323 logarithmic orders in the atomic case. Further work should target the interior/canonical point-evaluation overestimates, cancellations and direct source enclosures; tightening only the already negligible cutoff contribution cannot solve the observed problem. Exact lower-coefficient enclosures and the complete source at the same regulator remain unresolved. This is a calculation within existing physics, not a new physical law.
+
+### Verification and status
+
+All14 native checks pass. Controls compare Gaussian derivatives to direct high-precision differentiation, time suprema to their critical points, graph-operator composition to an exact constant-coefficient example, and the four-dimensional Gaussian integral to direct quadrature. The paired diagonal cancellation is also checked. All69 exact input hashes match. Independent audits PASS:122 directed bounds and114 log enclosures at170-190 digits;120 directed coefficient/graph/source comparisons at600 digits. Both verify69 exact input hashes and final source/result hashes. Smallest positive margin in the latter audit:4.00469e-92. Figure inspected. Final layout PASS:177 imports,1583 Markdown links,8 source guards,14 frozen pilot hashes.
+
+The heat-kernel construction uses established parametrix ideas, with [Ludewig's short-time heat-kernel paper](https://arxiv.org/abs/1607.05152) as background. That paper's abstract states compact-manifold results; it is not being used as an automatic global numerical certificate for this exterior geometry. The local cutoff calculation, source integration and the already specified global nonnegative operator are explicit here.
+
+Source SHA256: ff32753c8c84b68794b542a7f427963b28ad37d2cd893779610de9e0ae64a1d2.
+Result SHA256: bb0af04d14108fe79d5658b3a08e4e6611355a8d4d18bb606780c64a09b3ce2b.
+
+The payload remains one neutral hydrogen atom through a trial1nm areal opening. No self-consistent supporting source, stable opening, atom transmission, internal-state survival or clock advantage has been established. The present static geometry excludes13September2027 to12September2027; humans remain deferred.
+
+![Full error-bound contributions at atomic flux](../figures/dihole_heat_defect_progress.png)
