@@ -1,5 +1,8 @@
 # Directory guide
 
+Current increment183: The [source-centred gauge calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#source-centred-gauge-for-the-complete-field-error-certificate) reduces the atomic error ceiling by another 51.6 decimal orders while preserving the physical field. **All 12 checks pass.** The remaining bound is still too loose to establish support; next comes sharpening the dominant geometry and spin estimates. See the [results](results/dihole_centered_gauge_results.json) and [visual](figures/dihole_centered_gauge_progress.png). One hydrogen atom through a trial 1 nm opening remains the target.
+
+
 Current increment182: The [adjusted error certificate](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#adjustable-graph-and-fourier-scales-for-the-full-defect) reduces the atomic error ceiling by more than 338 decimal orders using better mathematical scales. **All 12 checks and an independent audit pass.** The physical model is unchanged, and the new ceiling remains far too loose to establish support. See the [results](results/dihole_scaled_graph_results.json) and [visual](figures/dihole_scaled_graph_progress.png). Next: evaluate a source-centred gauge to reduce potential-dependent overestimates. One hydrogen atom through a trial 1 nm opening remains the target.
 
 

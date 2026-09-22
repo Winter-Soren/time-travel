@@ -1,3 +1,55 @@
+# Authoritative checkpoint183 - source-centred gauge reduces the full error ceiling
+
+Previous checkpoint182 published 7391aceea8d8b44a1ad36d84e027a345cf996e87.
+Previous goal turn PROGRESS:182 verified and privately published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No stable opening, obtainable source, atom transit or clock gain established.
+
+- scripts/dihole_centered_gauge.py:12 checks PASS,73 exact input hashes.
+  Saved geometry reused; no old interval geometry solve rerun or edited.
+- Source-specific ordinary-coordinate radial gauge implemented:
+  A_i^y=int0^1 t(x-y)^j Fji(y+t(x-y))dt.
+  Fixed spatial inner radius2^-32, global phase extension outside2^-31;
+  normal support, point cube and extension fit existing chart clearance.
+  Time-independent phase held fixed under metric variation. Physical
+  curvature, magnetic flux, regulator, exact lower coefficients unchanged.
+- New ordinary gauge bound through19:
+  4r*a_(n+1)/(n+2)+2n*a_n/(n+1); order20 not claimed.
+  Physical magnetic bound gives zerojet<=r*Mmetric*Bunit/2 per|q|.
+  New zerojet1.2981876755092596e-7 vs old676.9053329684016.
+- Recomputed canonical operator/variation through18, physical transport
+  derivative schedule16,14,12,10,8, whole181defect and182proofscales.
+  New radial gauge component retained; curved-geodesic transport retained.
+- Atomic logB4<=449.8183120141433, reduction>=51.58149348139301
+  decimal orders from182. New mu2^123,lambda2^127.
+  Cstar/Cgeometry log<=452.0167317421875; curved envelope/q² at
+  nominalM²s0=100 log<=341.0641051420124. Still too loose for support.
+- q1000 bound barely changes (6.7e-18 decimal orders). This is retained,
+  not exaggerated as a meaningful low-flux improvement.
+- Current atomic u4 order0/8 log ceilings292.07020/538.68299 are near
+  low-flux baseline. Zeroth physical spin-connection ceiling log23.81648
+  exceeds electromagnetic ceiling log17.78013 by6.03635orders.
+  These compare estimates, not actual physical terms.
+- NEXT: sharpen the SAME positive symmetric coframe E=sqrt(g).
+  E0<=sqrt(M), inverseE0<=sqrt(H). Sylvester recurrence:
+  En<=(4*g_n+sum_j1..n-1 binom(n,j)Ej E(n-j))/(2sqrt(m)).
+  Saved metric jets are COMPONENT bounds: factor4 required.
+  Inverse-frame recurrence fromg^-1 uses lower spectral bound1/M.
+  These new frame bounds are derived but NOT evaluated yet. Reuse the
+  fixed radial gauge and recompute transport/defect after evaluating them.
+- Exact lower-coefficient enclosures and full source remain unresolved.
+  Static geometry excludes13Sep2027->12Sep2027; humans remain deferred.
+
+Source SHA256 bc1c52a5be65971eeaa6adae00519c04e631588c82e4cb224a03d5059a756ae8
+Results SHA256 a98634878eb8604219e0a1bf3cfe38c311210df5ff0ad7dc0d0928c919dfe6af
+Verification:12 native true checks,73 exact inputs, figure inspected.
+Domain/gauge audit PASS including normal-radius reconstruction and all73 hashes.
+Independent numerical audit PASS:495 directed comparisons at500-550 digits, including gauge/operator arrays, point/transport estimates and all12 matching rows. All73 hashes and final source/result hashes match. Domain/gauge audit also PASS. Final layout PASS:179 imports,1603 Markdown links,8 source guards,14 frozen pilot hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint182 and earlier history ---
+
 # Authoritative checkpoint182 - auxiliary proof scales tighten the full defect
 
 Previous checkpoint181 published deb32f3c47fe0128fca1520bdab4280c934b422e.

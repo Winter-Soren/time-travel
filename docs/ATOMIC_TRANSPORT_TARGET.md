@@ -294,3 +294,10 @@ The next calculation should sharpen the interior field estimate and obtain a use
 The [adjusted proof scales](PHYSICAL_EUCLIDEAN_OPERATOR.md#adjustable-graph-and-fourier-scales-for-the-full-defect) reduce the conservative atomic error ceiling from about10^840 to10^501, with 12 checks and an independent audit passing. This changes the mathematical estimate, not the proposed field, opening or atom. The remaining ceiling cannot determine the supporting stress.
 
 Next comes evaluating a local gauge that expresses the potential through the actual field curvature. That improvement has been derived but not yet applied numerically. Support, stability, atom transmission, survival and clock gain remain unproved; humans remain deferred. The static model still excludes13September2027 to12September2027.
+
+
+## Checkpoint183: the same field in a source-centred gauge
+
+The [new gauge calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#source-centred-gauge-for-the-complete-field-error-certificate) reduces the conservative atomic error ceiling by another 51.6 decimal orders, with all 12 checks passing. The physical magnetic field and flux are unchanged. The remaining ceiling still cannot establish whether that field supports the proposed opening.
+
+Next comes sharpening the geometry and spin estimates that dominate the remaining bound. No supporting material, stable opening, atom transmission, survival or clock gain has been demonstrated. The target remains one hydrogen atom and a trial 1 nm diameter; human transport is deferred, and the present static geometry excludes travel from13September2027 to12September2027.

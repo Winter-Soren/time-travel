@@ -7246,3 +7246,100 @@ That gauge proposal has been derived but **has not yet been numerically applied 
 One neutral hydrogen atom and the trial 1 nm areal opening remain the target. Supporting stress, stability, atom transmission, internal-state survival and clock advantage remain unproved. The static geometry still excludes13September2027 to12September2027; human enlargement remains deferred.
 
 ![Effect of adjustable proof scales](../figures/dihole_scaled_graph_progress.png)
+
+
+## Source-centred gauge for the complete field-error certificate
+
+Checkpoint183 applies the gauge proposed in182 and recomputes the full operator, heat transport and defect bounds. The [script](../scripts/dihole_centered_gauge.py) uses the saved geometry without rerunning its interval cover. Its [results](../results/dihole_centered_gauge_results.json) retain 73 exact input hashes and 12 passing checks.
+
+At the atomic reference, the logarithmic $B_4$ ceiling falls from501.39981 to449.81832, a reduction of at least51.58149348139301 decimal orders. The residual ceiling remains far too loose to establish support. This improves a mathematical certificate for the same field; it does not generate a new field, material or opening.
+
+### Fixed local gauge and global unitary equivalence
+
+For each fixed source point$y$, use a convex ordinary-coordinate ball of radius$r=2^{-32}$. Define
+
+$$
+\alpha_y(x)=\int_0^1(x-y)^iA_i(y+t(x-y))\,dt,\qquad
+A_i^y=A_i-\partial_i\alpha_y
+=\int_0^1t(x-y)^jF_{ji}(y+t(x-y))\,dt.
+$$
+
+The potential vanishes at the source while the curvature$F=dA$ is unchanged. This is an ordinary-coordinate radial gauge, so electromagnetic transport along curved geodesics is still included.
+
+The new gauge must hold on the entire point-evaluation cube and normal support. The point cube's Euclidean radius is at most$2^{-35}<r$. The saved geodesic-displacement ceiling$2r_{\rm velocity}<r$ also fits. An outer spatial cutoff at radius$2^{-31}$ lies within the existing coordinate clearance$.02$. Thus a smooth cutoff can equal one on the inner ball and vanish outside the larger chart ball.
+
+Extend the cutoff phase by zero to obtain a globally defined, time-independent phase. For the convention$\nabla=\partial-iA$, multiplication by$U_y=e^{-i\alpha_y}$ on the inner ball gives
+
+$$
+P^y=U_yPU_y^*,\qquad
+(\mu^2+P^y)^3U_y=U_y(\mu^2+P)^3.
+$$
+
+The global cutoff does not alter these unitary identities. Its derivatives outside the inner ball are not needed in the local estimates, while global graph norms are preserved exactly. Hold this phase fixed during the metric variation; then$\dot P^y=U_y\dot P U_y^*$ with no extra variation commutator.
+
+A separate gauge may be chosen for each kernel source because the trace estimate differentiates only the first kernel argument, with the source fixed, before taking coincidence. It never differentiates the gauge centre along the diagonal. The physical measure, source support, magnetic flux, magnetic reference and exact lower subtraction coefficients remain unchanged.
+
+### Explicit derivative replacement
+
+Let$a_n$ be the old ordinary component-derivative ceiling for$A/|q|$. From$F_{ji}=\partial_jA_i-\partial_iA_j$, its order$n$ component bound is$2|q|a_{n+1}$. Differentiating the radial-gauge integral gives
+
+$$
+|\partial^n A_i^y|\le |q|
+\left(\frac{4r\,a_{n+1}}{n+2}+\frac{2n\,a_n}{n+1}\right).
+$$
+
+The first term uses$\sum_j|x^j-y^j|\le2r$ in four dimensions; differentiating the displacement supplies the second term. That term is absent for$n=0$, but for$n=1$ it retains the unsuppressed field-curvature contribution. Shrinking the coordinate ball does not make all derivatives small.
+
+A sharper zeroth-order ceiling follows from the saved full-buffer physical magnetic bound$B_{\rm unit}\le12.010815582697589$. The Euclidean field is purely magnetic, with orthonormal bilinear norm$|q|B_{\rm unit}$. The real coordinate metric upper bound$M$ therefore gives
+
+$$
+\|A^y\|_{\rm Euclidean}\le \frac r2 M|q|B_{\rm unit}.
+$$
+
+Charge enters once. The smaller valid zeroth-order ceiling is used. It falls from676.9053329684016 to$1.2981876755092596\,10^{-7}$ per unit$|q|$, a ceiling ratio exceeding$5.214233240\,10^9$.
+
+The replacement array has **orders0 through19 only**. Original jet20 supplies new jet19; no new order20 gauge bound is claimed, since that would require original jet21. These orders suffice for the full operator and variation through18 and for all retained heat-transport derivatives.
+
+### Recomputed certificate
+
+The existing179 operator routine accepts the new radial component of the potential and retains the fixed gauge one-form during variation. The180 point and transport routines retain the spin connection, physical half-density and unitary transport. The original normal radius and packed exponential-map derivative ceilings remain valid because the metric is unchanged. The181 complete defect assembly and182 adjustable graph/Fourier bounds are then recomputed without dropping any contribution.
+
+| Quantity | $q=1000$ | Exact atomic $q$ |
+| --- | ---: | ---: |
+| Selected graph scale$\mu$ | $2^{123}$ | $2^{123}$ |
+| Selected Fourier scale$\lambda$ | $2^{127}$ | $2^{127}$ |
+| New$\log_{10}B_4$ ceiling | 514.80737 | 449.81832 |
+| New$\log_{10}C_*$ and$C_{\rm geom}$ ceiling | 517.00579 | 452.01674 |
+| Curved-remainder envelope/$q^2$, nominal$M^2s_0=100$, log ceiling | 492.72031 | 341.06411 |
+
+The low-flux bound barely changes: its decrease is only about$6.7\,10^{-18}$ decimal orders, with no significant displayed improvement. The atomic ceiling decreases by51.58149 orders. All comparisons concern conservative ceilings, not actual physical errors. Exact dyadic endpoints are retained in the artifact.
+
+At atomic flux, the normalized zeroth and eighth derivatives of$u_4$ now have logarithmic ceilings292.07020 and538.68299, close to the low-flux ceilings292.06408 and538.67075. This suggests that the remaining general geometry and spin estimates deserve attention; it does not establish that the actual electromagnetic contribution is negligible.
+
+### Controls, audits and next calculation
+
+Independent polynomial examples cover both a pure gauge and constant magnetic curvature with an added gradient potential. Direct line integration and differentiation reproduce the radial-gauge identity within$1.94\,10^{-75}$. Curvature is preserved in the control to the working precision, and the covariant-derivative identity agrees within$3.02\,10^{-74}$. Domain containment, derivative schedules and all 73 input hashes pass. All 12 native checks pass, and the figure was inspected. Independent numerical audit PASS:495 directed comparisons at500-550 digits, including gauge/operator arrays, point/transport estimates and all12 matching rows. All73 hashes and final source/result hashes match. Domain/gauge audit also PASS. Final layout PASS:179 imports,1603 Markdown links,8 source guards,14 frozen pilot hashes.
+
+Source SHA256: bc1c52a5be65971eeaa6adae00519c04e631588c82e4cb224a03d5059a756ae8.
+Result SHA256: a98634878eb8604219e0a1bf3cfe38c311210df5ff0ad7dc0d0928c919dfe6af.
+
+A focused diagnostic evaluates the zeroth physical-connection majorants already used by the transport code:
+
+$$
+\Omega_{\rm spin,0}\le768E_0I_0^2E_1,\qquad
+\Omega_{\rm gauge,0}\le |q|a^y_0.
+$$
+
+Their logarithmic ceilings are23.81648 and17.78013. The spin ceiling is more than six decimal orders larger. This is a comparison of estimates, not the actual two contributions, but it identifies a concrete remaining overestimate to target.
+
+The next calculation should sharpen the **same positive symmetric coframe**$E=\sqrt g$ using the real spectral bounds, before repeating the field calculation. In particular$E_0\le\sqrt M$ and$I_0\le\sqrt H$. Differentiating$E^2=g$ gives a Sylvester equation and the operator-norm recurrence
+
+$$
+E_n\le\frac{4g_n+\sum_{j=1}^{n-1}{n\choose j}E_jE_{n-j}}{2\sqrt m},
+$$
+
+where$g_n$ is the saved metric **component** ceiling, explaining the factor4. The inverse frame can similarly be bounded from$g^{-1}$, using its spectral lower bound$1/M$. This possible improvement has not yet been evaluated; the old frame estimates remain the ones used in the present certificate.
+
+The first target remains one neutral hydrogen atom through a trial 1 nm areal opening. No self-consistent supporting stress, stable opening, atom transmission, internal-state survival or clock advantage is established. The current static geometry excludes13September2027 to12September2027; human enlargement remains deferred.
+
+![Gauge improvement to the atomic error bound](../figures/dihole_centered_gauge_progress.png)
