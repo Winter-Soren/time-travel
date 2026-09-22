@@ -8110,3 +8110,160 @@ Independent numerical audit PASS:160 upward ceiling comparisons at550digits and3
 Source SHA256 ade9fe492b36c40c847fc48d7e0849a8070ebe53cd6e6dc5aa7014a32dd08712
 Results SHA256 fcb2e1e7191c48c38e1b57d563d0667dac556c6a470d2932d185dc65def0b2b7
 Final layout PASS:184 imports,1661 Markdown links,8 historical source guards,14 frozen pilot hashes.
+
+
+## One Dirac derivative and an absolute heat-source bound
+
+Checkpoint189 is implemented in [dihole_heat_source_graph.py](../scripts/dihole_heat_source_graph.py), with [saved results](../results/dihole_heat_source_graph_results.json). It uses the unchanged global physical operator and the compact volume-preserving metric probe. It supplies an absolute positive-time heat-response bound. It does not evaluate the signed, renormalized stress or prove support.
+
+### Derivative estimate and the saved comparison filter
+
+Let $D=\mathcal D_E$ be skew-adjoint, $P=-D^2\ge0$, $H(t)=e^{-tP}$, and retain188's $R(t)=H(t)\Pi-Q(t)$ and $E(t)=(\partial_t+P)Q(t)$. Spectral calculus and the global Duhamel identity give
+
+$$
+\|DH(r)\|\le(2er)^{-1/2},\qquad
+\|DR(t)\|\le(2e)^{-1/2}\int_0^t(t-s)^{-1/2}\|E(s)\|\,ds.
+$$
+
+The leading $s^{-1/2}$ defect is integrable in this expression. For an integrated monomial $I_p(t)=a_pt^{p+1}/(p+1)$, the contribution to $\sqrt t\|DR(t)\|$ uses $(p+1)B(p+1,1/2)$. For $p=-1/2,0,1/2,1,2$, the weights are $\pi/2,2,3\pi/4,8/3,16/5$. A uniform row factor $\sqrt{R_4}$ and the hemisphere factor $\sqrt2$ give the total prefactor $\sqrt{R_4/e}$. Cutoff terms retain their original exponential, reconstructed from the saved geometric inputs.
+
+The Duhamel/parametrix background is described in [Grieser's notes, section 2.3](https://web.math.ku.dk/grubb/notes/heat.pdf). The localization, full exterior and explicit constants here are this project's derivation.
+
+All Hilbert-Schmidt (HS) quantities below use the static trace per unit Euclidean time. A compact time window may be applied after output derivatives; no derivative is commuted through it.
+
+Saved176 bounds the weighted comparison filter. If $S(z)H_0(z)^2=\sum_pc_pz^p$, its full-frequency localized HS square obeys
+
+$$
+V_\Lambda\le \frac{KB_0^2}{\pi}
++\frac1\pi\sum_p\frac{c_pK^{1-p}}{p-1}.
+$$
+
+Every nonzero power is at least3, so the frequency tail is integrable. Both frequency signs, both collars and rank four are already included. Choose the smooth cutoff $\chi$ supported in $(-.005,.055)$, equal to one on $[-.0025,.0525]$, with ramps of width $.0025$. Saved176's derivative ceilings cover these ramps, and175's larger low-frequency cutoff equals one on this support. The plateau contains188's defect outputs.
+
+For $a=0,1$ and $\nu=\|N^{-1}\|$,
+
+$$
+B_a(r)^2:=\|D^aH(r)\Pi_b\|_{\mathrm{HS},\tau}^2
+\le \nu V_\Lambda\sup_{x\ge0}
+x^ae^{-2rx}\frac{\prod_{j=1}^3(x+j\Lambda^2)}{6\Lambda^6}.
+$$
+
+The inverse lapse occurs once in the squared norm; it is not commuted through the spectral multiplier. Expanding the positive polynomial gives coefficients $1,11/6,1,1/6$ in $x/\Lambda^2$. The code bounds each term using $\sup_{x\ge0}x^pe^{-2rx}=(p/(2er))^p$, with the zero-power maximum set to1.
+
+### Gaussian HS defect and the split at half time
+
+For $G_s(z)=(4\pi s)^{-2}e^{-|z|^2/(4s)}$ in four whitened dimensions,
+
+$$
+M_k(s):=\||z|^kG_s\|_2
+=\frac{2^{k/2-3}\sqrt{(k+1)!}}{\pi}s^{k/2-1}.
+$$
+
+Use187's saved constants, $u_0=.01$, $c=1+u_0^2/3$ and $\ell=c+u_0$. The interior defect is bounded by $e^{u_0}G_s$ times
+
+$$
+A\frac{r^3}{s^2}+B\frac r s+V_0+C\frac{r^3}{s}
++V_1r+V_2r^2+V_4r^4,
+$$
+
+where $A=G(c^2+u_0^2)/4$, $B=2Gc+a\ell(2\alpha+b_0)$, and $C=a\ell b_2$. Here $G$ is187's metric-difference constant, not the Gaussian kernel.
+
+The source-coordinate spatial volume across the two collars and hemisphere disks is $\pi/5$. The rank-four Frobenius factor is2. The canonical kernel determinant and the whitened output integral leave a single volume-density ceiling $V_{\max}$ in the squared norm. Thus the common HS multiplier is $C_{\rm vol}=2\sqrt{(\pi/5)V_{\max}}e^{u_0}$. Orthogonal source columns require no additional hemisphere factor in this HS sum.
+
+The cutoff polynomial is $A_1r/s+A_0+A_2r^2$, with
+$A_1=a^2G_\chi\ell$,
+$A_0=4a^2H_\chi+2aG_\chi(2\alpha+b_0)$,
+and $A_2=2aG_\chi b_2$.
+Its annular $L^2$ widening factor is $2^{k/2+1}e^{-\beta/s}$, where $\beta=r_{\rm cut}^2/(32H)$ uses the original inverse-metric ceiling $H$. Taking an upward-rounded decay exponent as a lower bound would be invalid and is avoided.
+
+The resulting defect HS terms have time powers $-3/2,-1,-1/2,0,1$. For $h_*(t)\ge\sup_{t/2\le s\le t}\|E(s)\|_{\mathrm{HS},\tau}$, bound negative powers at $t/2$, nonnegative powers at $t$, and cutoff exponentials at $t$. Splitting Duhamel avoids integrating the singular HS estimate at zero:
+
+$$
+F_0(t)=B_0(t/2)\eta_{\rm global}(t/2)+\frac t2 h_*(t),\qquad
+F_1(t)=B_1(t/2)\eta_{\rm global}(t/2)+\sqrt{t/e}\,h_*(t).
+$$
+
+These bound $\|R(t)\|_{\mathrm{HS},\tau}$ and $\|DR(t)\|_{\mathrm{HS},\tau}$. The early half uses the integrable operator defect and localized heat smoothing; the late half uses the HS defect and the spectral derivative estimate.
+
+Direct frozen-kernel bounds are
+
+$$
+Q_0(t)=C_{\rm vol}M_0(t),\qquad
+Q_1(t)=C_{\rm vol}\left[
+\frac{a\ell}{2t}M_1(t)+b_0M_0(t)+b_2M_2(t)
++2aG_\chi e^{-\beta/t}M_0(t)\right].
+$$
+
+The last term retains the output-cutoff derivative. Define $X_a(t)=\min(B_a(t),Q_a(t)+F_a(t))$. By adjoints, $(D^aH(t)\Pi)^*=(-1)^a\Pi D^aH(t)$. Hence the same ceilings bound the output-localized heat factors required below, without differentiating sharp source projectors or discarding exterior input states.
+
+### Actual compact metric variation
+
+Use $h=2F(e^0\otimes e^0-e^1\otimes e^1)$, with fixed gauge and the symmetric spinor identification. The metric variation is trace free and preserves the volume of the existing probe family. The Dirac variation formula specializes to
+
+$$
+\dot D=-\tfrac12h_{ij}\gamma^i\nabla_j
+-\tfrac14\gamma(\operatorname{div}h).
+$$
+
+This uses the metric identification in [Bär, Gauduchon and Moroianu, Theorem5.1/equation23](https://arxiv.org/pdf/math/0303095), translated to the project's skew-adjoint convention. Its flat-coordinate limit retains $F_s\gamma^1/2$, agreeing with the saved radial insertion.
+
+Apply the twisted Lichnerowicz identity to $Fu$, using the metric probe itself as the compact cutoff. With $g_F=\|\nabla F\|_\infty$,
+
+$$
+\|F\nabla u\|\le F_{\max}\|\Pi Du\|
++(2g_F+F_{\max}\sqrt{C_4})\|\Pi u\|.
+$$
+
+The saved geometric ceilings give
+$R_{\rm abs}=128H\gamma_1+512H\gamma_0^2$,
+$\Omega=48HE_1$,
+$C_4=R_{\rm abs}/4+|q|B_{\rm unit}$,
+and $\|\operatorname{div}h\|_\infty\le2g_F+16F_{\max}\Omega$.
+Here $R_{\rm abs}$ bounds the **Euclidean** scalar curvature; $\gamma_0,\gamma_1$ are180's Christoffel component/derivative ceilings, $E_1$ is184's first coframe component-derivative ceiling, and $g_F=F'_{\max}/P_{\min}$.
+
+Consequently
+
+$$
+\|\dot Du\|\le a_\delta\|\Pi Du\|+b_\delta\|\Pi u\|,\qquad
+a_\delta=\sqrt2F_{\max},\qquad
+b_\delta=2\sqrt2g_F+a_\delta\sqrt{C_4}+\tfrac12g_F+4F_{\max}\Omega.
+$$
+
+The response at full heat time $T$ has two legs of time $t=T/2$:
+
+$$
+\delta K(T)=-2T\,\Re\operatorname{Tr}_{/\tau}
+[(DH(t))^\dagger\dot DH(t)],\qquad
+\boxed{|\delta K(T)|\le
+2T X_1(t)[a_\delta X_1(t)+b_\delta X_0(t)].}
+$$
+
+The compact support of $\dot D$ permits output localization. This is a bound for the actual full-field compact insertion. Since $\dot D$ does not commute with $H$, it is not a signed error relative to a frozen source.
+
+### Numerical result and remaining decision
+
+At the saved atomic flux, the logarithms of the absolute ceilings are:
+
+| $T/s_0$ | Previous177 ceiling, $\log_{10}$ | New ceiling, $\log_{10}$ |
+| --- | ---: | ---: |
+| 1 | 65.541702039 | 63.662675304 |
+| 1/2 | 66.293913785 | 63.915586223 |
+| 1/4 | 67.046307144 | 64.272211092 |
+| 1/16 | 68.551320896 | 65.232728892 |
+
+The displayed values are rounded upward; exact dyadic endpoints are saved. The full-window improvement is about76 times. All four low-flux cases are worse with the new estimate, so the selected result retains177's earlier ceiling. These are dimensionless auxiliary bounds in the saved $D=1$ length convention, not physical energy-density measurements.
+
+All10 native controls pass, including independent Gaussian moments, Beta weights, split-HS and actual-insertion matrix controls with nonzero exterior coupling. An independent550-digit audit passes248 packed directed ceilings,244 display ceilings and32 separate nonzero-cutoff checks, with all91 input hashes verified. This numerical audit does not independently establish the continuum model's assumptions.
+
+The worst new short-time magnitude envelope is $O(T^{-2})$. The common regulator weight makes this contribution integrable at fixed regulator scale, but does not evaluate the subtracted remainder $C_*$ or justify substituting this magnitude for the renormalized source. The next required advance is a useful signed/subtracted source enclosure in the declared scheme. More magnitude tightening alone cannot determine whether the source has the sign and size required by the geometry.
+
+Support, stability, one-atom transmission/survival and clock comparison remain unproved. The static geometry excludes13September2027 to12September2027; future clock gain is unproved.
+
+![Positive-time heat-source ceiling](../figures/dihole_heat_source_graph_progress.png)
+
+Source SHA256: a96c427cd2c14118813898e99ea66de7044463b8d44790eb10a00e8d6de44cce
+Results SHA256: 94abf22be8c1054fa7770e7c0915cc76930793e7c778849a76cc803640b7131d
+
+Actual-code proof audit PASS: per-time normalization, filter/support coverage, split times, Gaussian powers, Q1 cutoff, Euclidean constants and adjoint localization. These are project/agent audits, not external peer review.
+
+Layout verification PASS: 185 imports, 1671 Markdown links, 8 historical source guards and 14 frozen pilot hashes. Historical documentation and audited scientific bytes are preserved.

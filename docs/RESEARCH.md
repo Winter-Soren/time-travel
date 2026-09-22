@@ -1,3 +1,59 @@
+# Authoritative checkpoint189 - derivative and absolute heat-source bounds
+
+Previous checkpoint188 published as 11c5a57e34a51ae0bc4e1667f1f0c5d641a95a78.
+Research resumed at the user's explicit request; the physical objective is unachieved.
+Browser/Downloads import COMPLETE; do not reopen.
+Target: one neutral hydrogen atom, trial 1 nm areal diameter; humans deferred.
+No supporting source, stable opening, atom transit or clock gain established.
+
+- scripts/dihole_heat_source_graph.py: 10 native checks PASS, 91 exact input hashes.
+  Eight records cover two flux choices and four positive heat-time fractions.
+  Previous scientific sources/results, including the B4 certificate, are unchanged.
+- The full global skew-adjoint Dirac operator D and P=-D^2 remain unchanged.
+  Duhamel plus ||D exp(-rP)|| <= (2er)^(-1/2) controls one output derivative.
+  Beta weights for the five integrated defect powers are pi/2, 2, 3pi/4, 8/3, 16/5.
+- The saved176 full-frequency filter gives localized heat Hilbert-Schmidt norms.
+  The inverse lapse appears once in the squared norm; all states are retained.
+  Split Duhamel at half time: operator defect on the early half, Gaussian
+  Hilbert-Schmidt defect on the late half. All traces are per Euclidean time.
+- Source-coordinate spatial volume is pi/5, spin Frobenius factor is 2.
+  No extra hemisphere factor is needed when summing orthogonal HS source columns.
+  Sharp source projections are never differentiated.
+- The actual volume-preserving compact metric variation gives a first-order
+  dotD bound. Its curvature cap is for the Euclidean metric, not the spatial metric.
+  Fixed gauge, volume identification, output localization and cutoff derivatives
+  are retained. Use adjoints to bound output-localized heat factors.
+- Actual compact response obeys
+  |delta K(T)| <= 2T X1(T/2) [a X1(T/2) + b X0(T/2)].
+  The X terms use the better of direct filter and corrected frozen-kernel bounds.
+  This is an absolute positive-time ceiling, not a signed reference error.
+- Atomic log10 ceilings at T/s0 = 1, 1/2, 1/4, 1/16 are approximately
+  63.662675304, 63.915586223, 64.272211092, 65.232728892.
+  Previous177 ceilings were 65.541702039, 66.293913785, 67.046307144, 68.551320896.
+  Full-window improvement is about 76 times. Low-flux estimates do not improve;
+  their earlier ceilings are retained. These are not energy-density measurements.
+- Worst new short-time envelope is O(T^-2); fixed-regulator integrability does
+  not determine the subtracted remainder Cstar or the physical source.
+- NEXT: a useful signed/subtracted short-time enclosure in the declared
+  renormalization scheme. Further positive-time magnitude bounds alone cannot
+  determine the sign or establish self-consistent supporting stress.
+- Support, stability, atom transmission/survival and clock comparison remain unproved.
+  The static geometry excludes 13 Sep 2027 -> 12 Sep 2027; future clock gain is unproved.
+  Smaller payloads do not remove these conditions. No new physical law is claimed.
+
+Independent numerical audit PASS at 550 digits: 248 packed directed ceilings,
+244 display ceilings and 32 separate nonzero-cutoff checks; no undershoot.
+All 91 exact inputs, current source hash and 10 saved passing controls verified.
+Source SHA256 a96c427cd2c14118813898e99ea66de7044463b8d44790eb10a00e8d6de44cce
+Results SHA256 94abf22be8c1054fa7770e7c0915cc76930793e7c778849a76cc803640b7131d
+Actual-code proof audit PASS: normalization, filter coverage, split times, Q1 cutoff,
+Euclidean geometric constants and output localization checked. These are project/agent
+audits, not external peer review. Final layout PASS: 185 imports, 1671 Markdown links,
+8 historical source guards and 14 frozen pilot hashes. Historical documentation bytes
+and audited scientific bytes are preserved; git diff --check passes. No simulation is running.
+
+--- Preserved checkpoint188 and earlier history ---
+
 # Authoritative checkpoint188 - global heat error on localized data
 
 Previous checkpoint187 publisheda3f71d2ad17637b84d1bb321c2072fb52543cab8.

@@ -1,5 +1,8 @@
 # Directory guide
 
+Current increment189: The [heat-source estimate](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#one-dirac-derivative-and-an-absolute-heat-source-bound) bounds a derivative and the spatially integrated field response, retaining the full exterior. At the saved atomic parameters its positive-time response ceiling improves by about **76 times**; all **10 native checks** and an independent numerical audit pass. This is an auxiliary magnitude bound: the signed, renormalized supporting stress remains undetermined. See the [results](results/dihole_heat_source_graph_results.json) and [visual](figures/dihole_heat_source_graph_progress.png). One hydrogen atom through a trial 1 nm opening remains the target; support, stability, passage and clock gain are unproved.
+
+
 Current increment188: The [localized heat comparison](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#localized-data-and-a-global-heat-operator-error) now bounds the local approximation against the **full global field operator**, for data starting in the opening's surrounding regions. The atomic operator-error ceiling is **0.07137**, with exterior propagation retained and all12 checks passing. See the [results](results/dihole_localized_heat_error_results.json) and [visual](figures/dihole_localized_heat_error_progress.png). This is not yet a supporting-stress or atom-transport result; differentiated source estimates come next.
 
 

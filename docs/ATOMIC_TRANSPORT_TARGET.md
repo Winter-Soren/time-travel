@@ -336,3 +336,12 @@ We are not back to square one: the prior geometry, field and provenance remain a
 The [localized heat comparison](PHYSICAL_EUCLIDEAN_OPERATOR.md#localized-data-and-a-global-heat-operator-error) bounds the auxiliary field approximation against the full global operator, for initial data in the opening's surrounding regions. At the saved atomic parameters, its absolute operator-error ceiling is0.07137; all12 native checks and independent numerical/proof audits pass. Exterior propagation remains included. This number is neither a relative error nor an atom-transmission probability.
 
 Next comes the differentiated diagonal and actual supporting-source calculation. A small operator-norm error alone does not settle it. One hydrogen atom and a trial1nm opening remain the first target; humans are deferred. Support, stability, atomic survival and a clock comparison are still unproved. The static geometry excludes13September2027 to12September2027, and no future clock advantage is established.
+
+
+## Checkpoint189: derivative control for the same one-atom target
+
+The [heat-source bound](PHYSICAL_EUCLIDEAN_OPERATOR.md#one-dirac-derivative-and-an-absolute-heat-source-bound) now includes one field derivative and the integrated response to the actual compact metric probe, with exterior propagation retained. Its positive-time magnitude ceiling at the saved atomic parameters improves by about 76 times. All 10 native checks and an independent 550-digit numerical audit pass. These heat quantities are auxiliary mathematical objects, not atomic transit times or measured supporting energies.
+
+The next required result is a useful signed, subtracted source enclosure in the declared renormalization scheme. A smaller absolute ceiling alone cannot establish that the field supplies the right sign or magnitude of stress. One hydrogen atom and a trial 1 nm opening remain the target. Self-consistent support, stability, transmission, internal-state survival and an exterior-clock comparison remain unresolved.
+
+We have retained the previous geometry, field definition and error analysis; this is not a restart. It is also not evidence that time travel is becoming physically feasible. The static geometry excludes 13 September 2027 to 12 September 2027. Future clock gain is unproved; molecules and humans remain deferred.
