@@ -6,6 +6,9 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment188: The [localized heat comparison](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#localized-data-and-a-global-heat-operator-error) now bounds the local approximation against the **full global field operator**, for data starting in the opening's surrounding regions. The atomic operator-error ceiling is **0.07137**, with exterior propagation retained and all12 checks passing. See the [results](results/dihole_localized_heat_error_results.json) and [visual](figures/dihole_localized_heat_error_progress.png). This is not yet a supporting-stress or atom-transport result; differentiated source estimates come next.
+
+
 Current increment187: The [frozen magnetic calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#frozen-magnetic-kernel-and-its-first-column-defect) bounds one local, time-integrated field defect below **0.050** at the saved atomic parameters, including its cutoff. **All16 native controls pass.** This is a useful first estimate, not the complete field error or a transit probability; the earlier certificate remains intact. See the [results](results/dihole_frozen_magnetic_results.json) and [visual](figures/dihole_frozen_magnetic_progress.png). One hydrogen atom through a trial1nm opening remains the target; support, stability, passage and clock gain remain unproved.
 
 

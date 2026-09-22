@@ -7918,3 +7918,195 @@ Independent numerical audit PASS:56 packed ceilings and4 metadata ceilings check
 Source SHA256 b462a120ad837756315506882418f79252046ccbc807f6e7d379d56685347d9f
 Results SHA256 6bf34332ff1bfb485ce81bda96452503606afefdca59b11301bda15097b764ee
 Actual-source proof audit PASS for the stated local column scope: whitening, Clifford/Pauli factors, exact radial-gauge domain and cutoff integration checked. Final layout PASS:183 imports,1650 Markdown links,8 historical source guards,14 frozen pilot hashes.
+
+## Localized data and a global heat-operator error
+
+This checkpoint converts187's first column estimate into a comparison with the
+**actual global heat operator** of the prescribed geometry, for initial data
+supported in the two collar cores. Exterior propagation is retained.
+This is an operator-norm result; differentiated diagonal kernels, trace norms,
+supporting stress and atom propagation remain outside its scope.
+
+[Calculation](../scripts/dihole_localized_heat_error.py),
+[results](../results/dihole_localized_heat_error_results.json),
+[figure](../figures/dihole_localized_heat_error_progress.png).
+All12 native checks pass;89 exact input hashes preserve187 and the earlier $B_4$
+certificate.
+
+### Row estimates without discarding the variable source metric
+
+Let $\epsilon=HG_1r_{\rm cut}<1$ be the saved187 comparison constant.
+For $|x-y|\le r_{\rm cut}$, freeze coordinates at the output:
+$w=E_x(x-y)$, while the kernel uses $z_y=E_y(x-y)$. Then
+
+$$
+(1-\epsilon)g_x\le g_y\le(1+\epsilon)g_x,\qquad
+(1-\epsilon)|w|^2\le|z_y|^2\le(1+\epsilon)|w|^2,
+$$
+
+$$
+\frac{\sqrt{\det g_y}}{\sqrt{\det g_x}}\le(1+\epsilon)^2.
+$$
+
+Consequently, replacing a column Gaussian moment of radial degree $k$ by
+a row integral costs at most
+
+$$
+R_k=\left(\frac{1+\epsilon}{1-\epsilon}\right)^{2+k/2}.
+$$
+
+The determinant supplies power2, the radial monomial supplies $k/2$, and
+rescaling the Gaussian supplies the denominator. These are four-dimensional
+canonical-coordinate estimates, not an assumption that the varying map
+$y\mapsto z_y$ has a constant Jacobian.
+
+The187 grouped leading and varying-field contributions each mix degrees1
+and3. Their entire groups therefore use the larger $R_3$.
+The constant, quadratic and quartic groups use $R_0,R_2,R_4$.
+The cutoff gradient, constant and quadratic groups use $R_1,R_0,R_2$.
+On the cutoff annulus, $|z_y|\ge r_{\rm cut}/(2\sqrt H)$ uniformly.
+Splitting the Gaussian there **before** the row comparison preserves the
+original exponential factor $e^{-\beta/t}$; no weakened exponent is needed.
+
+The frozen approximation has column norm at most $e^{0.01}$ and row norm at
+most $e^{0.01}R_0$, hence a per-chart $L^2$ operator ceiling
+$\kappa=e^{0.01}\sqrt{R_0}$.
+
+If $c(t),r(t)$ bound the column and row integrals of the defect, the Schur test
+and Cauchy--Schwarz in time give
+
+$$
+\int_0^T\|E_j(t)\|_{2\to2}\,dt
+ \le\int_0^T\sqrt{c(t)r(t)}\,dt
+ \le\sqrt{C_{\rm col}(T)C_{\rm row}(T)}
+ =:\eta(T).
+$$
+
+The code also evaluates $T/s_0=1/2,1/4,1/16$ using the actual positive time
+powers of187. Extra cutoff decay uses the original saved $H$ and $s_0$,
+not an upward-rounded exponent incorrectly treated as a decay lower bound.
+
+### Source projections, chart isometries and the initial limit
+
+Let $\Pi$ project onto the two spatial collar cores, with the whole Euclidean
+time axis retained. Each core has radial coordinate $u\in[0,.05]$ and is split
+into disjoint measurable northern and southern hemispheres. Assign the equator
+arbitrarily; it has zero volume. In each chosen chart the source satisfies
+$|y|\le1$.
+
+These sharp multipliers act only in the **source** variable.
+The differential operator $P_x$ does not differentiate them. Smooth source
+partitions would require extra overlap coverage, which is unnecessary here.
+
+For each chart $j$, let $U_j$ be the isometry from physical spinor $L^2$ to
+canonical-coordinate $L^2$, including the regular bundle frame and half-density
+$v=2PR/(1+|y|^2)$. The local kernel must undo its source-specific radial gauge;
+it is not a single common global gauge conjugation. Write
+
+$$
+Q_j(t)=U_j^{-1}q_j(t)U_j\Pi_j,\qquad
+E_j(t)=(\partial_t+P)Q_j(t).
+$$
+
+The output cutoff has radius $2^{-32}$ and lies inside the buffered chart
+$u\in[-.02,.07]$, $|y|<\sqrt2$. It is smooth and flat at its support boundary.
+Zero extension of the output therefore adds no boundary distribution.
+Canonical Schur estimates transfer by the isometries without another crude
+physical-volume ratio. Different collar output neighborhoods are disjoint.
+
+For compact smooth input away from the source partition boundaries, the frozen
+Gaussian is an approximate identity as $t\downarrow0$:
+$bt\to0$, its spin factor tends to identity, its source-dependent gauge phase
+vanishes on the diagonal, and the half-densities have the correct normalization.
+Uniform column/row bounds extend this convergence by density to every $L^2$
+input. Thus $Q_j(t)\to\Pi_j$ strongly. Positive-time smoothing and the interior
+output support place $Q_j(t)$ in the global $P$ domain; the defect has an
+integrable operator-norm majorant at zero.
+
+### Compare with the full global semigroup
+
+Use the already specified self-adjoint nonnegative physical Euclidean operator
+$P=\mathcal D_E^\dagger\mathcal D_E$ and $H(t)=e^{-tP}$, so $\|H(t)\|\le1$.
+On an interval bounded away from zero, differentiate
+$H(t-s)Q_j(s)$ and then take its lower endpoint to zero. The result is
+
+$$
+H(t)\Pi_j-Q_j(t)=-\int_0^t H(t-s)E_j(s)\,ds.
+$$
+
+This is Duhamel's principle; see
+[Grieser's notes, section2.3](https://web.math.ku.dk/grubb/notes/heat.pdf)
+for the parametrix background. The explicit domain, atlas and numerical bounds
+here are this project's calculation, not an automatic application of that
+compact-manifold discussion.
+
+Since the two hemisphere source projections are orthogonal in physical $L^2$,
+
+$$
+\|E_+\Pi_+f+E_-\Pi_-f\|
+ \le e(t)(\|\Pi_+f\|+\|\Pi_-f\|)
+ \le\sqrt2\,e(t)\|f\|.
+$$
+
+The two collars form a direct sum before $H$ acts, so they add no further
+factor. The common global semigroup can propagate into the exterior and between
+regions; its contraction bound applies to that full action. Therefore,
+
+$$
+\boxed{
+\sup_{0<t\le T}\|H(t)\Pi-Q_{\rm loc}(t)\|_{2\to2}
+ \le\sqrt2\,\eta(T).}
+$$
+
+No artificial boundary condition or global Volterra inverse has been assumed.
+A restriction of a local kernel to a finite chart would not by itself justify
+either claim.
+
+### Numerical ceilings and checks
+
+For the saved atomic flux:
+
+| $T/s_0$ | Column integral ceiling | Row integral ceiling | Global operator-error ceiling |
+| --- | ---: | ---: | ---: |
+| 1 | 0.049885941789 | 0.051041885753 | 0.071362070338 |
+| 1/2 | 0.019676511573 | 0.020132402114 | 0.028147306912 |
+| 1/4 | 0.008407041435 | 0.008601820567 | 0.012026293022 |
+| 1/16 | 0.002139979767 | 0.002189559764 | 0.003061246019 |
+
+The full-window per-chart integrated $L^2$ defect ceiling is
+$0.050460603856$. Table ceilings are rounded upward; saved dyadic endpoints
+are authoritative. These are **absolute operator-norm error ceilings**, not
+relative errors, confidence percentages, atom survival probabilities or
+physical travel times. The heat parameter is an auxiliary Euclidean parameter.
+
+At $q=1000$, the computed Duhamel estimates are still loose. The independent
+triangle bound $1+\sqrt2\kappa\le2.437805034205$ is tighter, and that record is
+retained without claiming a useful approximation.
+
+The native controls integrate a genuinely source-varying Gaussian metric and
+verify the row bound for degrees0 through4. A separate noncommuting matrix
+control couples two source states to an exterior state: the global Duhamel
+identity holds to $5.2\times10^{-81}$, while the nonzero exterior leakage would
+invalidate a truncated exterior. Orthogonal source projections with overlapping
+outputs check the necessary $\sqrt2$ factor. Smaller heat-time windows improve
+all saved bounds.
+
+### What remains before a supporting-source conclusion
+
+The next step must control the **actual physical insertion** on the diagonal,
+with the required local smoothing and trace estimates. A small $L^2$ operator
+error does not bound an unbounded derivative insertion or point evaluation.
+In particular, the previous fourth-order parametrix derivative schedule cannot
+be transplanted into this zeroth reference.
+
+Support, stability, transmission and survival of one neutral hydrogen atom,
+and an operational clock comparison remain unproved. The trial1nm opening
+is still a test parameter. The static geometry excludes13September2027 to
+12September2027; future clock gain is unproved.
+
+![Global heat error for collar-supported data](../figures/dihole_localized_heat_error_progress.png)
+
+Independent numerical audit PASS:160 upward ceiling comparisons at550digits and32 separate tiny-cutoff checks; all89 input hashes and12 native controls. Actual-source proof audit PASS, including row factors, time scaling, the original-input cutoff exponent, chart/physical isometries, strong initial convergence and global Duhamel scope.
+Source SHA256 ade9fe492b36c40c847fc48d7e0849a8070ebe53cd6e6dc5aa7014a32dd08712
+Results SHA256 fcb2e1e7191c48c38e1b57d563d0667dac556c6a470d2932d185dc65def0b2b7
+Final layout PASS:184 imports,1661 Markdown links,8 historical source guards,14 frozen pilot hashes.

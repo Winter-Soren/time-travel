@@ -1,3 +1,57 @@
+# Authoritative checkpoint188 - global heat error on localized data
+
+Previous checkpoint187 publisheda3f71d2ad17637b84d1bb321c2072fb52543cab8.
+Previous goal turn PROGRESS:187: implemented/audited/published useful first defect.
+Research resumed at explicit user request; objective unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial1nm areal diameter; humans deferred.
+No supporting source, stable opening, atom transit or clock gain established.
+
+- scripts/dihole_localized_heat_error.py:12 native checks PASS,89 exact inputs.
+  Earlier sources/results/B4 certificate preserved.8 records:2fluxes,4times.
+- Row conversion from187: R_k=((1+eps)/(1-eps))^(2+k/2).
+  Freeze output coordinate w=E_x(x-y), compare g_y to g_x.
+  Determinant,radius andGaussian factors are retained; no invalidvariable
+  source Jacobian. Mixed leading/varying groups useR3; othersR0,R2,R4.
+  Cutoffdegrees1,0,2. Split Gaussian BEFORErowcomparison retainsoriginalbeta.
+- Timefractions1,1/2,1/4,1/16 rescale187 positive integratedmonomials.
+  Extra cutoffdecay uses authenticated originalH/s0, neverpackedbetaupper.
+- IntegratedSchur eta<=sqrt(Ccolumn*Crow). FullatomicCcolumn<=.049885941789,
+  Crow<=.051041885753, eta<=.050460603856.
+- UseGLOBALnonnegativeP andH=e^-tP. Q_j maps sourcehemisphere/core
+  viachartisometryandkernelwithsourcegaugeundone, outputcompactinsidebuffer.
+  Q_j(t)->Pi_j strongly, E_j=(partial_t+P)Q_j integrable inL2operatornorm.
+  H(t)Pi_j-Q_j(t)=-intH(t-s)E_j(s)ds includesfull exteriorpropagation.
+- Sharpdisjointhemisphere SOURCE projections neednoderivativesandfit
+  |stereoy|<=1. Sourcesu[0,.05],outputbufferu[-.02,.07],|y|<sqrt2.
+  Physicalhalf-densityandbundleframeisometriespreserveSchur norms.
+  Hemisphereorthogonalitycostssqrt2. Twocollardefectoutputsaredisjoint;
+  directsumaddsnoextra factorbeforeglobalH acts.
+- ActualGLOBALheatoperatorerroroncollarinitialdata:
+  ||H(t)Pi-Qloc(t)||2->2 <=sqrt2 eta(T), uniformly0<t<=T.
+  Atomicceilings atT/s0=1,1/2,1/4,1/16 respectively:
+  .071362070338, .028147306912, .012026293022, .003061246019.
+  Absolutenormerror, NOTrelativeerror/probability/physicaltraveltime.
+- LowfluxDuhamelboundsremainloose. Validtrianglefallback<=2.437805034205
+  retainedwithoutclaiminga usefulapproximation.
+- Controls:source-varyingGaussianmoments, noncommutingmatrixcoupledto
+  explicitexteriorstate, Duhamelidentityerror<5.2e-81, nonzeroexteriorleakage,
+  sharphemispherefactor. Noactualfieldsolveoratompassageissimulated.
+- NEXT: differentiateddiagonal andactualsourceinsertionbounds withlocal
+  smoothing/tracecontrol. A smallL2operatorerroralone cannotbound an
+  unboundedderivative, pointevaluation ortrace. DoNOTimportoldQ4schedule.
+  No globalVolterrainverse/boundarycondition is claimedorneededfor188.
+- Support,stability,atomsurvivalandclockcomparisonremainunproved.
+  Staticgeometryexcludes13Sep2027->12Sep2027; futureclockgainunproved.
+
+Independent numerical audit PASS:160 upward ceiling comparisons at550digits and32 separate tiny-cutoff checks; all89 input hashes and12 native controls. Actual-source proof audit PASS, including row factors, time scaling, the original-input cutoff exponent, chart/physical isometries, strong initial convergence and global Duhamel scope.
+Source SHA256 ade9fe492b36c40c847fc48d7e0849a8070ebe53cd6e6dc5aa7014a32dd08712
+Results SHA256 fcb2e1e7191c48c38e1b57d563d0667dac556c6a470d2932d185dc65def0b2b7
+Final layout PASS:184 imports,1661 Markdown links,8 historical source guards,14 frozen pilot hashes.
+
+RESUME CHECKPOINT: User explicitly resumed the existing research. Checkpoint188 checks and independent audits are reused; all original scientific bytes are preserved. Continuity review passed. Private publication is the next action, followed by differentiated-source work. No simulation is running.
+
+--- Preserved checkpoint187 and earlier history ---
+
 # Authoritative checkpoint187 - frozen magnetic first column defect
 
 Previous checkpoint186 published09f62d621679b41dc2d91b017ec7921aba0a4e75.
