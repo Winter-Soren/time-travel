@@ -310,3 +310,10 @@ The [positive-frame calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#positive-frame-b
 The next candidate improvement must retain connection/parallel-transport cancellations in the field calculation. It is not yet derived or implemented. A smaller payload does not supply the missing supporting source: one hydrogen atom through a trial1nm opening still requires source consistency, stability, transmission, internal-state survival and an exterior-clock comparison. No atom has crossed in the model.
 
 The present static geometry excludes13September2027 to12September2027. Future clock gain has not been established. Molecules, animals and humans remain outside this first milestone; enlarging the opening would need new support and stability calculations.
+
+
+## Checkpoint185: retain exact propagation structure
+
+The [ordered transport and inverse calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#ordered-transport-and-a-direct-unitary-inverse) reduces the conservative atomic field-error ceiling by another50.1 decimal orders, with all14 controls passing. It retains time-ordering factors and the unitary structure of inverse propagation. The physical opening and field are unchanged; these are supporting-field estimates, not a simulated atom crossing.
+
+The next test is a cancellation already present in the chosen magnetic gauge. Its high-derivative and total-error effects remain unevaluated. One hydrogen atom and the trial1nm diameter remain the first target, requiring a self-consistent source, stability, transmission, survival and a clock comparison. No new physical law or supporting material is established. Backward passage is excluded by the present static geometry, and future clock gain remains unproved.

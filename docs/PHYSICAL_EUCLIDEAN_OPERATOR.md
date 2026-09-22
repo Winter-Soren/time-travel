@@ -7446,3 +7446,106 @@ A geodesic-radial gauge is a candidate formulation, not an implemented result. I
 The first success criterion remains a self-consistent supporting source for a trial1nm opening, followed by stability, transmission and internal-state survival of one neutral hydrogen atom, and an operational exterior-clock comparison. None has been established. The present static geometry excludes13September2027 to12September2027; future clock gain is unproved. Human transport is deferred and would require new calculations.
 
 ![Positive-frame improvement to the atomic error bound](../figures/dihole_positive_frame_progress.png)
+
+
+## Ordered transport and a direct unitary inverse
+
+Checkpoint185 retains two pieces of exact propagation structure that the previous absolute-value estimates discarded. The [script](../scripts/dihole_ordered_transport.py) and [results](../results/dihole_ordered_transport_results.json) keep the physical geometry, source-centred gauge, operator, point-evaluation bound, regulator and atomic target unchanged. All14 controls pass, with83 exact inputs.
+
+The atomic $\log_{10}B_4$ ceiling falls from356.39908 to306.26060. This is at least50.13847895020724 decimal orders tighter, but remains far too loose to determine a supporting source. No field, atom or opening has been created.
+
+### Ordered time integrals
+
+Let $U(t,w)$ be unitary parallel transport along the existing real geodesics, with $U(0,w)=1$. The code already has uniform normalized parameter-derivative bounds $K_j$ for its anti-Hermitian generator through order16.
+
+At any fixed real parameter $w_0$, factor out the exact unitary solution $U(t,w_0)$. The interaction generator then has zero constant parameter jet. Unitary conjugation preserves the norm of each positive-order jet. An iterated contribution containing $m$ positive-order insertions is integrated over an ordered time simplex of volume $1/m!$ at $t=1$.
+
+Consequently, normalized derivative ceilings are the finite-order coefficients
+
+$$
+\mathcal U_n=[z^n]\exp\left(\sum_{j\ge1}K_jz^j\right),\qquad
+\mathcal U_0=1,\qquad
+\mathcal U_n=\frac1n\sum_{j=1}^n jK_j\mathcal U_{n-j}.
+$$
+
+This does not commute any matrices. Only jets through $n$ contribute to degree $n$, so smooth finite jets suffice; convergence of an analytic Taylor expansion is not assumed. The old geometric recurrence omitted the simplex factors.
+
+For the exact control $U(t,w)=\exp(ic\,t\,w)$, the new bound gives $|c|^n/n!$, matching the normalized derivative. A separate polynomial-time matrix control uses two noncommuting anti-Hermitian generators and checks orders1 through10 by direct integration of polynomial coefficients.
+
+### Why the first trial was insufficient
+
+The [simplex-only pilot](../results/dihole_ordered_transport_simplex_trial.json) improved atomic parallel-transport order16 by13.32062 decimal orders, but the final $B_4$ ceiling by only0.30140547 orders, about a factor of two. The inverse leading-coefficient estimate still inverted a matrix majorant geometrically. Its repeated first-derivative contribution accounted for approximately99.9% of the pilot's order16 inverse ceiling.
+
+The [pilot source](../provenance/dihole_ordered_transport_simplex_trial.py), [PNG](../figures/dihole_ordered_transport_simplex_trial_progress.png) and [PDF](../figures/dihole_ordered_transport_simplex_trial_progress.pdf) are retained. This was a passing but weak intermediate result, not a failed physical experiment.
+
+### Preserve unitarity in the inverse
+
+Write $V$ for the physical half-density, and $J=D\exp_y$ for the Jacobian with respect to **unscaled** initial velocity. The leading physical heat coefficient and its inverse are
+
+$$
+u_0(x,y)=\frac{V(y)}{V(x)\sqrt{\det J}}\,U,\qquad
+u_0(x,y)^{-1}=\frac{V(x)}{V(y)}\sqrt{\det J}\,U^*.
+$$
+
+Adjunction preserves every real-parameter derivative norm. The same $\mathcal U_n$ therefore bounds $U^*$ without reconstructing an inverse through a geometric series.
+
+The saved normal-coordinate proof gives $1/16\le\det J\le81/16$. If $D_n$ bounds the positive-order normalized determinant derivatives, set $\delta(z)=16\sum_{n\ge1}D_nz^n$. A square-root majorant is
+
+$$
+S(z)=\frac94+\frac14\sum_{k\ge1}
+\left|\binom{1/2}{k}\right|\delta(z)^k.
+$$
+
+The zero coefficient uses the determinant upper bound; each positive-order coefficient uses its lower bound. The already saved Jacobian derivative series gives $D_n\le24[J(z)^4]_n$ for $n\ge1$.
+
+Multiply $S$, the composed $V(x)$ jets and the ordered $\mathcal U$ jets, then divide by $\sqrt{\mathrm{volume}_{\min}}$ to bound $1/V(y)$. Finally apply the same inverse-coordinate composition $Y/R$ as before. No additional power of the scaling radius belongs in $\det J$. Each resulting bound is minimized against the independently valid old geometric inverse bound.
+
+The scalar density, inverse-coordinate composition and all subsequent heat recursions remain present. The common physical-operator conversion and application helpers are reused. Historical sources are byte-preserved because their hashes are part of previous certificates.
+
+### Complete recomputation
+
+| Quantity | $q=1000$ | Atomic $q=4642875905017627791065088$ |
+| --- | ---: | ---: |
+| Selected graph scale $\mu$ | $2^{68}$ | $2^{88}$ |
+| Selected Fourier scale $\lambda$ | $2^{72}$ | $2^{92}$ |
+| $\log_{10}B_4$ ceiling | 284.95801 | 306.26060 |
+| Improvement in decimal orders, lower bound | 41.36285 | 50.13847 |
+| $\log_{10}C_*$ and $C_{\rm geom}$ ceiling | 287.15643 | 308.45902 |
+| Curved envelope/$q^2$, nominal $M_{\rm reg}^2s_0=100$, log ceiling | 262.87096 | 197.50639 |
+
+All logarithmic ceilings in the table are rounded upward. The exact dyadic endpoints are saved. Neither the auxiliary scales nor the interval ceilings are measured physical quantities. Exact lower heat-coefficient enclosures and the full source remain unresolved.
+
+The physical heat-coefficient derivative schedule remains16,14,12,10,8. Every displayed transport and heat-coefficient bound is no larger than before. The canonical operator and point-evaluation records are unchanged byte-for-value in the result.
+
+The constant-phase test agrees within $7.3\times10^{-101}$ relative error; an independent sum of powers divided by factorials agrees within $1.8\times10^{-161}$. The noncommuting time-order test has maximum actual-to-bound ratio1, attained at the first derivative. An independent analytic density/determinant/unitary inverse control through order10 has maximum ratio0.451106.
+
+All14 controls and83 exact inputs pass. The actual-code proof audit confirms the finite-jet argument, determinant normalization, density factors, adjoint inverse and unchanged domains. The figure was inspected. Independent numerical audit PASS:330 directed comparisons at550 digits, all83 exact inputs and14 controls, including exponential coefficients, direct inverse, full heat/defect bounds and preserved-pilot equality. The next radial-cancellation identity also passed a separate derivation audit; it remains unevaluated. Final layout PASS:181 imports,1629 Markdown links,8 historical source guards,14 frozen pilot hashes.
+
+Source SHA256: 10efc4ab92539f88934f3702ab932b015c5bcbdaae907f78dc7285724435af85.
+Result SHA256: 586e9dfceaca138d163a4ca4e37cf54e7e67be78eddd43ce66a5f1fb83e54627.
+
+### A smaller next calculation than changing the whole gauge
+
+Covariant heat-coefficient methods are established background; see [Avramidi, Covariant techniques for computation of the heat kernel](https://arxiv.org/abs/hep-th/9704166). That source motivates curvature-based organization; it does not certify this noncompact geometry or the numerical bounds derived here.
+
+A proposed geodesic-radial gauge was examined but not applied. In a variable-lapse metric, the spatial projection of a four-dimensional Euclidean geodesic depends on its time velocity, so the required phase generally depends on time. A globally extended unitary phase would preserve the full operator, but individual static Fourier fibres could not silently be reused. Moreover, retaining gauge jets through19 requires exponential/inverse-map jets through20, while only17 are saved. A spin radial gauge would also change the coframe and invalidate direct reuse of184's positive-frame estimates.
+
+A more direct candidate retains radial cancellation in the **existing** gauge. With $\gamma(0)=y$ and the source held fixed,
+
+$$
+A(\gamma(t))\cdot(\gamma(t)-y)=0,
+$$
+
+so
+
+$$
+A(\gamma)\cdot\dot\gamma=A(\gamma)\cdot W,\qquad
+W=\dot\gamma-\frac{\gamma-y}{t}
+=\frac1t\int_0^t s\,\ddot\gamma(s)\,ds.
+$$
+
+Uniform normalized initial-velocity jets of $W$ are bounded by half the corresponding acceleration jets. Acceleration can be bounded from the saved Christoffel jets and two velocity factors. The zero-order ratio of this new magnetic-generator estimate to the old one is bounded by $C_0R\approx0.00387358326$ using the saved geometry. Higher derivatives and the downstream improvement have **not** been evaluated. Spin transport remains present, and the new magnetic bounds would be minimized against the old ones order by order.
+
+This is the next discriminating calculation, not an implemented result. The scientific target remains support and stability of a trial1nm opening, followed by one neutral hydrogen atom's transmission, internal-state survival and exterior-clock comparison. No such success is established. The current static geometry excludes13September2027 to12September2027; a future clock advantage remains unproved.
+
+![Ordered transport and direct inverse improve the estimate](../figures/dihole_ordered_transport_progress.png)

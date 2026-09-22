@@ -1,3 +1,65 @@
+# Authoritative checkpoint185 - ordered transport and its direct inverse
+
+Previous checkpoint184 published 3bde6137ad41416753db931934a33fa8560f6875.
+Previous goal turn PROGRESS:184 verified and privately published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No supporting source, stable opening, atom transit or clock gain established.
+
+- scripts/dihole_ordered_transport.py:14 controls PASS,83 exact inputs.
+  Existing184 frame, gauge, physical operator and point-evaluation records
+  reused exactly. Old sources remain byte-identical for provenance.
+- Real-path unitary evolution absorbs the constant generator. Retaining
+  ordered m-fold time integrals gives1/m!, with no commutativity assumption:
+  U_n=(1/n) sum_j1..n j K_j U_(n-j), coefficients of exp(sum K_j z^j).
+  This is a finite-jet proof through16, not an analyticity assumption.
+- A first simplex-only pilot improved atomic logB by just0.30140546644.
+  Its source/result/both figures are preserved and authenticated:
+  provenance/dihole_ordered_transport_simplex_trial.py,
+  results/dihole_ordered_transport_simplex_trial.json,
+  figures/dihole_ordered_transport_simplex_trial_progress.png/.pdf.
+  The old geometric inverse repackaged unchanged U1 into large powers.
+- Direct inverse now uses u0^-1=V(x)/V(y)*sqrt(det Dexp)*U*.
+  Adjoint real-parameter derivatives have the same ordered U bounds.
+  detDexp in[1/16,81/16]; sqrt constant9/4 and positive-order
+  coefficients |binom(1/2,k)|/4 act on the existing16*deltaDet series.
+  Compose densities and inverse coordinates as before, then take per-order
+  minima with the still-valid geometric inverse. No R power is added.
+- Recomputed heat schedule16,14,12,10,8 and complete defect/scale bounds.
+  Atomic logB4<=306.2605953615356, down>=50.13847895020724 orders.
+  mu2^88,lambda2^92; logCstar/Cgeometry<=308.4590150895798.
+  Curved envelope/q² at nominal Mreg²s0=100 log<=197.50638848940469.
+- q1000 logB4<=284.9580098634821, down>=41.36285781962704 orders.
+  mu2^68,lambda2^72; logCstar<=287.1564295915263.
+  These are conservative ceilings, not actual errors or energies.
+- Geodesic radial gauge was examined but NOT applied. Four-dimensional
+  geodesics in a variable lapse generally require a time-dependent phase.
+  Keeping gauge jets19 would need exp/inverse jets20, but only17 are saved.
+  Full spin radial gauge also changes the positive frame. None may be
+  silently substituted into the current operator or Fourier conventions.
+- NEXT candidate: retain radial cancellation in the EXISTING gauge.
+  A(gamma) dot(gamma-y)=0 implies A(gamma) dot gamma'=A(gamma) dot W,
+  W=gamma'-(gamma-y)/t=(1/t)integral_0^t s gamma''(s)ds.
+  Existing uniform w jets give W_n<=acceleration_n/2.
+  Bound acceleration from saved Christoffel jets and velocity products,
+  then minimize each magnetic generator jet against its old bound.
+  Spin remains unchanged. C0*R about0.00387358326 for the zerojet;
+  higher-jet and downstream improvement have NOT been evaluated.
+- Full source, exact lower-coefficient enclosures, stability, atom survival
+  and clock comparison remain unresolved. Current static geometry excludes
+ 13Sep2027->12Sep2027; a future clock advantage is unproved.
+
+Source SHA256 10efc4ab92539f88934f3702ab932b015c5bcbdaae907f78dc7285724435af85
+Results SHA256 586e9dfceaca138d163a4ca4e37cf54e7e67be78eddd43ce66a5f1fb83e54627
+Strict run passed14 controls/83 inputs; final figure inspected.
+Actual-code proof audit PASS: ordered finite jets, determinant, density,
+adjoint inverse and unchanged domain/operator conventions.
+Independent numerical audit PASS:330 directed comparisons at550 digits, all83 exact inputs and14 controls, including exponential coefficients, direct inverse, full heat/defect bounds and preserved-pilot equality. The next radial-cancellation identity also passed a separate derivation audit; it remains unevaluated.
+Final layout PASS:181 imports,1629 Markdown links,8 historical source guards,14 frozen pilot hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint184 and earlier history ---
+
 # Authoritative checkpoint184 - real positive-frame bounds tighten the same field certificate
 
 Previous checkpoint183 published b4d4420e7a0f910883e4ca355bf6c8b6310f664a.

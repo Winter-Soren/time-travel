@@ -6,6 +6,10 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment185: The [ordered transport calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#ordered-transport-and-a-direct-unitary-inverse) retains time-ordering factors and computes the inverse leading coefficient using unitary propagation. The conservative atomic error ceiling drops by another 50.1 decimal orders; **all 14 controls pass**. This still does not establish support, stability or atom passage. See the [results](results/dihole_ordered_transport_results.json) and [visual](figures/dihole_ordered_transport_progress.png). One hydrogen atom through a trial 1 nm opening remains the target.
+
+
+
 Current increment184: The [positive-frame calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#positive-frame-bounds-from-the-real-metric) tightens the conservative atomic error ceiling by another 93.4 decimal orders. **All 13 checks and two independent audits pass.** The field, opening and payload are unchanged; the ceiling remains too loose to establish support. See the [results](results/dihole_positive_frame_results.json) and [visual](figures/dihole_positive_frame_progress.png). One hydrogen atom through a trial 1 nm opening remains the first target, with support, stability, survival and clock comparison still required.
 
 
