@@ -1,5 +1,8 @@
 # Directory guide
 
+Current increment192: The [finite nested-buffer comparison](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#finite-nested-buffer-heat-comparison) reduces the atomic signed-reference error ceiling from **4.26675e14 to1.36678e5**, about **3.12 billion times smaller**, while retaining the full exterior. All **9 checks** and an independent numerical audit pass. See the [results](results/dihole_nested_heat_bound_results.json) and [visual](figures/dihole_nested_heat_bound_progress.png). This is still far too loose to determine the full field response's sign; the191 numerical reference remains uncertified. No supporting source, stable opening or atom time travel is demonstrated.
+
+
 Current increment191: The [direct signed-kernel pilot](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-frozen-kernel-pilot-with-actual-output-coefficients) evaluates the reference using the actual output field and passes **8 checks** plus an independent review. Its normalized numerical value is about **+1.91546e-8**, while the inherited full-field error ceiling is **4.26675e14**. The reference quadrature is not certified, and the full response sign remains unknown. See the [results](results/dihole_signed_kernel_results.json) and [visual](figures/dihole_signed_kernel_progress.png). This is a positive-time field calculation, not supporting energy or atom transit; more reference-grid refinement cannot resolve the dominant comparison uncertainty.
 
 

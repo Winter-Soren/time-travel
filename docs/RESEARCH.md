@@ -1,3 +1,45 @@
+# Authoritative checkpoint192 - finite nested-buffer heat comparison
+
+Previous goal turn PROGRESS191: implemented, verified and privately published as
+2b5473f4d5719cc3dce6bbf4fbfe8ba0bc5d49e6. This turn implements192.
+Goal ACTIVE and unachieved. Browser/Downloads import COMPLETE; do not reopen.
+Target: one neutral hydrogen atom, trial1nm areal diameter; humans deferred.
+
+- scripts/dihole_nested_heat_bound.py:9 controls PASS,96 exact input hashes.
+  Finite local heat-norm recurrence replaces the coarse early global-filter leg.
+  B_n enlarges each collar by n*r, r=2^-32; source measure gamma_n=sqrt(1+40nr).
+  The actual global semigroup/exterior and original terminal filter are retained.
+- F_a,n(t) <= gamma_n*L_a(t)+eta(t/2)*B_a,n+1(t/2); a=0,1.
+  Use raw188 integrated defect eta; never a triangle heat-error minimum.
+  Recur heat norms by Q+F, optionally min with independent direct bounds.
+  NEVER infer an error by subtracting Q from a minimized heat-norm bound.
+- Separate n=0 and n=2 chains feed all three190 signed-comparison terms.
+  Maximum depth8/output padding11r=2.56113708019e-9D lies within.0025D plateau.
+- Atomic T=s0 radius/q^2 drops from4.2667469798854073e14 to136678.30440093696,
+  a factor3.12174416e9. Depth6 gives136679.37626; more nesting adds little.
+  At fractions1/2,1/4,1/16:237365.78516,475099.00577,2662057.58718.
+  Low-flux q1000 remains around1e72--1e73; no useful low-flux conclusion.
+- Independent550-digit audit:593 packed endpoints and593 display ceilings PASS.
+  All96 hashes,9 controls, support, min-selection and terminal bounds verified.
+- The191 numerical reference remains about+1.91546e-8 and is NOT enclosed.
+  The new comparison ceiling is still about7.14e12 times that magnitude.
+  No signed full-response interval or renormalized supporting source established.
+- NEXT: tighten actual low-order regular-frame and curvature derivative bounds;
+  remaining defect coefficients are still inflated. Exact polar algebra and the
+  canonical divergence term below provide a concrete route; certify the whole
+  buffer before substituting any new constants. Preserve signed cancellations.
+  Do not spend further work increasing nesting depth or merely refining191 grids.
+- No supporting source, stable opening, atom transit/survival or clock gain.
+  Static geometry excludes13September2027 ->12September2027; no new physics law.
+- No calculation remains running. Final layout PASS:189 imports,1702 links,
+  8 historical source guards,14 frozen hashes. Six old document bodies and all
+  prior scientific bytes preserved; local192 ready for authorized publication.
+
+Source SHA256 2eb8a9782b740a19435a170d02c311ed7a1235b635cf4c3a545eda771c2d34da
+Results SHA256 7e07c0a2eee67e6139d741e8915ae69180dc4f15948137e33903752a630d6783
+
+--- Preserved checkpoint191 and earlier history ---
+
 # Authoritative checkpoint191 - direct signed frozen-reference pilot
 
 Checkpoint190 published as c8e051ed1a36e9dc64cc1603a46a08fda63f712e.

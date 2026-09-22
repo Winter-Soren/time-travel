@@ -8574,3 +8574,134 @@ As a deliberately hypothetical screen, remove both early error terms and replace
 To reproduce the screen, use189's exact packed atomic$T/s_0=1$ record: `HS_error_terms`, `early_defect_operator_integral_upper`, `frozen_value_HS_upper`, `frozen_Dirac_HS_upper`, `selected_heat_HS_upper` and `geometry.insertion_graph_a/b`, with177's saved$s_0$. Substitute into190's displayed three-term inequality; no new simulation or geometry fitting is involved.
 
 Final layout PASS:188 imported modules,1692 Markdown links,8 historical source guards,14 frozen pilot hashes. All94 current scientific input hashes and both new source hashes are verified. The six historical document bodies and all previously tracked scientific artifacts are preserved. No calculation remains running.
+
+## Finite nested-buffer heat comparison
+
+Checkpoint192 implements [a finite heat-norm bootstrap](../scripts/dihole_nested_heat_bound.py) using the unchanged physical operator, the191 spatial-cutoff reference, and the saved187--189 defect estimates. The [results](../results/dihole_nested_heat_bound_results.json) reduce the atomic full-time signed-reference error ceiling from approximately4.26675e14 to1.36678e5 after division by$q^2$. They do not enclose the signed reference quadrature or determine the full field response's sign.
+
+### Finite domains and terminal bound
+
+Let $\Pi_n$ project onto both collars with $u\in[-nr,.05+nr]$, $r=2^{-32}D$, and the full sphere. Let $Q_n(t)$ be the same frozen reference with source projection$\Pi_n$. Its defect $E_n=(\partial_t+P)Q_n$ has output support in$\Pi_{n+1}$ because its spatial cutoff has radius$r$. The source measure gives
+
+$$
+\gamma_n=\sqrt{1+40n\,2^{-32}},\qquad
+\|D^aQ_n(t)\|_{\mathrm{HS},\tau}\le\gamma_n Q_a(t),\quad a=0,1.
+$$
+
+The late defect Hilbert--Schmidt estimate likewise scales by$\gamma_n$. The Schur operator-defect integral is uniform in$n$; it does not acquire a source-volume factor. Both hemisphere source projections remain orthogonal, and their existing$\sqrt2$ factor is already included in$\eta$.
+
+Write $\mathcal B_{a,n}(t)$ for a bound on$\|D^aH(t)\Pi_n\|_{\mathrm{HS},\tau}$ and $F_{a,n}(t)$ for a bound on$\|D^a[H(t)\Pi_n-Q_n(t)]\|_{\mathrm{HS},\tau}$. All appearances of$H$ are the original full global semigroup. The exterior is not removed or replaced by a boundary condition.
+
+The calculation terminates after$J\le8$ levels with176/189's global-filter bound at$t/2^J$. Its smooth cutoff equals one on$[-.0025,.0525]$, so$\Pi_{n+J}\le\chi^2$ provides the required terminal Hilbert--Schmidt domination. For the largest starting padding$n=2$, even an additional output collar remains within$11r=2.56114\times10^{-9}D$, far inside that plateau. No infinite chain or uniform geometry at arbitrary distance is assumed.
+
+### Recurrence from the exact global Duhamel identity
+
+For the early half of Duhamel's integral, support gives
+
+$$
+D^aH(t-s)E_n(s)=D^aH(t-s)\Pi_{n+1}E_n(s).
+$$
+
+The Hilbert--Schmidt norm of$D^aH(v)\Pi_{n+1}$ is nonincreasing in$v$ by the nonnegative spectral functional calculus of$P=-D^2$. Therefore the early contribution is bounded by
+
+$$
+\mathcal B_{a,n+1}(t/2)\int_0^{t/2}\|E_n(s)\|\,ds
+\le\mathcal B_{a,n+1}(t/2)\eta(t/2).
+$$
+
+Crucially,$\eta$ is188's **raw integrated defect-norm ceiling**. The smaller triangle ceiling on the already integrated heat error cannot be substituted for it.
+
+For the late half, let$h_*(t)$ be189's supremum of the defect Hilbert--Schmidt majorant on$[t/2,t]$. Global contraction and$\|DH(v)\|\le(2ev)^{-1/2}$ give
+
+$$
+L_0(t)=\tfrac t2h_*(t),\qquad L_1(t)=\sqrt{t/e}\,h_*(t).
+$$
+
+Consequently the finite backward recurrence is
+
+$$
+\boxed{F_{a,n}(t)\le\gamma_n L_a(t)+\eta(t/2)\mathcal B_{a,n+1}(t/2),
+\qquad \mathcal B_{a,n}(t)\le\gamma_n Q_a(t)+F_{a,n}(t).}
+$$
+
+At each level the producer may select the smaller of independently proved ceilings: the previous error estimate$\gamma_nF_a^{(189)}$ for$F$, and the global-filter bound for$\mathcal B$. It **never** obtains$F$ by subtracting$Q$ from a minimized upper bound on$\mathcal B$; that subtraction would be invalid.
+
+If189's full-time fraction is$f$, the initial leg time is$t=fs_0/2$. Level$j$ uses$f_j=f/2^j$ and the raw188 defect integral at fraction$f_j/4$. All times remain inside the saved magnetic window. This is a finite induction, so convergence of an infinite Neumann series is unnecessary.
+
+### Signed comparison with separate core and buffered errors
+
+Run the recurrence separately from$n=0$ and$n=2$. Put$X_a=\mathcal B_{a,0}(t)$ and$Q_{1,2}=\gamma_2Q_1(t)$. The190 argument then gives the sharper bound
+
+$$
+|\delta K(T)-S_B(T)|\le2T\{F_{1,2}(a_\delta X_1+b_\delta X_0)
++Q_{1,2}(a_\delta F_{1,2}+b_\delta F_{0,2})
++F_{1,0}(a_\delta F_{1,0}+b_\delta F_{0,0})\},\quad T=2t.
+$$
+
+The final term retains every input outside$B=\Pi_2$. Output-only derivatives and the existing adjoint argument remain valid. The absolute full-field heat-response ceiling is also recomputed as$2T X_1(a_\delta X_1+b_\delta X_0)$, but this does not supply the required renormalized source.
+
+For the saved atomic flux at$T=s_0$:
+
+| Finite depth | Signed-reference error ceiling /$q^2$ |
+| --- | ---: |
+| 0, previous construction | 4.26674698e14 |
+| 2 | 2.21759773e11 |
+| 4 | 2.12766626e5 |
+| 6 | 1.36679376e5 |
+| 8 | 1.36678304e5 |
+
+The depth8 radius is **136678.304400936962**, approximately3.12174416e9 times smaller than the previous one. Deeper nesting is already giving very little improvement; it must not substitute for improving the remaining defect estimates. The191 numerical reference is about+1.91546e-8, whose quadrature uncertainty is still uncertified. The remaining radius is about7.14e12 times that reference magnitude and permits both signs for the full response even if the reference were exact.
+
+Other atomic heat fractions$T/s_0=1/2,1/4,1/16$ have selected radii237365.785160349,475099.005770136 and2662057.587176114, respectively. The low-flux$q=1000$ ceilings remain unusably large, around$10^{72}$--$10^{73}$; no material low-flux improvement or feasibility is claimed.
+
+### Verification and physical meaning
+
+All9 native controls pass. An independent five-dimensional tridiagonal positive operator tests both derivative orders and several times/depths with exact matrix heat evolution. Its frozen defect obeys the required one-buffer output support, while the actual heat flow leaks into the exterior. This tests the recurrence and finite terminal contribution without deleting exterior coupling. Exact input hashes and the preserved source outputs retain reproducibility.
+
+These are bounds on an auxiliary Euclidean heat response; heat time is not travel time. No renormalized supporting stress, stable opening, atomic transit/survival, operational clock shift or new physical law is established. The first target remains one neutral hydrogen atom through a trial1nm opening; the static model still excludes13September2027 to12September2027.
+
+![Finite nesting reduces the error ceiling but does not resolve the full source](../figures/dihole_nested_heat_bound_progress.png)
+
+### Audit and preparation for the remaining coefficient bounds
+
+An independent550-digit recomposition from189's scalar formulas verifies all593 packed endpoints and593 display ceilings without undershoot, all96 exact input hashes, and the9 native controls. The smallest positive relative rounding margin is3.19e-123. The independent recurrence does not call the new producer's bootstrap or comparison routines. The figure was rendered and visually inspected. These are internal checks, not external peer review.
+
+The remaining first-defect coefficients include $\alpha=1.76301\times10^{10}$, $b_0=4.35664\times10^{10}$ and the whitened unit-charge curvature-gradient ceiling$3.64070\times10^{14}$. Their inherited construction uses large frame/potential-jet majorants. The exact191 geometric zeroth term is instead
+
+$$
+\|b_{\rm geom}\|=\tfrac12\|\operatorname{div}I\|,
+$$
+
+because its coefficients are real and the Clifford generators anticommute. This exact cancellation of spin/density terms is a route to a better bound, not permission to omit their combined contribution. A56-point diagnostic using191's unchanged evaluator gives a maximum approximately2.60625 for this quantity. It samples seven radial positions$[-.0025,0,.0125,.025,.0375,.05,.0525]$, four angular positions$[(0,0),(.3,.4),(.7,.7),(1,0)]$ and both poles. Its coordinate curvature-gradient Frobenius maximum is approximately3.76912 per unit charge; this has not been whitened and cannot directly replace the existing whitened constant. Neither sample maximum is a whole-buffer upper bound, and neither enters192's certificate.
+
+An algebraic preparation removes the troublesome polar divided difference. With the original balanced parameters $M^2+a^2=k^2$, $B=M/[(k+a)(M+k)]$, define
+
+$$
+d=\sqrt{R^2+4k^2+4kRx},\quad r=M+(R+d)/2,\quad c=(d-R)/(2k),\quad r_\pm=M\pm k,
+$$
+$$
+\mathcal L=\frac{2BMa+\frac{B^2}{4}(r+r_+)(r^2+r_+^2-2a^2)}{r-r_-}
++\frac{B^2a^2}{4}(1-c^2),\quad \zeta=R\mathcal L/d.
+$$
+
+The factor $1-c^2$ has the stable form $\frac Rk(1-x)(d-R+2k)/(d+R+2k)$. Exact balance yields
+
+$$
+h=\sqrt{NP}=1+(1-x^2)\zeta,\quad NP-1=(1-x^2)\zeta(h+1).
+$$
+
+For $t_y=|y|^2$, $x=p(1-t_y)/(1+t_y)$ and $Z=\zeta(h+1)/P$,
+
+$$
+\frac{P^{-1}-N}{t_y}=-\frac{4Z}{(1+t_y)^2},\quad
+\partial_u\frac{P^{-1}-N}{t_y}=-\frac{4R'Z_R}{(1+t_y)^2},\quad
+\partial_{y_i}\frac{P^{-1}-N}{t_y}
+=16y_i\left[\frac Z{(1+t_y)^3}+\frac{pZ_x}{(1+t_y)^4}\right].
+$$
+
+These expressions remain regular at both poles. A separate algebra check reduces the symbolic identity to zero modulo$M^2+a^2-k^2$; fifteen comparisons against the original field, including both poles, agree to2.54e-80. This is preparation for a directed whole-buffer low-order cover, **not an already certified replacement** for any saved constant. Exact parameter linkage and whitening factors must be preserved. The next calculation should produce that cover and propagate only proved constants through the existing defect and finite-bootstrap formulas.
+
+Source SHA256 2eb8a9782b740a19435a170d02c311ed7a1235b635cf4c3a545eda771c2d34da
+Results SHA256 7e07c0a2eee67e6139d741e8915ae69180dc4f15948137e33903752a630d6783
+
+Final layout PASS:189 imports,1702 Markdown links,8 historical source guards and14 frozen hashes. All96 input hashes and the current source match; six historical document bodies and prior scientific bytes are unchanged. No simulation remains running.

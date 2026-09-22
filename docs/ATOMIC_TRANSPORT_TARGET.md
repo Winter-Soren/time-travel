@@ -362,3 +362,11 @@ The [signed-kernel pilot](PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-frozen-kernel-pi
 These are heat-response quantities, not the renormalized supporting-energy values in190. The heat parameter is not elapsed time. Similarity of numerical values on refined grids is not a physical feasibility test. The next decision must address the missing signed/subtracted full-field correction, rather than spend more work refining a reference whose comparison uncertainty dominates.
 
 The target remains one hydrogen atom and a trial1nm opening. No supporting field, stable opening, atom crossing, survival or clock gain has been demonstrated. The current static model cannot send an atom from13September2027 to12September2027. Humans remain deferred, and no new physics law is claimed.
+
+## Checkpoint192: tighter field comparison, same unproved physical target
+
+The [finite nested-buffer calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#finite-nested-buffer-heat-comparison) replaces the dominant coarse smoothing estimate. The atomic error ceiling about the exact signed reference is about136678 after division byq^2, versus4.26675e14 previously. All9 controls and an independent audit pass; exterior propagation is retained.
+
+This improves an upper bound, not the physical field or an observed transport result. The remaining ceiling is about7.14e12 times the191 numerical reference, and that reference's quadrature is still uncertified. The full signed response and renormalized supporting stress remain unknown. Further nesting already yields very little; the next useful work is tighter actual field/geometry coefficient bounds with the required signed subtraction.
+
+One neutral hydrogen atom and a trial1nm opening remain the target. No stable opening, passage, survival or clock gain is established. The static model cannot send an atom from13September2027 to12September2027. No new physical law is claimed.
