@@ -1,3 +1,67 @@
+# Authoritative checkpoint173 - paired complete-frequency selection bound
+
+Previous checkpoint172 published 5aa52138066e61ea4f32275d6596fbb56ae4baf4.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- scripts/dihole_paired_low_frequency.py: 20 checks PASS, 47 exact input hashes.
+  Reuses 172's high-frequency tail, 171's metric bounds, and the existing
+  noncommuting-lapse algebra benchmark. No historical geometry solve rerun.
+- NEW global lapse floor: N>=0.09844792539934355 and
+  ||N^-1||<=10.157654373554406. Exact calibration and minimum focal distance
+  D/40 give cN=(39/359)(a_g/k)^2, on exterior, collars and cylinder.
+  This is not a global upper lapse bound or a spectral gap.
+- K_eta=alpha product_(j=1..3)(A+sqrt(eta+jM^2))^-1.
+  ||K_eta||<=1, ||A K_eta||<=M for every eta>=0.
+  A F_eta=K_eta-m0 F_eta; skew dotA removes the real m0 self-insertion.
+  Thus I_eta=Re<dotA K_eta f,F_eta f>, with fixed f=JX4.
+- Split F_eta=d0(eta)(A+m0)^-1+L_eta, ||L_eta||<=Bcap,
+  Bcap=sum_(j=1..3)|dj(eta_cap)|/(sqrt(j)M).
+- Compact p_k=dotA_k K_eta,k f obeys ||p_k||<=P||f||, P=c_delta M+d_delta.
+  Its frequency Lipschitz constant is
+  Lp=nu(1+1/sqrt2+1/sqrt3)(c_delta+d_delta/M)+4/Ncollar_min.
+  The product telescope cancels A against the first (smallest) mass factor.
+- Freeze sqrtN p_k at kappa=0 and pair resolvents of H_m0:
+  R_k+R_-k=2H_m0/(H_m0^2+k^2). Its scalar spectral measure has total
+  variation <=||sqrtN p0||HS ||beta sqrtN f||HS. The integrated absolute
+  scalar multiplier is <=pi and is zero on exact zero states.
+- NEW uniform low-frequency bound, with d0=d0(eta_cap):
+  (1/(2pi)) int_0^K |I_k+I_-k| dk
+  <=HS^2[d0 Nplus P/2+K(d0 Nplus Lp+P Bcap)/pi].
+  No absent-zero assumption or quantitative threshold density is needed.
+  Local weak integration by parts suffices at eta=0; do not assert global u.
+- Combining 172's matching tail gives an entire-frequency paired bound.
+  Atomic eta=0: <2.545235e26 /D at K/M=0.2157466325253198.
+  Uniform nominal eta interval [0,.01M^2]: <2.879695e26 /D at the same split.
+  These are absolute upper bounds for one selection at fixed M and Lambda,
+  not source values, stress signs, energies in joules or atom probabilities.
+- Uniform integral boundedness DOES NOT prove uniform integrability near
+  kappa=0 or eta/frequency interchange. A spectral atom approaching zero
+  can retain finite integrated weight despite a vanishing pointwise pair.
+  No regulator removal, omitted-selection sum or counterterm match is done.
+- NEXT: control omitted spatial/channel selections and all angular sectors
+  with a compact smoothing trace bound that preserves the common filter.
+  Keep the zero-state prescription and eta/frequency limit matching explicit.
+  Avoid more cutoff optimization or human scaling: those do not supply full stress.
+  Then total support/current, stability, atomic evolution and exterior clocks.
+  Static geometry excludes 13 Sep 2027 -> 12 Sep 2027; no future clock gain.
+
+Source SHA256 cbe6669ec7851bcc251e47017af13ca3febd6dcdc75a4f9313af0f6d01d93f93
+Results SHA256 73641db16789394adc109dfb5b5088e375f1c68bb608e24e5e72396f2fd47e7a
+
+Verification: 20 saved controls pass, 47 exact inputs, figure inspected.
+72 finite operator cases and 24 integral controls retain zero and massive states.
+Pair identity agrees within 5.72e-13; local integration by parts within 2.29e-14.
+Independent 110-digit audit PASS: 179 directed bounds, including 56 new
+uniform-eta inequalities, no false enclosure. All 47 exact input hashes match.
+Separate 85-digit code/derivation audits enclose 56 endpoint and 42 added relations.
+Layout PASS: 168 imports, 1496 links, 8 historical guards, 14 frozen hashes,
+operator identity. All six previous document byte sequences preserved.
+Git diff check passes. Publication follows. No simulation is running.
+
+--- Preserved checkpoint172 and earlier history ---
+
 # Authoritative checkpoint172 - local zero-shift insertion and frequency tail
 
 Previous checkpoint171 published 7f96a467af7f8fe331c62926ee9c14592b030600.

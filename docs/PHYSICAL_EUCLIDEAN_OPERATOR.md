@@ -5210,3 +5210,221 @@ stability, one-atom propagation or a clock gain. The static geometry still
 excludes backward causal passage.
 
 ![Local zero-shift bound and integrated high-frequency tail](../figures/dihole_local_zero_shift_progress.png)
+
+
+## Paired low-frequency bound with zero states retained
+
+The [calculation](../scripts/dihole_paired_low_frequency.py) and
+[results](../results/dihole_paired_low_frequency_results.json) close the
+low-frequency bound for the fixed supporting-field selection used in172.
+Pairing the two frequency signs is essential. This avoids introducing
+an unproved spectral gap, absence of zero states, or a threshold-density
+constant. Combined with172's tail, it bounds the complete paired frequency
+integral at a fixed regulator and Gaussian selection, uniformly over a
+specified artificial-shift interval. The total supporting stress is still
+not calculated.
+
+### A global lower lapse bound from the actual geometry
+
+To distinguish the geometric parameter from regulator $M$, call the
+dihole mass parameter $M_g$. Let $d_\pm$ be focal distances,
+$R=(d_++d_-)/2\ge k$, $s=1-\cos^2\theta$, $\Delta=R^2-k^2$, and
+$h=d_+d_-=\Delta+k^2s$. The nonnegative magnetizing terms in the numerator
+and $a_g^2\le k^2$ give
+
+$$
+N\ge\frac{\Delta+a_g^2s}{\Delta+2M_g(M_g+R)+a_g^2s}
+\ge\frac{a_g^2}{k^2}\frac{h}{h+2M_g(M_g+R)}.
+$$
+
+All original exterior points and all points copied into the collars and
+cylinder have $d_\pm\ge\epsilon=D/40$. Therefore
+$h\ge\epsilon(2R-\epsilon)$. The function
+$(M_g+R)/(2R-\epsilon)$ decreases for $R\ge k$, so
+
+$$
+N\ge c_N=\frac{a_g^2}{k^2}
+\frac{\epsilon(2k-\epsilon)}
+{\epsilon(2k-\epsilon)+2M_g(M_g+k)}
+=\frac{39}{359}\frac{a_g^2}{k^2}.
+$$
+
+The last equality uses the existing exact calibration $k=D/2$ and
+$2M_g(M_g+k)=D^2/5$. Directed interval evaluation gives
+
+$$
+N\ge0.09844792539934355,\qquad
+\nu=\|N^{-1}\|\le10.157654373554406.
+$$
+
+This is a global lower bound. No global upper lapse or full spectral gap
+is inferred. It justifies the bounded perturbation
+$A_\kappa-A_0=i\kappa\beta/N$ on the chosen common skew-adjoint domain.
+
+### Keep the bounded first-action filter
+
+For $m_j=\sqrt{\eta+jM^2}$ and $\alpha=\sqrt6M^3$, write
+
+$$
+\mathcal K_{\eta,\kappa}
+=\alpha\prod_{j=1}^3(A_\kappa+m_j)^{-1},\qquad
+\mathcal T_{\eta,\kappa}=(A_\kappa+m_0)^{-1}\mathcal K_{\eta,\kappa}.
+$$
+
+The three positive masses give
+$\|\mathcal K\|\le1$ and $\|A_\kappa\mathcal K\|\le M$, uniformly for
+$\eta\ge0$. In particular, the full first-action norm does not need the
+reduced channel's inverse-frequency bound.
+
+For $f=JX_4$, $u=\mathcal T f$, the identity
+$A_\kappa u=\mathcal Kf-m_0u$ implies
+
+$$
+I_{\eta,\kappa}
+=-\operatorname{Re}\operatorname{Tr}(\mathcal Kf)^*\dot A_\kappa u
+=\operatorname{Re}\operatorname{Tr}p_\kappa^*u,\qquad
+p_\kappa=\dot A_\kappa\mathcal Kf.
+$$
+
+The real $m_0$ term vanishes because $\dot A_\kappa$ is skew. At positive
+shift, these vectors are in the global graph domain. At zero shift,
+compact-support weak integration by parts and the local limits from172
+suffice. A globally square-integrable massless inverse is not asserted.
+
+Put $P_*=c_\delta M+d_\delta$ and
+$t_*=1+1/\sqrt2+1/\sqrt3$. Then
+$\|p_\kappa\|_{\rm HS}\le P_*\|f\|_{\rm HS}$.
+Telescope the three resolvents with increasing masses. The
+$\kappa$-dependent prefix always contains the smallest mass, so
+
+$$
+\|\mathcal K_{\eta,\kappa}-\mathcal K_{\eta,0}\|
+\le|\kappa|\nu t_*/M,\qquad
+\|A_\kappa(\mathcal K_{\eta,\kappa}-\mathcal K_{\eta,0})\|
+\le|\kappa|\nu t_*.
+$$
+
+Since $\dot A_\kappa-\dot A_0=-i\kappa F\beta/N$, its compact coefficient
+uses the collar minimum. Therefore
+
+$$
+\|p_\kappa-p_0\|_{\rm HS}\le|\kappa|L_p\|f\|_{\rm HS},\qquad
+L_p=\nu t_*(c_\delta+d_\delta/M)+F_*/N_{C,-},
+$$
+
+with $F_*=4$. The global $\nu$ and compact $N_{C,-}$ are distinct inputs.
+
+### Pair the only potentially singular term
+
+The stable residues from172 give
+
+$$
+\mathcal T_{\eta,\kappa}
+=d_0(\eta)(A_\kappa+m_0)^{-1}+\mathcal L_{\eta,\kappa},\qquad
+\|\mathcal L_{\eta,\kappa}\|\le
+B_{\max}=\sum_{j=1}^3\frac{|d_j(\eta_{\max})|}{\sqrt j M}.
+$$
+
+Here $d_0(\eta)>0$ increases with $\eta$.
+The singular insertion has the Hamiltonian form
+
+$$
+d_0(\eta)\operatorname{Re}\operatorname{Tr}
+\ell_\kappa^*(H_{m_0}+i\kappa)^{-1}Y,\qquad
+\ell_\kappa=\sqrt N\,p_\kappa,\quad Y=\beta\sqrt N\,f.
+$$
+
+Both external legs have compact support. Freeze the left leg at
+$\kappa=0$. For any self-adjoint $H_{m_0}$,
+
+$$
+(H_{m_0}+i\kappa)^{-1}+(H_{m_0}-i\kappa)^{-1}
+=\frac{2H_{m_0}}{H_{m_0}^2+\kappa^2}.
+$$
+
+The scalar complex spectral measure
+$\mu(E)=\operatorname{Tr}\ell_0^*E_{H_{m_0}}(E)Y$ has total variation
+at most $\|\ell_0\|_{\rm HS}\|Y\|_{\rm HS}$. For every real $\lambda$,
+
+$$
+\int_0^K\left|\frac{2\lambda}{\lambda^2+\kappa^2}\right|d\kappa
+\le\pi.
+$$
+
+At $\lambda=0$ the paired multiplier is identically zero. Integrating
+against the total variation proves the bound even with exact zero states.
+The difference $\ell_\kappa-\ell_0$ is $O(|\kappa|)$; this cancels the
+resolvent norm $1/|\kappa|$. The regular remainder contributes
+$P_*B_{\max}\|f\|_{\rm HS}^2$ for each frequency sign.
+
+Using the same compact upper lapse $N_+$ on both supports and
+$\|f\|_{\rm HS}\le\|X_4\|_{\rm HS}$, the resulting uniform bound is
+
+$$
+\boxed{
+\frac1{2\pi}\int_0^K|I_{\eta,\kappa}+I_{\eta,-\kappa}|\,d\kappa
+\le\|X_4\|_{\rm HS}^2
+\left[\frac{d_{0,\max}N_+P_*}{2}
++\frac K\pi(d_{0,\max}N_+L_p+P_*B_{\max})\right].
+}
+$$
+
+Here $0\le\eta\le\eta_{\max}$ and
+$d_{0,\max}=d_0(\eta_{\max})$. At zero shift alone, use $d_{0,\max}=1$
+and residues at zero. If the compact supports have different lapse
+upper bounds, replace the cross-leg $N_+$ by their geometric mean.
+The proper form factor and both Weyl blocks are already included.
+
+### Complete-frequency bound and the limit that remains
+
+Add172's absolute high-frequency tail evaluated at the same $\eta$ cap.
+This bounds the selected signed frequency integral, and indeed the
+integral of the absolute paired contribution, over the whole axis.
+For the exact atomic flux, fixed $MD=\Lambda D=2154733372140.8845$ and
+the chosen split $K/M=0.2157466325253198$:
+
+| Quantity | Upper bound multiplied by $D$ |
+| --- | ---: |
+| Zero-shift paired low-frequency part | $1.780383\times10^{26}$ |
+| Zero-shift absolute high-frequency tail | $7.648522\times10^{25}$ |
+| Zero-shift complete selected integral | $2.545235\times10^{26}$ |
+| Complete integral, uniform over the saved shift interval | $2.879695\times10^{26}$ |
+
+The interval cap is the saved binary value nominally equal to $.01M^2$.
+The frequency split minimizes an upper envelope numerically and is then
+re-evaluated with interval arithmetic. It is not a physical design
+optimization. These bounds have units $D^{-1}$; no source value, sign,
+energy in joules or atom-transmission probability is calculated.
+
+Uniform integral boundedness is not uniform integrability near zero.
+For example, $2\lambda/(\lambda^2+\kappa^2)$ tends pointwise to zero as
+$\lambda\downarrow0$, yet its integral on $(0,K)$ tends to $\pi$.
+Accordingly this result does not identify the integrated $\eta\to0$
+limit with the integral of the $\eta=0$ expression. The zero-state
+prescription must remain explicit. Neither separate unsigned frequency
+integrability nor a quantitative vanishing rate as $K\downarrow0$ is claimed.
+
+All 20 controls pass, using 47 exact input hashes. The 72 finite operator
+cases and 24 integral controls include the existing benchmark's exact
+zero states and positive proper masses, a noncommuting lapse, both
+frequency signs, the product telescope, local integration by parts,
+spectral pairing and direct quadrature of the absolute pair.
+The pair identity agrees within $5.72\times10^{-13}$ relatively, and
+local integration by parts within $2.29\times10^{-14}$.
+These are algebra and bound controls, not simulations of an atom.
+
+Independent 110-digit evaluation verifies all 179 exported directed bounds,
+including 56 uniform-shift additions; all 47 input hashes match. A separate
+code and derivation audit confirms the paired signs, the global lapse input,
+and the distinction between bounded integrals and interchange of limits.
+
+**Next:** replace the fixed channel/Gaussian selection by a controlled
+accounting of the omitted spatial and angular contributions. A compact
+smoothing trace bound must retain the common regulator cancellation.
+Limit matching and counterterms remain separate requirements. More
+optimization of this frequency split cannot supply the missing full stress.
+Support and current, stability, atomic quantum evolution and a comparison
+of exterior clocks remain unestablished. The first payload remains one
+hydrogen atom; the present static geometry excludes backward causal travel.
+
+![Paired low-frequency and high-frequency bound at the atomic reference](../figures/dihole_paired_low_frequency_progress.png)

@@ -222,3 +222,10 @@ The [proper-field comparison](PHYSICAL_EUCLIDEAN_OPERATOR.md#proper-euclidean-ch
 The [localized calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#compact-zero-shift-insertion-and-integrated-frequency-tail) removes an artificial positive shift from a selected supporting-field contribution and bounds its high-frequency integral at fixed regulator. All 18 checks pass. This resolves a mathematical cutoff issue; the total supporting energy and stability remain unknown. The next calculation concerns the low-frequency contribution and omitted field content.
 
 The payload is still **one neutral hydrogen atom**, with a **trial 1 nm areal diameter**. No atom has been propagated. A valid first demonstration requires the same model to provide support, stability, quantified atomic transmission and internal-state survival, and an exterior-clock comparison. The present static geometry cannot send it from 13 September 2027 to 12 September 2027. A future clock advantage is also uncalculated. Any later enlargement would require new support, stability and payload calculations.
+
+
+## Checkpoint173: one selected energy contribution has a frequency bound
+
+The [paired-frequency calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#paired-low-frequency-bound-with-zero-states-retained) now bounds a selected supporting-field contribution over all frequencies, including zero-energy states, with 20 checks passing. The bound remains finite over the declared artificial-shift interval at fixed regulator. It does not supply the total supporting energy: omitted field contributions and the physical limits remain unresolved.
+
+The practical target is unchanged: one neutral hydrogen atom through a trial 1 nm opening, followed by a survival and exterior-clock calculation. No stable opening or atom passage has been established. Travel from 13 September 2027 to 12 September 2027 is excluded by the present static geometry; a future clock advantage is uncalculated. Human transport and enlarging the opening remain deferred.
