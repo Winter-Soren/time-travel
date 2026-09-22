@@ -1,0 +1,912 @@
+{
+  "passed": true,
+  "checks": {
+    "exact_inputs": true,
+    "independent_tensor_derivatives": true,
+    "whole_buffer_positive": true,
+    "full_chart_and_both_poles": true,
+    "retained_radius_and_metric_comparison": true,
+    "every_replacement_tighter": true,
+    "every_atomic_comparison_tighter": true,
+    "physical_source_still_missing": true
+  },
+  "controls": {
+    "independent_tensor_relative_error": "9.52175413504750129998775504132097200416273417027207989974087e-61"
+  },
+  "cover": {
+    "radial_tiles": 16,
+    "angular_tiles": 24,
+    "boxes": 768,
+    "radius_interval": [
+      "1/40",
+      "21/400"
+    ],
+    "squared_chart_radius_interval": [
+      0,
+      2
+    ],
+    "radius_rate_interval": [
+      0,
+      1
+    ],
+    "radius_second_upper": 200.00000000000006,
+    "positive_guards": {
+      "NP": 0.824603701488016,
+      "W": 22.625249624413954
+    },
+    "actual_frame_tensor_upper": {
+      "frame_derivative": 15.06532992462246,
+      "geometric_zero": 4.282025719360287,
+      "geometric_zero_derivative": 126.84195274211814,
+      "curvature_derivative": 250.45016566374977
+    },
+    "coverage": "Whole radial/chart product, both poles; no sampling substitutes for intervals."
+  },
+  "previous_constants": {
+    "alpha": {
+      "mantissa": "4180847642500402026096541157654608005504917790795564687513378200570891193780812509786532695",
+      "binary_exponent": -267,
+      "log10_upper": 10.246255499094994
+    },
+    "metric_difference": {
+      "mantissa": "6906127854705374742771746620941515472191180129990951393382192255887882959149466256382700001",
+      "binary_exponent": -274,
+      "log10_upper": 8.357015802348885
+    },
+    "b0": {
+      "mantissa": "118598941674105157200689482758203233093709508854163",
+      "binary_exponent": -131,
+      "log10_upper": 10.639151381607022
+    },
+    "b1": {
+      "mantissa": "4709320774266502049292354019759583205266098006335547503734595336444500941190539091744524727",
+      "binary_exponent": -238,
+      "log10_upper": 19.027819305288254
+    },
+    "curvature_gradient_per_q": {
+      "mantissa": "5269551896154684812963586907052825602018689715243931629886529222068948077204486399575655205",
+      "binary_exponent": -253,
+      "log10_upper": 14.561184782946077
+    }
+  },
+  "selected_constants": {
+    "alpha": {
+      "mantissa": "7697299469674374515730315295345599074553164039946038117360957581543949416090183984925299439",
+      "binary_exponent": -298,
+      "log10_upper": 1.1793996756005851
+    },
+    "metric_difference": {
+      "mantissa": "7709923345643369535927824905626038001203642965714583092755529413789943613611935342807768323",
+      "binary_exponent": -297,
+      "log10_upper": 1.481141347984782
+    },
+    "b0": {
+      "mantissa": "4821132358525467",
+      "binary_exponent": -50,
+      "log10_upper": 0.6316492714924471
+    },
+    "b1": {
+      "mantissa": "2021906185353783123344293850372390880300380581943806361094016010035273985958383725412398267",
+      "binary_exponent": -293,
+      "log10_upper": 2.1039722712988076
+    },
+    "curvature_gradient_per_q": {
+      "mantissa": "31291626575865954210421320317221202997926724753878922698133385369729439170364369824350005",
+      "binary_exponent": -286,
+      "log10_upper": 2.4008493789766407
+    }
+  },
+  "records": [
+    {
+      "q": 1000,
+      "heat_time_fraction": 1.0,
+      "selected": {
+        "depth": 1,
+        "core_error_upper": [
+          {
+            "mantissa": "3965031943453583038375139387543019528001434396370533448596621917864379030000223469753385651",
+            "binary_exponent": -187,
+            "log10_upper": 34.30563750130623
+          },
+          {
+            "mantissa": "5603326249801682215141975635711672722287533777040331067619636826834052738386002376205907549",
+            "binary_exponent": -176,
+            "log10_upper": 37.76716667283937
+          }
+        ],
+        "buffered_error_upper": [
+          {
+            "mantissa": "3965031943453583043460027355384194022030488836200681396054511663523977323574200487856282441",
+            "binary_exponent": -187,
+            "log10_upper": 34.30563750130623
+          },
+          {
+            "mantissa": "1400831562450420554952506245723261124208449449548534869049298374161625402774937025100957241",
+            "binary_exponent": -174,
+            "log10_upper": 37.76716667283937
+          }
+        ],
+        "core_heat_upper": [
+          {
+            "mantissa": "2669492711508041700132604123396205681675408540237449519239384014984390315573596751273388479",
+            "binary_exponent": -252,
+            "log10_upper": 14.566869832121965
+          },
+          {
+            "mantissa": "166697858293636871319287824101329385943665923524652150414796458780500051580519044186971505",
+            "binary_exponent": -237,
+            "log10_upper": 17.877821047757024
+          }
+        ],
+        "signed_reference_error_terms_per_q2_upper": [
+          {
+            "mantissa": "2453969531814053502784845644675623150575832668738567447096600946522488855022892975857126787",
+            "binary_exponent": -125,
+            "log10_upper": 52.76111970827958
+          },
+          {
+            "mantissa": "658898157447402465947625578350918292657689564671101668104489495887563952812790565860179905",
+            "binary_exponent": -124,
+            "log10_upper": 52.49109883074803
+          },
+          {
+            "mantissa": "7289825198845557879782145847394138090666823505735681998541717118674694617706847577522637417",
+            "binary_exponent": -61,
+            "log10_upper": 72.49988737908578
+          }
+        ],
+        "signed_reference_error_per_q2_upper": {
+          "mantissa": "7289825198845557879986613683649556711123608824441819449643665679899971947488952451684110223",
+          "binary_exponent": -61,
+          "log10_upper": 72.49988737908578
+        },
+        "absolute_heat_response_per_q2_upper": {
+          "mantissa": "4672327223189273001798097316501158192435186508529017475949044455681462142882118280920809197",
+          "binary_exponent": -192,
+          "log10_upper": 32.871774083197224
+        },
+        "normalized_Dirac_error_to_frozen_ceiling": {
+          "mantissa": "5634268422856193880952292602272290659005552654588380377042980285545155393529364206346344135",
+          "binary_exponent": -235,
+          "log10_upper": 20.00878855238243
+        }
+      },
+      "previous_reference_error_per_q2_upper": {
+        "mantissa": "10167553027250814613708841314216787828183019762113644589881171535485569604917512439491360895082910543642838983428635835903",
+        "binary_exponent": -161,
+        "log10_upper": 72.54138714417516
+      },
+      "first_defect_column_integral_upper": {
+        "mantissa": "1503706330761554658418888486340583761016294941060183066025606737952687779996919262106178461",
+        "binary_exponent": -234,
+        "log10_upper": 19.73614404278367
+      },
+      "signed_full_heat_interval": null,
+      "renormalized_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 1000,
+      "heat_time_fraction": 0.5,
+      "selected": {
+        "depth": 1,
+        "core_error_upper": [
+          {
+            "mantissa": "1401498006223840429898086785916014075032989766924799567473665905797500515585262160693678787",
+            "binary_exponent": -185,
+            "log10_upper": 34.45604328643132
+          },
+          {
+            "mantissa": "5602323298883795191969687707715309080668446923258600105588228690516860492839876423630856405",
+            "binary_exponent": -175,
+            "log10_upper": 38.068118926280825
+          }
+        ],
+        "buffered_error_upper": [
+          {
+            "mantissa": "2802996012447680862338617556318931883140673162969186705946016681734083326599734592674999463",
+            "binary_exponent": -186,
+            "log10_upper": 34.45604328643132
+          },
+          {
+            "mantissa": "5602323298883795195270497056755931868580479119354642198269409448839176317801684674687737319",
+            "binary_exponent": -175,
+            "log10_upper": 38.068118926280825
+          }
+        ],
+        "core_heat_upper": [
+          {
+            "mantissa": "7546668994230098677079198012708463955487695507645427170416204624483501432444375114739439869",
+            "binary_exponent": -252,
+            "log10_upper": 15.018196394419574
+          },
+          {
+            "mantissa": "5332422169484755396071228883251630867700132476466183408187373534310744957585529495163272319",
+            "binary_exponent": -240,
+            "log10_upper": 18.479725565973677
+          }
+        ],
+        "signed_reference_error_terms_per_q2_upper": [
+          {
+            "mantissa": "3468071098475548848313707979838428220682744856755509917556160881885843468876553492905551139",
+            "binary_exponent": -124,
+            "log10_upper": 53.21236852997659
+          },
+          {
+            "mantissa": "931588418181050769588673706535129260276211308936353996133616921824299603473017190949008923",
+            "binary_exponent": -124,
+            "log10_upper": 52.641504618268215
+          },
+          {
+            "mantissa": "5152466349686910327440838118324011574031958591401223833216368126908656623618140852599519339",
+            "binary_exponent": -60,
+            "log10_upper": 72.65021542428187
+          }
+        ],
+        "signed_reference_error_per_q2_upper": {
+          "mantissa": "644058293710863790959918017328974007299769811828070051323049635394231742570260628936540549",
+          "binary_exponent": -57,
+          "log10_upper": 72.65021542428187
+        },
+        "absolute_heat_response_per_q2_upper": {
+          "mantissa": "3300991075353496122013149844926869916831157502990494493494050149294505676730257239001075387",
+          "binary_exponent": -189,
+          "log10_upper": 33.62397516966944
+        },
+        "normalized_Dirac_error_to_frozen_ceiling": {
+          "mantissa": "5633259932217525902536052554564561983178939714655235704195735229830181892674037403838013425",
+          "binary_exponent": -235,
+          "log10_upper": 20.00871081005833
+        }
+      },
+      "previous_reference_error_per_q2_upper": {
+        "mantissa": "6944959098417921412268024981746125729043991956185198360111425349508820462680831345721467501280421595777663067195906578501",
+        "binary_exponent": -160,
+        "log10_upper": 72.67687038611402
+      },
+      "first_defect_column_integral_upper": {
+        "mantissa": "1503706330761554658418888486340583761016294941060183066025606737952687779996919262106178461",
+        "binary_exponent": -234,
+        "log10_upper": 19.73614404278367
+      },
+      "signed_full_heat_interval": null,
+      "renormalized_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 1000,
+      "heat_time_fraction": 0.25,
+      "selected": {
+        "depth": 1,
+        "core_error_upper": [
+          {
+            "mantissa": "7927073188964488081499628423962551230482845250765684675438497210329091033186333495655661237",
+            "binary_exponent": -187,
+            "log10_upper": 34.60650367879512
+          },
+          {
+            "mantissa": "2800910937343907460694004725949635700181569179210194517392817063535001714117337723098667705",
+            "binary_exponent": -173,
+            "log10_upper": 38.369110049588514
+          }
+        ],
+        "buffered_error_upper": [
+          {
+            "mantissa": "1981768297241122021646129098634552967267116070098039299550743818807378896364072705191093985",
+            "binary_exponent": -185,
+            "log10_upper": 34.60650367879512
+          },
+          {
+            "mantissa": "5601821874687814923722034126745119283603816631822109391350063021073496531750901829987591433",
+            "binary_exponent": -174,
+            "log10_upper": 38.369110049588514
+          }
+        ],
+        "core_heat_upper": [
+          {
+            "mantissa": "2667479529555716515868262463129608189268691511830117579380591185613677468323994871851572999",
+            "binary_exponent": -249,
+            "log10_upper": 15.469632174968526
+          },
+          {
+            "mantissa": "5331467705223698924759010994915063452615011250280887222651167055193074501081398009099800367",
+            "binary_exponent": -238,
+            "log10_upper": 19.081707814832853
+          }
+        ],
+        "signed_reference_error_terms_per_q2_upper": [
+          {
+            "mantissa": "1225730282595412142530886390628459051814142730156771846040395466627821129844706166875680217",
+            "binary_exponent": -121,
+            "log10_upper": 53.66376544046278
+          },
+          {
+            "mantissa": "2634598692866985124480064906503907198803762023522193219800544392668775316798414580885966853",
+            "binary_exponent": -125,
+            "log10_upper": 52.79196501401904
+          },
+          {
+            "mantissa": "910639952900239070238137854981721303901318878853081714695884832760977559113004780331488257",
+            "binary_exponent": -57,
+            "log10_upper": 72.80063694753275
+          }
+        ],
+        "signed_reference_error_per_q2_upper": {
+          "mantissa": "3642559811600956281254044777311551835536540501816647432615685852089374562082397846803980259",
+          "binary_exponent": -59,
+          "log10_upper": 72.80063694753275
+        },
+        "absolute_heat_response_per_q2_upper": {
+          "mantissa": "291643574320914347678666735583678939590158369552296923067896513443850748005727801529850403",
+          "binary_exponent": -183,
+          "log10_upper": 34.37636320570712
+        },
+        "normalized_Dirac_error_to_frozen_ceiling": {
+          "mantissa": "5632755737239946271177013183404021011554648159377544069480688246585877253841685292229839141",
+          "binary_exponent": -235,
+          "log10_upper": 20.00867193755839
+        }
+      },
+      "previous_reference_error_per_q2_upper": {
+        "mantissa": "2413033217791719215312918039279299959520491612509263161892331999773777383566019156590260895831117050929786152758230666993",
+        "binary_exponent": -158,
+        "log10_upper": 72.81982398553451
+      },
+      "first_defect_column_integral_upper": {
+        "mantissa": "1503706330761554658418888486340583761016294941060183066025606737952687779996919262106178461",
+        "binary_exponent": -234,
+        "log10_upper": 19.73614404278367
+      },
+      "signed_full_heat_interval": null,
+      "renormalized_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 1000,
+      "heat_time_fraction": 0.0625,
+      "selected": {
+        "depth": 1,
+        "core_error_upper": [
+          {
+            "mantissa": "7926325721595674180679129361911829811434758440160048202641556508749256731509860543936667469",
+            "binary_exponent": -186,
+            "log10_upper": 34.90749272160656
+          },
+          {
+            "mantissa": "5601445840124323119745964161757190812276890877832722099789841235834448258355193122002213119",
+            "binary_exponent": -172,
+            "log10_upper": 38.971140886969586
+          }
+        ],
+        "buffered_error_upper": [
+          {
+            "mantissa": "7926325721595674183221573349934244104854694648701778676943341259085510211207449805257665231",
+            "binary_exponent": -186,
+            "log10_upper": 34.90749272160656
+          },
+          {
+            "mantissa": "2800722920062161560456488250217660827406556972093141562187608543250080506256128182118386427",
+            "binary_exponent": -171,
+            "log10_upper": 38.971140886969586
+          }
+        ],
+        "core_heat_upper": [
+          {
+            "mantissa": "5333952972986187682012669900124164103193874078961622794935645928268715053169160394667413595",
+            "binary_exponent": -247,
+            "log10_upper": 16.37264025339238
+          },
+          {
+            "mantissa": "5330751937392638866263556285815005340926592111890681455494225779952672752380359109936051463",
+            "binary_exponent": -234,
+            "log10_upper": 20.28576948805036
+          }
+        ],
+        "signed_reference_error_terms_per_q2_upper": [
+          {
+            "mantissa": "4901667550672532468857640228773746880573278848991955523220286886439404585287248934332365391",
+            "binary_exponent": -120,
+            "log10_upper": 54.566744372769826
+          },
+          {
+            "mantissa": "5268700677686488117171612507081890043747621313998079500047139857915976594235360681265297335",
+            "binary_exponent": -125,
+            "log10_upper": 53.092954068394164
+          },
+          {
+            "mantissa": "7283943889767976729823441729948525095483499570682585249675934883566292487512786544365579639",
+            "binary_exponent": -59,
+            "log10_upper": 73.10159684747052
+          }
+        ],
+        "signed_reference_error_per_q2_upper": {
+          "mantissa": "7283943889767976732020605381856413781478732495203704530975174596190700942551152025985372005",
+          "binary_exponent": -59,
+          "log10_upper": 73.10159684747052
+        },
+        "absolute_heat_response_per_q2_upper": {
+          "mantissa": "4664790937552346651483843750276703028503485889742728438225462577358412318169293463995215265",
+          "binary_exponent": -182,
+          "log10_upper": 35.8813729738506
+        },
+        "normalized_Dirac_error_to_frozen_ceiling": {
+          "mantissa": "1408094404953067858176876018542763875507586518897905188557973600233203121434756357828803651",
+          "binary_exponent": -233,
+          "log10_upper": 20.00864278312103
+        }
+      },
+      "previous_reference_error_per_q2_upper": {
+        "mantissa": "2381618269332437161812699812125868215295969544090551108276395278195130622828787491762595422532827347145963760238997487329",
+        "binary_exponent": -157,
+        "log10_upper": 73.1151628338682
+      },
+      "first_defect_column_integral_upper": {
+        "mantissa": "1503706330761554658418888486340583761016294941060183066025606737952687779996919262106178461",
+        "binary_exponent": -234,
+        "log10_upper": 19.73614404278367
+      },
+      "signed_full_heat_interval": null,
+      "renormalized_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 4642875905017627791065088,
+      "heat_time_fraction": 1.0,
+      "selected": {
+        "depth": 8,
+        "core_error_upper": [
+          {
+            "mantissa": "2341399204092224411078580339252998400891002681539664090635943923589365726068797239531108243",
+            "binary_exponent": -246,
+            "log10_upper": 16.316096533050015
+          },
+          {
+            "mantissa": "1221705410623279585709904312745104693531502498952310689581173578121074621409437048162802783",
+            "binary_exponent": -198,
+            "log10_upper": 30.4830273557931
+          }
+        ],
+        "buffered_error_upper": [
+          {
+            "mantissa": "2341399225898203493382494918760984800066283532883472606097176608365669418296917284636143461",
+            "binary_exponent": -246,
+            "log10_upper": 16.316096537094698
+          },
+          {
+            "mantissa": "76356588875081108012138524646406989076916525640149722880770011215147453452510520849007747",
+            "binary_exponent": -194,
+            "log10_upper": 30.483027359837784
+          }
+        ],
+        "core_heat_upper": [
+          {
+            "mantissa": "3154620535734855231228811644573776532724927301524113301241091971736768301240016056533856797",
+            "binary_exponent": -211,
+            "log10_upper": 26.98161804103234
+          },
+          {
+            "mantissa": "4789713032787372543874424136467318314691351429962822438749529902977587431918141528292123803",
+            "binary_exponent": -165,
+            "log10_upper": 41.01036020964884
+          }
+        ],
+        "signed_reference_error_terms_per_q2_upper": [
+          {
+            "mantissa": "5233949801291769576392675043932309658964761740459954584132141724153318580688112475275837245",
+            "binary_exponent": -316,
+            "log10_upper": -4.40664907680394
+          },
+          {
+            "mantissa": "160644889767498035674956465687945605608964060163818905755931440204005419128320262976045887",
+            "binary_exponent": -311,
+            "log10_upper": -4.414461736618867
+          },
+          {
+            "mantissa": "2622429875355175478092948704225299711466019028336405563907906443208381965668232039818595659",
+            "binary_exponent": -350,
+            "log10_upper": -14.94179459855107
+          }
+        ],
+        "signed_reference_error_per_q2_upper": {
+          "mantissa": "648411642125272014184081412393119403853956661049587491719290044229605470788952416760380765",
+          "binary_exponent": -312,
+          "log10_upper": -4.109507843229065
+        },
+        "absolute_heat_response_per_q2_upper": {
+          "mantissa": "641242897140455231409512783331085629819596016051843248953155126911628569163853612679607633",
+          "binary_exponent": -278,
+          "log10_upper": 6.120683773007112
+        },
+        "normalized_Dirac_error_to_frozen_ceiling": {
+          "mantissa": "519583920155596576333366241784832261060824697144982436367970512439583716805548417659762063",
+          "binary_exponent": -333,
+          "log10_upper": -10.527332853842838
+        }
+      },
+      "previous_reference_error_per_q2_upper": {
+        "mantissa": "5385399396918408986266052262166655465239276111150532895983182515041516537990981205928473485815169140443054977222470953833",
+        "binary_exponent": -384,
+        "log10_upper": 5.135699582404423
+      },
+      "first_defect_column_integral_upper": {
+        "mantissa": "1729756379098458900472158558985388328639671675416451838241592269433061583291980080816434765",
+        "binary_exponent": -336,
+        "log10_upper": -10.908093602202172
+      },
+      "signed_full_heat_interval": null,
+      "renormalized_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 4642875905017627791065088,
+      "heat_time_fraction": 0.5,
+      "selected": {
+        "depth": 8,
+        "core_error_upper": [
+          {
+            "mantissa": "6618315001218353415686806407817600398246598779638560634210156500457051871314043683575700833",
+            "binary_exponent": -247,
+            "log10_upper": 16.466338504723364
+          },
+          {
+            "mantissa": "4883858340156873853723534714201463704327910551595584026005595453202596240862027095630073411",
+            "binary_exponent": -199,
+            "log10_upper": 30.78379392129775
+          }
+        ],
+        "buffered_error_upper": [
+          {
+            "mantissa": "6618315062856214325624731287996298320286693999956173129304286855379201667776174689196692257",
+            "binary_exponent": -247,
+            "log10_upper": 16.466338508768043
+          },
+          {
+            "mantissa": "2441929192820674260169937283678014139473639153007697380084125959830197397814624863533164669",
+            "binary_exponent": -198,
+            "log10_upper": 30.783793925342433
+          }
+        ],
+        "core_heat_upper": [
+          {
+            "mantissa": "6309241071429732250375118758177261904395889368074679961847296561313397518706488127143944739",
+            "binary_exponent": -211,
+            "log10_upper": 27.28264803669357
+          },
+          {
+            "mantissa": "6773677130783986732501978827584682360161632254888406058768302452607294208859606902329112829",
+            "binary_exponent": -164,
+            "log10_upper": 41.46190520314102
+          }
+        ],
+        "signed_reference_error_terms_per_q2_upper": [
+          {
+            "mantissa": "1813924566668829606304519176984052599719426639655231825035658254031479995618778122866691577",
+            "binary_exponent": -313,
+            "log10_upper": -3.963769420168547
+          },
+          {
+            "mantissa": "7162436040665629908257252222205076252627522914268808316859568871142541021464900610063621795",
+            "binary_exponent": -315,
+            "log10_upper": -3.9693878773370943
+          },
+          {
+            "mantissa": "5164155549021737678008192689381619173856629293776545656762335447279712205944725964546971829",
+            "binary_exponent": -350,
+            "log10_upper": -14.647499167260612
+          }
+        ],
+        "signed_reference_error_per_q2_upper": {
+          "mantissa": "3604533576872811260256564534941601969403506498537539257134363688115426962909035352211657167",
+          "binary_exponent": -313,
+          "log10_upper": -3.6655395674171736
+        },
+        "absolute_heat_response_per_q2_upper": {
+          "mantissa": "5031652592686052140526119036885695418262779295243909239185289961631353132595098742063693625",
+          "binary_exponent": -279,
+          "log10_upper": 6.714341857630039
+        },
+        "normalized_Dirac_error_to_frozen_ceiling": {
+          "mantissa": "2937428209330104089614363533118259095797364051124388053936688460747522222563368784658549645",
+          "binary_exponent": -336,
+          "log10_upper": -10.678111281834154
+        }
+      },
+      "previous_reference_error_per_q2_upper": {
+        "mantissa": "9352688137700104966646824026149675528010164039364949768608674402807623216320568683128978160091410698006123037874920240751",
+        "binary_exponent": -384,
+        "log10_upper": 5.375418118211882
+      },
+      "first_defect_column_integral_upper": {
+        "mantissa": "1729756379098458900472158558985388328639671675416451838241592269433061583291980080816434765",
+        "binary_exponent": -336,
+        "log10_upper": -10.908093602202172
+      },
+      "signed_full_heat_interval": null,
+      "renormalized_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 4642875905017627791065088,
+      "heat_time_fraction": 0.25,
+      "selected": {
+        "depth": 8,
+        "core_error_upper": [
+          {
+            "mantissa": "4678383921989476321738482833958719420676406664363846663147198356550713787140821214907132321",
+            "binary_exponent": -246,
+            "log10_upper": 16.616716925082873
+          },
+          {
+            "mantissa": "4882376688983541119447693065126240450240991528054103225533903954068907698424501053922597651",
+            "binary_exponent": -198,
+            "log10_upper": 31.084692141936515
+          }
+        ],
+        "buffered_error_upper": [
+          {
+            "mantissa": "1169595991390080345069304905673867980210279703373994293612749268428393624241080770028372025",
+            "binary_exponent": -244,
+            "log10_upper": 16.616716929127552
+          },
+          {
+            "mantissa": "610297091806777104294381526966283844166017178209247823185250768435496049475659979584788557",
+            "binary_exponent": -195,
+            "log10_upper": 31.084692145981197
+          }
+        ],
+        "core_heat_upper": [
+          {
+            "mantissa": "3154620535700751268880652959937660748469741480846041803550440451789515356707592564499320711",
+            "binary_exponent": -209,
+            "log10_upper": 27.583678032355607
+          },
+          {
+            "mantissa": "4789713032716092543409456573621473271081530318054056972952976291737065298356059711916909481",
+            "binary_exponent": -162,
+            "log10_upper": 41.91345019663432
+          }
+        ],
+        "signed_reference_error_terms_per_q2_upper": [
+          {
+            "mantissa": "5058150402748801998321179280037769608193641227057200991899806052901851545463392249509968229",
+            "binary_exponent": -313,
+            "log10_upper": -3.518396903995518
+          },
+          {
+            "mantissa": "5011532074038273678243406042621368407697186995423674951187942669678811934246319675257183753",
+            "binary_exponent": -313,
+            "log10_upper": -3.5224181286185305
+          },
+          {
+            "mantissa": "1277121758227242594778382080564749306411537269216895260910413948655688498790300834782484731",
+            "binary_exponent": -347,
+            "log10_upper": -14.351176191399253
+          }
+        ],
+        "signed_reference_error_per_q2_upper": {
+          "mantissa": "5034841238430706973406343981776991981773476913630969179596200333556315146211848409747903397",
+          "binary_exponent": -312,
+          "log10_upper": -3.219372866485116
+        },
+        "absolute_heat_response_per_q2_upper": {
+          "mantissa": "4962150653905315160587283490993205592387707671474665659022075395491283466356842578194825129",
+          "binary_exponent": -277,
+          "log10_upper": 7.310361146657601
+        },
+        "normalized_Dirac_error_to_frozen_ceiling": {
+          "mantissa": "4152890537571113245942098243634527506304737563545308114560130065702821577644312094911115933",
+          "binary_exponent": -337,
+          "log10_upper": -10.828758054691356
+        }
+      },
+      "previous_reference_error_per_q2_upper": {
+        "mantissa": "9359926984627882482410672369764858973173430225516877287051316596441377007353872359497834973641156774269710268257908600177",
+        "binary_exponent": -383,
+        "log10_upper": 5.676784121581076
+      },
+      "first_defect_column_integral_upper": {
+        "mantissa": "1729756379098458900472158558985388328639671675416451838241592269433061583291980080816434765",
+        "binary_exponent": -336,
+        "log10_upper": -10.908093602202172
+      },
+      "signed_full_heat_interval": null,
+      "renormalized_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 4642875905017627791065088,
+      "heat_time_fraction": 0.0625,
+      "selected": {
+        "depth": 8,
+        "core_error_upper": [
+          {
+            "mantissa": "4677280300433459316355428722064580190503961733149798738029556529044843974978596143691792007",
+            "binary_exponent": -245,
+            "log10_upper": 16.91764445944796
+          },
+          {
+            "mantissa": "2440632725297699162784893157095950152167422091817812355873765458338913527022935599215354183",
+            "binary_exponent": -195,
+            "log10_upper": 31.686653275748967
+          }
+        ],
+        "buffered_error_upper": [
+          {
+            "mantissa": "4677280343994026098309149130609587902308361838431390553072766473577531621253582811528347981",
+            "binary_exponent": -245,
+            "log10_upper": 16.917644463492643
+          },
+          {
+            "mantissa": "1220316374013931206654892519394276559098873644518017818667790545616286520332664766087253081",
+            "binary_exponent": -194,
+            "log10_upper": 31.68665327979365
+          }
+        ],
+        "core_heat_upper": [
+          {
+            "mantissa": "3154620535683727392369184795958357187603011445465694798882374033306211932765552816139125025",
+            "binary_exponent": -207,
+            "log10_upper": 28.18573802368123
+          },
+          {
+            "mantissa": "4789713032680511661305141168651851284384989974085384905218692866646359537253272500709907731",
+            "binary_exponent": -159,
+            "log10_upper": 42.81654018362304
+          }
+        ],
+        "signed_reference_error_terms_per_q2_upper": [
+          {
+            "mantissa": "310718704383262668692178338824955608486058981774101509174773313503390018934957427944786357",
+            "binary_exponent": -306,
+            "log10_upper": -2.622811275842368
+          },
+          {
+            "mantissa": "1237048729409781907233618169512313464968838252213828396670009399089760069517442560884012063",
+            "binary_exponent": -308,
+            "log10_upper": -2.6248518569571613
+          },
+          {
+            "mantissa": "5042776525392876205410985227884877577022036557604899131723363903668787866027947731206738259",
+            "binary_exponent": -347,
+            "log10_upper": -13.754738772917372
+          }
+        ],
+        "signed_reference_error_per_q2_upper": {
+          "mantissa": "1239961773476002669533235479632009467090487730809252405308614865226226592598874857935495627",
+          "binary_exponent": -307,
+          "log10_upper": -2.322800372248003
+        },
+        "absolute_heat_response_per_q2_upper": {
+          "mantissa": "304890899518719076885650050946707683206413225034391021724111556929346031935655416649902759",
+          "binary_exponent": -269,
+          "log10_upper": 8.507075627987017
+        },
+        "normalized_Dirac_error_to_frozen_ceiling": {
+          "mantissa": "2075972665821787958708524280961432133652435680156264542308347823810615959443120601964974183",
+          "binary_exponent": -337,
+          "log10_upper": -11.129886907870846
+        }
+      },
+      "previous_reference_error_per_q2_upper": {
+        "mantissa": "204864081142719127360054695274976599367659757997069714516328253324036382240122577355519556817776463561731064610713056691",
+        "binary_exponent": -375,
+        "log10_upper": 6.42521744615079
+      },
+      "first_defect_column_integral_upper": {
+        "mantissa": "1729756379098458900472158558985388328639671675416451838241592269433061583291980080816434765",
+        "binary_exponent": -336,
+        "log10_upper": -10.908093602202172
+      },
+      "signed_full_heat_interval": null,
+      "renormalized_source": null,
+      "atom_transit": null
+    }
+  ],
+  "source_sha256": "b6a26157bf32e4c79616436c1b21d20b509d1f0fff0e653c5bebbadd7da244da",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+    "dihole_collar_resolvent_results.json": "df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17",
+    "dihole_collar_resolvent.py": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531",
+    "dihole_metric_resolvent_results.json": "f15f1402458e8ee43b222d3ea40b665f2bc33315230436eda7887be941e9ce97",
+    "dihole_metric_resolvent.py": "b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc",
+    "dihole_paired_frequency_units_trial.json": "c5d9a8152c7931598e4f32baceb625a44f675e62ab995d1c781e778580e58e4d",
+    "provenance/dihole_paired_frequency_units_trial.py": "c81e58f0621ff73caa1ad617be46d9795d297f18299d6c6130f63165c7a5ca19",
+    "dihole_paired_frequency_results.json": "e2de59a035d0874484a857164a1ff93a0d0e6155a8307a7493f3d7c2e21ce429",
+    "dihole_paired_frequency.py": "c118af9191e5f371de9320d134a454d02f6180444ca5be57ecd07caca2520044",
+    "dihole_massive_channel_results.json": "f61f079f61a3db75c1549d1250128839985fba5b03b44141d4d591460412595b",
+    "dihole_massive_channel.py": "b614c9a37d8a84c845f8138df226afece042faebe5b27bf9f7d09beef7f81789",
+    "dihole_proper_channel_results.json": "9d4b9e91dddc7b37e8f075e47a0e75b1b400d7102fa03385ab061c06efbfe967",
+    "dihole_proper_channel.py": "75c9e49ef29fd379d24e8246e357052334b21870000abf8972dd7ebf141120c5",
+    "dihole_local_zero_shift_results.json": "c6abf68b4d44f18d6f0b97016a0275a8a195aab2d306bcd6de77f7bdd17177a3",
+    "dihole_local_zero_shift.py": "f95cde7f9510dc82cfe9e5f1a44e937c45662ad3d385c1ddd15afb41c911abf2",
+    "dirac_green_mass_limit.py": "1ff4edbbf5b574553ca8fb94f852781a8bfd29838d8c2574cb69ba62c8e0630a",
+    "dihole_paired_low_frequency_results.json": "73641db16789394adc109dfb5b5088e375f1c68bb608e24e5e72396f2fd47e7a",
+    "dihole_paired_low_frequency.py": "cbe6669ec7851bcc251e47017af13ca3febd6dcdc75a4f9313af0f6d01d93f93",
+    "dihole_source_completion_derivative_trial.json": "b80e0e9efc27176d10d0b79a015e24165691e610b1b0c746160827fa80460e6e",
+    "provenance/dihole_source_completion_derivative_trial.py": "d231eee2ac075378b4e3fe84f2954e62419cb2fcbab6faa386371c43fbe94bef",
+    "dihole_source_completion_results.json": "dcd24ab0a676289da962656e02296532e2fbc0535d8e7ef9b82643c4a825db27",
+    "dihole_source_completion.py": "deb95497874e34e9f7f02a52465422b421c7ace669710db91b10a9855848d23c",
+    "dihole_buffer_geometry.py": "b15dfafe789e07e106575258b33591e9241d4978f64889d01f44fe5ff4d45d56",
+    "dihole_buffer_smoothing_prerate_trial.json": "4cd0341d90ccf386832b99f8eeb6732de39d78dd528b7cd15a76d9c3854844b9",
+    "provenance/dihole_buffer_geometry_prerate.py": "effb53114c95e45362ec9af9a5213eaa31847c8d119b8b404cd8a7b91bcadb24",
+    "provenance/dihole_buffer_smoothing_prerate.py": "dfeb4d1a39713b0da30f1b643cfcf0746b14914b2707857680dd3e304d8698fa",
+    "dihole_buffer_smoothing_results.json": "51fb304256cbd139b2acc1b59a280473082b729f4540700107ddb3c1ffc8cbdb",
+    "dihole_buffer_smoothing.py": "0862683252bf01a8d3dce372a44087bad4501eafa1e032e5e9c63969f23e46a8",
+    "dihole_full_frequency_results.json": "5974c84faea4438ee3d78051fa3d42a912fa3d2dd8d17d3c77c62e42a96e4d71",
+    "dihole_full_frequency.py": "7bfe224bd521b3793364410a1989d22834331a83c5ec225bbbea60f86d0b660c",
+    "dihole_regulator_heat_tail_results.json": "7fb8de096ffe0181ca548455a48bd7fc361e9fb423176a5dc544aae50f782005",
+    "dihole_regulator_heat_tail.py": "16517fa214d719c61030a29663c9b632806a729d9129f1e1918b0f8bda01d51b",
+    "dihole_magnetic_remainder_results.json": "368c51d0b025a4f31628e65666796c059a28c25f188bdcebff20202c2778f5ed",
+    "dihole_magnetic_remainder.py": "fa4b9c89dafa5782573646a9c721e990b5a09200e58bfba1f2930a670a3e2795",
+    "dihole_regular_jets_results.json": "e25dd81f979eca7fa6839f1850f19cced5be7065045626d2efccc66405ef3d06",
+    "dihole_regular_jets.py": "5369eab9d86a109fe5542d790bdeeba3fc6f19024384d469d75f543e1931f311",
+    "dihole_local_transport_results.json": "0be31a41b16c37b41cc16d9f8ea5dc4a25200731e7a8d29ec330754fb464b5ee",
+    "dihole_local_transport.py": "bf74297137c17b8b8273ee4212b230a843e861ff43712cfacf570042728443c4",
+    "dihole_heat_defect_results.json": "bb0af04d14108fe79d5658b3a08e4e6611355a8d4d18bb606780c64a09b3ce2b",
+    "dihole_heat_defect.py": "ff32753c8c84b68794b542a7f427963b28ad37d2cd893779610de9e0ae64a1d2",
+    "dihole_scaled_graph_results.json": "2f29e4149326fdb5ba22b5561cbd0643e3adadf235762f731cd4890cebc420c4",
+    "dihole_scaled_graph.py": "8f4684f02f16404ba1615e29b67e7f8e1de4964e8ffb90c4a8b9a956388cf6d9",
+    "dihole_centered_gauge_results.json": "a98634878eb8604219e0a1bf3cfe38c311210df5ff0ad7dc0d0928c919dfe6af",
+    "dihole_centered_gauge.py": "bc1c52a5be65971eeaa6adae00519c04e631588c82e4cb224a03d5059a756ae8",
+    "dihole_positive_frame_rounding_trial.json": "5f48a8be38418e63010d2037e72efa4718d0b2cac9444391cf74b538ed9d133d",
+    "provenance/dihole_positive_frame_rounding_trial.py": "86e3b296e86caecf04a7e24903612e8d666c3cf3d1a451838843b59cbb2b064a",
+    "dihole_positive_frame_results.json": "765cc0cc9989e238ba630082f27bcb83afba55d57a977cda5d7d87bcd94f32cc",
+    "dihole_positive_frame.py": "823df8b95089f2036991618c9ec7b65c0b92425394063f2f93487b5872d8ad8d",
+    "dihole_ordered_transport_simplex_trial.json": "fe5a01c9ee2140e85c80e8998c5449af70fcd77b2535dea7a413153af65f659f",
+    "provenance/dihole_ordered_transport_simplex_trial.py": "2c2727ed234c11dcdb9a5bc4e8bd0482fcf1a1cc4d6a999ec034fab9ccb47276",
+    "dihole_ordered_transport_simplex_trial_progress.png": "b6e19d934a94a8a8b28efb32628368a92a03430a6f0a7ee6f03b09f0e6f597a0",
+    "dihole_ordered_transport_simplex_trial_progress.pdf": "8a3a2fbfc59f5c1e4df59314e6248ae2c49bba54712ca2fa4d7606ca7bacbf48",
+    "dihole_ordered_transport_results.json": "586e9dfceaca138d163a4ca4e37cf54e7e67be78eddd43ce66a5f1fb83e54627",
+    "dihole_ordered_transport.py": "10efc4ab92539f88934f3702ab932b015c5bcbdaae907f78dc7285724435af85",
+    "dihole_radial_cancellation_results.json": "597afc60ed89ea9c26116159e94b7a4abd64a718ad3aa3d0509e711bcfba457f",
+    "dihole_radial_cancellation.py": "7640ac0810a1ce649eebec38ea8e3631b2d4a4649ba8f9cb4f7135cd1b882aed",
+    "dihole_frozen_magnetic_results.json": "6bf34332ff1bfb485ce81bda96452503606afefdca59b11301bda15097b764ee",
+    "dihole_frozen_magnetic.py": "b462a120ad837756315506882418f79252046ccbc807f6e7d379d56685347d9f",
+    "dihole_localized_heat_error_results.json": "fcb2e1e7191c48c38e1b57d563d0667dac556c6a470d2932d185dc65def0b2b7",
+    "dihole_localized_heat_error.py": "ade9fe492b36c40c847fc48d7e0849a8070ebe53cd6e6dc5aa7014a32dd08712",
+    "dihole_heat_source_graph_results.json": "94abf22be8c1054fa7770e7c0915cc76930793e7c778849a76cc803640b7131d",
+    "dihole_heat_source_graph.py": "a96c427cd2c14118813898e99ea66de7044463b8d44790eb10a00e8d6de44cce",
+    "dihole_pointwise_dirac.py": "38c425de7982e83c539abc593ce507a93fb888a9d3cb3b0f5ddea6307b1bba16",
+    "dihole_signed_kernel_results.json": "092bfcef2fb9eb4a7a0762f5bac92474abe309efdc0fd5a4f233236805407922",
+    "dihole_signed_kernel.py": "be89a46eed487c3eea21ccc5f1c12deef13a604599e065970cebbf4568791d80",
+    "dihole_nested_heat_bound_results.json": "7e07c0a2eee67e6139d741e8915ae69180dc4f15948137e33903752a630d6783",
+    "dihole_nested_heat_bound.py": "2eb8a9782b740a19435a170d02c311ed7a1235b635cf4c3a545eda771c2d34da",
+    "dihole_regular_low_fields.py": "697072d3f40bf95c7d91aa4e38b8138365205ef0073c604cc3c54f03fa7bdcd1"
+  },
+  "scope": [
+    "Directed real cover of low-order regular-frame tensors; axis rotation preserves full tensor norms.",
+    "Only proved tighter coefficients replace the old defect constants; geometry, cutoff and physical field are unchanged.",
+    "The191 signed reference remains numerical, not enclosed; no renormalized support or atom transit."
+  ]
+}

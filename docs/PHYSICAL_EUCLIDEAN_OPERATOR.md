@@ -8705,3 +8705,106 @@ Source SHA256 2eb8a9782b740a19435a170d02c311ed7a1235b635cf4c3a545eda771c2d34da
 Results SHA256 7e07c0a2eee67e6139d741e8915ae69180dc4f15948137e33903752a630d6783
 
 Final layout PASS:189 imports,1702 Markdown links,8 historical source guards and14 frozen hashes. All96 input hashes and the current source match; six historical document bodies and prior scientific bytes are unchanged. No simulation remains running.
+
+## Whole-buffer low-order tensor cover
+
+Checkpoint193 replaces five overly conservative coefficients in the existing frozen-reference defect. It leaves the geometry, gauge field, cutoff radius, metric comparison, finite nested buffers and global exterior unchanged. Producers: [regular polar algebra](../scripts/dihole_regular_low_fields.py), [interval cover and propagation](../scripts/dihole_low_order_cover.py); [saved results](../results/dihole_low_order_cover_results.json).
+
+### Regular algebra and full tensor norms
+
+Write $t_y=y_1^2+y_2^2$, $x=p(1-t_y)/(1+t_y)$, $p=\pm1$, and $J=P^{-1}$. The preceding exact balanced-field identity gives
+
+$$
+h=\sqrt{NP}=1+(1-x^2)\zeta,\qquad Z=\zeta(h+1)J,\qquad
+ d=(J-N)/t_y=-4Z/(1+t_y)^2.
+$$
+
+The helper also factors the unit-charge potential exactly as
+
+$$
+ a(R,x)=(1-x)/2+(1-x^2)K_{\rm pot}(R,x),\quad
+ G=\partial_RK_{\rm pot},\quad a_R/t_y=4G/(1+t_y)^2.
+$$
+
+Exact polynomial division checks the vanishing remainder before evaluation. Linked balanced parameters are retained. These expressions and their derivatives avoid division by a vanishing polar factor, including at both poles.
+
+Use the same positive symmetric coframe $E$, inverse $I$, and canonical Dirac trivialization as191. Its combined geometric zeroth term is $b_{\rm geom}=\gamma^a\operatorname{div}(I)_a/2$, so its norm is exactly $|\operatorname{div}I|/2$. No spin/density term is discarded. Define the full frame tensor
+
+$$
+\mathcal T_{abc}=\sum_\nu I_{\nu c}[(\partial_\nu I)E]_{ab}.
+$$
+
+The cover bounds its full Frobenius norm, $|\operatorname{div}I|/2$, $\|d(b_{\rm geom})I\|_F$, and the ordinary coordinate derivative $dF$ contracted with $I$ on all three indices. Rotational invariance permits evaluation at $y=(\sqrt{t_y},0)$ while retaining every angular derivative component; it is not a restriction to one component. In particular,
+
+$$
+\operatorname{div}I=(0,R'J_R,Ky_1,Ky_2),\qquad
+K=\frac{N-2pJ_x/(1+t_y)+(1+3t_y)d/2}{R}.
+$$
+
+Both $R''J_R$ and the transverse derivative $K/2$ enter the differentiated zeroth term. At the same axis the curvature has $F_{u,y_2}=C\sqrt{t_y}$, $F_{y_1,y_2}=D$, where
+
+$$
+C=\frac{4pR'G}{(1+t_y)^2},\qquad D=\frac{-4a_x}{(1+t_y)^2}.
+$$
+
+All radial and angular derivatives, including the transverse derivative of $F_{u,y_1}$, are included. The squared full curvature norm has the factor two for both antisymmetric index orders. A derivative of moving-frame components is not substituted for this ordinary coordinate derivative.
+
+The directed cover has $16\times24\times2=768$ boxes:
+
+$$
+R\in[1/40,21/400],\quad t_y\in[0,2],\quad R'\in[0,1],\quad
+R''\in[0,20S_1].
+$$
+
+The saved step bound gives $20S_1\le200.00000000000006$. This product covers the cylinder, collars and all192 padding. Metric positivity holds throughout, with lower bounds $NP\ge0.82460$, $W\ge22.62524$. This is interval coverage, not a sampled maximum.
+
+### Transfer and numerical result
+
+For source $y$ and output $x$, let $A=I_xE_y$. The unchanged comparison yields $\|A\|\le a=(1-\epsilon)^{-1/2}$ and $\|A^{-1}\|\le\sqrt{1+\epsilon}$, with $\epsilon\simeq0.00327203$. Transforming all contracted tensor indices gives
+
+$$
+\alpha\le a\sqrt{1+\epsilon}\sup\|\mathcal T\|_F,\qquad
+c_{\rm metric}\le2a\alpha,
+$$
+$$
+b_0\le\sup|\operatorname{div}I|/2,\quad
+b_1\le\sqrt{1+\epsilon}\sup\|d(b_{\rm geom})I\|_F,\quad
+c_F\le(1+\epsilon)^{3/2}\sup\|dF\cdot(I,I,I)\|_F.
+$$
+
+Here the metric Lipschitz distance is the source-whitened displacement $|E_y(x-y)|$. The connecting segment stays in the covered product. No spin lift of the nonorthogonal matrix $A$ is used.
+
+| Constant | New upper bound, rounded upward |
+| --- | ---: |
+| $\alpha$ | 15.114706 |
+| $c_{\rm metric}$ | 30.278988 |
+| $b_0$ | 4.282026 |
+| $b_1$ | 127.049299 |
+| $c_F$ per unit charge | 251.680391 |
+
+Only proved smaller constants are substituted into187's first defect,189's heat estimates and192's finite recurrence. At the saved atomic flux $q=4642875905017627791065088$ and full saved heat parameter $s_0=1.7932482895815272\times10^{-28}$, the signed-reference error ceiling divided by $q^2$ drops from $136678.30440093696$ to $7.771272839795266\times10^{-5}$, approximately $1.75876\times10^9$ smaller. The first-defect column integral is bounded by approximately $1.23569\times10^{-11}$; this is not a probability.
+
+| $T/s_0$ | New signed-reference error ceiling / $q^2$, rounded upward |
+| --- | ---: |
+| 1 | 0.000077712729 |
+| 1/2 | 0.000216003324 |
+| 1/4 | 0.000603430328 |
+| 1/16 | 0.004755537688 |
+
+The full-time ceiling is still about4057 times the191 numerical reference magnitude $1.91546\times10^{-8}$. Reference quadrature is not enclosed. Consequently the full response sign remains unresolved. The low-flux $q=1000$ case still has unusable ceilings around $10^{72}$--$10^{73}$.
+
+### Checks, limits and next decision
+
+All8 native controls pass with99 exact input hashes. Independent coordinate differentiation agrees with all four tensor norms to $9.53\times10^{-61}$ at60 digits. The helper's seven jet cases include both poles and pass at $2.23\times10^{-65}$ scaled error; pole-containing interval checks also pass. Focused internal review checked all contractions, polar identities, support and comparison factors. These controls are not external peer review or a physical experiment.
+
+The next candidate is to retain signed first-order cancellations in the actual heat/reference correction before taking absolute norms. Whether this produces a useful rigorous bound remains to be derived and tested. Further nesting has plateaued; refining the reference quadrature alone cannot fix the dominant comparison uncertainty. A resolved positive-time sign would still leave the renormalized supporting source unproved.
+
+Heat time is an auxiliary mathematical parameter, not travel time. No supporting source, stable opening, atomic transit/survival, clock gain, usable supporting material or new physical law is established. The static model cannot send an atom from13September2027 to12September2027.
+
+![Whole-buffer tensor bounds improve the error estimate, without establishing support](../figures/dihole_low_order_cover_progress.png)
+
+Driver SHA256 b6a26157bf32e4c79616436c1b21d20b509d1f0fff0e653c5bebbadd7da244da
+
+Helper SHA256 697072d3f40bf95c7d91aa4e38b8138365205ef0073c604cc3c54f03fa7bdcd1
+
+Results SHA256 671282ed3f2882b5cf231653f3969d992408708824f3c5dc2a1cafb24e436cab

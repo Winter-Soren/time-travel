@@ -370,3 +370,11 @@ The [finite nested-buffer calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#finite-nes
 This improves an upper bound, not the physical field or an observed transport result. The remaining ceiling is about7.14e12 times the191 numerical reference, and that reference's quadrature is still uncertified. The full signed response and renormalized supporting stress remain unknown. Further nesting already yields very little; the next useful work is tighter actual field/geometry coefficient bounds with the required signed subtraction.
 
 One neutral hydrogen atom and a trial1nm opening remain the target. No stable opening, passage, survival or clock gain is established. The static model cannot send an atom from13September2027 to12September2027. No new physical law is claimed.
+
+## Checkpoint193: better error control, no established opening
+
+The [whole-buffer tensor calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#whole-buffer-low-order-tensor-cover) replaces loose derivative constants without changing the field or opening. The atomic signed-reference error ceiling/q^2 falls from136678 to0.000077713, about1.76 billion times smaller. All8 native controls pass. This is mathematical error control, not an observed physical effect.
+
+The ceiling remains about4057 times the numerical reference magnitude, and the reference quadrature is uncertified. We still cannot determine the full response sign or the renormalized supporting stress. Next comes a bounded investigation of signed first-order cancellations; their usefulness has not been proved.
+
+The target remains one neutral hydrogen atom through a trial1nm opening. No source, stability, passage, survival or operational clock gain is demonstrated. The static geometry cannot deliver13September2027 to12September2027. This is retained mathematical progress, not evidence of a working time-travel medium or a new physics law.

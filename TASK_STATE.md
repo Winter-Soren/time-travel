@@ -1,3 +1,44 @@
+# Authoritative checkpoint193 - whole-buffer low-order tensor bounds
+
+Checkpoint192 was privately published as d7b6ee0d101676a031dc41537b41605f6eee5f63.
+Goal ACTIVE and unachieved. Browser/Downloads import COMPLETE; do not reopen.
+Target: one neutral hydrogen atom, trial 1 nm areal diameter; humans deferred.
+User cost preference: reuse saved work; short reads; no redundant broad audits.
+
+- New dihole_regular_low_fields.py removes polar divisions algebraically.
+  New dihole_low_order_cover.py covers all radial/chart buffers with 768
+  directed interval boxes, including both poles and full tensor contractions.
+- 8 native controls PASS; 99 exact input hashes. Independent coordinate
+  derivatives agree to 9.53e-61. Helper jet/pole self-check and focused internal
+  proof review passed. These are internal checks, not external peer review.
+- Same field, geometry, cutoff and exterior. Replaced five loose constants:
+  alpha=15.114706, metric_difference=30.278988, b0=4.282026,
+  b1=127.049299, curvature_gradient_per_q=251.680391 (rounded upward here).
+- Atomic full heat-time signed-reference error ceiling/q^2:
+  136678.30440093696 -> 0.00007771272839795266; about 1.76 billion smaller.
+  Still about 4057 times the +1.91546e-8 numerical reference magnitude.
+  Reference quadrature remains uncertified; full response sign unresolved.
+  At T/s0=1/2,1/4,1/16 the radii are about .0002160,.0006034,.004756.
+  Low-flux q1000 remains unusable, around 1e72--1e73.
+- NEXT: screen whether signed first-order cancellations can be retained in
+  the actual heat/reference correction. This is a hypothesis to derive/test,
+  not an established improvement. More nesting already plateaued; refining
+  the reference grid cannot resolve the dominant comparison uncertainty.
+  Even a resolved positive-time sign would not establish renormalized support.
+- No supporting source, stable opening, atomic transit/survival, clock gain,
+  available supporting material, or new physics law demonstrated.
+  Static geometry excludes 13 September 2027 -> 12 September 2027.
+- Computational work is complete; no simulation remains running.
+  Final layout PASS: 191 imports, 1713 links, 8 historical guards, 14 frozen
+  hashes. All 99 inputs and source/result hashes match. Six historical document
+  bodies and all prior scientific bytes are preserved.
+
+Driver SHA256 b6a26157bf32e4c79616436c1b21d20b509d1f0fff0e653c5bebbadd7da244da
+Helper SHA256 697072d3f40bf95c7d91aa4e38b8138365205ef0073c604cc3c54f03fa7bdcd1
+Results SHA256 671282ed3f2882b5cf231653f3969d992408708824f3c5dc2a1cafb24e436cab
+
+--- Preserved checkpoint192 and earlier history ---
+
 # Authoritative checkpoint192 - finite nested-buffer heat comparison
 
 Previous goal turn PROGRESS191: implemented, verified and privately published as

@@ -6,6 +6,9 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment193: The [whole-buffer tensor bounds](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#whole-buffer-low-order-tensor-cover) reduce the atomic signed-reference error ceiling from **136678 to 0.000077713**, about **1.76 billion times smaller**, with the physical field unchanged. All **8 native checks** pass. The remaining ceiling is still about **4057 times** the numerical reference magnitude; that reference quadrature is uncertified. The full response sign and supporting source remain unknown. See the [results](results/dihole_low_order_cover_results.json) and [visual](figures/dihole_low_order_cover_progress.png). The target is still one hydrogen atom through a trial 1 nm opening; no stable opening or time travel is demonstrated.
+
+
 Current increment192: The [finite nested-buffer comparison](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#finite-nested-buffer-heat-comparison) reduces the atomic signed-reference error ceiling from **4.26675e14 to1.36678e5**, about **3.12 billion times smaller**, while retaining the full exterior. All **9 checks** and an independent numerical audit pass. See the [results](results/dihole_nested_heat_bound_results.json) and [visual](figures/dihole_nested_heat_bound_progress.png). This is still far too loose to determine the full field response's sign; the191 numerical reference remains uncertified. No supporting source, stable opening or atom time travel is demonstrated.
 
 
