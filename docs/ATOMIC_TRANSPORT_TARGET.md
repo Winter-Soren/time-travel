@@ -301,3 +301,12 @@ Next comes evaluating a local gauge that expresses the potential through the act
 The [new gauge calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#source-centred-gauge-for-the-complete-field-error-certificate) reduces the conservative atomic error ceiling by another 51.6 decimal orders, with all 12 checks passing. The physical magnetic field and flux are unchanged. The remaining ceiling still cannot establish whether that field supports the proposed opening.
 
 Next comes sharpening the geometry and spin estimates that dominate the remaining bound. No supporting material, stable opening, atom transmission, survival or clock gain has been demonstrated. The target remains one hydrogen atom and a trial 1 nm diameter; human transport is deferred, and the present static geometry excludes travel from13September2027 to12September2027.
+
+
+## Checkpoint184: sharper geometry estimate, still one atom
+
+The [positive-frame calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#positive-frame-bounds-from-the-real-metric) tightens the same atomic field-error ceiling by another93.4 decimal orders. All13 controls and two independent audits pass. This changes the estimate, not the field, opening or payload, and it still does not determine the supporting stress.
+
+The next candidate improvement must retain connection/parallel-transport cancellations in the field calculation. It is not yet derived or implemented. A smaller payload does not supply the missing supporting source: one hydrogen atom through a trial1nm opening still requires source consistency, stability, transmission, internal-state survival and an exterior-clock comparison. No atom has crossed in the model.
+
+The present static geometry excludes13September2027 to12September2027. Future clock gain has not been established. Molecules, animals and humans remain outside this first milestone; enlarging the opening would need new support and stability calculations.

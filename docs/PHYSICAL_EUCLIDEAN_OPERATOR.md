@@ -7343,3 +7343,106 @@ where$g_n$ is the saved metric **component** ceiling, explaining the factor4. Th
 The first target remains one neutral hydrogen atom through a trial 1 nm areal opening. No self-consistent supporting stress, stable opening, atom transmission, internal-state survival or clock advantage is established. The current static geometry excludes13September2027 to12September2027; human enlargement remains deferred.
 
 ![Gauge improvement to the atomic error bound](../figures/dihole_centered_gauge_progress.png)
+
+
+## Positive-frame bounds from the real metric
+
+Checkpoint184 sharpens the same positive symmetric coframe using saved real metric bounds. The [calculation](../scripts/dihole_positive_frame.py) and [results](../results/dihole_positive_frame_results.json) retain 77 exact input hashes and 13 passing controls. Geometry, physical field, ordinary-coordinate radial gauge, regulator, normal neighbourhood and one-atom target are unchanged.
+
+At atomic flux, the conservative $\log_{10}B_4$ ceiling decreases from449.81832 to356.39908, by at least93.41923770240045 decimal orders. This is a tighter estimate, not a measured error reduction or a physical advance of that magnitude. The remaining bound cannot determine the supporting stress.
+
+### Noncommuting matrix bounds
+
+The existing coframe has positive temporal/radial entries and a positive symmetric angular block. It is therefore already $E=\sqrt g$; no frame rotation is introduced. Write $I=E^{-1}$ and use the saved real spectral bounds
+
+$$
+m\,1\le g\le M\,1,\qquad \|g^{-1}\|\le H,
+$$
+
+with $M=92.84421315093161$, $H=260.3941671325786$ and $m=0.0038403317977965847$. These supply $e_0=\sqrt M$, $i_0=\sqrt H$. Lowercase $e_n,i_n,\gamma_n,\eta_n$ below are uniform operator-norm derivative ceilings, not component bounds.
+
+Differentiating $E^2=g$ gives the Sylvester equation
+
+$$
+E\,\partial^\alpha E+(\partial^\alpha E)E
+=\partial^\alpha g-
+\sum_{0<\beta<\alpha}{\alpha\choose\beta}
+(\partial^\beta E)(\partial^{\alpha-\beta}E).
+$$
+
+No matrices are commuted. The solution of $EX+XE=C$ is
+$X=\int_0^\infty e^{-tE}Ce^{-tE}\,dt$, so its norm is at most
+$\|C\|/(2\sqrt m)$. Grouping multiindices by total order gives
+
+$$
+e_n\le\frac{\gamma_n+
+\sum_{j=1}^{n-1}{n\choose j}e_je_{n-j}}{2\sqrt m}.
+$$
+
+Here $\gamma_0=M$, $\gamma_1$ is four times the sharper saved real first-component bound, and $\gamma_n$ for $n\ge2$ is four times the old metric-component ceiling. The factor four is necessary for a general $4\times4$ matrix.
+
+The inverse-metric and inverse-frame identities give
+
+$$
+\eta_n\le H\sum_{j=1}^n{n\choose j}\gamma_j\eta_{n-j},
+$$
+
+$$
+i_n\le
+\min\left\{
+\frac{\sqrt M}{2}\left(\eta_n+
+\sum_{j=1}^{n-1}{n\choose j}i_ji_{n-j}\right),
+\quad i_0\sum_{j=1}^n{n\choose j}e_ji_{n-j}
+\right\}.
+$$
+
+The first inverse-frame bound follows from $I^2=g^{-1}$ and the spectral lower bound $g^{-1}\ge1/M$; the second follows directly from $EI=1$. Each internal sequence may also take the smaller of this new operator bound and **four times** its corresponding old component bound.
+
+Only after all internal recurrences are evaluated does the code export the minimum of each new operator ceiling and the old component ceiling. Those exported minima are component bounds. Feeding them back into an operator-norm recurrence without conversion would be invalid.
+
+The paired probe remains $\dot E=F\,\mathrm{diag}(1,-1,0,0)E$ and $\dot I=-F\,\mathrm{diag}(1,-1,0,0)I$ for the existing block frame, so the prior product estimates for the operator variation still apply. Only real derivative ceilings are replaced; the saved complex-domain moduli are not replaced by real bounds.
+
+| Component ceiling | Previous | New |
+| --- | ---: | ---: |
+| $E_0$ | 15198.55124 | 9.635571 |
+| $E_1$ | 30397102.46875 | 217721.44390 |
+| $I_0$ | 42977.43710 | 16.136734 |
+| $I_1$ | 85954874.19954 | 56693394.05083 |
+
+Displayed ceilings are rounded upward; exact stored endpoints govern the calculation. All exported derivative bounds through20 are no larger than their old counterparts.
+
+### Recomputed full certificate
+
+The existing operator/variation, point-evaluation, heat-transport, whole-defect and adjustable-scale routines are reused. The saved normal-coordinate estimates remain conservative because the metric is unchanged. No field or defect contribution is removed.
+
+| Quantity | $q=1000$ | Atomic $q=4642875905017627791065088$ |
+| --- | ---: | ---: |
+| Graph scale $\mu$ | $2^{80}$ | $2^{103}$ |
+| Fourier scale $\lambda$ | $2^{84}$ | $2^{107}$ |
+| $\log_{10}B_4$ ceiling | 326.32087 | 356.39908 |
+| Ceiling reduction, decimal orders (lower bound) | 188.48649 | 93.41923 |
+| $\log_{10}C_*$ and $C_{\rm geom}$ ceiling | 328.51929 | 358.59750 |
+| Curved envelope/$q^2$ at nominal $M_{\rm reg}^2s_0=100$, log ceiling | 304.23381 | 247.64487 |
+
+$M_{\rm reg}$ in the last row is the regulator mass, distinct from the metric upper bound $M$ above. The scales $\mu,\lambda$ are auxiliary proof choices. The physical regulator, source and field are unchanged. The bound still assumes subtraction of the exact lower heat coefficients; earlier numerical quadratures have not been promoted to certified enclosures.
+
+### Verification and retained failure
+
+A genuinely noncommuting polynomial frame checks derivatives through order6. The independent diagonal-basis Sylvester solve agrees with the first derivative to about $5.1\times10^{-171}$; the largest tested actual-to-bound ratio is below0.833334. This is a finite control of the implementation, alongside the analytic recurrence, not a proof by numerical sampling.
+
+The initial export applied an outward-rounding helper to an already valid saved float ceiling. That increased some unchanged ceilings by one binary64 ulp and failed the nonincrease control. The [original failed source](../provenance/dihole_positive_frame_rounding_trial.py) and [failed result](../results/dihole_positive_frame_rounding_trial.json) are preserved and authenticated by the final run. The fix takes the original float cap directly; it does not weaken the check or alter the internal operator recurrence.
+
+All13 controls pass. An independent 550-digit recomposition passed600 directed comparisons across frame, operator, point, transport, defect, matching and scale results. A separate actual-code proof audit confirmed the matrix recurrences, norm conversions and unchanged real/gauge domain. The figure was inspected. Final layout PASS:180 imports,1615 Markdown links,8 historical source guards,14 frozen pilot hashes.
+
+Source SHA256: 823df8b95089f2036991618c9ec7b65c0b92425394063f2f93487b5872d8ad8d.
+Result SHA256: 765cc0cc9989e238ba630082f27bcb83afba55d57a977cda5d7d87bcd94f32cc.
+
+### Next discriminating calculation
+
+The same zeroth-connection diagnostic now has approximate ceiling logs11.62277 for spin and17.78013 for the electromagnetic connection. This compares estimates, not the actual contributions. It suggests testing a covariant heat estimate that retains cancellations between the connection and parallel transport, instead of repeatedly bounding those terms separately.
+
+A geodesic-radial gauge is a candidate formulation, not an implemented result. It must transform both $P$ and $\dot P$, retain the density and fixed-variation convention, and preserve the local domain and global unitary extension. The current ordinary-coordinate radial gauge does not make curved-geodesic transport the identity. Simply setting transport equal to one in the current formula would be invalid.
+
+The first success criterion remains a self-consistent supporting source for a trial1nm opening, followed by stability, transmission and internal-state survival of one neutral hydrogen atom, and an operational exterior-clock comparison. None has been established. The present static geometry excludes13September2027 to12September2027; future clock gain is unproved. Human transport is deferred and would require new calculations.
+
+![Positive-frame improvement to the atomic error bound](../figures/dihole_positive_frame_progress.png)

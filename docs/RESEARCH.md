@@ -1,3 +1,59 @@
+# Authoritative checkpoint184 - real positive-frame bounds tighten the same field certificate
+
+Previous checkpoint183 published b4d4420e7a0f910883e4ca355bf6c8b6310f664a.
+Previous goal turn PROGRESS:183 verified and privately published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No stable opening, obtainable source, atom transit or clock gain established.
+
+- scripts/dihole_positive_frame.py: 13 checks PASS, 77 exact inputs.
+  Same positive coframe E=sqrt(g), inverse frame I=E^-1, geometry,
+  source-centred gauge, regulator, normal support and atom target.
+- Real metric spectral bounds sharpen E0 to 9.635570203725965,
+  I0 to 16.13673347157282; E1 to 217721.44389838178,
+  I1 to 56693394.050821565. Derivative arrays retain orders0..20.
+- Noncommuting Sylvester recurrences use OPERATOR norms internally.
+  Old component caps enter with factor4. Exported component minima are
+  taken only after the recurrences; never fed back without conversion.
+  Real bounds do not replace the saved complex-domain moduli.
+- Recomputed operator/variation18, transport schedule16,14,12,10,8,
+  whole heat defect and scaled graph/Fourier bounds. No term dropped.
+- Atomic log10 B4 <=356.3990743117428, reduction >=93.41923770240045
+  decimal orders vs183. mu=2^103, lambda=2^107.
+  Cstar/Cgeometry log <=358.597494039787.
+  Curved envelope/q² at nominal M²s0=100 log <=247.64486743961194.
+- q1000 log10 B4 <=326.3208676831092, reduction >=188.48649335147786
+  orders. mu=2^80, lambda=2^84. These remain conservative ceilings,
+  not actual errors, supporting energies or evidence of physical support.
+- Initial export rounded unchanged float ceilings upward by one ulp.
+  Nonincrease check caught this; original source and failed result kept:
+  provenance/dihole_positive_frame_rounding_trial.py and
+  results/dihole_positive_frame_rounding_trial.json.
+  Fix keeps the original exact float cap; internal mathematics unchanged.
+- NEXT: test a covariant/geodesic-radial heat estimate that retains
+  connection/parallel-transport cancellations. Current physical-connection
+  ceiling logs: spin about11.62277, electromagnetic about17.78013.
+  This diagnoses estimates only; it does not establish actual dominance.
+  Ordinary-coordinate radial gauge does NOT make curved-geodesic
+  transport identity. Any new gauge must transform P and dotP, preserve
+  the fixed-variation convention, density, domain and global extension.
+  This next formulation is NOT yet derived or implemented.
+- Exact lower-coefficient enclosures and full source remain unresolved.
+  Static geometry excludes13Sep2027->12Sep2027. A future clock advantage
+  has not been established. Enlargement needs new source/stability work.
+
+Source SHA256 823df8b95089f2036991618c9ec7b65c0b92425394063f2f93487b5872d8ad8d
+Results SHA256 765cc0cc9989e238ba630082f27bcb83afba55d57a977cda5d7d87bcd94f32cc
+Verification: all13 controls and77 exact inputs pass; figure inspected.
+Independent numerical audit:600 directed comparisons at550 digits, covering
+frame/operator/transport/defect arrays and12 matching diagnostics.
+Actual-code proof audit PASS: norm conversion, matrix identities, unchanged
+gauge and real domain. Frozen rounding trial authenticates.
+Final layout PASS:180 imports,1615 Markdown links,8 historical source guards,14 frozen pilot hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint183 and earlier history ---
+
 # Authoritative checkpoint183 - source-centred gauge reduces the full error ceiling
 
 Previous checkpoint182 published 7391aceea8d8b44a1ad36d84e027a345cf996e87.

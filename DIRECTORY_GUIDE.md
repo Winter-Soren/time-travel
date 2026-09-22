@@ -1,5 +1,9 @@
 # Directory guide
 
+Current increment184: The [positive-frame calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#positive-frame-bounds-from-the-real-metric) tightens the conservative atomic error ceiling by another 93.4 decimal orders. **All 13 checks and two independent audits pass.** The field, opening and payload are unchanged; the ceiling remains too loose to establish support. See the [results](results/dihole_positive_frame_results.json) and [visual](figures/dihole_positive_frame_progress.png). One hydrogen atom through a trial 1 nm opening remains the first target, with support, stability, survival and clock comparison still required.
+
+
+
 Current increment183: The [source-centred gauge calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#source-centred-gauge-for-the-complete-field-error-certificate) reduces the atomic error ceiling by another 51.6 decimal orders while preserving the physical field. **All 12 checks pass.** The remaining bound is still too loose to establish support; next comes sharpening the dominant geometry and spin estimates. See the [results](results/dihole_centered_gauge_results.json) and [visual](figures/dihole_centered_gauge_progress.png). One hydrogen atom through a trial 1 nm opening remains the target.
 
 
