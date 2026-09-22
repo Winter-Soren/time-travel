@@ -210,3 +210,8 @@ The [paired-frequency result](PHYSICAL_EUCLIDEAN_OPERATOR.md#paired-frequencies-
 The [massive-channel test](PHYSICAL_EUCLIDEAN_OPERATOR.md#proper-mass-channel-comparison-at-fixed-regulator) includes the real lapse-dependent mass and its leakage outside the retained channel. All 16 controls pass. The small leakage coefficient at atomic flux is a supporting-field bound, not a hydrogen transmission probability. The four components and regulator masses belong to the auxiliary field calculation; they do not model four particles, a human, or the payload's mass.
 
 The first physical target remains one neutral hydrogen atom and a trial 1 nm areal diameter. Support, stability, atomic quantum evolution and an exterior-clock difference must hold together before passage is established. The next source calculation must preserve the common regulator cancellation while including omitted modes. Enlarging the opening would require a new source and stability calculation; it is not automatic scaling.
+
+
+## Checkpoint171: common supporting-field response
+
+The [proper-field comparison](PHYSICAL_EUCLIDEAN_OPERATOR.md#proper-euclidean-channel-and-a-common-metric-insertion) now bounds a finite geometry-response contribution while retaining the common regulator cancellation. All 17 controls pass. The result uses a fixed frequency, finite auxiliary regulator and positive infrared shift; it is not the total energy supporting the opening. The compact metric insertion offers the next route to removing that artificial shift. No atom has been propagated and no time difference has been established.

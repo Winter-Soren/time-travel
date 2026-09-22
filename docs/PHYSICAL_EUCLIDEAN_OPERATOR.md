@@ -4734,3 +4734,240 @@ The present static geometry still excludes backward causal travel and has
 no established future clock advantage.
 
 ![Proper-mass channel bounds](../figures/dihole_massive_channel_progress.png)
+
+
+## Proper Euclidean channel and a common metric insertion
+
+The [calculation](../scripts/dihole_proper_channel.py) and
+[results](../results/dihole_proper_channel_results.json) now compare the
+actual collar channel through the common proper regulator, including a
+finite metric insertion. All 17 checks pass, using42 exact prior hashes.
+This is a conditional calculation on the prescribed geometry. It supplies
+neither the full source nor a new physical law. It reuses156's common-product
+identity with165--170's actual channel bounds, rather than rerunning the
+previous low-flux least-squares experiment. General conforming residual
+estimation is established numerical analysis; see
+[Repin--Sauter](https://www.numdam.org/articles/10.1016/j.crma.2006.06.024/).
+The particular Dirac-channel identities below are derived here; that paper
+does not establish this geometry or its physical support.
+
+### The correct isometry and the omitted positive form
+
+Write $B=N^{-1/2}$, $\beta=\tau_1$, $H_0=\tau_3H$ and
+$A=B\beta(i\kappa+H_0)B$, with $A^*=-A$ and $P=A^*A$.
+For the same two-block channel and scalar $n=U_4^*NU_4$,
+
+$$
+V=N^{1/2}U_4n^{-1/2},\qquad V^*V=1,\qquad
+\mathfrak a=V^*AV=n^{-1/2}\beta(i\kappa+h_0)n^{-1/2}.
+$$
+
+On compact smooth collar tests, keeping the displayed operator order,
+
+$$
+R_A=AV-V\mathfrak a
+=B\beta[R_0-r_Nn^{-1}(i\kappa+h_0)]n^{-1/2},\qquad V^*R_A=0.
+$$
+
+The derivative in $h_0$ acts on the final $n^{-1/2}$ as well as the test
+function. Therefore the exact form compression is
+
+$$
+\langle V\phi,PV\psi\rangle
+=\langle\mathfrak a\phi,\mathfrak a\psi\rangle
++\langle R_A\phi,R_A\psi\rangle.
+$$
+
+No strong $PV$ domain is needed. Dropping the last, positive term is not
+justified. The actual global comparison uses $J=\chi V$, which is a
+contraction, not an isometry. Its corresponding form is
+$\|AJ\psi\|^2=\|\mathfrak a(\chi\psi)\|^2+\|R_A(\chi\psi)\|^2$,
+with the cutoff derivative included.
+
+For $T_0=H_0\chi U_4-\chi U_4h_0$,
+
+$$
+T_A=AJ-J\mathfrak a
+=B\beta T_0n^{-1/2}-B\chi r_Nn^{-1/2}\mathfrak a.
+$$
+
+Use167's cutoff graph constants $a_0,b_0$ and170's lapse variance $R_N$.
+The exact squared-sum identity
+
+$$
+\|h_0n^{-1/2}\psi\|^2+\kappa^2\|n^{-1/2}\psi\|^2
+=\|\sqrt n\,\beta\mathfrak a\psi\|^2
+$$
+
+eliminates a spurious extra $|\kappa|$ term. It gives
+
+$$
+\|T_A\psi\|\le c\|\mathfrak a\psi\|+d\|\psi\|,\qquad
+c=a_0\sqrt{n_+/N_-}+\frac{R_N}{\sqrt{N_-n_-}},\quad
+d=\frac{b_0}{\sqrt{N_-n_-}}.
+$$
+
+Choose the auxiliary complete-line coefficients $n,v$ positive and bounded,
+with complete optical coordinate and the stated collar bounds. Then
+$\mathfrak a=-i[\tau_2\bar h-\tau_1\kappa/n]$,
+$\bar h=-i[(v/n)\partial_s+(v/n)_s/2]$, and its anticommutator with
+$\tau_1$ proves $\|\mathfrak a\psi\|\ge g\|\psi\|$,
+$g=|\kappa|/n_+$. This is an **auxiliary** gap; the full exterior lapse is
+unbounded and the full proper operator has no such established gap.
+
+### Keeping the common product and its first graph error
+
+For $\eta>0$, $M>0$, $m_j=\sqrt{\eta+jM^2}$ and
+$\alpha=\sqrt6M^3$, set
+
+$$
+\mathcal T_A=\alpha\prod_{j=0}^3(A+m_j)^{-1},\qquad
+\mathcal T_{\mathfrak a}=\alpha\prod_{j=0}^3(\mathfrak a+m_j)^{-1}.
+$$
+
+Exactly $\mathcal T_A^*\mathcal T_A=
+6M^6\prod_j(P+\eta+jM^2)^{-1}$, the common PV filter. The first-order
+resolvent norm circle, restricted by the auxiliary gap, gives
+
+$$
+C_m=\begin{cases}
+\sqrt{c^2+d^2/m^2},&cm^2\ge dg,\\
+(cg+d)/\sqrt{g^2+m^2},&cm^2<dg.
+\end{cases}
+$$
+
+It bounds $\|T_A(\mathfrak a+m)^{-1}\|$. For factors applied in a chosen
+order, start $e_0=0,r_0=1$ and propagate
+
+$$
+e_{i+1}=\frac{e_i+C_{m_i}r_i}{m_i},\qquad
+r_{i+1}=\frac{r_i}{\sqrt{g^2+m_i^2}}.
+$$
+
+Then $\delta=\alpha e_4$ bounds
+$\|\mathcal T_AJ-J\mathcal T_{\mathfrak a}\|$.
+Because $\|A(A+m)^{-1}\|\le1$, the same final numerator gives
+$\delta_A=\alpha m_{\rm last}e_4$ for the first-action error.
+All24 factor orders represent the same exact operators. Ordinary and
+first-action bounds can therefore be minimized independently; no mass
+prescription is changed by choosing their order.
+
+Let $r_F$ bound $\|\mathcal T_{\mathfrak a}\|$ and
+
+$$
+a_F=\min_j\alpha\prod_{k\ne j}(g^2+m_k^2)^{-1/2}
+\ \ge\ \|\mathfrak a\mathcal T_{\mathfrak a}\|,\qquad
+L=(1+c)a_F+dr_F\ \ge\ \|AJ\mathcal T_{\mathfrak a}\|.
+$$
+
+For the frozen Gaussian $X_4=I_2\otimes X$ from167, the positive-filter
+trace compares $\|\mathcal T_AJX_4\|_{\rm HS}^2$ with
+$\|J\mathcal T_{\mathfrak a}X_4\|_{\rm HS}^2$ and has error at most
+$\delta(2r_F+\delta)\|X_4\|_{\rm HS}^2$.
+Removing $J$ from that expression, or replacing it with the common filter
+of $V^*PV$, would add an unaccounted error.
+
+### A proper metric graph bound and a finite source insertion
+
+Here the physical mask satisfies $\dot B=-FB/2$. The exact identity is
+
+$$
+\dot A=-i\kappa F\beta/N+\tfrac12[F,A]
++B\beta W^{-1/2}\tau_3P_s(FW^{-1/2}B\,\cdot),\qquad
+P_s=-i\sigma_3\partial_s.
+$$
+
+Equivalently $\dot A=-i\kappa F\beta/N+\{F,A_{\rm rad}\}/2$;
+the proper angular term is unchanged by this particular variation.
+For $w=FB\psi$, use
+
+$$
+\|H_0w\|^2+\kappa^2\|w\|^2
+\le\left[F_*\sqrt{N_+}\|A\psi\|
++\frac{F_{s,*}}{W_-\sqrt{N_-}}\|\psi\|\right]^2
+$$
+
+and168's radial graph bound $C_g=400+31q$. Combining the squared terms
+before a triangle bound gives
+
+$$
+\|\dot A\psi\|\le c_\delta\|A\psi\|+d_\delta\|\psi\|,
+\quad c_\delta=F_*\sqrt{N_+/N_-}\sqrt{1+W_+/W_-},
+$$
+
+$$
+d_\delta=\frac{F_{s,*}\sqrt{1+W_+/W_-}+F_{s,*}/2+F_*\sqrt{C_g}}
+{W_-N_-}.
+$$
+
+All geometry extrema are used only on the compact mask/derivative support.
+Regular-axis and axial-sector assumptions remain in force. No global lapse
+upper bound or full frequency gap is introduced.
+
+Freeze the selection at the baseline geometry and write
+$u=\mathcal T_AJX_4$, $v=J\mathcal T_{\mathfrak a}X_4$.
+The finite proper insertion is
+
+$$
+I(u)=-\tfrac12\operatorname{Tr}\dot p[u,u]
+=-\operatorname{Re}\operatorname{Tr}(Au)^*\dot Au.
+$$
+
+The form is differentiated with these test columns fixed at the evaluation
+point; this is not the derivative of a norm with a varying regulator filter.
+This uses only the first-order domain. The full physical $\dot A$ acts on
+both $u$ and $v$; no derivative of a moving reduced channel is substituted.
+The graph errors imply the explicit comparison bound
+
+$$
+\boxed{|I(u)-I(v)|\le\|X_4\|_{\rm HS}^2
+\left[\delta_A(c_\delta L+d_\delta r_F)
++(L+\delta_A)(c_\delta\delta_A+d_\delta\delta)\right].}
+$$
+
+A separate absolute bound is
+$|I(u)|\le\|X_4\|_{\rm HS}^2(L+\delta_A)
+[c_\delta(L+\delta_A)+d_\delta(r_F+\delta)]$.
+Both Weyl blocks and the $-1/2$ proper-form factor are included. The
+second collar, other sectors, frequency measure and counterterms are not.
+This is one declared finite selection, not the full renormalized source.
+
+At the exact atomic flux, $\kappa D=\Lambda D=$ the saved $\sqrt q$,
+$M=\kappa$, $\eta=.01\kappa^2$ (declared binary values), the bounds are:
+
+| Quantity | Upper bound |
+| --- | ---: |
+| Proper channel graph coefficient $c$ | $0.073880457$ |
+| Ordinary product error $\delta/D$ | $3.488590\times10^{-13}$ |
+| First-action error $\delta_A$ | $0.094293028$ |
+| Error / universal full filter norm scale | $0.075859462$ |
+| Finite metric-insertion comparison error | $1.920500\times10^{12}$ |
+| Finite metric-insertion absolute value | $1.934263\times10^{12}$ |
+
+The last two are dimensionless at one frequency, not energies in joules.
+The norm-scale ratio is not relative error in a computed physical source.
+No central insertion value or supporting sign is measured. In particular,
+these deliberately finite regulator choices do not establish either removal
+limit or how much actual matter could pass through an opening.
+
+Eighteen actual-profile/carrier checks reproduce the weighted compression
+to $2.28\times10^{-13}$, the form identity to $8.92\times10^{-16}$ relatively,
+and the proper metric derivative to $2.02\times10^{-11}$ relatively.
+Noncommuting matrix controls retain the cutoff and omitted positive form;
+the common-filter identity agrees to $4.76\times10^{-14}$. A frozen
+metric finite difference agrees to $1.10\times10^{-12}$ relatively.
+Independent110-digit evaluation encloses all1,552 exported inequalities
+and checks1,512 orderings. No false enclosure occurs.
+An initial NumPy Boolean serialization failure occurred before a result
+write; explicit Boolean conversion changed reporting only.
+
+**Next:** the global $1/m_0$ estimate still grows as $\eta\downarrow0$.
+The actual metric insertion is compact, so use151's compact Green identity
+to seek local output/first-action bounds before taking that limit. Merely
+adding more regulator samples will not remove this obstruction. Low
+frequency, omitted source selections, all sectors, regulator removal and
+counterterm matching remain. One-atom support, stability, propagation and
+clock advantage remain unproved; the current static geometry still excludes
+backward causal travel.
+
+![Common proper-field filter and metric-insertion bounds](../figures/dihole_proper_channel_progress.png)

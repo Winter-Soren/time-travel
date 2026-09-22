@@ -1,0 +1,4397 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_inputs": true,
+    "field_isometry": true,
+    "field_compression": true,
+    "field_proper_defect": true,
+    "field_cutoff_defect": true,
+    "field_positive_form": true,
+    "actual_proper_metric_derivative": true,
+    "matrix_skew_isometry": true,
+    "matrix_weighted_channel": true,
+    "matrix_positive_form": true,
+    "rejects_compression_shortcuts": true,
+    "auxiliary_frequency_gap": true,
+    "common_filter_identity": true,
+    "product_error_bounds": true,
+    "frozen_proper_metric_insertion": true,
+    "spectral_graph_bounds": true,
+    "finite_exported_bounds": true
+  },
+  "records": [
+    {
+      "q": 1000,
+      "kappa_D": 31.622776601683793,
+      "proper_graph_a_upper": 0.24243563389319317,
+      "proper_graph_zero_upper_D": 1931723.9943298362,
+      "reduced_frequency_gap_lower_D": 149.59612622210307,
+      "filter_HS_squared_upper": 30.605301770900024,
+      "proper_metric_graph_a_upper": 12.100783691666809,
+      "proper_metric_graph_zero_upper_D": 1498.3169918955894,
+      "cases": [
+        {
+          "eta_D2": 0.1,
+          "regulator_M_D": 3.1622776601683795,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 40551.08436462197,
+          "worst_order_error_upper_over_D": 41964.28385061041,
+          "first_graph_filter_error_upper": 13072.973774342872,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 1282337.8818184733,
+          "error_over_universal_filter_scale_upper": 12941.028994560029,
+          "reduced_filter_norm_upper_over_D": 1.5445731072017487e-07,
+          "universal_filter_norm_upper_over_D": 3.133528592020641,
+          "finite_positive_trace_error_upper_over_D2": 50327065742.071815,
+          "reduced_filter_action_norm_upper": 2.3106266975133714e-05,
+          "approximate_full_action_norm_upper": 0.298397601267277,
+          "finite_proper_metric_insertion_error_upper": 24373418773329.11,
+          "finite_proper_metric_insertion_absolute_upper": 24373418773362.086,
+          "graph_resolvent_bounds": [
+            12913.141500047934,
+            12910.257377158474,
+            12907.375185894454,
+            12904.494924100678
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              0.3162277660168379,
+              0.316227766016838
+            ],
+            [
+              3.17804971641414,
+              3.178049716414141
+            ],
+            [
+              4.483302354291978,
+              4.48330235429198
+            ],
+            [
+              5.48634668973808,
+              5.486346689738082
+            ]
+          ]
+        },
+        {
+          "eta_D2": 0.1,
+          "regulator_M_D": 31.622776601683793,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 40937.54708383869,
+          "worst_order_error_upper_over_D": 56558.19013217448,
+          "first_graph_filter_error_upper": 16172.74081658978,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 1294558.9060531429,
+          "error_over_universal_filter_scale_upper": 12946.775749867267,
+          "reduced_filter_norm_upper_over_D": 0.000136142413001437,
+          "universal_filter_norm_upper_over_D": 3.161987808760679,
+          "finite_positive_trace_error_upper_over_D2": 51290897981.59289,
+          "reduced_filter_action_norm_upper": 0.020366423102815476,
+          "approximate_full_action_norm_upper": 263.014869810636,
+          "finite_proper_metric_insertion_error_upper": 30954045791373.395,
+          "finite_proper_metric_insertion_absolute_upper": 30954071412522.42,
+          "graph_resolvent_bounds": [
+            12913.141500047934,
+            12633.954967267766,
+            12372.127439649059,
+            12125.931514541717
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              0.3162277660168379,
+              0.316227766016838
+            ],
+            [
+              31.624357700987378,
+              31.624357700987385
+            ],
+            [
+              44.72247757000946,
+              44.722477570009474
+            ],
+            [
+              54.77316861383864,
+              54.773168613838656
+            ]
+          ]
+        },
+        {
+          "eta_D2": 0.1,
+          "regulator_M_D": 316.2277660168379,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 40916.06429370552,
+          "worst_order_error_upper_over_D": 72999.83271744625,
+          "first_graph_filter_error_upper": 22820.498491867413,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 1293879.560579981,
+          "error_over_universal_filter_scale_upper": 12938.807466363482,
+          "reduced_filter_norm_upper_over_D": 0.0055280282402113065,
+          "universal_filter_norm_upper_over_D": 3.162274761416262,
+          "finite_positive_trace_error_upper_over_D2": 51237093777.489815,
+          "reduced_filter_action_norm_upper": 0.8269734580308018,
+          "approximate_full_action_norm_upper": 10679.652254241662,
+          "finite_proper_metric_insertion_error_upper": 63228559651706.09,
+          "finite_proper_metric_insertion_absolute_upper": 63270802405396.97,
+          "graph_resolvent_bounds": [
+            12913.141500047934,
+            5522.040642178939,
+            4096.436648493542,
+            3402.277930454611
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              0.3162277660168379,
+              0.316227766016838
+            ],
+            [
+              316.2279241306813,
+              316.2279241306814
+            ],
+            [
+              447.2137073033427,
+              447.2137073033428
+            ],
+            [
+              547.7226487922512,
+              547.7226487922514
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10.0,
+          "regulator_M_D": 3.1622776601683795,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 2085.762351851369,
+          "worst_order_error_upper_over_D": 2129.3630805308717,
+          "first_graph_filter_error_upper": 6653.855466928343,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 65957.59689679844,
+          "error_over_universal_filter_scale_upper": 13191.519379359688,
+          "reduced_filter_norm_upper_over_D": 1.5432083599776514e-07,
+          "universal_filter_norm_upper_over_D": 0.158113883008419,
+          "finite_positive_trace_error_upper_over_D2": 133145445.27320936,
+          "reduced_filter_action_norm_upper": 2.309095660006255e-05,
+          "approximate_full_action_norm_upper": 0.29813395074922305,
+          "finite_proper_metric_insertion_error_upper": 652838991266.2927,
+          "finite_proper_metric_insertion_absolute_upper": 652838991299.2128,
+          "graph_resolvent_bounds": [
+            12910.286208822228,
+            12907.403998252628,
+            12904.523717174807,
+            12901.645363436899
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              3.1622776601683786,
+              3.1622776601683795
+            ],
+            [
+              4.472135954999578,
+              4.47213595499958
+            ],
+            [
+              5.47722557505166,
+              5.477225575051662
+            ],
+            [
+              6.324555320336757,
+              6.324555320336759
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10.0,
+          "regulator_M_D": 31.622776601683793,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4150.936958548384,
+          "worst_order_error_upper_over_D": 5607.888420423655,
+          "first_graph_filter_error_upper": 16042.986587259235,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 131264.15212784833,
+          "error_over_universal_filter_scale_upper": 13246.845645891082,
+          "reduced_filter_norm_upper_over_D": 0.00013602934901643616,
+          "universal_filter_norm_upper_over_D": 0.3133528592020641,
+          "finite_positive_trace_error_upper_over_D2": 527337881.1426729,
+          "reduced_filter_action_norm_upper": 0.0203540097107741,
+          "approximate_full_action_norm_upper": 262.79644597507473,
+          "finite_proper_metric_insertion_error_upper": 3202202408856.856,
+          "finite_proper_metric_insertion_absolute_upper": 3202227987468.7764,
+          "graph_resolvent_bounds": [
+            12910.286208822228,
+            12631.280860055766,
+            12369.61613354889,
+            12123.567135831006
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              3.1622776601683786,
+              3.1622776601683795
+            ],
+            [
+              31.7804971641414,
+              31.78049716414141
+            ],
+            [
+              44.833023542919776,
+              44.83302354291979
+            ],
+            [
+              54.863466897380796,
+              54.86346689738081
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10.0,
+          "regulator_M_D": 316.2277660168379,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4163.352394235198,
+          "worst_order_error_upper_over_D": 7298.515359969159,
+          "first_graph_filter_error_upper": 22815.918763723952,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 131656.76267698503,
+          "error_over_universal_filter_scale_upper": 13166.883131870763,
+          "reduced_filter_norm_upper_over_D": 0.00552637450602291,
+          "universal_filter_norm_upper_over_D": 0.31619878087606795,
+          "finite_positive_trace_error_upper_over_D2": 530498503.2638448,
+          "reduced_filter_action_norm_upper": 0.8269089073371476,
+          "approximate_full_action_norm_upper": 10676.457616029611,
+          "finite_proper_metric_insertion_error_upper": 6767473487216.087,
+          "finite_proper_metric_insertion_absolute_upper": 6809690972269.334,
+          "graph_resolvent_bounds": [
+            12910.286208822228,
+            5521.8172997728125,
+            4096.345467783185,
+            3402.2256910636947
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              3.1622776601683786,
+              3.1622776601683795
+            ],
+            [
+              316.2435770098737,
+              316.24357700987383
+            ],
+            [
+              447.22477570009454,
+              447.22477570009465
+            ],
+            [
+              547.7316861383863,
+              547.7316861383865
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000.0,
+          "regulator_M_D": 3.1622776601683795,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 1.19580022499666,
+          "worst_order_error_upper_over_D": 1.1988581056222731,
+          "first_graph_filter_error_upper": 37.85243220749035,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 37.814523375312596,
+          "error_over_universal_filter_scale_upper": 15902.389654876646,
+          "reduced_filter_norm_upper_over_D": 1.4153593454080007e-07,
+          "universal_filter_norm_upper_over_D": 7.519625986714232e-05,
+          "finite_positive_trace_error_upper_over_D2": 43.76369981435983,
+          "reduced_filter_action_norm_upper": 2.164111791800944e-05,
+          "approximate_full_action_norm_upper": 0.2734352485084192,
+          "finite_proper_metric_insertion_error_upper": 2628941.351482736,
+          "finite_proper_metric_insertion_absolute_upper": 2628969.043015487,
+          "graph_resolvent_bounds": [
+            12633.98198711662,
+            12631.280860055766,
+            12628.5814647456,
+            12625.883799336478
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              31.62277660168379,
+              31.622776601683796
+            ],
+            [
+              31.7804971641414,
+              31.78049716414141
+            ],
+            [
+              31.93743884534262,
+              31.937438845342626
+            ],
+            [
+              32.09361307176241,
+              32.09361307176243
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000.0,
+          "regulator_M_D": 31.622776601683793,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 255.4061404104422,
+          "worst_order_error_upper_over_D": 296.56923225364164,
+          "first_graph_filter_error_upper": 8750.518419000995,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 8076.651320897697,
+          "error_over_universal_filter_scale_upper": 16153.302641795395,
+          "reduced_filter_norm_upper_over_D": 0.0001253973229143119,
+          "universal_filter_norm_upper_over_D": 0.0158113883008419,
+          "finite_positive_trace_error_upper_over_D2": 1996456.0818150842,
+          "reduced_filter_action_norm_upper": 0.019173493011480074,
+          "approximate_full_action_norm_upper": 242.25683932924656,
+          "finite_proper_metric_insertion_error_upper": 135251910877.88255,
+          "finite_proper_metric_insertion_absolute_upper": 135273647401.68942,
+          "graph_resolvent_bounds": [
+            12633.98198711662,
+            12372.15281418094,
+            12125.95540421251,
+            11893.893787790541
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              31.62277660168379,
+              31.622776601683796
+            ],
+            [
+              44.72135954999578,
+              44.721359549995796
+            ],
+            [
+              54.7722557505166,
+              54.772255750516614
+            ],
+            [
+              63.24555320336758,
+              63.24555320336759
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000.0,
+          "regulator_M_D": 316.2277660168379,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 474.3910451874863,
+          "worst_order_error_upper_over_D": 715.5317548247307,
+          "first_graph_filter_error_upper": 22369.21382507774,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 15001.562043803162,
+          "error_over_universal_filter_scale_upper": 15139.19631674966,
+          "reduced_filter_norm_upper_over_D": 0.0053661764161001355,
+          "universal_filter_norm_upper_over_D": 0.031335285920206415,
+          "finite_positive_trace_error_upper_over_D2": 6887782.999542754,
+          "reduced_filter_action_norm_upper": 0.8204987444809496,
+          "approximate_full_action_norm_upper": 10366.991157665228,
+          "finite_proper_metric_insertion_error_upper": 1069229157854.6149,
+          "finite_proper_metric_insertion_absolute_upper": 1109034691797.9114,
+          "graph_resolvent_bounds": [
+            12633.98198711662,
+            5499.618994649743,
+            4087.2580305760366,
+            3397.013872653137
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              31.62277660168379,
+              31.622776601683796
+            ],
+            [
+              317.80497164141394,
+              317.80497164141406
+            ],
+            [
+              448.3302354291977,
+              448.33023542919784
+            ],
+            [
+              548.6346689738078,
+              548.6346689738081
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "q": 1005,
+      "kappa_D": 31.701734968294716,
+      "proper_graph_a_upper": 0.24190483633423288,
+      "proper_graph_zero_upper_D": 1931717.3194940696,
+      "reduced_frequency_gap_lower_D": 149.9696502148441,
+      "filter_HS_squared_upper": 30.681719622118568,
+      "proper_metric_graph_a_upper": 12.100783691666809,
+      "proper_metric_graph_zero_upper_D": 1498.9998418546581,
+      "cases": [
+        {
+          "eta_D2": 0.1005,
+          "regulator_M_D": 3.170173496829472,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 40349.19848542005,
+          "worst_order_error_upper_over_D": 41755.36227741443,
+          "first_graph_filter_error_upper": 13040.368405823107,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 1279139.596567905,
+          "error_over_universal_filter_scale_upper": 12908.752710167819,
+          "reduced_filter_norm_upper_over_D": 1.54072609473452e-07,
+          "universal_filter_norm_upper_over_D": 3.125724025500795,
+          "finite_positive_trace_error_upper_over_D2": 49951613513.61381,
+          "reduced_filter_action_norm_upper": 2.3106266975133714e-05,
+          "approximate_full_action_norm_upper": 0.29765342396421934,
+          "finite_proper_metric_insertion_error_upper": 24263171929282.617,
+          "finite_proper_metric_insertion_absolute_upper": 24263171929315.51,
+          "graph_resolvent_bounds": [
+            12880.934769993655,
+            12878.05784040935,
+            12875.182837632812,
+            12872.309759514215
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              0.3170173496829471,
+              0.3170173496829472
+            ],
+            [
+              3.1859849340510067,
+              3.1859849340510076
+            ],
+            [
+              4.494496634774577,
+              4.4944966347745785
+            ],
+            [
+              5.500045454357626,
+              5.500045454357628
+            ]
+          ]
+        },
+        {
+          "eta_D2": 0.1005,
+          "regulator_M_D": 31.701734968294716,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 40733.737178015275,
+          "worst_order_error_upper_over_D": 56276.61196676134,
+          "first_graph_filter_error_upper": 16132.404303765552,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 1291330.1402856135,
+          "error_over_universal_filter_scale_upper": 12914.485132464233,
+          "reduced_filter_norm_upper_over_D": 0.00013580332800915455,
+          "universal_filter_norm_upper_over_D": 3.1541123598972938,
+          "finite_positive_trace_error_upper_over_D2": 50908255329.5667,
+          "reduced_filter_action_norm_upper": 0.020366423102815473,
+          "approximate_full_action_norm_upper": 262.3589339195682,
+          "finite_proper_metric_insertion_error_upper": 30814073154404.234,
+          "finite_proper_metric_insertion_absolute_upper": 30814098711573.914,
+          "graph_resolvent_bounds": [
+            12880.934769993655,
+            12602.444557725114,
+            12341.270055437444,
+            12095.688168804038
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              0.3170173496829471,
+              0.3170173496829472
+            ],
+            [
+              31.703320015417937,
+              31.703320015417944
+            ],
+            [
+              44.83414435449838,
+              44.83414435449839
+            ],
+            [
+              54.90993079580413,
+              54.909930795804144
+            ]
+          ]
+        },
+        {
+          "eta_D2": 0.1005,
+          "regulator_M_D": 317.01734968294716,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 40712.36134117428,
+          "worst_order_error_upper_over_D": 72636.39889956758,
+          "first_graph_filter_error_upper": 22763.581773760594,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 1290652.4891713546,
+          "error_over_universal_filter_scale_upper": 12906.536722695728,
+          "reduced_filter_norm_upper_over_D": 0.005514259779877426,
+          "universal_filter_norm_upper_over_D": 3.154398597850259,
+          "finite_positive_trace_error_upper_over_D2": 50854852551.5075,
+          "reduced_filter_action_norm_upper": 0.8269734580308018,
+          "approximate_full_action_norm_upper": 10653.018143315829,
+          "finite_proper_metric_insertion_error_upper": 62942990407499.32,
+          "finite_proper_metric_insertion_absolute_upper": 62985127675526.53,
+          "graph_resolvent_bounds": [
+            12880.934769993655,
+            5508.2680933138345,
+            4086.2197055968804,
+            3393.7922922483403
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              0.3170173496829471,
+              0.3170173496829472
+            ],
+            [
+              317.0175081915823,
+              317.0175081915824
+            ],
+            [
+              448.3303475117426,
+              448.33034751174273
+            ],
+            [
+              549.0902480467121,
+              549.0902480467123
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10.049999999999999,
+          "regulator_M_D": 3.170173496829472,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 2075.3782653883904,
+          "worst_order_error_upper_over_D": 2118.76192536107,
+          "first_graph_filter_error_upper": 6637.260053113451,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 65793.09172830198,
+          "error_over_universal_filter_scale_upper": 13158.618345660392,
+          "reduced_filter_norm_upper_over_D": 1.539364746637056e-07,
+          "universal_filter_norm_upper_over_D": 0.157720074469128,
+          "finite_positive_trace_error_upper_over_D2": 132152147.662919,
+          "reduced_filter_action_norm_upper": 2.309095660006255e-05,
+          "approximate_full_action_norm_upper": 0.29739043098041734,
+          "finite_proper_metric_insertion_error_upper": 649915904194.9374,
+          "finite_proper_metric_insertion_absolute_upper": 649915904227.7753,
+          "graph_resolvent_bounds": [
+            12878.08660016391,
+            12875.21157812994,
+            12872.338480775396,
+            12869.467305953774
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              3.1701734968294706,
+              3.1701734968294715
+            ],
+            [
+              4.483302354291977,
+              4.483302354291979
+            ],
+            [
+              5.490901565316937,
+              5.490901565316939
+            ],
+            [
+              6.340346993658942,
+              6.340346993658944
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10.049999999999999,
+          "regulator_M_D": 31.701734968294716,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4130.271282882275,
+          "worst_order_error_upper_over_D": 5579.969229063849,
+          "first_graph_filter_error_upper": 16002.97369509985,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 130936.7655570925,
+          "error_over_universal_filter_scale_upper": 13213.806622676913,
+          "reduced_filter_norm_upper_over_D": 0.00013569054562853869,
+          "universal_filter_norm_upper_over_D": 0.31257240255007956,
+          "finite_positive_trace_error_upper_over_D2": 523403811.5642114,
+          "reduced_filter_action_norm_upper": 0.020354009710774095,
+          "approximate_full_action_norm_upper": 262.1410548253471,
+          "finite_proper_metric_insertion_error_upper": 3187901129882.816,
+          "finite_proper_metric_insertion_absolute_upper": 3187926644621.61,
+          "graph_resolvent_bounds": [
+            12878.08660016391,
+            12599.777120017132,
+            12338.765012798236,
+            12093.32968710196
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              3.1701734968294706,
+              3.1701734968294715
+            ],
+            [
+              31.859849340510063,
+              31.85984934051007
+            ],
+            [
+              44.94496634774576,
+              44.944966347745776
+            ],
+            [
+              55.00045454357626,
+              55.000454543576275
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10.049999999999999,
+          "regulator_M_D": 317.01734968294716,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4142.624907616593,
+          "worst_order_error_upper_over_D": 7262.179286263529,
+          "first_graph_filter_error_upper": 22759.013467939738,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 131328.39689431764,
+          "error_over_universal_filter_scale_upper": 13134.043543558126,
+          "reduced_filter_norm_upper_over_D": 0.00551261016458506,
+          "universal_filter_norm_upper_over_D": 0.3154112359897294,
+          "finite_positive_trace_error_upper_over_D2": 526540858.08007544,
+          "reduced_filter_action_norm_upper": 0.8269089073371476,
+          "approximate_full_action_norm_upper": 10649.831472719245,
+          "finite_proper_metric_insertion_error_upper": 6737585319775.432,
+          "finite_proper_metric_insertion_absolute_upper": 6779697382267.8125,
+          "graph_resolvent_bounds": [
+            12878.08660016391,
+            5508.045307947107,
+            4086.1287523007845,
+            3393.7401831479474
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              3.1701734968294706,
+              3.1701734968294715
+            ],
+            [
+              317.0332001541793,
+              317.03320015417944
+            ],
+            [
+              448.3414435449838,
+              448.3414435449839
+            ],
+            [
+              549.0993079580412,
+              549.0993079580414
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1005.0,
+          "regulator_M_D": 3.170173496829472,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 1.189846865584552,
+          "worst_order_error_upper_over_D": 1.1928895223776026,
+          "first_graph_filter_error_upper": 37.75802426918967,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 37.72020998561766,
+          "error_over_universal_filter_scale_upper": 15862.72742622139,
+          "reduced_filter_norm_upper_over_D": 1.4118341609916686e-07,
+          "universal_filter_norm_upper_over_D": 7.500897125785019e-05,
+          "finite_positive_trace_error_upper_over_D2": 43.43721192787703,
+          "reduced_filter_action_norm_upper": 2.164111791800944e-05,
+          "approximate_full_action_norm_upper": 0.27275332631310456,
+          "finite_proper_metric_insertion_error_upper": 2618129.4337778697,
+          "finite_proper_metric_insertion_absolute_upper": 2618157.0561614963,
+          "graph_resolvent_bounds": [
+            12602.47151018363,
+            12599.777120017132,
+            12597.084457282155,
+            12594.393520133666
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              31.701734968294712,
+              31.70173496829472
+            ],
+            [
+              31.859849340510067,
+              31.859849340510074
+            ],
+            [
+              32.01718288669382,
+              32.01718288669383
+            ],
+            [
+              32.17374706185152,
+              32.173747061851536
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1005.0,
+          "regulator_M_D": 31.701734968294716,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 254.1345864182802,
+          "worst_order_error_upper_over_D": 295.09274546824753,
+          "first_graph_filter_error_upper": 8728.693707752014,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 8056.507304909509,
+          "error_over_universal_filter_scale_upper": 16113.01460981902,
+          "reduced_filter_norm_upper_over_D": 0.0001250850003299297,
+          "universal_filter_norm_upper_over_D": 0.015772007446912796,
+          "finite_positive_trace_error_upper_over_D2": 1981562.035658442,
+          "reduced_filter_action_norm_upper": 0.01917349301148007,
+          "approximate_full_action_norm_upper": 241.652673199947,
+          "finite_proper_metric_insertion_error_upper": 134700205038.56822,
+          "finite_proper_metric_insertion_absolute_upper": 134721887283.63208,
+          "graph_resolvent_bounds": [
+            12602.47151018363,
+            12341.29536668258,
+            12095.711998891484,
+            11864.229168494281
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              31.701734968294712,
+              31.70173496829472
+            ],
+            [
+              44.833023542919776,
+              44.83302354291979
+            ],
+            [
+              54.90901565316937,
+              54.909015653169384
+            ],
+            [
+              63.403469936589424,
+              63.40346993658944
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1005.0,
+          "regulator_M_D": 317.01734968294716,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 472.0292623956369,
+          "worst_order_error_upper_over_D": 711.9694392989413,
+          "first_graph_filter_error_upper": 22313.422658289386,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 14964.146573746126,
+          "error_over_universal_filter_scale_upper": 15101.437572372042,
+          "reduced_filter_norm_upper_over_D": 0.005352811074260483,
+          "universal_filter_norm_upper_over_D": 0.03125724025500796,
+          "finite_positive_trace_error_upper_over_D2": 6836398.839217397,
+          "reduced_filter_action_norm_upper": 0.8204987444809496,
+          "approximate_full_action_norm_upper": 10341.136841487609,
+          "finite_proper_metric_insertion_error_upper": 1065112456011.6959,
+          "finite_proper_metric_insertion_absolute_upper": 1104818590696.555,
+          "graph_resolvent_bounds": [
+            12602.47151018363,
+            5485.902367726588,
+            4077.0639801157004,
+            3388.5413635594527
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              31.701734968294712,
+              31.70173496829472
+            ],
+            [
+              318.5984934051006,
+              318.5984934051007
+            ],
+            [
+              449.44966347745765,
+              449.44966347745776
+            ],
+            [
+              550.0045454357626,
+              550.0045454357628
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "q": 10005,
+      "kappa_D": 100.024996875781,
+      "proper_graph_a_upper": 0.10929318030017388,
+      "proper_graph_zero_upper_D": 1930493.8602242898,
+      "reduced_frequency_gap_lower_D": 473.182739342315,
+      "filter_HS_squared_upper": 96.80665466465103,
+      "proper_metric_graph_a_upper": 12.100783691666809,
+      "proper_metric_graph_zero_upper_D": 2092.461003720771,
+      "cases": [
+        {
+          "eta_D2": 1.0005,
+          "regulator_M_D": 10.002499687578101,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4050.5333280290497,
+          "worst_order_error_upper_over_D": 4191.693834753838,
+          "first_graph_filter_error_upper": 4130.405347532508,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 405154.58348135254,
+          "error_over_universal_filter_scale_upper": 4088.7174015914206,
+          "reduced_filter_norm_upper_over_D": 4.883148396861983e-08,
+          "universal_filter_norm_upper_over_D": 0.9906611120769783,
+          "finite_positive_trace_error_upper_over_D2": 1588289381.2996843,
+          "reduced_filter_action_norm_upper": 2.3106266975133714e-05,
+          "approximate_full_action_norm_upper": 0.09429451161143913,
+          "finite_proper_metric_insertion_error_upper": 3409031289203.9414,
+          "finite_proper_metric_insertion_absolute_upper": 3409031289214.358,
+          "graph_resolvent_bounds": [
+            4079.9063492287137,
+            4078.9951107598545,
+            4078.0844825879476,
+            4077.1744640320585
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              1.0002499687578097,
+              1.0002499687578101
+            ],
+            [
+              10.052387776046045,
+              10.052387776046048
+            ],
+            [
+              14.180990797543025,
+              14.180990797543028
+            ],
+            [
+              17.353688368758956,
+              17.353688368758963
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1.0005,
+          "regulator_M_D": 100.024996875781,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4089.135997939247,
+          "worst_order_error_upper_over_D": 5649.437929784251,
+          "first_graph_filter_error_upper": 5109.7765746460755,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 409015.8154185168,
+          "error_over_universal_filter_scale_upper": 4090.533088615789,
+          "reduced_filter_norm_upper_over_D": 4.304125215525028e-05,
+          "universal_filter_norm_upper_over_D": 0.9996584575539971,
+          "finite_positive_trace_error_upper_over_D2": 1618707321.6382723,
+          "reduced_filter_action_norm_upper": 0.020366423102815473,
+          "approximate_full_action_norm_upper": 83.11346535633122,
+          "finite_proper_metric_insertion_error_upper": 4332916018943.3687,
+          "finite_proper_metric_insertion_absolute_upper": 4332924111772.6577,
+          "graph_resolvent_bounds": [
+            4079.9063492287137,
+            3991.697379497782,
+            3908.9729864962455,
+            3831.1873974514765
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              1.0002499687578097,
+              1.0002499687578101
+            ],
+            [
+              100.02999800059978,
+              100.0299980005998
+            ],
+            [
+              141.46024353153075,
+              141.4602435315308
+            ],
+            [
+              173.2512640646526,
+              173.25126406465264
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1.0005,
+          "regulator_M_D": 1000.2499687578099,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4086.9901426858823,
+          "worst_order_error_upper_over_D": 7291.747187419953,
+          "first_graph_filter_error_upper": 7210.135247816229,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 408801.17625350313,
+          "error_over_universal_filter_scale_upper": 4088.015509879474,
+          "reduced_filter_norm_upper_over_D": 0.0017476791556924143,
+          "universal_filter_norm_upper_over_D": 0.999749177274129,
+          "finite_positive_trace_error_upper_over_D2": 1617010218.721598,
+          "reduced_filter_action_norm_upper": 0.8269734580308018,
+          "approximate_full_action_norm_upper": 3374.8012357234597,
+          "finite_proper_metric_insertion_error_upper": 8880942191064.316,
+          "finite_proper_metric_insertion_absolute_upper": 8894285206787.254,
+          "graph_resolvent_bounds": [
+            4079.9063492287137,
+            1744.6884382581286,
+            1294.268934584195,
+            1074.9495256635241
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              1.0002499687578097,
+              1.0002499687578101
+            ],
+            [
+              1000.2504688826691,
+              1000.2504688826693
+            ],
+            [
+              1414.5674252222827,
+              1414.5674252222832
+            ],
+            [
+              1732.4840549049788,
+              1732.4840549049793
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100.04999999999998,
+          "regulator_M_D": 10.002499687578101,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 208.3409125279253,
+          "worst_order_error_upper_over_D": 212.69606621641097,
+          "first_graph_filter_error_upper": 2102.2852701080033,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 20839.29912470309,
+          "error_over_universal_filter_scale_upper": 4167.859824940618,
+          "reduced_filter_norm_upper_over_D": 4.8788337657264286e-08,
+          "universal_filter_norm_upper_over_D": 0.049987504685547746,
+          "finite_positive_trace_error_upper_over_D2": 4201983.442546199,
+          "reduced_filter_action_norm_upper": 2.309095660006255e-05,
+          "approximate_full_action_norm_upper": 0.09421120093858128,
+          "finite_proper_metric_insertion_error_upper": 93903207666.89973,
+          "finite_proper_metric_insertion_absolute_upper": 93903207677.29805,
+          "graph_resolvent_bounds": [
+            4079.0042201224373,
+            4078.0935858509333,
+            4077.183561202251,
+            4076.274145496509
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              10.002499687578098,
+              10.002499687578101
+            ],
+            [
+              14.145670715805593,
+              14.145670715805597
+            ],
+            [
+              17.32483766157709,
+              17.324837661577096
+            ],
+            [
+              20.004999375156196,
+              20.004999375156203
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100.04999999999998,
+          "regulator_M_D": 100.024996875781,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 414.62537331841105,
+          "worst_order_error_upper_over_D": 560.1561413882046,
+          "first_graph_filter_error_upper": 5068.780733000337,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 41472.9016707936,
+          "error_over_universal_filter_scale_upper": 4185.340155819027,
+          "reduced_filter_norm_upper_over_D": 4.300550711899882e-05,
+          "universal_filter_norm_upper_over_D": 0.09906611120769784,
+          "finite_positive_trace_error_upper_over_D2": 16642442.063008763,
+          "reduced_filter_action_norm_upper": 0.020354009710774095,
+          "approximate_full_action_norm_upper": 83.04444601322314,
+          "finite_proper_metric_insertion_error_upper": 463776123355.11725,
+          "finite_proper_metric_insertion_absolute_upper": 463784202749.042,
+          "graph_resolvent_bounds": [
+            4079.0042201224373,
+            3990.852495470707,
+            3908.179539471531,
+            3830.440372127409
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              10.002499687578098,
+              10.002499687578101
+            ],
+            [
+              100.52387776046045,
+              100.52387776046048
+            ],
+            [
+              141.8099079754302,
+              141.80990797543026
+            ],
+            [
+              173.53688368758955,
+              173.5368836875896
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100.04999999999998,
+          "regulator_M_D": 1000.2499687578099,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 415.8655161362764,
+          "worst_order_error_upper_over_D": 729.0280931791456,
+          "first_graph_filter_error_upper": 7208.688282960296,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 41596.94695227611,
+          "error_over_universal_filter_scale_upper": 4160.076003896694,
+          "reduced_filter_norm_upper_over_D": 0.0017471563297145921,
+          "universal_filter_norm_upper_over_D": 0.09996584575539971,
+          "finite_positive_trace_error_upper_over_D2": 16742283.104223825,
+          "reduced_filter_action_norm_upper": 0.8269089073371476,
+          "approximate_full_action_norm_upper": 3373.791851777664,
+          "finite_proper_metric_insertion_error_upper": 1009318815980.9996,
+          "finite_proper_metric_insertion_absolute_upper": 1022653851256.5549,
+          "graph_resolvent_bounds": [
+            4079.0042201224373,
+            1744.6178732371532,
+            1294.240126043755,
+            1074.9330206308273
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              10.002499687578098,
+              10.002499687578101
+            ],
+            [
+              1000.2999800059977,
+              1000.2999800059979
+            ],
+            [
+              1414.6024353153075,
+              1414.602435315308
+            ],
+            [
+              1732.5126406465258,
+              1732.5126406465263
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10004.999999999998,
+          "regulator_M_D": 10.002499687578101,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.11944510833449724,
+          "worst_order_error_upper_over_D": 0.11975055139677912,
+          "first_graph_filter_error_upper": 11.959473881434361,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 11.94749658798541,
+          "error_over_universal_filter_scale_upper": 5024.359139919547,
+          "reduced_filter_norm_upper_over_D": 4.4746407187121585e-08,
+          "universal_filter_norm_upper_over_D": 2.3773202712656784e-05,
+          "finite_positive_trace_error_upper_over_D2": 1.3811545398122138,
+          "reduced_filter_action_norm_upper": 2.164111791800944e-05,
+          "approximate_full_action_norm_upper": 0.08640667068635478,
+          "finite_proper_metric_insertion_error_upper": 461424.231027179,
+          "finite_proper_metric_insertion_absolute_upper": 461432.9778865102,
+          "graph_resolvent_bounds": [
+            3991.7059164175466,
+            3990.852495470707,
+            3989.999621670402,
+            3989.147294432237
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              100.02499687578097,
+              100.024996875781
+            ],
+            [
+              100.52387776046045,
+              100.52387776046048
+            ],
+            [
+              101.02029499066013,
+              101.02029499066016
+            ],
+            [
+              101.51428470909892,
+              101.51428470909894
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10004.999999999998,
+          "regulator_M_D": 100.024996875781,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 25.51179826940264,
+          "worst_order_error_upper_over_D": 29.623463296566815,
+          "first_graph_filter_error_upper": 2764.7258149066547,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 2551.8175421925544,
+          "error_over_universal_filter_scale_upper": 5103.635084385109,
+          "reduced_filter_norm_upper_over_D": 3.964420547688746e-05,
+          "universal_filter_norm_upper_over_D": 0.004998750468554774,
+          "finite_positive_trace_error_upper_over_D2": 63006.98619119893,
+          "reduced_filter_action_norm_upper": 0.01917349301148007,
+          "approximate_full_action_norm_upper": 76.55416429164158,
+          "finite_proper_metric_insertion_error_upper": 24133110582.460297,
+          "finite_proper_metric_insertion_absolute_upper": 24139976447.119965,
+          "graph_resolvent_bounds": [
+            3991.7059164175466,
+            3908.981003578203,
+            3831.1949453916545,
+            3757.8750904013905
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              100.02499687578097,
+              100.024996875781
+            ],
+            [
+              141.4567071580559,
+              141.45670715805596
+            ],
+            [
+              173.24837661577087,
+              173.24837661577092
+            ],
+            [
+              200.04999375156194,
+              200.049993751562
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10004.999999999998,
+          "regulator_M_D": 1000.2499687578099,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 47.38558214060625,
+          "worst_order_error_upper_over_D": 71.47244680611395,
+          "first_graph_filter_error_upper": 7067.551882076921,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 4739.742705571205,
+          "error_over_universal_filter_scale_upper": 4783.228246565533,
+          "reduced_filter_norm_upper_over_D": 0.0016965099056418618,
+          "universal_filter_norm_upper_over_D": 0.009906611120769784,
+          "finite_positive_trace_error_upper_over_D2": 217384.587552228,
+          "reduced_filter_action_norm_upper": 0.8204987444809496,
+          "approximate_full_action_norm_upper": 3276.0121303130013,
+          "finite_proper_metric_insertion_error_upper": 212045394677.37698,
+          "finite_proper_metric_insertion_absolute_upper": 224618675078.0899,
+          "graph_resolvent_bounds": [
+            3991.7059164175466,
+            1737.6043199501091,
+            1291.3689507561983,
+            1073.2863468896478
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              100.02499687578097,
+              100.024996875781
+            ],
+            [
+              1005.2387776046045,
+              1005.2387776046047
+            ],
+            [
+              1418.0990797543022,
+              1418.0990797543027
+            ],
+            [
+              1735.3688368758953,
+              1735.3688368758958
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "q": 100000000,
+      "kappa_D": 10000.0,
+      "proper_graph_a_upper": 0.07405978023297911,
+      "proper_graph_zero_upper_D": 1930269.4564692597,
+      "reduced_frequency_gap_lower_D": 47306.44879998857,
+      "filter_HS_squared_upper": 9678.24620728289,
+      "proper_metric_graph_a_upper": 12.100783691666809,
+      "proper_metric_graph_zero_upper_D": 88258.37856568942,
+      "cases": [
+        {
+          "eta_D2": 10000.0,
+          "regulator_M_D": 1000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.40593334516178015,
+          "worst_order_error_upper_over_D": 0.42008006413900867,
+          "first_graph_filter_error_upper": 41.38344542941955,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 4059.3334516178015,
+          "error_over_universal_filter_scale_upper": 40.96576467153747,
+          "reduced_filter_norm_upper_over_D": 4.884369031400946e-10,
+          "universal_filter_norm_upper_over_D": 0.00990908746404575,
+          "finite_positive_trace_error_upper_over_D2": 1594.799615889333,
+          "reduced_filter_action_norm_upper": 2.31062669751337e-05,
+          "approximate_full_action_norm_upper": 0.0009676323475730755,
+          "finite_proper_metric_insertion_error_upper": 14550321740.938168,
+          "finite_proper_metric_insertion_absolute_upper": 14550321741.048227,
+          "graph_resolvent_bounds": [
+            40.877484787616226,
+            40.8683548876969,
+            40.85923110247783,
+            40.85011342513657
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99.99999999999999,
+              100.00000000000001
+            ],
+            [
+              1004.9875621120889,
+              1004.9875621120891
+            ],
+            [
+              1417.7446878757821,
+              1417.7446878757826
+            ],
+            [
+              1734.935157289747,
+              1734.9351572897474
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10000.0,
+          "regulator_M_D": 10000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.4098019989068037,
+          "worst_order_error_upper_over_D": 0.5661711807805463,
+          "first_graph_filter_error_upper": 51.1959825346725,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 4098.019989068037,
+          "error_over_universal_filter_scale_upper": 40.983956441731344,
+          "reduced_filter_norm_upper_over_D": 4.305201112358611e-07,
+          "universal_filter_norm_upper_over_D": 0.009999083409368661,
+          "finite_positive_trace_error_upper_over_D2": 1625.345613171696,
+          "reduced_filter_action_norm_upper": 0.02036642310281547,
+          "approximate_full_action_norm_upper": 0.8528945770362727,
+          "finite_proper_metric_insertion_error_upper": 18536773312.052433,
+          "finite_proper_metric_insertion_absolute_upper": 18536858818.102905,
+          "graph_resolvent_bounds": [
+            40.877484787616226,
+            39.993699595098484,
+            39.16486559082671,
+            38.38551455658681
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99.99999999999999,
+              100.00000000000001
+            ],
+            [
+              10000.499987500622,
+              10000.499987500625
+            ],
+            [
+              14142.489172702235,
+              14142.489172702239
+            ],
+            [
+              17320.796748417775,
+              17320.796748417783
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10000.0,
+          "regulator_M_D": 100000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.40958694717640476,
+          "worst_order_error_upper_over_D": 0.7307589120131182,
+          "first_graph_filter_error_upper": 72.23994098908204,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 4095.869471764048,
+          "error_over_universal_filter_scale_upper": 40.95873226311391,
+          "reduced_filter_norm_upper_over_D": 1.7481160208800132e-05,
+          "universal_filter_norm_upper_over_D": 0.009999990833340938,
+          "finite_positive_trace_error_upper_over_D2": 1623.7753781493086,
+          "reduced_filter_action_norm_upper": 0.8269734580308018,
+          "approximate_full_action_norm_upper": 34.631568545283756,
+          "finite_proper_metric_insertion_error_upper": 38588689551.181854,
+          "finite_proper_metric_insertion_absolute_upper": 38729667265.54217,
+          "graph_resolvent_bounds": [
+            40.877484787616226,
+            17.480419644315848,
+            12.967566938038024,
+            10.770157234386732
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99.99999999999999,
+              100.00000000000001
+            ],
+            [
+              100000.04999998747,
+              100000.0499999875
+            ],
+            [
+              141421.3915926441,
+              141421.39159264416
+            ],
+            [
+              173205.10962439873,
+              173205.10962439878
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000000.0,
+          "regulator_M_D": 1000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.020879355064502256,
+          "worst_order_error_upper_over_D": 0.021315816627039477,
+          "first_graph_filter_error_upper": 21.063261455576146,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 208.79355064502258,
+          "error_over_universal_filter_scale_upper": 41.75871012900452,
+          "reduced_filter_norm_upper_over_D": 4.880053321742407e-10,
+          "universal_filter_norm_upper_over_D": 0.0005,
+          "finite_positive_trace_error_upper_over_D2": 4.219207125098121,
+          "reduced_filter_action_norm_upper": 2.3090956600062537e-05,
+          "approximate_full_action_norm_upper": 0.0009667828550613045,
+          "finite_proper_metric_insertion_error_upper": 427641401.6888386,
+          "finite_proper_metric_insertion_absolute_upper": 427641401.79870474,
+          "graph_resolvent_bounds": [
+            40.86844615641695,
+            40.859322310084664,
+            40.85020457169836,
+            40.841092934446166
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999.9999999999999,
+              1000.0000000000001
+            ],
+            [
+              1414.2135623730946,
+              1414.213562373095
+            ],
+            [
+              1732.050807568877,
+              1732.0508075688774
+            ],
+            [
+              1999.9999999999998,
+              2000.0000000000002
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000000.0,
+          "regulator_M_D": 10000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.04155261817386221,
+          "worst_order_error_upper_over_D": 0.0561373127615451,
+          "first_graph_filter_error_upper": 50.78523612292068,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 415.52618173862214,
+          "error_over_universal_filter_scale_upper": 41.93384943329265,
+          "reduced_filter_norm_upper_over_D": 4.301625715219234e-07,
+          "universal_filter_norm_upper_over_D": 0.000990908746404575,
+          "finite_positive_trace_error_upper_over_D2": 16.711000197960438,
+          "reduced_filter_action_norm_upper": 0.02035400971077409,
+          "approximate_full_action_norm_upper": 0.8521910963218561,
+          "finite_proper_metric_insertion_error_upper": 2145012355.7832613,
+          "finite_proper_metric_insertion_absolute_upper": 2145097720.8366895,
+          "graph_resolvent_bounds": [
+            40.86844615641695,
+            39.985234515018746,
+            39.156915869459034,
+            38.37802994451322
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999.9999999999999,
+              1000.0000000000001
+            ],
+            [
+              10049.875621120887,
+              10049.875621120891
+            ],
+            [
+              14177.446878757823,
+              14177.446878757826
+            ],
+            [
+              17349.351572897467,
+              17349.351572897474
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000000.0,
+          "regulator_M_D": 100000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.0416769018870836,
+          "worst_order_error_upper_over_D": 0.07306119678939278,
+          "first_graph_filter_error_upper": 72.22544352790925,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 416.7690188708361,
+          "error_over_universal_filter_scale_upper": 41.680722303040646,
+          "reduced_filter_norm_upper_over_D": 1.7475930642120307e-05,
+          "universal_filter_norm_upper_over_D": 0.0009999083409368663,
+          "finite_positive_trace_error_upper_over_D2": 16.82486486460556,
+          "reduced_filter_action_norm_upper": 0.8269089073371476,
+          "approximate_full_action_norm_upper": 34.62140474114728,
+          "finite_proper_metric_insertion_error_upper": 5001437374.91613,
+          "finite_proper_metric_insertion_absolute_upper": 5142332349.138655,
+          "graph_resolvent_bounds": [
+            40.86844615641695,
+            17.479712637751348,
+            12.967278298894676,
+            10.769991866810802
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999.9999999999999,
+              1000.0000000000001
+            ],
+            [
+              100004.99987500622,
+              100004.99987500625
+            ],
+            [
+              141424.89172702233,
+              141424.8917270224
+            ],
+            [
+              173207.96748417776,
+              173207.96748417782
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100000000.0,
+          "regulator_M_D": 1000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 1.1970461285656634e-05,
+          "worst_order_error_upper_over_D": 1.2001071951953477e-05,
+          "first_graph_filter_error_upper": 0.11982461601076837,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.11970461285656635,
+          "error_over_universal_filter_scale_upper": 50.34016634926154,
+          "reduced_filter_norm_upper_over_D": 4.4757592390942586e-10,
+          "universal_filter_norm_upper_over_D": 2.377914527060802e-07,
+          "finite_positive_trace_error_upper_over_D2": 1.386918413753115e-06,
+          "reduced_filter_action_norm_upper": 2.164111791800943e-05,
+          "approximate_full_action_norm_upper": 0.0008871859897283874,
+          "finite_proper_metric_insertion_error_upper": 2940.745432265025,
+          "finite_proper_metric_insertion_absolute_upper": 2940.837952044355,
+          "graph_resolvent_bounds": [
+            39.99378512838723,
+            39.985234515018746,
+            39.976689383632504,
+            39.96814972837332
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999.999999999998,
+              10000.000000000002
+            ],
+            [
+              10049.875621120887,
+              10049.875621120891
+            ],
+            [
+              10099.504938362075,
+              10099.504938362079
+            ],
+            [
+              10148.891565092217,
+              10148.89156509222
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100000000.0,
+          "regulator_M_D": 10000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.002556722479217397,
+          "worst_order_error_upper_over_D": 0.002968782275667363,
+          "first_graph_filter_error_upper": 27.7003999030864,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 25.567224792173974,
+          "error_over_universal_filter_scale_upper": 51.13444958434795,
+          "reduced_filter_norm_upper_over_D": 3.965411528968488e-07,
+          "universal_filter_norm_upper_over_D": 5e-05,
+          "finite_positive_trace_error_upper_over_D2": 0.06328467306156693,
+          "reduced_filter_action_norm_upper": 0.01917349301148007,
+          "approximate_full_action_norm_upper": 0.7860247533601028,
+          "finite_proper_metric_insertion_error_upper": 157184563.83528084,
+          "finite_proper_metric_insertion_absolute_upper": 157257187.4204064,
+          "graph_resolvent_bounds": [
+            39.99378512838723,
+            39.16494591574539,
+            38.385590181070164,
+            37.650982324798825
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999.999999999998,
+              10000.000000000002
+            ],
+            [
+              14142.135623730948,
+              14142.135623730952
+            ],
+            [
+              17320.50807568877,
+              17320.508075688776
+            ],
+            [
+              19999.999999999996,
+              20000.000000000004
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100000000.0,
+          "regulator_M_D": 100000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 0.004748853129455511,
+          "worst_order_error_upper_over_D": 0.007162772669499473,
+          "first_graph_filter_error_upper": 70.81136668735145,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 47.488531294555116,
+          "error_over_universal_filter_scale_upper": 47.92422255516774,
+          "reduced_filter_norm_upper_over_D": 1.6969339801155875e-05,
+          "universal_filter_norm_upper_over_D": 9.909087464045749e-05,
+          "finite_positive_trace_error_upper_over_D2": 0.21981983672692015,
+          "reduced_filter_action_norm_upper": 0.8204987444809496,
+          "approximate_full_action_norm_upper": 33.63666301579797,
+          "finite_proper_metric_insertion_error_upper": 1569850203.2854311,
+          "finite_proper_metric_insertion_absolute_upper": 1702843896.6876066,
+          "graph_resolvent_bounds": [
+            39.99378512838723,
+            17.409442294940053,
+            12.938511358162845,
+            10.75349347811177
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999.999999999998,
+              10000.000000000002
+            ],
+            [
+              100498.75621120888,
+              100498.7562112089
+            ],
+            [
+              141774.4687875782,
+              141774.46878757825
+            ],
+            [
+              173493.5157289747,
+              173493.51572897474
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "q": 1000000000000,
+      "kappa_D": 1000000.0,
+      "proper_graph_a_upper": 0.07388222997902917,
+      "proper_graph_zero_upper_D": 1930267.6504646398,
+      "reduced_frequency_gap_lower_D": 4730644.879998856,
+      "filter_HS_squared_upper": 967824.6207282889,
+      "proper_metric_graph_a_upper": 12.100783691666809,
+      "proper_metric_graph_zero_upper_D": 8704927.445041317,
+      "cases": [
+        {
+          "eta_D2": 100000000.0,
+          "regulator_M_D": 100000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4.7856600900350146e-05,
+          "worst_order_error_upper_over_D": 4.952439659196257e-05,
+          "first_graph_filter_error_upper": 0.48788084433119344,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 47.85660090035015,
+          "error_over_universal_filter_scale_upper": 0.48295669075476033,
+          "reduced_filter_norm_upper_over_D": 4.8843690314009485e-12,
+          "universal_filter_norm_upper_over_D": 9.909087464045749e-05,
+          "finite_positive_trace_error_upper_over_D2": 0.002216564903078164,
+          "reduced_filter_action_norm_upper": 2.310626697513371e-05,
+          "approximate_full_action_norm_upper": 3.4241549039991944e-05,
+          "finite_proper_metric_insertion_error_upper": 199507786.57530403,
+          "finite_proper_metric_insertion_absolute_upper": 199507786.59044454,
+          "graph_resolvent_bounds": [
+            0.4819159348713863,
+            0.4818082999648414,
+            0.48170073714618317,
+            0.48159324633497996
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999.999999999998,
+              10000.000000000002
+            ],
+            [
+              100498.75621120888,
+              100498.7562112089
+            ],
+            [
+              141774.4687875782,
+              141774.46878757825
+            ],
+            [
+              173493.5157289747,
+              173493.51572897474
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100000000.0,
+          "regulator_M_D": 1000000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4.831268715318915e-05,
+          "worst_order_error_upper_over_D": 6.67474809912356e-05,
+          "first_graph_filter_error_upper": 0.6035635488103773,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 48.31268715318915,
+          "error_over_universal_filter_scale_upper": 0.48317115854761733,
+          "reduced_filter_norm_upper_over_D": 4.3052011123586135e-09,
+          "universal_filter_norm_upper_over_D": 9.999083409368661e-05,
+          "finite_positive_trace_error_upper_over_D2": 0.002259417287743806,
+          "reduced_filter_action_norm_upper": 0.020366423102815476,
+          "approximate_full_action_norm_upper": 0.03018133029427812,
+          "finite_proper_metric_insertion_error_upper": 262666073.81386453,
+          "finite_proper_metric_insertion_absolute_upper": 262677836.60626855,
+          "graph_resolvent_bounds": [
+            0.4819159348713863,
+            0.47149674764666977,
+            0.4617253951259091,
+            0.4525374109774205
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999.999999999998,
+              10000.000000000002
+            ],
+            [
+              1000049.9987500623,
+              1000049.9987500625
+            ],
+            [
+              1414248.9172702234,
+              1414248.9172702238
+            ],
+            [
+              1732079.674841778,
+              1732079.6748417784
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100000000.0,
+          "regulator_M_D": 10000000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4.828899946136454e-05,
+          "worst_order_error_upper_over_D": 8.704929103302557e-05,
+          "first_graph_filter_error_upper": 0.8595347694127342,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 48.28899946136454,
+          "error_over_universal_filter_scale_upper": 0.4828904372628457,
+          "reduced_filter_norm_upper_over_D": 1.7481160208800133e-07,
+          "universal_filter_norm_upper_over_D": 9.999990833340939e-05,
+          "finite_positive_trace_error_upper_over_D2": 0.002273139775015902,
+          "reduced_filter_action_norm_upper": 0.8269734580308018,
+          "approximate_full_action_norm_upper": 1.2255052816799525,
+          "finite_proper_metric_insertion_error_upper": 882842216.1988782,
+          "finite_proper_metric_insertion_absolute_upper": 902236067.0249496,
+          "graph_resolvent_bounds": [
+            0.4819159348713863,
+            0.20608148516482802,
+            0.15520386787705137,
+            0.13370997385454844
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999.999999999998,
+              10000.000000000002
+            ],
+            [
+              10000004.999998746,
+              10000004.99999875
+            ],
+            [
+              14142139.159264412,
+              14142139.159264416
+            ],
+            [
+              17320510.962439872,
+              17320510.96243988
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10000000000.0,
+          "regulator_M_D": 100000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 2.4615247165279395e-06,
+          "worst_order_error_upper_over_D": 2.512980373116985e-06,
+          "first_graph_filter_error_upper": 0.24832059478570365,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 2.46152471652794,
+          "error_over_universal_filter_scale_upper": 0.49230494330558794,
+          "reduced_filter_norm_upper_over_D": 4.880053321742409e-12,
+          "universal_filter_norm_upper_over_D": 5e-06,
+          "finite_positive_trace_error_upper_over_D2": 5.8641732148194766e-06,
+          "reduced_filter_action_norm_upper": 2.3090956600062547e-05,
+          "approximate_full_action_norm_upper": 3.4216777025526034e-05,
+          "finite_proper_metric_insertion_error_upper": 5872744.940152549,
+          "finite_proper_metric_insertion_absolute_upper": 5872744.955270934,
+          "graph_resolvent_bounds": [
+            0.4818093759569377,
+            0.4817018124177989,
+            0.4815943208869189,
+            0.4814869012839904
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99999.99999999999,
+              100000.00000000001
+            ],
+            [
+              141421.35623730946,
+              141421.35623730952
+            ],
+            [
+              173205.08075688768,
+              173205.08075688774
+            ],
+            [
+              199999.99999999997,
+              200000.00000000003
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10000000000.0,
+          "regulator_M_D": 1000000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4.898752684430591e-06,
+          "worst_order_error_upper_over_D": 6.618182527914051e-06,
+          "first_graph_filter_error_upper": 0.5987211461517281,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 4.898752684430591,
+          "error_over_universal_filter_scale_upper": 0.4943697088359836,
+          "reduced_filter_norm_upper_over_D": 4.301625715219236e-09,
+          "universal_filter_norm_upper_over_D": 9.909087464045749e-06,
+          "finite_positive_trace_error_upper_over_D2": 2.3266429422000438e-05,
+          "reduced_filter_action_norm_upper": 0.0203540097107741,
+          "approximate_full_action_norm_upper": 0.030161098299715416,
+          "finite_proper_metric_insertion_error_upper": 30597573.048139922,
+          "finite_proper_metric_insertion_absolute_upper": 30609319.90031902,
+          "graph_resolvent_bounds": [
+            0.4818093759569377,
+            0.47139695048445235,
+            0.4616316736695922,
+            0.4524491728227656
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99999.99999999999,
+              100000.00000000001
+            ],
+            [
+              1004987.5621120889,
+              1004987.5621120891
+            ],
+            [
+              1417744.6878757821,
+              1417744.6878757826
+            ],
+            [
+              1734935.157289747,
+              1734935.1572897474
+            ]
+          ]
+        },
+        {
+          "eta_D2": 10000000000.0,
+          "regulator_M_D": 10000000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4.915069840217092e-06,
+          "worst_order_error_upper_over_D": 8.703196952434989e-06,
+          "first_graph_filter_error_upper": 0.859363973686415,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 4.915069840217092,
+          "error_over_universal_filter_scale_upper": 0.49155203922110574,
+          "reduced_filter_norm_upper_over_D": 1.747593064212031e-07,
+          "universal_filter_norm_upper_over_D": 9.999083409368661e-06,
+          "finite_positive_trace_error_upper_over_D2": 2.5043255606676992e-05,
+          "reduced_filter_action_norm_upper": 0.8269089073371476,
+          "approximate_full_action_norm_upper": 1.2253350172032242,
+          "finite_proper_metric_insertion_error_upper": 120903379.09713821,
+          "finite_proper_metric_insertion_absolute_upper": 140291552.22544473,
+          "graph_resolvent_bounds": [
+            0.4818093759569377,
+            0.20607315006957297,
+            0.15520089716911045,
+            0.13370844127926132
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99999.99999999999,
+              100000.00000000001
+            ],
+            [
+              10000499.987500623,
+              10000499.987500627
+            ],
+            [
+              14142489.172702234,
+              14142489.172702238
+            ],
+            [
+              17320796.748417776,
+              17320796.748417784
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000000000000.0,
+          "regulator_M_D": 100000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 1.4112306741207789e-09,
+          "worst_order_error_upper_over_D": 1.4148394499400653e-09,
+          "first_graph_filter_error_upper": 0.0014126454243811057,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.001411230674120779,
+          "error_over_universal_filter_scale_upper": 0.5934740959192999,
+          "reduced_filter_norm_upper_over_D": 4.475759239094261e-12,
+          "universal_filter_norm_upper_over_D": 2.377914527060802e-09,
+          "finite_positive_trace_error_upper_over_D2": 1.9397186275427053e-12,
+          "reduced_filter_action_norm_upper": 2.1641117918009438e-05,
+          "approximate_full_action_norm_upper": 3.187942523952299e-05,
+          "finite_proper_metric_insertion_error_upper": 41.653587190805204,
+          "finite_proper_metric_insertion_absolute_upper": 41.66669159293492,
+          "graph_resolvent_bounds": [
+            0.4714977560221856,
+            0.47139695048445235,
+            0.47129620957531876,
+            0.4711955332257563
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999999.9999999999,
+              1000000.0000000001
+            ],
+            [
+              1004987.5621120889,
+              1004987.5621120891
+            ],
+            [
+              1009950.4938362077,
+              1009950.4938362079
+            ],
+            [
+              1014889.1565092218,
+              1014889.156509222
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000000000000.0,
+          "regulator_M_D": 1000000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 3.0141905994960116e-07,
+          "worst_order_error_upper_over_D": 3.499979250781272e-07,
+          "first_graph_filter_error_upper": 0.3265676492808892,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.30141905994960116,
+          "error_over_universal_filter_scale_upper": 0.6028381198992023,
+          "reduced_filter_norm_upper_over_D": 3.9654115289684895e-09,
+          "universal_filter_norm_upper_over_D": 5.000000000000001e-07,
+          "finite_positive_trace_error_upper_over_D2": 9.024379144563255e-08,
+          "reduced_filter_action_norm_upper": 0.019173493011480074,
+          "approximate_full_action_norm_upper": 0.028244379026802956,
+          "finite_proper_metric_insertion_error_upper": 2376951.0058215354,
+          "finite_proper_metric_insertion_absolute_upper": 2387237.3323830836,
+          "graph_resolvent_bounds": [
+            0.4714977560221856,
+            0.4617263420985147,
+            0.4525383025352985,
+            0.44387780804405924
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999999.9999999999,
+              1000000.0000000001
+            ],
+            [
+              1414213.5623730947,
+              1414213.5623730952
+            ],
+            [
+              1732050.807568877,
+              1732050.8075688775
+            ],
+            [
+              1999999.9999999998,
+              2000000.0000000002
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000000000000.0,
+          "regulator_M_D": 10000000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 5.614871848328272e-07,
+          "worst_order_error_upper_over_D": 8.53422190176278e-07,
+          "first_graph_filter_error_upper": 0.8427047743308785,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.5614871848328272,
+          "error_over_universal_filter_scale_upper": 0.5666386404097593,
+          "reduced_filter_norm_upper_over_D": 1.6969339801155877e-07,
+          "universal_filter_norm_upper_over_D": 9.90908746404575e-07,
+          "finite_positive_trace_error_upper_over_D2": 4.89553949191249e-07,
+          "reduced_filter_action_norm_upper": 0.8204987444809497,
+          "approximate_full_action_norm_upper": 1.2086726980973286,
+          "finite_proper_metric_insertion_error_upper": 43083044.557694875,
+          "finite_proper_metric_insertion_absolute_upper": 61920128.386534214,
+          "graph_resolvent_bounds": [
+            0.4714977560221856,
+            0.20524471363015934,
+            0.15490501932891804,
+            0.13355560463479668
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999999.9999999999,
+              1000000.0000000001
+            ],
+            [
+              10049875.621120887,
+              10049875.62112089
+            ],
+            [
+              14177446.878757823,
+              14177446.878757827
+            ],
+            [
+              17349351.572897468,
+              17349351.572897475
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "q": 10000000000000000,
+      "kappa_D": 100000000.0,
+      "proper_graph_a_upper": 0.07388047408507122,
+      "proper_graph_zero_upper_D": 1930267.6324053118,
+      "reduced_frequency_gap_lower_D": 473064487.9998857,
+      "filter_HS_squared_upper": 96782462.07282889,
+      "proper_metric_graph_a_upper": 12.100783691666809,
+      "proper_metric_graph_zero_upper_D": 870371834.6484627,
+      "cases": [
+        {
+          "eta_D2": 1000000000000.0,
+          "regulator_M_D": 10000000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 7.741872247857742e-08,
+          "worst_order_error_upper_over_D": 8.011675387593404e-08,
+          "first_graph_filter_error_upper": 0.0789256047844684,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 7.741872247857743,
+          "error_over_universal_filter_scale_upper": 0.078129013150287,
+          "reduced_filter_norm_upper_over_D": 4.884369031400946e-14,
+          "universal_filter_norm_upper_over_D": 9.90908746404575e-07,
+          "finite_positive_trace_error_upper_over_D2": 5.800817671344889e-07,
+          "reduced_filter_action_norm_upper": 2.31062669751337e-05,
+          "approximate_full_action_norm_upper": 2.4907650328053166e-05,
+          "finite_proper_metric_insertion_error_upper": 522176040.07419753,
+          "finite_proper_metric_insertion_absolute_upper": 522176040.9032454,
+          "graph_resolvent_bounds": [
+            0.07796064768055659,
+            0.07794323533450184,
+            0.0779258346502701,
+            0.07790844561484975
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999999.9999999999,
+              1000000.0000000001
+            ],
+            [
+              10049875.621120887,
+              10049875.62112089
+            ],
+            [
+              14177446.878757823,
+              14177446.878757827
+            ],
+            [
+              17349351.572897468,
+              17349351.572897475
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000000000000.0,
+          "regulator_M_D": 100000000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 7.815692325768278e-08,
+          "worst_order_error_upper_over_D": 1.0963700748752848e-07,
+          "first_graph_filter_error_upper": 0.09781942412388388,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 7.815692325768278,
+          "error_over_universal_filter_scale_upper": 0.07816408770473252,
+          "reduced_filter_norm_upper_over_D": 4.305201112358611e-11,
+          "universal_filter_norm_upper_over_D": 9.999083409368662e-07,
+          "finite_positive_trace_error_upper_over_D2": 5.918474296318027e-07,
+          "reduced_filter_action_norm_upper": 0.02036642310281547,
+          "approximate_full_action_norm_upper": 0.02195420600065044,
+          "finite_proper_metric_insertion_error_upper": 805142854.2442828,
+          "finite_proper_metric_insertion_absolute_upper": 805786948.7003825,
+          "graph_resolvent_bounds": [
+            0.07796064768055659,
+            0.07627511183173544,
+            0.07513063152472065,
+            0.07471625045689563
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999999.9999999999,
+              1000000.0000000001
+            ],
+            [
+              100004999.87500623,
+              100004999.87500626
+            ],
+            [
+              141424891.72702232,
+              141424891.72702238
+            ],
+            [
+              173207967.48417777,
+              173207967.48417783
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1000000000000.0,
+          "regulator_M_D": 1000000000.0,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 7.839189864197018e-08,
+          "worst_order_error_upper_over_D": 2.7725417462897503e-07,
+          "first_graph_filter_error_upper": 0.2685151645620035,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 7.839189864197018,
+          "error_over_universal_filter_scale_upper": 0.07839197050121686,
+          "reduced_filter_norm_upper_over_D": 1.748116020880013e-09,
+          "universal_filter_norm_upper_over_D": 9.999990833340938e-07,
+          "finite_positive_trace_error_upper_over_D2": 6.21282050350109e-07,
+          "reduced_filter_action_norm_upper": 0.8269734580308018,
+          "approximate_full_action_norm_upper": 0.8914449809386821,
+          "finite_proper_metric_insertion_error_upper": 8344415659.894273,
+          "finite_proper_metric_insertion_absolute_upper": 9406363484.0542,
+          "graph_resolvent_bounds": [
+            0.07796064768055659,
+            0.07390568571119317,
+            0.0738930809796814,
+            0.07388887892187695
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              999999.9999999999,
+              1000000.0000000001
+            ],
+            [
+              1000000499.9998748,
+              1000000499.9998751
+            ],
+            [
+              1414213915.9264412,
+              1414213915.9264417
+            ],
+            [
+              1732051096.2439876,
+              1732051096.243988
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100000000000000.0,
+          "regulator_M_D": 10000000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 3.982065071855975e-09,
+          "worst_order_error_upper_over_D": 4.065306069387648e-09,
+          "first_graph_filter_error_upper": 0.04017139297765925,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.3982065071855975,
+          "error_over_universal_filter_scale_upper": 0.0796413014371195,
+          "reduced_filter_norm_upper_over_D": 4.8800533217424066e-14,
+          "universal_filter_norm_upper_over_D": 5.0000000000000004e-08,
+          "finite_positive_trace_error_upper_over_D2": 1.534701847219869e-09,
+          "reduced_filter_action_norm_upper": 2.3090956600062537e-05,
+          "approximate_full_action_norm_upper": 2.4891125510466677e-05,
+          "finite_proper_metric_insertion_error_upper": 15375715.750340452,
+          "finite_proper_metric_insertion_absolute_upper": 15375716.578266097,
+          "graph_resolvent_bounds": [
+            0.07794340940021467,
+            0.07792600859942914,
+            0.07790861944758501,
+            0.07789124193169082
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999999.999999998,
+              10000000.000000002
+            ],
+            [
+              14142135.623730948,
+              14142135.623730952
+            ],
+            [
+              17320508.07568877,
+              17320508.075688776
+            ],
+            [
+              19999999.999999996,
+              20000000.000000004
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100000000000000.0,
+          "regulator_M_D": 100000000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 7.925208393765575e-09,
+          "worst_order_error_upper_over_D": 1.0872175134516274e-08,
+          "first_graph_filter_error_upper": 0.09703803069079986,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.7925208393765575,
+          "error_over_universal_filter_scale_upper": 0.07997919508250882,
+          "reduced_filter_norm_upper_over_D": 4.301625715219234e-11,
+          "universal_filter_norm_upper_over_D": 9.90908746404575e-08,
+          "finite_positive_trace_error_upper_over_D2": 6.144791460892015e-09,
+          "reduced_filter_action_norm_upper": 0.02035400971077409,
+          "approximate_full_action_norm_upper": 0.021940806486586327,
+          "finite_proper_metric_insertion_error_upper": 95796015.59039056,
+          "finite_proper_metric_insertion_absolute_upper": 96439306.53736658,
+          "graph_resolvent_bounds": [
+            0.07794340940021467,
+            0.0762589674155828,
+            0.07512452501435515,
+            0.07471351688245953
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999999.999999998,
+              10000000.000000002
+            ],
+            [
+              100498756.21120888,
+              100498756.21120891
+            ],
+            [
+              141774468.7875782,
+              141774468.78757825
+            ],
+            [
+              173493515.72897467,
+              173493515.72897473
+            ]
+          ]
+        },
+        {
+          "eta_D2": 100000000000000.0,
+          "regulator_M_D": 1000000000.0,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 8.224817256332036e-09,
+          "worst_order_error_upper_over_D": 2.7721590357586043e-08,
+          "first_graph_filter_error_upper": 0.26847869445767564,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.8224817256332037,
+          "error_over_universal_filter_scale_upper": 0.0822557120448238,
+          "reduced_filter_norm_upper_over_D": 1.7475930642120307e-09,
+          "universal_filter_norm_upper_over_D": 9.999083409368661e-08,
+          "finite_positive_trace_error_upper_over_D2": 9.32933440636311e-09,
+          "reduced_filter_action_norm_upper": 0.8269089073371476,
+          "approximate_full_action_norm_upper": 0.8913746517628489,
+          "finite_proper_metric_insertion_error_upper": 1488068028.5326698,
+          "finite_proper_metric_insertion_absolute_upper": 2549819386.4015813,
+          "graph_resolvent_bounds": [
+            0.07794340940021467,
+            0.0739056832159174,
+            0.07389308035572455,
+            0.07388887864454236
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              9999999.999999998,
+              10000000.000000002
+            ],
+            [
+              1000049998.7500623,
+              1000049998.7500626
+            ],
+            [
+              1414248917.2702234,
+              1414248917.2702239
+            ],
+            [
+              1732079674.8417778,
+              1732079674.8417783
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1e+16,
+          "regulator_M_D": 10000000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 2.28298027560526e-12,
+          "worst_order_error_upper_over_D": 2.288818275136871e-12,
+          "first_graph_filter_error_upper": 0.00022852689495963112,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.00022829802756052603,
+          "error_over_universal_filter_scale_upper": 0.0960076676274448,
+          "reduced_filter_norm_upper_over_D": 4.4757592390942584e-14,
+          "universal_filter_norm_upper_over_D": 2.377914527060802e-11,
+          "finite_positive_trace_error_upper_over_D2": 5.242086891814255e-16,
+          "reduced_filter_action_norm_upper": 2.164111791800943e-05,
+          "approximate_full_action_norm_upper": 2.3326368101419527e-05,
+          "finite_proper_metric_insertion_error_upper": 122.9441763091392,
+          "finite_proper_metric_insertion_absolute_upper": 123.66936418737838,
+          "graph_resolvent_bounds": [
+            0.07627527495895874,
+            0.0762589674155828,
+            0.07624267032732387,
+            0.07622638368301506
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99999999.99999999,
+              100000000.00000001
+            ],
+            [
+              100498756.21120888,
+              100498756.21120891
+            ],
+            [
+              100995049.38362075,
+              100995049.38362078
+            ],
+            [
+              101488915.65092218,
+              101488915.65092221
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1e+16,
+          "regulator_M_D": 100000000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 4.887853070942624e-10,
+          "worst_order_error_upper_over_D": 5.829333610985336e-10,
+          "first_graph_filter_error_upper": 0.053396654840334803,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.04887853070942624,
+          "error_over_universal_filter_scale_upper": 0.09775706141885249,
+          "reduced_filter_norm_upper_over_D": 3.965411528968488e-11,
+          "universal_filter_norm_upper_over_D": 5e-09,
+          "finite_positive_trace_error_upper_over_D2": 2.687414509183666e-11,
+          "reduced_filter_action_norm_upper": 0.01917349301148007,
+          "approximate_full_action_norm_upper": 0.02066658282027037,
+          "finite_proper_metric_insertion_error_upper": 9151762.103314415,
+          "finite_proper_metric_insertion_absolute_upper": 9720999.773236776,
+          "graph_resolvent_bounds": [
+            0.07627527495895874,
+            0.07513069351250833,
+            0.07471627816028624,
+            0.07450820612088759
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99999999.99999999,
+              100000000.00000001
+            ],
+            [
+              141421356.23730946,
+              141421356.23730952
+            ],
+            [
+              173205080.75688767,
+              173205080.75688773
+            ],
+            [
+              199999999.99999997,
+              200000000.00000003
+            ]
+          ]
+        },
+        {
+          "eta_D2": 1e+16,
+          "regulator_M_D": 1000000000.0,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 1.1742538543858323e-09,
+          "worst_order_error_upper_over_D": 2.7346462271680142e-09,
+          "first_graph_filter_error_upper": 0.26490500838834,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.11742538543858323,
+          "error_over_universal_filter_scale_upper": 0.11850272375196093,
+          "reduced_filter_norm_upper_over_D": 1.6969339801155873e-09,
+          "universal_filter_norm_upper_over_D": 9.909087464045749e-09,
+          "finite_positive_trace_error_upper_over_D2": 5.191541581350299e-10,
+          "reduced_filter_action_norm_upper": 0.8204987444809496,
+          "approximate_full_action_norm_upper": 0.8843931174455538,
+          "finite_proper_metric_insertion_error_upper": 782485862.6214528,
+          "finite_proper_metric_insertion_absolute_upper": 1824916087.123952,
+          "graph_resolvent_bounds": [
+            0.07627527495895874,
+            0.07390543615824573,
+            0.07389301827040803,
+            0.07388885100320608
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              99999999.99999999,
+              100000000.00000001
+            ],
+            [
+              1004987562.1120888,
+              1004987562.112089
+            ],
+            [
+              1417744687.8757823,
+              1417744687.8757827
+            ],
+            [
+              1734935157.289747,
+              1734935157.2897475
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "q": 4642875905017627791065088,
+      "kappa_D": 2154733372140.8845,
+      "proper_graph_a_upper": 0.07388045635157255,
+      "proper_graph_zero_upper_D": 1930267.6322229027,
+      "reduced_frequency_gap_lower_D": 10193278394680.945,
+      "filter_HS_squared_upper": 2085404008662.8384,
+      "proper_metric_graph_a_upper": 12.100783691666809,
+      "proper_metric_graph_zero_upper_D": 18754166068097.62,
+      "cases": [
+        {
+          "eta_D2": 4.642875905017628e+20,
+          "regulator_M_D": 215473337214.08847,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 3.404921671964429e-12,
+          "worst_order_error_upper_over_D": 3.5259098354335576e-12,
+          "first_graph_filter_error_upper": 0.07481198802711728,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 7.336698356107493,
+          "error_over_universal_filter_scale_upper": 0.07404010089453805,
+          "reduced_filter_norm_upper_over_D": 2.2668090143087974e-18,
+          "universal_filter_norm_upper_over_D": 4.598753419872246e-11,
+          "finite_positive_trace_error_upper_over_D2": 2.417714603237729e-11,
+          "reduced_filter_action_norm_upper": 2.3106266975133717e-05,
+          "approximate_full_action_norm_upper": 2.4813372899385935e-05,
+          "finite_proper_metric_insertion_error_upper": 10107093791856.191,
+          "finite_proper_metric_insertion_absolute_upper": 10107093809593.31,
+          "graph_resolvent_bounds": [
+            0.07388051066262964,
+            0.07388045688930599,
+            0.07388045662177692,
+            0.07388045653200802
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              21547333721.40884,
+              21547333721.408848
+            ],
+            [
+              216548023866.9428,
+              216548023866.94287
+            ],
+            [
+              305486179214.141,
+              305486179214.1411
+            ],
+            [
+              373832268191.27124,
+              373832268191.27136
+            ]
+          ]
+        },
+        {
+          "eta_D2": 4.642875905017628e+20,
+          "regulator_M_D": 2154733372140.8845,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 3.4376154589547126e-12,
+          "worst_order_error_upper_over_D": 5.014661942664262e-12,
+          "first_graph_filter_error_upper": 0.09503383470220289,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 7.407144749997123,
+          "error_over_universal_filter_scale_upper": 0.07407823744181376,
+          "reduced_filter_norm_upper_over_D": 1.9980203435012854e-15,
+          "universal_filter_norm_upper_over_D": 4.6405200470041654e-11,
+          "finite_positive_trace_error_upper_over_D2": 2.467228322682957e-11,
+          "reduced_filter_action_norm_upper": 0.02036642310281548,
+          "approximate_full_action_norm_upper": 0.021871107592614698,
+          "finite_proper_metric_insertion_error_upper": 16057542942620.496,
+          "finite_proper_metric_insertion_absolute_upper": 16071323063627.076,
+          "graph_resolvent_bounds": [
+            0.07388051066262964,
+            0.07388045635700312,
+            0.07388045635428797,
+            0.07388045635338286
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              21547333721.40884,
+              21547333721.408848
+            ],
+            [
+              2154841106116.2092,
+              2154841106116.2097
+            ],
+            [
+              3047329338556.263,
+              3047329338556.264
+            ],
+            [
+              3732169878588.5107,
+              3732169878588.5117
+            ]
+          ]
+        },
+        {
+          "eta_D2": 4.642875905017628e+20,
+          "regulator_M_D": 21547333721408.844,
+          "nominal_eta_over_kappa_squared": 0.0001,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 3.4487641768943885e-12,
+          "worst_order_error_upper_over_D": 1.2708594539950399e-11,
+          "first_graph_filter_error_upper": 0.26509713776554406,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 7.431167264598328,
+          "error_over_universal_filter_scale_upper": 0.07431174076502248,
+          "reduced_filter_norm_upper_over_D": 8.112911061210014e-14,
+          "universal_filter_norm_upper_over_D": 4.640941177518042e-11,
+          "finite_positive_trace_error_upper_over_D2": 2.597071372373727e-11,
+          "reduced_filter_action_norm_upper": 0.8269734580308018,
+          "approximate_full_action_norm_upper": 0.8880707911016518,
+          "finite_proper_metric_insertion_error_upper": 170037171440283.2,
+          "finite_proper_metric_insertion_absolute_upper": 192757083684542.66,
+          "graph_resolvent_bounds": [
+            0.07388051066262964,
+            0.07388045635162686,
+            0.0738804563515997,
+            0.07388045635159066
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              21547333721.40884,
+              21547333721.408848
+            ],
+            [
+              21547344495073.004,
+              21547344495073.01
+            ],
+            [
+              30472539199927.457,
+              30472539199927.465
+            ],
+            [
+              37321082993301.22,
+              37321082993301.234
+            ]
+          ]
+        },
+        {
+          "eta_D2": 4.6428759050176275e+22,
+          "regulator_M_D": 215473337214.08847,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 1.7517298081777554e-13,
+          "worst_order_error_upper_over_D": 1.7895194846661104e-13,
+          "first_graph_filter_error_upper": 0.038086147085574125,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.377451067665456,
+          "error_over_universal_filter_scale_upper": 0.0754902135330912,
+          "reduced_filter_norm_upper_over_D": 2.264806117006357e-18,
+          "universal_filter_norm_upper_over_D": 2.3204727158572463e-12,
+          "finite_positive_trace_error_upper_over_D2": 6.399347207380317e-14,
+          "reduced_filter_action_norm_upper": 2.3090956600062554e-05,
+          "approximate_full_action_norm_upper": 2.4796931382951474e-05,
+          "finite_proper_metric_insertion_error_upper": 297754564092.93463,
+          "finite_proper_metric_insertion_absolute_upper": 297754581806.07025,
+          "graph_resolvent_bounds": [
+            0.07388045689468332,
+            0.07388045662312794,
+            0.07388045653260948,
+            0.07388045648735024
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              215473337214.0884,
+              215473337214.08847
+            ],
+            [
+              304725315817.95514,
+              304725315817.95526
+            ],
+            [
+              373210767731.22284,
+              373210767731.22296
+            ],
+            [
+              430946674428.1768,
+              430946674428.17694
+            ]
+          ]
+        },
+        {
+          "eta_D2": 4.6428759050176275e+22,
+          "regulator_M_D": 2154733372140.8845,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 3.4885895604534256e-13,
+          "worst_order_error_upper_over_D": 4.973057761305414e-13,
+          "first_graph_filter_error_upper": 0.09429302774668917,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.7516980347611296,
+          "error_over_universal_filter_scale_upper": 0.07585946107435218,
+          "reduced_filter_norm_upper_over_D": 1.9963610211992297e-15,
+          "universal_filter_norm_upper_over_D": 4.598753419872246e-12,
+          "finite_positive_trace_error_upper_over_D2": 2.5670378253332984e-13,
+          "reduced_filter_action_norm_upper": 0.0203540097107741,
+          "approximate_full_action_norm_upper": 0.02185777709030149,
+          "finite_proper_metric_insertion_error_upper": 1920499219695.4187,
+          "finite_proper_metric_insertion_absolute_upper": 1934262170335.6643,
+          "graph_resolvent_bounds": [
+            0.07388045689468332,
+            0.07388045635694988,
+            0.07388045635427459,
+            0.07388045635337691
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              215473337214.0884,
+              215473337214.08847
+            ],
+            [
+              2165480238669.428,
+              2165480238669.4285
+            ],
+            [
+              3054861792141.41,
+              3054861792141.411
+            ],
+            [
+              3738322681912.7124,
+              3738322681912.7134
+            ]
+          ]
+        },
+        {
+          "eta_D2": 4.6428759050176275e+22,
+          "regulator_M_D": 21547333721408.844,
+          "nominal_eta_over_kappa_squared": 0.01,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 3.628507668192968e-13,
+          "worst_order_error_upper_over_D": 1.2707490430101347e-12,
+          "first_graph_filter_error_upper": 0.26507514815353445,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.7818466563724492,
+          "error_over_universal_filter_scale_upper": 0.07819183262736827,
+          "reduced_filter_norm_upper_over_D": 8.110484047850757e-14,
+          "universal_filter_norm_upper_over_D": 4.640520047004166e-12,
+          "finite_positive_trace_error_upper_over_D2": 3.9730822318213326e-13,
+          "reduced_filter_action_norm_upper": 0.8269089073371476,
+          "approximate_full_action_norm_upper": 0.8880014713264447,
+          "finite_proper_metric_insertion_error_upper": 30857378434949.234,
+          "finite_proper_metric_insertion_absolute_upper": 53573120976105.06,
+          "graph_resolvent_bounds": [
+            0.07388045689468332,
+            0.07388045635162686,
+            0.0738804563515997,
+            0.07388045635159066
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              215473337214.0884,
+              215473337214.08847
+            ],
+            [
+              21548411061162.086,
+              21548411061162.094
+            ],
+            [
+              30473293385562.633,
+              30473293385562.64
+            ],
+            [
+              37321698785885.1,
+              37321698785885.12
+            ]
+          ]
+        },
+        {
+          "eta_D2": 4.642875905017628e+24,
+          "regulator_M_D": 215473337214.08847,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 0.1,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 1.0263086466937666e-16,
+          "worst_order_error_upper_over_D": 1.0294805973374705e-16,
+          "first_graph_filter_error_upper": 0.00022140987628040042,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.00022114214911478074,
+          "error_over_universal_filter_scale_upper": 0.09299835910760061,
+          "reduced_filter_norm_upper_over_D": 2.0771754394128444e-18,
+          "universal_filter_norm_upper_over_D": 1.1035771561370357e-15,
+          "finite_positive_trace_error_upper_over_D2": 2.2854899743091344e-20,
+          "reduced_filter_action_norm_upper": 2.1641117918009445e-05,
+          "approximate_full_action_norm_upper": 2.3239977595254696e-05,
+          "finite_proper_metric_insertion_error_upper": 2496762.0447081025,
+          "finite_proper_metric_insertion_absolute_upper": 2512279.371324006,
+          "graph_resolvent_bounds": [
+            0.07388045635700366,
+            0.07388045635694988,
+            0.07388045635689716,
+            0.07388045635684547
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              2154733372140.8843,
+              2154733372140.8848
+            ],
+            [
+              2165480238669.428,
+              2165480238669.4285
+            ],
+            [
+              2176174033279.0432,
+              2176174033279.0437
+            ],
+            [
+              2186815534554.3335,
+              2186815534554.334
+            ]
+          ]
+        },
+        {
+          "eta_D2": 4.642875905017628e+24,
+          "regulator_M_D": 2154733372140.8845,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 1.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 2.205409181666136e-14,
+          "worst_order_error_upper_over_D": 2.677227544262533e-14,
+          "first_graph_filter_error_upper": 0.05257501101745013,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.047520687629619425,
+          "error_over_universal_filter_scale_upper": 0.09504137525923885,
+          "reduced_filter_norm_upper_over_D": 1.840325852023429e-15,
+          "universal_filter_norm_upper_over_D": 2.3204727158572463e-13,
+          "finite_positive_trace_error_upper_over_D2": 1.1835843843698232e-15,
+          "reduced_filter_action_norm_upper": 0.019173493011480074,
+          "approximate_full_action_norm_upper": 0.020590042977343334,
+          "finite_proper_metric_insertion_error_upper": 191279425156.4807,
+          "finite_proper_metric_insertion_absolute_upper": 203459781601.08722,
+          "graph_resolvent_bounds": [
+            0.07388045635700366,
+            0.07388045635428811,
+            0.07388045635338292,
+            0.07388045635293033
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              2154733372140.8843,
+              2154733372140.8848
+            ],
+            [
+              3047253158179.552,
+              3047253158179.5527
+            ],
+            [
+              3732107677312.2285,
+              3732107677312.2295
+            ],
+            [
+              4309466744281.7686,
+              4309466744281.7695
+            ]
+          ]
+        },
+        {
+          "eta_D2": 4.642875905017628e+24,
+          "regulator_M_D": 21547333721408.844,
+          "nominal_eta_over_kappa_squared": 1.0,
+          "nominal_M_over_kappa": 10.0,
+          "best_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "worst_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "common_filter_error_upper_over_D": 5.339102051342978e-14,
+          "worst_order_error_upper_over_D": 1.2598157149900987e-13,
+          "first_graph_filter_error_upper": 0.2628969083945406,
+          "best_graph_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "scaled_common_filter_error_upper": 0.1150434136729457,
+          "error_over_universal_filter_scale_upper": 0.1160988981986188,
+          "reduced_filter_norm_upper_over_D": 7.875378002938526e-14,
+          "universal_filter_norm_upper_over_D": 4.598753419872246e-13,
+          "finite_positive_trace_error_upper_over_D2": 2.3481837744784487e-14,
+          "reduced_filter_action_norm_upper": 0.8204987444809496,
+          "approximate_full_action_norm_upper": 0.8811177181749671,
+          "finite_proper_metric_insertion_error_upper": 16633734655094.502,
+          "finite_proper_metric_insertion_absolute_upper": 38939306429364.836,
+          "graph_resolvent_bounds": [
+            0.07388045635700366,
+            0.07388045635162632,
+            0.07388045635159958,
+            0.0738804563515906
+          ],
+          "absolute_mass_D_intervals": [
+            [
+              2154733372140.8843,
+              2154733372140.8848
+            ],
+            [
+              21654802386694.273,
+              21654802386694.28
+            ],
+            [
+              30548617921414.098,
+              30548617921414.105
+            ],
+            [
+              37383226819127.12,
+              37383226819127.13
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "field_controls": [
+    {
+      "q": 1005,
+      "u": 0.0125,
+      "mu": 854.5,
+      "k_D": 0.0,
+      "isometry_error": 1.1102230246251565e-16,
+      "compression_error": 5.684341886080802e-14,
+      "proper_defect_identity_error": 6.543508910926355e-14,
+      "cutoff_defect_identity_error": 6.584341761500858e-14,
+      "cutoff_omission_norm": 11.905764577642714,
+      "proper_metric_derivative_relative_error": 9.650350350880245e-12,
+      "positive_form_relative_error": 3.838313631901503e-16
+    },
+    {
+      "q": 1005,
+      "u": 0.0125,
+      "mu": 854.5,
+      "k_D": 1.0,
+      "isometry_error": 1.1102230246251565e-16,
+      "compression_error": 5.684342055487388e-14,
+      "proper_defect_identity_error": 6.543509027591165e-14,
+      "cutoff_defect_identity_error": 6.5843419745444e-14,
+      "cutoff_omission_norm": 11.905764577642714,
+      "proper_metric_derivative_relative_error": 9.650350232295216e-12,
+      "positive_form_relative_error": 8.914218910094028e-16
+    },
+    {
+      "q": 1005,
+      "u": 0.0125,
+      "mu": 854.5,
+      "k_D": 10.0,
+      "isometry_error": 1.1102230246251565e-16,
+      "compression_error": 5.684385254002266e-14,
+      "proper_defect_identity_error": 6.543527525854475e-14,
+      "cutoff_defect_identity_error": 6.584363882383825e-14,
+      "cutoff_omission_norm": 11.905764577642714,
+      "proper_metric_derivative_relative_error": 9.650341070379591e-12,
+      "positive_form_relative_error": 6.582955291547222e-16
+    },
+    {
+      "q": 1005,
+      "u": 0.025,
+      "mu": 904.5,
+      "k_D": 0.0,
+      "isometry_error": 0.0,
+      "compression_error": 0.0,
+      "proper_defect_identity_error": 3.095844801919918e-14,
+      "cutoff_defect_identity_error": 3.095833912298908e-14,
+      "cutoff_omission_norm": 3.095833912298908e-14,
+      "proper_metric_derivative_relative_error": 1.415545250982954e-11,
+      "positive_form_relative_error": 1.36873867557761e-16
+    },
+    {
+      "q": 1005,
+      "u": 0.025,
+      "mu": 904.5,
+      "k_D": 1.0,
+      "isometry_error": 0.0,
+      "compression_error": 2.7755575615628914e-17,
+      "proper_defect_identity_error": 3.095845790014991e-14,
+      "cutoff_defect_identity_error": 3.0958349004033233e-14,
+      "cutoff_omission_norm": 3.0958349004033233e-14,
+      "proper_metric_derivative_relative_error": 1.4155452050934214e-11,
+      "positive_form_relative_error": 3.183632618302487e-17
+    },
+    {
+      "q": 1005,
+      "u": 0.025,
+      "mu": 904.5,
+      "k_D": 10.0,
+      "isometry_error": 0.0,
+      "compression_error": 2.220446049250313e-16,
+      "proper_defect_identity_error": 3.096062283544422e-14,
+      "cutoff_defect_identity_error": 3.096051395076003e-14,
+      "cutoff_omission_norm": 3.096051395076003e-14,
+      "proper_metric_derivative_relative_error": 1.4155425281583901e-11,
+      "positive_form_relative_error": 2.207759026068456e-16
+    },
+    {
+      "q": 1005,
+      "u": 0.0375,
+      "mu": 954.5,
+      "k_D": 0.0,
+      "isometry_error": 0.0,
+      "compression_error": 0.0,
+      "proper_defect_identity_error": 4.006064865539567e-14,
+      "cutoff_defect_identity_error": 4.337833902257259e-14,
+      "cutoff_omission_norm": 16.798245241738115,
+      "proper_metric_derivative_relative_error": 1.061999034962574e-11,
+      "positive_form_relative_error": 1.8271300966198125e-16
+    },
+    {
+      "q": 1005,
+      "u": 0.0375,
+      "mu": 954.5,
+      "k_D": 1.0,
+      "isometry_error": 0.0,
+      "compression_error": 0.0,
+      "proper_defect_identity_error": 4.0060654315782514e-14,
+      "cutoff_defect_identity_error": 4.337834384854768e-14,
+      "cutoff_omission_norm": 16.798245241738115,
+      "proper_metric_derivative_relative_error": 1.0619989105155156e-11,
+      "positive_form_relative_error": 1.331130352846578e-16
+    },
+    {
+      "q": 1005,
+      "u": 0.0375,
+      "mu": 954.5,
+      "k_D": 10.0,
+      "isometry_error": 0.0,
+      "compression_error": 0.0,
+      "proper_defect_identity_error": 4.006128024391967e-14,
+      "cutoff_defect_identity_error": 4.337904865390198e-14,
+      "cutoff_omission_norm": 16.798245241738115,
+      "proper_metric_derivative_relative_error": 1.0619951546718165e-11,
+      "positive_form_relative_error": 1.347591891339346e-16
+    },
+    {
+      "q": 10005,
+      "u": 0.0125,
+      "mu": 8504.5,
+      "k_D": 0.0,
+      "isometry_error": 2.220446049250313e-16,
+      "compression_error": 0.0,
+      "proper_defect_identity_error": 1.5476064303987954e-13,
+      "cutoff_defect_identity_error": 1.6547421746297913e-13,
+      "cutoff_omission_norm": 11.905760921439224,
+      "proper_metric_derivative_relative_error": 1.4825397371511532e-11,
+      "positive_form_relative_error": 1.6949393657934507e-17
+    },
+    {
+      "q": 10005,
+      "u": 0.0125,
+      "mu": 8504.5,
+      "k_D": 1.0,
+      "isometry_error": 2.220446049250313e-16,
+      "compression_error": 4.163336342344337e-17,
+      "proper_defect_identity_error": 1.5476064409731032e-13,
+      "cutoff_defect_identity_error": 1.654742185158409e-13,
+      "cutoff_omission_norm": 11.905760921439224,
+      "proper_metric_derivative_relative_error": 1.4825397317243783e-11,
+      "positive_form_relative_error": 3.329368156341814e-18
+    },
+    {
+      "q": 10005,
+      "u": 0.0125,
+      "mu": 8504.5,
+      "k_D": 10.0,
+      "isometry_error": 2.220446049250313e-16,
+      "compression_error": 4.440892098500626e-16,
+      "proper_defect_identity_error": 1.5476076273858885e-13,
+      "cutoff_defect_identity_error": 1.6547430716546913e-13,
+      "cutoff_omission_norm": 11.905760921439224,
+      "proper_metric_derivative_relative_error": 1.4825388830295812e-11,
+      "positive_form_relative_error": 3.5268642171201554e-16
+    },
+    {
+      "q": 10005,
+      "u": 0.025,
+      "mu": 9004.5,
+      "k_D": 0.0,
+      "isometry_error": 1.1102230246251565e-16,
+      "compression_error": 2.2737367544323206e-13,
+      "proper_defect_identity_error": 1.5194846055399424e-13,
+      "cutoff_defect_identity_error": 1.5194835286922873e-13,
+      "cutoff_omission_norm": 1.5194835286922873e-13,
+      "proper_metric_derivative_relative_error": 1.1152473759443307e-11,
+      "positive_form_relative_error": 3.1511206189462906e-16
+    },
+    {
+      "q": 10005,
+      "u": 0.025,
+      "mu": 9004.5,
+      "k_D": 1.0,
+      "isometry_error": 1.1102230246251565e-16,
+      "compression_error": 2.2737367586674853e-13,
+      "proper_defect_identity_error": 1.5194846127468128e-13,
+      "cutoff_defect_identity_error": 1.5194835358991512e-13,
+      "cutoff_omission_norm": 1.5194835358991512e-13,
+      "proper_metric_derivative_relative_error": 1.1152473812764363e-11,
+      "positive_form_relative_error": 4.3040863166536813e-16
+    },
+    {
+      "q": 10005,
+      "u": 0.025,
+      "mu": 9004.5,
+      "k_D": 10.0,
+      "isometry_error": 1.1102230246251565e-16,
+      "compression_error": 2.2737367544323206e-13,
+      "proper_defect_identity_error": 1.5194856225567822e-13,
+      "cutoff_defect_identity_error": 1.5194845457008868e-13,
+      "cutoff_omission_norm": 1.5194845457008868e-13,
+      "proper_metric_derivative_relative_error": 1.1152478761009515e-11,
+      "positive_form_relative_error": 2.2381856689700717e-16
+    },
+    {
+      "q": 10005,
+      "u": 0.0375,
+      "mu": 9504.5,
+      "k_D": 0.0,
+      "isometry_error": 2.220446049250313e-16,
+      "compression_error": 1.1368683772161603e-13,
+      "proper_defect_identity_error": 6.237205127121022e-14,
+      "cutoff_defect_identity_error": 7.716395164766207e-14,
+      "cutoff_omission_norm": 16.79827684716273,
+      "proper_metric_derivative_relative_error": 2.012275828517662e-11,
+      "positive_form_relative_error": 5.259547063062863e-16
+    },
+    {
+      "q": 10005,
+      "u": 0.0375,
+      "mu": 9504.5,
+      "k_D": 1.0,
+      "isometry_error": 2.220446049250313e-16,
+      "compression_error": 1.1368684110974777e-13,
+      "proper_defect_identity_error": 6.237205399608023e-14,
+      "cutoff_defect_identity_error": 7.716395556846087e-14,
+      "cutoff_omission_norm": 16.79827684716273,
+      "proper_metric_derivative_relative_error": 2.0122757797794054e-11,
+      "positive_form_relative_error": 4.030904509477267e-16
+    },
+    {
+      "q": 10005,
+      "u": 0.0375,
+      "mu": 9504.5,
+      "k_D": 10.0,
+      "isometry_error": 2.220446049250313e-16,
+      "compression_error": 1.1368683772161603e-13,
+      "proper_defect_identity_error": 6.237240377296415e-14,
+      "cutoff_defect_identity_error": 7.716425344728866e-14,
+      "cutoff_omission_norm": 16.79827684716273,
+      "proper_metric_derivative_relative_error": 2.0122703501896626e-11,
+      "positive_form_relative_error": 5.620581845153111e-16
+    }
+  ],
+  "matrix_controls": [
+    {
+      "kappa": 0.2,
+      "eta": 0.01,
+      "M": 0.7,
+      "skew_error": 2.410027603170309e-16,
+      "isometry_error": 4.817761937059447e-16,
+      "weighted_compression_error": 3.5543314395843703e-16,
+      "weighted_defect_error": 7.515579360027614e-16,
+      "positive_form_error": 1.8853398778878766e-15,
+      "square_shortcut_mismatch": 3.6316103649429756,
+      "cutoff_form_error": 1.7920226959120946e-15,
+      "cutoff_isometry_mismatch": 0.9099999999999999,
+      "reduced_gap_margin": 0.2281153416002313,
+      "common_filter_identity_error": 4.751053350030843e-14,
+      "actual_filter_error": 0.9468163420603566,
+      "filter_error_bound": 116.13237789846592,
+      "actual_first_graph_error": 1.9013593942337401,
+      "first_graph_error_bound": 13.361246923052986,
+      "finite_trace_difference": 0.9388897727524377,
+      "finite_trace_error_bound": 43356.89896785846,
+      "finite_metric_insertion_difference": 0.7707227598200419,
+      "finite_metric_insertion_error_bound": 4968.167925687099,
+      "frozen_metric_derivative_relative_error": 1.2095532908595885e-13,
+      "metric_insertion_enclosed": true,
+      "filter_enclosed": true,
+      "first_graph_enclosed": true,
+      "trace_enclosed": true
+    },
+    {
+      "kappa": 0.2,
+      "eta": 0.1,
+      "M": 1.0,
+      "skew_error": 2.410027603170309e-16,
+      "isometry_error": 4.817761937059447e-16,
+      "weighted_compression_error": 3.5543314395843703e-16,
+      "weighted_defect_error": 7.515579360027614e-16,
+      "positive_form_error": 1.8853398778878766e-15,
+      "square_shortcut_mismatch": 3.6316103649429756,
+      "cutoff_form_error": 1.7920226959120946e-15,
+      "cutoff_isometry_mismatch": 0.9099999999999999,
+      "reduced_gap_margin": 0.2281153416002313,
+      "common_filter_identity_error": 7.858156930637294e-15,
+      "actual_filter_error": 0.864532264906891,
+      "filter_error_bound": 22.110127928247298,
+      "actual_first_graph_error": 1.644178458601572,
+      "first_graph_error_bound": 7.198492964738963,
+      "finite_trace_difference": 0.7846330596997543,
+      "finite_trace_error_bound": 1774.3518195066422,
+      "finite_metric_insertion_difference": 0.598884716461484,
+      "finite_metric_insertion_error_bound": 524.8980727510894,
+      "frozen_metric_derivative_relative_error": 6.871621327508848e-13,
+      "metric_insertion_enclosed": true,
+      "filter_enclosed": true,
+      "first_graph_enclosed": true,
+      "trace_enclosed": true
+    },
+    {
+      "kappa": 1.0,
+      "eta": 0.01,
+      "M": 0.7,
+      "skew_error": 2.410027603170309e-16,
+      "isometry_error": 4.817761937059447e-16,
+      "weighted_compression_error": 6.055354662746123e-16,
+      "weighted_defect_error": 9.613182089695285e-16,
+      "positive_form_error": 6.229560152541858e-16,
+      "square_shortcut_mismatch": 4.878836820692972,
+      "cutoff_form_error": 5.201965768040798e-16,
+      "cutoff_isometry_mismatch": 0.9099999999999999,
+      "reduced_gap_margin": 0.16262360967870082,
+      "common_filter_identity_error": 7.819042085160896e-16,
+      "actual_filter_error": 0.26670443759263235,
+      "filter_error_bound": 26.84123555762738,
+      "actual_first_graph_error": 0.5820710464518665,
+      "first_graph_error_bound": 4.296752666190814,
+      "finite_trace_difference": 0.09809119510994557,
+      "finite_trace_error_bound": 2224.136210897893,
+      "finite_metric_insertion_difference": 0.0771759751489391,
+      "finite_metric_insertion_error_bound": 456.4100470911021,
+      "frozen_metric_derivative_relative_error": 1.8195351909194857e-13,
+      "metric_insertion_enclosed": true,
+      "filter_enclosed": true,
+      "first_graph_enclosed": true,
+      "trace_enclosed": true
+    },
+    {
+      "kappa": 1.0,
+      "eta": 0.1,
+      "M": 1.0,
+      "skew_error": 2.410027603170309e-16,
+      "isometry_error": 4.817761937059447e-16,
+      "weighted_compression_error": 6.055354662746123e-16,
+      "weighted_defect_error": 9.613182089695285e-16,
+      "positive_form_error": 6.229560152541858e-16,
+      "square_shortcut_mismatch": 4.878836820692972,
+      "cutoff_form_error": 5.201965768040798e-16,
+      "cutoff_isometry_mismatch": 0.9099999999999999,
+      "reduced_gap_margin": 0.16262360967870082,
+      "common_filter_identity_error": 9.222502248844529e-16,
+      "actual_filter_error": 0.36467810099243364,
+      "filter_error_bound": 9.363718500269144,
+      "actual_first_graph_error": 0.7951780733396904,
+      "first_graph_error_bound": 3.8726726987362112,
+      "finite_trace_difference": 0.19226405337995595,
+      "finite_trace_error_bound": 302.14302364457393,
+      "finite_metric_insertion_difference": 0.1483150515765119,
+      "finite_metric_insertion_error_bound": 163.66760235681073,
+      "frozen_metric_derivative_relative_error": 1.090821009908094e-12,
+      "metric_insertion_enclosed": true,
+      "filter_enclosed": true,
+      "first_graph_enclosed": true,
+      "trace_enclosed": true
+    },
+    {
+      "kappa": 3.0,
+      "eta": 0.01,
+      "M": 0.7,
+      "skew_error": 2.410027603170309e-16,
+      "isometry_error": 4.817761937059447e-16,
+      "weighted_compression_error": 1.580027653483083e-15,
+      "weighted_defect_error": 2.5360772115628696e-15,
+      "positive_form_error": 8.833918732032697e-15,
+      "square_shortcut_mismatch": 10.960198812600979,
+      "cutoff_form_error": 3.849104883496263e-15,
+      "cutoff_isometry_mismatch": 0.9099999999999999,
+      "reduced_gap_margin": 0.08974514515730725,
+      "common_filter_identity_error": 1.9820965162045624e-16,
+      "actual_filter_error": 0.01710896763373379,
+      "filter_error_bound": 10.498324979669535,
+      "actual_first_graph_error": 0.0517210315760646,
+      "first_graph_error_bound": 1.3980217809233737,
+      "finite_trace_difference": 0.00021957832342505606,
+      "finite_trace_error_bound": 325.8762786597026,
+      "finite_metric_insertion_difference": 0.0006801183816515738,
+      "finite_metric_insertion_error_bound": 110.13168450052449,
+      "frozen_metric_derivative_relative_error": 1.8238665785985653e-14,
+      "metric_insertion_enclosed": true,
+      "filter_enclosed": true,
+      "first_graph_enclosed": true,
+      "trace_enclosed": true
+    },
+    {
+      "kappa": 3.0,
+      "eta": 0.1,
+      "M": 1.0,
+      "skew_error": 2.410027603170309e-16,
+      "isometry_error": 4.817761937059447e-16,
+      "weighted_compression_error": 1.580027653483083e-15,
+      "weighted_defect_error": 2.5360772115628696e-15,
+      "positive_form_error": 8.833918732032697e-15,
+      "square_shortcut_mismatch": 10.960198812600979,
+      "cutoff_form_error": 3.849104883496263e-15,
+      "cutoff_isometry_mismatch": 0.9099999999999999,
+      "reduced_gap_margin": 0.08974514515730725,
+      "common_filter_identity_error": 9.71253050663195e-17,
+      "actual_filter_error": 0.036693066271117215,
+      "filter_error_bound": 3.5030179384807822,
+      "actual_first_graph_error": 0.11594051579836241,
+      "first_graph_error_bound": 1.482203401879588,
+      "finite_trace_difference": 0.0011748803564892124,
+      "finite_trace_error_bound": 37.44077082825697,
+      "finite_metric_insertion_difference": 0.003346202954611548,
+      "finite_metric_insertion_error_bound": 43.12994295294149,
+      "frozen_metric_derivative_relative_error": 1.2809328250873442e-13,
+      "metric_insertion_enclosed": true,
+      "filter_enclosed": true,
+      "first_graph_enclosed": true,
+      "trace_enclosed": true
+    }
+  ],
+  "graph_controls": [
+    {
+      "c": 0.1,
+      "d": 2.0,
+      "g": 1.0,
+      "m": 0.2,
+      "sampled_max": 2.0592194189509323,
+      "bound": 2.0592194189509327,
+      "enclosed": true
+    },
+    {
+      "c": 0.1,
+      "d": 2.0,
+      "g": 1.0,
+      "m": 10.0,
+      "sampled_max": 0.2236067976729364,
+      "bound": 0.223606797749979,
+      "enclosed": true
+    },
+    {
+      "c": 1.0,
+      "d": 0.1,
+      "g": 3.0,
+      "m": 1.0,
+      "sampled_max": 1.0049875620242081,
+      "bound": 1.0049875621120892,
+      "enclosed": true
+    },
+    {
+      "c": 0.0,
+      "d": 2.0,
+      "g": 1.0,
+      "m": 0.5,
+      "sampled_max": 1.7888543819998317,
+      "bound": 1.788854381999832,
+      "enclosed": true
+    },
+    {
+      "c": 1.0,
+      "d": 0.0,
+      "g": 0.0,
+      "m": 2.0,
+      "sampled_max": 1.0,
+      "bound": 1.0000000000000002,
+      "enclosed": true
+    }
+  ],
+  "source_sha256": "75c9e49ef29fd379d24e8246e357052334b21870000abf8972dd7ebf141120c5",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+    "dihole_collar_resolvent_results.json": "df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17",
+    "dihole_collar_resolvent.py": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531",
+    "dihole_metric_resolvent_results.json": "f15f1402458e8ee43b222d3ea40b665f2bc33315230436eda7887be941e9ce97",
+    "dihole_metric_resolvent.py": "b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc",
+    "dihole_paired_frequency_units_trial.json": "c5d9a8152c7931598e4f32baceb625a44f675e62ab995d1c781e778580e58e4d",
+    "provenance/dihole_paired_frequency_units_trial.py": "c81e58f0621ff73caa1ad617be46d9795d297f18299d6c6130f63165c7a5ca19",
+    "dihole_paired_frequency_results.json": "e2de59a035d0874484a857164a1ff93a0d0e6155a8307a7493f3d7c2e21ce429",
+    "dihole_paired_frequency.py": "c118af9191e5f371de9320d134a454d02f6180444ca5be57ecd07caca2520044",
+    "dihole_massive_channel_results.json": "f61f079f61a3db75c1549d1250128839985fba5b03b44141d4d591460412595b",
+    "dihole_massive_channel.py": "b614c9a37d8a84c845f8138df226afece042faebe5b27bf9f7d09beef7f81789"
+  },
+  "physical_source": null,
+  "source_sign": null,
+  "atom_transit": null,
+  "scope": [
+    "The lapse-weighted V is isometric on the uncut collar. J=chi V is contractive; cutoff commutators and J in the output norm remain explicit.",
+    "The auxiliary complete-line n,v continuation stays positive and bounded with complete optical coordinate. Its frequency gap is not a global full-operator gap.",
+    "The common first-order product squared equals the proper-P rational filter. The approximation J T_a X is not the squared compressed P form or a bare reduced trace.",
+    "Only fixed nonzero kappa, finite regulator M and positive eta; no frequency integration, eta removal, regulator removal or omitted insertion bound.",
+    "The finite selected proper metric insertion is -Re<Au,dotA u> with u=T_A JX. Its input JX is frozen; varying the channel or filter would be a different derivative.",
+    "Its absolute value and comparison error are bounded, not measured. No full renormalized source, new material, stability, atom propagation or clock difference is established."
+  ]
+}

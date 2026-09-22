@@ -1,3 +1,69 @@
+# Authoritative checkpoint171 - common proper-field metric insertion
+
+Previous checkpoint170 published 0c15dae1b1b3852eb168aca2b34a1018613d6bff.
+Previous goal turn PROGRESS: proper-mass lapse leakage,16 checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom, trial1nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- scripts/dihole_proper_channel.py:17 controls PASS,42 exact input hashes.
+  Reuses165--170;156 commonproduct identity reused, no oldsolves rerun.
+- ProperA=B beta(iκ+H0)B, B=N^-1/2. V=sqrtN U4/sqrtn isisometric.
+  a=V*AV=n^-1/2 beta(iκ+h0)n^-1/2. Exact form V*P V=a*a+RA*RA.
+  Do not square compression or silently treatJ=chi V asisometric.
+- TA=AJ-Ja=B beta T0 n^-1/2 -B chi rN n^-1/2 a.
+  ||TAψ||<=c||aψ||+d||ψ||; c=a167 sqrt(nmax/Nmin)+RN/sqrt(Nmin nmin),
+  d=b167/sqrt(Nmin nmin). Squared-sum identity removes spuriousκterm.
+  Auxiliarycomplete-line gapg=|κ|/nmax, notfullproperA gap.
+- CommonfilterF_A=√6 M³ product(A+sqrt(eta+jM²))^-1, F_A*F_A=PV(P).
+  Normcircle C_m=sqrt(c²+d²/m²) ifcm²>=dg, else(cg+d)/sqrt(g²+m²).
+  Recurrencee'=(e+C_m r)/m,r'=r/sqrt(g²+m²). FullA-grapherror
+  afterlastfactor<=m_last*e. Minimize24 ordersindependently forbothnorms.
+- KeepJ output: exactu=F_A J X4, trialv=J F_a X4. Positivefiltertrace
+  error<=delta(2rF+delta)HS². Noidentificationwith f(V*P V).
+- NEWfullproper metricgraph: dotA=−iκF beta/N+{F,A_rad}/2.
+  cδ=4sqrt(Nmax/Nmin)sqrt(1+Wmax/Wmin);
+  dδ=[1200sqrt(1+Wmax/Wmin)+600+4sqrt(400+31q)]/(Wmin Nmin).
+  Localmaskcoefficients only; no globalNmax/fullκgap.
+- Finiteproperinsertion I(u)=−ReTr(Au)*dotA u, frozenbaselineinputJX4.
+  Sourceerror<=HS²[deltaA(cδ L+dδ rF)+(L+deltaA)(cδ deltaA+dδ delta)],
+  L=(1+c)aF+d rF; aF=min_j√6 M³ product_(k!=j)(g²+m_k²)^−1/2.
+  IncludesbothWeylblocks andproper−1/2formfactor, onecollar/sector/frequency.
+- AtomicatM=κ,eta=.01κ²: delta/D<3.488590e-13,deltaA<.094293028,
+  normerror/universalscale<.075859462. Finiteinsertionerror<1.920500e12;
+  absolutevalue<1.934263e12 dimensionless, notphysicalenergyorsign.
+- Alllimitsremain: eta0,κintegral,othersectors/insertions,M∞,counterterms.
+  InitialNumPyboolserialization failedbeforewritingresults; reportingfixonly.
+- NEXT: usecompactphysicalmetricinsertion toavoidglobal1/m0 blowup.
+ 151 compactGreenidentity and partialfractionsofcommonfirst-orderproduct
+  maygive local norm/grapherror ateta0,κ!=0,fixedM. Do notclaimM∞uniformity.
+  Thenfrequency/omittedsource andcounterterms. No atom evolutionyet.
+  Staticgeometryexcludes13Sep2027->12Sep2027; nofutureclockadvantage.
+
+Source SHA256 75c9e49ef29fd379d24e8246e357052334b21870000abf8972dd7ebf141120c5
+Results SHA256 9d4b9e91dddc7b37e8f075e47a0e75b1b400d7102fa03385ab061c06efbfe967
+
+Verification PASS:17 controls,42 exact input hashes, figure inspected.
+Independent derivation/code audits and110-digit numerical audit pass:
+1,552 inequalities and1,512 factor orderings; no false enclosure.
+Prior1,286 bounds reconstruct byte-for-byte;266 additions separately checked.
+Layout PASS:166 imports,1476 links,8 historical guards,14 frozen hashes,
+operator identity. All six previous document byte sequences preserved.
+Git diff check passes. Publication follows. No simulation is running.
+
+Audited next-step lemma (not yet implemented): for compact C,D and kappa!=0,
+||1_C(A+m)^-1 1_D||<=sqrt(N_C+ N_D+)/|kappa| using151.
+At m0=0 use the localized strong/HS limit, not global A^-1.
+Partial fractions F_A=sum d_j(A+m_j)^-1 have
+d_j=sqrt6 M^3/product_(k!=j)(m_k-m_j). Local error bounds:
+e0<=Nmax/|kappa| sum|d_j| C_mj;
+e1<=sum|d_j|(1+m_j Nmax/|kappa|) C_mj, C_0=c+d/g.
+The proper metric graph proof also has local collar norms on its RHS.
+This can bound the compact insertion at eta0, fixed nonzero kappa and M.
+It does not remove the positive whole-space filter cutoff or prove kappa0/M∞.
+
+--- Preserved checkpoint170 and earlier history ---
+
 # Authoritative checkpoint170 - proper-mass channel comparison
 
 Previous checkpoint169 published 2fb6a832e6185fc20076d63b1921850a849ef3ec.
