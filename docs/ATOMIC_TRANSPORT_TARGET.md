@@ -264,3 +264,10 @@ The payload remains one hydrogen atom through a trial 1 nm opening. Support, sta
 The [new magnetic remainder bound](PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-all-order-magnetic-remainder-on-the-actual-collars) controls the sign and magnitude of the local constant-field reference correction at every proper time. It uses the actual collar geometry and the exact variation mask, with all 12 controls passing. The remaining curved, varying-field heat contribution and full source at the target regulator are uncomputed. Two small correction bounds therefore do not establish the total supporting stress.
 
 The first target remains one hydrogen atom and a trial 1 nm areal opening. No supported opening, stability, atom transmission, survival or clock advantage has been established. The static model cannot send it from 13 September 2027 to 12 September 2027.
+
+
+## Checkpoint179: high derivatives of the actual opening are bounded
+
+The [regular-coordinate calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#regular-collar-geometry-and-full-operator-high-derivative-bounds) now bounds the geometry through derivative order20 and the complete supporting-field operator and its variation through order18, including the smooth joins and both poles. All 13 checks pass. This provides inputs needed for the remaining quantum-field error estimate, not an atom propagation or proof of support.
+
+The next calculation must quantify local transport and the heat defect. One hydrogen atom through a trial 1 nm opening remains the first milestone; humans are deferred. Stability, atomic survival and a future clock advantage remain unproved, and the present static geometry excludes backward travel.

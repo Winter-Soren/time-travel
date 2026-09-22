@@ -6,6 +6,9 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment179: The [regular high-derivative calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#regular-collar-geometry-and-full-operator-high-derivative-bounds) now bounds the actual geometry through derivative order20 and the complete physical field operator and its variation through order18, including both poles and the smooth joins. **All 13 checks pass.** These supply previously missing inputs to the heat-error calculation; the heat defect and total supporting source remain unknown. See the [results](results/dihole_regular_jets_results.json) and [visual](figures/dihole_regular_jets_progress.png). One-atom support, stability, passage and clock gain remain unproved.
+
+
 Current increment178: The [magnetic remainder calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-all-order-magnetic-remainder-on-the-actual-collars) now bounds the purely magnetic short-time reference correction with its sign retained, using the actual collar geometry. **All 12 checks pass.** This controls every power of the local magnetic field in that reference, but the curved, varying-field remainder and target-regulator source remain unknown. See the [results](results/dihole_magnetic_remainder_results.json) and [visual](figures/dihole_magnetic_remainder_progress.png). No supported opening or atom transport is established.
 
 

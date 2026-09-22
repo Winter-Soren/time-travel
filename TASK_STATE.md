@@ -1,3 +1,51 @@
+# Authoritative checkpoint179 - regular geometry and full operator high jets bounded
+
+Previous checkpoint178 published 68e3f0fa4d387d291f9aa86a072ff5d9b85bde5a.
+Previous goal turn PROGRESS:178 verified and privately published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No stable opening, obtainable source, atom transit or clock gain established.
+
+- scripts/dihole_regular_jets.py:13 checks PASS,65 exact input hashes.
+  No historical geometry solve rerun and no old source/result modified.
+- Actual base N,P,1/N,1/P,a enclosed on768 complex interval boxes:
+  R in[.025,.070], x in[-1,1], complex radii .001 and .01.
+  Exact balanced calibration; principal roots and denominators separated.
+- Actual sewn profile is C-infinity but not analytic at the joins.
+  Endpoint-safe Cauchy bound Bn=n! max(10^n,C(2n/e)^n), n>=1,
+  C=exp(5/3)/(1-exp(-5/6)); B0=1. Values through21 certified.
+  Rn=L^(1-n)B(n-1), f_n=B(n+1)/(2L^n), L=.05.
+- Two oriented stereographic disks |y|^2<=2 remove polar singularities.
+  Complex y radii1/2000 give |delta x|<=.004009020044599221<.005.
+  Exact NP=1 and a=0/1 at the two poles make divided differences regular.
+  Local gauge patches retained; no single global monopole potential asserted.
+- Finite composition gives all mixed regular coframe, inverse coframe,
+  metric, inverse metric, gauge and (half-)density derivatives through20.
+  The scalar majorant recursion is b0=1, bn=sum_j Rj/(j!*.001)*b(n-j).
+  |d_s^n d_y1^j d_y2^k F| <= n!j!k! M bn 2000^(j+k), total<=20.
+- Explicit canonical Dirac coefficient bounds now yield physical P=-D^2
+  and the full fixed-space dotP coefficient derivatives through18.
+  Includes spin connection, gauge, physical half-density and probe mask.
+  Second-order coefficients use ordered coordinate pairs (not collected).
+  Atomic q=4642875905017627791065088 retained; no small-flux substitution.
+- These are conservative component-wise coefficient ceilings, not heat,
+  energy, a source sign, or a claimed physically achievable field.
+- NEXT: evaluate a verified normal neighbourhood and transport bounds
+  for Q4, and graph-norm point-evaluation constants. High input jets are
+  now available; actual u_j, B4 and Cgeometry remain uncomputed.
+  The full source at the SAME target regulator also remains unknown.
+  The fixed static geometry excludes13Sep2027->12Sep2027.
+
+Source SHA256 5369eab9d86a109fe5542d790bdeeba3fc6f19024384d469d75f543e1931f311
+Results SHA256 e25dd81f979eca7fa6839f1850f19cced5be7065045626d2efccc66405ef3d06
+Verification:13 checks pass,65 exact inputs, figure inspected.
+Independent179 audits PASS:501 directed comparisons at160 digits;512 scalar
+ceilings and complex-chart identities at125 digits. All65 hashes match.
+Final layout PASS:175 imports,1563 Markdown links,8 source guards,14 frozen pilot hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint178 and earlier history ---
+
 # Authoritative checkpoint178 - signed all-order magnetic remainder bounded
 
 Previous checkpoint177 published 105778ac68349b36fc58a0990d17a5e3cc65a360.

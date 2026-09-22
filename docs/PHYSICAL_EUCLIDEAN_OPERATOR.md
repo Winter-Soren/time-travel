@@ -6556,3 +6556,147 @@ Neither certificate has been evaluated. Both need certified transport and normal
 The target remains one neutral hydrogen atom through a trial 1 nm areal diameter. Support, stability, atomic transmission and survival, and an exterior-clock advantage remain unproved. The current static geometry excludes 13 September 2027 to 12 September 2027; no new physical law or obtainable material is established.
 
 ![Controlled magnetic and long-time corrections](../figures/dihole_magnetic_remainder_progress.png)
+
+
+## Regular collar geometry and full operator high-derivative bounds
+
+Checkpoint179 evaluates missing inputs to the previous residual certificate: finite bounds on the actual geometry and operator derivatives. It does not evaluate the heat defect itself. The [calculation](../scripts/dihole_regular_jets.py), [results](../results/dihole_regular_jets_results.json) and [figure](../figures/dihole_regular_jets_progress.png) use exact balanced parameters, the actual sewn profile, and both polar regions. All lengths and coordinate components below use $D=1$.
+
+### The sewn profile is smooth, not analytic
+
+For the actual step $S(t)=(1+e^{-h(t)})^{-1}$, $h(t)=-1/t+1/(1-t)$, extended by zero and one, define
+
+$$
+C=\frac{e^{5/3}}{1-e^{-5/6}},\qquad B_0=1,\qquad
+B_n=n!\max\{10^n,C(2n/e)^n\}\quad(n\ge1).
+$$
+
+Then $\sup_{\mathbb R}|S^{(n)}|\le B_n$. For $0<t\le1/5$, the open disk $|z-t|<t$ has $\Re h(z)\le-1/(2t)+5/3\le-5/6$. Thus $|S(z)|\le C e^{-1/(2t)}$ and Cauchy's derivative formula, with the disk radius increasing to $t$, gives $Cn!t^{-n}e^{-1/(2t)}$. Its supremum over positive $t$ is $Cn!(2n/e)^n$.
+
+For $1/5\le t\le1/2$, use radius $1/10$. In its enclosing rectangle $z=x+iy$, at $x\le1/4$ one has $\Re h\le4/3-100/29=-184/87<-\log2$, hence $|S|<1$. For $x\ge1/4$, monotonicity in $|y|\le1/10$ and convexity in $x\in[1/4,3/4]$ give $|\Im h|\le40/29+40/229<\pi/2$. Consequently $\Re(e^h)\ge0$ and $|S|\le1$, giving $n!10^n$. Reflection covers the other half. The endpoint estimates tend to zero for every derivative and prove the flat smooth extension. This uses [Cauchy's derivative formula](https://dlmf.nist.gov/1.9.E31); the disks and constants are our derivation.
+
+For $L=.05$, $R'=S(s/L)$ and the actual mask $f=S'(s/L)/2$ therefore obey
+
+$$
+|R'|\le1,\quad |R^{(n)}|\le L^{1-n}B_{n-1}\ (n\ge2),\quad
+|f^{(n)}|\le B_{n+1}/(2L^n).
+$$
+
+Saved directed ceilings include $B_{20}\le5.162995679801647\times10^{42}$ and $B_{21}\le4.4448984799522566\times10^{45}$. These are real derivative bounds. No fixed complex neighbourhood across a flat join is assumed.
+
+### Complex exterior coefficients and regular polar frames
+
+Reuse the exact balanced exterior expressions for $N,P,a$. A $24\times32$ directed interval cover encloses complex polydiscs of radii $\rho_R=1/1000$, $\rho_x=1/100$ around every real $R\in[.025,.070]$, $x\in[-1,1]$. Required root radicands have positive real part; $NP$ and $W=P/N$ stay away from zero. The principal square-root enclosure is
+
+$$
+u=\sqrt{\frac{\sqrt{(\Re z)^2+(\Im z)^2}+\Re z}{2}},\qquad
+\sqrt z=u+i\frac{\Im z}{2u}.
+$$
+
+This bypasses an unavailable interval-complex square-root routine without changing the analytic branch. The resulting uniform complex moduli are:
+
+| Coefficient | Upper bound |
+| --- | ---: |
+| $N$ | 0.3978856071998948 |
+| $P$ | 12.272829715643118 |
+| $1/N$ | 120.73778570364021 |
+| $1/P$ | 0.4582700970462865 |
+| $a$ | 1.193794987581448 |
+
+These are complex-domain enclosures, not extrema of the real physical fields.
+
+For pole sign $p=\pm1$, use the oriented stereographic disk $t=y_1^2+y_2^2\le2$, $x=p(1-t)/(1+t)$, $\phi=p\arg(y_1+iy_2)$. The disks overlap and cover the sphere. The angular coframe and inverse are
+
+$$
+E=\frac{2R}{1+t}\left[N^{-1}I+\frac{P-N^{-1}}{t}yy^T\right],\qquad
+E^{-1}=\frac{1+t}{2R}\left[NI+\frac{P^{-1}-N}{t}yy^T\right].
+$$
+
+Exact balance gives $NP(R,\pm1)=1$, $a(R,+1)=0$ and $a(R,-1)=1$, also holomorphically in $R$. At the negative pole, $r=r_+=M+k$, $a_{\rm geom}+BM r_+=k$ and $M r_+=Qk$ reduce the exact exterior expressions to these identities. Independently rounded parameters are not used here.
+
+For $F=P-N^{-1}$ or $P^{-1}-N$, the apparently singular quotient is
+
+$$
+\frac{F(R,x)}{t}=\frac{2}{1+t}\frac{F(R,x)-F(R,p)}{1-px}.
+$$
+
+Its numerator vanishes on the entire complex polar locus, so this is a holomorphic divided difference, including when complex $y_1^2+y_2^2=0$. The regular local gauge potential is
+
+$$
+\mathcal A_p=pq\frac{a(R,x)-a(R,p)}{t}(-y_2dy_1+y_1dy_2).
+$$
+
+Its transition function retains the magnetic flux; no single global potential is assumed. The physical volume density is $4P^2R^2/(1+t)^2$ and its square root, the canonical half-density, is $v=2PR/(1+t)$.
+
+For complex increments $|\delta y_i|\le\eta=1/2000$, set $d=4\eta+2\eta^2$. Then $|\delta t|\le d$ and
+
+$$
+|\delta x|\le\frac{2d}{1-d}\le0.004009020044599221<\rho_x/2.
+$$
+
+A residual Cauchy disk of radius $\rho_x/2$ bounds the divided differences. For scalar modulus $M_F$ the bound is $2M_F/\rho_x$. Set $Y=\sqrt2+\eta$, $l=1-d$, $R_+=.071$, $R_-=.024$, and denote the five scalar moduli by $n,p_0,n_i,p_i,a_0$. Angular component ceilings are
+
+$$
+M_E=\frac{2R_+}{l}\left[n_i+\frac{4(p_0+n_i)Y^2}{l\rho_x}\right],\quad
+M_{E^{-1}}=\frac{3+d}{2R_-}\left[n+\frac{4(p_i+n)Y^2}{l\rho_x}\right],
+$$
+$$
+M_{\mathcal A}/|q|=\frac{4a_0Y}{l\rho_x}.
+$$
+
+The full coframe includes $N\,d\tau$ and $P\,ds$. Metric ceilings sum the two angular-frame products; density bounds use the explicit formulas. Saved coframe and inverse-frame moduli are 15198.551234374496 and 42977.43709976694. Their large size records conservative estimates, not physical field amplitudes.
+
+### Finite mixed composition and the physical operator
+
+Let $r_j$ bound $|R^{(j)}|$, and define
+
+$$
+b_0=1,\qquad b_n=\sum_{j=1}^n\frac{r_j}{j!\rho_R}b_{n-j}.
+$$
+
+These majorize coefficients of $(1-\sum_{j\ge1}r_jz^j/(j!\rho_R))^{-1}$. Finite Faà di Bruno composition gives
+
+$$
+|\partial_s^n\partial_{y_1}^j\partial_{y_2}^k F|
+\le n!j!k!M_Fb_n\eta^{-j-k},\qquad n+j+k\le20.
+$$
+
+Only finite real jets of $R$ are used. Saved total-order ceilings maximize over $n$ and use $j!k!\le(j+k)!$. All time derivatives vanish.
+
+The operator coefficients below use canonical coordinate $L^2$. If $P_g$ acts with physical measure $v^2dx$, then $P_c=vP_gv^{-1}$ and $\dot P_c=v\dot P_gv^{-1}$ for this volume-preserving probe. Physical kernels are recovered as $K_g(x,y)=v(x)^{-1}K_c(x,y)v(y)^{-1}$. The saved density and inverse-density jets allow this conversion; a physical-measure parametrix must retain these endpoint factors.
+
+The bounds propagate to the complete canonical Dirac expression $D=C^\mu\partial_\mu+C_0$, $P=-D^2$, and the full fixed-space variation. Let $E,I,A,V,V^{-1}$ denote derivative-bound sequences for coframe, inverse frame, gauge per $|q|$, half-density and inverse half-density. Products below mean total-order binomial convolution; primes shift derivative order. Euclidean gamma matrices have norm one. Then
+
+$$
+a=4I,\quad J=|q|A+V'V^{-1},\quad b=768I^2E'+16IJ
+$$
+
+bound $C^\mu$ and $C_0$. Cartan structure coefficients have at most 32 terms of size $I^2E'$, connection coefficients are bounded by $48I^2E'$, and 64 Clifford products with factor $1/4$ give 768. Gauge and density pieces have at most 16 terms each.
+
+For the actual probe $e^0\mapsto e^{\epsilon f}e^0$, $e^1\mapsto e^{-\epsilon f}e^1$, angular coframe and gauge remain fixed; $\dot v=0$ exactly. Set $dE=fE$, $dI=fI$, $da=4dI$ as bounds. Then
+
+$$
+db=1536I(dI)E'+768I^2(dE)'+16(dI)J.
+$$
+
+Here $(dE)'$ includes $f'E$. For $P=\sum_{\mu,\nu}P_2^{\mu\nu}\partial_\mu\partial_\nu+\sum_\mu P_1^\mu\partial_\mu+P_0$, using **ordered second-derivative pairs**, the component operator-norm bounds are
+
+$$
+|P_2|\le a^2,\qquad |P_1|\le4aa'+2ab,\qquad |P_0|\le4ab'+b^2.
+$$
+
+Their product-rule variations give the saved $\dot P$ bounds. All derivatives through order18 are enclosed at $q=1000$ and exact atomic $q=4642875905017627791065088$. Combining two mixed second derivatives into a single coefficient would require its extra factor; the saved convention does not combine them.
+
+At atomic flux, zeroth-derivative ceilings for $(P_2,P_1,P_0)$ are approximately $(2.956\times10^{10},7.431\times10^{38},4.671\times10^{66})$; their variations have ceilings $(2.956\times10^{11},7.431\times10^{39},4.671\times10^{67})$. These rounded summaries are not the directed artifact values and are not stress, energy or material requirements.
+
+### Verification and remaining work
+
+All 13 checks pass with 65 exact input hashes. Direct 85-digit step differentiation through order21 lies below the bounds. Frame/inverse and metric identities agree within $2.29\times10^{-86}$ and $5.69\times10^{-87}$; balanced pole identities agree within $4.83\times10^{-86}$. A rational-series control checks the composition recurrence. These controls accompany the analytic disk and interval proofs, rather than replacing uniform bounds with sampling. The figure was inspected.
+
+Independent audits pass: 501 directed comparisons at 160 digits check the step, composition, mask, mixed jets and operator arrays, using power-series and dual-number product rules. A separate 125-digit audit recomposes 512 exported ceilings and checks complex metric/chart formulas against the original dihole expressions; four complex metric comparisons agree within $2.66\times10^{-110}$. Both audits verify all 65 hashes. Final layout PASS:175 imports,1563 Markdown links,8 source guards,14 frozen pilot hashes.
+
+These are regular-atlas input jets for the Q4 method. A quantified normal-coordinate neighbourhood, transport-coefficient bounds, graph-norm point-evaluation constant and the actual $B_4$ defect still need evaluation. The [differentiated heat-asymptotic framework](https://arxiv.org/abs/1607.05152) does not supply those numerical constants for this geometry. The curved heat correction and full source at the same target regulator remain unknown.
+
+One neutral hydrogen atom and a trial 1 nm areal opening remain the target. No self-consistent support, stability, atomic passage or exterior-clock advantage is established. The static geometry excludes 13 September 2027 to 12 September 2027.
+
+![Regular geometry derivative ceilings](../figures/dihole_regular_jets_progress.png)
