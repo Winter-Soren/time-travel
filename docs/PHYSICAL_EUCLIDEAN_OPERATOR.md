@@ -6700,3 +6700,241 @@ These are regular-atlas input jets for the Q4 method. A quantified normal-coordi
 One neutral hydrogen atom and a trial 1 nm areal opening remain the target. No self-consistent support, stability, atomic passage or exterior-clock advantage is established. The static geometry excludes 13 September 2027 to 12 September 2027.
 
 ![Regular geometry derivative ceilings](../figures/dihole_regular_jets_progress.png)
+
+
+## Explicit normal neighbourhood, heat transport and graph evaluation
+
+Checkpoint180 evaluates three missing inputs to the Q4 remainder calculation: a normal neighbourhood, bounds for the physical heat coefficients $u_0,\ldots,u_4$, and a graph-norm point-evaluation constant. The [calculation](../scripts/dihole_local_transport.py) has **16 passing checks** and retains **67 exact input hashes** in the [results](../results/dihole_local_transport_results.json). All lengths and operator bounds here use the existing $D=1$ normalization. These are mathematical bounds on a prescribed geometry, not a newly supported geometry or an atom-transport calculation.
+
+### Sharper real metric bounds
+
+Use the oriented stereographic charts from checkpoint179, with $t=|y|^2\le2$, $x=p(1-t)/(1+t)$ and $p=\pm1$. Set $U=N^{-2}=W/f$, $V=P^2=fW$, $c=4R^2/(1+t)^2$ and $\Pi=yy^T/t$. Then
+
+$$
+g_{\rm ang}=c[U(I-\Pi)+V\Pi].
+$$
+
+The exact polar identity $f=NP=1$ makes $F=V-U$ vanish at the pole. Consequently $|F|\le2tM_{F_x}/(1+t)$ and $\|\partial_{y_j}\Pi\|\le t^{-1/2}$ give the regular bound
+
+$$
+\|\partial_{y_j}g_{\rm ang}\|\le
+\frac{16R^2\sqrt t}{(1+t)^3}M_0+
+\frac{16R^2\sqrt t}{(1+t)^4}M_x+
+\frac{8R^2\sqrt t}{(1+t)^3}M_{F_x},
+$$
+
+where $M_0=\max(U,V)$ and $M_x=\max(|U_x|,|V_x|)$. Radial angular eigenvalue derivatives are $4(2RU+R^2U_R)/(1+t)^2$ and the corresponding expression for $V$, with $|R'|\le1$. Derivatives of $g_{\tau\tau}=f/W$ and $g_{ss}=fW$ are included. The maxima of $\sqrt t/(1+t)^j$ occur at $t=1/(2j-1)$; for $j=2,3,4$ they are $3\sqrt3/16$, $25\sqrt5/216$, $343\sqrt7/4096$.
+
+The exact balanced calibration is enclosed on 768 real interval boxes. The resulting directed bounds include
+
+| Quantity | Bound |
+| --- | ---: |
+| Metric operator norm $M$ | $\le92.84421315093161$ |
+| Inverse metric norm $H$ | $\le260.3941671325786$ |
+| Metric lower bound $m=H^{-1}$ | $\ge0.0038403317977965847$ |
+| First metric component derivative | $\le6746.143644310957$ |
+| Angular first derivative | $\le3.773835405681557$ |
+| Physical volume density | $[0.0038403317977965847,1.8197465777582595]$ |
+
+For clarity, the sharper spectral bounds use the previously certified real $N,P$ intervals, not the large complex component moduli:
+
+$$
+M=\max(N_+^2,P_+^2,4R_+^2\max(P_+^2,N_-^{-2})),
+$$
+$$
+H=\max(N_-^{-2},P_-^{-2},\tfrac9{4R_-^2}\max(P_-^{-2},N_+^2)).
+$$
+
+### A quantified normal neighbourhood
+
+Start with the saved metric derivative sequence, replacing orders zero and one by the real bounds above. Improve the inverse derivatives using $g^{-1}g=I$:
+
+$$
+H_n\le H_0\sum_{j=1}^n {n\choose j}4g_jH_{n-j}.
+$$
+
+At each order the smaller of this ceiling and the saved inverse-component ceiling remains valid. Binomial products give Christoffel component ceilings $G_n=6(h*g')_n$ and Euclidean multilinear ceilings $C_n=2^{n+3}G_n$.
+
+Source points use a chart with $|y|\le1$. The larger disk $|y|\le\sqrt2$, and the buffered radial interval $[-.02,.07]$ around $[0,.05]$, supply coordinate clearance $\delta=.02$. Put $A=\log(3/2)$ and round the following radius downward:
+
+$$
+r=\min\left(\frac{\delta}{4},
+\frac{A}{2C_0+\sqrt{4C_0^2+2C_1A}}\right).
+$$
+
+The geodesic speed and displacement are bounded by $2r$, while
+
+$$
+\|D\exp_y-I\|\le \exp(4C_0r+2C_1r^2)-1\le\tfrac12.
+$$
+
+Integrating this Jacobian estimate on the convex initial-velocity ball proves injectivity. Its singular values lie in $[1/2,3/2]$, so the inverse Jacobian norm is at most 2. With $\rho=\sqrt m\,r$, a path leaving the coordinate clearance ball has length at least $\sqrt m\,\delta>\rho$. Minimizing sequences of length below $\rho$ therefore stay in a compact interior region. Their minimizing geodesic has initial coordinate velocity below $r$ and is unique by the injectivity estimate. This supplies a normal metric neighbourhood, not merely a nonzero local Jacobian, and does not assert strong convexity for arbitrary pairs in a larger ball. See the geometric background in [Calegari's Riemannian geometry notes, section 4](https://math.uchicago.edu/~dannyc/courses/riem_geo_2013/riem_geo_notes.pdf); the explicit estimates here are this project's calculation.
+
+The saved lower bounds are
+
+$$
+r\ge4.593934749973308\,10^{-11},\qquad
+\rho\ge2.8468802301693738\,10^{-12}.
+$$
+
+Use $\rho/2\ge1.4234401150846869\,10^{-12}$ for closed cutoff support. These tiny conservative coordinate neighbourhoods are **not throat diameters**. In orthonormal initial coordinates the normal volume density is bounded by the physical endpoint-volume ratio times the determinant bounds $1/16$ and $81/16$. The exported interval is $[0.00013189789188007008,2398.872684695344]$.
+
+### Higher exponential-map and inverse derivatives
+
+For scaled initial velocity $w=v/r$, define the phase variables $Q=(\gamma-y)/r$, $U=\dot\gamma/r$. Use the maximum of their Euclidean norms, with $|Q|,|U|\le2$. The acceleration's order-$k$ derivative is bounded by
+
+$$
+H_k^{\rm flow}=r\sum_{j=0}^{\min(2,k)}{k\choose j}
+\frac{2!}{(2-j)!}\,2^{2-j}r^{k-j}C_{k-j}.
+$$
+
+The first bound is at most $0.7954358831566978$; the full phase-vector-field Lipschitz constant is therefore at most 1. Let $Z_1=3/2$ and use normalized derivatives (order-$n$ norm divided by $n!$):
+
+$$
+Z_n=e\sum_{k=2}^n\frac{H_k^{\rm flow}}{k!}[z^n]Z(z)^k,\quad
+E_n=r^{1-n}Z_n,
+$$
+$$
+Y_1=2,\qquad Y_n=2\sum_{k=2}^nE_k[z^n]Y(z)^k.
+$$
+
+The series used inside each recurrence have zero constant term and use only already computed lower orders. Finite chain rules and Gronwall's inequality bound the exponential map by $E$ and its time-one inverse by $Y$ through order17. No uniform inverse of the time-$t$ map at $t=0$ is assumed.
+
+### Physical heat coefficients through $u_4$
+
+The physical-volume kernel convention is
+
+$$
+K_g(t;x,y)\sim(4\pi t)^{-2}e^{-d(x,y)^2/(4t)}
+\sum_{j\ge0}t^ju_j(x,y).
+$$
+
+Write $v=(\det g)^{1/4}$ for the canonical half-density and $J=D_v\exp_y$ for the coordinate initial-velocity Jacobian (the derivative subscript here denotes velocity, not half-density). The leading coefficient is
+
+$$
+u_0(x,y)=v(y)v(x)^{-1}(\det J)^{-1/2}\mathcal U(x,y).
+$$
+
+The physical spin and $U(1)$ connection gives unitary parallel transport $\mathcal U$. Its coordinate component derivative bounds obey
+
+$$
+\Omega\le768EI^2E'+|q|\mathcal A.
+$$
+
+Here $E,I,\mathcal A$ in this connection formula denote coframe, inverse coframe and gauge-per-unit-charge sequences from179; they are distinct from the exponential-map sequence $E_n$ above. Products of ordinary derivative sequences use binomial convolution. Convert order-$n$ component bounds to Euclidean Frechet bounds with $2^n$, including an additional factor2 for the connection's one-form index.
+
+Along the scaled path, compose this connection with $[0,rZ_1,rZ_2,\ldots]$ and multiply by the velocity series $[2r,rZ_1,rZ_2,\ldots]$, obtaining $K_n$. Unitarity gives the normalized bounds
+
+$$
+\mathcal U_0=1,\qquad
+\mathcal U_n\le\sum_{j=1}^nK_j\mathcal U_{n-j}.
+$$
+
+There is no artificial factor $\exp K_0$. The Jacobian series has constant $3/2$ and order-$n$ coefficient $(n+1)Z_{n+1}$. The positive-order determinant coefficients are bounded by $24[J(z)^4]_n$. Expand the inverse square root about its true determinant lower bound $1/16$, rather than using that crude determinant series' constant term. Half-density composition, multiplication and composition with $Y/r$ then bound $u_0$ as a function of the endpoint. Its inverse has zeroth ceiling
+
+$$
+\|u_0^{-1}\|\le\frac94\sqrt{\frac{\mathrm{vol}_+}{\mathrm{vol}_-}},
+$$
+
+and higher inverse derivatives follow from differentiating $u_0^{-1}u_0=I$.
+
+Convert the saved canonical operator to physical volume before applying the transport recursion. For ordered second-derivative pairs, binomial sequence bounds are
+
+$$
+P_{2,g}=P_{2,c},\quad
+|P_{1,g}|\le |P_{1,c}|+8|P_{2,c}|v'v^{-1},
+$$
+$$
+|P_{0,g}|\le |P_{0,c}|+4|P_{1,c}|v'v^{-1}
++16|P_{2,c}|v''v^{-1}.
+$$
+
+For $X_\tau(x)=\exp_y(\tau\exp_y^{-1}(x))$, composition of the exponential and inverse sequences bounds all endpoint derivatives uniformly in $0\le\tau\le1$. The actual recursion is
+
+$$
+u_j(x,y)=-u_0(x,y)\int_0^1\tau^{j-1}u_0(X_\tau(x),y)^{-1}
+[P_gu_{j-1}](X_\tau(x),y)\,d\tau.
+$$
+
+The integral contributes at most $1/j$ after uniform majorization. Applying $P_g$ uses $16P_2u''+4P_1u'+P_0u$, with full normalized-series convolutions. This gives derivative orders **16,14,12,10,8** for $u_0,\ldots,u_4$. They are upper bounds, not evaluated signed coefficients.
+
+At the exact atomic reference $q=4642875905017627791065088$, the logarithmic upper ceilings for $\|D_x^nu_4\|/n!$, $n=0,\ldots,8$, are approximately
+
+$$
+(321.584,\ 356.509,\ 391.187,\ 425.738,\ 460.207,\
+494.620,\ 528.990,\ 563.327,\ 597.638).
+$$
+
+The displayed rounded values are summaries only. The enormous ceilings expose the conservatism of the estimate and do not show that the heat remainder is small.
+
+### Explicit graph-norm point evaluation
+
+In canonical coordinate $L^2$, use the prior Dirac bounds
+
+$$
+a_j=4I_j,\qquad
+b_j=768(I^2E')_j+16[I(|q|\mathcal A+v'v^{-1})]_j.
+$$
+
+The real metric upper bound is below100. Choose $\sigma=1/10$, coordinate cube half-width $r_c=2^{-36}$ and $h=r_c/8$. The computed inequality $16a_1r_c\le\sigma$ controls principal-symbol freezing. Clifford ellipticity and perturbation absorption give
+
+$$
+\|\nabla w\|_2\le L(\|Dw\|_2+b_0\|w\|_2),\qquad L=2/\sigma.
+$$
+
+Six nested product cutoffs $\chi_j=\prod_iS(j+1-|x_i-x_{0i}|/h)$ have gradient bound $20/h$ and Dirac commutator bound $40a_0/h$. Put $A_\chi=L(b_0+40a_0/h)+20/h$ and $U_0=1$. Ordered derivative commutation and nested cubes give
+
+$$
+U_\ell=(L+A_\chi)U_{\ell-1}
++L\sum_{j=1}^{\ell-1}{\ell-1\choose j}
+\left(2^{j+1}a_jU_{\ell-j}+2^jb_jU_{\ell-1-j}\right).
+$$
+
+All required $\|D^pu\|_2$, $p\le6$, are bounded by $\|(1+P)^3u\|_2$ because $P=-D^2$ is nonnegative in this convention. A final cutoff $\zeta=\prod_iS(2-2|x_i-x_{0i}|/h)$ equals1 on the half cube and is supported in the full cube. The absolute values introduce no cusp where the cutoff changes: it is constant near each coordinate centre and flat at its joins. Set $\kappa_j=j!(20/h)^j$ for $j\le6$ and
+
+$$
+W_j=\sum_{a=0}^j{j\choose a}2^a\kappa_aU_{j-a},\qquad
+C_6=W_0+3W_2+3W_4+W_6.
+$$
+
+Fourier evaluation constants in dimension4 are $E_0=E_2=1/(4\pi\sqrt{20})$ and $E_1=1/(4\pi\sqrt{30})$, from the radial [beta integral](https://dlmf.nist.gov/5.12.E1). The rational ceilings $E_0,E_2<1/48$, $E_1<1/60$ and tensor Cauchy-Schwarz yield
+
+$$
+\|\dot P_cu(x)\|\le C_{\rm ev}\|(1+P_c)^3u\|_{L^2(dx)},\qquad
+C_{\rm ev}=C_6\left(\frac{d_2}{12}+\frac{d_1}{30}+\frac{d_0}{48}\right),
+$$
+
+where $d_i$ are the saved zeroth derivative bounds for the three orders of $\dot P_c$. The results give $C_{\rm ev}<10^{165}$ for $q=1000$ and $C_{\rm ev}<10^{274}$ at atomic $q$. Physical-frame evaluation additionally has the factor $v(x)^{-1}$; physical kernel columns require their endpoint half-density conversions. These large constants are now explicit, but cannot alone establish support.
+
+### Verification and exact bound storage
+
+Every packed endpoint in the JSON is the exact number represented by its integer mantissa times two to its integer binary exponent. Its upward-rounded logarithm is for display only. This prevents large constants becoming floating-point infinity or tiny quantities silently becoming zero.
+
+All 16 checks pass and all 67 input hashes match. Controls cover binomial products, finite composition, a Catalan inverse series and a constant unitary connection. An independent exact-geodesic control uses $g=e^{2x}dx^2+dy^2+dz^2+d\tau^2$, for which $\exp_0(v)_x=\log(1+v_x)$ and the inverse is $\exp(x)-1$. Through order17 the largest true-to-bound ratios are below0.668 and0.501. Direct Fourier integration gives a largest ratio below0.872.
+
+Independent audits pass:
+- Real geometry: all 768 boxes and exported metric bounds reproduced at65 and100 interval digits.
+- Point evaluation and algebra: 102 exact-rational directed comparisons and285 packed/logarithmic checks at180 digits; the smallest positive relative margin is $3.98\,10^{-81}$.
+- Normal geometry and heat transport: 275 directed comparisons and267 logarithmic enclosure checks at170 digits; the smallest positive relative margin is $9.75\,10^{-82}$. The exact production dyadic radius is used, avoiding a different float-conversion rounding path in the audit.
+- All audits confirm the same 67 input hashes and final source/result hashes. The figure was visually inspected.
+Final layout PASS:176 imports,1573 Markdown links,8 source guards,14 frozen pilot hashes.
+
+Source SHA256: bf74297137c17b8b8273ee4212b230a843e861ff43712cfacf570042728443c4.
+Result SHA256: 0be31a41b16c37b41cc16d9f8ea5dc4a25200731e7a8d29ec330754fb464b5ee.
+
+### Remaining physical test
+
+The [heat-asymptotic framework](https://arxiv.org/abs/1607.05152) supplies context for the expansion, not a numerical support certificate for this model. The **full defect $B_4$ is still unevaluated**. Next, form the cutoff parametrix with $\chi(d)=S(2-4d/\rho)$, bound $(1+P)^3(\partial_t+P)Q_4$ including all cutoff, Gaussian, density and column factors, and combine it with $C_{\rm ev}$. The signed diagonal coefficients and the curved correction still need consistent evaluation and matching at the same target regulator.
+
+For orientation only, the proposed cutoff transition has $d\ge\rho/4$. At the atomic upper time from177, the Gaussian factor alone is bounded by
+
+$$
+e^{-d^2/(4t)}\le e^{-\rho^2/(64s_0)}
+\le2.03282817991905\,10^{-307},\qquad0<t\le s_0.
+$$
+
+This independently checked factor is **not a bound on the full defect**: its derivative and operator prefactors can be enormous. For a term $t^{-p}e^{-b/t}$, checking $p\le b/s_0$ is needed before replacing its time supremum by its endpoint value. Squared norms must retain arbitrary-precision or exact packed values.
+
+One neutral hydrogen atom and a trial **1 nm areal diameter** remain the first target. A successful physical model must establish self-consistent support, dynamical stability, atom transmission and internal-state survival, and an operational comparison with exterior clocks. None has been established by these bounds. Human transport is deferred and enlargement would require new calculations. The present static geometry excludes 13 September 2027 to 12 September 2027.
+
+![Local heat coefficient bounds, not atom transport](../figures/dihole_local_transport_progress.png)

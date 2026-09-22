@@ -1,5 +1,8 @@
 # Directory guide
 
+Current increment180: The [local transport calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#explicit-normal-neighbourhood-heat-transport-and-graph-evaluation) now supplies a quantified local coordinate neighbourhood, explicit bounds for five quantum-field heat coefficients, and a point-evaluation bound. **All 16 checks and three independent audits pass.** These conservative bounds are inputs to the remaining supporting-energy calculation; they do not describe atom passage. The full heat defect and supporting source remain unknown. See the [results](results/dihole_local_transport_results.json) and [visual](figures/dihole_local_transport_progress.png). **One hydrogen atom through a trial 1 nm opening remains the target; humans are deferred.** Support, stability, atom survival and clock gain remain unproved.
+
+
 Current increment179: The [regular high-derivative calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#regular-collar-geometry-and-full-operator-high-derivative-bounds) now bounds the actual geometry through derivative order20 and the complete physical field operator and its variation through order18, including both poles and the smooth joins. **All 13 checks pass.** These supply previously missing inputs to the heat-error calculation; the heat defect and total supporting source remain unknown. See the [results](results/dihole_regular_jets_results.json) and [visual](figures/dihole_regular_jets_progress.png). One-atom support, stability, passage and clock gain remain unproved.
 
 

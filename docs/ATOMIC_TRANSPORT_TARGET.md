@@ -271,3 +271,12 @@ The first target remains one hydrogen atom and a trial 1 nm areal opening. No su
 The [regular-coordinate calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#regular-collar-geometry-and-full-operator-high-derivative-bounds) now bounds the geometry through derivative order20 and the complete supporting-field operator and its variation through order18, including the smooth joins and both poles. All 13 checks pass. This provides inputs needed for the remaining quantum-field error estimate, not an atom propagation or proof of support.
 
 The next calculation must quantify local transport and the heat defect. One hydrogen atom through a trial 1 nm opening remains the first milestone; humans are deferred. Stability, atomic survival and a future clock advantage remain unproved, and the present static geometry excludes backward travel.
+
+
+## Checkpoint180: local field-propagation bounds, before atom propagation
+
+The [local transport calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#explicit-normal-neighbourhood-heat-transport-and-graph-evaluation) now bounds a local normal neighbourhood, five heat coefficients and point evaluation of the quantum-field response. All 16 checks and three independent audits pass. Here "heat transport" is part of a quantum-field calculation; it does **not** mean that a hydrogen atom has crossed the proposed opening.
+
+The target remains **one neutral hydrogen atom through a trial 1 nm areal diameter**, with humans deferred. That size is a parameter to test, not a proved viable aperture or a classical size-only passage condition. The next calculation must evaluate the remaining field-error bound and supporting source. A successful model then needs stability, nonzero atom transmission with quantified internal-state survival, and an operational exterior-clock comparison. Scaling to molecules or humans would require new calculations.
+
+No supporting material or stable opening is established. The present static geometry cannot send an atom from 13 September 2027 to 12 September 2027. Future clock gain has not been established for this model.
