@@ -6184,3 +6184,178 @@ All 16 saved checks pass, with 59 exact input hashes. Twelve noncommuting finite
 **Next:** quantitative matching to the physical regulator limit and local counterterms. A finite-$M$ absolute upper bound does not justify sending $M$ to infinity, establish the finite renormalized stress, determine its sign, or prove convergence uniform in a simultaneous infrared limit. The required total stress/current, stability, hydrogen transmission and internal-state survival, and exterior-clock comparison remain open. The trial aperture is still 1 nm in areal diameter. The static geometry excludes 13 September 2027 to 12 September 2027; no future clock gain is established.
 
 ![Complete fixed-regulator frequency bounds](../figures/dihole_full_frequency_progress.png)
+
+
+## Full-field heat variation and a regulator matching tail
+
+The [calculation](../scripts/dihole_regulator_heat_tail.py) and [results](../results/dihole_regulator_heat_tail_results.json) convert 176's full-field first-order source estimate into an explicit proper-time heat bound. This controls the long-time part of the correction from a finite regulator to the declared physical scheme. The short-time differentiated remainder and the full source at the required target regulator remain unknown.
+
+### Integrate the insertion before the Hamiltonian resolvent
+
+Write $\Lambda$ for the **comparison filter** used in 176, reserving $M$ for the **target regulator** to be removed. At zero infrared shift, keep
+
+$$
+\mathcal K_{\Lambda,\kappa}=\sqrt6\Lambda^3\prod_{j=1}^3(A_\kappa+\sqrt j\Lambda)^{-1},\qquad
+\mathcal B_\kappa=\beta\sqrt N\mathcal K^*\dot A_\kappa\mathcal K\sqrt N.
+$$
+
+The positive polynomial in 176 was constructed from the direct trace-norm ceiling
+
+$$
+\|\mathcal B_\kappa\|_1\le\sum_{p=3}^{10}a_p|\kappa|^{1-p},\qquad |\kappa|\ge K.
+$$
+
+This is not inferred by reversing its subsequent bound on $|I_\kappa|$. Its integral therefore gives
+
+$$
+\mathcal W_\Lambda:=\int_{\mathbb R}\|\mathcal B_\kappa\|_1\frac{d\kappa}{2\pi}
+\le\frac{f_Nx_0^2K^2/2+f_Px_0x_sK}{\pi}
++\frac1\pi\sum_{p=3}^{10}\frac{a_pK^{2-p}}{p-2}.
+$$
+
+The low-frequency part uses the direct first-order norm and has no singular resolvent. Both frequency signs are included. At the atomic charge and saved comparison filter, outward interval arithmetic gives
+
+$$
+\mathcal W_\Lambda\le1.8262413629229484\times10^{69}/D^2.
+$$
+
+Every angular state and the full exterior remain included, as in 176.
+
+### A full heat-variation bound with the correct lapse weights
+
+For each real frequency let $P=-A^2$, $E_s=e^{-sP/2}=\mathcal KJ_s(A)$, and
+
+$$
+D_\kappa=\mathcal K^*\dot A\mathcal K
+=N^{-1/2}\beta\mathcal B_\kappa N^{-1/2},\qquad
+\|D_\kappa\|_1\le\nu\|\mathcal B_\kappa\|_1.
+$$
+
+Here $\nu=\|N^{-1}\|$ is the existing global bound. The beta matrix is not moved through $\mathcal K$. The full physical heat variation per unit Killing time obeys
+
+$$
+\delta K(s)=-2s\operatorname{Re}\int
+\operatorname{Tr}(AE_s)^*\dot A E_s\frac{d\kappa}{2\pi}.
+$$
+
+Since $J_s$ and $A$ commute, cyclicity yields
+$\operatorname{Tr}(AJ_s)^*D_\kappa J_s=-\operatorname{Tr}D_\kappa A J_sJ_s^*$.
+Consequently
+
+$$
+|\delta K(s)|\le2s\nu\mathcal W_\Lambda L_\Lambda(s),\qquad
+L_\Lambda(s)=\sup_{x\ge0}
+\frac{\sqrt{x}e^{-sx}\prod_{j=1}^3(x+j\Lambda^2)}{6\Lambda^6}.
+$$
+
+A single spectral multiplier retains the cyclic cancellation. This does not multiply independent maxima for $J_s$ and $AJ_s$, identify the spectra of $H$ and $P$, or assume a positive global gap. The trace-class bound justifies frequency integration of the compact heat variation. In particular it bounds the full response rather than a finite angular heat kernel.
+
+For $p=(1,11/6,1,1/6)$, maximize each positive power separately to obtain
+
+$$
+L_\Lambda(s)\le\overline L_\Lambda(s):=
+\Lambda\sum_{n=0}^3p_n
+\left[\frac{n+\tfrac12}{e\Lambda^2s}\right]^{n+1/2}.
+$$
+
+This elementary ceiling is decreasing for all $s>0$. The exact scalar maximum is unique: in $z=x/\Lambda^2$ it solves
+$1/(2z)+\sum_{j=1}^3(z+j)^{-1}=\Lambda^2s$. Five independent scalar maximizations and 36 noncommuting-lapse matrix controls check the ceiling and the cyclic identity. Their role is validation of the formula; the continuum bound follows from the preceding operator inequalities and176's full-field estimates.
+
+### Match the same target regulator and physical reference
+
+Use the existing physical four-dimensional subtraction
+$H(s)=(a_0/s^2+a_2/s+a_4)/(16\pi^2)$, with $a_0=0$ for this volume-preserving variation. After taking the established infrared limit first, 160's exact identity is
+
+$$
+Q_{\rm HK}=Q_M-\mathcal C_M+
+\frac12\int_0^\infty r_M(s)[\delta K(s)-H(s)]\frac{ds}{s},
+\qquad r_M(s)=3e^{-M^2s}-3e^{-2M^2s}+e^{-3M^2s}.
+$$
+
+The counterterm is unchanged:
+
+$$
+\mathcal C_M=\frac{(6\log2-3\log3)a_2M^2+
+ a_4[\log(M^2/\mu_H^2)+\log(3/8)]}{32\pi^2}.
+$$
+
+Keep the fixed physical reference of 162, $\mu_HD=q\sqrt2e^{-\gamma_E}$. The source required here is $Q_M$ at the **target** mass. The bound used to construct $\mathcal W_\Lambda$ cannot be relabeled as a bound on $Q_M$ when $M\ne\Lambda$.
+
+For a proper-time split $s_0>0$, define
+
+$$
+T_0=\int_{s_0}^\infty r_M(s)ds
+=\frac{3e^{-z}-\tfrac32e^{-2z}+\tfrac13e^{-3z}}{M^2},\qquad z=M^2s_0.
+$$
+
+Positivity of $r_M$ and monotonicity of $\overline L$ now give a fully explicit bound
+
+$$
+\left|\frac12\int_{s_0}^\infty r_M(s)\delta K(s)\frac{ds}{s}\right|
+\le E_{\rm heat}:=\nu\mathcal W_\Lambda\overline L_\Lambda(s_0)T_0.
+$$
+
+This closes the previously unknown long-time heat contribution to this matching correction. It is not a bound on the unweighted absolute infrared heat integral.
+
+To state the remaining uncertainty exactly, suppose the actual short-time remainder satisfies
+
+$$
+\left|\delta K(s)-H(s)-\frac{a_6s}{16\pi^2}\right|
+\le\frac{C_*s^2}{16\pi^2},\qquad0<s\le s_0.
+$$
+
+Then
+
+$$
+Q_{\rm HK}=Q_M-\mathcal C_M+
+\frac{a_6J_0-a_2I_2-a_4I_1}{32\pi^2}+\epsilon,\qquad
+|\epsilon|\le\frac{C_*J_1}{32\pi^2}+E_{\rm heat},
+$$
+
+where $J_j=\int_0^{s_0}s^jr_M(s)ds$ and $I_j=\int_{s_0}^\infty s^{-j}r_M(s)ds$. The elementary weights are
+
+$$
+J_0=\frac{11}{6M^2}-T_0,\qquad
+J_1=\frac1{M^4}\sum_{j=1}^3\frac{c_j}{j^2}
+[1-(1+jz)e^{-jz}],\quad(c_1,c_2,c_3)=(3,-3,1).
+$$
+
+Thus $J_1\le85/(36M^4)$. With $E_1$ the exponential integral,
+$I_1=\sum c_j E_1(jz)$ and $I_2=\sum c_j[e^{-jz}/s_0-jM^2E_1(jz)]$.
+Local coefficients retain the saved numerical values
+
+$$
+a_2/D=0.11400999281577749,\quad
+a_4D=7.70692428939725005+(3.02479783094743508\times10^{-6})q^2,
+$$
+$$
+a_6D^3=-1204.72809423935-3.2096919527759757q^2.
+$$
+
+These are numerical geometry coefficients, not interval enclosures; their uncertainty is additional to $\epsilon$. The numerical counterterm and correction center saved by the code must not be presented as a certified interval for the physical source.
+
+### Atomic results and the next missing calculation
+
+For the atomic $q=4642875905017627791065088$, choose
+$s_0/D^2=1.7932482895815272\times10^{-28}$, rounded downward from $.01/(qB_{\rm unit})$. This ensures $s_0|q|B_{\rm unit}\le.01$ on the buffers. It is a scale choice, not proof of a local heat remainder estimate. The comparison filter stays $\Lambda D=2154733372140.8845$ and
+$\overline L_\Lambda(s_0)D\le5.23214788880016\times10^{22}$.
+
+| Nominal $M^2s_0$ | Target $MD$ | $E_{\rm heat}D/q^2$ upper bound |
+| ---: | ---: | ---: |
+| 30 | $4.0901611069192706\times10^{14}$ | $75.55503890633399$ |
+| 50 | $5.280375283467876\times10^{14}$ | $9.343832528117022\times10^{-8}$ |
+| 100 | $7.467578340299948\times10^{14}$ | $9.010957784002824\times10^{-30}$ |
+| 200 | $1.0560750566935752\times10^{15}$ | $1.6760723786603616\times10^{-73}$ |
+
+At the $z\simeq50$ row, the coefficient multiplying $C_*$ is at most
+$9.616289804453093\times10^{-62}D^4$. Its small size is not an error estimate until $C_*$ is bounded. The target regulator is mathematical; none of these masses is a material-production requirement.
+
+All 14 checks pass with 61 exact input hashes. The 36 finite matrix controls have maximum scaled cyclic-identity error $1.84\times10^{-15}$; independent proper-time weight quadrature agrees within $8.0\times10^{-85}$ relative error. The generated figure has been inspected. An independent mathematical audit passes, including a 90-digit recomposition of 62 scalar enclosures. A separate 125-digit audit verifies 122 directed bounds, all 120 nearest-float local coefficient/center fields, all 12 target-mass rows and all 61 input hashes. The smallest relative directed margin is $1.43\times10^{-18}$; local estimate rounding is below 0.490 ulp. These rounding checks do not bound the original geometry-quadrature uncertainty. Layout verification passes 173 imports, 1542 links, 8 source guards and 14 frozen hashes.
+
+The next calculation must bound the differentiated short-time remainder $C_*$, or directly bound its weighted integral, and compute or tightly bound the full source at the same target regulator. [Ludewig's Theorem 3.1](https://arxiv.org/pdf/1607.05152) addresses heat asymptotics with derivatives on compact subsets under its extension assumptions; it does not supply our numerical remainder constant. The saved low-order heat coefficients and a small magnetic proper-time product alone cannot provide it. [Vassilevich](https://arxiv.org/pdf/hep-th/0306138) supplies the heat-coefficient framework; the evaluated matching-tail bound above is our derivation within the prescribed model.
+
+At positive fixed $\eta$, an additional term involving $(1-e^{-\eta s})w_M(s)\delta K(s)/s$ would remain. Its absolute integral is not controlled by the exponentially weighted bound above. The calculation uses $\eta=0$ after the established ordered infrared prescription, not an unsupported interchange of limits.
+
+No physical source sign, supported opening, stability, atom passage or clock advantage has been established. One hydrogen atom and the trial 1 nm areal diameter remain the target. The current static geometry excludes 13 September 2027 to 12 September 2027; human transport is deferred.
+
+![Long-time regulator-matching correction bound](../figures/dihole_regulator_heat_tail_progress.png)

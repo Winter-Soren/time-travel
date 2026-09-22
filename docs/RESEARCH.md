@@ -1,3 +1,58 @@
+# Authoritative checkpoint177 - full-field heat bound and regulator matching tail
+
+Previous checkpoint176 published d24ed93d2ee4eef928921a3b130f5b766d713e15.
+Previous goal turn PROGRESS:176 completed and privately published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- scripts/dihole_regulator_heat_tail.py:14 checks PASS,61 exact input hashes.
+  No historical geometry or physical solves rerun. Existing176 bounds reused.
+- NEW integrated first-order insertion W_Lambda=int||B_kappa||1 dκ/(2pi).
+  This uses176's direct B envelope, not the converse of the source I bound.
+  Atomic W<=1.8262413629229484e69/D², full angular and exterior content.
+- For E=exp(-sP/2)=K_Lambda J, D=K*dotA K=N^-1/2 beta B N^-1/2.
+  Cyclicity gives |deltaK(s)|<=2s*nu*W_Lambda*L_Lambda(s),
+  L_Lambda=sup_x sqrt(x)exp(-sx)prod(x+jLambda²)/(6Lambda6).
+  A positive four-term spectral ceiling evaluates L for every s>0.
+  Beta is not commuted through K; no global spectral gap is assumed.
+- Set r_M=3exp(-M²s)-3exp(-2M²s)+exp(-3M²s), after eta->0 first.
+  Half-weighted long-time correction <=nu*W*L(s0)*int_s0^infinity r_M ds.
+  All factors are now explicit; no unknown long-time heat constant remains.
+- Atomic cutoff s0/D²=1.7932482895815272e-28 is chosen so
+  q*Bunit*s0<=.01 across the buffers. This does NOT certify a heat remainder.
+  Lambda D=2154733372140.8845 is a comparison filter, distinct from target M.
+  At nominal M²s0=50, MD=528037528346787.6:
+  long heat correction/q² <=9.343832528117022e-8/D.
+  At nominal M²s0=100, MD=746757834029994.8:
+  long heat correction/q² <=9.010957784002824e-30/D.
+- Exact matching: Q_HK=Q_M-C_M+(a6*J0-a2*I2-a4*I1)/(32pi²)+epsilon,
+  |epsilon|<=Cstar*J1/(32pi²)+Eheat, if the actual short remainder obeys
+  |deltaK-H-a6*s/(16pi²)|<=Cstar*s²/(16pi²) on(0,s0].
+  Jj=int_0^s0 s^j r_M ds; Ij=int_s0^infinity s^-j r_M ds; a0=0.
+  The unknown Cstar is explicitly null; local a2/a4/a6 remain numerical.
+- Physical reference remains fixed: mu_H D=q*sqrt(2)*exp(-gamma_E).
+  The required anchor is Q at TARGET M. The saved Lambda source ceiling
+  cannot replace it. No source value/sign or total renormalized bound obtained.
+- NEXT: evaluate a quantitative differentiated short-time remainder Cstar,
+  or its weighted integral directly, and the full source at the same target M.
+  Neither local heat coefficients nor magnetic-scale smallness supplies Cstar.
+  Then total stress/current, stability and atomic transport must agree.
+  Static geometry excludes13Sep2027->12Sep2027; no future clock gain proved.
+
+Source SHA256 16517fa214d719c61030a29663c9b632806a729d9129f1e1918b0f8bda01d51b
+Results SHA256 7fb8de096ffe0181ca548455a48bd7fc361e9fb423176a5dc544aae50f782005
+
+Verification:14 checks pass,61 exact inputs, figure inspected.
+Independent mathematical audit passes; its90-digit recomposition verifies62
+scalar enclosures. A separate125-digit audit verifies122 directed bounds,
+120 nearest-float local estimates, all12 target-mass rows and61 input hashes.
+No defects found. Layout passes173 imports,1542 links,8 source guards
+and14 frozen hashes. All prior documentation bytes are preserved.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint176 and earlier history ---
+
 # Authoritative checkpoint176 - complete fixed-regulator frequency bound
 
 Previous checkpoint175 published 9ae74fbf5941dad1f15587f1807293f46e2b6566.
