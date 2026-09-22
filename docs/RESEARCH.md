@@ -1,3 +1,67 @@
+# Authoritative checkpoint172 - local zero-shift insertion and frequency tail
+
+Previous checkpoint171 published 7f96a467af7f8fe331c62926ee9c14592b030600.
+Previous goal turn PROGRESS: common proper-field metric insertion, 17 checks.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- scripts/dihole_local_zero_shift.py: 18 checks PASS, 44 exact input hashes.
+  Reuses 171's graph helper and authenticated inputs; no historical solves rerun.
+- At fixed M>0 and kappa!=0, expand the common first-order filter into
+  resolvents. Stable residues d_j=alpha*product_(k!=j)(m_k+m_j)/((k-j)M^2)
+  retain their signs and remain finite as eta goes to zero.
+- Certified compact Green bound Gamma=N_+/|kappa| applies between the
+  defect and physical metric supports. It is not a global inverse bound.
+  The m0=0 endpoint is a localized strong/HS limit, not bounded global A^-1.
+- Local ordinary error e0=Gamma*sum|d_j|C_j. First-action error is the
+  minimum of the triangle, cancellation and m0-last product bounds.
+  The last product's graph numerator has no division by m0.
+- 171's metric graph proof localizes to support(F,F_s) with unchanged
+  constants. It bounds the selected insertion using local e0/e1 and fixed JX4.
+- Atomic kappa=M, eta=0: e0/D<2.052076e-13; e1<0.095041380.
+  Selected insertion error<1.278585e12 and absolute value<1.292365e12.
+  These dimensionless bounds are not a physical source or atom probability.
+- Whole eta interval [0,.01M^2]: residue magnitudes at the upper endpoint,
+  C_j and reduced/filter/product norms at zero, give a monotone envelope.
+  A quantitative eta convergence rate would need unevaluated global-output
+  weighted Green norms; do not substitute the compact Gamma bound for them.
+- NEW high-frequency tail: hold M and Gaussian Lambda fixed as kappa varies.
+  e0 <= N W0(c/k+dN/k^2);
+  e1 <= N W1(c/k+dN/k^2)+c A3/k^3+d A4/k^4,
+  L <= (1+c)A3/k^3+d A4/k^4, rF <= A4/k^4,
+  k=|kappa|, A3=sqrt6 M^3 N^3, A4=A3 N.
+  The insertion has a positive polynomial majorant with powers k^-2..k^-8.
+  Integrate each term exactly above K>0. Both signs with d kappa/(2 pi)
+  give the positive tail divided by pi; no evenness assumption on I needed.
+- W0=sum|d_j| and W1=sum|d_j|m_j evaluated at eta_max give an integrable
+  whole-eta-interval majorant. Thus eta removal commutes with the selected
+  frequency integral on |kappa|>=K>0, at fixed M and fixed spatial filter.
+  This does not control kappa=0, omitted selections/sectors, M infinity,
+  counterterms, or the whole-space positive-filter trace.
+- Atomic K=M: zero-shift two-sided absolute tail <9.282821e24 /D;
+  uniform eta tail <1.098895e25 /D. Loose bounds, not central source values.
+- NEXT: bound the low-frequency contribution quantitatively, isolating the
+  massless term and using actual local spectral weight near zero. Existing
+  qualitative zero-state/limit results do not supply numerical constants.
+  Then account for omitted selections, sectors and regulator/counterterm limits.
+  Do not restart atom evolution on an assumed supported geometry.
+  Static geometry excludes 13 Sep 2027 -> 12 Sep 2027; no future clock gain.
+
+Source SHA256 f95cde7f9510dc82cfe9e5f1a44e937c45662ad3d385c1ddd15afb41c911abf2
+Results SHA256 c6abf68b4d44f18d6f0b97016a0275a8a195aab2d306bcd6de77f7bdd17177a3
+
+Verification PASS: 18 controls, 44 exact inputs, figure inspected.
+Independent 110-digit audit: 2,716 inequalities enclosed, comprising the
+unchanged 2,352 earlier bounds and 364 tail additions. Analytic tail audit passes.
+Polynomial quadrature agrees within 1.67e-111; closed-form control within
+5.65e-15 relatively. Whole-interval caps use the recorded binary endpoints.
+Layout PASS: 167 imports, 1486 links, 8 historical guards, 14 frozen hashes,
+operator identity. All six previous document byte sequences preserved.
+Git diff check passes. Publication follows. No simulation is running.
+
+--- Preserved checkpoint171 and earlier history ---
+
 # Authoritative checkpoint171 - common proper-field metric insertion
 
 Previous checkpoint170 published 0c15dae1b1b3852eb168aca2b34a1018613d6bff.

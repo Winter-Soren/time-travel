@@ -215,3 +215,10 @@ The first physical target remains one neutral hydrogen atom and a trial 1 nm are
 ## Checkpoint171: common supporting-field response
 
 The [proper-field comparison](PHYSICAL_EUCLIDEAN_OPERATOR.md#proper-euclidean-channel-and-a-common-metric-insertion) now bounds a finite geometry-response contribution while retaining the common regulator cancellation. All 17 controls pass. The result uses a fixed frequency, finite auxiliary regulator and positive infrared shift; it is not the total energy supporting the opening. The compact metric insertion offers the next route to removing that artificial shift. No atom has been propagated and no time difference has been established.
+
+
+## Checkpoint172: one atom remains the physical milestone
+
+The [localized calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#compact-zero-shift-insertion-and-integrated-frequency-tail) removes an artificial positive shift from a selected supporting-field contribution and bounds its high-frequency integral at fixed regulator. All 18 checks pass. This resolves a mathematical cutoff issue; the total supporting energy and stability remain unknown. The next calculation concerns the low-frequency contribution and omitted field content.
+
+The payload is still **one neutral hydrogen atom**, with a **trial 1 nm areal diameter**. No atom has been propagated. A valid first demonstration requires the same model to provide support, stability, quantified atomic transmission and internal-state survival, and an exterior-clock comparison. The present static geometry cannot send it from 13 September 2027 to 12 September 2027. A future clock advantage is also uncalculated. Any later enlargement would require new support, stability and payload calculations.

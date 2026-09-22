@@ -4971,3 +4971,242 @@ clock advantage remain unproved; the current static geometry still excludes
 backward causal travel.
 
 ![Common proper-field filter and metric-insertion bounds](../figures/dihole_proper_channel_progress.png)
+
+
+## Compact zero-shift insertion and integrated frequency tail
+
+The [calculation](../scripts/dihole_local_zero_shift.py) and
+[results](../results/dihole_local_zero_shift_results.json) remove the
+artificial positive infrared shift from the compact proper metric insertion
+at fixed nonzero frequency and fixed regulator. A uniform majorant also
+permits that removal under the frequency integral away from zero.
+This extends checkpoint171's selected supporting-field observable; it
+does not determine the complete supporting source.
+
+### Localize before removing the shift
+
+Retain the full and auxiliary skew-adjoint operators $A,\mathfrak a$,
+cutoff contraction $J$, defect $T=AJ-J\mathfrak a$ and graph constants
+$c,d$ from171. Let $S$ contain the physical mask and its first derivative,
+and $K\subset S$ contain the cutoff and its derivative, hence the defect.
+The lapse upper bound $N_+$ is certified on both compact supports.
+The auxiliary gap is $g=|\kappa|/n_+$; no full proper-operator gap is assumed.
+
+For $\eta\ge0$, set $m_j=\sqrt{\eta+jM^2}$, $\alpha=\sqrt6M^3$ and
+$\mathcal T_A=\alpha\prod_j(A+m_j)^{-1}$. For positive shift,
+partial fractions give
+
+$$
+\mathcal T_A=\sum_{j=0}^3d_j(A+m_j)^{-1},\qquad
+d_j=\frac{\alpha}{\prod_{k\ne j}(m_k-m_j)}
+=\alpha\prod_{k\ne j}\frac{m_k+m_j}{(k-j)M^2}.
+$$
+
+The last expression avoids subtracting nearly equal masses. At zero shift,
+$(d_0,d_1,d_2,d_3)=(1,-t,2t-3,2-t)$ with
+$t=3+\sqrt3+\tfrac32\sqrt2+\tfrac12\sqrt6$.
+The exact moments are $\sum_jd_jm_j^r=0$ for $r=0,1,2$ and
+$\sum_jd_jm_j^3=-\alpha$. The magnitudes $|d_j|$ increase with $\eta$.
+
+Checkpoint151's full Hamiltonian identity implies
+
+$$
+1_S(A+m)^{-1}1_K
+=1_S\sqrt N(H_m+i\kappa)^{-1}\beta\sqrt N\,1_K,\qquad
+\|1_S(A+m)^{-1}1_K\|\le\Gamma=\frac{N_+}{|\kappa|}.
+$$
+
+This retains the full exterior Hamiltonian. At $m=0$, the expression
+denotes its localized limit. It is not a bounded global $A^{-1}$.
+The same bound holds with either compact support on either side.
+
+For $E=\mathcal T_AJ-J\mathcal T_{\mathfrak a}$ and checkpoint171's
+$C_m$ (with $C_0=c+d/g$), partial fractions yield
+
+$$
+\|1_SE\|\le e_0=\Gamma\sum_j|d_j|C_{m_j}.
+$$
+
+The cancellation identity
+
+$$
+AE=-T\mathcal T_{\mathfrak a}
++\sum_jd_jm_j(A+m_j)^{-1}T(\mathfrak a+m_j)^{-1}
+$$
+
+bounds the localized first-action error by
+
+$$
+e_{1,\mathrm{cancel}}=c a_F+d r_F
++\Gamma\sum_j|d_j|m_jC_{m_j}.
+$$
+
+Two other bounds remain valid. The global contraction
+$\|A(A+m)^{-1}\|\le1$ gives
+$e_{1,\mathrm{sum}}=\sum_j|d_j|C_{m_j}$ for positive $m$.
+For the product bound, apply masses $m_1,m_2,m_3$ first, starting
+$e=0,r=1$ and updating $e\leftarrow(e+C_mr)/m$ and
+$r\leftarrow r/\sqrt{g^2+m^2}$. Apply $m_0$ last, obtaining
+
+$$
+e_{1,\mathrm{prod}}=\alpha(e_3+C_{m_0}r_3).
+$$
+
+This graph numerator does not divide by $m_0$. Its localized endpoint
+therefore remains finite. All products commute at positive shift and
+have the same localized limit, so their bounds can be minimized
+independently of the ordinary error:
+$e_1=\min(e_{1,\mathrm{sum}},e_{1,\mathrm{cancel}},e_{1,\mathrm{prod}})$.
+
+The proof of171's metric graph estimate also gives
+
+$$
+\|\dot A\psi\|\le c_\delta\|1_SA\psi\|+d_\delta\|1_S\psi\|.
+$$
+
+No derivative acts on the characteristic function. The constants are
+unchanged because every mask and mask derivative is supported in $S$.
+For frozen input $JX_4$, write
+$u=\mathcal T_AJX_4$, $v=J\mathcal T_{\mathfrak a}X_4$ and
+$L=(1+c)a_F+d r_F$. The selected insertion
+$I(u)=-\operatorname{Re}\operatorname{Tr}(Au)^*\dot Au$ has
+
+$$
+|I(u)-I(v)|\le\|X_4\|_{\rm HS}^2
+\left[e_1(c_\delta L+d_\delta r_F)
++(L+e_1)(c_\delta e_1+d_\delta e_0)\right],
+$$
+
+$$
+|I(u)|\le\|X_4\|_{\rm HS}^2(L+e_1)
+\left[c_\delta(L+e_1)+d_\delta(r_F+e_0)\right].
+$$
+
+Both Weyl blocks and the proper $-1/2$ form prefactor are already included.
+This is one frozen selection in one sector and collar.
+
+### The whole shift interval and its endpoint
+
+For $0\le\eta\le\eta_{\max}$, use residue magnitudes and any explicit
+mass factors at $\eta_{\max}$, and $C_{m_j}$, $r_F$, $a_F$ and the
+product graph estimate at zero. The former increase and the latter
+decrease with the shift. Their positive combinations bound the entire
+interval; sampling supplements this proof rather than replacing it.
+
+The common Hamiltonian core from151 gives strong resolvent convergence
+$H_m\to H_0$. The compact bounds above promote the finite partial-fraction
+sum to local Hilbert-Schmidt convergence after composition with fixed
+$X_4$. The identity $A(A+m)^{-1}=1-m(A+m)^{-1}$ gives local first-action
+convergence as well. The localized metric graph estimate then gives
+convergence of the insertion, without claiming convergence of the
+whole-space positive-filter trace.
+
+There is no quantitative shift-convergence rate here. A resolvent-identity
+rate would require global-output norms such as
+
+$$
+K_C=\|\sqrt N(H_0+i\kappa)^{-1}\beta\sqrt N\,1_C\|.
+$$
+
+If suitable such norms were bounded, a localized difference estimate
+proportional to $|m-n|K_CK_D$ could be used. The compact $\Gamma$ bound
+does not establish these global-output norms; no such rate is exported.
+
+At the atomic reference, $\kappa=M$, $\eta=0$, and fixed
+$MD=\Lambda D=2154733372140.8845$, the bounds are
+
+| Quantity | Upper bound |
+| --- | ---: |
+| Local ordinary error $e_0/D$ | $2.052076\times10^{-13}$ |
+| Local first-action error $e_1$ | $0.095041380$ |
+| Selected insertion comparison error | $1.278585\times10^{12}$ |
+| Selected insertion absolute value | $1.292365\times10^{12}$ |
+
+The insertion bounds are dimensionless at one frequency. They are not
+transmission probabilities, measured source values, or energies in joules.
+The exact atomic flux is $4642875905017627791065088$.
+
+### An integrable high-frequency majorant at fixed regulator
+
+Hold $M$ and the Gaussian scale $\Lambda$ fixed while varying
+$k=|\kappa|>0$. Put $n=N_+$,
+$W_0=\sum_j|d_j|$, $W_1=\sum_j|d_j|m_j$,
+$A_3=\alpha n^3$ and $A_4=\alpha n^4$.
+Since $g\ge k/n$, the following positive polynomials bound the
+zero-shift quantities:
+
+$$
+r_F\le A_4/k^4,\quad a_F\le A_3/k^3,\quad C_m\le c+dn/k,
+$$
+
+$$
+e_0\le nW_0(c/k+dn/k^2),\qquad
+e_1\le nW_1(c/k+dn/k^2)+cA_3/k^3+dA_4/k^4,
+$$
+
+$$
+L\le(1+c)A_3/k^3+dA_4/k^4.
+$$
+
+Substitute these polynomials in the two insertion bounds above. Each
+becomes $\sum_{p=2}^8a_pk^{-p}$ with nonnegative coefficients. Thus
+
+$$
+\int_K^\infty\sum_{p=2}^8a_pk^{-p}\,dk
+=\sum_{p=2}^8\frac{a_p}{(p-1)K^{p-1}},\qquad K>0.
+$$
+
+For both frequency signs and measure $d\kappa/(2\pi)$, divide this
+positive-frequency majorant by $\pi$. This uses a common majorant for
+both signs; it does not assume that the actual insertion is even.
+There is no additional form factor of $1/2$. Coefficients multiplying
+$k^{-p}$ have units $D^{-p}$; integrated bounds have units $D^{-1}$.
+
+Evaluate $W_0,W_1$ at $\eta_{\max}$ to cover the entire shift interval.
+The same $A_3,A_4$ are upper bounds at positive shift. The resulting
+majorant is integrable on $|\kappa|\ge K>0$, uniformly in $\eta$.
+Dominated convergence therefore removes $\eta$ under this restricted
+frequency integral. Neither $M$ nor $\Lambda$ is taken to infinity.
+
+For the atomic reference and $\eta_{\max}=.01M^2$:
+
+| $K/M$ | Zero-shift absolute tail, multiplied by $D$ | Uniform-shift absolute tail, multiplied by $D$ |
+| --- | ---: | ---: |
+| 0.1 | $9.193380\times10^{26}$ | $9.642837\times10^{26}$ |
+| 1 | $9.282821\times10^{24}$ | $1.098895\times10^{25}$ |
+| 10 | $9.046716\times10^{23}$ | $1.073201\times10^{24}$ |
+| 100 | $9.044460\times10^{22}$ | $1.072955\times10^{23}$ |
+
+These loose absolute bounds need no cancellation in the unknown insertion
+value. They are not a central value or a support sign.
+
+### Checks, limits and next calculation
+
+All 18 saved controls pass, using 44 exact input hashes. They include
+stable residues at large shift, moment cancellation, noncommuting
+finite Hamiltonians with full exterior coupling, compact metric and defect
+supports, endpoint and whole-interval enclosures, independent quadrature
+of the positive tail polynomial and an exactly solvable commuting model.
+The test lapse reaches 100 outside the collar, whose local bound is only
+1.5; this checks that no global upper lapse is silently substituted.
+The old scientific inputs are reused without rerunning their simulations.
+
+Independent 110-digit evaluation encloses 2,716 inequalities: the
+unchanged 2,352 local bounds and 364 tail additions. Independent polynomial
+integration agrees within $1.67\times10^{-111}$; the closed-form control
+agrees with saved quadrature within $5.65\times10^{-15}$ relatively.
+An independent algebra audit confirms the uniform majorant and its measure.
+Numerical interval caps and scale values are the saved binary inputs;
+$.01M^2$ and the other decimal ratios denote their nominal values.
+
+The remaining immediate problem is a quantitative bound near
+$\kappa=0$. The present majorant diverges there, so it must not be
+integrated through zero. Isolate the massless term and control the actual
+localized low-energy spectral weight; the earlier qualitative zero-state
+and limit results do not supply the required numerical constants.
+Omitted selections and angular sectors, the regulator limit and physical
+counterterms still follow. None of the above proves total support,
+stability, one-atom propagation or a clock gain. The static geometry still
+excludes backward causal passage.
+
+![Local zero-shift bound and integrated high-frequency tail](../figures/dihole_local_zero_shift_progress.png)
