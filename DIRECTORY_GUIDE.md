@@ -1,5 +1,8 @@
 # Directory guide
 
+Current increment190: The [signed local-reference enclosure](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-enclosure-of-the-local-magnetic-reference) proves that the defined local magnetic contribution is **nonnegative throughout the collars** at the saved atomic parameters. Its normalized integral lies in **[0, 0.000327935]**, whereas the numerical supporting target is about **-5.82787**. All **9 checks** and an independent numerical audit pass. See the [results](results/dihole_signed_local_source_results.json) and [visual](figures/dihole_signed_local_source_progress.png). The omitted curved-field/global contribution remains unknown, so this does not reject or support the complete model.
+
+
 Current increment189: The [heat-source estimate](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#one-dirac-derivative-and-an-absolute-heat-source-bound) bounds a derivative and the spatially integrated field response, retaining the full exterior. At the saved atomic parameters its positive-time response ceiling improves by about **76 times**; all **10 native checks** and an independent numerical audit pass. This is an auxiliary magnitude bound: the signed, renormalized supporting stress remains undetermined. See the [results](results/dihole_heat_source_graph_results.json) and [visual](figures/dihole_heat_source_graph_progress.png). One hydrogen atom through a trial 1 nm opening remains the target; support, stability, passage and clock gain are unproved.
 
 

@@ -345,3 +345,12 @@ The [heat-source bound](PHYSICAL_EUCLIDEAN_OPERATOR.md#one-dirac-derivative-and-
 The next required result is a useful signed, subtracted source enclosure in the declared renormalization scheme. A smaller absolute ceiling alone cannot establish that the field supplies the right sign or magnitude of stress. One hydrogen atom and a trial 1 nm opening remain the target. Self-consistent support, stability, transmission, internal-state survival and an exterior-clock comparison remain unresolved.
 
 We have retained the previous geometry, field definition and error analysis; this is not a restart. It is also not evidence that time travel is becoming physically feasible. The static geometry excludes 13 September 2027 to 12 September 2027. Future clock gain is unproved; molecules and humans remain deferred.
+
+
+## Checkpoint190: a signed bound for the local magnetic reference
+
+The [new enclosure](PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-enclosure-of-the-local-magnetic-reference) proves that the defined local magnetic reference is nonnegative across the full collars at the atomic parameters. Its normalized integral is between0 and0.000327935. The earlier numerical estimate lies inside this interval. The numerical supporting target is approximately-5.82787 in the same units.
+
+This establishes that the local reference alone cannot supply the required negative response. The actual omitted curved-field/global contribution remains unknown, so the full candidate is not excluded. The next task is to bound that signed difference with the actual field operator and the declared subtraction scheme. The old target quadrature has not become a certified interval.
+
+One hydrogen atom and the trial1nm diameter remain the target. Support, stability, survival and clock comparison are unproved. The static geometry cannot deliver13September2027 to12September2027; future clock gain remains unproved.

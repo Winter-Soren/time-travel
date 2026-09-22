@@ -8267,3 +8267,151 @@ Results SHA256: 94abf22be8c1054fa7770e7c0915cc76930793e7c778849a76cc803640b7131d
 Actual-code proof audit PASS: per-time normalization, filter/support coverage, split times, Gaussian powers, Q1 cutoff, Euclidean constants and adjoint localization. These are project/agent audits, not external peer review.
 
 Layout verification PASS: 185 imports, 1671 Markdown links, 8 historical source guards and 14 frozen pilot hashes. Historical documentation and audited scientific bytes are preserved.
+
+
+## Signed enclosure of the local magnetic reference
+
+Checkpoint190 gives162's local magnetic reference a continuum sign enclosure using saved geometric bounds. The [script](../scripts/dihole_signed_local_source.py) and [results](../results/dihole_signed_local_source_results.json) retain97 exact input hashes and pass9 native checks. No sampled geometry integral is promoted to a certified value.
+
+### Fixed reference and positive weight
+
+Retain the physical reference and illustrative coupling used in162. The size family has $\mu_HD=q\sqrt2e^{-\gamma_E}$; holding $\mu_HD$ constant instead would change the problem. For positive integer $q$, define the dimensionless local response
+
+$$
+C_{\rm loc}(q)=\frac{D Q_{\rm loc}}{\hbar c\,q^2}
+=\frac1{12\pi^2}\int w(x)\,[c+\log(q/B_1(x))]\,dx,\qquad
+c=12\log A_G-\tfrac12-2\gamma_E.
+$$
+
+Here $w(x)\,dx=dV\,fC_{\perp,1}\ge0$ is the actual collar weight per unit charge squared. This is the already defined local constant-magnetic-field approximation. The underlying constant-field effective action is given in [Fucci, equations6.16 and7.28](https://arxiv.org/pdf/0906.2430). Its application pointwise to the varying collars remains a reference functional; the paper does not identify it with the full global source.
+
+Saved161 encloses the whole closed collar field from below, and175/178 bound it above and bound the positive integral:
+
+$$
+4.7446043974880245\le B_1(x)\le12.010815582697589,\qquad
+0\le\int w(x)\,dx\le V_\perp=0.0006865532042079938.
+$$
+
+The upper field bound covers the larger buffer and hence the insertion support. The lower bound uses the nonvanishing angular field over the closed collar, including polar limits. The positive-weight bound uses178's exact mask integral and polar regularity, not the sampled integral from162.
+
+Let $b_-=c+\log(q/B_{1,+})$ and $b_+=c+\log(q/B_{1,-})$. Since the bracket decreases with $B_1$,
+
+$$
+\boxed{\frac{V_\perp}{12\pi^2}\min(0,b_-)
+\le C_{\rm loc}(q)\le
+\frac{V_\perp}{12\pi^2}\max(0,b_+).}
+$$
+
+The zero endpoints are necessary because no positive lower bound on the integrated weight has been supplied. Outward interval arithmetic encloses all constants, logarithms and final endpoints.
+
+### Signed numerical enclosure
+
+| Flux | Bracket interval | Local response interval $C_{\rm loc}$ |
+| --- | --- | --- |
+| 1000 | [5.752570131164005, 6.681369617498161] | [0, 0.000038730999516091696] |
+| 4642875905017627791065088 | [55.64219106539189, 56.570990551726055] | [0, 0.0003279344106252527] |
+
+The bracket is nonnegative for every collar point whenever $q\ge B_{1,+}e^{-c}$, whose interval is [3.1746111354437154,3.1746111354437163]. Thus every integer$q\ge4$ in this prescribed size/reference family has a nonnegative local reference. Conversely, the sufficient nonpositive threshold is enclosed by [1.2540592143666704,1.254059214366671]. The$q=1$ reference is nonpositive, while the coarse$q=2,3$ bracket intervals contain both signs. Those mixed intervals do not determine the integral's sign.
+
+The previous atomic numerical local value, $5.359082054317507\times10^{-7}$, lies within the new enclosure. It remains a numerical diagnostic, not its center with a newly inferred quadrature error.
+
+### What the missing contribution must supply
+
+Write $C_{\rm full}=C_{\rm loc}+C_{\rm omitted}$. The earlier numerical necessary supporting target is $C_{\rm req}\simeq-5.827870965726473$. **Its geometry-quadrature uncertainty is not certified.** Conditional on treating that value as exact, equality would require
+
+$$
+C_{\rm omitted}\in
+[-5.828198900137099,\,-5.827870965726472].
+$$
+
+This is an interval of **required values**, not an enclosure of the actual omitted contribution. If a future certified target is $[r_-,r_+]$, the corresponding required interval becomes $[r_- - C_{\rm loc,+},r_+ - C_{\rm loc,-}]$. Nothing here bounds the full quantum source, rejects the complete candidate, or establishes self-consistency.
+
+The next calculation must quantify the signed actual-minus-reference contribution. The existing absolute positive-time bound cannot give this by subtracting a reference value: that would at best yield another interval containing a large negative and positive range. The output-Dirac error in189 also does not control source-variable derivatives of the adjoint frozen kernel. The enlarged-input construction below avoids needing those derivatives, while retaining a bound for the full exterior contribution. Subtracted short-time control remains necessary.
+
+### Verification and scope
+
+The independent constant control uses
+
+$$
+c=\log(2\pi)-\gamma_E-\tfrac12-\frac{\zeta'(2)}{\zeta(2)}
+$$
+
+from the zeta functional equation. Another control reuses162's implemented local-source formula at a constant-field test value. Sign-transition cases$q=1,2,3,4$ test both positive and negative endpoint logic. None of these finite checks is substituted for the monotonicity proof.
+
+An independent380-digit audit passes all32 directed endpoints,97 input hashes and9 native controls. It uses the zeta formula independently of the producer's Glaisher constant. These are internal project/agent checks, not external peer review.
+
+One neutral hydrogen atom and a trial1nm opening remain the target. Support, stability, transmission, survival and operational clock gain remain unproved. The static geometry excludes13September2027 to12September2027.
+
+![Signed local reference and the numerical supporting target](../figures/dihole_signed_local_source_progress.png)
+
+Source SHA256 cc0cdc3f84bb05d258cfa129d0e0d8b64b388eae441241edcbe41bf6f2405fb8
+Results SHA256 ecc9277c8edec32b34761c88ff43de88cee9490f2bdf41e98fd72d8a872936dd
+
+
+### Why changing the old proper-time split is insufficient
+
+The following screen concerns the **interval produced by the saved ceilings**, not the actual source or true approximation error. It rules out spending further work optimizing that split in the saved target-mass range.
+
+Let $B(T)$ be the better of177's and189's absolute heat-response ceilings. Their explicit positive terms imply $B(T)\ge0.85/T^2$ on $0<T\le s_0$ at the atomic parameters. This floor follows for all times, not by interpolating four sampled values.
+
+To reproduce it, use189's actual filter integral $V$,177's $\nu,\Lambda,W,s_0$,187's $a$,180's volume ceiling $V_g$, and179's $F_{\max}$. Set
+$C=2e^{.01}\sqrt{\pi V_g/5}$,
+$\ell=1+.01+.0001/3$,
+$q_1=Ca\ell/(8\pi)$,
+$d_1=\sqrt{\nu V/(6\Lambda^6)}(2/e)^2$,
+and $a_\delta=\sqrt2F_{\max}$.
+The corrected derivative-HS ceiling contains $q_1t^{-3/2}$ and the direct ceiling contains $d_1t^{-2}$, where$t=T/2$. The ratio $d_1/(q_1\sqrt{s_0/2})>268185$, so their minimum still exceeds$q_1t^{-3/2}$. Therefore the new ceiling has coefficient $16a_\delta q_1^2>0.855375$ in front of$T^{-2}$. The old ceiling's positive highest-power term has coefficient
+$\nu W(3.5/e)^{3.5}/(3\Lambda^6\sqrt{s_0})>1.1175\times10^{10}$.
+Their minimum consequently retains the stated0.85 floor. Raw producer expressions for$V$ and$a_\delta$ were used for lower comparisons, avoiding an upward-packed surrogate.
+
+Let $C_*$ be186's saved exact-low-order-remainder ceiling, with $\log_{10}C_*=275.03046942414861$, and let $S=M_{\max}^{-2}$, where the largest saved target mass is $M_{\max}D=1056075056693575.2$. Put $r_1=1-(1-e^{-1})^3$. Every smaller saved target mass has $r_M(s)\ge r_1$ on $0<s\le S$.
+
+For a split$0<\epsilon\le S$, the normalized sum of the UV and absolute-heat radii is at least
+
+$$
+\frac{r_1}{q^2}
+\left[\frac{C_*\epsilon^2}{64\pi^2}
++\frac{0.85}{4}(\epsilon^{-2}-S^{-2})\right]
+\ge
+\frac{r_1}{q^2}
+\left[\frac{\sqrt{0.85C_*}}{8\pi}
+-\frac{0.85}{4S^2}\right]
+>4.16\times10^{86}.
+$$
+
+For$\epsilon\ge S$, the UV radius alone exceeds
+$C_*r_1S^2/(64\pi^2q^2)>4.73\times10^{162}$.
+These calculations were independently reproduced at150-digit interval precision after the90-digit route screen. The supporting target has magnitude about5.83. The certificate cannot decide its sign, even if its old numerical center were exact.
+
+Increasing the target regulator beyond the saved range is not a substitute for computing the new finite-regulator source and its counterterm cancellation. The comparison-filter bound is not that missing signed source.
+
+### Next signed comparison: enlarge input support, retain the exterior
+
+A derived route avoids differentiating the kernel in its source variable. It is not yet an evaluated source result.
+
+Let $\Pi$ project onto the collar cores and $r=2^{-32}$. On both collars choose an input projection $B$ covering $u\in[-2r,.05+2r]$ and the full sphere. It contains the output supports of $Q_{\rm core}(t)$ and $DQ_{\rm core}(t)$. Source hemispheres still use$|y|\le1$. All outputs of the enlarged approximation $Q_B(t)$ and its defect lie inside$[-3r,.05+3r]$, within176's existing cutoff plateau and the179/180/187 coefficient bounds.
+
+The source-coordinate volume changes from$\pi/5$ to$4\pi(.05+4r)$. Thus $\gamma=\sqrt{1+80r}$ gives conservative bounds
+$Q_a^B\le\gamma Q_a$ and$F_a^B\le\gamma F_a$.
+The early operator/filter terms are unchanged; only the explicit Gaussian and late HS terms require the volume factor. Scaling the entire$F_a$ is conservative.
+
+At$t=T/2$, define the new **positive-time** signed center
+
+$$
+S_B(T)=-2T\,\Re\langle\Pi DQ_B(t),\,\dot DQ_B(t)\rangle_{\mathrm{HS},\tau}.
+$$
+
+This center is not190's integrated local magnetic functional. Let$X_\delta=a_\delta X_1+b_\delta X_0$ and$e_\delta=a_\delta F_1+b_\delta F_0$, using189's bounds. Input-space orthogonality and the metric graph estimate give
+
+$$
+\boxed{|\delta K(T)-S_B(T)|
+\le2T\,[\gamma F_1X_\delta+\gamma^2Q_1e_\delta+F_1e_\delta].}
+$$
+
+The first two terms bound the error on inputs$B$. For all complementary inputs, adjoints and$(1-B)D^aQ_{\rm core}=0$ give
+$\|\Pi D^aH(t)(1-B)\|_{\mathrm{HS},\tau}\le F_a$.
+This proves the last term and retains the entire exterior; it does not impose a boundary condition there.
+
+Both$D$ and$\dot D$ act on kernel outputs. Sharp source projections introduce no differentiated interfaces, and no commutation of$\dot D$ with the heat operator is used. The next concrete work is to enclose the signed output-derivative kernel integral$S_B$, then assess its error. A positive-time signed interval alone would still not supply the subtracted short-time remainder or a renormalized supporting source.
+
+Local-reference proof/scope audit PASS. The input-buffer signed inequality and its domain coverage were separately checked; its center remains unevaluated. Layout PASS:186 imports,1681 Markdown links,8 historical source guards,14 frozen pilot hashes. Historical documentation and audited scientific bytes are preserved.

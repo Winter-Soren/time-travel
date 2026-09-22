@@ -1,3 +1,53 @@
+# Authoritative checkpoint190 - signed local magnetic reference
+
+Checkpoint189 published as 281de8ffa658cf78b65286e4bddea39d738b4088.
+Previous goal turn PROGRESS: implemented, audited and privately published189.
+Goal ACTIVE and unachieved. Browser/Downloads import COMPLETE; do not reopen.
+Target: one neutral hydrogen atom, trial 1 nm areal diameter; humans deferred.
+
+- scripts/dihole_signed_local_source.py: 9 native checks PASS, 97 exact inputs.
+  Previous sources/results remain unchanged. No historical geometry solve rerun.
+- This encloses162's defined LOCAL constant-field reference on the actual collars.
+  It is not the actual curved, varying-field global quantum source.
+- Fixed physical subtraction reference retained: mu_H D=q sqrt(2) exp(-Euler).
+  With B1 the unit-charge field, the bracket is
+  12 log(Glaisher)-1/2-2 Euler+log(q/B1).
+- Reuse161's whole-collar lower B1=4.7446043974880245,175/178 upper
+  B1=12.010815582697589, and178's positive weight upper0.0006865532042079938.
+  Endpoint monotonicity gives a continuum enclosure, not a sampled sign test.
+- Atomic bracket interval [55.64219106539189,56.570990551726055].
+  Q_local/(q^2 hbar c/D) in [0,0.0003279344106252527].
+  q1000 interval [0,0.000038730999516091696].
+  All integer q>=4 give a nonnegative pointwise reference in this fixed-reference
+  family; q1 is nonpositive and the coarse q2/q3 bracket intervals straddle zero.
+- The old numerical local estimate5.359082054317507e-7 lies inside the enclosure.
+  The old target -5.827870965726473 is an UNCERTIFIED geometry quadrature value.
+  If that target were exact, the omitted contribution needed for equality is in
+  [-5.828198900137099,-5.827870965726472] in the same normalized units.
+  This is a requirement, not a bound on what the omitted field actually supplies.
+- Independent380-digit audit PASS:32 directed endpoints,97 exact input hashes,
+  9 native controls; independent zeta-functional-equation constant evaluation.
+- NEXT: enclose the signed output-derivative kernel center S_B on the slightly
+  enlarged input buffer [-2r,.05+2r], r=2^-32. The derived two-leg inequality
+  controls the full exterior complement using189 errors; no source derivative
+  is needed. S_B is distinct from190's integrated local magnetic reference.
+  Signed short-time subtraction and the renormalized source remain unresolved.
+- Route screen: optimizing the old UV/absolute-heat split at saved target masses
+  cannot shrink its normalized interval radius below4.16e86. This concerns the
+  saved certificate's width, not any lower bound on the true source or error.
+- No supporting source, stable opening, atom transit/survival or clock gain.
+  Static geometry excludes 13 Sep 2027 -> 12 Sep 2027.
+  No new physical law, available supporting material or feasibility claim.
+
+Source SHA256 cc0cdc3f84bb05d258cfa129d0e0d8b64b388eae441241edcbe41bf6f2405fb8
+Results SHA256 ecc9277c8edec32b34761c88ff43de88cee9490f2bdf41e98fd72d8a872936dd
+Local-reference proof audit PASS. Input-buffer signed inequality derived but not
+numerically evaluated. Final layout PASS:186 imports,1681 Markdown links,
+8 historical source guards and14 frozen pilot hashes. Historical documentation
+and audited scientific bytes preserved; git diff --check passes. No simulation is running.
+
+--- Preserved checkpoint189 and earlier history ---
+
 # Authoritative checkpoint189 - derivative and absolute heat-source bounds
 
 Previous checkpoint188 published as 11c5a57e34a51ae0bc4e1667f1f0c5d641a95a78.
