@@ -6023,3 +6023,164 @@ across all four records and all 57 input hashes. Layout verification passes
 figure has been inspected. No simulation is running.
 
 ![Nested local buffers and weighted graph bounds](../figures/dihole_buffer_smoothing_progress.png)
+
+
+## Complete frequency bound at fixed common regulator
+
+The [calculation](../scripts/dihole_full_frequency.py) and [saved results](../results/dihole_full_frequency_results.json) bound the full compact geometry response across the complete frequency axis at a **fixed finite common regulator**. All angular states, both collars and the global exterior remain included. The result is a conservative ceiling, not a renormalized source value or evidence of a supported opening.
+
+### Preserve the first-order source
+
+Use the canonical flux measure, $P=NW$, $C=-\tau_2\otimes\sigma_3/P$, and the compact metric mask $F$ of 174, with $\|F\|_\infty\le4$. Put
+
+$$
+X_\kappa=\chi\mathcal K_\kappa\sqrt N,\qquad
+Y_\kappa=\chi\partial_s\mathcal K_\kappa\sqrt N,\qquad
+x_0=\|X_\kappa\|_{\rm HS},\quad x_s=\|Y_\kappa\|_{\rm HS}.
+$$
+
+Since $\chi=1$ on the support of the insertion, its exact weak form is
+
+$$
+\mathcal B_\kappa=\beta\left[-i\kappa X_\kappa^*(F\beta/N)X_\kappa
++\frac{X_\kappa^*FCY_\kappa-Y_\kappa^*FCX_\kappa}{2}\right].
+$$
+
+Integration by parts retains both $F_s$ and $C_s$. The leftmost $\beta$ is not commuted through $\mathcal K$. Schatten Hölder and $\|\beta\|=1$ give
+
+$$
+\|\mathcal B_\kappa\|_1\le|\kappa|f_Nx_0^2+f_Px_0x_s,
+\qquad f_N=4/N_-,\quad f_P=4/P_-.
+$$
+
+The mixed value/derivative term matters: replacing it by a bound involving two derivatives created an avoidable extra large-regulator factor in 175. No extra spin multiplicity is added here.
+
+For $|\kappa|\le K$, reuse 175's separate localized norms $B_0,B_A$, on the real axis and its complex disk of radius $d=M/(2\nu)$. They imply
+
+$$
+x_0\le B_0,\qquad
+x_s\le P_+[B_A+(2g+\sqrt{C_q}+d\nu)B_0]+C_{\rm rad}B_0,
+$$
+
+with $d=0$ on the real axis. Cauchy supplies $x'_0\le x_{0,\rm disk}/d$ and $x'_s\le x_{s,\rm disk}/d$, where primes denote upper bounds on derivative norms. Thus
+
+$$
+\|\mathcal B_0\|_1\le f_Px_0x_s,\quad
+L_{\mathcal B}\le f_Nx_0^2+2f_NKx_0x'_0
++f_P(x'_0x_s+x_0x'_s).
+$$
+
+The zero-state-preserving paired argument of 173--175 gives
+
+$$
+\frac1{2\pi}\int_0^K|I_\kappa+I_{-\kappa}|\,d\kappa
+\le\frac{f_Px_0x_s}{2}+\frac{K L_{\mathcal B}}{\pi}.
+$$
+
+This is a paired integral at the possible zero-frequency singularity, not an assertion of separate absolute integrability there.
+
+### Local high-frequency coercivity and three nested estimates
+
+Keeping half the frequency square instead of discarding it gives on the same buffers
+
+$$
+P_\kappa=-A_\kappa^2\ge\nabla_h^*\nabla_h+
+\frac{\kappa^2}{2N_+^2}-C_{q,2},\qquad
+C_{q,2}=\frac{(R_h)_-}{4}+|q|B_{\rm unit}
++\frac{|\nabla_h\log N|^2}{2}.
+$$
+
+This uses the same Dirac-square identity and covariant heat domination as 175; see [Vassilevich](https://arxiv.org/pdf/hep-th/0306138) and [Güneysu](https://arxiv.org/pdf/1105.0532). The particular cutoffs and estimates below are this project's derivation, not claims from those papers.
+
+Set $h=2N_+$ and $K_{\min}=h\sqrt{C_{q,2}}$. For $|\kappa|\ge K_{\min}$ the auxiliary Dirichlet square satisfies $P_{\kappa,\Omega}\ge\kappa^2/h^2>0$. Its **unshifted** inverse is valid here; it is never used at $\kappa=0$. No global proper-field gap or global $1/|\kappa|$ resolvent estimate is assumed.
+
+Inside each existing buffer $(-.020,.070)D$, use the six successive support intervals
+
+$$
+(-.005,.055),\ (-.0075,.0575),\ (-.010,.060),
+(-.0125,.0625),\ (-.015,.065),\ (-.0175,.0675),
+$$
+
+in units $D$. The first three are $\chi,\zeta,\theta$. Each outer cutoff equals one on the previous support. Ramps of width $.0025D$ have uniform bounds
+
+$$
+g=3200/(DP_-),\qquad
+\Delta_c=[1.92\times10^7/D^2+(3200/D)\,b_s]/P_-^2,
+$$
+
+where $b_s$ is 175's radial Laplacian drift bound. No buffer touches the other collar because the central section has length $.1D$.
+
+For $U_r=A_\kappa^r\mathcal K_\kappa\sqrt N$, the compact coercivity estimate is
+
+$$
+\|fU_r\|\le\frac h{|\kappa|}
+\big(\|1_{\operatorname{supp}f}U_{r+1}\|
++g\|1_{\operatorname{supp}df}U_r\|\big).
+$$
+
+Start with 175's global-input/local-output bounds $G_0,\ldots,G_3$ and iterate inward three times. All norms needed on $\operatorname{supp}\theta$ obey, with $t=|\kappa|^{-1}$,
+
+$$
+u_0=h^3(G_3+3gG_2+3g^2G_1+g^3G_0)t^3,\quad
+u_1=h^2(G_3+2gG_2+g^2G_1)t^2,\quad
+u_2=h(G_3+gG_2)t,\quad u_3=G_3.
+$$
+
+Here $u_r$ are norm ceilings, not new fields; no fourth graph power is needed. Define
+
+$$
+D_\zeta=\Delta_c+2g(2g+\sqrt{C_q}),\quad
+H_0=u_2+2gu_1+D_\zeta u_0,\quad
+H_1=u_3+2gu_2+D_\zeta u_1.
+$$
+
+The same auxiliary inverse factorization as 175 gives $x_0\le\sqrt S H_0$ and
+
+$$
+x_s\le\sqrt S(P_+H_1+J_{\rm rad}H_0),\qquad
+J_{\rm rad}=P_+(2g+\sqrt{C_q})+C_{\rm rad}.
+$$
+
+The physical field continues through the openings and exterior. Dirichlet boundaries occur only in the estimate, and no physical reflecting boundary has been introduced.
+
+### Integrable full tail
+
+Substitute $b=\kappa^2/h^2$ in 175's infinite scalar spectral estimate. With $L=.09D$, $r_0=.025D$ and the saved scalar factor $c$, the rank-four, two-collar inverse Hilbert--Schmidt norm squared is bounded by
+
+$$
+S(t)=\frac{4Lr_0^2h}{c^{3/2}}t+
+\frac{4Lr_0h^2}{c}t^2+\frac{2Lh^3}{\sqrt c}t^3.
+$$
+
+The physical Hamiltonian is self-adjoint, so $\|(H_{m_0}+i\kappa)^{-1}\|\le1/|\kappa|$. Combining this with the exact first-order insertion yields
+
+$$
+|I_\kappa|\le S(t)\left[f_NH_0^2+
+f_PtH_0(P_+H_1+J_{\rm rad}H_0)\right]
+=\sum_{p=3}^{10}a_p|\kappa|^{-p},\qquad a_p\ge0.
+$$
+
+Thus both frequency signs are absolutely integrable at infinity, without requiring parity of $I_\kappa$:
+
+$$
+\frac1{2\pi}\int_{|\kappa|\ge K}|I_\kappa|\,d\kappa
+\le\frac1\pi\sum_{p=3}^{10}\frac{a_p K^{1-p}}{p-1},\qquad K\ge K_{\min}.
+$$
+
+### Actual bounds and physical limits
+
+At $q=4642875905017627791065088$, fixed $MD=2154733372140.8845$, the saved finite search selects $KD=4012480217806.92$. It is a valid split, not a claim of global optimality.
+
+| Bound, in units $1/D$ | $\eta=0$ | Uniform $\eta/M^2\in[0,.01]$ |
+| --- | ---: | ---: |
+| Paired low frequencies | $1.4297415419527994\times10^{59}$ | $1.4474296462941527\times10^{59}$ |
+| Both absolute high tails | $3.6263440168995854\times10^{53}$ | $3.71622161378337\times10^{53}$ |
+| Complete frequency bound | $1.4297451682968164\times10^{59}$ | $1.4474333625157666\times10^{59}$ |
+
+At the **same split used in 175**, the improved zero-shift low bound is $5.526822116023921\times10^{57}/D$, compared with $8.214544027895555\times10^{80}/D$. This roughly $1.49\times10^{23}$ reduction concerns the ceiling alone; it is not a measured reduction in required matter or energy.
+
+All 16 saved checks pass, with 59 exact input hashes. Twelve noncommuting finite controls test the insertion and its derivative; the largest finite-difference discrepancy is $1.13\times10^{-9}$. A 90-digit unexpanded polynomial integral agrees with the expanded tail within $1.13\times10^{-16}$ relative difference. The figure was inspected. An independent mathematical audit found no implementation defect. A separate 115-digit reconstruction verifies 548 scalar inequalities, 238 structural/provenance checks, all 68 grid-tail integrals and all 59 exact input hashes. Its unexpanded quadrature and analytic integral agree within $1.35\times10^{-116}$ relative difference; every saved upward bound encloses the independent value. Layout verification passes 172 imports, 1532 links, 8 source guards and 14 frozen hashes.
+
+**Next:** quantitative matching to the physical regulator limit and local counterterms. A finite-$M$ absolute upper bound does not justify sending $M$ to infinity, establish the finite renormalized stress, determine its sign, or prove convergence uniform in a simultaneous infrared limit. The required total stress/current, stability, hydrogen transmission and internal-state survival, and exterior-clock comparison remain open. The trial aperture is still 1 nm in areal diameter. The static geometry excludes 13 September 2027 to 12 September 2027; no future clock gain is established.
+
+![Complete fixed-regulator frequency bounds](../figures/dihole_full_frequency_progress.png)

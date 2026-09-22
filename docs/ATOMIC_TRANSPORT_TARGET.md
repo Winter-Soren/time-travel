@@ -243,3 +243,10 @@ The next test remains whether this geometry can be supported at all. One hydroge
 The [buffered full-field estimate](PHYSICAL_EUCLIDEAN_OPERATOR.md#full-field-smoothing-on-buffered-collars) evaluates the two missing smoothing norms and bounds the complete paired low-frequency contribution at a fixed regulator. Every angular state and exterior propagation remain included. The ceiling is very loose and does not determine the supporting stress or its sign. The full high-frequency contribution and physical regulator limit remain unresolved.
 
 One hydrogen atom and the trial 1 nm areal diameter remain the target. No supported opening, stability, atomic passage or future clock advantage is established; the current static geometry excludes backward travel.
+
+
+## Checkpoint176: the complete supporting-field frequency bound
+
+The [full-frequency result](PHYSICAL_EUCLIDEAN_OPERATOR.md#complete-frequency-bound-at-fixed-common-regulator) now bounds the complete compact supporting-field response at a fixed artificial regulator, including every angular state and the exterior. All 16 controls pass. Keeping the source's first-order form removes a large overestimate, and its full high-frequency tail is integrable. The resulting ceiling still does not determine physical supporting stress or its sign. Matching to the physical regulator limit and counterterms is the next calculation.
+
+This remains preparation for the **one-hydrogen-atom** target, using a **trial 1 nm areal diameter**. No atom has been propagated, and support, stability, transmission, internal-state survival and an exterior-clock advantage remain unproved. The present static geometry excludes travel from 13 September 2027 to 12 September 2027. A larger payload would need new support and stability calculations; it is not an automatic enlargement.

@@ -6,6 +6,10 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment176: The [complete frequency bound](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#complete-frequency-bound-at-fixed-common-regulator) now covers the full supporting-field response at a fixed regulator, including every angular state and the exterior. A sharper first-order estimate also reduces the previous low-frequency overestimate. **All 16 checks pass.** The ceiling remains too loose to establish physical support; regulator/counterterm matching and the source sign remain unresolved. See the [results](results/dihole_full_frequency_results.json) and [visual](figures/dihole_full_frequency_progress.png). One hydrogen atom remains the target; no stable opening, passage or clock gain is established.
+
+
+
 Current increment175: The [buffered full-field calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#full-field-smoothing-on-buffered-collars) now evaluates both missing smoothing bounds and limits the complete paired low-frequency source at a fixed regulator. Every angular state and exterior propagation remain included. **All 18 checks pass.** The bound is very loose; the full high-frequency contribution and physical regulator limit remain unresolved. See the [results](results/dihole_buffer_smoothing_results.json) and [visual](figures/dihole_buffer_smoothing_progress.png). One-atom support, stability, passage and clock gain remain unproved.
 
 

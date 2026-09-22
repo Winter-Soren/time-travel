@@ -1,3 +1,56 @@
+# Authoritative checkpoint176 - complete fixed-regulator frequency bound
+
+Previous checkpoint175 published 9ae74fbf5941dad1f15587f1807293f46e2b6566.
+Previous goal turn PROGRESS:175 published with independent audits.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- scripts/dihole_full_frequency.py:16 checks PASS, 59 exact input hashes.
+  No old geometry, physical solves or selected-state simulations rerun.
+- NEW complete full-field frequency bound at fixed common regulator:
+  every angular state, both collars and all exterior propagation retained.
+  Low frequencies are paired; both high-frequency signs are absolutely bounded.
+- Exact first-order insertion uses X=chi K sqrtN, Y=chi d_s K sqrtN:
+  B=beta[-i*kappa X*(F beta/N)X+(X*FCY-Y*FCX)/2]. Beta stays left.
+  ||B||1 <= |kappa|fN*x0²+fP*x0*xs, fN=4/Nmin,fP=4/Pmin.
+  Retaining this mixed term avoids the old combined-jet overestimate.
+- Local high-frequency floor: P_kappa >= covariant Laplacian
+  +kappa²/(2Nmax²)-Cq2, Cq2=Rhnegative/4+abs(q)Bunit+gradlogN²/2.
+  h=2Nmax, Kmin=h*sqrt(Cq2); above Kmin use unshifted auxiliary inverse.
+  This is compact output localization, not a physical wall or global gap.
+- Nested cutoffs inside the existing (-.020,.070)D buffer:
+  chi(-.005,.055), zeta(-.0075,.0575), theta(-.010,.060), then
+  (-.0125,.0625),(-.015,.065),(-.0175,.0675); ramps .0025D.
+  Three local coercivity steps use only existing graph powers G0..G3.
+- Infinite angular/spatial heat bound times the localized first-order source
+  gives sum(a_p/|kappa|^p), p=3..10, all a_p positive.
+  Two-sided high tail/(2pi) <= sum[a_p*K^(1-p)/(p-1)]/pi.
+- Atomic q=4642875905017627791065088, fixed MD=2154733372140.8845,
+  selected K D=4012480217806.92. At eta=0, in units 1/D:
+  paired low <=1.4297415419527994e59;
+  absolute high <=3.6263440168995854e53;
+  complete bound <=1.4297451682968164e59.
+  Uniform eta/M² in[0,.01]: complete <=1.4474333625157666e59/D.
+- At the SAME old175 split, sharp low <=5.526822116023921e57/D,
+  previously8.214544027895555e80/D. This is a tighter ceiling, not stress.
+- NEXT: quantitative physical regulator/counterterm matching. This bound
+  holds at finite M; it does not determine a renormalized value or sign.
+  Then total stress/current, stability and atomic transport must agree.
+  Static geometry excludes13Sep2027->12Sep2027; no future clock gain proved.
+
+Source SHA256 7bfe224bd521b3793364410a1989d22834331a83c5ec225bbbea60f86d0b660c
+Results SHA256 5974c84faea4438ee3d78051fa3d42a912fa3d2dd8d17d3c77c62e42a96e4d71
+
+Verification:16 checks pass, 59 exact inputs, generated figure inspected.
+Independent mathematical audit passes. A separate115-digit reconstruction
+verifies548 scalar inequalities,238 structural/provenance checks, all68
+frequency-tail grid integrals and all59 exact input hashes. No defects found.
+Layout passes172 imports,1532 links,8 source guards and14 frozen hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint175 and earlier history ---
+
 # Authoritative checkpoint175 - full-field buffered smoothing evaluated
 
 Previous checkpoint174 published 954f5cf8b865cf123399e89c51bef1db0082063e.
