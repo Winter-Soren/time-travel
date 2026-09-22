@@ -8415,3 +8415,162 @@ This proves the last term and retains the entire exterior; it does not impose a 
 Both$D$ and$\dot D$ act on kernel outputs. Sharp source projections introduce no differentiated interfaces, and no commutation of$\dot D$ with the heat operator is used. The next concrete work is to enclose the signed output-derivative kernel integral$S_B$, then assess its error. A positive-time signed interval alone would still not supply the subtracted short-time remainder or a renormalized supporting source.
 
 Local-reference proof/scope audit PASS. The input-buffer signed inequality and its domain coverage were separately checked; its center remains unevaluated. Layout PASS:186 imports,1681 Markdown links,8 historical source guards,14 frozen pilot hashes. Historical documentation and audited scientific bytes are preserved.
+
+## Signed frozen-kernel pilot with actual output coefficients
+
+Checkpoint191 implements [the regular pointwise operator](../scripts/dihole_pointwise_dirac.py) and [the signed kernel quadrature](../scripts/dihole_signed_kernel.py). This is a positive-time reference calculation, **not** the renormalized supporting stress. Its numerical integration has no certified error enclosure. The prior scientific sources and results remain unchanged.
+
+### Actual regular-frame operator
+
+Use coordinates $(\tau,u,y_1,y_2)$ and the positive symmetric coframe $E$ from179. Put $I=E^{-1}$ and $C^i=\gamma^a I_{ai}$. In the fixed canonical coordinate measure,
+
+$$
+D=C^i(\partial_i-iA_i)+\tfrac12\partial_iC^i.
+$$
+
+The triple-Clifford spin term vanishes here: the temporal and radial scalar-coordinate forms have zero $e^a\wedge de^a$; the angular forms have only two angular directions; their radial contribution vanishes because $E_{\rm ang}$ and $\partial_uE_{\rm ang}$ are combinations of the same commuting identity and $yy^T$ projectors. Conjugation by the physical half-density yields the displayed divergence term. This simplification is specific to this coframe, not a general omission of spin connection.
+
+For the unchanged paired variation $E_{00}\mapsto e^{\epsilon f}E_{00}$, $E_{11}\mapsto e^{-\epsilon f}E_{11}$, the angular frame, gauge and volume are fixed. Thus
+
+$$
+\dot D=-fC^\tau\partial_\tau+fC^u(\partial_u-iA_u)
++\tfrac12(f_uC^u+f\partial_u C^u).
+$$
+
+The point evaluator retains the smooth radius extension: $R=.025$ to the left, $R=u$ to the right, with the prescribed transition inside. Polar quotients use their removable limits and guard precision. Finite checks independently assemble Christoffel/spin coefficients, differentiate the curvature and gauge potential, and verify the paired variation. They are checks of the implementation, not interval proofs over the entire domain.
+
+### A declared change of reference cutoff
+
+This calculation uses $\chi(|x_{\rm sp}-y_{\rm sp}|)$ with radius $r=2^{-32}$, inner radius $r/2$, and the existing smooth step. The historical four-dimensional reference is not silently reused or overwritten. All coefficients are static, so their differences depend only on spatial displacement. Temporal cutoff derivatives now vanish; spatial derivative bounds remain valid. The cutoff annulus implies the same full whitened Gaussian-distance lower bound used in187--189. Their majorants already integrate over all four Gaussian coordinates. Consequently the saved conservative norm bounds still apply to this new reference. The input buffer and output support bounds from190 are unchanged.
+
+For a source $y$, write $d=x-y$, $z=E_y d$ and
+
+$$
+\widehat F=E_y^{-T}F(y)E_y^{-1},\quad
+b^2=-\tfrac12\operatorname{tr}\widehat F^2,\quad
+P_\perp=-\widehat F^2/b^2,\quad
+Z=t^{-1}[1+(bt\coth(bt)-1)P_\perp].
+$$
+
+The charge is included once in $F$. The scalar frozen kernel amplitude is
+
+$$
+k=\det E_y(4\pi t)^{-2}\frac{bt}{\sinh(bt)}\exp(-z^TZz/4).
+$$
+
+The exact difference between the actual source-centred radial gauge potential and the frozen one is
+
+$$
+\Delta A_i=\tfrac12d^j d^k\int_0^1(1-v^2)\partial_k F_{ji}(y+vd)\,dv.
+$$
+
+This removes subtraction of two large gauge potentials. Define
+
+$$
+p_i=\partial_i\chi-\tfrac\chi2[E_y^T(Z-i\widehat F)z]_i-i\chi\Delta A_i,
+\qquad v=I_xp+\tfrac\chi2\operatorname{div}I_x.
+$$
+
+The coefficient of $\dot DQ$ has $w_0=-fv_0$ and only one nonzero spatial component,
+
+$$
+w_1=f p_u/P_x+\tfrac\chi2(f_u/P_x+f\partial_uP_x^{-1}).
+$$
+
+The source gauge phase cancels in the bilinear. The positive coframe already equals $\sqrt g$, so no unaccounted source spin rotation is introduced. The independent Clifford identity is
+
+$$
+\operatorname{tr}[\gamma(v)^*\gamma(w)e^{-2tV}]
+=4\cosh(2tb)v^*w+4i\frac{\sinh(2tb)}b v^*\widehat Fw,
+\quad V=\tfrac i4[\gamma^a,\gamma^b]\widehat F_{ab}.
+$$
+
+### Exact time integration and numerical spatial integral
+
+Set $c=bt\coth(bt)$. The squared-kernel spatial Gaussian has covariance
+$\Sigma=t[1+(c^{-1}-1)P_{\perp,\rm sp}]$; the independent temporal variance is $t$. Integrating the temporal coordinate exactly gives the prefactor
+
+$$
+A_y=\frac{\det E_y}{64\pi^2t^2}
+\frac{(bt/\sinh bt)^2}{c}.
+$$
+
+With $\widetilde v=\sqrt t\,v_{\rm sp}$ and $\widetilde w=\sqrt t\,w_{\rm sp}$, the signed reference at $T=2t$ is
+
+$$
+S_B(T)=-16\int_Bd^3y\, A_y\,\mathbb E\!\left[1_{\rm core}(x)
+\left\{\cosh(2tb)\left[\Re(\widetilde v^*\widetilde w)
+-\frac{f\chi^2N_y^2}{4N_x^2}\right]
++\Re\left(i\sinh(2tb)\widetilde v^*\frac{\widehat F_{\rm sp}}b\widetilde w\right)\right\}\right].
+$$
+
+The indicator appears once and is never differentiated. Both input collars, both source hemispheres and the enlarged radial buffer are retained. Axisymmetry permits source azimuth zero; the canonical angular Jacobian is $d\mu\,d\phi/(1+\mu)^2$. Integration over azimuth and the two reflected collars gives $4\pi/(1+\mu)^2$ for each pole. This has total core coordinate volume $\pi/5$, as in189.
+
+The production pilot uses Gauss--Hermite rules in the three spatial Gaussian directions and Gauss--Legendre rules for source coordinates and the curvature line integral. The short displacement in $R$ is integrated directly rather than silently Taylor approximated. All output geometry evaluations lie within the core and spatial cutoff. Off-support Gaussian samples contribute zero before geometry evaluation. Unsampled Gaussian tails and quadrature error are **not** certified by this procedure.
+
+A uniform-field source reference is integrated analytically over the Gaussian coordinates, subtracted at each numerical Gaussian node, then added back exactly. A second, inexpensive source-coordinate refinement evaluates that uniform reference on denser grids, while retaining the actual-minus-uniform residual from each original grid. This control variate improves the numerical estimate; it does not turn refinement agreement into a rigorous error bound.
+
+For a constant metric, unrestricted source integration, $\chi=1$ and constant $f$, the exact control is
+
+$$
+\delta\Theta(T)=\frac{\delta b}{4\pi^2T}
+[\coth(bT)-bT\,\operatorname{csch}^2(bT)],
+\qquad \delta b=f\frac{\widehat F_{12}^2+\widehat F_{13}^2}{b}.
+$$
+
+It vanishes for a magnetic vector along the radial direction. Finite buffer and cutoff terms are present in production and are not claimed to obey this unrestricted control. A separate variable-field/pure-gauge check verifies the curvature-line sign and indices.
+
+### Scope of the numerical result
+
+The [saved result](../results/dihole_signed_kernel_results.json) separates direct quadrature, source control-variate refinement, pointwise precision/rule checks, and the inherited error radius about the **exact** reference. There is no certified interval for the full signed response: such an interval would require both a reference quadrature enclosure and a useful physical-field comparison. The heat parameter is a Euclidean calculation variable, not a transit time or a clock advantage.
+
+The exact-reference error is the190 two-leg bound, retaining all exterior inputs. Its value is normalized by the same $q^2$ as the numerical reference. It must not be confused with an actual error measurement or with the renormalized supporting-energy target of190; those are different quantities. Reducing the reference's quadrature error alone cannot reduce this inherited comparison ceiling.
+
+No self-consistent supporting source, stable opening, atom passage, survival, operational time shift, obtainable material or new physical law is demonstrated. The static geometry still excludes13September2027 to12September2027. The next research decision must address the unresolved signed and subtracted full-field remainder rather than repeat source-grid refinement as a substitute for that calculation.
+
+![Signed reference and the remaining full-field comparison ceiling](../figures/dihole_signed_kernel_progress.png)
+
+### Checkpoint191 numerical record and independent review
+
+At the saved atomic flux and $T=s_0$, direct source grids give:
+
+| Radial x angular nodes | Direct $S_B(T)/q^2$ | Actual minus uniform reference |
+| --- | ---: | ---: |
+| 6 x4 | 1.811111495845388e-8 | 9.06049e-24 |
+| 10 x6 | 1.913747104269121e-8 | 8.49081e-24 |
+| 14 x8 | 1.915713604899990e-8 | 8.39518e-24 |
+
+All use3 spatial Gaussian nodes per direction,4 line nodes and60-digit arithmetic. The uniform source integral is refined independently at16x12,32x24 and64x48; the last two differ by8.16569e-17. Combining the64x48 uniform estimate with the14x8 actual-minus-uniform residual gives approximately **+1.91546e-8**. The corrected coarse-grid centers share the same fine uniform value; their agreement must not be read as independent convergence of the entire integral. Neither the integral error nor unsampled Gaussian tails are certified.
+
+The190 comparison ceiling about the exact reference, divided by$q^2$, is **4.2667469798854073e14**. This is about2.23e22 times the computed reference magnitude. It remains compatible with both signs for the full response, even if the reference quadrature were made exact. It is an upper error bound, not a measurement of error and not an impossibility theorem.
+
+All8 native checks pass with94 exact inputs. A separate350-digit evaluation reproduces the comparison ceiling; a100-digit non-diagonal-frame Clifford calculation, with nonzero cutoff gradient and curvature correction and an independently differentiated metric variation, agrees with the implemented density to2.86e-101. These are internal project/agent checks, not external peer review. The figure was rendered and visually inspected.
+
+Pointwise source SHA256 38c425de7982e83c539abc593ce507a93fb888a9d3cb3b0f5ddea6307b1bba16
+Signed-kernel source SHA256 be89a46eed487c3eea21ccc5f1c12deef13a604599e065970cebbf4568791d80
+Results SHA256 092bfcef2fb9eb4a7a0762f5bac92474abe309efdc0fd5a4f233236805407922
+
+### Where the comparison ceiling is lost
+
+An independent110-digit route screen, reproduced by the coordinator at120 digits, decomposes the saved radius. The inside actual-leg term contributes50.00005990%, the inside frozen-leg term0.003884506%, and the exterior-input term49.99605560%. Within189's Dirac error,
+
+$$
+F_{1,\mathrm{early}}=1.32173019649\times10^{45},\qquad
+F_{1,\mathrm{late}}=1.51655200468\times10^{39}.
+$$
+
+The early part is99.99988526% of$F_1$. Its current estimate is
+
+$$
+F_{1,\mathrm{early}}\le B_1(t/2)\,\eta(t/2),\quad
+B_1(t/2)=1.09903375393\times10^{47},\quad
+\eta(t/2)=0.012026293021159.
+$$
+
+Here$B_1$ is the global comparison-filter Hilbert--Schmidt ceiling, not an observed norm. It is the next specific inequality to replace with a local magnetic smoothing estimate that still controls the exterior. Improving the reference quadrature cannot alter these terms. Setting the explicit frozen-leg term to zero would remove only0.003884506% of this radius.
+
+As a deliberately hypothetical screen, remove both early error terms and replace$X_j$ by$Q_j+F_{j,\mathrm{late}}$. The same formula still gives39566.110733603 per$q^2$. These removed terms are **not actually zero**, and this altered expression is not a valid improved certificate. It shows why fixing the early estimate alone must not be presented as resolving the sign. Better coefficient estimates and preservation of signed cancellation remain relevant; the physical subtraction and complete supporting source are still required.
+
+To reproduce the screen, use189's exact packed atomic$T/s_0=1$ record: `HS_error_terms`, `early_defect_operator_integral_upper`, `frozen_value_HS_upper`, `frozen_Dirac_HS_upper`, `selected_heat_HS_upper` and `geometry.insertion_graph_a/b`, with177's saved$s_0$. Substitute into190's displayed three-term inequality; no new simulation or geometry fitting is involved.
+
+Final layout PASS:188 imported modules,1692 Markdown links,8 historical source guards,14 frozen pilot hashes. All94 current scientific input hashes and both new source hashes are verified. The six historical document bodies and all previously tracked scientific artifacts are preserved. No calculation remains running.

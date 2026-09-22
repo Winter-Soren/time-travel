@@ -1,3 +1,55 @@
+# Authoritative checkpoint191 - direct signed frozen-reference pilot
+
+Checkpoint190 published as c8e051ed1a36e9dc64cc1603a46a08fda63f712e.
+Previous user status turn: NO SCIENTIFIC PROGRESS; it reported190 accurately.
+This continuation implements and evaluates191, with no blocker or goal completion.
+Goal ACTIVE and unachieved. Browser/Downloads import COMPLETE; do not reopen.
+Target remains one neutral hydrogen atom, trial1nm areal diameter; humans deferred.
+
+- scripts/dihole_pointwise_dirac.py now evaluates the actual regular-chart
+  coframe, inverse, divergence, curvature derivatives and compact paired probe.
+  Independent Cartan/half-density, gauge-curvature and polar controls pass.
+- scripts/dihole_signed_kernel.py evaluates the signed positive-time reference
+  S_B(T) at the saved atomic T=s0. All8 checks PASS;94 exact input hashes.
+  Both collars, both hemispheres, enlarged input buffer and output core retained.
+- New reference uses a spatial-only cutoff; static coefficients retain187--189
+  norm bounds and permit exact time integration. Historical reference untouched.
+- Direct normalized centers at source grids6x4,10x6,14x8 are
+  1.811111495845388e-8,1.913747104269121e-8,1.915713604899990e-8.
+- Refined uniform source reference plus actual-minus-uniform residual gives
+  approximately +1.91546e-8. The residual at14x8 is8.39518e-24.
+  Shared control-variate agreement is NOT independent full-integral convergence.
+  Uniform source refinement32x24 to64x48 changes by8.16569e-17.
+  No quadrature error enclosure, unsampled-tail certificate or global sign proof.
+- Exact-reference full-field error ceiling/q^2 is4.2667469798854073e14,
+  about2.23e22 times the numerical reference magnitude. This is a ceiling on
+  error, NOT the actual error or a lower bound on physical feasibility.
+  Adding it to an uncertified numerical center is not a certified interval.
+- Independent proof/code review PASS: source measure, time Gaussian, Pauli sign,
+  curvature-line sign, output-only derivatives, cutoff and exterior coverage.
+  A non-diagonal4x4 Clifford/metric-variation control agrees to2.86e-101;
+  independent350-digit recomposition verifies the inherited comparison radius.
+- Meaningful controls also vary Gaussian order3->4, line order4->6 and precision
+  60->80 at one interior point; these remain diagnostics, not continuum proofs.
+- NEXT: replace the early local-smoothing inequality F1early <= B1*eta.
+  Its coarse global-filter B1=1.09903e47 and eta=.0120263 cause99.99988526%
+  of F1. Retain exterior control and the local magnetic scale. A diagnostic
+  deleting early terms still leaves39566.1, so further signed cancellation and
+  coefficient control remain necessary. Refining S_B alone cannot fix this.
+  Renormalized supporting source and physical subtraction remain unresolved.
+- No supporting source, stable opening, atom transit/survival or clock gain.
+  Static geometry excludes13September2027 ->12September2027. No new physical law.
+- All scientific computations for191 are complete; no simulation remains live.
+  Final layout PASS:188 imports,1692 links,8 historical guards,14 frozen hashes.
+  Six historical document bodies and prior scientific bytes verified unchanged.
+  Local191 is ready for authorized private publication; verify git remote on resume.
+
+Pointwise source SHA256 38c425de7982e83c539abc593ce507a93fb888a9d3cb3b0f5ddea6307b1bba16
+Signed-kernel source SHA256 be89a46eed487c3eea21ccc5f1c12deef13a604599e065970cebbf4568791d80
+Results SHA256 092bfcef2fb9eb4a7a0762f5bac92474abe309efdc0fd5a4f233236805407922
+
+--- Preserved checkpoint190 and earlier history ---
+
 # Authoritative checkpoint190 - signed local magnetic reference
 
 Checkpoint189 published as 281de8ffa658cf78b65286e4bddea39d738b4088.

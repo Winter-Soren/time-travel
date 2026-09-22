@@ -354,3 +354,11 @@ The [new enclosure](PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-enclosure-of-the-local
 This establishes that the local reference alone cannot supply the required negative response. The actual omitted curved-field/global contribution remains unknown, so the full candidate is not excluded. The next task is to bound that signed difference with the actual field operator and the declared subtraction scheme. The old target quadrature has not become a certified interval.
 
 One hydrogen atom and the trial1nm diameter remain the target. Support, stability, survival and clock comparison are unproved. The static geometry cannot deliver13September2027 to12September2027; future clock gain remains unproved.
+
+## Checkpoint191: direct field-reference calculation, support still unresolved
+
+The [signed-kernel pilot](PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-frozen-kernel-pilot-with-actual-output-coefficients) now evaluates the actual output coefficients of the field reference. Its numerical positive-time response is approximately+1.91546e-8 after division byq^2. All8 controls and an independent review pass. However, the inherited comparison ceiling is4.26675e14 in the same normalization, and the reference quadrature itself is not certified. Consequently no sign for the full field response follows.
+
+These are heat-response quantities, not the renormalized supporting-energy values in190. The heat parameter is not elapsed time. Similarity of numerical values on refined grids is not a physical feasibility test. The next decision must address the missing signed/subtracted full-field correction, rather than spend more work refining a reference whose comparison uncertainty dominates.
+
+The target remains one hydrogen atom and a trial1nm opening. No supporting field, stable opening, atom crossing, survival or clock gain has been demonstrated. The current static model cannot send an atom from13September2027 to12September2027. Humans remain deferred, and no new physics law is claimed.

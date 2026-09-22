@@ -6,6 +6,9 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment191: The [direct signed-kernel pilot](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-frozen-kernel-pilot-with-actual-output-coefficients) evaluates the reference using the actual output field and passes **8 checks** plus an independent review. Its normalized numerical value is about **+1.91546e-8**, while the inherited full-field error ceiling is **4.26675e14**. The reference quadrature is not certified, and the full response sign remains unknown. See the [results](results/dihole_signed_kernel_results.json) and [visual](figures/dihole_signed_kernel_progress.png). This is a positive-time field calculation, not supporting energy or atom transit; more reference-grid refinement cannot resolve the dominant comparison uncertainty.
+
+
 Current increment190: The [signed local-reference enclosure](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-enclosure-of-the-local-magnetic-reference) proves that the defined local magnetic contribution is **nonnegative throughout the collars** at the saved atomic parameters. Its normalized integral lies in **[0, 0.000327935]**, whereas the numerical supporting target is about **-5.82787**. All **9 checks** and an independent numerical audit pass. See the [results](results/dihole_signed_local_source_results.json) and [visual](figures/dihole_signed_local_source_progress.png). The omitted curved-field/global contribution remains unknown, so this does not reject or support the complete model.
 
 
