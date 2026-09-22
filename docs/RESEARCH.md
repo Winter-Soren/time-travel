@@ -1,3 +1,70 @@
+# Authoritative checkpoint186 - retain radial cancellation on the actual paths
+
+Previous checkpoint185 published 7cd07e6e59f001e2037b33a052ad92a30fb11f6a.
+Previous goal turn PROGRESS:185 verified and privately published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No supporting source, stable opening, atom transit or clock gain established.
+
+- scripts/dihole_radial_cancellation.py:14 controls PASS,85 exact inputs.
+  Same185 frame/gauge/physical operator/point records, geometry, regulator
+  and normal neighbourhood. All prior source/result bytes remain intact.
+- Existing radial condition A(gamma) dot(gamma-y)=0 removes the radial
+  velocity exactly. W=gamma'-(gamma-y)/t=(1/t)int_0^t s gamma''(s)ds.
+  Uniform normalized w jets give W_n<=acceleration_n/2 through16.
+- Saved Christoffel components become contracted Frechet bounds
+  C_n=2^(n+3)*gamma_n. Compose C_n/n! with the same RZ path and
+  multiply by the velocity series squared. Magnetic one-form conversion
+  keeps2^(n+1), charge enters once, and no extra R factor is introduced.
+- Each new magnetic jet is minimized with its old estimate. Spin is
+  retained. The total generator is also minimized with the saved185 cap.
+  Ordered transport and the direct adjoint inverse from185 are reused.
+- All magnetic orders0..16 improve; zerojet ratio is
+  [0.003873583264907661,0.0038735832649076617].
+  Atomic totalK1 log<=8.812676573284088. Factored heat assembly replay
+  with the OLD generator matches saved185 heat and inverse arrays exactly.
+- Atomic logB4<=272.83204969610443, down>=33.42854566543112 orders.
+  mu2^80,lambda2^84; logCstar/Cgeometry<=275.03046942414863.
+  Curved envelope/q² at nominal Mreg²s0=100 log<=164.07784282397355.
+- q1000 logB4<=284.9580098634821: change only8.98e-16 decimal orders.
+  This negligible low-flux effect is retained, not exaggerated.
+  The estimates remain far too loose to determine supporting stress.
+- Exact nonstraight geodesic control uses
+  g=dx²+(dy-2x dx)², gamma=(w*t,w²*t²), Gamma^y_xx=-2,
+  A=B/2*(-y,x). Then A dotgamma'=B*w³*t²/2=A dotW and
+  integrated phase=B*w³/6. Independent symbolic4D/two-velocity control
+  verifies parameter derivatives through16; native checks through6.
+- A source-point insertion tweak was screened out: at currentlambda2^84,
+  first/second andzero/second point-factor ratios are9.97137e-8 and
+  3.88398e-15. Deleting BOTH lower insertions would improve only the
+  fixed-scale point factor by4.33052e-8 decimal orders, not useful here.
+- NEXT: test an existing-chart frozen constant-magnetic kernel K0,y.
+  Freeze g(y) and F(y), use linear A0_i=F_ji(y)(x-y)^j/2 and retain
+  the exact Pauli term. The canonical kernel needs sqrt(det g(y)).
+  Exact first defect: E0=chi(P-P0,y)K0,y+[P,chi]K0,y.
+  Factor P-P0 in D0=partial-iA0 BEFORE bounds so frozenq²A0² cancels.
+  Keep variableF gradients: deltaA<=DF*r²/3, DdeltaA<=2DF*r/3.
+  Spin, density, metric differences and actual paired insertion stay.
+  Start with constant-background zero-defect and linear-varying-F
+  controls, then a Gaussian-weighted Schur/L1 estimate on qB*t<=.01.
+  The uncorrected column-L2 graph estimate is nonintegrable: do not
+  reuse181's O(t²) certificate or derivative schedule automatically.
+  Only proceed to Duhamel corrections if the first weighted bound helps.
+  This new parametrix is NOT implemented.0810.4889 assumes parallelF;
+  our varyingF does not satisfy that assumption. No source is inferred.
+- Exact lower-coefficient enclosures, full source, stability, atom survival
+  and exterior-clock comparison remain unresolved. The static geometry
+  excludes13Sep2027->12Sep2027; future clock gain remains unproved.
+
+Source SHA256 7640ac0810a1ce649eebec38ea8e3631b2d4a4649ba8f9cb4f7135cd1b882aed
+Results SHA256 597afc60ed89ea9c26116159e94b7a4abd64a718ad3aa3d0509e711bcfba457f
+Strict run passed14 controls/85 exact inputs; final figure inspected.
+Independent numerical audit PASS:592 directed comparisons at550 digits, no ceiling undershoot, all85 input hashes and14 controls. Actual-source proof audit PASS, including domain, charge/tensor factors and unchanged density/inverse conventions; the curved-geodesic identity also passed an independent symbolic check through16.
+Final layout PASS:182 imports,1639 Markdown links,8 historical source guards,14 frozen pilot hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint185 and earlier history ---
+
 # Authoritative checkpoint185 - ordered transport and its direct inverse
 
 Previous checkpoint184 published 3bde6137ad41416753db931934a33fa8560f6875.

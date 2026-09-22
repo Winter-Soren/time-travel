@@ -7549,3 +7549,139 @@ Uniform normalized initial-velocity jets of $W$ are bounded by half the correspo
 This is the next discriminating calculation, not an implemented result. The scientific target remains support and stability of a trial1nm opening, followed by one neutral hydrogen atom's transmission, internal-state survival and exterior-clock comparison. No such success is established. The current static geometry excludes13September2027 to12September2027; a future clock advantage remains unproved.
 
 ![Ordered transport and direct inverse improve the estimate](../figures/dihole_ordered_transport_progress.png)
+
+
+## Radial-gauge cancellation along curved geodesics
+
+Checkpoint186 uses a cancellation already present in the chosen magnetic gauge. The [calculation](../scripts/dihole_radial_cancellation.py) and [results](../results/dihole_radial_cancellation_results.json) retain85 exact inputs and14 passing controls. No geometry, field, gauge, regulator or atom parameter changes.
+
+The atomic $\log_{10}B_4$ ceiling falls from306.26060 to272.83205, a reduction of at least33.42854566543112 decimal orders. The low-flux change is only about $8.98\times10^{-16}$ decimal orders and is not a meaningful displayed improvement. Neither ceiling determines the supporting source.
+
+### Remove the radial velocity before taking norms
+
+Fix the source $y$ and use the existing source-centred gauge. Its spatial radial condition, together with $A_\tau=0$, gives the full four-dimensional identity
+
+$$
+A(\gamma(t))\cdot(\gamma(t)-y)=0.
+$$
+
+Thus
+
+$$
+A(\gamma)\cdot\dot\gamma=A(\gamma)\cdot W,\qquad
+W=\dot\gamma-\frac{\gamma-y}{t}
+=\frac1t\int_0^t s\,\ddot\gamma(s)\,ds.
+$$
+
+The integral expression extends smoothly to $t=0$. The source stays fixed under differentiation in initial velocity. For every normalized real parameter jet through16,
+
+$$
+\frac{\|D_w^nW(t,w)\|}{n!}
+\le\frac t2\sup_{0\le s\le t}
+\frac{\|D_w^n\ddot\gamma(s,w)\|}{n!}.
+$$
+
+Replacing $t$ by1 is conservative. The cancellation is applied algebraically, before taking positive norms; no subtraction of nearly equal large numerical quantities is performed.
+
+All normal paths lie within coordinate displacement $2R<2^{-32}$, where the global phase extension equals the exact local radial gauge. Its time-independent phase remains fixed during the paired metric variation. The physical field, source measure and magnetic reference are unchanged.
+
+### Explicit generator jets
+
+Let $p(z)=\sum_{k=1}^{16}RZ_kz^k$ be the saved path-increment series and $v(z)=2R+p(z)$ the velocity series. From the geodesic equation and saved Christoffel component ceilings $\gamma_n$, define
+
+$$
+c(z)=\sum_{n=0}^{16}\frac{2^{n+3}\gamma_n}{n!}z^n,\qquad
+a_{\rm acc}(z)=c(p(z))v(z)^2.
+$$
+
+The factor $2^{n+3}$ converts a four-dimensional rank-$(n+3)$ contracted component estimate to the required Euclidean norm. The path and velocity already carry their radius factors; no additional $R$ is inserted.
+
+For the magnetic one-form, the conversion remains $2^{n+1}|q|a_n/n!$. Compose that series with $p$ to obtain $\mathcal A(z)$. The old and new magnetic generator bounds are
+
+$$
+K_{\rm mag,old}(z)=\mathcal A(z)v(z),\qquad
+K_{\rm mag,rad}(z)=\frac12\mathcal A(z)a_{\rm acc}(z).
+$$
+
+Select the smaller valid coefficient at every order. Add the unchanged spin generator and minimize again against the previously saved total-generator ceiling. Charge is included once. All magnetic orders0 through16 improve for both flux records.
+
+At order zero, the ratio of the two magnetic estimates is $C_0R$, enclosed by
+$[0.003873583264907661,\ 0.0038735832649076617]$, about one part in258. Higher-order effects are evaluated rather than assumed to have the same ratio.
+
+The ordered-time transport and direct adjoint inverse from185 are retained. The heat assembly is factored to accept the generator explicitly; replaying it with the historical generator reproduces the saved185 heat-coefficient and inverse arrays exactly.
+
+### Exact curved-path control
+
+A useful independent example is
+
+$$
+g=dx^2+(dy-2x\,dx)^2,\quad
+\gamma(t)=(w_1t,w_2t+w_1^2t^2),\quad
+A=\frac B2(-y\,dx+x\,dy).
+$$
+
+The metric is flat in coordinates $(x,y-x^2)$, but its coordinate geodesic is nonstraight. Its only nonzero Christoffel component is $\Gamma^y_{xx}=-2$. Direct substitution gives
+
+$$
+W=(0,w_1^2t),\qquad
+A\cdot\dot\gamma=A\cdot W=\frac B2w_1^3t^2,\qquad
+\int_0^1A\cdot\dot\gamma\,dt=\frac B6w_1^3.
+$$
+
+The native control checks the identities and parameter derivatives through6, including the smooth zero-time endpoint and a separate straight-path case. An independent symbolic calculation adds two flat coordinates and verifies the identities through16. The native radial, acceleration-integral and derivative errors are below $2\times10^{-113}$, $1.7\times10^{-114}$ and $6.4\times10^{-117}$ respectively; the exact geodesic residual is zero.
+
+### Full recomputation and limits
+
+| Quantity | $q=1000$ | Atomic $q=4642875905017627791065088$ |
+| --- | ---: | ---: |
+| Graph scale $\mu$ | $2^{68}$ | $2^{80}$ |
+| Fourier scale $\lambda$ | $2^{72}$ | $2^{84}$ |
+| $\log_{10}B_4$ ceiling | 284.95801 | 272.83205 |
+| $\log_{10}C_*$ and $C_{\rm geom}$ ceiling | 287.15643 | 275.03047 |
+| Curved envelope/$q^2$, nominal $M_{\rm reg}^2s_0=100$, log ceiling | 262.87096 | 164.07785 |
+
+Table ceilings are rounded upward; saved dyadic endpoints govern the result. These are conservative mathematical bounds, not energies, actual errors or measured improvements. The atomic normalized $u_4$ order0/8 ceilings have logarithms199.70026 and369.85102. All transport and heat bounds tested are no larger than before. The physical operator and point records remain unchanged, and the derivative schedule remains16,14,12,10,8.
+
+All14 controls and85 exact inputs pass. The figure was inspected. Independent numerical audit PASS:592 directed comparisons at550 digits, no ceiling undershoot, all85 input hashes and14 controls. Actual-source proof audit PASS, including domain, charge/tensor factors and unchanged density/inverse conventions; the curved-geodesic identity also passed an independent symbolic check through16. Final layout PASS:182 imports,1639 Markdown links,8 historical source guards,14 frozen pilot hashes.
+
+Source SHA256: 7640ac0810a1ce649eebec38ea8e3631b2d4a4649ba8f9cb4f7135cd1b882aed.
+Result SHA256: 597afc60ed89ea9c26116159e94b7a4abd64a718ad3aa3d0509e711bcfba457f.
+
+### Choose the next calculation by its effect on the remaining bound
+
+A source-point gauge simplification was screened as a possible next step. The point-evaluation factor at fixed scale contains
+$\delta P_2/12+\delta P_1/(30\lambda)+\delta P_0/(48\lambda^2)$.
+At the current atomic $\lambda=2^{84}$, the first- and zeroth-order contributions relative to the second-order term are approximately $9.97137\times10^{-8}$ and $3.88398\times10^{-15}$. Even deleting both would reduce this fixed-scale factor by only $4.33052\times10^{-8}$ decimal orders. This diagnostic is not a modification of the physical operator; it rules out a low-impact next calculation.
+
+The next test instead uses an exact **frozen constant-magnetic reference** in the existing regular chart. At each source $y$, freeze $g_y$ and the charge-included $F_y$, set
+$A_{0,i}(x)=F_{ji}(y)(x-y)^j/2$, and use
+
+$$
+P_{0,y}=-g_y^{ij}D_{0,i}D_{0,j}+V_{\rm Pauli}(y),\qquad
+D_0=\partial-iA_0.
+$$
+
+Its exact kernel $K_{0,y}$ includes the frozen field to all orders. In canonical Lebesgue coordinates its normalization includes $\sqrt{\det g_y}$. For $Q_0=\chi_yK_{0,y}$, the first defect is exactly
+
+$$
+E_0=(\partial_t+P)Q_0
+=\chi_y(P-P_{0,y})K_{0,y}+[P,\chi_y]K_{0,y}.
+$$
+
+The operator difference must be rewritten in $D_0$ before norms are taken; this keeps the frozen $q^2A_0^2$ contribution inside the exact kernel. That term currently supplies approximately99.99827% of the atomic zeroth-order operator ceiling, so this targets a demonstrated source of overestimation.
+
+The field is not uniform. The radial-gauge formula retains
+
+$$
+\delta A_i(x)=\int_0^1 t\,z^j[F_{ji}(y+tz)-F_{ji}(y)]\,dt,\qquad z=x-y,
+$$
+
+giving $\|\delta A\|\le\|DF\||z|^2/3$ and $\|D\delta A\|\le2\|DF\||z|/3$ with the appropriate tensor norms. Actual spin, density, metric-gradient and Pauli-curvature terms also remain in the difference. The paired physical insertion must be preserved; differentiating only a scalar magnetic magnitude is insufficient.
+
+The first implementation should verify vanishing **interior** defect for arbitrary constant metric and uniform field, and retain the field-gradient contribution in a varying-field control. The cutoff commutator still exists. Then evaluate a Gaussian-weighted Schur/L1 defect estimate, retaining radius powers, on the existing $|q|B_{\rm unit}t\le.01$ interval. A first uncorrected column-L2 graph estimate is not time-integrable, so the old181 remainder order and derivative schedule cannot be imported. Higher Duhamel corrections are justified only if that first weighted estimate is useful.
+
+[Avramidi and Fucci's published resummed heat expansion](https://arxiv.org/abs/0810.4889) is relevant background, but it assumes parallel electromagnetic curvature. The actual varying field does not satisfy that assumption. The new first-defect construction and its needed enclosures remain **unimplemented**; the current result continues to use the verified186 certificate.
+
+The target remains one neutral hydrogen atom through a trial1nm opening. Self-consistent support, stability, atomic transmission, internal-state survival and an operational clock comparison remain unproved. The present static geometry excludes13September2027 to12September2027; no future clock advantage is established.
+
+![Radial cancellation improves the atomic error bound](../figures/dihole_radial_cancellation_progress.png)

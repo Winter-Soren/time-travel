@@ -6,6 +6,10 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment186: The [radial cancellation calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#radial-gauge-cancellation-along-curved-geodesics) removes an exactly vanishing contribution from the propagation estimate. The atomic error ceiling improves by another33.4 decimal orders, while the low-flux case barely changes. **All14 controls pass.** See the [results](results/dihole_radial_cancellation_results.json) and [visual](figures/dihole_radial_cancellation_progress.png). The field and one-atom target are unchanged; no supporting source, stable opening or atom passage is established.
+
+
+
 Current increment185: The [ordered transport calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#ordered-transport-and-a-direct-unitary-inverse) retains time-ordering factors and computes the inverse leading coefficient using unitary propagation. The conservative atomic error ceiling drops by another 50.1 decimal orders; **all 14 controls pass**. This still does not establish support, stability or atom passage. See the [results](results/dihole_ordered_transport_results.json) and [visual](figures/dihole_ordered_transport_progress.png). One hydrogen atom through a trial 1 nm opening remains the target.
 
 

@@ -317,3 +317,10 @@ The present static geometry excludes13September2027 to12September2027. Future cl
 The [ordered transport and inverse calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#ordered-transport-and-a-direct-unitary-inverse) reduces the conservative atomic field-error ceiling by another50.1 decimal orders, with all14 controls passing. It retains time-ordering factors and the unitary structure of inverse propagation. The physical opening and field are unchanged; these are supporting-field estimates, not a simulated atom crossing.
 
 The next test is a cancellation already present in the chosen magnetic gauge. Its high-derivative and total-error effects remain unevaluated. One hydrogen atom and the trial1nm diameter remain the first target, requiring a self-consistent source, stability, transmission, survival and a clock comparison. No new physical law or supporting material is established. Backward passage is excluded by the present static geometry, and future clock gain remains unproved.
+
+
+## Checkpoint186: retain a cancellation in the same magnetic field
+
+The [radial cancellation calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#radial-gauge-cancellation-along-curved-geodesics) tightens the atomic field-error ceiling by another33.4 decimal orders, with all14 controls passing. The physical field and opening are unchanged. The improvement concerns the supporting-field estimate, not atom propagation, and it still cannot establish support.
+
+A screened source-point adjustment would barely affect the remaining estimate, so the next research step must address the field/geometry approximation more substantially. One hydrogen atom through a trial1nm opening remains the target. Source consistency, stability, transmission, survival and clock comparison remain unresolved; no new physical law is established. The static geometry excludes backward passage and has no demonstrated future clock gain.
