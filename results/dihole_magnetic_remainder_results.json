@@ -1,0 +1,416 @@
+{
+  "passed": true,
+  "checks": {
+    "exact_inputs": true,
+    "all_order_magnetic_sign": true,
+    "all_order_cubic_bound": true,
+    "independent_partial_fractions": true,
+    "actual_mask_rate_integral": true,
+    "polar_integral": true,
+    "positive_geometry_constants": true,
+    "saved_a4_estimate_within_ceiling": true,
+    "signed_magnetic_intervals": true,
+    "magnetic_bound_decreases": true,
+    "known_error_contains_both_signs": true,
+    "missing_physics_remains_explicit": true
+  },
+  "geometry_constants": {
+    "radial_mask_rate_integral_over_D": 0.008333333333333335,
+    "angular_polar_factor_upper": 0.7725887222397813,
+    "weighted_perpendicular_field_upper_per_q2_D": 0.0006865532042079938,
+    "magnetic_a4_upper_per_q2_D": 0.00183080854455465,
+    "magnetic_C_upper_per_q4_D5": 0.035214916646301046,
+    "magnetic_unit_flux_upper_D2": 12.010815582697589
+  },
+  "controls": {
+    "scalar": [
+      {
+        "x": 1e-08,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 1.0,
+        "partial_fraction_encloses": true
+      },
+      {
+        "x": 0.0001,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 0.9999999985714286,
+        "partial_fraction_encloses": true
+      },
+      {
+        "x": 0.01,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 0.9999857144761881,
+        "partial_fraction_encloses": true
+      },
+      {
+        "x": 0.1,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 0.9985733309312494,
+        "partial_fraction_encloses": true
+      },
+      {
+        "x": 1.0,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 0.8740467240035156,
+        "partial_fraction_encloses": true
+      },
+      {
+        "x": 3.0,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 0.42705133916656407,
+        "partial_fraction_encloses": true
+      },
+      {
+        "x": 10.0,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 0.06375000088114317,
+        "partial_fraction_encloses": true
+      },
+      {
+        "x": 100.0,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 0.00073875,
+        "partial_fraction_encloses": true
+      },
+      {
+        "x": 1000.0,
+        "deficit_nonnegative": true,
+        "deficit_below_cubic": true,
+        "deficit_ceiling_ratio": 7.48875e-06,
+        "partial_fraction_encloses": true
+      }
+    ],
+    "mask_rate": [
+      {
+        "order": 64,
+        "value": 0.008333333333333344,
+        "absolute_error": 1.0408340855860843e-17
+      },
+      {
+        "order": 128,
+        "value": 0.008333333333333281,
+        "absolute_error": 5.204170427930421e-17
+      }
+    ],
+    "angular_integral_error": 7.143671195514219e-102
+  },
+  "records": [
+    {
+      "q": 1000,
+      "cutoff_s0_over_D_squared": 8.325829275412147e-07,
+      "magnetic_C_upper_D5": 35214916646.30105,
+      "matching_rows": [
+        {
+          "nominal_M_squared_s0": 1,
+          "target_regulator_M_D": 1095.9386653776567,
+          "pure_magnetic_short_interval_D": [
+            -3.37154391534472e-05,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 3.3715439153447204e-11,
+          "long_heat_upper_per_q2": 6.165070655002509e+24,
+          "known_error_interval_D": [
+            -6.16507065500251e+30,
+            6.16507065500251e+30
+          ],
+          "known_error_lower_per_q2": -6.165070655002509e+24,
+          "known_error_upper_per_q2": 6.165070655002509e+24,
+          "C_geometry_error_coefficient_upper_D4": 9.574192519631778e-16
+        },
+        {
+          "nominal_M_squared_s0": 10,
+          "target_regulator_M_D": 3465.6623584385125,
+          "pure_magnetic_short_interval_D": [
+            -1.823781112705848e-06,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 1.823781112705848e-12,
+          "long_heat_upper_per_q2": 9.154315357262894e+19,
+          "known_error_interval_D": [
+            -9.154315357262896e+25,
+            9.154315357262896e+25
+          ],
+          "known_error_lower_per_q2": -9.154315357262896e+19,
+          "known_error_upper_per_q2": 9.154315357262896e+19,
+          "C_geometry_error_coefficient_upper_D4": 5.179001645876157e-17
+        },
+        {
+          "nominal_M_squared_s0": 30,
+          "target_regulator_M_D": 6002.7032866944855,
+          "pure_magnetic_short_interval_D": [
+            -2.0277100751373994e-07,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 2.0277100751373993e-13,
+          "long_heat_upper_per_q2": 62896261927.08714,
+          "known_error_interval_D": [
+            -6.289626192708715e+16,
+            6.289626192708715e+16
+          ],
+          "known_error_lower_per_q2": -62896261927.08715,
+          "known_error_upper_per_q2": 62896261927.08715,
+          "C_geometry_error_coefficient_upper_D4": 5.75809988563579e-18
+        },
+        {
+          "nominal_M_squared_s0": 50,
+          "target_regulator_M_D": 7749.456620530756,
+          "pure_magnetic_short_interval_D": [
+            -7.299756270521544e-08,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 7.299756270521545e-14,
+          "long_heat_upper_per_q2": 77.78331486531975,
+          "known_error_interval_D": [
+            -77783314.86531983,
+            77783314.86531977
+          ],
+          "known_error_lower_per_q2": -77.78331486531984,
+          "known_error_upper_per_q2": 77.78331486531977,
+          "C_geometry_error_coefficient_upper_D4": 2.0729159588365252e-18
+        },
+        {
+          "nominal_M_squared_s0": 100,
+          "target_regulator_M_D": 10959.386653776566,
+          "pure_magnetic_short_interval_D": [
+            -1.824939067630386e-08,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 1.8249390676303862e-14,
+          "long_heat_upper_per_q2": 7.501227836030704e-21,
+          "known_error_interval_D": [
+            -1.8249398177531698e-08,
+            7.501227836030705e-15
+          ],
+          "known_error_lower_per_q2": -1.8249398177531697e-14,
+          "known_error_upper_per_q2": 7.501227836030704e-21,
+          "C_geometry_error_coefficient_upper_D4": 5.182289897091313e-19
+        },
+        {
+          "nominal_M_squared_s0": 200,
+          "target_regulator_M_D": 15498.913241061511,
+          "pure_magnetic_short_interval_D": [
+            -4.562347669075965e-09,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 4.5623476690759655e-15,
+          "long_heat_upper_per_q2": 1.3952568731738192e-64,
+          "known_error_interval_D": [
+            -4.562347669075965e-09,
+            1.3952568731738195e-58
+          ],
+          "known_error_lower_per_q2": -4.5623476690759655e-15,
+          "known_error_upper_per_q2": 1.3952568731738194e-64,
+          "C_geometry_error_coefficient_upper_D4": 1.2955724742728283e-19
+        }
+      ],
+      "actual_curved_remainder_C_geometry": null,
+      "finite_target_regulator_source": null,
+      "renormalized_source": null,
+      "stability": null,
+      "atom_transit": null
+    },
+    {
+      "q": 4642875905017627791065088,
+      "cutoff_s0_over_D_squared": 1.7932482895815272e-28,
+      "magnetic_C_upper_D5": 1.6363453575282033e+97,
+      "matching_rows": [
+        {
+          "nominal_M_squared_s0": 1,
+          "target_regulator_M_D": 74675783402999.47,
+          "pure_magnetic_short_interval_D": [
+            -7.267800087305849e+38,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 3.3715439153447204e-11,
+          "long_heat_upper_per_q2": 7405879760215242.0,
+          "known_error_interval_D": [
+            -1.5964334120905477e+65,
+            1.5964334120905477e+65
+          ],
+          "known_error_lower_per_q2": -7405879760215243.0,
+          "known_error_upper_per_q2": 7405879760215243.0,
+          "C_geometry_error_coefficient_upper_D4": 4.441482999826083e-59
+        },
+        {
+          "nominal_M_squared_s0": 10,
+          "target_regulator_M_D": 236145561610877.88,
+          "pure_magnetic_short_interval_D": [
+            -3.9313966725523385e+37,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 1.8237811127058476e-12,
+          "long_heat_upper_per_q2": 109967529355.02756,
+          "known_error_interval_D": [
+            -2.370492686777186e+60,
+            2.370492686777186e+60
+          ],
+          "known_error_lower_per_q2": -109967529355.02757,
+          "known_error_upper_per_q2": 109967529355.02757,
+          "C_geometry_error_coefficient_upper_D4": 2.4025470261919198e-60
+        },
+        {
+          "nominal_M_squared_s0": 30,
+          "target_regulator_M_D": 409016110691927.06,
+          "pure_magnetic_short_interval_D": [
+            -4.3709919939179476e+36,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 2.0277100751373995e-13,
+          "long_heat_upper_per_q2": 75.55503890633399,
+          "known_error_interval_D": [
+            -1.62868683353249e+51,
+            1.6286868335324856e+51
+          ],
+          "known_error_lower_per_q2": -75.5550389063342,
+          "known_error_upper_per_q2": 75.55503890633399,
+          "C_geometry_error_coefficient_upper_D4": 2.6711916123382354e-61
+        },
+        {
+          "nominal_M_squared_s0": 50,
+          "target_regulator_M_D": 528037528346787.6,
+          "pure_magnetic_short_interval_D": [
+            -1.5735571178162612e+36,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 7.299756270521545e-14,
+          "long_heat_upper_per_q2": 9.343832528117022e-08,
+          "known_error_interval_D": [
+            -2.0141858336092913e+42,
+            2.0141842600521737e+42
+          ],
+          "known_error_lower_per_q2": -9.343839827873294e-08,
+          "known_error_upper_per_q2": 9.343832528117024e-08,
+          "C_geometry_error_coefficient_upper_D4": 9.616289804453093e-62
+        },
+        {
+          "nominal_M_squared_s0": 100,
+          "target_regulator_M_D": 746757834029994.8,
+          "pure_magnetic_short_interval_D": [
+            -3.9338927945406514e+35,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 1.8249390676303856e-14,
+          "long_heat_upper_per_q2": 9.010957784002824e-30,
+          "known_error_interval_D": [
+            -3.9338927945406536e+35,
+            1.9424287926734337e+20
+          ],
+          "known_error_lower_per_q2": -1.8249390676303865e-14,
+          "known_error_upper_per_q2": 9.010957784002826e-30,
+          "C_geometry_error_coefficient_upper_D4": 2.4040724511132723e-62
+        },
+        {
+          "nominal_M_squared_s0": 200,
+          "target_regulator_M_D": 1056075056693575.2,
+          "pure_magnetic_short_interval_D": [
+            -9.834731986351632e+34,
+            0.0
+          ],
+          "pure_magnetic_short_magnitude_upper_per_q2": 4.5623476690759655e-15,
+          "long_heat_upper_per_q2": 1.6760723786603616e-73,
+          "known_error_interval_D": [
+            -9.834731986351632e+34,
+            3.612991343377839e-24
+          ],
+          "known_error_lower_per_q2": -4.5623476690759655e-15,
+          "known_error_upper_per_q2": 1.6760723786603616e-73,
+          "C_geometry_error_coefficient_upper_D4": 6.010181127783183e-63
+        }
+      ],
+      "actual_curved_remainder_C_geometry": null,
+      "finite_target_regulator_source": null,
+      "renormalized_source": null,
+      "stability": null,
+      "atom_transit": null
+    }
+  ],
+  "local_a4_gauge_numerical_estimate": 3.024797830947435e-06,
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+    "dihole_collar_resolvent_results.json": "df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17",
+    "dihole_collar_resolvent.py": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531",
+    "dihole_metric_resolvent_results.json": "f15f1402458e8ee43b222d3ea40b665f2bc33315230436eda7887be941e9ce97",
+    "dihole_metric_resolvent.py": "b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc",
+    "dihole_paired_frequency_units_trial.json": "c5d9a8152c7931598e4f32baceb625a44f675e62ab995d1c781e778580e58e4d",
+    "provenance/dihole_paired_frequency_units_trial.py": "c81e58f0621ff73caa1ad617be46d9795d297f18299d6c6130f63165c7a5ca19",
+    "dihole_paired_frequency_results.json": "e2de59a035d0874484a857164a1ff93a0d0e6155a8307a7493f3d7c2e21ce429",
+    "dihole_paired_frequency.py": "c118af9191e5f371de9320d134a454d02f6180444ca5be57ecd07caca2520044",
+    "dihole_massive_channel_results.json": "f61f079f61a3db75c1549d1250128839985fba5b03b44141d4d591460412595b",
+    "dihole_massive_channel.py": "b614c9a37d8a84c845f8138df226afece042faebe5b27bf9f7d09beef7f81789",
+    "dihole_proper_channel_results.json": "9d4b9e91dddc7b37e8f075e47a0e75b1b400d7102fa03385ab061c06efbfe967",
+    "dihole_proper_channel.py": "75c9e49ef29fd379d24e8246e357052334b21870000abf8972dd7ebf141120c5",
+    "dihole_local_zero_shift_results.json": "c6abf68b4d44f18d6f0b97016a0275a8a195aab2d306bcd6de77f7bdd17177a3",
+    "dihole_local_zero_shift.py": "f95cde7f9510dc82cfe9e5f1a44e937c45662ad3d385c1ddd15afb41c911abf2",
+    "dirac_green_mass_limit.py": "1ff4edbbf5b574553ca8fb94f852781a8bfd29838d8c2574cb69ba62c8e0630a",
+    "dihole_paired_low_frequency_results.json": "73641db16789394adc109dfb5b5088e375f1c68bb608e24e5e72396f2fd47e7a",
+    "dihole_paired_low_frequency.py": "cbe6669ec7851bcc251e47017af13ca3febd6dcdc75a4f9313af0f6d01d93f93",
+    "dihole_source_completion_derivative_trial.json": "b80e0e9efc27176d10d0b79a015e24165691e610b1b0c746160827fa80460e6e",
+    "provenance/dihole_source_completion_derivative_trial.py": "d231eee2ac075378b4e3fe84f2954e62419cb2fcbab6faa386371c43fbe94bef",
+    "dihole_source_completion_results.json": "dcd24ab0a676289da962656e02296532e2fbc0535d8e7ef9b82643c4a825db27",
+    "dihole_source_completion.py": "deb95497874e34e9f7f02a52465422b421c7ace669710db91b10a9855848d23c",
+    "dihole_buffer_geometry.py": "b15dfafe789e07e106575258b33591e9241d4978f64889d01f44fe5ff4d45d56",
+    "dihole_buffer_smoothing_prerate_trial.json": "4cd0341d90ccf386832b99f8eeb6732de39d78dd528b7cd15a76d9c3854844b9",
+    "provenance/dihole_buffer_geometry_prerate.py": "effb53114c95e45362ec9af9a5213eaa31847c8d119b8b404cd8a7b91bcadb24",
+    "provenance/dihole_buffer_smoothing_prerate.py": "dfeb4d1a39713b0da30f1b643cfcf0746b14914b2707857680dd3e304d8698fa",
+    "dihole_buffer_smoothing_results.json": "51fb304256cbd139b2acc1b59a280473082b729f4540700107ddb3c1ffc8cbdb",
+    "dihole_buffer_smoothing.py": "0862683252bf01a8d3dce372a44087bad4501eafa1e032e5e9c63969f23e46a8",
+    "dihole_full_frequency_results.json": "5974c84faea4438ee3d78051fa3d42a912fa3d2dd8d17d3c77c62e42a96e4d71",
+    "dihole_full_frequency.py": "7bfe224bd521b3793364410a1989d22834331a83c5ec225bbbea60f86d0b660c",
+    "dihole_regulator_heat_tail_results.json": "7fb8de096ffe0181ca548455a48bd7fc361e9fb423176a5dc544aae50f782005",
+    "dihole_regulator_heat_tail.py": "16517fa214d719c61030a29663c9b632806a729d9129f1e1918b0f8bda01d51b"
+  },
+  "source_sha256": "fa4b9c89dafa5782573646a9c721e990b5a09200e58bfba1f2930a670a3e2795",
+  "reference": "Pointwise constant-magnetic-field response deltaTheta0 from162, evaluated with the actual collar B and metric variation.",
+  "remaining_remainder": "deltaK-deltaTheta0-H_gravity-a6*s/(16*pi^2); its bound C_geometry is unknown.",
+  "scope": [
+    "The pure magnetic reference correction is nonpositive and bounded to all orders in s*B. No truncation or small-s*B assumption enters that inequality.",
+    "Actual directed collar bounds, polar regularity and an exact mask/radial-rate integral supply the prefactor; no geometry quadrature is promoted to a certificate.",
+    "The known error interval combines only the magnetic reference short correction and177 long heat term; it is not a full source interval.",
+    "Curvature, field gradients and nonlocal effects remain in C_geometry. Removing pure F^4 does not imply a uniform q^2 bound on this remainder.",
+    "The target-M source and same physical counterterms from177 are still required. No support, material recipe, stability, atom passage or time gain is established."
+  ],
+  "sources": [
+    "https://dlmf.nist.gov/4.36.E3",
+    "https://arxiv.org/abs/0810.4889",
+    "https://arxiv.org/pdf/0906.2430"
+  ]
+}

@@ -6359,3 +6359,200 @@ At positive fixed $\eta$, an additional term involving $(1-e^{-\eta s})w_M(s)\de
 No physical source sign, supported opening, stability, atom passage or clock advantage has been established. One hydrogen atom and the trial 1 nm areal diameter remain the target. The current static geometry excludes 13 September 2027 to 12 September 2027; human transport is deferred.
 
 ![Long-time regulator-matching correction bound](../figures/dihole_regulator_heat_tail_progress.png)
+
+
+## Signed all-order magnetic remainder on the actual collars
+
+The [calculation](../scripts/dihole_magnetic_remainder.py) and [results](../results/dihole_magnetic_remainder_results.json) separate one controlled part of 177's short-time error: the locally constant magnetic reference from 162. The new bound retains its sign and all powers of $s\mathcal B$. Its prefactor uses the certified geometry of the actual collars. The difference between this reference and the true curved, varying-field heat response remains unknown.
+
+### A magnetic inequality valid at every proper time
+
+Let $g(x)=\coth x-x\operatorname{csch}^2x$. Differentiating the [NIST partial-fraction formula 4.36.3](https://dlmf.nist.gov/4.36.E3) gives
+
+$$
+g(x)=4x\sum_{n\ge1}\frac{\pi^2n^2}{(x^2+\pi^2n^2)^2}.
+$$
+
+All terms are positive for $x>0$, and
+
+$$
+\frac{2x}{3}-g(x)=4x^3\sum_{n\ge1}
+\frac{2\pi^2n^2+x^2}{\pi^2n^2(\pi^2n^2+x^2)^2}.
+$$
+
+Using $(2a+x^2)/(a+x^2)^2\le2/a$ and
+$\sum_{n\ge1}(\pi^2n^2)^{-2}=1/90$ proves
+
+$$
+0\le\frac{2x}{3}-g(x)\le\frac{4x^3}{45},\qquad x\ge0.
+$$
+
+This inequality is not a truncated small-$x$ approximation. For the pointwise reference
+
+$$
+\delta\Theta_0(s)=\int dV\,\frac{\delta\mathcal B}{4\pi^2s}g(s\mathcal B),
+\qquad \delta\mathcal B=fC_\perp/\mathcal B,
+$$
+
+it gives the signed bound
+
+$$
+-\frac{C_{\rm mag}s^2}{16\pi^2}
+\le\delta\Theta_0(s)-\frac{a_{4,\rm mag}}{16\pi^2}\le0,
+\qquad C_{\rm mag}=\frac{16}{45}\int fC_\perp\mathcal B^2dV,
+$$
+
+where $a_{4,\rm mag}=(8/3)\int fC_\perp dV$. The reference has no $a_6s$ term. Its full proper-time response is still a reference function, not the actual global heat kernel. The original constant-field source calculation and its approximation scope remain as stated in 162.
+
+### Use the exact mask and polar regularity
+
+On either physical collar, let $L_c=.05D$, $\chi=R'$, and $f=S'(s/L_c)/2$, where $\chi=S(s/L_c)$ is the saved smooth step. Then
+
+$$
+f=\frac{L_c}{2}\frac{d\chi}{ds},\qquad
+\int_0^{L_c}f\chi^2ds=\frac{L_c}{6}.
+$$
+
+The actual charge-normalized potential is $q\,a(R,x)d\phi$, $x=\cos\theta$. The radial magnetic component and physical volume per unit Killing time satisfy
+
+$$
+C_\perp=\frac{q^2\chi^2a_R^2}{R^2(1-x^2)W^2},\qquad
+N\sqrt h=P^2R^2\sin\theta,\quad P=NW.
+$$
+
+Thus the $P,R,W$ factors cancel in the required integral, leaving
+$q^2 f\chi^2N^2a_R^2/(1-x^2)$ in the $ds\,dx\,d\phi$ measure. Balanced polar regularity gives $a_R(\pm1)=0$. With 175's verified $A_{Rx}\ge\sup|a_{Rx}|$,
+
+$$
+\frac{a_R^2}{1-x^2}\le A_{Rx}^2\frac{1-|x|}{1+|x|},\qquad
+\int_{-1}^{1}\frac{1-|x|}{1+|x|}dx=4\log2-2.
+$$
+
+Both collars and the full azimuth therefore give
+
+$$
+V_\perp:=4\pi\frac{L_c}{6}N_+^2A_{Rx}^2(4\log2-2),
+$$
+$$
+a_{4,\rm mag}\le\frac83 V_\perp q^2,\qquad
+C_{\rm mag}\le\frac{16}{45}V_\perp B_{1,+}^2q^4.
+$$
+
+Here $B_{1,+}$ bounds the charge-one field throughout the larger certified buffer, so it also bounds the physical insertion support. The saved constants yield
+
+$$
+V_\perp\le0.0006865532042079938/D,\qquad
+a_{4,\rm mag}/q^2\le0.00183080854455465/D,
+$$
+$$
+C_{\rm mag}/q^4\le0.035214916646301046/D^5.
+$$
+
+The previous numerical $a_{4,\rm mag}/q^2$ estimate lies inside this ceiling, but is not used as a certified bound. No geometry solve or quadrature of the actual field was rerun. The proof uses the existing directed field bounds and exact integrals above.
+
+### Signed contribution to the same matching identity
+
+Keep 177's target mass $M$, cutoff $s_0$, weights $r_M,J_1$, and counterterms unchanged. Since $r_M\ge0$, the pure magnetic short correction lies in
+
+$$
+\epsilon_{\rm mag}:=\frac12\int_0^{s_0}r_M(s)
+\left[\delta\Theta_0(s)-\frac{a_{4,\rm mag}}{16\pi^2}\right]\frac{ds}{s}
+\ \in\ \left[-\frac{C_{\rm mag}J_1}{32\pi^2},\,0\right].
+$$
+
+Define the remaining exact function
+
+$$
+R_{\rm geom}(s)=\delta K(s)-\delta\Theta_0(s)
+-\frac{a_2/s+a_{4,\rm grav}+a_6s}{16\pi^2}.
+$$
+
+If $|R_{\rm geom}(s)|\le C_{\rm geom}s^2/(16\pi^2)$ on $(0,s_0]$,177's original matching formula becomes
+
+$$
+Q_{\rm HK}=Q_M-\mathcal C_M+
+\frac{a_6J_0-a_2I_2-a_4I_1}{32\pi^2}
++\epsilon_{\rm mag}+\epsilon_{\rm geom}+\epsilon_{\rm heat},
+$$
+
+with $|\epsilon_{\rm geom}|\le C_{\rm geom}J_1/(32\pi^2)$ and
+$|\epsilon_{\rm heat}|\le E_{\rm heat}$. This only subdivides the short integral. The full $a_4$ remains in the long local subtraction and counterterm; there is no double subtraction or change of scheme.
+
+For the saved atomic charge and actual target masses from 177:
+
+| Nominal $M^2s_0$ | $|\epsilon_{\rm mag}|D/q^2$ upper bound | $E_{\rm heat}D/q^2$ upper bound |
+| ---: | ---: | ---: |
+| 50 | $7.299756270521545\times10^{-14}$ | $9.343832528117022\times10^{-8}$ |
+| 100 | $1.8249390676303856\times10^{-14}$ | $9.010957784002824\times10^{-30}$ |
+| 200 | $4.5623476690759655\times10^{-15}$ | $1.6760723786603616\times10^{-73}$ |
+
+At the $z\simeq100$ row, the two **known** error pieces together, multiplied by $D/q^2$, lie in
+$[-1.8249390676303865\times10^{-14},\ 9.010957784002826\times10^{-30}]$.
+This interval omits the unknown $\epsilon_{\rm geom}$ and the source $Q_M$. It is not a renormalized supporting-source interval or a rejection of the model.
+
+All 12 checks pass with 63 exact input hashes. Nine high-precision scalar controls test the sign, cubic bound and partial fractions; the exact radial mask/rate integral agrees with 64/128-point quadratures within $5.21\times10^{-17}$. The independent angular integral agrees within $7.15\times10^{-102}$. These controls accompany the analytic all-$x$ argument, rather than replacing it with sampling. The figure was inspected. Independent artifact audits pass: a 100-digit recomposition and 36 signed-bound checks; a separate 125-digit audit checks 79 directed inequalities, 183 scope/equality statements, nine nearest-float ratios, all 63 hashes and all 12 mass rows. Layout verification passes 174 imports, 1552 Markdown links, eight source guards and 14 frozen pilot hashes.
+
+### What remains in the curved-field error
+
+Removing the reference removes its pure constant-field powers, including the pure $F^4$ term in $a_8$. It does not establish a uniform $q^2$ bound on $R_{\rm geom}$: higher mixed terms such as $RF^4$ remain, and the exterior still contributes. The resummed formulas of [Avramidi--Fucci, equation 2.20](https://arxiv.org/pdf/0810.4889) explicitly assume $\nabla F=0$, unlike these collars. They cannot supply the missing error by direct substitution.
+
+A useful next certificate must bound a differentiated local heat-parametrix defect, including its cutoff terms and the source insertion. In particular, $-s\operatorname{Tr}(\dot P Q_s)$ for a reference kernel need not equal the metric variation of that kernel's trace; their mismatch must be retained. Certified higher geometry/connection jets, normal-coordinate transport data and local graph-norm evaluation constants are still missing. Finite propagation can control leaving a buffer but does not bound the local differential defect. The full source at the same target $M$ also remains to be evaluated or tightly bounded.
+
+### A concrete residual certificate to evaluate next
+
+The following is a derived, unevaluated route to a numerical remainder bound. Work in $D=1$ units and construct the actual charged-Dirac local parametrix
+
+$$
+Q_4(t;x,y)=\chi(d)(4\pi t)^{-2}e^{-d^2/(4t)}
+\sum_{j=0}^4t^j u_j(x,y),\qquad E_4=(\partial_t+P_x)Q_4.
+$$
+
+The $u_j$ must solve the transport recursions for the actual $P$, with its density and parallel transport included in $u_0$. The smooth cutoff must lie inside a verified normal neighbourhood of each source point. For the nonnegative self-adjoint physical operator, Duhamel's identity gives
+
+$$
+K(t)-Q_4(t)=-\int_0^t e^{-(t-r)P}E_4(r)\,dr.
+$$
+
+Suppose verified local evaluation constants obey
+$|e_a^*\dot P u(x)|\le C_{\rm ev}(x)\|(1+P)^3u\|_2$ for the full fixed-space insertion. With physical four-dimensional column norms and diagonal volume per unit Killing time, define
+
+$$
+B_4(r)=\int_{\rm mask}\sum_{a=1}^4 C_{\rm ev}(x)
+\|(1+P)^3E_4(r;\cdot,x)e_a\|_2\,d\mu_{/T}(x).
+$$
+
+Semigroup contraction and commutation with $(1+P)^3$ imply
+
+$$
+|\delta K(t)-\delta K_{Q_4}(t)|\le t\int_0^t B_4(r)dr,
+\qquad \delta K_{Q_4}:=-t\operatorname{Tr}_{/T}(\dot P Q_4).
+$$
+
+This definition is not replaced by the metric variation of $\operatorname{Tr}Q_4$. The pointwise volume-preserving cancellation then gives the prospective original-remainder certificate
+
+$$
+C_*\le|a_8|+s_0|a_{10}|+
+16\pi^2\sup_{0<t\le s_0}\frac1t\int_0^t B_4(r)dr.
+$$
+
+In four dimensions, away from cutoff derivatives,
+$E_4=t^4(4\pi t)^{-2}e^{-d^2/(4t)}P_xu_4$.
+Its column $L^2$ norm has order $t^3$; three applications of $P$ cost at most $t^{-3}$. Thus the needed graph norm is bounded at zero under the required smooth coefficient and transport bounds. Cutoff derivatives lie away from the diagonal and carry exponential suppression. This power count explains finiteness, but supplies no numerical constant.
+
+For the magnetic-subtracted remainder, the appropriate prospective bound instead is
+
+$$
+C_{\rm geom}\le|a_8-a_{8,\rm mag}|+s_0|a_{10}|+
+C_{F^6}s_0^2+16\pi^2\sup_{0<t\le s_0}\frac1t\int_0^t B_4(r)dr,
+$$
+
+where $a_{8,\rm mag}=-(16/45)\int fC_\perp\mathcal B^2dV$ and
+$C_{F^6}=(16/315)\int fC_\perp\mathcal B^4dV$. A second positive partial-fraction remainder gives
+$0\le16\pi^2\delta\Theta_0-a_{4,\rm mag}-a_{8,\rm mag}t^2\le C_{F^6}t^4$.
+There is no pure magnetic $a_{10}$ term. Simply reusing the original $C_*$ formula with a renamed constant would lose this distinction.
+
+Neither certificate has been evaluated. Both need certified transport and normal-coordinate data, higher derivatives in $P^3E_4$, explicit local elliptic evaluation constants, and enclosures of the relevant exact heat coefficients. Existing third jets do not provide them. [Ludewig's differentiated heat-asymptotic framework](https://arxiv.org/pdf/1607.05152) supports the local construction; it does not provide these numerical constants for our geometry. This is the next concrete calculation, not a claim that the curved remainder is already bounded.
+
+The target remains one neutral hydrogen atom through a trial 1 nm areal diameter. Support, stability, atomic transmission and survival, and an exterior-clock advantage remain unproved. The current static geometry excludes 13 September 2027 to 12 September 2027; no new physical law or obtainable material is established.
+
+![Controlled magnetic and long-time corrections](../figures/dihole_magnetic_remainder_progress.png)

@@ -6,6 +6,10 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment178: The [magnetic remainder calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-all-order-magnetic-remainder-on-the-actual-collars) now bounds the purely magnetic short-time reference correction with its sign retained, using the actual collar geometry. **All 12 checks pass.** This controls every power of the local magnetic field in that reference, but the curved, varying-field remainder and target-regulator source remain unknown. See the [results](results/dihole_magnetic_remainder_results.json) and [visual](figures/dihole_magnetic_remainder_progress.png). No supported opening or atom transport is established.
+
+
+
 Current increment177: The [heat and regulator-matching calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#full-field-heat-variation-and-a-regulator-matching-tail) turns the previous source bound into an explicit bound on the full heat response and the long-time part of the physical matching correction. **All 14 checks pass.** The short-time remainder and the full source at the target regulator remain unknown. The comparison filter and target regulator are kept distinct; a small correction alone does not prove support. See the [results](results/dihole_regulator_heat_tail_results.json) and [visual](figures/dihole_regulator_heat_tail_progress.png). One-atom stability, passage and clock gain remain unproved.
 
 

@@ -1,3 +1,56 @@
+# Authoritative checkpoint178 - signed all-order magnetic remainder bounded
+
+Previous checkpoint177 published 105778ac68349b36fc58a0990d17a5e3cc65a360.
+Previous goal turn PROGRESS:177 completed and privately published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- scripts/dihole_magnetic_remainder.py:12 checks PASS,63 exact input hashes.
+  Existing geometry bounds reused; no old geometry or physical solves rerun.
+- NEW all-x reference inequality: for g=coth(x)-x*csch²(x),
+  0<=2x/3-g(x)<=4x³/45, from positive partial fractions.
+  Hence local constant-field reference deltaTheta0-a4mag/(16pi²)
+  lies between -Cmag*s²/(16pi²) and0, for every s>=0.
+  This does not identify deltaTheta0 with the actual inhomogeneous heat.
+- Cmag=(16/45)int f*Cperp*B² dV. Actual radial profile gives
+  f=(Lc/2)dchi/ds, chi=R', Lc=.05D, so int f chi²ds=Lc/6 exactly.
+  Physical volume cancels P,R,W factors, leaving N² a_R²/(1-x²).
+  Polar a_R(+/-1)=0 and saved arx bound give angular factor4log2-2.
+- Both collars and full sphere: Cmag/q4 <=.035214916646301046/D5,
+  a4mag/q²<=.00183080854455465/D. These are directed bounds,
+  not the old numerical quadrature promoted to an enclosure.
+- Signed magnetic short correction lies in[-Cmag*J1/(32pi²),0].
+  At atomic q and177's target z=M²s0 about50, its magnitude/q² is
+  <=7.299756270521545e-14/D; atz100 <=1.8249390676303856e-14/D.
+  Combined KNOWN correction pieces atz100, divided byq², lie in
+  [-1.8249390676303865e-14,+9.010957784002826e-30]/D.
+  This excludes the UNKNOWN curved short remainder and is not a source interval.
+- Remaining exact short error is deltaK-deltaTheta0-Hgravity-a6*s/(16pi²).
+  Its Cgeometry is null; it contains curvature, gradients and nonlocal effects.
+  Removing pureF4 does not prove uniformq² scaling: mixedRF4 terms remain.
+- NEXT: construct/certify an insertion-sensitive local heat-parametrix defect,
+  retaining its mismatch with the variation of the reference heat trace.
+  A conditional Q4 Duhamel certificate is now derived in the physical report:
+  Cstar<=|a8|+s0|a10|+16pi2 sup_t (int_0^t B4)/t. Cgeometry needs
+  a8-a8mag and the remaining magnetic F6 tail as well. No value is evaluated.
+  Existing third jets and existential heat theorems do not evaluate the defect.
+  Need higher verified geometry/transport derivatives and local graph bounds.
+  The full source at the SAME targetM also remains unknown; do not substitute
+  the comparison-filter Lambda source. Counterterms/reference stay fixed.
+  Static geometry excludes13Sep2027->12Sep2027; no future clock gain proved.
+
+Source SHA256 fa4b9c89dafa5782573646a9c721e990b5a09200e58bfba1f2930a670a3e2795
+Results SHA256 368c51d0b025a4f31628e65666796c059a28c25f188bdcebff20202c2778f5ed
+
+Verification:12 checks pass,63 exact inputs, figure inspected.
+Independent178 audits PASS: mass_audit (100-digit recomposition, 36 signed bounds)
+and connected_domain (125 digits, 79 directed inequalities, 183 scope/equality checks).
+Layout PASS: 174 imports, 1552 Markdown links, 8 source guards, 14 frozen hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint177 and earlier history ---
+
 # Authoritative checkpoint177 - full-field heat bound and regulator matching tail
 
 Previous checkpoint176 published d24ed93d2ee4eef928921a3b130f5b766d713e15.

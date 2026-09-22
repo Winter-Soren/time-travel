@@ -257,3 +257,10 @@ This remains preparation for the **one-hydrogen-atom** target, using a **trial 1
 The [new heat calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#full-field-heat-variation-and-a-regulator-matching-tail) turns the complete supporting-field estimate into a full heat-response bound. Its long-time correction to the physical subtraction scheme is now explicitly bounded, with all 14 controls passing. The remaining short-time remainder and the source at the required target regulator are still unknown. Making this one correction small does not establish the total supporting stress.
 
 The payload remains one hydrogen atom through a trial 1 nm opening. Support, stability, transmission, internal-state survival and a clock difference remain unproved. The present static model cannot send the atom from 13 September 2027 to 12 September 2027.
+
+
+## Checkpoint178: pure magnetic short-time correction bounded
+
+The [new magnetic remainder bound](PHYSICAL_EUCLIDEAN_OPERATOR.md#signed-all-order-magnetic-remainder-on-the-actual-collars) controls the sign and magnitude of the local constant-field reference correction at every proper time. It uses the actual collar geometry and the exact variation mask, with all 12 controls passing. The remaining curved, varying-field heat contribution and full source at the target regulator are uncomputed. Two small correction bounds therefore do not establish the total supporting stress.
+
+The first target remains one hydrogen atom and a trial 1 nm areal opening. No supported opening, stability, atom transmission, survival or clock advantage has been established. The static model cannot send it from 13 September 2027 to 12 September 2027.
