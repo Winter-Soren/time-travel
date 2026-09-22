@@ -1,0 +1,448 @@
+{
+  "passed": true,
+  "checks": {
+    "exact_inputs": true,
+    "local_metric_comparison": true,
+    "support_within_chart": true,
+    "radial_gauge_support": true,
+    "magnetic_windows": true,
+    "operator_factorization": true,
+    "varying_field_preserved": true,
+    "constant_interior_defect_zero": true,
+    "cutoff_commutator": true,
+    "frozen_PDE": true,
+    "covariant_derivatives": true,
+    "nondiagonal_metric_PDE": true,
+    "frozen_normalization": true,
+    "atomic_first_bound_useful": true,
+    "low_flux_failure_retained": true,
+    "no_full_remainder_or_transport_claimed": true
+  },
+  "controls": {
+    "operator_factorization": true,
+    "varying_field_preserved": true,
+    "constant_interior_defect_zero": true,
+    "cutoff_commutator": true,
+    "frozen_PDE_error": 3.0475652232568286e-87,
+    "covariant_derivative_error": 4.021529366771898e-87,
+    "nondiagonal_metric_PDE_error": 6.434486612421688e-86,
+    "frozen_column_normalization_error": 2.4545467326488633e-91
+  },
+  "constants": {
+    "radius": {
+      "mantissa": "1",
+      "binary_exponent": -32,
+      "log10_upper": -9.632959861247395
+    },
+    "epsilon": {
+      "mantissa": "33978677526211525636267971052389",
+      "binary_exponent": -113,
+      "log10_upper": -2.485183038211549
+    },
+    "a": {
+      "mantissa": "70106812883010531824904359267461784877414953688526998355516601321248039550580863135121915358014284451",
+      "binary_exponent": -335,
+      "log10_upper": 0.0007116767202157078
+    },
+    "alpha": {
+      "mantissa": "71826415576391705475747131243378085789373639514542080618889675735725224827451953287363351451402415467",
+      "binary_exponent": -301,
+      "log10_upper": 10.246255499094994
+    },
+    "metric_difference": {
+      "mantissa": "59323186555908448471258128259484635363478232235912330021004293135645841504445323094038495521814052073",
+      "binary_exponent": -307,
+      "log10_upper": 8.357015802348885
+    },
+    "b0": {
+      "mantissa": "118598941674105157200689482758203233093709508854163",
+      "binary_exponent": -131,
+      "log10_upper": 10.639151381607022
+    },
+    "b1": {
+      "mantissa": "40452757423696049380055280915443095298417491829483954661589049667646496922909169407304554577472151927",
+      "binary_exponent": -271,
+      "log10_upper": 19.027819305288254
+    },
+    "curvature_gradient_per_q": {
+      "mantissa": "90530212234236637715465930418582710820247135630976956051290476798937813794861408762616909522550981501",
+      "binary_exponent": -287,
+      "log10_upper": 14.561184782946077
+    },
+    "magnetic_per_q": {
+      "mantissa": "845186009103947",
+      "binary_exponent": -46,
+      "log10_upper": 1.0795724987466964
+    },
+    "cutoff_gradient": {
+      "mantissa": "88237704953319865936839866112054731731828840643228890543916052583631384128023430058796575506293086403",
+      "binary_exponent": -295,
+      "log10_upper": 12.141805482783985
+    },
+    "cutoff_hessian": {
+      "mantissa": "541551974022844336336958359965349",
+      "binary_exponent": -27,
+      "log10_upper": 24.60583026030189
+    },
+    "cutoff_exponent": {
+      "mantissa": "137621807237330161206251716629097704142068121661665748413617610190636667872458503601864872030786451233",
+      "binary_exponent": -413,
+      "log10_upper": -23.186700952559907
+    }
+  },
+  "records": [
+    {
+      "q": 1000,
+      "s0": 8.325829275412148e-07,
+      "magnetic_product_upper": 0.009999999999999998,
+      "interior_terms": {
+        "leading": {
+          "mantissa": "103210197195050545733024054980796589241233728444991691023635343937725637525025563979532028883524064503",
+          "binary_exponent": -307,
+          "log10_upper": 8.597513938979601
+        },
+        "constant": {
+          "mantissa": "50729154095676003567572316097481333708888981345787092793827389795030442533289425382015146463406431443",
+          "binary_exponent": -284,
+          "log10_upper": 15.212738851983627
+        },
+        "varying_field": {
+          "mantissa": "12215979732574844415882267321348919678655034040224828444572503093255197416335680951731226044786463985",
+          "binary_exponent": -301,
+          "log10_upper": 9.476899608656446
+        },
+        "quadratic": {
+          "mantissa": "26066029967287052435032537918591405615754529458213496876959929976980369213346540057478454255715166665",
+          "binary_exponent": -278,
+          "log10_upper": 16.72973609563049
+        },
+        "quartic": {
+          "mantissa": "16733032107619332474578098654471000389236766935514029398405260039713502202563255940701538606293488767",
+          "binary_exponent": -275,
+          "log10_upper": 17.44032583679211
+        }
+      },
+      "interior_column_time_integral_upper": {
+        "mantissa": "80361465754744444015461000168441165968212992551134778714425424195893104776587146595006747144835661557",
+        "binary_exponent": -277,
+        "log10_upper": 17.51973905054954
+      },
+      "cutoff_terms": {
+        "gradient": {
+          "mantissa": "79321536438003039436883340419853973530383256470983153643758896327051484620078776722309552718250581017",
+          "binary_exponent": -300,
+          "log10_upper": 10.590392418594128
+        },
+        "constant": {
+          "mantissa": "104730760873043973514877834357434311749438972918447006093674183754538584627378778163949794990952026751",
+          "binary_exponent": -270,
+          "log10_upper": 19.741975429436653
+        },
+        "quadratic": {
+          "mantissa": "114778118692681575262296325160040944629802000081181479168877881361877807772189205680730091584280206455",
+          "binary_exponent": -273,
+          "log10_upper": 18.878670285760357
+        }
+      },
+      "cutoff_column_time_integral_upper": {
+        "mantissa": "29769506445875776990140339653644398379388040124735595130145108354257678062663299729424036786424567747",
+        "binary_exponent": -268,
+        "log10_upper": 19.797732796511337
+      },
+      "cutoff_exponent_over_s0": {
+        "mantissa": "39409402534607152162043054235464394310839103508745983270646330752060259824800278168004544203054915699",
+        "binary_exponent": -391,
+        "log10_upper": -17.10712845381321
+      },
+      "total_column_time_integral_upper": {
+        "mantissa": "59852924867356024464716073839196770063339412251624060489643441021780563565860143000234818678883649797",
+        "binary_exponent": -269,
+        "log10_upper": 19.800016544568674
+      },
+      "total_less_than_one": false,
+      "coefficients": {
+        "b2": {
+          "mantissa": "59035602452863999530870244890715565587009066861984370283685361967011760104044076931574921073414801613",
+          "binary_exponent": -278,
+          "log10_upper": 17.08477520494663
+        },
+        "b11": {
+          "mantissa": "59035602452863999530870244890715565587009066861984370283685361967011760104044076931574921073414801613",
+          "binary_exponent": -277,
+          "log10_upper": 17.385805200610612
+        },
+        "b12": {
+          "mantissa": "120967293796624554431889498911517546054669376234048331373918323643210929905591878476705560929101050239",
+          "binary_exponent": -245,
+          "log10_upper": 27.33031902732141
+        },
+        "p1": {
+          "mantissa": "52697830656665476707563538280807318508172132554654108793014089352331743887656011794111448208930515497",
+          "binary_exponent": -285,
+          "log10_upper": 14.928243973307488
+        },
+        "V0": {
+          "mantissa": "57529057788244157090700931615548416366582656546232678320746604911043755744783580408450870600578241313",
+          "binary_exponent": -264,
+          "log10_upper": 21.28796840591129
+        },
+        "V1": {
+          "mantissa": "29591942952072041905074186222226820469751927200681167615675780271274470158179514549743211117105217343",
+          "binary_exponent": -274,
+          "log10_upper": 17.98895466913588
+        },
+        "V2": {
+          "mantissa": "67718466054816599115793662239620189357289309027649613619566176384287843110749286476324700850389290851",
+          "binary_exponent": -241,
+          "log10_upper": 28.282478156976886
+        },
+        "V4": {
+          "mantissa": "99588558752173757807346537929958777579669191491814623229380613763903963416845368975894598537789069297",
+          "binary_exponent": -222,
+          "log10_upper": 34.16955040989326
+        },
+        "Cminus": {
+          "mantissa": "109361877057570328536764588221066942638325261193809085089529168566097032475803274057810029976657378057",
+          "binary_exponent": -298,
+          "log10_upper": 11.331927247869935
+        },
+        "Chalf": {
+          "mantissa": "22240036514550057934164093630043880388118689390747359809973447546982304816272167924466718953682615459",
+          "binary_exponent": -271,
+          "log10_upper": 18.76800667101314
+        }
+      },
+      "row_bound": null,
+      "iterated_heat_remainder": null,
+      "physical_source": null,
+      "atom_transit": null
+    },
+    {
+      "q": 4642875905017627791065088,
+      "s0": 1.7932482895815274e-28,
+      "magnetic_product_upper": 0.009999999999999998,
+      "interior_terms": {
+        "leading": {
+          "mantissa": "104089977278439984167216968337912724823453742130529102020481775991354737913724001134469128343765471297",
+          "binary_exponent": -343,
+          "log10_upper": -2.2358795990104645
+        },
+        "constant": {
+          "mantissa": "103195373689334125114342174976379717700323888953493837821113881884591793911473630756075189133446028983",
+          "binary_exponent": -357,
+          "log10_upper": -6.4540482239965025
+        },
+        "varying_field": {
+          "mantissa": "49280442721935877745032584914352317992308859615726338870269178271864938481477843822108885597598633757",
+          "binary_exponent": -339,
+          "log10_upper": -1.356493929333619
+        },
+        "quadratic": {
+          "mantissa": "53024611804060167622149423087073503742026352246721788144663855440258927523146471823913760533864335207",
+          "binary_exponent": -351,
+          "log10_upper": -4.937050980349642
+        },
+        "quartic": {
+          "mantissa": "136156143904523550576191844336194438423629266005980478832676287835007249977576896209355418836176322825",
+          "binary_exponent": -350,
+          "log10_upper": -4.22646123918802
+        }
+      },
+      "interior_column_time_integral_upper": {
+        "mantissa": "111731775829910641750459207232390732600087695027565485945747978608818516162258183410891250262111519335",
+        "binary_exponent": -340,
+        "log10_upper": -1.302021824392027
+      },
+      "cutoff_terms": {
+        "gradient": {
+          "mantissa": "41904590806168848712567067401936792786180520474529952084796971373982488408146645472754734538004225525",
+          "binary_exponent": -52675,
+          "log10_upper": -15756.132759996033
+        },
+        "constant": {
+          "mantissa": "27899797771151678656161578890721260702481326241282909987873460860731459924445776146990878932919972009",
+          "binary_exponent": -52680,
+          "log10_upper": -15757.814570523182
+        },
+        "quadratic": {
+          "mantissa": "122305472561625492200377391778601516550244424217682253084765198115577693415410450020291024634529253379",
+          "binary_exponent": -52685,
+          "log10_upper": -15758.677875666857
+        }
+      },
+      "cutoff_column_time_integral_upper": {
+        "mantissa": "42895898424565801065299047788930622726639159990095123347196108039665090372011562744946139958402632125",
+        "binary_exponent": -52675,
+        "log10_upper": -15756.122605831955
+      },
+      "cutoff_exponent_over_s0": {
+        "mantissa": "19373016275081727396995868643848249340150918843216643170024398792330990015017194993953443790768630947",
+        "binary_exponent": -318,
+        "log10_upper": 4.559658622166915
+      },
+      "total_column_time_integral_upper": {
+        "mantissa": "13966471978738830218807400904048841575010961878445685743218497326102314520282272926361406282763939917",
+        "binary_exponent": -337,
+        "log10_upper": -1.302021824392027
+      },
+      "total_less_than_one": true,
+      "coefficients": {
+        "b2": {
+          "mantissa": "116083737744996977754811316643141643203686957746694091050869084760561282329839201244196118270246786911",
+          "binary_exponent": -207,
+          "log10_upper": 38.75156228092676
+        },
+        "b11": {
+          "mantissa": "116083737744996977754811316643141643203686957746694091050869084760561282329839201244196118270246786911",
+          "binary_exponent": -206,
+          "log10_upper": 39.052592276590744
+        },
+        "b12": {
+          "mantissa": "59465538697691935937653536939901926045910339555400553050337882536883168901042008750254001425321517615",
+          "binary_exponent": -172,
+          "log10_upper": 48.99710610330154
+        },
+        "p1": {
+          "mantissa": "12952694855961965737132940119308064551414228422548558250265984044835557531220004696222191003245483549",
+          "binary_exponent": -211,
+          "log10_upper": 36.59503104928762
+        },
+        "V0": {
+          "mantissa": "57529057788244157090700931615548416366582656546232678320746604911043755744783580408450870600578241313",
+          "binary_exponent": -264,
+          "log10_upper": 21.28796840591129
+        },
+        "V1": {
+          "mantissa": "29093828150191030720999596174201382130652455723760257314473872575368677192299090707166071433668951251",
+          "binary_exponent": -202,
+          "log10_upper": 39.65574174511601
+        },
+        "V2": {
+          "mantissa": "133157151403296100434244200475718150220155690025990628635959908554421171097118880853261844741183323645",
+          "binary_exponent": -170,
+          "log10_upper": 49.94926523295702
+        },
+        "V4": {
+          "mantissa": "48132035459528186527833190453078342992236135594507217195163491566436295413491011742147652321202745543",
+          "binary_exponent": -77,
+          "log10_upper": 77.50312456185353
+        },
+        "Cminus": {
+          "mantissa": "109361877057570328536764588221066942638325261193809085089529168566097032475803274057810029976657378057",
+          "binary_exponent": -298,
+          "log10_upper": 11.331927247869935
+        },
+        "Chalf": {
+          "mantissa": "43731349540398211393075835422686399858402225665024760435683501703352925773937318622263861822550858981",
+          "binary_exponent": -200,
+          "log10_upper": 40.43479374699327
+        }
+      },
+      "row_bound": null,
+      "iterated_heat_remainder": null,
+      "physical_source": null,
+      "atom_transit": null
+    }
+  ],
+  "source_sha256": "b462a120ad837756315506882418f79252046ccbc807f6e7d379d56685347d9f",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+    "dihole_collar_resolvent_results.json": "df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17",
+    "dihole_collar_resolvent.py": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531",
+    "dihole_metric_resolvent_results.json": "f15f1402458e8ee43b222d3ea40b665f2bc33315230436eda7887be941e9ce97",
+    "dihole_metric_resolvent.py": "b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc",
+    "dihole_paired_frequency_units_trial.json": "c5d9a8152c7931598e4f32baceb625a44f675e62ab995d1c781e778580e58e4d",
+    "provenance/dihole_paired_frequency_units_trial.py": "c81e58f0621ff73caa1ad617be46d9795d297f18299d6c6130f63165c7a5ca19",
+    "dihole_paired_frequency_results.json": "e2de59a035d0874484a857164a1ff93a0d0e6155a8307a7493f3d7c2e21ce429",
+    "dihole_paired_frequency.py": "c118af9191e5f371de9320d134a454d02f6180444ca5be57ecd07caca2520044",
+    "dihole_massive_channel_results.json": "f61f079f61a3db75c1549d1250128839985fba5b03b44141d4d591460412595b",
+    "dihole_massive_channel.py": "b614c9a37d8a84c845f8138df226afece042faebe5b27bf9f7d09beef7f81789",
+    "dihole_proper_channel_results.json": "9d4b9e91dddc7b37e8f075e47a0e75b1b400d7102fa03385ab061c06efbfe967",
+    "dihole_proper_channel.py": "75c9e49ef29fd379d24e8246e357052334b21870000abf8972dd7ebf141120c5",
+    "dihole_local_zero_shift_results.json": "c6abf68b4d44f18d6f0b97016a0275a8a195aab2d306bcd6de77f7bdd17177a3",
+    "dihole_local_zero_shift.py": "f95cde7f9510dc82cfe9e5f1a44e937c45662ad3d385c1ddd15afb41c911abf2",
+    "dirac_green_mass_limit.py": "1ff4edbbf5b574553ca8fb94f852781a8bfd29838d8c2574cb69ba62c8e0630a",
+    "dihole_paired_low_frequency_results.json": "73641db16789394adc109dfb5b5088e375f1c68bb608e24e5e72396f2fd47e7a",
+    "dihole_paired_low_frequency.py": "cbe6669ec7851bcc251e47017af13ca3febd6dcdc75a4f9313af0f6d01d93f93",
+    "dihole_source_completion_derivative_trial.json": "b80e0e9efc27176d10d0b79a015e24165691e610b1b0c746160827fa80460e6e",
+    "provenance/dihole_source_completion_derivative_trial.py": "d231eee2ac075378b4e3fe84f2954e62419cb2fcbab6faa386371c43fbe94bef",
+    "dihole_source_completion_results.json": "dcd24ab0a676289da962656e02296532e2fbc0535d8e7ef9b82643c4a825db27",
+    "dihole_source_completion.py": "deb95497874e34e9f7f02a52465422b421c7ace669710db91b10a9855848d23c",
+    "dihole_buffer_geometry.py": "b15dfafe789e07e106575258b33591e9241d4978f64889d01f44fe5ff4d45d56",
+    "dihole_buffer_smoothing_prerate_trial.json": "4cd0341d90ccf386832b99f8eeb6732de39d78dd528b7cd15a76d9c3854844b9",
+    "provenance/dihole_buffer_geometry_prerate.py": "effb53114c95e45362ec9af9a5213eaa31847c8d119b8b404cd8a7b91bcadb24",
+    "provenance/dihole_buffer_smoothing_prerate.py": "dfeb4d1a39713b0da30f1b643cfcf0746b14914b2707857680dd3e304d8698fa",
+    "dihole_buffer_smoothing_results.json": "51fb304256cbd139b2acc1b59a280473082b729f4540700107ddb3c1ffc8cbdb",
+    "dihole_buffer_smoothing.py": "0862683252bf01a8d3dce372a44087bad4501eafa1e032e5e9c63969f23e46a8",
+    "dihole_full_frequency_results.json": "5974c84faea4438ee3d78051fa3d42a912fa3d2dd8d17d3c77c62e42a96e4d71",
+    "dihole_full_frequency.py": "7bfe224bd521b3793364410a1989d22834331a83c5ec225bbbea60f86d0b660c",
+    "dihole_regulator_heat_tail_results.json": "7fb8de096ffe0181ca548455a48bd7fc361e9fb423176a5dc544aae50f782005",
+    "dihole_regulator_heat_tail.py": "16517fa214d719c61030a29663c9b632806a729d9129f1e1918b0f8bda01d51b",
+    "dihole_magnetic_remainder_results.json": "368c51d0b025a4f31628e65666796c059a28c25f188bdcebff20202c2778f5ed",
+    "dihole_magnetic_remainder.py": "fa4b9c89dafa5782573646a9c721e990b5a09200e58bfba1f2930a670a3e2795",
+    "dihole_regular_jets_results.json": "e25dd81f979eca7fa6839f1850f19cced5be7065045626d2efccc66405ef3d06",
+    "dihole_regular_jets.py": "5369eab9d86a109fe5542d790bdeeba3fc6f19024384d469d75f543e1931f311",
+    "dihole_local_transport_results.json": "0be31a41b16c37b41cc16d9f8ea5dc4a25200731e7a8d29ec330754fb464b5ee",
+    "dihole_local_transport.py": "bf74297137c17b8b8273ee4212b230a843e861ff43712cfacf570042728443c4",
+    "dihole_heat_defect_results.json": "bb0af04d14108fe79d5658b3a08e4e6611355a8d4d18bb606780c64a09b3ce2b",
+    "dihole_heat_defect.py": "ff32753c8c84b68794b542a7f427963b28ad37d2cd893779610de9e0ae64a1d2",
+    "dihole_scaled_graph_results.json": "2f29e4149326fdb5ba22b5561cbd0643e3adadf235762f731cd4890cebc420c4",
+    "dihole_scaled_graph.py": "8f4684f02f16404ba1615e29b67e7f8e1de4964e8ffb90c4a8b9a956388cf6d9",
+    "dihole_centered_gauge_results.json": "a98634878eb8604219e0a1bf3cfe38c311210df5ff0ad7dc0d0928c919dfe6af",
+    "dihole_centered_gauge.py": "bc1c52a5be65971eeaa6adae00519c04e631588c82e4cb224a03d5059a756ae8",
+    "dihole_positive_frame_rounding_trial.json": "5f48a8be38418e63010d2037e72efa4718d0b2cac9444391cf74b538ed9d133d",
+    "provenance/dihole_positive_frame_rounding_trial.py": "86e3b296e86caecf04a7e24903612e8d666c3cf3d1a451838843b59cbb2b064a",
+    "dihole_positive_frame_results.json": "765cc0cc9989e238ba630082f27bcb83afba55d57a977cda5d7d87bcd94f32cc",
+    "dihole_positive_frame.py": "823df8b95089f2036991618c9ec7b65c0b92425394063f2f93487b5872d8ad8d",
+    "dihole_ordered_transport_simplex_trial.json": "fe5a01c9ee2140e85c80e8998c5449af70fcd77b2535dea7a413153af65f659f",
+    "provenance/dihole_ordered_transport_simplex_trial.py": "2c2727ed234c11dcdb9a5bc4e8bd0482fcf1a1cc4d6a999ec034fab9ccb47276",
+    "dihole_ordered_transport_simplex_trial_progress.png": "b6e19d934a94a8a8b28efb32628368a92a03430a6f0a7ee6f03b09f0e6f597a0",
+    "dihole_ordered_transport_simplex_trial_progress.pdf": "8a3a2fbfc59f5c1e4df59314e6248ae2c49bba54712ca2fa4d7606ca7bacbf48",
+    "dihole_ordered_transport_results.json": "586e9dfceaca138d163a4ca4e37cf54e7e67be78eddd43ce66a5f1fb83e54627",
+    "dihole_ordered_transport.py": "10efc4ab92539f88934f3702ab932b015c5bcbdaae907f78dc7285724435af85",
+    "dihole_radial_cancellation_results.json": "597afc60ed89ea9c26116159e94b7a4abd64a718ad3aa3d0509e711bcfba457f",
+    "dihole_radial_cancellation.py": "7640ac0810a1ce649eebec38ea8e3631b2d4a4649ba8f9cb4f7135cd1b882aed"
+  },
+  "bound_encoding": "Each packed upper endpoint is exactly int(mantissa)*2**binary_exponent. log10_upper is an upward rounded display bound, not the stored constant.",
+  "scope": [
+    "Fixed-source canonical Lebesgue kernel, source-centred radial gauge, frozen whitened coordinates; D=1.",
+    "Exact constant magnetic kernel includes its Pauli endomorphism; actual field derivatives, geometry, spin and density remain in the defect.",
+    "Uniform local column-L1 first-defect time integral only, including the local cutoff. Not a global Schur or iterated heat remainder.",
+    "The earlier B4 certificate is preserved and is not replaced by this dimensionless first-defect estimate.",
+    "No source, supported opening, atom passage or time travel established. One hydrogen atom and trial1nm opening remain the target."
+  ],
+  "sources": [
+    "https://arxiv.org/abs/0810.4889"
+  ]
+}

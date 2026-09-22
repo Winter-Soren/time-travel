@@ -6,6 +6,9 @@ A computational research workbench for testing proposed chronology-changing geom
 
 ## Start with the current work
 
+Current increment187: The [frozen magnetic calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#frozen-magnetic-kernel-and-its-first-column-defect) bounds one local, time-integrated field defect below **0.050** at the saved atomic parameters, including its cutoff. **All16 native controls pass.** This is a useful first estimate, not the complete field error or a transit probability; the earlier certificate remains intact. See the [results](results/dihole_frozen_magnetic_results.json) and [visual](figures/dihole_frozen_magnetic_progress.png). One hydrogen atom through a trial1nm opening remains the target; support, stability, passage and clock gain remain unproved.
+
+
 Current increment186: The [radial cancellation calculation](docs/PHYSICAL_EUCLIDEAN_OPERATOR.md#radial-gauge-cancellation-along-curved-geodesics) removes an exactly vanishing contribution from the propagation estimate. The atomic error ceiling improves by another33.4 decimal orders, while the low-flux case barely changes. **All14 controls pass.** See the [results](results/dihole_radial_cancellation_results.json) and [visual](figures/dihole_radial_cancellation_progress.png). The field and one-atom target are unchanged; no supporting source, stable opening or atom passage is established.
 
 

@@ -7685,3 +7685,236 @@ The first implementation should verify vanishing **interior** defect for arbitra
 The target remains one neutral hydrogen atom through a trial1nm opening. Self-consistent support, stability, atomic transmission, internal-state survival and an operational clock comparison remain unproved. The present static geometry excludes13September2027 to12September2027; no future clock advantage is established.
 
 ![Radial cancellation improves the atomic error bound](../figures/dihole_radial_cancellation_progress.png)
+
+## Frozen magnetic kernel and its first column defect
+
+This checkpoint implements the first test proposed in186. It solves the frozen
+constant-magnetic part exactly and bounds the actual varying-field difference.
+The result is a **local first-defect column estimate**, not the completed
+quantum source, an atom propagation, or a replacement for the existing $B_4$
+certificate. All16 native controls pass; input provenance retains87 exact hashes.
+
+Calculation: [source](../scripts/dihole_frozen_magnetic.py),
+[results](../results/dihole_frozen_magnetic_results.json),
+[figure](../figures/dihole_frozen_magnetic_progress.png).
+
+### Exact reference and difference
+
+At a fixed source $y$, use $z=E_y(x-y)$ with $E_y=\sqrt{g_y}$ and the canonical
+Lebesgue-space Dirac operator. In these whitened coordinates the frozen metric
+is the identity, the frozen charge-included magnetic two-form has rank two,
+and $A_{0,i}=F_{ji}(y)z^j/2$. Let $b$ be its nonzero singular value. Then
+
+$$
+P_0=-\sum_iD_{0,i}^2+V_{\rm P}(y),\qquad D_{0,i}=\partial_i-iA_{0,i},
+\qquad V_{\rm P}(y)=\frac{i}{4}\sum_{ij}[\gamma_i,\gamma_j]F_{ij}(y).
+$$
+
+With $Q=t^{-1}\Pi_\parallel+b\coth(bt)\Pi_\perp$, the whitened kernel is
+
+$$
+K_0(t,z)=(4\pi t)^{-2}\frac{bt}{\sinh(bt)}
+ \exp(-z^TQz/4)\exp(-tV_{\rm P}(y)).
+$$
+
+The canonical kernel in the original coordinates has the additional factor
+$\sqrt{\det g_y}$. It cancels the whitening Jacobian when integrating a column.
+The Pauli eigenvalues are $\pm b$, each twice. For $bt\le u=0.01$,
+$\|K_0(t,z)\|\le e^u(4\pi t)^{-2}e^{-|z|^2/(4t)}$.
+This is a bundle operator norm, so no spin-rank factor4 is inserted.
+
+The constant-field resummation has published precedents, including
+[Avramidi and Fucci](https://arxiv.org/abs/0810.4889), whose expansion assumes
+parallel electromagnetic curvature. Our actual field varies: the estimates
+below explicitly retain its derivatives and do not apply that assumption to it.
+
+Write the actual Dirac operator as $\mathcal D=a^iD_{0,i}+B$, with
+$B=b_{\rm geom}-ia^i\delta A_i$. The exact difference, before taking norms, is
+
+$$
+P-P_0=-(\widetilde g^{ij}-\delta^{ij})D_{0,i}D_{0,j}
+       +L^kD_{0,k}+V,
+$$
+
+$$
+L^k=-\sum_i a^i\partial_i a^k-\{a^k,B\},\qquad
+V=\frac{i}{4}\sum_{ij}([a^i,a^j]-[\gamma_i,\gamma_j])F_{ij}(y)
+  -\sum_i a^i\partial_iB-B^2.
+$$
+
+Thus the frozen $q^2A_0^2$ part stays inside the exact reference. Spin, density,
+metric derivatives and field gradients remain in the difference.
+The physical source insertion is unchanged; it is not yet evaluated using
+this new reference.
+
+### Coefficient bounds in the actual source neighbourhood
+
+Use the existing radial gauge on the coordinate ball of radius
+$r_{\rm cut}=2^{-32}$, inside the saved chart. The saved real metric ceilings
+are $M,H$ for $g,g^{-1}$, and $G_1=8g_1$ bounds the metric directional derivative.
+Set
+
+$$
+\epsilon=HG_1r_{\rm cut}<1,\quad
+a=(1-\epsilon)^{-1/2},\quad
+G=\frac{H^{3/2}G_1}{1-\epsilon},\quad
+\alpha=2\sqrt{MH}\,I_{1,\rm op}.
+$$
+
+Here $\|\widetilde g^{-1}-I\|\le G|z|$ and
+$\|a(\xi)\|\le a|\xi|$ for real $\xi$.
+The bound $\alpha$ is valid for arbitrary unit real directions, using the
+original-coordinate directional $\ell^1$ factor2. The transformed coefficients
+are $a_z=a_xE_y^T$, not $a_xE_y^{-1}$.
+
+The geometry-only Dirac sequence comes from the unchanged positive frame
+and canonical density:
+$b_{\rm geom}=768(I I E')+16(I V'V^{-1})$ with full derivative product rules.
+Let $b_0$ be its zeroth bound and $b_1$ its first bound times $2\sqrt H$.
+From the original potential second derivative ceiling $A_2$,
+
+$$
+L_F=16|q|H^{3/2}A_2,\qquad
+\|\delta A\|\le L_F|z|^2/3,\qquad
+\|\partial\delta A\|\le2L_F|z|/3.
+$$
+
+The factor16 converts the component derivatives of $dA$ to the real
+three-tensor norm. Charge appears once. Define
+
+$$
+b_2=aL_F/3,\quad b_{11}=2aL_F/3,\quad b_{12}=\alpha L_F/3,
+\quad p_1=2b(a+1)\alpha.
+$$
+
+Then $\|B\|\le b_0+b_2r^2$ and each
+$\|\partial B\|\le b_1+b_{11}r+b_{12}r^2$.
+For the Pauli difference, write $a(\xi)=\gamma(T\xi)$ and use
+$\|S(F)\|\le2\|F\|_{\rm op}$ in four dimensions;
+$\|TF_0T^T-F_0\|\le b(a+1)\alpha r$ proves the $p_1r$ bound.
+The remaining polynomial is
+
+$$
+\|V\|\le V_0+V_1r+V_2r^2+V_4r^4,
+$$
+
+$$
+V_0=b_0^2+4ab_1,\quad V_1=p_1+4ab_{11},\quad
+V_2=2b_0b_2+4ab_{12},\quad V_4=b_2^2.
+$$
+
+### Gaussian moments and integrable first defect
+
+Let $c=1+u^2/3\ge bt\coth(bt)$ and $\ell=c+u$.
+The exact covariant derivatives are
+$D_iK_0=-(Q-iF)_{ij}z_jK_0/2$ and
+$D_iD_jK_0=[((Q-iF)z)_i((Q-iF)z)_j/4-(Q-iF)_{ji}/2]K_0$.
+Retaining the Clifford contraction of the complex gradient gives
+
+$$
+\|\text{principal defect}\|
+ \le G\left[(c^2+u^2)\frac{r^3}{4t^2}+2c\frac r t\right]\|K_0\|,
+$$
+
+$$
+\|L^kD_{0,k}K_0\|
+ \le a\ell(2\alpha+b_0+b_2r^2)\frac r t\|K_0\|.
+$$
+
+Four-dimensional free Gaussian moments are
+$M_1=3\sqrt{\pi t}/2$, $M_2=8t$,
+$M_3=15\sqrt\pi t^{3/2}$ and $M_4=96t^2$. Consequently,
+
+$$
+\sup_y\int \|\chi_y(P-P_{0,y})K_{0,y}\|\,dx
+ \le e^u(C_-t^{-1/2}+V_0+C_{1/2}t^{1/2}+8V_2t+96V_4t^2),
+$$
+
+$$
+C_-=\sqrt\pi\left[G\left(\frac{15}{4}(c^2+u^2)+3c\right)
+       +\frac32 a\ell(2\alpha+b_0)\right],
+\quad
+C_{1/2}=15\sqrt\pi a\ell b_2+\frac32\sqrt\pi V_1.
+$$
+
+Every term is integrable at zero. The interior time integral is bounded by
+
+$$
+e^u\left[2C_-\sqrt{s_0}+V_0s_0+
+ \frac23C_{1/2}s_0^{3/2}+4V_2s_0^2+32V_4s_0^3\right].
+$$
+
+### The local cutoff remains included
+
+Use $\chi_y=\mathrm{step}(2-2|x-y|/r_{\rm cut})$, equal to1 on the inner half-ball.
+From the existing smooth-step ceilings $S_1,S_2$,
+$G_\chi=2\sqrt H S_1/r_{\rm cut}$ and
+$H_\chi=4H(S_2+S_1)/r_{\rm cut}^2$ bound its whitened gradient and Hessian.
+The exact commutator is
+
+$$
+[P,\chi]K_0=-2\widetilde g^{ij}\chi_iD_{0,j}K_0+
+ (-\widetilde g^{ij}\chi_{ij}+L^i\chi_i)K_0.
+$$
+
+It is supported at $r\ge d=r_{\rm cut}/(2\sqrt H)$ and has the majorant
+
+$$
+[A_1r/t+A_0+A_2r^2]\|K_0\|,\quad
+A_1=a^2G_\chi\ell,\quad
+A_0=4a^2H_\chi+2aG_\chi(2\alpha+b_0),\quad
+A_2=2aG_\chi b_2.
+$$
+
+Gaussian splitting yields the tail factor $e^{-\beta/t}$ with
+$\beta=d^2/8$. The widened Gaussian adds $4\,2^{k/2}$ to moment $k$.
+The implemented simple bound is
+
+$$
+e^{u-\beta/s_0}\left[
+ 2A_1\,4\sqrt2\,\frac{3\sqrt\pi}{2}\sqrt{s_0}
+ +4A_0s_0+32A_2s_0^2\right].
+$$
+
+This uses $e^{-\beta/t}\le e^{-\beta/s_0}$ and integrates only integrable powers;
+it does not drop the cutoff or assume a small tail at the low-flux record.
+
+### Results and limits
+
+| Quantity | $q=1000$ | Atomic saved flux |
+| --- | ---: | ---: |
+| $s_0/D^2$ (display approximation) | $8.3258293\times10^{-7}$ | $1.7932483\times10^{-28}$ |
+| Total first-defect column time integral, upper ceiling | $6.309814\times10^{19}$ | $0.049885941789$ |
+| Cutoff contribution, logarithmic upper ceiling | $19.797733$ | $-15756.122605$ |
+
+For the atomic record, the interior contributions are approximately
+$0.00580925$ leading, $3.5152\times10^{-7}$ constant, $0.04400541$ varying-field,
+$1.15598\times10^{-5}$ quadratic and $5.93661\times10^{-5}$ quartic.
+The field-gradient contribution dominates. The small quantity is dimensionless
+and is **not a transit probability or a percentage confidence**.
+
+Native verification includes exact symbolic factorization with a varying frame
+and linearly varying field, a nonzero cutoff commutator, vanishing constant
+interior defect, covariant kernel derivatives, the frozen heat equation, and
+a nondiagonal constant-metric heat-equation/normalization check. Differential
+errors are below $6.5\times10^{-86}$ at90-digit working precision.
+Exact hashes and directed interval arithmetic protect the saved ceilings.
+
+The low-flux bound fails the less-than-one test and is retained. These are
+uniform **local column bounds** for a source-centred construction. No row bound,
+global chart assembly, convergent correction series, differentiated diagonal
+kernel estimate or physical-source error follows automatically.
+The full186 $B_4$ certificate remains unchanged.
+
+**Next:** prove the required global/row bounds and control the corrections and
+source insertion, or identify precisely why this local gain cannot be used.
+Do not import the old $O(t^2)$ remainder schedule. Support, stability,
+one-atom transmission and survival, and operational clock gain remain unproved.
+The static geometry excludes13September2027 to12September2027.
+
+![First defect at the atomic target](../figures/dihole_frozen_magnetic_progress.png)
+
+Independent numerical audit PASS:56 packed ceilings and4 metadata ceilings checked at550digits, no undershoot, all87 hashes and16 controls. The upward total endpoint covers the extremely small positive cutoff.
+Source SHA256 b462a120ad837756315506882418f79252046ccbc807f6e7d379d56685347d9f
+Results SHA256 6bf34332ff1bfb485ce81bda96452503606afefdca59b11301bda15097b764ee
+Actual-source proof audit PASS for the stated local column scope: whitening, Clifford/Pauli factors, exact radial-gauge domain and cutoff integration checked. Final layout PASS:183 imports,1650 Markdown links,8 historical source guards,14 frozen pilot hashes.

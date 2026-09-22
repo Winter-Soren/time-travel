@@ -1,3 +1,53 @@
+# Authoritative checkpoint187 - frozen magnetic first column defect
+
+Previous checkpoint186 published09f62d621679b41dc2d91b017ec7921aba0a4e75.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial1nm areal diameter; humans deferred.
+No supporting source, stable opening, atom transit or clock gain established.
+
+- scripts/dihole_frozen_magnetic.py:16 native controls PASS,87 exact inputs.
+  All previous source/result bytes and the186 B4 certificate remain unchanged.
+- Freeze g(y),F(y), retain the exact rank-two magnetic kernel and Pauli term.
+  Canonical original-coordinate normalization includes sqrt(det g(y)).
+  Whiten with z=E_y(x-y); factor P-P0 in D0 before taking norms.
+  Actual field gradients, geometry, spin and density remain in the defect.
+- Source-centred cutoff outer radius2^-32, inner half; inside saved radial gauge
+  and chart. eps=H*G1*r=0.00327203<1. a=(1-eps)^-1/2,
+  G=H^1.5*G1/(1-eps), alpha=2sqrt(MH)*Iop1. a_z=a_x E_y^T.
+- DF whitened cap=16|q|H^1.5*A2_original. DeltaA<=DF*r²/3 and
+  derivative<=2DF*r/3. bgeom retains768*I*I*E'+16*I*V'*Vi.
+  Clifford contractions retain cancellations for real/complex arguments.
+- Gaussian moment estimate yields integrable t^-1/2,t^0,t^1/2,t,t² terms.
+  Exact constant-background interior defect vanishes, but cutoff remains.
+  The varying-field symbolic control verifies F12=B+c*x, not constantF.
+- Atomic first-defect column time integral <=0.049885941789.
+  Leading~0.00580925; constant~3.5152e-7; field-gradient~0.04400541;
+  quadratic~1.15598e-5; quartic~5.93661e-5.
+  Cutoff log10 ceiling<=-15756.122605, retained in exact dyadic sum.
+- q1000 total<=6.309814e19, cutoff log<=19.797733. This failure is retained.
+  These are dimensionless conservative local COLUMN bounds, not probabilities.
+  NO global Schur/row bound, convergent correction, complete heat remainder
+  or physical source follows automatically. The old B4 is NOT replaced.
+- Native checks: exact factorization, actual variableF, constant interior zero,
+  cutoff commutator, frozen PDE/derivatives, non-diagonal constant metric PDE
+  and canonical normalization. Differential errors<6.5e-86 at90digits.
+- NEXT: use this useful first local estimate to establish the required
+  row/global assembly and correction bounds, retaining the actual physical
+  insertion and differentiated diagonal estimates. Do not import the old
+  O(t²) certificate/derivative schedule. Source consistency is still unresolved.
+- User was reassured: not back to square one, existing geometry/field work
+  applies to one atom. Smaller payload is not a proof of physical feasibility.
+  Static geometry excludes13Sep2027->12Sep2027; future clock gain unproved.
+
+Independent numerical audit PASS:56 packed ceilings and4 metadata ceilings checked at550digits, no undershoot, all87 hashes and16 controls. The upward total endpoint covers the extremely small positive cutoff.
+Source SHA256 b462a120ad837756315506882418f79252046ccbc807f6e7d379d56685347d9f
+Results SHA256 6bf34332ff1bfb485ce81bda96452503606afefdca59b11301bda15097b764ee
+Actual-source proof audit PASS for the stated local column scope: whitening, Clifford/Pauli factors, exact radial-gauge domain and cutoff integration checked. Final layout PASS:183 imports,1650 Markdown links,8 historical source guards,14 frozen pilot hashes.
+
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint186 and earlier history ---
+
 # Authoritative checkpoint186 - retain radial cancellation on the actual paths
 
 Previous checkpoint185 published 7cd07e6e59f001e2037b33a052ad92a30fb11f6a.
