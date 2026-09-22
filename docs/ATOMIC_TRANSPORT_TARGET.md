@@ -236,3 +236,10 @@ The practical target is unchanged: one neutral hydrogen atom through a trial 1 n
 The [source-completion calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#full-source-completion-and-a-global-lapse-weight-bound) now separates the omitted transverse, spatial and Gaussian field contributions exactly. A new global lapse-weight bound applies across the prescribed exterior, collars and central section, with 23 checks passing. Two full-field smoothing quantities remain unevaluated; the selected contribution is not being presented as the total energy.
 
 The next test remains whether this geometry can be supported at all. One hydrogen atom and the trial 1 nm diameter are unchanged. Stability, atomic transmission and survival, and an exterior-clock advantage have not been established.
+
+
+## Checkpoint175: full-field smoothing bounds are now explicit
+
+The [buffered full-field estimate](PHYSICAL_EUCLIDEAN_OPERATOR.md#full-field-smoothing-on-buffered-collars) evaluates the two missing smoothing norms and bounds the complete paired low-frequency contribution at a fixed regulator. Every angular state and exterior propagation remain included. The ceiling is very loose and does not determine the supporting stress or its sign. The full high-frequency contribution and physical regulator limit remain unresolved.
+
+One hydrogen atom and the trial 1 nm areal diameter remain the target. No supported opening, stability, atomic passage or future clock advantage is established; the current static geometry excludes backward travel.

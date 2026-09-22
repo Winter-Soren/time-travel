@@ -1,0 +1,1843 @@
+{
+  "passed": true,
+  "tests": {
+    "exact_inputs": true,
+    "buffered_geometry": true,
+    "warped_curvature": true,
+    "flat_curvature": true,
+    "pole_regularity": true,
+    "positive_scalar_comparison": true,
+    "partial_fraction_algebra": true,
+    "local_weighted_graph": true,
+    "cauchy_derivative": true,
+    "complex_square_identity": true,
+    "complex_square_perturbation": true,
+    "cauchy_weighted_HS": true,
+    "angular_heat_envelope": true,
+    "heat_integral": true,
+    "positive_finite_full_bounds": true,
+    "uniform_shift_bounds": true
+  },
+  "geometry": {
+    "domain_s_over_D": [
+      -0.02,
+      0.07
+    ],
+    "domain_length_over_D": 0.09,
+    "source_s_over_D": [
+      0.0,
+      0.05
+    ],
+    "jet_buffer_s_over_D": [
+      -0.005,
+      0.055
+    ],
+    "R_lower": 0.024999999999999994,
+    "R_upper": 0.07,
+    "R_lower_D": 0.024999999999999994,
+    "R_upper_D": 0.07,
+    "reference_sphere_radius_over_D": 0.025,
+    "radius_rate_abs_upper": 1.0,
+    "radius_second_upper_D": 160.0,
+    "radial_tiles": 24,
+    "angular_tiles": 32,
+    "boxes": 768,
+    "intervals": {
+      "N": [
+        0.10366967219086042,
+        0.2686600685628529
+      ],
+      "P": [
+        3.718224639806975,
+        9.635570203725962
+      ],
+      "W": [
+        14.980809718336632,
+        86.32781636936339
+      ],
+      "NP": [
+        0.9183448613826235,
+        1.0866049804356308
+      ],
+      "R_h": [
+        -191.58932348898966,
+        51.27620741231649
+      ],
+      "volume_ratio": [
+        382.1212071105773,
+        1034.951606917537
+      ],
+      "log_lapse_gradient_squared": [
+        4.9947182101284735,
+        19.41663812694027
+      ],
+      "radial_volume_connection": [
+        -13.556067317943516,
+        -0.2037729424931817
+      ],
+      "radial_spin_connection": [
+        -0.4779538345506671,
+        0.46671796479805056
+      ],
+      "radial_laplacian_drift": [
+        17.818093894316537,
+        45.34940156259116
+      ],
+      "n_R": [
+        9.685090428072046,
+        35.64045944655825
+      ],
+      "p_R": [
+        -36.19549408673022,
+        -9.138199785755875
+      ]
+    },
+    "N_lower": 0.1036696721908604,
+    "N_upper": 0.26866006856285296,
+    "P_lower": 3.7182246398069747,
+    "P_upper": 9.635570203725964,
+    "scalar_curvature_lower_D2": -191.58932348898966,
+    "scalar_curvature_negative_upper_D2": 191.58932348898966,
+    "magnetic_unit_flux_upper_D2": 12.010815582697589,
+    "magnetic_norm_per_abs_q_upper_D2": 12.010815582697589,
+    "log_lapse_gradient_squared_upper_D2": 19.41663812694027,
+    "polar_flux_Rx_upper_D": 0.34288263153388365,
+    "lichnerowicz_C0_upper_D2": 52.75149040398249,
+    "lichnerowicz_Cq_upper_D2": 12.010815582697589,
+    "canonical_radial_connection_upper_D": 14.034021152494184,
+    "radial_connection_upper_D": 14.034021152494184,
+    "radial_laplacian_drift_upper_D": 45.34940156259117,
+    "cutoff_first_upper_D": 1600.0,
+    "cutoff_second_upper_D2": 4800000.0,
+    "cutoff_gradient_upper_D": 430.31289257527516,
+    "cutoff_laplacian_upper_D2": 352440.5426878166,
+    "scalar_volume_ratio_lower": 382.12120711057725,
+    "scalar_volume_ratio_upper": 1034.9516069175372,
+    "scalar_laplacian_comparison_lower": 0.0005061374651171817,
+    "controls": {
+      "warped_product_relative_errors": [
+        1.8362531170400367e-16,
+        3.2555700290219226e-16,
+        3.71618780886873e-16,
+        5.195038674011108e-16
+      ],
+      "flat_spherical_scalar_error": 3.552713678800501e-15,
+      "balanced_polar_value_derivative_errors": [
+        3.3306690738754696e-16,
+        6.441893774235354e-17,
+        4.440892098500626e-16,
+        2.220446049250313e-16,
+        4.440892098500626e-16,
+        1.1102230246251565e-16
+      ],
+      "passed": true
+    },
+    "geometry_controls": {
+      "warped_product_relative_errors": [
+        1.8362531170400367e-16,
+        3.2555700290219226e-16,
+        3.71618780886873e-16,
+        5.195038674011108e-16
+      ],
+      "flat_spherical_scalar_error": 3.552713678800501e-15,
+      "balanced_polar_value_derivative_errors": [
+        3.3306690738754696e-16,
+        6.441893774235354e-17,
+        4.440892098500626e-16,
+        2.220446049250313e-16,
+        4.440892098500626e-16,
+        1.1102230246251565e-16
+      ],
+      "passed": true
+    },
+    "scope": [
+      "Full polar sphere and all angular states; no mu-band derivative estimate.",
+      "P_kappa >= covariant spatial Laplacian - C0 - abs(q)*Cq as a compact Dirichlet form.",
+      "Local Dirichlet comparison is not an upper bound for the global heat kernel.",
+      "No Hilbert-Schmidt smoothing norm, physical source, or continuum heat value is evaluated."
+    ]
+  },
+  "scalar_comparison": {
+    "reference_radius_over_D": 0.024999999999999994,
+    "interval_length_over_D": 0.09,
+    "density_lower": 382.1212071105772,
+    "density_upper": 1034.9516069175374,
+    "scalar_eigenvalue_factor_lower": 0.000506137465117181,
+    "collars": 2,
+    "spin_components": 4
+  },
+  "records": [
+    {
+      "q": 1000,
+      "regulator_M_D": 31.622776601683793,
+      "split_K_D": 4241.5305639164035,
+      "eta_ratio_interval": [
+        0,
+        0.0
+      ],
+      "Cq_upper_D2": 12063.567073101574,
+      "cutoff_gradient_upper_D": 430.3128925752752,
+      "cutoff_laplacian_upper_D2": 352440.5426878167,
+      "cauchy_radius_lower_D": 1.5565983759013362,
+      "complex_square_perturbation_upper_D2": 1390376.146670287,
+      "real": {
+        "Z_squared_upper": 3.839145249273142e+19,
+        "local_graph_upper": [
+          195.65584725957225,
+          8113.935197547255,
+          350579.1698171033,
+          15758675.55769831
+        ],
+        "localized_HS_upper": [
+          63448334.97785671,
+          2634418307.167775
+        ],
+        "dirichlet_resolvent_HS_squared_upper_D4": 0.05703837512431854,
+        "auxiliary_b_D2": 120635.67073101574,
+        "auxiliary_b_D2_interval": [
+          120635.67073101572,
+          120635.67073101575
+        ],
+        "auxiliary_a_squared_upper_D2": 132699.23780411732
+      },
+      "complex_disk": {
+        "Z_squared_upper": 1.3229908451334412e+21,
+        "local_graph_upper": [
+          557.7593997653428,
+          21806.93630358013,
+          891091.3974541057,
+          38054441.938994944
+        ],
+        "localized_HS_upper": [
+          367597259.5880615,
+          14380773686.837545
+        ],
+        "dirichlet_resolvent_HS_squared_upper_D4": 0.05703837512431854,
+        "auxiliary_b_D2": 120635.67073101574,
+        "auxiliary_b_D2_interval": [
+          120635.67073101572,
+          120635.67073101575
+        ],
+        "auxiliary_a_squared_upper_D2": 132699.23780411732
+      },
+      "full_Z_HS_squared_upper": 3.8391452492731425e+19,
+      "full_Z_derivative_HS_upper_over_D": 23366940165.853207,
+      "full_B_zero_trace_upper_D": 3.0007369094196636e+21,
+      "full_B_derivative_trace_upper": 4.806008681133595e+25,
+      "full_paired_low_integral_absolute_upper_D": 6.48869393030229e+28
+    },
+    {
+      "q": 1000,
+      "regulator_M_D": 31.622776601683793,
+      "split_K_D": 4241.5305639164035,
+      "eta_ratio_interval": [
+        0,
+        0.01
+      ],
+      "Cq_upper_D2": 12063.567073101574,
+      "cutoff_gradient_upper_D": 430.3128925752752,
+      "cutoff_laplacian_upper_D2": 352440.5426878167,
+      "cauchy_radius_lower_D": 1.5565983759013362,
+      "complex_square_perturbation_upper_D2": 1390376.146670287,
+      "real": {
+        "Z_squared_upper": 3.8852660975399666e+19,
+        "local_graph_upper": [
+          196.78763811611927,
+          8184.691823743135,
+          354498.87402326975,
+          15967291.571462044
+        ],
+        "localized_HS_upper": [
+          63820706.16552223,
+          2657585730.984257
+        ],
+        "dirichlet_resolvent_HS_squared_upper_D4": 0.05703837512431854,
+        "auxiliary_b_D2": 120635.67073101574,
+        "auxiliary_b_D2_interval": [
+          120635.67073101572,
+          120635.67073101575
+        ],
+        "auxiliary_a_squared_upper_D2": 132699.23780411732
+      },
+      "complex_disk": {
+        "Z_squared_upper": 1.3392008158722507e+21,
+        "local_graph_upper": [
+          561.0712227403428,
+          22008.658794585423,
+          901788.2967269293,
+          38596768.875247166
+        ],
+        "localized_HS_upper": [
+          369796090.80409634,
+          14514351177.235966
+        ],
+        "dirichlet_resolvent_HS_squared_upper_D4": 0.05703837512431854,
+        "auxiliary_b_D2": 120635.67073101574,
+        "auxiliary_b_D2_interval": [
+          120635.67073101572,
+          120635.67073101575
+        ],
+        "auxiliary_a_squared_upper_D2": 132699.23780411732
+      },
+      "full_Z_HS_squared_upper": 3.885266097539967e+19,
+      "full_Z_derivative_HS_upper_over_D": 23509656280.379025,
+      "full_B_zero_trace_upper_D": 3.036785697027845e+21,
+      "full_B_derivative_trace_upper": 4.8643195260348295e+25,
+      "full_paired_low_integral_absolute_upper_D": 6.567420634808775e+28
+    },
+    {
+      "q": 4642875905017627791065088,
+      "regulator_M_D": 2154733372140.8845,
+      "split_K_D": 464876469029.3226,
+      "eta_ratio_interval": [
+        0,
+        0.0
+      ],
+      "Cq_upper_D2": 5.576472626851691e+25,
+      "cutoff_gradient_upper_D": 430.3128925752752,
+      "cutoff_laplacian_upper_D2": 352440.5426878167,
+      "cauchy_radius_lower_D": 106064515138.00087,
+      "complex_square_perturbation_upper_D2": 1.1335487391769734e+25,
+      "real": {
+        "Z_squared_upper": 7.768681960564306e+66,
+        "local_graph_upper": [
+          14.156713532874022,
+          41559624695277.51,
+          1.2664269760460406e+26,
+          4.113155232690475e+38
+        ],
+        "localized_HS_upper": [
+          2.774343177503864e+21,
+          8.20889911580791e+33
+        ],
+        "dirichlet_resolvent_HS_squared_upper_D4": 2.6460619164137526e-12,
+        "auxiliary_b_D2": 5.576472626851691e+25,
+        "auxiliary_b_D2_interval": [
+          5.57647262685169e+25,
+          5.576472626851692e+25
+        ],
+        "auxiliary_a_squared_upper_D2": 1.1152945253703382e+26
+      },
+      "complex_disk": {
+        "Z_squared_upper": 3.01556894014533e+67,
+        "local_graph_upper": [
+          23.35187163488221,
+          66718153256966.96,
+          1.9852261329313817e+26,
+          6.251971733008208e+38
+        ],
+        "localized_HS_upper": [
+          4.990058716572586e+21,
+          1.4351345061863726e+34
+        ],
+        "dirichlet_resolvent_HS_squared_upper_D4": 2.6460619164137526e-12,
+        "auxiliary_b_D2": 5.576472626851691e+25,
+        "auxiliary_b_D2_interval": [
+          5.57647262685169e+25,
+          5.576472626851692e+25
+        ],
+        "auxiliary_a_squared_upper_D2": 1.1152945253703382e+26
+      },
+      "full_Z_HS_squared_upper": 7.768681960564308e+66,
+      "full_Z_derivative_HS_upper_over_D": 5.177433384840746e+22,
+      "full_B_zero_trace_upper_D": 6.072125221368377e+68,
+      "full_B_derivative_trace_upper": 5.551313712329298e+69,
+      "full_paired_low_integral_absolute_upper_D": 8.214544027895555e+80
+    },
+    {
+      "q": 4642875905017627791065088,
+      "regulator_M_D": 2154733372140.8845,
+      "split_K_D": 464876469029.3226,
+      "eta_ratio_interval": [
+        0,
+        0.01
+      ],
+      "Cq_upper_D2": 5.576472626851691e+25,
+      "cutoff_gradient_upper_D": 430.3128925752752,
+      "cutoff_laplacian_upper_D2": 352440.5426878167,
+      "cauchy_radius_lower_D": 106064515138.00087,
+      "complex_square_perturbation_upper_D2": 1.1335487391769734e+25,
+      "real": {
+        "Z_squared_upper": 7.874820607170016e+66,
+        "local_graph_upper": [
+          14.237130525457655,
+          41908449800160.52,
+          1.2799769277794879e+26,
+          4.163814775899719e+38
+        ],
+        "localized_HS_upper": [
+          2.7911367091674195e+21,
+          8.280424255028574e+33
+        ],
+        "dirichlet_resolvent_HS_squared_upper_D4": 2.6460619164137526e-12,
+        "auxiliary_b_D2": 5.576472626851691e+25,
+        "auxiliary_b_D2_interval": [
+          5.57647262685169e+25,
+          5.576472626851692e+25
+        ],
+        "auxiliary_a_squared_upper_D2": 1.1152945253703382e+26
+      },
+      "complex_disk": {
+        "Z_squared_upper": 3.056768267001882e+67,
+        "local_graph_upper": [
+          23.486259835745592,
+          67293570795354.86,
+          2.0071263366734205e+26,
+          6.332128337960415e+38
+        ],
+        "localized_HS_upper": [
+          5.020480116601568e+21,
+          1.4479387415507468e+34
+        ],
+        "dirichlet_resolvent_HS_squared_upper_D4": 2.6460619164137526e-12,
+        "auxiliary_b_D2": 5.576472626851691e+25,
+        "auxiliary_b_D2_interval": [
+          5.57647262685169e+25,
+          5.576472626851692e+25
+        ],
+        "auxiliary_a_squared_upper_D2": 1.1152945253703382e+26
+      },
+      "full_Z_HS_squared_upper": 7.874820607170018e+66,
+      "full_Z_derivative_HS_upper_over_D": 5.212680986369215e+22,
+      "full_B_zero_trace_upper_D": 6.155084873506025e+68,
+      "full_B_derivative_trace_upper": 5.6271574011772714e+69,
+      "full_paired_low_integral_absolute_upper_D": 8.326773556537753e+80
+    }
+  ],
+  "algebra_controls": [
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 2.253438297426563e-15,
+      "weighted_graph_ratio": 0.002532261611704036
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 3.605756859201613e-15,
+      "weighted_graph_ratio": 0.0016425985150601767
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 4.709523527570741e-15,
+      "weighted_graph_ratio": 0.002779049535462598
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 1.9662041153204585e-15,
+      "weighted_graph_ratio": 0.004498425069195875
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 3.60437674147743e-15,
+      "weighted_graph_ratio": 0.002625664579855382
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 5.442072663527326e-15,
+      "weighted_graph_ratio": 0.0017824752428126929
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 7.426130129981243e-15,
+      "weighted_graph_ratio": 0.0030317099479610678
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 5.696431932047295e-15,
+      "weighted_graph_ratio": 0.004888113921237127
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 1.3385032458693925e-15,
+      "weighted_graph_ratio": 0.002655440486579889
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 2.8262471535886508e-15,
+      "weighted_graph_ratio": 0.0018391663290746585
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 3.229679065665434e-15,
+      "weighted_graph_ratio": 0.0031312532660230583
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 1.7382279505882433e-15,
+      "weighted_graph_ratio": 0.0050484192411805314
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 1.5122085903370742e-15,
+      "weighted_graph_ratio": 0.009306301548375463
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 6.216210102635696e-15,
+      "weighted_graph_ratio": 0.004603980631198254
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 1.1194413930339432e-14,
+      "weighted_graph_ratio": 0.002818273494645031
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 2.0344370579917366e-14,
+      "weighted_graph_ratio": 0.0019483767842808032
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 2.2252341500389324e-15,
+      "weighted_graph_ratio": 0.011809281648679863
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 9.497674262059671e-15,
+      "weighted_graph_ratio": 0.005874235211145314
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 8.77564049526925e-15,
+      "weighted_graph_ratio": 0.0037292543131623003
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 1.8649111872790616e-14,
+      "weighted_graph_ratio": 0.002516866867409123
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 2.320790648614719e-15,
+      "weighted_graph_ratio": 0.013704942642091088
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 7.803362635115093e-15,
+      "weighted_graph_ratio": 0.006792969761057966
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 6.870485794704293e-15,
+      "weighted_graph_ratio": 0.004092038072758414
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 2.198963499752422e-14,
+      "weighted_graph_ratio": 0.0027269700301376866
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 2.537390603432449e-15,
+      "weighted_graph_ratio": 0.003683188470708937
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 4.069409765240545e-15,
+      "weighted_graph_ratio": 0.0021691371091145
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 5.4814261675287294e-15,
+      "weighted_graph_ratio": 0.002720715110273277
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 3.1242808597234555e-15,
+      "weighted_graph_ratio": 0.004051508571827573
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 2.9342914628315294e-15,
+      "weighted_graph_ratio": 0.0037701579795682617
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 4.164419729900834e-15,
+      "weighted_graph_ratio": 0.00226080007173201
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 4.986586938695277e-15,
+      "weighted_graph_ratio": 0.0028608753249566993
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 5.018985364296791e-15,
+      "weighted_graph_ratio": 0.004315090697699762
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 2.581209069102727e-15,
+      "weighted_graph_ratio": 0.0034860534190132393
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 3.0415428907442394e-15,
+      "weighted_graph_ratio": 0.002187665979173196
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 4.321048580635807e-15,
+      "weighted_graph_ratio": 0.0029892901667825373
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 3.2254303814422325e-15,
+      "weighted_graph_ratio": 0.004635350264446745
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 2.212013217763923e-15,
+      "weighted_graph_ratio": 0.010642998767358686
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 9.367212555090638e-15,
+      "weighted_graph_ratio": 0.00413172703385626
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 9.138351153687519e-15,
+      "weighted_graph_ratio": 0.00262563562538219
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 1.138131334395809e-14,
+      "weighted_graph_ratio": 0.0027911457203870266
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 2.1482802201716027e-15,
+      "weighted_graph_ratio": 0.011563603722214738
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 6.725933446522131e-15,
+      "weighted_graph_ratio": 0.004472256754791202
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 7.454289908107059e-15,
+      "weighted_graph_ratio": 0.0034829937363004076
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 1.1064715417908158e-14,
+      "weighted_graph_ratio": 0.0035108975844871508
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 3.55722615894525e-15,
+      "weighted_graph_ratio": 0.013213991185440475
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 8.887238373074697e-15,
+      "weighted_graph_ratio": 0.00616994556218285
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 1.49884123792271e-14,
+      "weighted_graph_ratio": 0.004207165565348513
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 2.4522757824893416e-14,
+      "weighted_graph_ratio": 0.003100185175612072
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 1.9787037094670453e-15,
+      "weighted_graph_ratio": 0.0027646757092572543
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 3.557312077005926e-15,
+      "weighted_graph_ratio": 0.00202636696567972
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 6.269753661009854e-15,
+      "weighted_graph_ratio": 0.002922463948025781
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 7.844073054388712e-15,
+      "weighted_graph_ratio": 0.003934770197988266
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 4.439918185876485e-15,
+      "weighted_graph_ratio": 0.0027941317853287955
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 6.756806129366858e-15,
+      "weighted_graph_ratio": 0.002076014926745525
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 9.825180854070026e-15,
+      "weighted_graph_ratio": 0.002977751776510371
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 1.6571900028845697e-14,
+      "weighted_graph_ratio": 0.0039800008268850735
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 2.071417009117785e-15,
+      "weighted_graph_ratio": 0.002924482830621339
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 3.5335157920217955e-15,
+      "weighted_graph_ratio": 0.0021372041007562577
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 4.697178598534669e-15,
+      "weighted_graph_ratio": 0.0029935591263360903
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 1.614751103546905e-14,
+      "weighted_graph_ratio": 0.003908974127065206
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 2.5867220433178886e-15,
+      "weighted_graph_ratio": 0.009893632848328917
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 1.0271518198578998e-14,
+      "weighted_graph_ratio": 0.004661710502613598
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 1.3599426621884984e-14,
+      "weighted_graph_ratio": 0.0023327787937770608
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 4.978126176571163e-15,
+      "weighted_graph_ratio": 0.003889240249891133
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 4.3542091009341395e-15,
+      "weighted_graph_ratio": 0.010390140094776335
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 1.1372199836833823e-14,
+      "weighted_graph_ratio": 0.0048565787131134575
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 1.7705965539690822e-14,
+      "weighted_graph_ratio": 0.002391508186401302
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 7.057280467165407e-15,
+      "weighted_graph_ratio": 0.004042183742594204
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 2.3914217843704805e-15,
+      "weighted_graph_ratio": 0.010975335291656469
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 5.943405507443218e-15,
+      "weighted_graph_ratio": 0.0047886093878313695
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 1.5028394502845073e-14,
+      "weighted_graph_ratio": 0.002187882541896147
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 5.744520864926366e-15,
+      "weighted_graph_ratio": 0.004120841670347714
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 2.652220341211617e-15,
+      "weighted_graph_ratio": 0.0025114899198625533
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 5.385858768525459e-15,
+      "weighted_graph_ratio": 0.0016235886026820159
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 4.556194355754502e-15,
+      "weighted_graph_ratio": 0.0026837729081994025
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 5.340357872985709e-15,
+      "weighted_graph_ratio": 0.004342668318724973
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 1.0799464002608e-15,
+      "weighted_graph_ratio": 0.002537056836534859
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 2.844174707476269e-15,
+      "weighted_graph_ratio": 0.0017611473086007507
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 3.904675169805447e-15,
+      "weighted_graph_ratio": 0.0029377156895284582
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 2.6768450153210003e-15,
+      "weighted_graph_ratio": 0.004728895832364321
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 3.063989478779857e-15,
+      "weighted_graph_ratio": 0.002536997200582193
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 4.984567346212956e-15,
+      "weighted_graph_ratio": 0.0018145706231981707
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 5.43725952777936e-15,
+      "weighted_graph_ratio": 0.003036548680777557
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 4.496305328031852e-15,
+      "weighted_graph_ratio": 0.004888201744073191
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 2.0739449455785062e-15,
+      "weighted_graph_ratio": 0.009278758793294253
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 2.565461624449565e-15,
+      "weighted_graph_ratio": 0.004502914166320632
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 1.0768287666171608e-14,
+      "weighted_graph_ratio": 0.002745948585746779
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 2.195288103370245e-14,
+      "weighted_graph_ratio": 0.0018828656227961459
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 2.170206680311962e-15,
+      "weighted_graph_ratio": 0.011656932184773821
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 6.967589615476939e-15,
+      "weighted_graph_ratio": 0.005778409815943099
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 1.0890868592118779e-14,
+      "weighted_graph_ratio": 0.003643935533821449
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 1.8219626273744956e-14,
+      "weighted_graph_ratio": 0.0024475517285843696
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 1.946232023995474e-15,
+      "weighted_graph_ratio": 0.013470666987880953
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 7.640803573865807e-15,
+      "weighted_graph_ratio": 0.006686211160457795
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 9.366110797829796e-15,
+      "weighted_graph_ratio": 0.0040086059355430755
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 1.753712662721986e-14,
+      "weighted_graph_ratio": 0.0026591982176250024
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 2.7965611632409285e-15,
+      "weighted_graph_ratio": 0.003923747297086844
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 4.510399994662657e-15,
+      "weighted_graph_ratio": 0.0022713980077001305
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 5.662374629241453e-15,
+      "weighted_graph_ratio": 0.0026734995197899886
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 3.616706213317156e-15,
+      "weighted_graph_ratio": 0.0038942041601977727
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 3.3567411780558815e-15,
+      "weighted_graph_ratio": 0.00395516955235531
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 4.607620087565801e-15,
+      "weighted_graph_ratio": 0.0023669827487041084
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 4.883163386801374e-15,
+      "weighted_graph_ratio": 0.0028221642042617337
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 5.269092443598003e-15,
+      "weighted_graph_ratio": 0.004150785465777879
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 1.517242964783415e-15,
+      "weighted_graph_ratio": 0.0035600570583242683
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 2.4467595024566016e-15,
+      "weighted_graph_ratio": 0.002254946112981463
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 3.0275161582252016e-15,
+      "weighted_graph_ratio": 0.002938083183059799
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 3.91329907270721e-15,
+      "weighted_graph_ratio": 0.004469223827157337
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 1.803780492089248e-15,
+      "weighted_graph_ratio": 0.010695274001459943
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 4.4467317986509146e-15,
+      "weighted_graph_ratio": 0.0040950956049891196
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 8.109377107193738e-15,
+      "weighted_graph_ratio": 0.002553847106515412
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 1.1076382598820115e-14,
+      "weighted_graph_ratio": 0.002719929981288378
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 2.4882511731578926e-15,
+      "weighted_graph_ratio": 0.0115592093317034
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 7.953635854482157e-15,
+      "weighted_graph_ratio": 0.004442134835511835
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 1.0496726349348657e-14,
+      "weighted_graph_ratio": 0.003389430441313739
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 1.1596698010517157e-14,
+      "weighted_graph_ratio": 0.003427588381521346
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 1.2075661494932509e-15,
+      "weighted_graph_ratio": 0.01304220766598795
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 3.681804027140995e-15,
+      "weighted_graph_ratio": 0.006085836205588192
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 4.567534693817988e-15,
+      "weighted_graph_ratio": 0.004109289898583489
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 1.672850343108306e-14,
+      "weighted_graph_ratio": 0.003025361976843806
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 1.851354356760754e-15,
+      "weighted_graph_ratio": 0.003471199271537475
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 4.887023626505592e-15,
+      "weighted_graph_ratio": 0.0021361945984046107
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 5.07092980889505e-15,
+      "weighted_graph_ratio": 0.002890593239183023
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 6.792060186613432e-15,
+      "weighted_graph_ratio": 0.0038419515802855567
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 3.0221834289687745e-15,
+      "weighted_graph_ratio": 0.0035217050684327204
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 3.275867431287875e-15,
+      "weighted_graph_ratio": 0.002192045005593442
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 4.1391502307334215e-15,
+      "weighted_graph_ratio": 0.002950959696621904
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 1.41865395973944e-14,
+      "weighted_graph_ratio": 0.0038906705296304226
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 1.737256802192708e-15,
+      "weighted_graph_ratio": 0.0036678510749035735
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 3.8149089198428854e-15,
+      "weighted_graph_ratio": 0.002270863218160438
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 4.264657631481051e-15,
+      "weighted_graph_ratio": 0.002971297889707258
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 0.7,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 7.659502112084105e-15,
+      "weighted_graph_ratio": 0.003819992504747198
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 0,
+      "partial_fraction_error": 1.7380459644719675e-15,
+      "weighted_graph_ratio": 0.010056828527188904
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 1,
+      "partial_fraction_error": 4.034545516131279e-15,
+      "weighted_graph_ratio": 0.004682413805038689
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 2,
+      "partial_fraction_error": 1.2137723527964299e-14,
+      "weighted_graph_ratio": 0.0022903369097812274
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.0,
+      "power": 3,
+      "partial_fraction_error": 5.002562247311983e-15,
+      "weighted_graph_ratio": 0.003803004516230642
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 0,
+      "partial_fraction_error": 2.996912068549114e-15,
+      "weighted_graph_ratio": 0.010583536669928397
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 1,
+      "partial_fraction_error": 9.115684483521553e-15,
+      "weighted_graph_ratio": 0.004892157704106799
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 2,
+      "partial_fraction_error": 1.465307675106177e-14,
+      "weighted_graph_ratio": 0.0023513244090940613
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 0.7,
+      "power": 3,
+      "partial_fraction_error": 6.592981032415685e-15,
+      "weighted_graph_ratio": 0.003952804577394615
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 0,
+      "partial_fraction_error": 1.6813655128152219e-15,
+      "weighted_graph_ratio": 0.011175704512301439
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 1,
+      "partial_fraction_error": 1.2165923770762346e-14,
+      "weighted_graph_ratio": 0.004831788674399347
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 2,
+      "partial_fraction_error": 1.3888435525433414e-14,
+      "weighted_graph_ratio": 0.0021492248491127904
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 2.0,
+      "M": 2.0,
+      "angle": 2.1,
+      "power": 3,
+      "partial_fraction_error": 6.460804274565687e-15,
+      "weighted_graph_ratio": 0.004029841186169602
+    }
+  ],
+  "cauchy_controls": [
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.0,
+      "derivative_cauchy_relative_error": 8.912365243854072e-16,
+      "complex_square_error": 4.353925516574572e-16,
+      "complex_square_bound_ratio": 0.2173933346424519,
+      "cauchy_weighted_HS_ratio": 0.00036125977248429415
+    },
+    {
+      "largest_lapse": 10.0,
+      "kappa": 0.3,
+      "derivative_cauchy_relative_error": 7.900631031082659e-16,
+      "complex_square_error": 1.898871943730899e-15,
+      "complex_square_bound_ratio": 0.3725045042631215,
+      "cauchy_weighted_HS_ratio": 0.000286812070584933
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.0,
+      "derivative_cauchy_relative_error": 1.4724521936498972e-15,
+      "complex_square_error": 4.3535684623161423e-16,
+      "complex_square_bound_ratio": 0.2057793505141912,
+      "cauchy_weighted_HS_ratio": 0.00036660099097430584
+    },
+    {
+      "largest_lapse": 1000.0,
+      "kappa": 0.3,
+      "derivative_cauchy_relative_error": 2.213230220012431e-15,
+      "complex_square_error": 1.8988386184265248e-15,
+      "complex_square_bound_ratio": 0.3581316277526383,
+      "cauchy_weighted_HS_ratio": 0.0003074183760032243
+    }
+  ],
+  "heat_controls": {
+    "angular": [
+      {
+        "t": "0.01",
+        "angular_sum": 100.33400127302747,
+        "angular_ceiling": 118.72453850905517,
+        "enclosed": true
+      },
+      {
+        "t": "0.1",
+        "angular_sum": 10.340130280194153,
+        "angular_ceiling": 16.604991216397927,
+        "enclosed": true
+      },
+      {
+        "t": "1",
+        "angular_sum": 1.4184426386310551,
+        "angular_ceiling": 3.772453850905516,
+        "enclosed": true
+      },
+      {
+        "t": "10",
+        "angular_sum": 1.0000000061834609,
+        "angular_ceiling": 1.6604991216397929,
+        "enclosed": true
+      }
+    ],
+    "heat_integral_relative_errors": [
+      3.146162946687414e-66,
+      0.0
+    ]
+  },
+  "source_sha256": "dfeb4d1a39713b0da30f1b643cfcf0746b14914b2707857680dd3e304d8698fa",
+  "input_sha256": {
+    "balanced_dihole_results.json": "f098a506c468281eb2326735d16a8d9c1816ed499c58090811282693444a7fc4",
+    "balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\balanced_dihole.py": "4992f0a87eb5ad574d9a684899712002a148a1cd9986f9a3308c974085eb31da",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "C:\\Users\\Soham Bhoir\\Desktop\\code\\CODE\\projects\\time-travel\\scripts\\project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_local_source_results.json": "cc219789568fda40584506837197cb7aae5a564d60b71356e365d026faab69a6",
+    "dihole_local_source.py": "6d6a44e3199fc8a1c27d0b0535c287546285c75b5146bba9eed0382382c90174",
+    "project_paths.py": "f41667db7b0e799b02f38b0282dda2d118f429908ce4405ff16f0cf8e2ad0f3c",
+    "dihole_flux_scale.py": "ae1fc88aa5be9516f450eee0f591db5d1b6c59d8f94537f0d209ad321aafb05a",
+    "dihole_cylinder_transfer.py": "2866c543b30c20d4f3a9b01cbb2b2d09613c3829b15603ca82e94da8dbbccf7a",
+    "spherical_weyl_leads.py": "7e5f642051922e36db92bc0be675b213cd6bcb2345b2babd9d93fff85056cb4c",
+    "curved_throat_modes.py": "7ead7b32579d95554e0e92ed10f1bace4f1d963664f932d371257e0217708022",
+    "dihole_slice_channel.py": "6cd38f39bd8227a4bbd66068f4ef358bd771615f63741ac63e51e2e50c5200f0",
+    "dihole_slice_channel_results.json": "57032695048f98d14b096929b9907ea1dfcc6e91ae10f9680453ab76beb43c6b",
+    "dihole_uv_bound.py": "19802f8cc95d67e9bd127254ec98d2fcfb8ce863f1acdc17312f14cb5f4dffd0",
+    "dihole_uv_bound_results.json": "bf36064e5b95401faf1abc2cf0eb5d39a9946bdd822ed7e5765c797d86cfba6c",
+    "dihole_stretched_collar.py": "c4cd038207db8823e399185f7a308584b9b9ed2cf12a852afe587e20035ef639",
+    "dihole_bridge_scattering.py": "f28b9a1ac59f6997acd2faec0e2abc2e1db3bbe36f48e8080d6659bdf8e77114",
+    "dihole_pv_counterterms_results.json": "c62c5a7853592e7cd91ac990fd857fee6b0e1c269d1a6bd2aa168c64401e1e8e",
+    "dihole_pv_counterterms.py": "97142e656687d97df7d5a6248f3f917a1005b3ded611507d34ad867fb008b3d0",
+    "dihole_heat_cutoff.py": "f55d064e0f4b0b6ad0f9d2cd0327bb83d8f9e0d0a7799c75714152169cf16fe8",
+    "atomic_aperture_budget.py": "1b38240e8051fdbd6bf264093627a01ad3933f021ef3d50aa240bc2e714ca7ab",
+    "atomic_aperture_budget_results.json": "c1ea3dca1ef9e1a0f896434f7f0d56f426347d4521f658d2080d1ccda53c6f33",
+    "dihole_strong_field_geometry.py": "3f83f54b73bad056621078e92ec23490d12170a84dbf70b66c247337d42c9544",
+    "dihole_strong_field_geometry_results.json": "cc4e896b8e8972b998c07f53790295535324c3ca72f2abbc617817318f18da04",
+    "dihole_aligned_channel.py": "adfb256e519bccb15f6fdab349aa599e54d88be15eb1785c4df5ff9a19b3aaf7",
+    "dihole_aligned_channel_results.json": "fca66a92cfda1f1bceed5028778652b0ab1d668e04ca91504c531260849a4fe7",
+    "dihole_channel_bounds_results.json": "612d28b4f9203fe57f2532ad830806e9a9975d85a91b78900b56385932b23664",
+    "dihole_channel_bounds.py": "435334843754c38b941001667b74f3f1490eabef7488b02d2e41dd0b82decaf5",
+    "dihole_projected_gap_results.json": "875b11475e6d8ad5843db4fb31faf6c5676cff7fd933283a1cb7994752b88a46",
+    "dihole_projected_gap.py": "da7359973a1c14573b53e08cbac1e31ff0d8f8552e2b06cf458c5c901d0f0948",
+    "dihole_collar_resolvent_results.json": "df3be3ccb1b184aa4e02ddcadad33ebe28edfa5bf876f3e91e555315b6569d17",
+    "dihole_collar_resolvent.py": "79eb363f62bf3a279db58ec62b4de722c3ee02e27ee8bcd2cab218eacba63531",
+    "dihole_metric_resolvent_results.json": "f15f1402458e8ee43b222d3ea40b665f2bc33315230436eda7887be941e9ce97",
+    "dihole_metric_resolvent.py": "b97ea7110ce7a0db5f815ce806ae70ba9026b42f99d36f449b644269098644cc",
+    "dihole_paired_frequency_units_trial.json": "c5d9a8152c7931598e4f32baceb625a44f675e62ab995d1c781e778580e58e4d",
+    "provenance/dihole_paired_frequency_units_trial.py": "c81e58f0621ff73caa1ad617be46d9795d297f18299d6c6130f63165c7a5ca19",
+    "dihole_paired_frequency_results.json": "e2de59a035d0874484a857164a1ff93a0d0e6155a8307a7493f3d7c2e21ce429",
+    "dihole_paired_frequency.py": "c118af9191e5f371de9320d134a454d02f6180444ca5be57ecd07caca2520044",
+    "dihole_massive_channel_results.json": "f61f079f61a3db75c1549d1250128839985fba5b03b44141d4d591460412595b",
+    "dihole_massive_channel.py": "b614c9a37d8a84c845f8138df226afece042faebe5b27bf9f7d09beef7f81789",
+    "dihole_proper_channel_results.json": "9d4b9e91dddc7b37e8f075e47a0e75b1b400d7102fa03385ab061c06efbfe967",
+    "dihole_proper_channel.py": "75c9e49ef29fd379d24e8246e357052334b21870000abf8972dd7ebf141120c5",
+    "dihole_local_zero_shift_results.json": "c6abf68b4d44f18d6f0b97016a0275a8a195aab2d306bcd6de77f7bdd17177a3",
+    "dihole_local_zero_shift.py": "f95cde7f9510dc82cfe9e5f1a44e937c45662ad3d385c1ddd15afb41c911abf2",
+    "dirac_green_mass_limit.py": "1ff4edbbf5b574553ca8fb94f852781a8bfd29838d8c2574cb69ba62c8e0630a",
+    "dihole_paired_low_frequency_results.json": "73641db16789394adc109dfb5b5088e375f1c68bb608e24e5e72396f2fd47e7a",
+    "dihole_paired_low_frequency.py": "cbe6669ec7851bcc251e47017af13ca3febd6dcdc75a4f9313af0f6d01d93f93",
+    "dihole_source_completion_derivative_trial.json": "b80e0e9efc27176d10d0b79a015e24165691e610b1b0c746160827fa80460e6e",
+    "provenance/dihole_source_completion_derivative_trial.py": "d231eee2ac075378b4e3fe84f2954e62419cb2fcbab6faa386371c43fbe94bef",
+    "dihole_source_completion_results.json": "dcd24ab0a676289da962656e02296532e2fbc0535d8e7ef9b82643c4a825db27",
+    "dihole_source_completion.py": "deb95497874e34e9f7f02a52465422b421c7ace669710db91b10a9855848d23c",
+    "dihole_buffer_geometry.py": "effb53114c95e45362ec9af9a5213eaa31847c8d119b8b404cd8a7b91bcadb24"
+  },
+  "full_high_frequency_integral": null,
+  "renormalized_physical_source": null,
+  "source_sign": null,
+  "atom_transit": null,
+  "references": [
+    "https://arxiv.org/pdf/hep-th/0306138",
+    "https://arxiv.org/pdf/1105.0532",
+    "https://arxiv.org/pdf/1608.06798"
+  ],
+  "scope": [
+    "All angular states, both collars and exterior propagation retained in the weighted source estimate.",
+    "Auxiliary Dirichlet inverse factors localized fields; it is not a substitute physical exterior.",
+    "Finite positive-mass product and bounded paired frequency interval only. Common physical regulator removal is unresolved.",
+    "No supporting stress sign, stability, atomic transmission, clock gain or new physical law is established."
+  ]
+}

@@ -1,3 +1,69 @@
+# Authoritative checkpoint175 - full-field buffered smoothing evaluated
+
+Previous checkpoint174 published 954f5cf8b865cf123399e89c51bef1db0082063e.
+Previous goal turn PROGRESS:174 published with independent audits.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- scripts/dihole_buffer_smoothing.py: 18 checks PASS, 57 exact inputs.
+  scripts/dihole_buffer_geometry.py:768 interval boxes across the entire sphere.
+  No old physical solves or finite selected-source simulations were rerun.
+- NEW actual full-field weighted HS norms Z=Ljet K sqrtN and Z' are bounded.
+  Both collars, every angular state and global exterior propagation retained.
+  Local Dirichlet inverse factors compact outputs; no physical wall is imposed.
+- Auxiliary domains per collar s/D=(-.020,.070), length .09D; central length
+  .1D makes the two buffers disjoint. Nested chi/zeta/theta support endpoints
+  (-.005,.055),(-.010,.060),(-.015,.065); all ramps .005D.
+- All-real-frequency Lichnerowicz floor on buffer:
+  P_kappa >= covariant Laplacian - Cq,
+  Cq D² <=52.75149040398249+12.010815582697589*abs(q).
+  Magnetic q is counted once; polar cancellations are exact.
+- Whole-sphere scalar comparison c>=.0005061374651171810 relative to
+  ds²+(D/40)²dOmega². Both-collar rank4 Dirichlet squared-resolvent trace:
+  S<=2[L/(sqrt(c)b^1.5)+2L*r0/(c*b)+2L*r0²/(c^1.5*sqrt(b))], b=a²-Cq>0.
+  This uses an infinite sphere/interval spectral bound, not matrix dimension.
+- For r=0..3, local ||1_Omega A_z^r K_z sqrtN|| is bounded explicitly by
+  partial fractions and174's global lapse commutator. r3 includes alpha.
+  Complex disk d=M/(2nu), nu=10.157654373554406, stays in the resolvent set.
+- Localize A_z^r K_z sqrtN with zeta and real P_kappa; r0,1 need only graph
+  powers through3 plus scalar cutoff gradient/Laplacian bounds.
+  Complex square differs by Vd<=d*CN+(2Ksplit*d+d²)nu²; CN<=2Cw*nu^1.5.
+  It is NOT asserted positive. Cauchy supplies Z'<=Zdisk/d.
+- Canonical derivative pays both half-density and radial spin connection:
+  Crad<=14.034021152494184/D. Cutoff gradient<=430.3128925752752/D;
+  Laplacian<=352440.5426878167/D².
+- Atomic q=4642875905017627791065088, fixed MD=2154733372140.8845,
+  Ksplit D=464876469029.3226. At eta=0:
+  full ||Z||HS²<=7.768681960564308e66;
+  full ||Z'||HS<=5.177433384840746e22 D;
+  complete paired LOW-frequency absolute source bound<=8.214544027895555e80/D.
+  Uniform eta/M² in[0,.01]: low bound<=8.326773556537753e80/D.
+  The ceiling is very loose, NOT a source value or a renormalized support margin.
+- Preserved reporting diagnostic: earlier geometry intervals omitted R' in
+  three fields, incorrectly excluding the constant-radius zero value. Their
+  used upper/absolute bounds were valid and are unchanged after correction.
+  Both original sources and result retained as *_prerate*; new regression
+  check requires zero in all three actual sewn intervals.
+- NEXT: bound the FULL high-frequency contribution with the same common
+  regulator. Retain frequency-dependent positive local potential and source
+  cancellation; the present coarse estimate is NOT integrable to infinity.
+  Never reuse173's selected high tail as the full tail. Then physical regulator/
+  counterterm matching and total support/current, stability and atom transport.
+  Static geometry excludes13Sep2027->12Sep2027; no future clock gain established.
+
+Source SHA256 0862683252bf01a8d3dce372a44087bad4501eafa1e032e5e9c63969f23e46a8
+Geometry SHA256 b15dfafe789e07e106575258b33591e9241d4978f64889d01f44fe5ff4d45d56
+Results SHA256 51fb304256cbd139b2acc1b59a280473082b729f4540700107ddb3c1ffc8cbdb
+
+Verification:18 checks pass, 57 exact inputs, corrected figure inspected.
+Independent mathematical audit passes. Independent 115-digit recomposition
+verifies 176 scalar enclosures and 57 exact input hashes; all four records pass.
+Layout passes 171 imports, 1522 links, 8 source guards and 14 frozen hashes.
+No simulation is running. Publication follows these completed checks.
+
+--- Preserved checkpoint174 and earlier history ---
+
 # Authoritative checkpoint174 - full-source completion and global lapse weight
 
 Previous checkpoint173 published 583fb1668ffe80582dd17ebf3439279a983d027d.

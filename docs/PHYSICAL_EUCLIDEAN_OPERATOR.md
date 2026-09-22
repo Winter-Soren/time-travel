@@ -5758,3 +5758,268 @@ difference remain unresolved. No one-atom opening or new physical law has
 been established.
 
 ![Selected and omitted covariance in a finite source-completion control](../figures/dihole_source_completion_progress.png)
+
+
+## Full-field smoothing on buffered collars
+
+Checkpoint175 evaluates the two quantities left open in174:
+$\|Z_\kappa\|_{\rm HS}$ and $\|\partial_\kappa Z_\kappa\|_{\rm HS}$,
+where $Z=L_{\rm jet}\mathcal K\sqrt N$. The
+[calculation](../scripts/dihole_buffer_smoothing.py) uses the complete spatial
+operator, both collars and every angular state. Its
+[geometry helper](../scripts/dihole_buffer_geometry.py) supplies explicit
+compact constants. The [saved bounds](../results/dihole_buffer_smoothing_results.json)
+are conservative finite-regulator estimates, not a renormalized stress value.
+
+### Local geometry with no angular selection
+
+Use two disjoint collar buffers $\Omega=(-.020,.070)D\times S^2$.
+The sewn radius is $R=D/40$ for $s\le0$, follows the existing smooth
+profile on $[0,.05]D$, and is $R=s$ for $s\ge.05D$. Thus
+$R/D\in[.025,.070]$, $0\le R'\le1$, and $0\le R''D\le160$.
+The fixed central coordinate length is .1D, so the two inward extensions
+of .020D remain disjoint. The physical metric is
+
+$$
+h=P^2(ds^2+R^2d\theta^2)+R^2\sin^2\theta\,N^{-2}d\phi^2,
+\qquad P=NW.
+$$
+
+A directed cover of 768 $(R,\cos\theta)$ boxes gives
+
+$$
+.1036696721908604\le N\le.26866006856285296,\quad
+3.7182246398069747\le P\le9.635570203725964,
+$$
+
+$$
+\mathcal R_hD^2\ge-191.58932348898966,\quad
+|B_{\rm charge}|D^2\le12.010815582697589|q|,\quad
+|\nabla_h\log N|^2D^2\le19.41663812694027.
+$$
+
+The magnetic connection contains $q$ once. With $x=\cos\theta$, its
+polar regularity is exact: $a(R,1)=0$, $a(R,-1)=1$ for every buffer
+radius, hence $a_R=0$ at both poles. Integration to the nearer pole
+bounds $|a_R|/\sin\theta$ by $\sup|a_{Rx}|$. No singular gauge potential
+or selected azimuthal label enters this estimate.
+
+For the curvature calculation set $n_0=\log(N/R)$ and
+$L_0=\log(N/P)-2\log R$. Subscripts $R,x$ below denote ordinary
+coordinate derivatives. Cancellation before interval evaluation gives
+
+$$
+\mathcal R_h=\frac2{P^2}\left[
+\frac{1-x(2n_{0,x}+L_{0,x})+(1-x^2)(L_{0,xx}-n_{0,x}^2)}{R^2}
++(R')^2\left(L_{0,RR}+\frac{L_{0,R}}R-n_{0,R}^2\right)
++R''L_{0,R}\right].
+$$
+
+The physical fibre in spatial measure is $A_\kappa=D_h+i\kappa\beta/N$.
+The Dirac square has the usual covariant Laplacian, scalar curvature and
+magnetic endomorphism; see [Vassilevich, equations3.26--3.28](https://arxiv.org/pdf/hep-th/0306138).
+The additional frequency terms are $\kappa^2/N^2$ and a zeroth-order
+term of norm at most $|\kappa||\nabla_h(N^{-1})|$.
+Completing that scalar square yields, for every real $\kappa$,
+
+$$
+P_\kappa=-A_\kappa^2\ge\nabla_h^*\nabla_h-C_q,\qquad
+C_qD^2\le52.75149040398249+12.010815582697589|q|.
+$$
+
+This form inequality is used only on the actual compact buffer. It does
+not assert a global curvature floor or a global heat-kernel upper bound.
+
+### An auxiliary trace bound with every angular state included
+
+Compare the scalar Dirichlet Laplacian with
+$g_0=ds^2+r_0^2d\Omega_2^2$, $r_0=D/40$. Its density ratio is
+$w=P^2R^2/(Nr_0^2)$. If
+
+$$
+a_0=\min\{P_+^{-2},r_0^2/(P_+^2R_+^2),r_0^2N_-^2/R_+^2\},
+\qquad c=a_0w_-/w_+,
+$$
+
+Rayleigh quotients and min--max give
+$\lambda_n(-\Delta_{h,\Omega})\ge c\lambda_n(-\Delta_{g_0,\Omega})$.
+Direct interval density bounds give $c\ge.0005061374651171810$.
+The apparent polar coordinate degeneracy cancels against the same one in
+$g_0$, so this comparison covers the whole sphere.
+
+Let $P_{\kappa,\Omega}$ be the Friedrichs square on the *open* buffer,
+and choose $a^2>C_q$, $b=a^2-C_q$. Covariant heat domination bounds its
+rank-four heat trace by four times the scalar trace, multiplied by
+$e^{C_qt}$. The Friedrichs construction on an arbitrary open manifold is
+supported by [Güneysu, equation10 and Corollary2.5](https://arxiv.org/pdf/1105.0532);
+adding the bounded endomorphism floor follows from the form/Trotter
+argument. The source field still lives on the entire sewn manifold.
+
+For a sphere the counting function obeys
+$\mathcal N(\lambda)\le1+2\sqrt\lambda+\lambda$, hence
+$\operatorname{Tr}e^{t\Delta_{S^2}}\le1+\sqrt{\pi/t}+1/t$.
+The interval Dirichlet trace is at most $L/(2\sqrt{\pi t})$.
+Integrating their product against $t e^{-bt}$ gives, with $L=.09D$,
+
+$$
+S:=\|(P_{\kappa,\Omega}+a^2)^{-1}\|_{\rm HS}^2
+\le2\left[\frac{L}{\sqrt c\,b^{3/2}}
++\frac{2Lr_0}{cb}+\frac{2Lr_0^2}{c^{3/2}\sqrt b}\right].
+$$
+
+The factor four for the spinor is already included; the displayed factor
+two counts the two disjoint collars. This is an infinite spectral sum,
+not a finite angular calculation or an estimate from a matrix dimension.
+
+### Weighted local graph norms retain the exterior
+
+Write $\nu=\|N^{-1}\|$, $C_w=\|[A,\sqrt N]\|$, using174's global bounds.
+For $m_j=\sqrt{\eta+jM^2}$, $j=1,2,3$, and $\alpha=\sqrt6M^3$, keep
+$\mathcal K_z=\alpha\prod_j(A_z+m_j)^{-1}$ unsplit in the physical source.
+Partial fractions are used only to estimate its local graph norms:
+
+$$
+b_{rj}=\frac{\alpha(-m_j)^r}{\prod_{k\ne j}(m_k-m_j)},\qquad
+z^r\frac{\alpha}{\prod_j(z+m_j)}
+=\mathbf1_{r=3}\alpha+\sum_j\frac{b_{rj}}{z+m_j},
+\quad r=0,1,2,3.
+$$
+
+On a complex frequency disk $|z-\kappa|\le d<M/\nu$, bounded
+perturbation gives resolvent norm at most $(m_j-d\nu)^{-1}$.
+The weight commutator is unchanged, since $i\beta/N$ commutes with
+$\sqrt N$. Therefore
+
+$$
+\|1_\Omega A_z^r\mathcal K_z\sqrt N\|\le G_r:=
+\mathbf1_{r=3}\alpha\sqrt{N_+}
++\sum_j|b_{rj}|\left[
+\frac{\sqrt{N_+}}{m_j-d\nu}+\frac{C_w}{(m_j-d\nu)^2}\right].
+$$
+
+Here the symbol $G_r$ denotes the right-hand side. These are local output
+norms for inputs on the *whole* manifold, initially on the dense domain
+of $\sqrt N$ and then extended by the bound. No exterior truncation or
+global upper bound on $N$ is assumed. Mass differences are rationalized
+before interval evaluation. For the uniform artificial-shift interval,
+the actual $\eta/M^2\in[0,.01]$ is retained throughout the coefficients.
+
+### From those graph norms to the full smoothing quantities
+
+Use radial cutoffs $\chi,\zeta,\theta$ with nested plateaus/supports:
+$\chi=1$ on $[0,.05]D$, supported in $(-.005,.055)D$;
+$\zeta=1$ on that latter closed interval, supported in $(-.010,.060)D$;
+$\theta=1$ on the support of $\zeta$, supported in $(-.015,.065)D$.
+Each ramp has width $.005D$. The saved smooth step gives
+$|f'|\le1600/D$, $|f''|\le4.8\times10^6/D^2$.
+Thus every cutoff satisfies
+
+$$
+|\nabla_h f|\le g=430.3128925752752/D,\quad
+|\Delta_h f|\le\Delta_c=352440.5426878167/D^2,
+$$
+
+using the exact radial formula
+$\Delta_h f=P^{-2}[f''+(2R'/R-\partial_s\log N)f']$.
+For $|\kappa|\le K_{\rm split}$ the analytic complex square obeys
+
+$$
+\|-A_z^2-P_\kappa\|\le V_d
+=dC_N+(2K_{\rm split}d+d^2)\nu^2,
+\qquad C_N\le2C_w\nu^{3/2}.
+$$
+
+Only the real-frequency $P_\kappa$ is used as a positive operator.
+For $r=0,1$, expand $(P_{\kappa,\Omega}+a^2)\zeta A_z^r\mathcal K_z\sqrt N$.
+Its commutator with $\zeta$ is
+$-2\nabla\zeta\cdot\nabla-\Delta\zeta$.
+Apply the local Lichnerowicz bound with the larger cutoff $\theta$;
+$A_\kappa=A_z-i(z-\kappa)\beta/N$ supplies the $d\nu$ term. This gives
+
+$$
+H_r=G_{r+2}+[a^2+V_d+\Delta_c+2g(2g+\sqrt{C_q}+d\nu)]G_r
++2gG_{r+1},\qquad
+\|\zeta A_z^r\mathcal K_z\sqrt N\|_{\rm HS}\le B_r=\sqrt S H_r.
+$$
+
+Compact support of $\zeta$ places these fields in the auxiliary operator
+domain. Applying its inverse is an exact localization identity. The
+physical field has not been replaced by a Dirichlet solution. The estimates
+extend from smooth compact inputs by density and lower semicontinuity.
+
+Converting to the canonical flux measure requires the half-density
+$Q=PR\sqrt{\sin\theta/N}$. Its radial derivative and the spin connection give
+
+$$
+C_{\rm rad}\ge\sup_\Omega\left(
+|\partial_s\log P+R'/R-\tfrac12\partial_s\log N|
++|\partial_\theta\log P|/(2R)\right),
+\qquad C_{\rm rad}=14.034021152494184/D.
+$$
+
+Consequently the *complete* jet $L_{\rm jet}=(\chi,\ell\chi\partial_s)$,
+$\ell=.01D$, satisfies
+
+$$
+\|Z_z\|_{\rm HS}^2\le Z_d^2:=
+B_0^2+\ell^2\{P_+[B_1+(2g+\sqrt{C_q}+d\nu)B_0]
++C_{\rm rad}B_0\}^2.
+$$
+
+Use $d=0,V_d=0$ for the real-frequency bound and $d=M/(2\nu)$
+for Cauchy's derivative bound $\|Z'_\kappa\|_{\rm HS}\le Z_d/d$.
+One can apply Cauchy to finite input projections and pass to their
+increasing limit using the uniform squared-norm bound. This does not
+assume that the unbounded input weight is a bounded global operator.
+The choice of auxiliary $b$ is a finite comparison over $.1,1,10$ times
+$\max(M^2,C_q)$, not a claim of optimality.
+
+### Actual atomic bounds and what they establish
+
+At the saved atomic charge and fixed $MD=2154733372140.8845$,
+$K_{\rm split}D=464876469029.3226$, the zero-shift result is
+
+$$
+\|Z\|_{\rm HS}^2\le7.768681960564308\times10^{66},\qquad
+\|Z'\|_{\rm HS}\le5.177433384840746\times10^{22}D.
+$$
+
+Combining these with174's full insertion factor gives
+
+$$
+\frac1{2\pi}\int_0^{K_{\rm split}}|I_\kappa+I_{-\kappa}|\,d\kappa
+\le8.214544027895555\times10^{80}/D.
+$$
+
+Uniformly on the declared $\eta/M^2\in[0,.01]$ interval, that last
+ceiling is $8.326773556537753\times10^{80}/D$.
+This is a very loose absolute bound, not an energy prediction, source
+sign or support margin. It cannot be compared directly with the required
+renormalized support. No zero-state gap is assumed, and a uniform bound
+alone does not prove uniform integrability in a joint infrared limit.
+
+The original auxiliary geometry report omitted $R'$ from three reported
+intervals, although every upper/absolute ceiling used in the smoothing
+calculation was valid. A constant-radius cylinder exposes the incorrect
+lower endpoints. The [original result](../results/dihole_buffer_smoothing_prerate_trial.json),
+[geometry source](../provenance/dihole_buffer_geometry_prerate.py) and
+[driver](../provenance/dihole_buffer_smoothing_prerate.py) are preserved.
+The corrected intervals include $R'=0$, with an explicit regression check.
+No physical candidate is rejected by that reporting correction.
+
+**Next:** obtain an integrable full-frequency envelope while retaining the
+common regulator and the frequency-dependent positive local potential.
+Do not integrate this coarse bounded-frequency estimate to infinity or
+reuse173's selected-field tail for the full source. Regulator/counterterm
+matching, total stress/current, stability, atom survival and an exterior-clock
+advantage remain unresolved. The static geometry still excludes a journey
+from13September2027 to12September2027. No new physical law is claimed.
+
+All 18 saved checks pass, including the constant-radius regression. An
+independent mathematical audit checked the geometry and localization
+argument. A separate 115-digit recomposition verifies 176 scalar enclosures
+across all four records and all 57 input hashes. Layout verification passes
+171 imports, 1522 links, 8 source guards and 14 frozen hashes. The corrected
+figure has been inspected. No simulation is running.
+
+![Nested local buffers and weighted graph bounds](../figures/dihole_buffer_smoothing_progress.png)
