@@ -1,3 +1,55 @@
+# Authoritative checkpoint182 - auxiliary proof scales tighten the full defect
+
+Previous checkpoint181 published deb32f3c47fe0128fca1520bdab4280c934b422e.
+Previous goal turn PROGRESS:181 verified and privately published.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No stable opening, obtainable source, atom transit or clock gain established.
+
+- scripts/dihole_scaled_graph.py:12 checks PASS,71 exact input hashes.
+  Saved181 defect reused. Geometry, field, physical target regulator,
+  normal support, cutoff and time interval unchanged.
+- Replace fixed graph(1+P)^3 by(mu²+P)^3 and introduce an independent
+  Fourier evaluation scale lambda. Both are auxiliary inverse lengths.
+  Neither is a matter mass, regulator M, physical field or opening size.
+- Exact spectral constants cp bound ||D^p u|| by cp mu^(p-6) graphnorm.
+  Mixed U_(ell,p) recursion preserves every spectral power, ell+p<=6.
+  Fourier scaling is E_k(lambda)=E_k(1)*lambda^(k-4), dimension4.
+- Full B4 is a positive Laurent polynomial:39 point terms,87 defect
+  terms per flux. A finite grid selects exact powers of two; interval
+  evaluation certifies those choices, not their global optimality.
+- q1000:mu2^123,lambda2^127; logB4<=514.8073610345871,
+  a ceiling reduction of at least222.67554903555398 decimal orders.
+- Atomic:mu2^136,lambda2^140; logB4<=501.3998054955363,
+  a ceiling reduction of at least338.9255321509277 decimal orders.
+  Cev log<=-65.8530962573379; physical graph log<=566.722656437532.
+- Atomic Cstar/Cgeometry log<=503.5982252235805. Curved-remainder
+  envelope/q² at nominalM²s0=100 has log<=392.6455986234054.
+  These ceilings remain too loose for source sign or physical support.
+  Exact lower coefficients required; no numerical quadrature promoted.
+- NEXT: evaluate the derived source-centred ordinary-coordinate gauge.
+  A^y_i=int0^1 t(x-y)^j Fji(y+t(x-y))dt on a fixed convex ball.
+  New ordinary component jet bound per|q|:
+  4r*a_(n+1)/(n+2)+2n*a_n/(n+1), second term absent atn0.
+  Original20jets suffice through19 for operator18. Inner spatial radius
+  2^-32, outer time-independent cutoff radius2^-31 fit the old clearance.
+  Globally extend the phase, fixed during metric variation. Flux and
+  graph norms invariant. Curved-geodesic transport still retained.
+  This gauge has NOT yet been applied to operator/transport/defect bounds.
+- No broad context/geometry rerun absent a specific defect. One-atom
+  support, stability, survival and clock comparison remain required.
+  Static geometry excludes13Sep2027->12Sep2027; humans remain deferred.
+
+Source SHA256 8f4684f02f16404ba1615e29b67e7f8e1de4964e8ffb90c4a8b9a956388cf6d9
+Results SHA256 2f29e4149326fdb5ba22b5561cbd0643e3adadf235762f731cd4890cebc420c4
+Verification:12 native true checks,71 exact inputs, figure inspected.
+Independent audit PASS:300 directed comparisons at500-650 digits;
+smallest positive relative ceiling margin6.54312e-103.
+Final layout PASS:178 imports,1593 Markdown links,8 source guards,14 frozen pilot hashes.
+No simulation is running. Publication follows completed verification.
+
+--- Preserved checkpoint181 and earlier history ---
+
 # Authoritative checkpoint181 - full heat defect evaluated, ceiling too loose for support
 
 Previous checkpoint180 published fcdf8d85eee01e268e0796114c2e6e35afd02a8e.

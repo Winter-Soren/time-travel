@@ -7107,3 +7107,142 @@ Result SHA256: bb0af04d14108fe79d5658b3a08e4e6611355a8d4d18bb606780c64a09b3ce2b.
 The payload remains one neutral hydrogen atom through a trial1nm areal opening. No self-consistent supporting source, stable opening, atom transmission, internal-state survival or clock advantage has been established. The present static geometry excludes13September2027 to12September2027; humans remain deferred.
 
 ![Full error-bound contributions at atomic flux](../figures/dihole_heat_defect_progress.png)
+
+
+## Adjustable graph and Fourier scales for the full defect
+
+Checkpoint182 tightens the same full-defect certificate by changing two **auxiliary proof scales**. The physical geometry, magnetic field, Q4 cutoff, time interval, target regulator and atomic payload are unchanged. The [calculation](../scripts/dihole_scaled_graph.py) has 12 passing checks and 71 exact input hashes in its [results](../results/dihole_scaled_graph_results.json).
+
+At atomic flux the logarithmic $B_4$ ceiling falls from840.32534 to501.39981, a reduction of more than338.92553 decimal orders in the **ceiling**. This is not a measured reduction in the actual field error. The remaining bound is still far too large to decide physical support.
+
+### Spectral graph scale
+
+For $\mu>0$, use the graph norm $\|(\mu^2+P_c)^3u\|_2$. Because $P_c=-D^2\ge0$,
+
+$$
+\|D^pu\|_2\le c_p\mu^{p-6}\|(\mu^2+P_c)^3u\|_2,\qquad0\le p\le6,
+$$
+
+where
+
+$$
+c_p=\sup_{x\ge0}\frac{x^{p/2}}{(1+x)^3},\qquad
+(c_0,\ldots,c_6)=
+\left(1,\frac{25\sqrt5}{216},\frac4{27},\frac18,
+\frac4{27},\frac{25\sqrt5}{216},1\right).
+$$
+
+For $0<p<6$ the maximum occurs at $x=p/(6-p)$. Keep the same local cube, cutoffs, $L=20$ and $A_\chi$ from180. The mixed derivative bounds, for $\ell+p\le6$, now obey
+
+$$
+U_{0,p}=c_p\mu^{p-6},
+$$
+$$
+U_{\ell,p}=L U_{\ell-1,p+1}+A_\chi U_{\ell-1,p}
++L\sum_{j=1}^{\ell-1}{\ell-1\choose j}
+\left[2^{j+1}a_jU_{\ell-j,p}+2^jb_jU_{\ell-1-j,p}\right].
+$$
+
+The two indices retain the powers of $D$ instead of replacing all of them by a common unit-scale bound. The final cutoff convolution is
+
+$$
+W_n(\mu)=\sum_{k=0}^n{n\choose k}2^k k!(20/h)^kU_{n-k,0}.
+$$
+
+These are ordinary derivative bounds, not normalized Taylor coefficients. In code, each polynomial coefficient at index $p$ multiplies $\mu^{p-6}$; shifting the second index in the recurrence already changes the power. No additional factor of $\mu$ belongs in that representation.
+
+### Independent Fourier evaluation scale
+
+For $\lambda>0$, Fourier Cauchy-Schwarz in dimension4 gives
+
+$$
+\|D^k f(x)\|\le E_k\lambda^{k-4}\|(\lambda^2-\Delta)^3f\|_2,
+$$
+
+with $E_0=E_2=1/(4\pi\sqrt{20})$ and $E_1=1/(4\pi\sqrt{30})$. This follows by substituting $\xi=\lambda\eta$ in the same integrals used in180. Applying it to the localized section gives
+
+$$
+C_{\rm ev}(\mu,\lambda)=
+\left(\frac{d_2}{12\lambda^2}+\frac{d_1}{30\lambda^3}
++\frac{d_0}{48\lambda^4}\right)
+\left[\lambda^6W_0+3\lambda^4W_2+3\lambda^2W_4+W_6\right].
+$$
+
+The rational factors retain the established tensor contraction bounds and upward Fourier constants. Here the $d_i$ are canonical $\dot P_c$ coefficient bounds; physical-volume conversion is still used for the defect column.
+
+For the physical column, compute $C_j\ge\|P_g^jE_{4,g}\|_2$, $0\le j\le3$, using the saved181 interior and annular derivative bounds. Then
+
+$$
+G(\mu)=\mu^6C_0+3\mu^4C_1+3\mu^2C_2+C_3
+$$
+
+bounds $\|(\mu^2+P_g)^3E_{4,g}\|_2$. The same physical half-density and source trace factors give
+
+$$
+B_4(\mu,\lambda)=4V_{\rm coord}\sqrt{\mu_{\rm vol,max}}\,
+C_{\rm ev}(\mu,\lambda)G(\mu).
+$$
+
+Here $\mu_{\rm vol,max}$ denotes the saved physical volume-density ceiling and is unrelated to the auxiliary graph scale $\mu$. The shifted graph operator commutes with the heat semigroup, so its contraction in the Duhamel argument is unchanged.
+
+Neither $\mu$ nor $\lambda$ is the target physical regulator $M$, the earlier comparison filter $\Lambda$, an added matter mass, a physical field strength or an opening size. Both have auxiliary inverse-length units in the $D=1$ calculation.
+
+### Finite search and rigorous evaluation
+
+All coefficients of $B_4(\mu,\lambda)$ are positive. The implementation stores 39 point-evaluation monomials and 87 combined-defect monomials for each flux. Their logarithmic sum is convex in $(\log\mu,\log\lambda)$.
+
+A finite log-space search proposes powers of two: exponents from-32 to224 at spacing8, followed by a unit-spacing search within8 of the selected pair. The selected powers are then evaluated with100-digit interval arithmetic using the exact input bounds. **The outward evaluation certifies the selected ceiling; the search does not certify a global optimum.** No physics result depends on calling its selected pair optimal.
+
+| Quantity | $q=1000$ | Exact atomic $q$ |
+| --- | ---: | ---: |
+| Selected graph scale $\mu$ | $2^{123}$ | $2^{136}$ |
+| Selected Fourier scale $\lambda$ | $2^{127}$ | $2^{140}$ |
+| $\log_{10} C_{\rm ev}$ upper ceiling | -58.02631 | -65.85309 |
+| $\log_{10} G$ upper ceiling | 572.30344 | 566.72266 |
+| Previous $\log_{10} B_4$ upper ceiling | 737.48292 | 840.32534 |
+| New $\log_{10} B_4$ upper ceiling | 514.80737 | 501.39981 |
+| $\log_{10} C_*$ and $C_{\rm geom}$ upper ceiling | 517.00579 | 503.59823 |
+
+The rounded table gives display ceilings; stored dyadic endpoints are authoritative. The certified decrease in the atomic ceiling exceeds338.9255321509277 decimal orders. The decrease at $q=1000$ exceeds222.67554903555398 orders.
+
+The Q4 diagonal bounds from181 are retained, and
+
+$$
+C_*=|b_{8,Q4}|_{\rm bound}+s_0|b_{10,Q4}|_{\rm bound}
++16\pi^2 B_{4,\rm bound},\qquad
+C_{\rm geom}=C_*+C_{\rm mag}
+$$
+
+are conservative ceilings. Exact lower coefficients are still required in the definition of the remainder. At atomic flux and nominal $M^2s_0=100$, the curved-remainder envelope divided by $q^2$ now has logarithmic ceiling392.64560, compared with731.57114 before. It remains uninformative for the source sign; it is not a bound on the whole supporting source.
+
+### Verification and next physical question
+
+All 12 native checks pass. Spectral extrema match their closed forms within $8.05\,10^{-87}$; direct radial quadrature checks Fourier scaling at three distinct scales within $1.61\,10^{-86}$. A separate positive-polynomial example has its known search minimum at $(\mu,\lambda)=(1,1)$. Direct factorized evaluation agrees with the combined polynomial. Both evaluated ceilings improve on181 with interval separation. All 71 exact input hashes match, and the figure was inspected. Independent audit PASS:300 directed comparisons at500-650 digits, including every polynomial coefficient, a separate scalar recurrence, physical graph powers, both remainder ceilings and all12 matching diagnostics. All 71 hashes match; the smallest positive relative margin is6.54312e-103. Final layout PASS:178 imports,1593 Markdown links,8 source guards,14 frozen pilot hashes.
+
+Source SHA256: 8f4684f02f16404ba1615e29b67e7f8e1de4964e8ffb90c4a8b9a956388cf6d9.
+Result SHA256: 2f29e4149326fdb5ba22b5561cbd0643e3adadf235762f731cd4890cebc420c4.
+
+The large reduction shows that the former certificate paid heavily for arbitrary unit proof scales. It does not establish a stable field or support. The next specific improvement to evaluate is a source-centred gauge, keeping the physical curvature and flux unchanged.
+
+On a fixed convex coordinate ball, a phase
+$\alpha_y(x)=\int_0^1(x-y)^iA_i(y+t(x-y))dt$ gives
+
+$$
+A_i^y=A_i-\partial_i\alpha_y
+=\int_0^1t(x-y)^jF_{ji}(y+t(x-y))dt.
+$$
+
+If $a_n$ bounds the original ordinary component derivatives of $A/|q|$, then on a ball of radius$r$ the new component derivatives obey
+
+$$
+|\partial^n A_i^y|\le |q|
+\left[\frac{4r\,a_{n+1}}{n+2}+\frac{2n\,a_n}{n+1}\right],
+$$
+
+with the second term absent at$n=0$. The saved gauge jets through20 suffice for order19, needed to retain the operator's order18 derivatives. An inner spatial radius$2^{-32}$ contains the point-evaluation cube and normal support, with an outer cutoff radius$2^{-31}$ inside the existing coordinate clearance. A time-independent phase extension gives a global unitary transformation. Hold the phase fixed during metric variation; otherwise an extra commutator would appear. This preserves the global graph norm, physical source and flux.
+
+That gauge proposal has been derived but **has not yet been numerically applied to the coefficient, transport or defect bounds**. Ordinary coordinate radial gauge does not eliminate transport along curved geodesics. Its effect must be recomputed rather than assumed.
+
+One neutral hydrogen atom and the trial 1 nm areal opening remain the target. Supporting stress, stability, atom transmission, internal-state survival and clock advantage remain unproved. The static geometry still excludes13September2027 to12September2027; human enlargement remains deferred.
+
+![Effect of adjustable proof scales](../figures/dihole_scaled_graph_progress.png)

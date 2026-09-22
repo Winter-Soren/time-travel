@@ -287,3 +287,10 @@ No supporting material or stable opening is established. The present static geom
 The [full heat-defect calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#full-gaussian-and-cutoff-heat-defect-bound) evaluates the previously missing error ceiling, with all14 checks passing. It includes the Gaussian propagation estimate, cutoff derivatives, both collars and the full source integration. The result is finite but enormously loose; it cannot determine the supporting stress. This limits the current calculation, not a demonstrated physical impossibility.
 
 The next calculation should sharpen the interior field estimate and obtain a useful source enclosure. Tightening the already smaller cutoff contribution alone will not resolve the present bound. One hydrogen atom and a trial1nm opening remain the target. No stable opening, atom passage, survival or clock advantage has been proved; humans remain deferred. The static geometry still excludes travel from13September2027 to12September2027.
+
+
+## Checkpoint182: tighter certificate for the same atomic target
+
+The [adjusted proof scales](PHYSICAL_EUCLIDEAN_OPERATOR.md#adjustable-graph-and-fourier-scales-for-the-full-defect) reduce the conservative atomic error ceiling from about10^840 to10^501, with 12 checks and an independent audit passing. This changes the mathematical estimate, not the proposed field, opening or atom. The remaining ceiling cannot determine the supporting stress.
+
+Next comes evaluating a local gauge that expresses the potential through the actual field curvature. That improvement has been derived but not yet applied numerically. Support, stability, atom transmission, survival and clock gain remain unproved; humans remain deferred. The static model still excludes13September2027 to12September2027.
