@@ -1,3 +1,72 @@
+# Authoritative checkpoint174 - full-source completion and global lapse weight
+
+Previous checkpoint173 published 583fb1668ffe80582dd17ebf3439279a983d027d.
+Previous goal turn PROGRESS: paired selected source across all frequencies.
+Goal ACTIVE, unachieved. Browser/Downloads import COMPLETE; do not reopen.
+One neutral hydrogen atom; trial 1 nm areal diameter; humans deferred.
+No new law, supporting material, stable opening, atom transit or clock gain.
+
+- scripts/dihole_source_completion.py: 23 checks PASS, 51 exact input hashes.
+  Reuses 173's global lapse floor and exact geometry calibration. No old solves rerun.
+- Exact completion: Q=V w E_Lambda w V*, Pi=VV*,
+  I-Q=(I-Pi)+V(1-w^2)V*+Vw(1-E_Lambda)wV*.
+  Gaussian removal restores only the last contribution. Every component uses
+  the same full proper operator and common regulator. Stress is not positive.
+- For omitted covariance R=I-Q and common filter F_A,
+  e_r=||1_S A^r F_A sqrtR||HS^2 =
+  Tr[1_S P^r r_eta,M(P)1_S]-||1_S A^r F_A JX||HS^2.
+  |I_R|<=c_delta e1+d_delta sqrt(e0 e1). This positive-shift absolute bound
+  must not replace the paired zero-frequency argument with an unproved premise.
+- NEW actual global weight bound:
+  ||[A_kappa,sqrtN]||=sup|grad_h sqrtN| <=274.7466454823995 /D.
+  Near prolate R/D in[.5,1]: 256 interval boxes; far R/D>=1: analytic bound
+  29.6028298306828 /D. All angular states, all q, all kappa.
+  Uses N>=cN, h>=epsilon(2k-epsilon), epsilon=D/40, v=(h/Sigma)^2<=1.
+  Ba in[.11433284908848468,.1143328490884847] satisfies the needed [0,1] gate.
+  Sewn radius derivative in[0,1] decreases the radial gradient contribution.
+- The weighted resolvent identity gives, for compact C and m>0,
+  ||1_C(A+m)^-1 sqrtN||<=sqrt(N_C+)/m+C_weight/m^2.
+  This is an operator bound, not a Hilbert-Schmidt or source bound.
+- NEW full-angular insertion factor: dotA=L* Jmid L,
+  L=(chi,ell chi d_s), ell=.01D; chi=1 on the closed physical collar
+  and supported in the slightly larger sewn buffer (-.005,.055)D.
+  Jmid=[[-i kappa F beta/N, FC/(2ell)],[-FC/(2ell),0]],
+  C=-tau2 sigma3/(NW). Full F_s and C_s terms are retained by the adjoint.
+  ||Jmid||<=78.16158844179671/D+39.11061904290383 |kappa|;
+  ||d_kappa Jmid||<=39.11061904290383.
+- Keep K=alpha product_(j=1..3)(A+mj)^-1 unsplit. Full source is
+  I_kappa=-ReTr (H_m0+i kappa)^-1 B_kappa,
+  B=beta sqrtN K* dotA K sqrtN=beta Z* Jmid Z, Z=L K sqrtN.
+  This trace/cyclic representation requires the weighted HS smoothing condition.
+  ||B||1<=||Jmid|| ||Z||HS^2;
+  ||B'||1<=||Jmid'|| ||Z||HS^2+2||Jmid|| ||Z||HS ||Z'||HS.
+  If trace bounds B0 and L_B hold, full paired low-frequency integral
+  <=||B0||1/2+K_split L_B/pi. No field selection remains in this identity.
+- Numerical full-field ||Z||HS and ||Z'||HS are NOT known. They and the full
+  high-frequency remainder are the next quantitative target. Do not substitute
+  the old selected HS norm, a finite matrix dimension, or collar Nmax for them.
+- Preserved failed derivative pilot: duplicated R_j in the product-derivative
+  prefix failed one check (error3.74344). Corrected R[1:j] prefix passes
+  with error8.75e-10. Original source/result bytes retained under provenance/
+  and results/dihole_source_completion_derivative_trial.json.
+- NEXT: evaluate a buffered, full-angular local smoothing trace bound for
+  Z and its frequency derivative, using the new lapse-weight and insertion
+  constants while preserving the positive-mass product. Then the full frequency
+  remainder, regulator/counterterm matching and total support/current.
+  Static geometry excludes 13 Sep 2027 -> 12 Sep 2027; no future clock gain.
+
+Source SHA256 deb95497874e34e9f7f02a52465422b421c7ace669710db91b10a9855848d23c
+Results SHA256 dcd24ab0a676289da962656e02296532e2fbc0535d8e7ef9b82643c4a825db27
+
+Verification: 23 saved checks pass, 51 exact inputs, figure inspected.
+72 noncommuting finite source cases; full cyclic identity error<7.78e-15.
+Two independent audits pass: 110-digit scalar enclosures, an independent
+near-region interval cover, exact hashes, source signs and factor ordering.
+Layout passes: 169 imports, 1508 links, 8 source guards, 14 frozen hashes.
+No simulation is running. Publication follows these final checks.
+
+--- Preserved checkpoint173 and earlier history ---
+
 # Authoritative checkpoint173 - paired complete-frequency selection bound
 
 Previous checkpoint172 published 5aa52138066e61ea4f32275d6596fbb56ae4baf4.

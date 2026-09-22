@@ -229,3 +229,10 @@ The payload is still **one neutral hydrogen atom**, with a **trial 1 nm areal di
 The [paired-frequency calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#paired-low-frequency-bound-with-zero-states-retained) now bounds a selected supporting-field contribution over all frequencies, including zero-energy states, with 20 checks passing. The bound remains finite over the declared artificial-shift interval at fixed regulator. It does not supply the total supporting energy: omitted field contributions and the physical limits remain unresolved.
 
 The practical target is unchanged: one neutral hydrogen atom through a trial 1 nm opening, followed by a survival and exterior-clock calculation. No stable opening or atom passage has been established. Travel from 13 September 2027 to 12 September 2027 is excluded by the present static geometry; a future clock advantage is uncalculated. Human transport and enlarging the opening remain deferred.
+
+
+## Checkpoint174: account for the whole supporting field
+
+The [source-completion calculation](PHYSICAL_EUCLIDEAN_OPERATOR.md#full-source-completion-and-a-global-lapse-weight-bound) now separates the omitted transverse, spatial and Gaussian field contributions exactly. A new global lapse-weight bound applies across the prescribed exterior, collars and central section, with 23 checks passing. Two full-field smoothing quantities remain unevaluated; the selected contribution is not being presented as the total energy.
+
+The next test remains whether this geometry can be supported at all. One hydrogen atom and the trial 1 nm diameter are unchanged. Stability, atomic transmission and survival, and an exterior-clock advantage have not been established.

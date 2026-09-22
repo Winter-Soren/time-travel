@@ -5428,3 +5428,333 @@ of exterior clocks remain unestablished. The first payload remains one
 hydrogen atom; the present static geometry excludes backward causal travel.
 
 ![Paired low-frequency and high-frequency bound at the atomic reference](../figures/dihole_paired_low_frequency_progress.png)
+
+
+## Full-source completion and a global lapse-weight bound
+
+The [calculation](../scripts/dihole_source_completion.py) and
+[results](../results/dihole_source_completion_results.json) identify the
+exact omitted contributions and retain the common regulator in a full-field
+source factorization. They also evaluate a new global geometric weight bound.
+The remaining full-field smoothing norms are explicitly unknown. This
+increment does not turn the selected bound from173 into a total source.
+
+### Complete the field selection in the correct order
+
+Write $\mathcal F=\sqrt6M^3\prod_{j=0}^3(A_\kappa+m_j)^{-1}$,
+$P=A_\kappa^*A_\kappa$, $m_j=\sqrt{\eta+jM^2}$, and
+$Y=JX_4$. The frozen input selection is $Q=YY^*\le I$.
+For one complete four-component field, the selected source is
+
+$$
+I_\kappa[Q]=-\operatorname{Re}\operatorname{Tr}
+(A_\kappa\mathcal FQ^{1/2})^*\dot A_\kappa\mathcal FQ^{1/2}.
+$$
+
+There is no additional Weyl multiplicity. At positive shift the full
+source and the omitted part obey
+$I_\kappa[I]=I_\kappa[Q]+I_\kappa[I-Q]$.
+The source operator is
+$-\tfrac12\mathcal F^*\dot P\mathcal F$, which need not be positive.
+Although $\mathcal F(I-Q)\mathcal F^*$ is positive, its stress contribution
+can have either sign. Moving $Q$ past $\mathcal F$ is generally wrong.
+
+Let $V$ be the retained transverse isometry, $\Pi=VV^*$,
+$w=\chi\eta_{\rm window}$, and $E_\Lambda=e^{-h^2/\Lambda^2}$ in the
+chosen complete-line auxiliary space. On a finite tube use the compression
+of this positive contraction, extending the tube projection by zero.
+Then $Q=VwE_\Lambda wV^*$ and
+
+$$
+\boxed{I-Q=(I-\Pi)+V(1-w^2)V^*+Vw(1-E_\Lambda)wV^*.}
+$$
+
+All three terms are positive. They represent transverse/outside-tube,
+spatial-window, and Gaussian omissions. Increasing $\Lambda$ removes only
+the last term. Orthogonal angular sectors can be summed; overlapping
+selections in one sector cannot be added unless their sum stays below $I$.
+Every contribution is propagated by the same full $\mathcal F(A)$.
+Replacing it with a filter of a compressed operator would change the model.
+
+For $\mathcal R=I-Q$, metric support $S$, and $r=0,1$, define
+
+$$
+e_r=\|1_SA^r\mathcal F\mathcal R^{1/2}\|_{\rm HS}^2.
+$$
+
+The established local graph estimate gives
+
+$$
+|I_\kappa[\mathcal R]|\le c_\delta e_1+d_\delta\sqrt{e_0e_1}.
+$$
+
+The two required full-field quantities are exactly
+
+$$
+e_r=\operatorname{Tr}[1_SP^r r_{\eta,M}(P)1_S]
+-\|1_SA^r\mathcal FJX_4\|_{\rm HS}^2,\qquad
+r_{\eta,M}(P)=\mathcal F\mathcal F^*,
+$$
+
+$$
+r_{\eta,M}(P)=\int_0^\infty
+e^{-\eta t}(1-e^{-M^2t})^3e^{-tP}\,dt.
+$$
+
+This common positive kernel retains the regulator cancellation. Four
+separately bounded mass resolvents would not retain that cancellation.
+Uniform control of $e_0$ can fail at zero frequency, so this absolute
+estimate cannot silently replace173's paired argument.
+
+### A global bound for the unbounded lapse weight
+
+Set lengths in units of $D$ for this calculation.
+In Weyl coordinates the exterior meridian factor is $N/v$, where
+
+$$
+v=(h/\Sigma)^2\le1,\qquad
+h=R^2-k^2+k^2(1-c^2),\quad \Sigma=(R+M_g)^2-a_g^2c^2.
+$$
+
+Here $R=(d_++d_-)/2$ is the prolate radius and $c$ the prolate angle
+coordinate; $M_g$ denotes the geometric mass, distinct from regulator $M$.
+The scalar commutator of the proper Dirac operator satisfies
+
+$$
+\|[A_\kappa,\sqrt N]\|
+=\sup|\nabla_h\sqrt N|
+=\sup\frac{v|\nabla_{\rho,z}N|}{2N^{3/2}}.
+$$
+
+It is independent of frequency, magnetic charge and angular sector.
+The gauge and frequency terms commute with a scalar multiplication.
+
+On $k\le R\le1$, 256 interval boxes cover the complete angular range
+$-1\le c\le1$. They enclose
+$|N_R|\le5.365671756262071$ and
+$|N_c|\le2.514098382202391$.
+For the actual excised domain,
+$h\ge h_0=\epsilon(2k-\epsilon)$, $\epsilon=1/40$.
+Orthogonal Weyl gradients give
+
+$$
+|\nabla_{\rho,z}N|^2
+=\frac{R^2-k^2}{h}N_R^2+\frac{1-c^2}{h}N_c^2
+\le N_R^2+N_c^2/h_0.
+$$
+
+Combine this with173's global $N\ge c_N$. Derivative boxes may include
+excluded focal points; their suprema still bound derivatives on the
+physical subset. The lower lapse and $h_0$ bounds are used only there.
+
+For $R\ge1$, put $s=1-c^2$, $\Delta=R^2-k^2$,
+$b=B^2/4$, $u=2M_g(R+M_g)/\Delta$, $t=a_g^2s/\Delta$. The exact lapse is
+
+$$
+N=L+b\rho^2G,\qquad
+L=\frac{1+t+Ba_gus}{1+u+t},\quad
+G=\frac{(1+u)^2+t}{1+u+t},\quad \rho^2=\Delta s.
+$$
+
+The exact calibration has
+$Ba_g\in[0.11433284908848468,0.1143328490884847]\subset[0,1]$.
+Consequently $L\ge0$, $1\le G\le1+u$ and
+$N\ge\max(c_N,b\rho^2)$.
+Let $e=1-k^2$ and
+
+$$
+U_0=\frac{2M_g(1+M_g)}e,\quad
+U_1=\frac{2M_g(1+2M_g+k^2)}{e^2},\quad
+T=\frac{2a_g^2}{e\sqrt e}+\frac{2a_g^2}{e^2}.
+$$
+
+The Weyl-coordinate estimates are
+$u\le U_0/R$, $|\nabla u|\le U_1/R^2$,
+$|\nabla t|\le T/R^3$ and $|\nabla s|\le2/(\sqrt eR)$.
+Differentiating the rational $L,G$ gives
+
+$$
+|\nabla L|\le C_L/R^2,\quad
+C_L=U_1+U_0T+2Ba_gU_0/\sqrt e,
+$$
+
+$$
+|\nabla G|\le C_G/R^2,\quad
+C_G=(1+2U_0)U_1+U_0(1+U_0)T.
+$$
+
+Since $\rho\le R$, define $A_0=C_L+bC_G$, $A_1=2b(1+U_0)$ to obtain
+$|\nabla N|\le A_0+A_1\rho$.
+The upper envelope
+$(A_0+A_1\rho)/(2\max(c_N,b\rho^2)^{3/2})$
+increases up to $\rho_*=\sqrt{c_N/b}$ and decreases afterward.
+Its maximum bounds the entire far exterior, including axial escape.
+
+| Region | Upper bound for $D|\nabla_h\sqrt N|$ |
+| --- | ---: |
+| $k\le R\le D$, outside the excised foci | 274.7466454823995 |
+| $R\ge D$ | 29.6028298306828 |
+
+The sewn collar copies $N$ with $0\le r'(s)\le1$. This reduces its radial
+gradient contribution and leaves its angular contribution unchanged.
+The constant-radius central section has $r'=0$.
+Thus the global result is
+
+$$
+\boxed{\|[A_\kappa,\sqrt N]\|\le274.7466454823995/D.}
+$$
+
+This is a geometric operator bound, not a stress or stability criterion.
+For a compact set $C$ and $m>0$, the resolvent commutator identity yields
+
+$$
+1_C(A+m)^{-1}\sqrt N
+=1_C\sqrt N(A+m)^{-1}
++1_C(A+m)^{-1}[\sqrt N,A](A+m)^{-1},
+$$
+
+$$
+\|1_C(A+m)^{-1}\sqrt N\|
+\le\frac{\sqrt{N_{C,+}}}{m}+\frac{C_{\rm weight}}{m^2}.
+$$
+
+One can first use bounded truncations of $\sqrt N$ and then extend the
+identity from compact test fields. This does not assert a globally
+bounded lapse or a Hilbert-Schmidt estimate.
+
+### Preserve the full filter in a radial form factorization
+
+In the canonical collar measure,
+
+$$
+A_{\rm rad}=C\partial_s+C_s/2,\qquad
+C=-\tau_2\otimes\sigma_3/(NW),\quad C^*=C.
+$$
+
+The actual metric insertion is
+$\dot A_\kappa=-i\kappa F\beta/N+(FC)\partial_s+(FC)_s/2$.
+Choose a smooth real cutoff $\chi=1$ near the closed physical collar,
+supported in the slightly larger sewn buffer
+$(-.005,.055)D$, and auxiliary length $\ell=.01D$.
+Set
+
+$$
+L_{\rm jet}\psi=(\chi\psi,\ell\chi\partial_s\psi),\qquad
+J_{\rm mid,\kappa}=
+\begin{pmatrix}
+-i\kappa F\beta/N&FC/(2\ell)\\
+-FC/(2\ell)&0
+\end{pmatrix}.
+$$
+
+Weak radial integration by parts gives
+$\dot A_\kappa=L_{\rm jet}^*J_{\rm mid,\kappa}L_{\rm jet}$ exactly.
+The adjoint retains both $F_s$ and $C_s$. The buffered cutoff must extend
+past the collar endpoints because $F$ is nonzero throughout the open
+collar and only flat at its endpoints.
+The matrix coefficients vanish outside the physical support, so the
+existing whole-angle collar bounds suffice for
+
+$$
+\|J_{\rm mid,\kappa}\|
+\le78.16158844179671/D+39.11061904290383|\kappa|,\qquad
+\|\partial_\kappa J_{\rm mid,\kappa}\|\le39.11061904290383.
+$$
+
+These bounds do not use a selected angular band or frozen angular gap.
+The future smoothing estimate for $L_{\rm jet}$ must cover its larger
+buffer, not merely the support of $J_{\rm mid}$.
+
+### A full-field paired source target
+
+Keep the three positive factors together:
+
+$$
+\mathcal K_{\eta,\kappa}
+=\sqrt6M^3\prod_{j=1}^3(A_\kappa+m_j)^{-1},\qquad
+\mathcal F=(A_\kappa+m_0)^{-1}\mathcal K.
+$$
+
+For the full source, the real $m_0\mathcal F^*\dot A\mathcal F$ term
+vanishes by skew-adjointness. Commuting the massless/lowest-mass resolvent
+only with $\mathcal K$, and not with $\dot A$, gives the cyclic form
+
+$$
+I_\kappa=-\operatorname{Re}\operatorname{Tr}
+(H_{m_0}+i\kappa)^{-1}\mathcal B_\kappa,\qquad
+\mathcal B_\kappa=\beta\sqrt N\,\mathcal K^*\dot A_\kappa\mathcal K\sqrt N.
+$$
+
+The full spatial operator order stays $-6$. Splitting off a single
+massless inverse before completing the field sum could instead produce
+individual order-$-3$ terms in three dimensions, losing trace control.
+
+Define $Z_\kappa=L_{\rm jet}\mathcal K_\kappa\sqrt N$.
+If this weighted operator is Hilbert-Schmidt, the preceding full trace
+and cyclic manipulation are justified by
+
+$$
+\mathcal B_\kappa=\beta Z_\kappa^*J_{\rm mid,\kappa}Z_\kappa,\qquad
+\|\mathcal B_\kappa\|_1\le
+\|J_{\rm mid,\kappa}\|\|Z_\kappa\|_{\rm HS}^2,
+$$
+
+$$
+\|\partial_\kappa\mathcal B_\kappa\|_1
+\le\|\partial_\kappa J_{\rm mid,\kappa}\|\|Z_\kappa\|_{\rm HS}^2
++2\|J_{\rm mid,\kappa}\|\|Z_\kappa\|_{\rm HS}
+ \|\partial_\kappa Z_\kappa\|_{\rm HS}.
+$$
+
+The beta matrix stays on the left; $\mathcal B_\kappa$ need not be
+self-adjoint. The weighted Hilbert-Schmidt condition cannot be dropped
+merely because the unweighted $\mathcal K^*\dot A\mathcal K$ is trace class.
+
+If $\|\mathcal B_\kappa-\mathcal B_0\|_1\le L_{\mathcal B}|\kappa|$
+for $|\kappa|\le K_{\rm split}$, the same zero-state-safe spectral pairing
+used in173 yields the conditional full-field inequality
+
+$$
+\frac1{2\pi}\int_0^{K_{\rm split}}|I_\kappa+I_{-\kappa}|\,d\kappa
+\le\frac{\|\mathcal B_0\|_1}{2}
++\frac{K_{\rm split}L_{\mathcal B}}{\pi}.
+$$
+
+No finite field selection remains in this formula. Its numerical inputs
+$\|Z\|_{\rm HS}$ and $\|\partial_\kappa Z\|_{\rm HS}$ have **not** been
+evaluated. The selected norm from173, a matrix dimension, or the compact
+lapse maximum cannot substitute for them.
+
+### Verification and the next physical calculation
+
+All 23 checks pass. The global bound combines interval enclosures with an
+analytic far-region estimate; sampled geometry points are independent
+formula checks, not the proof of global coverage.
+Seventy-two finite source cases retain noncommuting window/filter matrices,
+both frequency signs, proper masses and the unbounded-lapse algebra control.
+The full-source cyclic identity agrees within $7.78\times10^{-15}$.
+An incorrectly moved projector changes one selected response by more
+than 81 in the finite control, confirming that its position matters.
+
+An initial derivative check failed because the implemented product
+derivative repeated one resolvent in its prefix. Its
+[source](../provenance/dihole_source_completion_derivative_trial.py) and
+[results](../results/dihole_source_completion_derivative_trial.json)
+are preserved byte-for-byte. The corrected derivative agrees with an
+independent finite difference within $8.75\times10^{-10}$ relatively.
+No physical candidate was rejected by this implementation error.
+
+Two independent audits verify the scalar enclosures, all 51 input hashes,
+and the full-source ordering. A separate 110-digit interval cover also
+confirms the near-region derivative bounds. Layout verification passes
+169 module imports, 1508 links, 8 source guards and 14 frozen hashes.
+
+**Next:** evaluate the two weighted full-field smoothing quantities in
+the buffered geometry, and their high-frequency remainder, while retaining
+the three positive mass factors. The new global weight and local insertion
+constants are available for that estimate. Total stress and induced current,
+regulator/counterterm matching, stability, atomic propagation and a clock
+difference remain unresolved. No one-atom opening or new physical law has
+been established.
+
+![Selected and omitted covariance in a finite source-completion control](../figures/dihole_source_completion_progress.png)
